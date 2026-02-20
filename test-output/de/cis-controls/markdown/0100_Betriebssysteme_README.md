@@ -1,14 +1,17 @@
 # Betriebssysteme – Übersicht
 
-**Dokument-ID:** 0100  
-**Dokumenttyp:** Kapitel  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0100
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -23,3 +26,4 @@ Empfehlung: Erstelle je OS-Version/Edition eine **parameterisierte Baseline** un
 - Linux (Generic): 0130
 - macOS: 0140
 - Container Base Images: 0150
+

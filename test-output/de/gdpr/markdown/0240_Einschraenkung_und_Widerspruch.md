@@ -1,11 +1,17 @@
 # Einschränkung und Widerspruch
 
-**Dokument-ID:** 0240  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0240
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Rechts auf Einschränkung der Verarbeitung und des Widerspruchsrechts in der {{ meta.organization }}.
+Dieses Dokument beschreibt die Umsetzung des Rechts auf Einschränkung der Verarbeitung und des Widerspruchsrechts in der AdminSend GmbH.
 
 ## Recht auf Einschränkung (Art. 18)
 
@@ -204,8 +210,6 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Einschränkung der Verar
 | Fehlende Interessenabwägung | Ablehnung ohne Prüfung | Sorgfältige Abwägung |
 | Verzögerte Umsetzung | Werbung nach Widerspruch | Sofortige Einstellung |
 | Keine Benachrichtigung | Empfänger nicht informiert | Benachrichtigungsprozess |
-
----
 
 **Nächste Schritte:**
 1. Etablieren Sie Prozesse für Einschränkungs- und Widerspruchsanträge

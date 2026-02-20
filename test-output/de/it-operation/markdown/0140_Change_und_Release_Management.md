@@ -1,12 +1,27 @@
 # Change und Release Management
 
+**Dokument-ID:** [FRAMEWORK]-0140
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
 Dieses Dokument beschreibt die Change- und Release-Management-Prozesse für AdminSend GmbH gemäß ITIL v4 Best Practices. Es definiert Change-Kategorien, Genehmigungsprozesse, Release-Strategien und Rollback-Prozeduren zur kontrollierten Durchführung von Änderungen an IT-Services und -Systemen.
 
 **Geltungsbereich:** Alle IT-Services, Systeme und Infrastruktur-Komponenten von AdminSend GmbH
 
-**Verantwortlich:** Andreas Huemmer (andreas.huemmer@adminsend.de)
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Change Management
 
@@ -153,7 +168,7 @@ Ein **Change** ist das Hinzufügen, Ändern oder Entfernen von etwas, das direkt
 - **Requester:** Antragsteller
 - **Implementer:** Durchführender
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 **Verantwortlich:** Change Requester
 
@@ -181,9 +196,9 @@ Ein **Change** ist das Hinzufügen, Ändern oder Entfernen von etwas, das direkt
 **Change Advisory Board (CAB):**
 
 **Mitglieder:**
-- **Chair:** Andreas Huemmer (Change Manager)
-- **CIO:** Anna Schmidt
-- **CISO:** Thomas Weber
+- **Chair:** {{ meta-organisation-roles.role_IT_Operations_Manager }} (Change Manager)
+- **CIO:** [TODO]
+- **CISO:** [TODO]
 - **Service Owner:** [Service-abhängig]
 - **Technical Leads:** [Change-abhängig]
 - **Business Representatives:** [Bei Business-Impact]
@@ -578,10 +593,10 @@ Ein **Release** ist eine Sammlung von Hardware, Software, Dokumentation, Prozess
 - Deployment-Monitoring
 
 **Pipeline-Tools:**
-- **CI/CD-System:** {{ meta.cicd_system }}
-- **Version Control:** {{ meta.version_control }}
-- **Artefakt-Repository:** {{ meta.artifact_repository }}
-- **Container-Registry:** {{ meta.container_registry }}
+- **CI/CD-System:** {{ meta-handbook.cicd_system }}
+- **Version Control:** [TODO]
+- **Artefakt-Repository:** {{ meta-handbook.artifact_repository }}
+- **Container-Registry:** {{ meta-handbook.container_registry }}
 
 ## Metriken und Reporting
 
@@ -630,7 +645,7 @@ Ein **Release** ist eine Sammlung von Hardware, Software, Dokumentation, Prozess
 - Change-Kalender-Verwaltung
 - Reporting
 
-**Person:** Andreas Huemmer
+**Person:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Release Manager
 
@@ -655,18 +670,18 @@ Ein **Release** ist eine Sammlung von Hardware, Software, Dokumentation, Prozess
 ## Tools und Systeme
 
 ### Change-Management-Tool
-- **System:** {{ meta.ticketing_system }}
-- **URL:** {{ meta.ticketing_system_url }}
+- **System:** {{ meta-handbook.ticketing_system }}
+- **URL:** {{ meta-handbook.ticketing_system_url }}
 - **Zugriff:** Alle IT-Mitarbeiter
 
 ### CI/CD-Pipeline
-- **System:** {{ meta.cicd_system }}
-- **URL:** {{ meta.cicd_url }}
+- **System:** {{ meta-handbook.cicd_system }}
+- **URL:** {{ meta-handbook.cicd_url }}
 - **Zugriff:** DevOps-Team
 
 ### Version Control
-- **System:** {{ meta.version_control }}
-- **URL:** {{ meta.version_control_url }}
+- **System:** [TODO]
+- **URL:** [TODO]
 - **Zugriff:** Development-Team
 
 ## Referenzen
@@ -677,10 +692,9 @@ Ein **Release** ist eine Sammlung von Hardware, Software, Dokumentation, Prozess
 - DevOps Handbook - Deployment Strategies
 - Site Reliability Engineering (SRE) - Release Engineering
 
----
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.date }}

@@ -1,10 +1,37 @@
-# TSC (SOC 2) Compliance Handbuch
+# TSC Handbuch - Metadaten
 
-**Dokument-Metadaten**
-
-- **Erstellt am:** 2026-02-10
-- **Autor:** Andreas Huemmer [andreas.huemmer@adminsend.de]
-- **Version:** 0.0.5
-- **Typ:** TSC-Handbuch (SOC 2)
+**Dokument-ID:** 0000  
+**Datum:** [TODO]  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** [TODO]  
+**Template-Version:** 0.2  
 
 ---
+
+## Handbuch-Informationen
+
+**Handbuch-Titel:** Trust Services Criteria (TSC) Handbuch
+**Handbuch-Short:** tsc
+**Organisation:** AdminSend GmbH  
+**Autor:** Handbook-Generator  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
+**Genehmigt durch:** [TODO]  
+
+---
+
+## Dokumentenzweck
+
+Dieses Dokument enthält die Metadaten für das TSC Handbuch.
+
+## Änderungshistorie
+
+| Version | Datum | Autor | Änderung |
+|---------|-------|-------|----------|
+| 0.1 | [TODO] | Handbook-Generator | Initiale Version |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+

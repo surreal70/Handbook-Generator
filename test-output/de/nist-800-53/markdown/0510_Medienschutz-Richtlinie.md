@@ -1,13 +1,17 @@
 # Medienschutz-Richtlinie
 
-**Dokument-ID:** NIST-0510  
-**Kontrollfamilie:** Medienschutz (MP)  
-**Kontrolle:** MP-1  
-**Organisation:** AdminSend GmbH  
-**Verantwortlich:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0510
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -61,12 +65,11 @@ Keine Erweiterungen für MP-1.
 **Bewertungsstatus:** [TODO: Erfüllt / Nicht erfüllt / Nicht zutreffend]  
 **Feststellungen:** [TODO: Beschreibung]  
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | [TODO] | Handbook-Generator | Ersterstellung |
+
 
 

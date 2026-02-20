@@ -1,14 +1,17 @@
 # Richtlinie: ICT Disaster Recovery - Schnittstellen zu BCM
 
-**Dokument-ID:** 0450  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0440_Policy_Business_Continuity_ICT_Readiness.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.29, A.5.30  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0450
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -63,20 +66,20 @@ Diese Richtlinie konkretisiert die `0440_Policy_Business_Continuity_ICT_Readines
 
 ### 3.1 Primäres Rechenzentrum
 
-**Standort:** {{ netbox.site.primary }}  
+**Standort:** [[ netbox.site.primary ]]  
 **Systeme:** Alle Produktionssysteme  
 **Redundanz:** N+1 für kritische Komponenten
 
 ### 3.2 DR-Standort
 
-**Standort:** {{ netbox.site.dr }}  
+**Standort:** [[ netbox.site.dr ]]  
 **Entfernung:** > 50 km vom Primärstandort  
 **Systeme:** Replizierte Tier 1 Systeme, Backup-Infrastruktur
 
 ### 3.3 Cloud-DR
 
-**Cloud-Provider:** {{ meta.cloud.dr_provider }}  
-**Regionen:** {{ meta.cloud.primary_region }}, {{ meta.cloud.dr_region }}  
+**Cloud-Provider:** {{ meta-handbook.cloud_dr_provider }}  
+**Regionen:** {{ meta-handbook.cloud_primary_region }}, {{ meta-handbook.cloud_dr_region }}  
 **Services:** IaaS für DR-Workloads
 
 ## 4. Schnittstellen zu BCM
@@ -213,7 +216,6 @@ Diese Richtlinie konkretisiert die `0440_Policy_Business_Continuity_ICT_Readines
 - **ISO/IEC 27001:2022 Annex A.5.30** - ICT readiness for business continuity
 - **ISO 22301** - Business Continuity Management
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

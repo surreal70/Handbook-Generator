@@ -1,13 +1,17 @@
 # Access Control
 
-**Document ID:** HIPAA-0400  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0400
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -368,13 +372,5 @@ This document describes the Access Control technical safeguards for AdminSend Gm
 **Retention Period:** [TODO: 6 years from creation or last effective date]
 
 **Storage Location:** [TODO: Identity management system, document repository]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

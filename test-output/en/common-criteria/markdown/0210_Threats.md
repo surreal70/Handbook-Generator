@@ -1,11 +1,17 @@
 # Threats
 
-**Document-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0210
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -78,8 +84,6 @@
 - [TODO: T1078 - Valid Accounts]
 - [TODO: T1552 - Unsecured Credentials]
 
----
-
 ### T.EAVESDROPPING
 **Threat ID:** T.EAVESDROPPING  
 **Category:** Confidentiality  
@@ -110,8 +114,6 @@
 
 **Likelihood:** [TODO: High/Medium/Low]  
 **Risk Assessment:** [TODO: High/Medium/Low]
-
----
 
 ### T.DATA_LEAKAGE
 **Threat ID:** T.DATA_LEAKAGE  
@@ -159,8 +161,6 @@
 **Likelihood:** [TODO: High/Medium/Low]  
 **Risk Assessment:** [TODO: High/Medium/Low]
 
----
-
 ### T.CODE_INJECTION
 **Threat ID:** T.CODE_INJECTION  
 **Category:** Integrity  
@@ -203,8 +203,6 @@
 
 **Likelihood:** [TODO: High/Medium/Low]  
 **Risk Assessment:** [TODO: High/Medium/Low]
-
----
 
 ### T.RESOURCE_EXHAUSTION
 **Threat ID:** T.RESOURCE_EXHAUSTION  
@@ -249,8 +247,6 @@
 **Likelihood:** [TODO: High/Medium/Low]  
 **Risk Assessment:** [TODO: High/Medium/Low]
 
----
-
 ### T.CREDENTIAL_THEFT
 **Threat ID:** T.CREDENTIAL_THEFT  
 **Category:** Authentication  
@@ -294,8 +290,6 @@
 **Likelihood:** [TODO: High/Medium/Low]  
 **Risk Assessment:** [TODO: High/Medium/Low]
 
----
-
 ### T.UNAUTHORIZED_FUNCTION_ACCESS
 **Threat ID:** T.UNAUTHORIZED_FUNCTION_ACCESS  
 **Category:** Authorization  
@@ -338,8 +332,6 @@
 
 **Likelihood:** [TODO: High/Medium/Low]  
 **Risk Assessment:** [TODO: High/Medium/Low]
-
----
 
 ### T.LOG_TAMPERING
 **Threat ID:** T.LOG_TAMPERING  
@@ -426,8 +418,6 @@
 |-----------|---------------|---------------------|
 | [TODO: T.001] | [TODO: TA.001, TA.002] | [TODO: High] |
 | [TODO: T.002] | [TODO: TA.003] | [TODO: Medium] |
-
----
 
 **Next Steps:**
 1. Complete all [TODO] placeholders with TOE-specific threats

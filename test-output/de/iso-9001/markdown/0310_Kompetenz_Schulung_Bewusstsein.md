@@ -1,11 +1,17 @@
 # Kompetenz, Schulung und Bewusstsein
 
-**Dokument-ID:** 0310  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} Kompetenz von Mitarbeitern sicherstellt und Bewusstsein für das Qualitätsmanagementsystem fördert, gemäß ISO 9001:2015 Kapitel 7.2 und 7.3.
+Dieses Dokument definiert, wie AdminSend GmbH Kompetenz von Mitarbeitern sicherstellt und Bewusstsein für das Qualitätsmanagementsystem fördert, gemäß ISO 9001:2015 Kapitel 7.2 und 7.3.
 
 ## Kompetenzmanagement (7.2)
 
@@ -210,8 +216,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} Kompetenz von Mitarbeiter
 - Entwicklung von QMS-Schulungsmaterialien
 - Durchführung von QMS-Schulungen
 - Überwachung der Gesamtschulungswirksamkeit
-
----
 
 **Nächste Schritte:**
 1. Definiere Kompetenzanforderungen für alle Rollen

@@ -1,14 +1,17 @@
 # Modeling: Module Assignment (Template)
 
-**Document ID:** 0070  
-**Document Type:** Methodology Artifact  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standard 200-2, IT-Grundschutz Compendium)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -21,7 +24,7 @@ The modeling assigns appropriate IT-Grundschutz modules to the objects of the in
 - Identification of requirements to be implemented
 - Systematic security measure planning
 
-**Responsible:** Thomas Weber (ISB)
+**Responsible:** [TODO] (ISB)
 
 **Important:** This document only references modules. The complete module texts are located in the BSI IT-Grundschutz Compendium and are not copied.
 
@@ -65,20 +68,20 @@ The BSI IT-Grundschutz Compendium organizes modules into the following layers:
 
 | Object ID | Object | Object Class | Assigned Modules | Justification | Owner |
 |---|---|---|---|---|---|
-| ORG-001 | AdminSend GmbH | Organization | ISMS.1 Security Management | Overall organization | Thomas Weber |
-| ORG-001 | AdminSend GmbH | Organization | ORP.1 Organization | Organizational structure | Thomas Weber |
+| ORG-001 | AdminSend GmbH | Organization | ISMS.1 Security Management | Overall organization | [TODO] |
+| ORG-001 | AdminSend GmbH | Organization | ORP.1 Organization | Organizational structure | [TODO] |
 | ORG-001 | AdminSend GmbH | Organization | ORP.2 Personnel | Personnel management | [TODO: HR] |
-| ORG-001 | AdminSend GmbH | Organization | ORP.3 Awareness and Training | Awareness program | Thomas Weber |
-| ORG-001 | AdminSend GmbH | Organization | ORP.4 Identity and Access Management | IAM processes | Anna Schmidt |
+| ORG-001 | AdminSend GmbH | Organization | ORP.3 Awareness and Training | Awareness program | [TODO] |
+| ORG-001 | AdminSend GmbH | Organization | ORP.4 Identity and Access Management | IAM processes | [TODO] |
 | ORG-001 | AdminSend GmbH | Organization | ORP.5 Compliance Management (Requirements Management) | Compliance | [TODO] |
 
 ### 3.2 Conception and Approaches (CON)
 
 | Object ID | Object | Object Class | Assigned Modules | Justification | Owner |
 |---|---|---|---|---|---|
-| CON-001 | Crypto Concept | Concept | CON.1 Crypto Concept | Encryption strategy | Thomas Weber |
-| CON-002 | Data Backup Concept | Concept | CON.3 Data Backup Concept | Backup strategy | Anna Schmidt |
-| CON-003 | Deletion Concept | Concept | CON.6 Deletion and Destruction | Data deletion | Thomas Weber |
+| CON-001 | Crypto Concept | Concept | CON.1 Crypto Concept | Encryption strategy | [TODO] |
+| CON-002 | Data Backup Concept | Concept | CON.3 Data Backup Concept | Backup strategy | [TODO] |
+| CON-003 | Deletion Concept | Concept | CON.6 Deletion and Destruction | Data deletion | [TODO] |
 | CON-004 | Patch and Change Management | Concept | CON.7 Information Security on Business Trips | [TODO: if applicable] | [TODO] |
 | CON-005 | Software Development | Concept | CON.8 Software Development | [TODO: if applicable] | [TODO] |
 
@@ -86,20 +89,20 @@ The BSI IT-Grundschutz Compendium organizes modules into the following layers:
 
 | Object ID | Object | Object Class | Assigned Modules | Justification | Owner |
 |---|---|---|---|---|---|
-| OPS-001 | IT Operations | Operations Process | OPS.1.1.2 Proper IT Administration | IT administration | Anna Schmidt |
-| OPS-002 | Patch Management | Operations Process | OPS.1.1.3 Patch and Change Management | Patch process | Anna Schmidt |
-| OPS-003 | Protection Against Malware | Operations Process | OPS.1.1.4 Protection Against Malware | Malware protection | Anna Schmidt |
-| OPS-004 | Data Backup | Operations Process | OPS.1.1.5 Logging | Logging | Anna Schmidt |
+| OPS-001 | IT Operations | Operations Process | OPS.1.1.2 Proper IT Administration | IT administration | [TODO] |
+| OPS-002 | Patch Management | Operations Process | OPS.1.1.3 Patch and Change Management | Patch process | [TODO] |
+| OPS-003 | Protection Against Malware | Operations Process | OPS.1.1.4 Protection Against Malware | Malware protection | [TODO] |
+| OPS-004 | Data Backup | Operations Process | OPS.1.1.5 Logging | Logging | [TODO] |
 | OPS-005 | Software Tests | Operations Process | OPS.1.1.6 Software Tests and Releases | [TODO: if applicable] | [TODO] |
 | OPS-006 | Outsourcing | Operations Process | OPS.2.1 Outsourcing for Customers | [TODO: if applicable] | [TODO] |
-| OPS-007 | Cloud Usage | Operations Process | OPS.2.2 Cloud Usage | Cloud services | Anna Schmidt |
+| OPS-007 | Cloud Usage | Operations Process | OPS.2.2 Cloud Usage | Cloud services | [TODO] |
 
 ### 3.4 Detection and Response (DER)
 
 | Object ID | Object | Object Class | Assigned Modules | Justification | Owner |
 |---|---|---|---|---|---|
-| DER-001 | Detection | Process | DER.1 Detection of Security-Relevant Events | SIEM, Monitoring | Anna Schmidt |
-| DER-002 | Incident Management | Process | DER.2.1 Handling of Security Incidents | Incident response | Thomas Weber |
+| DER-001 | Detection | Process | DER.1 Detection of Security-Relevant Events | SIEM, Monitoring | [TODO] |
+| DER-002 | Incident Management | Process | DER.2.1 Handling of Security Incidents | Incident response | [TODO] |
 | DER-003 | Forensics | Process | DER.2.2 Preparation for IT Forensics | [TODO: if applicable] | [TODO] |
 | DER-004 | Audits | Process | DER.3.1 Audits and Reviews | Internal audit | [TODO] |
 
@@ -111,12 +114,12 @@ The BSI IT-Grundschutz Compendium organizes modules into the following layers:
 |---|---|---|---|---|---|
 | A-001 | [TODO: Application 1] | Application | APP.1.1 Office Products | [TODO: if office application] | [TODO] |
 | A-002 | [TODO: Application 2] | Application | APP.3.1 Web Applications | [TODO: if web application] | [TODO] |
-| A-003 | [TODO: Application 3] | Application | APP.3.2 Web Server | [TODO: if web server] | Anna Schmidt |
-| A-004 | [TODO: Application 4] | Application | APP.3.3 File Server | [TODO: if file server] | Anna Schmidt |
-| A-005 | [TODO: Application 5] | Application | APP.3.6 DNS Server | [TODO: if DNS] | Anna Schmidt |
-| A-006 | [TODO: Application 6] | Application | APP.4.3 Relational Database Systems | [TODO: if database] | Anna Schmidt |
+| A-003 | [TODO: Application 3] | Application | APP.3.2 Web Server | [TODO: if web server] | [TODO] |
+| A-004 | [TODO: Application 4] | Application | APP.3.3 File Server | [TODO: if file server] | [TODO] |
+| A-005 | [TODO: Application 5] | Application | APP.3.6 DNS Server | [TODO: if DNS] | [TODO] |
+| A-006 | [TODO: Application 6] | Application | APP.4.3 Relational Database Systems | [TODO: if database] | [TODO] |
 | A-007 | [TODO: Application 7] | Application | APP.5.1 General Groupware | [TODO: if groupware] | [TODO] |
-| A-008 | [TODO: Application 8] | Application | APP.5.2 Microsoft Exchange and Outlook | [TODO: if Exchange] | Anna Schmidt |
+| A-008 | [TODO: Application 8] | Application | APP.5.2 Microsoft Exchange and Outlook | [TODO: if Exchange] | [TODO] |
 
 ### 3.6 IT Systems (SYS)
 
@@ -124,16 +127,16 @@ The BSI IT-Grundschutz Compendium organizes modules into the following layers:
 
 | Object ID | Object | Object Class | Assigned Modules | Justification | Owner |
 |---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | Server | SYS.1.1 General Server | General server | Anna Schmidt |
-| S-002 | [TODO: Linux Server] | Server | SYS.1.3 Server under Linux and Unix | Linux server | Anna Schmidt |
-| S-003 | [TODO: Windows Server] | Server | SYS.1.2.3 Windows Server | Windows server | Anna Schmidt |
-| S-004 | [TODO: Virtualization] | Virtualization | SYS.1.5 Virtualization | VMware/Hyper-V | Anna Schmidt |
-| S-005 | [TODO: Container] | Container | SYS.1.6 Containerization | Docker/Kubernetes | Anna Schmidt |
-| S-006 | [TODO: Storage] | Storage | SYS.1.8 Storage Solutions | SAN/NAS | Anna Schmidt |
-| S-007 | [TODO: Client] | Client | SYS.2.1 General Client | Workstations | Anna Schmidt |
-| S-008 | [TODO: Windows Client] | Client | SYS.2.2.3 Clients under Windows | Windows clients | Anna Schmidt |
-| S-009 | [TODO: macOS Client] | Client | SYS.2.4 Clients under macOS | macOS clients | Anna Schmidt |
-| S-010 | [TODO: Mobile Device] | Mobile | SYS.3.2.1 General Smartphones and Tablets | Mobile devices | Anna Schmidt |
+| S-001 | [[ netbox.device.server_001 ]] | Server | SYS.1.1 General Server | General server | [TODO] |
+| S-002 | [TODO: Linux Server] | Server | SYS.1.3 Server under Linux and Unix | Linux server | [TODO] |
+| S-003 | [TODO: Windows Server] | Server | SYS.1.2.3 Windows Server | Windows server | [TODO] |
+| S-004 | [TODO: Virtualization] | Virtualization | SYS.1.5 Virtualization | VMware/Hyper-V | [TODO] |
+| S-005 | [TODO: Container] | Container | SYS.1.6 Containerization | Docker/Kubernetes | [TODO] |
+| S-006 | [TODO: Storage] | Storage | SYS.1.8 Storage Solutions | SAN/NAS | [TODO] |
+| S-007 | [TODO: Client] | Client | SYS.2.1 General Client | Workstations | [TODO] |
+| S-008 | [TODO: Windows Client] | Client | SYS.2.2.3 Clients under Windows | Windows clients | [TODO] |
+| S-009 | [TODO: macOS Client] | Client | SYS.2.4 Clients under macOS | macOS clients | [TODO] |
+| S-010 | [TODO: Mobile Device] | Mobile | SYS.3.2.1 General Smartphones and Tablets | Mobile devices | [TODO] |
 | S-011 | [TODO: IoT] | IoT | SYS.4.4 General IoT Device | [TODO: if IoT] | [TODO] |
 
 ### 3.7 Networks and Communication (NET)
@@ -142,13 +145,13 @@ The BSI IT-Grundschutz Compendium organizes modules into the following layers:
 
 | Object ID | Object | Object Class | Assigned Modules | Justification | Owner |
 |---|---|---|---|---|---|
-| N-001 | Network Architecture | Network | NET.1.1 Network Architecture and Design | Overall network | Anna Schmidt |
-| N-002 | Network Management | Network | NET.1.2 Network Management | Network monitoring | Anna Schmidt |
-| N-003 | [TODO: Routers/Switches] | Network Component | NET.3.1 Routers and Switches | Network devices | Anna Schmidt |
-| N-004 | [TODO: Firewall] | Security Component | NET.3.2 Firewall | Perimeter protection | Anna Schmidt |
-| N-005 | [TODO: VPN] | Security Component | NET.3.3 VPN | Remote access | Anna Schmidt |
-| N-006 | [TODO: WLAN] | Network | NET.2.1 WLAN Operations | Wireless network | Anna Schmidt |
-| N-007 | [TODO: Email] | Communication | NET.4.1 TLS Encryption | [TODO: if applicable] | Anna Schmidt |
+| N-001 | Network Architecture | Network | NET.1.1 Network Architecture and Design | Overall network | [TODO] |
+| N-002 | Network Management | Network | NET.1.2 Network Management | Network monitoring | [TODO] |
+| N-003 | [TODO: Routers/Switches] | Network Component | NET.3.1 Routers and Switches | Network devices | [TODO] |
+| N-004 | [TODO: Firewall] | Security Component | NET.3.2 Firewall | Perimeter protection | [TODO] |
+| N-005 | [TODO: VPN] | Security Component | NET.3.3 VPN | Remote access | [TODO] |
+| N-006 | [TODO: WLAN] | Network | NET.2.1 WLAN Operations | Wireless network | [TODO] |
+| N-007 | [TODO: Email] | Communication | NET.4.1 TLS Encryption | [TODO: if applicable] | [TODO] |
 
 ### 3.8 Industrial IT (IND) - Optional
 
@@ -164,7 +167,7 @@ The BSI IT-Grundschutz Compendium organizes modules into the following layers:
 | Object ID | Object | Object Class | Assigned Modules | Justification | Owner |
 |---|---|---|---|---|---|
 | R-001 | Data Center | Room | INF.2 Data Center and Server Room | Critical server room | [TODO: Facility] |
-| R-002 | {{ meta.organization.primary_location }} | Building | INF.1 General Building | Main location | [TODO: Facility] |
+| R-002 | [TODO] | Building | INF.1 General Building | Main location | [TODO: Facility] |
 | R-003 | [TODO: Office Room] | Room | INF.8 Home Office | [TODO: if home office] | [TODO] |
 
 ## 4. Summary and Statistics
@@ -207,10 +210,10 @@ The BSI IT-Grundschutz Compendium organizes modules into the following layers:
 ### 5.1 Validation Process
 
 The module assignment is validated by:
-1. **Review by IT Management:** Anna Schmidt - Technical correctness
+1. **Review by IT Management:** [TODO] - Technical correctness
 2. **Review by Information Domain Responsible:** Completeness
 3. **Comparison with IT-Grundschutz Compendium:** Currency of modules
-4. **Approval by ISB:** Thomas Weber
+4. **Approval by ISB:** [TODO]
 
 ### 5.2 Quality Criteria
 
@@ -237,21 +240,18 @@ The module assignment is updated when:
 - New edition of IT-Grundschutz Compendium is released
 - At least annually as part of the ISMS review
 
-**Responsible:** Thomas Weber (ISB)  
-**Next Review:** {{ meta.document.next_review }}
+**Responsible:** [TODO] (ISB)  
+**Next Review:** [TODO]
 
 ## 8. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT Management | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 7: Modeling)
 - BSI IT-Grundschutz Compendium (current edition)
 - BSI IT-Grundschutz Compendium: https://www.bsi.bund.de/grundschutz-kompendium
-
 

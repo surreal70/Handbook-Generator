@@ -1,13 +1,17 @@
 # Contacts and Escalation
 
-**Document ID:** BCM-0050  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -21,11 +25,11 @@
 
 | Function | Name | Phone | Mobile | Email | Deputy |
 |----------|------|-------|--------|-------|--------|
-| **Crisis Team Lead** | {{ meta.roles.ceo.name }} | {{ meta.roles.ceo.phone }} | [TODO: Mobile] | {{ meta.roles.ceo.email }} | {{ meta.roles.coo.name }} |
-| **CIO** | {{ meta.roles.cio.name }} | {{ meta.roles.cio.phone }} | [TODO: Mobile] | {{ meta.roles.cio.email }} | [TODO] |
-| **CISO** | {{ meta.roles.ciso.name }} | {{ meta.roles.ciso.phone }} | [TODO: Mobile] | {{ meta.roles.ciso.email }} | [TODO] |
-| **CFO** | {{ meta.roles.cfo.name }} | {{ meta.roles.cfo.phone }} | [TODO: Mobile] | {{ meta.roles.cfo.email }} | [TODO] |
-| **COO** | {{ meta.roles.coo.name }} | {{ meta.roles.coo.phone }} | [TODO: Mobile] | {{ meta.roles.coo.email }} | [TODO] |
+| **Crisis Team Lead** | [TODO] | [TODO] | [TODO: Mobile] | [TODO] | [TODO] |
+| **CIO** | [TODO] | [TODO] | [TODO: Mobile] | [TODO] | [TODO] |
+| **CISO** | [TODO] | [TODO] | [TODO: Mobile] | [TODO] | [TODO] |
+| **CFO** | [TODO] | [TODO] | [TODO: Mobile] | [TODO] | [TODO] |
+| **COO** | [TODO] | [TODO] | [TODO: Mobile] | [TODO] | [TODO] |
 
 ### 1.2 BCM Organization
 
@@ -33,15 +37,15 @@
 |----------|------|-------|--------|-------|--------|
 | **BCM Manager** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | **Incident Commander** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
-| **IT-DR Lead** | {{ meta.roles.it_operations_manager.name }} | {{ meta.roles.it_operations_manager.phone }} | [TODO] | {{ meta.roles.it_operations_manager.email }} | [TODO] |
+| **IT-DR Lead** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | **Communication** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ### 1.3 IT Operations and Service Desk
 
 | Function | Name | Phone | Mobile | Email | Availability |
 |----------|------|-------|--------|-------|--------------|
-| **Service Desk** | {{ meta.roles.service_desk_lead.name }} | [TODO] | [TODO] | {{ meta.roles.service_desk_lead.email }} | 24/7 |
-| **IT Operations Manager** | {{ meta.roles.it_operations_manager.name }} | {{ meta.roles.it_operations_manager.phone }} | [TODO] | {{ meta.roles.it_operations_manager.email }} | 24/7 on-call |
+| **Service Desk** | [TODO] | [TODO] | [TODO] | [TODO] | 24/7 |
+| **IT Operations Manager** | [TODO] | [TODO] | [TODO] | [TODO] | 24/7 on-call |
 | **Network Team** | [TODO] | [TODO] | [TODO] | [TODO] | 24/7 on-call |
 | **Server Team** | [TODO] | [TODO] | [TODO] | [TODO] | 24/7 on-call |
 | **Security Team** | [TODO] | [TODO] | [TODO] | [TODO] | 24/7 on-call |
@@ -191,9 +195,9 @@
 
 For BCM activation (Level 3), the following persons are alerted:
 
-1. {{ meta.roles.ceo.name }} (Crisis Team Lead)
-2. {{ meta.roles.cio.name }} (CIO)
-3. {{ meta.roles.ciso.name }} (CISO)
+1. [TODO] (Crisis Team Lead)
+2. [TODO] (CIO)
+3. [TODO] (CISO)
 4. [TODO: BCM Manager]
 5. [TODO: Communications Manager]
 6. Additional crisis team members depending on situation
@@ -251,13 +255,5 @@ Contact lists are subject to GDPR:
 - Encrypted storage
 - No disclosure to third parties without consent
 - Deletion upon employee departure
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

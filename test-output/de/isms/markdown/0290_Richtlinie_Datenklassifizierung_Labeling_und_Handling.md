@@ -1,14 +1,17 @@
 # Richtlinie: Datenklassifizierung, Labeling und Handling
 
-**Dokument-ID:** 0290  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0280_Policy_Datenklassifizierung_und_Informationshandling.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.12, A.5.13  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0290
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -253,7 +256,6 @@ Diese Richtlinie konkretisiert die `0280_Policy_Datenklassifizierung_und_Informa
 - **ISO/IEC 27001:2022 Annex A.5.13** - Labelling of information
 - **DIN 66399** - Vernichtung von Datenträgern
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

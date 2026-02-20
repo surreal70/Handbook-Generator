@@ -1,0 +1,36 @@
+# Table of Contents - ISO-38500 Handbook
+
+Language: de
+
+## Templates
+
+- [0000 - metadata de iso-38500](0000_metadata_de_iso-38500.md)
+- [0010 - governance framework](0010_governance_framework.md)
+- [0020 - governance model](0020_governance_model.md)
+- [0030 - principles overview](0030_principles_overview.md)
+- [0040 - responsibility principle](0040_responsibility_principle.md)
+- [0050 - strategy principle](0050_strategy_principle.md)
+- [0060 - acquisition principle](0060_acquisition_principle.md)
+- [0070 - performance principle](0070_performance_principle.md)
+- [0080 - conformance principle](0080_conformance_principle.md)
+- [0090 - human behavior principle](0090_human_behavior_principle.md)
+- [0100 - edm model](0100_edm_model.md)
+- [0110 - evaluation processes](0110_evaluation_processes.md)
+- [0120 - direction processes](0120_direction_processes.md)
+- [0130 - monitoring processes](0130_monitoring_processes.md)
+- [0140 - performance measurement](0140_performance_measurement.md)
+- [0150 - governance roles](0150_governance_roles.md)
+- [0160 - policy framework](0160_policy_framework.md)
+- [0170 - decision making](0170_decision_making.md)
+- [0180 - it management responsibilities](0180_it_management_responsibilities.md)
+- [0190 - continuous improvement](0190_continuous_improvement.md)
+- [0200 - governance roles](0200_governance_roles.md)
+- [0210 - board responsibilities](0210_board_responsibilities.md)
+- [0220 - executive responsibilities](0220_executive_responsibilities.md)
+- [0230 - it management responsibilities](0230_it_management_responsibilities.md)
+- [0240 - stakeholder engagement](0240_stakeholder_engagement.md)
+- [0250 - governance maturity assessment](0250_governance_maturity_assessment.md)
+- [0300 - governance implementation](0300_governance_implementation.md)
+- [0310 - policy framework](0310_policy_framework.md)
+- [0330 - communication](0330_communication.md)
+- [0340 - continuous improvement](0340_continuous_improvement.md)

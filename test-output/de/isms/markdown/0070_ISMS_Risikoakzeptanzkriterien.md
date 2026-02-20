@@ -1,18 +1,21 @@
 # Risikokriterien und Risikoakzeptanz
 
-
-
-**Dokument-ID:** 0070  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 6.1.2  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0070
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Risikoappetit und Toleranz
 
@@ -135,10 +138,9 @@ Die **AdminSend GmbH** definiert ihren Risikoappetit wie folgt:
 - **ISO/IEC 27001:2022** - Clause 6.1.2: Information security risk assessment
 - **ISO/IEC 27005:2022** - Information security risk management
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
+

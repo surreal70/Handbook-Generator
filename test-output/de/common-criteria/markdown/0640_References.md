@@ -1,11 +1,17 @@
 # Referenzen und Quellenangaben
 
-**Dokument-ID:** 0640  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0640
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -385,8 +391,6 @@ Version [TODO: Version], [TODO: Datum]
 **E-Mail:** [TODO: E-Mail]  
 **Website:** [TODO: Website]
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle im ST verwendeten Referenzen
 2. Sammeln Sie vollständige bibliographische Informationen
@@ -396,3 +400,4 @@ Version [TODO: Version], [TODO: Datum]
 6. Überprüfen Sie die Aktualität aller Referenzen
 7. Stellen Sie sicher, dass alle Referenzen verfügbar sind
 8. Aktualisieren Sie die Referenzliste bei Änderungen am ST
+

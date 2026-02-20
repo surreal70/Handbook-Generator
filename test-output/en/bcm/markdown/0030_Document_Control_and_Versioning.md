@@ -1,13 +1,17 @@
 # Document Control and Versioning
 
-**Document ID:** BCM-0030  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -64,9 +68,9 @@ Critical BCM documents must be available even when IT systems fail:
 
 | Document ID | Document Name | Version | Owner | Classification | Location |
 |-------------|---------------|---------|-------|----------------|----------|
-| BCM-0010 | Purpose and Scope | 1.0.0 | IT Operations Manager | internal | [TODO: Path] |
-| BCM-0020 | BCM Policy | 1.0.0 | IT Operations Manager | internal | [TODO: Path] |
-| BCM-0030 | Document Control | 1.0.0 | IT Operations Manager | internal | [TODO: Path] |
+| BCM-0010 | Purpose and Scope | 0 | [TODO] | Internal | [TODO: Path] |
+| BCM-0020 | BCM Policy | 0 | [TODO] | Internal | [TODO: Path] |
+| BCM-0030 | Document Control | 0 | [TODO] | Internal | [TODO: Path] |
 | ... | ... | ... | ... | ... | ... |
 
 [TODO: Complete the document register]
@@ -127,7 +131,7 @@ AdminSend GmbH uses the following versioning scheme for BCM documents:
 - **Tasks:** Content review, feedback, approval recommendation
 
 **Approver:**
-- **Responsible:** CIO or delegated manager
+- **Responsible:** [TODO] or delegated manager
 - **Tasks:** Formal approval, assumption of responsibility
 
 ### 3.2 Approval Process
@@ -143,7 +147,7 @@ AdminSend GmbH uses the following versioning scheme for BCM documents:
 
 | Document Type | Review Interval | Responsible |
 |---------------|-----------------|-------------|
-| BCM Policy | Annually | {{ meta.roles.ceo.name }} |
+| BCM Policy | Annually | [TODO] |
 | BIA Results | Annually | BCM Manager |
 | BCM Plans (BCP/DRP) | Semi-annually | Subject matter experts |
 | Contact Lists | Quarterly | BCM Manager |
@@ -204,14 +208,6 @@ AdminSend GmbH uses the following versioning scheme for BCM documents:
 
 ## 5. Change Log (Changelog)
 
-### 5.1 Document History
-
-| Version | Date | Change | Author | Reviewer | Approved by |
-|---------|------|--------|--------|----------|-------------|
-| 0.1 | {{ meta.document.last_updated }} | Initial creation | {{ meta.defaults.author }} | [TODO] | [TODO] |
-
-[TODO: Update the change log with each document change]
-
 ### 5.2 Change Requests
 
 Change requests for BCM documents can be submitted through:
@@ -221,13 +217,5 @@ Change requests for BCM documents can be submitted through:
 - **Form:** [TODO: Link to change request form]
 
 Each change request is reviewed and prioritized. Processing follows defined SLAs.
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

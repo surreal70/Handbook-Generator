@@ -1,13 +1,17 @@
 # System- und Informationsintegritäts-Richtlinie
 
-**Dokument-ID:** NIST-0730  
-**Kontrollfamilie:** System- und Informationsintegrität (SI)  
-**Kontrolle:** SI-1, SI-6, SI-7, SI-10, SI-11, SI-12, SI-16  
-**Organisation:** AdminSend GmbH  
-**Verantwortlich:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0730
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -85,12 +89,11 @@ Dieses Dokument umfasst System- und Informationsintegritätskontrollen.
 **Bewertungsstatus:** [TODO: Erfüllt / Nicht erfüllt / Nicht zutreffend]  
 **Feststellungen:** [TODO: Beschreibung]  
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | [TODO] | Handbook-Generator | Ersterstellung |
+
 
 

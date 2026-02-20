@@ -1,18 +1,21 @@
 # Policy: Change und Release Management
 
-
-
-**Dokument-ID:** 0360  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.32 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0360
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Anwendungen, Infrastruktur, Netzwerke, Cloud-Services
 - **Change-Typen:** Standard Changes, Normal Changes, Emergency Changes
 - **Umgebungen:** Produktion, Test, Entwicklung
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -78,9 +81,9 @@ Changes mit Sicherheitsrelevanz erfordern ein Security Review durch das Security
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Change Manager:** {{ meta.it.change_manager }}
-- **CAB Chair:** {{ meta.it.cab_chair }}
+- **Policy Owner:** [TODO] (CISO)
+- **Change Manager:** {{ meta-handbook.it_change_manager }}
+- **CAB Chair:** {{ meta-handbook.it_cab_chair }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Entwicklung
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -154,10 +157,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ITIL 4** - Change Enablement
 - **ISO/IEC 20000** - IT Service Management
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

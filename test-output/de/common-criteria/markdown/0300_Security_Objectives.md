@@ -1,11 +1,17 @@
 # Sicherheitsziele (Security Objectives)
 
-**Dokument-ID:** 0300  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0300
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -15,7 +21,7 @@
 
 ## 1. Einleitung
 
-Dieses Dokument definiert die Sicherheitsziele für das TOE **{{ meta.toe_name }}** und dessen Betriebsumgebung. Die Sicherheitsziele leiten sich aus der Sicherheitsproblem-Definition ab und beschreiben die beabsichtigten Sicherheitseigenschaften, die zur Bewältigung der identifizierten Bedrohungen, zur Einhaltung der organisatorischen Sicherheitsrichtlinien und zur Erfüllung der Annahmen erforderlich sind.
+Dieses Dokument definiert die Sicherheitsziele für das TOE **{{ meta-handbook.toe_name }}** und dessen Betriebsumgebung. Die Sicherheitsziele leiten sich aus der Sicherheitsproblem-Definition ab und beschreiben die beabsichtigten Sicherheitseigenschaften, die zur Bewältigung der identifizierten Bedrohungen, zur Einhaltung der organisatorischen Sicherheitsrichtlinien und zur Erfüllung der Annahmen erforderlich sind.
 
 ### 1.1 Zweck
 
@@ -246,12 +252,4 @@ Nach der Definition der Sicherheitsziele:
 - Template 0200-0240: Sicherheitsproblem-Definition
 - Template 0310: Rationale für Sicherheitsziele
 - Template 0320: Security Objectives Coverage Matrix
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.owner }} | Initiale Version |
 

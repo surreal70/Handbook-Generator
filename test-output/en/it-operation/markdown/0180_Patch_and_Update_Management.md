@@ -1,12 +1,27 @@
 # Patch and Update Management
 
+**Document-ID:** [FRAMEWORK]-0180
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Purpose and Scope
 
 This document describes the patch and update management processes for AdminSend GmbH. It defines patch categories, schedules, test and rollout processes, as well as vulnerability scanning and prioritization to ensure system security and stability.
 
 **Scope:** All IT systems, operating systems, applications, and firmware of AdminSend GmbH
 
-**Responsible:** Andreas Huemmer (andreas.huemmer@adminsend.de)
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Patch Management Fundamentals
 
@@ -128,11 +143,11 @@ This document describes the patch and update management processes for AdminSend 
 ### 1. Vulnerability Identification
 
 **Identification Sources:**
-- **Vulnerability Scanner:** {{ meta.vulnerability_scanner }}
+- **Vulnerability Scanner:** {{ meta-handbook.vulnerability_scanner }}
 - **Vendor Advisories:** Microsoft, Red Hat, VMware, etc.
 - **Security Mailing Lists:** CERT, US-CERT, vendor-specific
-- **Threat Intelligence:** {{ meta.threat_intelligence_source }}
-- **SIEM Alerts:** {{ meta.siem_system }}
+- **Threat Intelligence:** {{ meta-handbook.threat_intelligence_source }}
+- **SIEM Alerts:** {{ meta-handbook.siem_system }}
 
 **Activities:**
 - Conduct vulnerability scans (weekly)
@@ -187,7 +202,7 @@ This document describes the patch and update management processes for AdminSend 
 - Store patch in patch repository
 - Document patch metadata
 
-**Patch Repository:** {{ meta.patch_repository }}
+**Patch Repository:** {{ meta-handbook.patch_repository }}
 
 **Documentation:**
 - Patch ID
@@ -205,10 +220,10 @@ This document describes the patch and update management processes for AdminSend 
 
 | Environment | Purpose | Systems |
 |---|---|---|
-| **Dev** | Developer tests | {{ netbox.environment.dev }} |
-| **Test** | Functional tests | {{ netbox.environment.test }} |
-| **Staging** | Pre-production tests | {{ netbox.environment.staging }} |
-| **Production** | Production systems | {{ netbox.environment.production }} |
+| **Dev** | Developer tests | [[ netbox.environment.dev ]] |
+| **Test** | Functional tests | [[ netbox.environment.test ]] |
+| **Staging** | Pre-production tests | [[ netbox.environment.staging ]] |
+| **Production** | Production systems | [[ netbox.environment.production ]] |
 
 **Test Process:**
 
@@ -411,8 +426,8 @@ This document describes the patch and update management processes for AdminSend 
 ### Windows Patch Management
 
 **Tool:** Windows Server Update Services (WSUS)  
-**Server:** {{ netbox.wsus.server }}  
-**Management:** {{ netbox.wsus.management_url }}
+**Server:** [[ netbox.wsus.server ]]  
+**Management:** [[ netbox.wsus.management_url ]]
 
 **Configuration:**
 - Automatic synchronization with Microsoft Update
@@ -430,7 +445,7 @@ This document describes the patch and update management processes for AdminSend 
 ### Linux Patch Management
 
 **Tool:** Ansible / Satellite  
-**Server:** {{ netbox.ansible.server }}
+**Server:** [[ netbox.ansible.server ]]
 
 **Playbooks:**
 - `patch-assessment.yml` - Check available updates
@@ -440,7 +455,7 @@ This document describes the patch and update management processes for AdminSend 
 
 **Example Playbook:**
 ```yaml
----
+
 - name: Patch Linux Servers
   hosts: linux_servers
   become: yes
@@ -470,7 +485,7 @@ This document describes the patch and update management processes for AdminSend 
 ### VMware Patch Management
 
 **Tool:** VMware Update Manager (VUM)  
-**Integration:** vCenter {{ netbox.vcenter.server }}
+**Integration:** vCenter [[ netbox.vcenter.server ]]
 
 **Baseline Groups:**
 - **Critical-Patches:** Critical security patches
@@ -486,7 +501,7 @@ This document describes the patch and update management processes for AdminSend 
 
 ### Vulnerability Scanner
 
-**Tool:** {{ meta.vulnerability_scanner }}  
+**Tool:** {{ meta-handbook.vulnerability_scanner }}  
 **Scan Frequency:** Weekly
 
 **Scan Profiles:**
@@ -594,7 +609,7 @@ yum downgrade <package>
 - Patch trends (monthly)
 - Top 10 vulnerabilities
 
-**Tool:** {{ meta.patch_dashboard }}
+**Tool:** {{ meta-handbook.patch_dashboard }}
 
 **Access:** IT Management, Security Team
 
@@ -642,7 +657,7 @@ yum downgrade <package>
 5. Document exception
 6. Review regularly (quarterly)
 
-**Exception Register:** {{ meta.exception_register }}
+**Exception Register:** {{ meta-handbook.exception_register }}
 
 ### End-of-Life Systems
 
@@ -653,7 +668,7 @@ yum downgrade <package>
 - Compensating controls
 - Document risk acceptance
 
-**EOL Register:** {{ meta.eol_register }}
+**EOL Register:** {{ meta-handbook.eol_register }}
 
 ### Legacy Applications
 
@@ -680,7 +695,7 @@ yum downgrade <package>
 - Deployment planning
 - Reporting
 
-**Team Lead:** Andreas Huemmer
+**Team Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### System Administrators
 
@@ -698,7 +713,7 @@ yum downgrade <package>
 - Security patch prioritization
 - Compliance monitoring
 
-**Lead:** Thomas Weber
+**Lead:** [TODO]
 
 ### Application Owners
 
@@ -770,10 +785,9 @@ yum downgrade <package>
 - CVE Database: https://cve.mitre.org
 - NVD Database: https://nvd.nist.gov
 
----
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
+**Classification:** Internal  
+**Last Update:** {{ meta-handbook.date }}
 
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Classification:** internal  
-**Last Update:** {{ meta.date }}

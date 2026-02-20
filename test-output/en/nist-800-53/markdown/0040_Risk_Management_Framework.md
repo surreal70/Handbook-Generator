@@ -1,17 +1,23 @@
 # Risk Management Framework (RMF)
 
-**Document-ID:** NIST-0040  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
 ## 1. Purpose
 
-This document describes the application of the NIST Risk Management Framework (RMF) to system {{ meta.nist.system_name }}.
+This document describes the application of the NIST Risk Management Framework (RMF) to system {{ meta-handbook.system_name }}.
 
 ## 2. RMF Overview
 
@@ -46,7 +52,7 @@ The RMF consists of seven steps:
 
 **Document:** See NIST-0010 System Categorization
 
-**Approved by:** {{ meta.roles.ao.name }}  
+**Approved by:** [TODO]  
 **Date:** [TODO: Date]
 
 ## 5. RMF Step 3: Select
@@ -100,7 +106,7 @@ The RMF consists of seven steps:
 - ATO Validity: [TODO: 3 years]
 - Next Reauthorization: [TODO: Date]
 
-**Authorizing Official:** {{ meta.roles.ao.name }}
+**Authorizing Official:** [TODO]
 
 **Risk Assessment:**
 - Overall Risk: [TODO: Low / Moderate / High]
@@ -134,13 +140,5 @@ The RMF consists of seven steps:
 | Assess | [TODO: Date] | [TODO: Date] | [TODO: Date] | [TODO: Status] |
 | Authorize | [TODO: Date] | [TODO: Date] | [TODO: Date] | [TODO: Status] |
 | Monitor | [TODO: Date] | Continuous | N/A | [TODO: Status] |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

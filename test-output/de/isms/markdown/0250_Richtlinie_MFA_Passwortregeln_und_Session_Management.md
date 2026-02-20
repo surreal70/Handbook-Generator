@@ -1,19 +1,21 @@
 # Richtlinie: MFA, Passwortregeln und Session Management
 
-
-
-**Dokument-ID:** 0250  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0240_Policy_Authentisierung_und_Passwoerter.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.17, A.5.18  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0250
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck und Geltungsbereich
 
@@ -130,7 +132,7 @@ Diese Richtlinie konkretisiert die `0240_Policy_Authentisierung_und_Passwoerter.
 ### 3.3 Passwort-Reset
 
 **Self-Service Password Reset (SSPR):**
-- Nutzer können Passwort selbst zurücksetzen über {{ meta.iam.sspr_url }}
+- Nutzer können Passwort selbst zurücksetzen über {{ meta-handbook.iam_sspr_url }}
 - Verifizierung über:
   - MFA-Methode (Authenticator-App, SMS)
   - Alternative E-Mail-Adresse
@@ -152,7 +154,7 @@ Diese Richtlinie konkretisiert die `0240_Policy_Authentisierung_und_Passwoerter.
 
 **Empfehlung:**
 - Nutzung von Passwort-Manager für alle Nutzer
-- Unternehmens-Lösung: {{ meta.security.password_manager }} (z.B. 1Password, Bitwarden)
+- Unternehmens-Lösung: {{ meta-handbook.security_password_manager }} (z.B. 1Password, Bitwarden)
 - Zentrale Verwaltung von Shared Credentials
 
 **Funktionen:**
@@ -224,7 +226,7 @@ Diese Richtlinie konkretisiert die `0240_Policy_Authentisierung_und_Passwoerter.
 ### 5.1 Single Sign-On (SSO)
 
 **Implementierung:**
-- **Identity Provider:** {{ meta.iam.idp }} (z.B. Azure AD, Okta)
+- **Identity Provider:** {{ meta-handbook.iam_idp }} (z.B. Azure AD, Okta)
 - **Protokolle:** SAML 2.0, OAuth 2.0, OpenID Connect
 - **Anwendungen:** Alle Cloud-SaaS-Anwendungen über SSO
 
@@ -249,7 +251,7 @@ Diese Richtlinie konkretisiert die `0240_Policy_Authentisierung_und_Passwoerter.
 - Code-Signing und E-Mail-Verschlüsselung
 
 **PKI-Infrastruktur:**
-- Interne Certificate Authority (CA): {{ meta.pki.ca }}
+- Interne Certificate Authority (CA): {{ meta-handbook.pki_ca }}
 - Zertifikats-Lebenszyklus-Management
 - Automatische Erneuerung vor Ablauf
 - Revocation-Checks (CRL, OCSP)
@@ -346,8 +348,8 @@ Diese Richtlinie konkretisiert die `0240_Policy_Authentisierung_und_Passwoerter.
 - Privilegierte Zugriffe
 
 **Retention:**
-- Authentifizierungs-Logs: {{ meta.retention.log_years }} Jahre
-- Audit-Trails: {{ meta.retention.audit_years }} Jahre
+- Authentifizierungs-Logs: {{ meta-handbook.retention_log_years }} Jahre
+- Audit-Trails: {{ meta-handbook.retention_audit_years }} Jahre
 
 ## 9. Referenzen
 
@@ -362,10 +364,9 @@ Diese Richtlinie konkretisiert die `0240_Policy_Authentisierung_und_Passwoerter.
 - **NIST SP 800-63B** - Digital Identity Guidelines (Authentication)
 - **OWASP Authentication Cheat Sheet**
 
----
-
 **Genehmigt durch:**  
-Thomas Weber, CISO  
-Datum: {{ meta.document.approval_date }}
+[TODO], CISO  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
+

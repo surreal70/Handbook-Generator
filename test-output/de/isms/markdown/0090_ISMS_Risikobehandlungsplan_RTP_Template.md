@@ -1,18 +1,21 @@
 # Risikobehandlungsplan (RTP) – Template
 
-
-
-**Dokument-ID:** 0090  
-**Dokumenttyp:** ISMS-Plan/Template  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 6.1.3  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0090
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Ziel und Geltungsbereich
 
@@ -38,7 +41,7 @@ Dieser Plan umfasst alle Maßnahmen zur Behandlung von Risiken im ISMS-Scope (si
 
 | Maßnahme-ID | Risiko-ID | Maßnahme | Control-Referenz (Annex A) | Owner | Priorität | Aufwand (PT) | Budget | Zieltermin | Status | Fortschritt | Bemerkungen |
 |-------------|-----------|----------|----------------------------|-------|-----------|--------------|--------|------------|--------|-------------|-------------|
-| M-001 | R-001 | Redundanter Core Switch beschaffen | A.8.6 (Capacity management) | Anna Schmidt | Hoch | 20 | 50.000 € | 2026-06-30 | Geplant | 0% | Budget genehmigt, Ausschreibung läuft |
+| M-001 | R-001 | Redundanter Core Switch beschaffen | A.8.6 (Capacity management) | [TODO] | Hoch | 20 | 50.000 € | 2026-06-30 | Geplant | 0% | Budget genehmigt, Ausschreibung läuft |
 | M-002 | R-002 | Immutable Backups implementieren | A.8.13 (Information backup) | IT-Betrieb | Sehr hoch | 40 | 30.000 € | 2026-03-31 | In Arbeit | 60% | Pilotphase abgeschlossen |
 | M-003 | R-003 | MFA für alle Benutzer ausrollen | A.5.17 (Authentication information) | IAM-Team | Sehr hoch | 30 | 15.000 € | 2026-02-28 | In Arbeit | 80% | 200 von 250 Benutzern migriert |
 | M-004 | R-004 | Secret-Scanning Tool implementieren | A.8.24 (Use of cryptography) | Dev-Lead | Mittel | 15 | 10.000 € | 2026-04-30 | Geplant | 10% | Tool-Evaluierung: GitGuardian vs. Gitleaks |
@@ -340,18 +343,15 @@ Für jede implementierte Maßnahme muss die Wirksamkeit nachgewiesen werden:
 - **ISO/IEC 27002:2022** - Information security controls
 - **ISO/IEC 27005:2022** - Information security risk management
 
----
-
 ## Änderungshistorie
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | {{ meta.document.date }} | Thomas Weber | Initiale Version | {{ meta.management.ceo }} |
-
----
+| 1.0 | [TODO] | [TODO] | Initiale Version | {{ meta-handbook.management_ceo }} |
 
 **Genehmigt durch:**  
-Thomas Weber, CISO  
-Datum: {{ meta.document.approval_date }}
+[TODO], CISO  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (Monatlich)
+**Nächster Review:** [TODO] (Monatlich)
+

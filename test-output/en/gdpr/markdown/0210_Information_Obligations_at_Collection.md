@@ -1,11 +1,17 @@
 # Information Obligations at Collection
 
-**Document-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0210
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of information obligations in {{ meta.organization }}. Data subjects must be comprehensively informed when their data is collected.
+This document describes the implementation of information obligations in AdminSend GmbH. Data subjects must be comprehensively informed when their data is collected.
 
 ## Information Obligation for Direct Collection (Art. 13)
 
@@ -175,8 +181,6 @@ This document describes the implementation of information obligations in {{ meta
 | Delayed Information | Information after processing | Establish process |
 | Incomprehensible Language | Legal jargon | Use plain language |
 | Hidden Information | Privacy notice not findable | Prominent placement |
-
----
 
 **Next Steps:**
 1. Create complete privacy notices for all contexts

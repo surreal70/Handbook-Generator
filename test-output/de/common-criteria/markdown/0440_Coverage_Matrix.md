@@ -1,11 +1,17 @@
 # Coverage Matrix
 
-**Dokument-ID:** 0440  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0440
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -309,8 +315,6 @@ Die Coverage Matrices demonstrieren vollständige und konsistente Rückverfolgba
 - ISO/IEC 15408-2:2022 - Security functional requirements
 - ISO/IEC 15408-3:2022 - Security assurance requirements
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Erstelle vollständige Coverage Matrices
@@ -318,3 +322,4 @@ Die Coverage Matrices demonstrieren vollständige und konsistente Rückverfolgba
 4. Erstelle Traceability Diagram
 5. Führe Peer-Review durch
 6. Halte Matrices bei Änderungen aktuell
+

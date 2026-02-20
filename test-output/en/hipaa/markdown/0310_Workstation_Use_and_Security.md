@@ -1,13 +1,17 @@
 # Workstation Use and Security
 
-**Document ID:** HIPAA-0310  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -359,7 +363,7 @@ If BYOD allowed:
 
 **Contact Information:**
 - IT Help Desk: [TODO: Phone/Email]
-- Security Officer: {{ meta.roles.security_officer.email }}
+- Security Officer: [TODO]
 - After Hours: [TODO: Emergency contact]
 
 ## 10. Training and Awareness
@@ -440,13 +444,5 @@ If BYOD allowed:
 **Retention Period:** [TODO: 6 years from retirement/disposal]
 
 **Storage Location:** [TODO: Asset management system, document repository]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

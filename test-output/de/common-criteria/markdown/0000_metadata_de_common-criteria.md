@@ -1,60 +1,37 @@
-# Metadaten: Common Criteria Security Target
+# COMMON-CRITERIA Handbuch - Metadaten
 
 **Dokument-ID:** 0000  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Datum:** [TODO]  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** [TODO]  
+**Template-Version:** 0.2  
 
 ---
 
 ## Handbuch-Informationen
 
-**Handbuch-Titel:** Common Criteria Security Target (ISO/IEC 15408)  
-**Organisation:** {{ meta.organization }}  
-**Autor:** Andreas Huemmer [andreas.huemmer@adminsend.de]  
-**Erstellungsdatum:** {{ meta.date }}  
-**Version:** {{ meta.version }}  
-**Geltungsbereich:** {{ meta.scope }}  
+**Handbuch-Titel:** Common Criteria Sicherheitszertifizierung Handbuch
+**Handbuch-Short:** common-criteria
+**Organisation:** AdminSend GmbH  
+**Autor:** Handbook-Generator  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
+**Genehmigt durch:** [TODO]  
 
 ---
 
-## Zweck
+## Dokumentenzweck
 
-Dieses Security Target (ST) dokumentiert die Sicherheitseigenschaften des Target of Evaluation (TOE) gemäß ISO/IEC 15408 (Common Criteria for Information Technology Security Evaluation). Es beschreibt die Sicherheitsfunktionen, Sicherheitsziele und Sicherheitsanforderungen des TOE sowie die Evaluierungsstufe (Evaluation Assurance Level, EAL).
+Dieses Dokument enthält die Metadaten für das COMMON-CRITERIA Handbuch.
 
-## Zielgruppe
+## Änderungshistorie
 
-- Evaluatoren und Zertifizierungsstellen
-- Produktentwickler und Sicherheitsarchitekten
-- Kunden und Beschaffer sicherheitskritischer IT-Produkte
-- Auditoren und Compliance-Verantwortliche
+| Version | Datum | Autor | Änderung |
+|---------|-------|-------|----------|
+| 0.1 | [TODO] | Handbook-Generator | Initiale Version |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
-## Dokumentenstruktur
-
-Das Security Target folgt der Struktur von ISO/IEC 15408-1:2022 und umfasst:
-
-1. **ST Introduction** - Einführung, TOE-Übersicht, Konformitätsansprüche
-2. **TOE Description** - Detaillierte Beschreibung des Evaluierungsgegenstands
-3. **Security Problem Definition** - Bedrohungen, organisatorische Sicherheitspolitiken, Annahmen
-4. **Security Objectives** - Sicherheitsziele für TOE und Umgebung
-5. **Security Requirements** - Funktionale und Vertrauenswürdigkeitsanforderungen (SFR, SAR)
-6. **TOE Summary Specification** - Zusammenfassung der Sicherheitsfunktionen
-7. **Appendices** - PP-Konformität, Rationale, Glossar
-
-## Hinweise zur Verwendung
-
-- Alle `[TODO]`-Platzhalter müssen durch spezifische Informationen ersetzt werden
-- Platzhalter im Format `{{ source.field }}` werden automatisch aus Datenquellen befüllt
-- Diagramme können im Unterordner `diagrams/` abgelegt werden
-- Das ST muss konsistent mit dem gewählten Protection Profile (PP) sein
-- Alle Sicherheitsanforderungen müssen aus ISO/IEC 15408-2 und 15408-3 stammen
-
----
-
-**Dokumentenhistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| {{ meta.version }} | {{ meta.date }} | Andreas Huemmer [andreas.huemmer@adminsend.de] | Initiale Version |

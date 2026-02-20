@@ -1,11 +1,17 @@
 # Speicherbegrenzung
 
-**Dokument-ID:** 0140  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0140
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Speicherbegrenzung in der {{ meta.organization }}. Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für den Verarbeitungszweck erforderlich ist.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Speicherbegrenzung in der AdminSend GmbH. Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für den Verarbeitungszweck erforderlich ist.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. e DSGVO
 
@@ -240,8 +246,6 @@ Nach Ablauf der Speicherdauer müssen Daten:
 | Fehlende Löschprozesse | Keine automatisierte Löschung | Löschroutinen implementieren |
 | Ignorieren von Löschanträgen | Verzögerte Bearbeitung | Prozess etablieren |
 | Unvollständige Löschung | Nur in einem System gelöscht | Alle Systeme prüfen |
-
----
 
 **Nächste Schritte:**
 1. Definieren Sie Löschfristen für alle Verarbeitungstätigkeiten

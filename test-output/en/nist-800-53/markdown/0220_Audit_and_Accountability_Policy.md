@@ -1,13 +1,17 @@
 # Audit and Accountability Policy
 
-**Document-ID:** NIST-0220  
-**Control Family:** Audit and Accountability (AU)  
-**Control:** AU-1, AU-2, AU-3  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0220
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -52,13 +56,5 @@ The organization implements audit and accountability controls to track system ac
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
 **SIEM Solution:** [TODO: Tool name]  
 **Log Sources:** [TODO: Number of sources]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

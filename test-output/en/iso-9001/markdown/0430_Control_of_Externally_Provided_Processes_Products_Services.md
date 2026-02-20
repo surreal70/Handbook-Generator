@@ -1,11 +1,17 @@
 # Control of Externally Provided Processes, Products and Services
 
-**Document-ID:** 0430  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0430
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document defines how {{ meta.organization }} controls externally provided processes, products and services to ensure they meet requirements.
+This document defines how AdminSend GmbH controls externally provided processes, products and services to ensure they meet requirements.
 
 ## General Requirements (8.4.1)
 
@@ -27,7 +33,7 @@ This document defines how {{ meta.organization }} controls externally provided p
 
 ### Control Requirements
 
-**{{ meta.organization }} ensures:**
+**AdminSend GmbH ensures:**
 - Externally provided processes, products and services remain under QMS control
 - Control on external providers and their outputs is defined
 - Potential impact on ability to meet customer requirements is considered
@@ -44,7 +50,7 @@ This document defines how {{ meta.organization }} controls externally provided p
 
 ### Provider Types
 
-**{{ meta.organization }} categorizes external providers:**
+**AdminSend GmbH categorizes external providers:**
 
 | Category | Description | Control Level | Examples |
 |----------|-------------|---------------|----------|
@@ -75,7 +81,7 @@ This document defines how {{ meta.organization }} controls externally provided p
 
 ### Qualification Methods
 
-**{{ meta.organization }} qualifies providers through:**
+**AdminSend GmbH qualifies providers through:**
 - Assessment of quality capability
 - Provider audits
 - Evaluation of samples or prototypes
@@ -106,7 +112,7 @@ This document defines how {{ meta.organization }} controls externally provided p
 
 ### Performance Evaluation
 
-**{{ meta.organization }} evaluates provider performance based on:**
+**AdminSend GmbH evaluates provider performance based on:**
 - Quality of delivered products/services
 - On-time delivery (date and quantity)
 - Responsiveness
@@ -163,7 +169,7 @@ This document defines how {{ meta.organization }} controls externally provided p
 
 ### Communication Requirements
 
-**{{ meta.organization }} communicates to external providers:**
+**AdminSend GmbH communicates to external providers:**
 - Processes, products and services to be provided
 - Approval of products, procedures, processes and equipment
 - Release of products and services
@@ -187,7 +193,7 @@ This document defines how {{ meta.organization }} controls externally provided p
 
 ### Verification Activities
 
-**{{ meta.organization }} verifies through:**
+**AdminSend GmbH verifies through:**
 - Incoming inspection
 - Review of accompanying documents
 - Sample inspections
@@ -219,7 +225,7 @@ This document defines how {{ meta.organization }} controls externally provided p
 
 ### Approved Providers
 
-**{{ meta.organization }} maintains register of approved providers:**
+**AdminSend GmbH maintains register of approved providers:**
 
 | Provider | Category | Products/Services | Qualified Since | Last Evaluation | Status |
 |----------|----------|-------------------|-----------------|-----------------|--------|
@@ -255,8 +261,6 @@ This document defines how {{ meta.organization }} controls externally provided p
 - Technical evaluation
 - Support in provider development
 
----
-
 **Next Steps:**
 1. Identify all external providers
 2. Categorize providers by criticality
@@ -264,3 +268,4 @@ This document defines how {{ meta.organization }} controls externally provided p
 4. Implement performance evaluation
 5. Conduct regular provider audits
 6. Maintain provider register
+

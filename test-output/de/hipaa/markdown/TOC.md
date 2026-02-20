@@ -18,5 +18,3 @@ Language: de
 - [0500 - Datenschutzpraktiken und Individuelle Rechte](0500_Datenschutzpraktiken_und_Individuelle_Rechte.md)
 - [0600 - Datenschutzverletzungsmeldung und Incident Response](0600_Datenschutzverletzungsmeldung_und_Incident_Response.md)
 - [0700 - Anhang Risikoanalyse Vorlage](0700_Anhang_Risikoanalyse_Vorlage.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

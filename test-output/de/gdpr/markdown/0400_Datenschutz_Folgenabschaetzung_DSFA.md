@@ -1,11 +1,17 @@
 # Datenschutz-Folgenabschätzung (DSFA)
 
-**Dokument-ID:** 0400  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0400
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt den Prozess der Datenschutz-Folgenabschätzung (DSFA) bei {{ meta.organization }} gemäß Art. 35 DSGVO. Eine DSFA ist erforderlich, wenn eine Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat.
+Dieses Dokument beschreibt den Prozess der Datenschutz-Folgenabschätzung (DSFA) bei AdminSend GmbH gemäß Art. 35 DSGVO. Eine DSFA ist erforderlich, wenn eine Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat.
 
 ## Erforderlichkeit einer DSFA (Art. 35 Abs. 1)
 
@@ -292,11 +298,10 @@ Die DSFA wird überprüft, wenn:
 - **Verzeichnis der Verarbeitungstätigkeiten (Art. 30):** Dokumentation
 - **Datenschutzbeauftragter (Art. 39):** Beratungsrolle
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Verarbeitungen, die eine DSFA erfordern
 2. Führen Sie systematische DSFAs durch
 3. Dokumentieren Sie Risiken und Maßnahmen
 4. Konsultieren Sie den Datenschutzbeauftragten
 5. Überprüfen Sie DSFAs regelmäßig
+

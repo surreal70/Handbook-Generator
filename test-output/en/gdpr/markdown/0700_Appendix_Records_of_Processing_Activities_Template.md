@@ -1,11 +1,17 @@
 # Appendix: Records of Processing Activities (Template)
 
-**Document-ID:** 0700  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0700
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,19 +19,17 @@
 
 ## Records of Processing Activities
 
-**Organization:** {{ meta.organization }}  
+**Organization:** AdminSend GmbH  
 **Controller:** [TODO: Name, Function]  
 **Data Protection Officer:** [TODO: Name, Contact]  
-**As of:** {{ meta.date }}
-
----
+**As of:** {{ meta-handbook.date }}
 
 ## Processing Activity [No. 1]
 
 ### 1. Name and Contact Details of Controller
 
 **Controller:**  
-{{ meta.organization }}  
+AdminSend GmbH  
 [TODO: Address]  
 [TODO: Phone]  
 [TODO: Email]
@@ -183,13 +187,9 @@ If Yes:
 If Yes:  
 [TODO: Description]
 
----
-
 ## Processing Activity [No. 2]
 
 [TODO: Repeat structure for additional processing activities]
-
----
 
 ## Overview of All Processing Activities
 
@@ -199,8 +199,6 @@ If Yes:
 | 2 | [TODO] | [TODO] | [TODO] | [TODO] | Yes/No |
 | 3 | [TODO] | [TODO] | [TODO] | [TODO] | Yes/No |
 
----
-
 ## Change History
 
 | Version | Date | Change | Changed By |
@@ -208,9 +206,8 @@ If Yes:
 | 1.0 | [TODO] | Initial version | [TODO] |
 | 1.1 | [TODO] | [TODO: Description] | [TODO] |
 
----
-
 **Notes:**
 - This record must be updated upon changes
 - The record must be made available to the supervisory authority upon request
 - Regular review (at least annually) required
+

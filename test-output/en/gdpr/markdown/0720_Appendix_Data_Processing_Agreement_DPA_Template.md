@@ -1,11 +1,17 @@
 # Appendix: Data Processing Agreement (DPA) Template
 
-**Document-ID:** 0720  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0720
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +24,7 @@ pursuant to Art. 28 GDPR
 between
 
 **Controller (Principal):**  
-{{ meta.organization }}  
+AdminSend GmbH  
 [TODO: Address]  
 [TODO: Authorized representative]
 
@@ -33,13 +39,9 @@ and
 
 hereinafter "Contractor"
 
----
-
 ## Preamble
 
 The Principal engages the Contractor for services where the Contractor processes personal data on behalf of the Principal. This agreement regulates the rights and obligations of the parties in connection with this processing pursuant to Art. 28 GDPR.
-
----
 
 ## § 1 Subject Matter and Duration
 
@@ -52,8 +54,6 @@ The Contractor processes personal data on behalf of the Principal in the context
 ### 1.2 Duration
 
 This agreement enters into force upon signature and applies for the duration of the main service. It ends automatically upon termination of the main service or can be terminated by either party with [TODO: e.g., 3 months] notice.
-
----
 
 ## § 2 Type and Purpose of Processing
 
@@ -82,8 +82,6 @@ This agreement enters into force upon signature and applies for the duration of 
 
 [TODO: e.g., Provision of cloud storage for customer data, Processing of payroll data]
 
----
-
 ## § 3 Scope of Processing
 
 ### 3.1 Categories of Data Subjects
@@ -104,8 +102,6 @@ If Yes: [TODO: e.g., Health data, Biometric data]
 
 **Estimated number of data subjects:** [TODO: e.g., 10,000]  
 **Estimated data volume:** [TODO: e.g., 100 GB]
-
----
 
 ## § 4 Obligations of Contractor
 
@@ -141,8 +137,6 @@ After termination of services, the Contractor deletes or returns all personal da
 
 **Deadline:** [TODO: e.g., 30 days after contract end]
 
----
-
 ## § 5 Sub-processing
 
 ### 5.1 Authorization
@@ -163,8 +157,6 @@ The Contractor informs the Principal of planned changes (addition or replacement
 
 The Contractor ensures that sub-processors fulfill the same data protection obligations as set out in this agreement.
 
----
-
 ## § 6 Rights and Obligations of Principal
 
 ### 6.1 Right to Instruct
@@ -184,8 +176,6 @@ The Principal or an appointed auditor has the right to:
 
 The Principal remains responsible for compliance with data protection regulations.
 
----
-
 ## § 7 Data Breaches
 
 ### 7.1 Notification Obligation
@@ -199,8 +189,6 @@ The Contractor reports data breaches without undue delay, at the latest within [
 
 The Contractor supports the Principal in fulfilling notification obligations pursuant to Art. 33-34 GDPR.
 
----
-
 ## § 8 Liability and Damages
 
 ### 8.1 Liability
@@ -211,8 +199,6 @@ Both parties are liable pursuant to Art. 82 GDPR for damages arising from proces
 
 The Contractor indemnifies the Principal from third-party claims arising from the Contractor's violations of this agreement.
 
----
-
 ## § 9 Data Protection Officers
 
 **Data Protection Officer of Principal:**  
@@ -220,8 +206,6 @@ The Contractor indemnifies the Principal from third-party claims arising from th
 
 **Data Protection Officer of Contractor:**  
 [TODO: Name, Contact]
-
----
 
 ## § 10 Final Provisions
 
@@ -241,8 +225,6 @@ The law of [TODO: e.g., Federal Republic of Germany] applies.
 
 Place of jurisdiction is [TODO: e.g., Munich].
 
----
-
 ## Signatures
 
 **Principal:**
@@ -260,8 +242,6 @@ Place, Date: _______________________
 Name: _______________________
 
 Signature: _______________________
-
----
 
 ## Annex 1: Technical and Organizational Measures (TOM)
 
@@ -305,6 +285,5 @@ Signature: _______________________
 
 [TODO: e.g., Incident response plan, Reporting channels, Escalation]
 
----
-
 **Note:** This template is a template and must be adapted to specific requirements. Legal review is recommended.
+

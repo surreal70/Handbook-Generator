@@ -1,13 +1,17 @@
 # Datenschutzpraktiken und Individuelle Rechte
 
-**Dokument-ID:** HIPAA-0500  
-**Organisation:** AdminSend GmbH  
-**Verantwortlich:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0500
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -558,8 +562,8 @@ Die Erklärung muss folgende Rechte beschreiben:
 7. **Nachverfolgung:** Nachverfolgung sicherstellen
 
 **Kontaktinformationen:**
-- Privacy Officer: {{ meta.roles.privacy_officer.name }}
-- E-Mail: {{ meta.roles.privacy_officer.email }}
+- Privacy Officer: [TODO]
+- E-Mail: [TODO]
 - Telefon: [TODO: Telefonnummer]
 - Adresse: [TODO: Postanschrift]
 
@@ -643,12 +647,11 @@ Die Erklärung muss folgende Rechte beschreiben:
 
 **Speicherort:** [TODO: Datenschutzverwaltungssystem, Dokumenten-Repository]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | [TODO] | Handbook-Generator | Ersterstellung |
+
 
 

@@ -1,14 +1,17 @@
 # Guideline: Exception Process
 
-**Document ID:** 0650  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0640_Policy_Exceptions_and_Risk_Waivers.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.1  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0650
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -60,7 +63,7 @@ This guideline implements `0640_Policy_Exceptions_and_Risk_Waivers.md` and defin
 
 ### 3.1 Request Submission
 
-**Request via:** {{ meta.itsm.portal }} (ticketing system)
+**Request via:** {{ meta-handbook.itsm_portal }} (ticketing system)
 
 **Mandatory Information:**
 - Affected policy/guideline
@@ -136,7 +139,7 @@ This guideline implements `0640_Policy_Exceptions_and_Risk_Waivers.md` and defin
 - Expiration date
 - Review date
 
-**Storage Location:** {{ meta.compliance.exception_register }}
+**Storage Location:** {{ meta-handbook.compliance_exception_register }}
 
 ## 4. Monitoring and Review
 
@@ -298,7 +301,6 @@ This guideline implements `0640_Policy_Exceptions_and_Risk_Waivers.md` and defin
 - **ISO/IEC 27001:2022 Annex A.5.1** - Policies for information security
 - **NIST SP 800-53** - Security and Privacy Controls (Tailoring)
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

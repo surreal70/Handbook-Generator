@@ -1,11 +1,17 @@
 # Begründung der Sicherheitsanforderungen (Requirements Rationale)
 
-**Dokument-ID:** 0420  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0420
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -260,11 +266,10 @@ Die Sicherheitsanforderungen sind angemessen:
 - ISO/IEC 15408-2:2022 - Security functional requirements
 - ISO/IEC 15408-3:2022 - Security assurance requirements
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Erstelle vollständige Mapping-Tabellen
 3. Verifiziere alle Abhängigkeiten
 4. Führe Peer-Review der Rationale durch
 5. Aktualisiere bei Änderungen an Zielen oder Anforderungen
+

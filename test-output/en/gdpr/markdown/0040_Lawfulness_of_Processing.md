@@ -1,11 +1,17 @@
 # Lawfulness of Processing
 
-**Document-ID:** 0040  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the legal bases for processing personal data in {{ meta.organization }} according to Art. 6 GDPR. Every processing must be based on at least one of these legal bases.
+This document describes the legal bases for processing personal data in AdminSend GmbH according to Art. 6 GDPR. Every processing must be based on at least one of these legal bases.
 
 ## Legal Bases according to Art. 6(1) GDPR
 
@@ -128,11 +134,10 @@ For each processing activity, the legal basis must be documented:
    - Balancing test performed? Yes/No
 6. **Documentation in records?** Yes/No
 
----
-
 **Next Steps:**
 1. Identify legal basis for each processing activity
 2. Document consents and their management
 3. Perform balancing tests for legitimate interests
 4. Update records of processing activities
 5. Train employees on identifying legal bases
+

@@ -1,13 +1,17 @@
 # Einrichtungszugangskontrollen
 
-**Dokument-ID:** HIPAA-0300  
-**Organisation:** AdminSend GmbH  
-**Verantwortlich:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0300
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -78,7 +82,7 @@ Dieses Dokument beschreibt die Einrichtungszugangskontrollen für AdminSend GmbH
 **Notfallkontakte:**
 | Rolle | Name | Telefon (24/7) | Backup |
 |-------|------|----------------|--------|
-| Security Officer | {{ meta.roles.security_officer.name }} | [TODO: Telefon] | [TODO: Backup-Name/Telefon] |
+| Security Officer | [TODO] | [TODO: Telefon] | [TODO: Backup-Name/Telefon] |
 | Facility Manager | [TODO: Name] | [TODO: Telefon] | [TODO: Backup] |
 | IT Manager | [TODO: Name] | [TODO: Telefon] | [TODO: Backup] |
 
@@ -162,7 +166,6 @@ Dieses Dokument beschreibt die Einrichtungszugangskontrollen für AdminSend GmbH
 | [TODO: Haupteingang] | [TODO: 2] | Kontinuierlich | [TODO: 90 Tage] | Zugangsüberwachung |
 | [TODO: Serverraum] | [TODO: 1] | Kontinuierlich | [TODO: 90 Tage] | Sicherheitsüberwachung |
 | [TODO: Parkplatz] | [TODO: 4] | Bewegung | [TODO: 30 Tage] | Perimetersicherheit |
-
 
 ## 5. Zugriffskontroll- und Validierungsverfahren
 
@@ -324,12 +327,11 @@ Dieses Dokument beschreibt die Einrichtungszugangskontrollen für AdminSend GmbH
 
 **Speicherort:** [TODO: Dokumentenmanagementsystem-Standort]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | [TODO] | Handbook-Generator | Ersterstellung |
+
 
 

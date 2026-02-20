@@ -1,11 +1,17 @@
 # Auskunftsrecht
 
-**Dokument-ID:** 0220  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0220
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Auskunftsrechts in der {{ meta.organization }}. Betroffene Personen haben das Recht, Auskunft über die Verarbeitung ihrer personenbezogenen Daten zu erhalten.
+Dieses Dokument beschreibt die Umsetzung des Auskunftsrechts in der AdminSend GmbH. Betroffene Personen haben das Recht, Auskunft über die Verarbeitung ihrer personenbezogenen Daten zu erhalten.
 
 ## Auskunftsrecht gemäß Art. 15 DSGVO
 
@@ -184,8 +190,6 @@ Dieses Dokument beschreibt die Umsetzung des Auskunftsrechts in der {{ meta.orga
 | Fristüberschreitung | Antwort nach 2 Monaten | Fristenkontrolle |
 | Unverständliche Auskunft | Technische Rohdaten | Strukturierte Aufbereitung |
 | Fehlende Identifikation | Keine Prüfung | Identifikationsprozess |
-
----
 
 **Nächste Schritte:**
 1. Etablieren Sie Prozess für Auskunftsanfragen

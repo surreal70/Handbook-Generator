@@ -1,18 +1,31 @@
 # Training, Awareness and Competence
 
+**Document-ID:** [FRAMEWORK]-0120
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0120  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clauses 7.2, 7.3  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose and Objectives
 
@@ -37,12 +50,12 @@ The training and awareness program of **AdminSend GmbH** ensures that:
 
 | Target Group | Number | Training Need | Frequency | Responsible |
 |--------------|--------|---------------|-----------|-------------|
-| **All Employees** | {{ meta.organization.employee_count }} | Security Awareness Basics | Annually | Thomas Weber |
-| **Admins/Privileged Users** | [TODO] | Advanced Security, Privileged Access | Semi-annually | Thomas Weber |
-| **Developers/DevOps** | [TODO] | Secure Coding, DevSecOps | Semi-annually | Thomas Weber |
-| **Management** | [TODO] | Security Governance, Risk Management | Annually | Thomas Weber |
-| **HR** | [TODO] | HR Security, Onboarding/Offboarding | Annually | Thomas Weber |
-| **Contractors/External** | [TODO] | Security Basics, Compliance | At Onboarding | Thomas Weber |
+| **All Employees** | [TODO] | Security Awareness Basics | Annually | [TODO] |
+| **Admins/Privileged Users** | [TODO] | Advanced Security, Privileged Access | Semi-annually | [TODO] |
+| **Developers/DevOps** | [TODO] | Secure Coding, DevSecOps | Semi-annually | [TODO] |
+| **Management** | [TODO] | Security Governance, Risk Management | Annually | [TODO] |
+| **HR** | [TODO] | HR Security, Onboarding/Offboarding | Annually | [TODO] |
+| **Contractors/External** | [TODO] | Security Basics, Compliance | At Onboarding | [TODO] |
 
 ### 2.2 Role-Specific Requirements
 
@@ -70,12 +83,12 @@ The training and awareness program of **AdminSend GmbH** ensures that:
 
 | Training ID | Training | Target Group | Frequency | Duration | Content | Evidence | Owner | Status |
 |-------------|----------|--------------|-----------|----------|---------|----------|-------|--------|
-| **T-001** | Security Awareness Basics | All Employees | Annually | 60 min | Phishing, passwords, clean desk, incident reporting | LMS certificate | Thomas Weber | Active |
-| **T-002** | GDPR Basics | All Employees | Annually | 30 min | Data protection basics, data subject rights | LMS certificate | {{ meta.privacy.dpo }} | Active |
-| **T-003** | Phishing Awareness | All Employees | Quarterly | 15 min | Phishing detection, reporting | Simulation result | Thomas Weber | Active |
-| **T-004** | Privileged Access Management | Admins | Semi-annually | 90 min | PAM, least privilege, audit logging | LMS certificate | Thomas Weber | Active |
-| **T-005** | Secure Coding | Developers | Semi-annually | 120 min | OWASP Top 10, input validation, secrets | LMS certificate | Thomas Weber | Active |
-| **T-006** | Incident Response | Security Team | Annually | 180 min | IR process, forensics, communication | Workshop attendance | Thomas Weber | Active |
+| **T-001** | Security Awareness Basics | All Employees | Annually | 60 min | Phishing, passwords, clean desk, incident reporting | LMS certificate | [TODO] | Active |
+| **T-002** | GDPR Basics | All Employees | Annually | 30 min | Data protection basics, data subject rights | LMS certificate | {{ meta-handbook.privacy_dpo }} | Active |
+| **T-003** | Phishing Awareness | All Employees | Quarterly | 15 min | Phishing detection, reporting | Simulation result | [TODO] | Active |
+| **T-004** | Privileged Access Management | Admins | Semi-annually | 90 min | PAM, least privilege, audit logging | LMS certificate | [TODO] | Active |
+| **T-005** | Secure Coding | Developers | Semi-annually | 120 min | OWASP Top 10, input validation, secrets | LMS certificate | [TODO] | Active |
+| **T-006** | Incident Response | Security Team | Annually | 180 min | IR process, forensics, communication | Workshop attendance | [TODO] | Active |
 
 [TODO: Add additional training]
 
@@ -312,10 +325,9 @@ For audits, the following evidence is provided:
 - **ISO/IEC 27001:2022** - Clause 7.3: Awareness
 - **ISO/IEC 27002:2022** - Control 6.3: Information security awareness, education and training
 
----
-
 **Approved by:**  
-Thomas Weber, CISO  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]
+

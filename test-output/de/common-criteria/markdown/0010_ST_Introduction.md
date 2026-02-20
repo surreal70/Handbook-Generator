@@ -1,11 +1,17 @@
 # ST Introduction
 
-**Dokument-ID:** 0010  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -15,12 +21,12 @@
 
 ### 1.1 ST Title
 **ST Title:** [TODO: Vollständiger Titel des Security Target]  
-**ST Version:** {{ meta.version }}  
-**ST Date:** {{ meta.date }}  
+**ST Version:** 0  
+**ST Date:** [TODO]  
 
 ### 1.2 ST Author
-**Author:** Andreas Huemmer [andreas.huemmer@adminsend.de]  
-**Organization:** {{ meta.organization }}  
+**Author:** Handbook-Generator  
+**Organization:** AdminSend GmbH  
 **Contact:** [TODO: Kontaktinformationen]  
 
 ### 1.3 TOE Identification
@@ -105,15 +111,14 @@ Das ST ist wie folgt strukturiert:
 
 ## 6. Revision History
 
-| Version | Date | Author | Changes |
+| Version | Datum | Autor | Änderungen |
 |---------|------|--------|---------|
-| {{ meta.version }} | {{ meta.date }} | Andreas Huemmer [andreas.huemmer@adminsend.de] | Initial version |
+| [Version] | [Date] | [Author] | Initial version |
 | [TODO] | [TODO] | [TODO] | [TODO: Beschreibung der Änderungen] |
-
----
 
 **Nächste Schritte:**
 1. Vervollständigen Sie alle [TODO]-Platzhalter
 2. Überprüfen Sie die Konsistenz mit anderen ST-Abschnitten
 3. Stellen Sie sicher, dass alle Referenzen korrekt sind
 4. Lassen Sie das Dokument von relevanten Stakeholdern reviewen
+

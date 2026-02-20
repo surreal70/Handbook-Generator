@@ -1,13 +1,17 @@
 # BIA – Results and Target Values (RTO/RPO)
 
-**Document ID:** BCM-0080  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -142,10 +146,10 @@ The following processes have been identified as business-critical (RTO < 24 hour
 
 | Measure | Description | Owner | Priority | Due | Status | Cost (estimated) |
 |---------|-------------|-------|----------|-----|--------|------------------|
-| ERP Redundancy | Implementation of high-availability cluster | {{ meta.roles.cio.name }} | High | Q2 2026 | In Progress | 150,000 € |
+| ERP Redundancy | Implementation of high-availability cluster | [TODO] | High | Q2 2026 | In Progress | 150,000 € |
 | Backup Personnel | Training of backups for key persons | HR | High | Q1 2026 | Open | 20,000 € |
 | Supplier BCM | Request BCM evidence from critical suppliers | Procurement | Medium | Q2 2026 | Open | 5,000 € |
-| Network Redundancy | Second internet connection | {{ meta.roles.it_operations_manager.name }} | High | Q1 2026 | In Progress | 30,000 € |
+| Network Redundancy | Second internet connection | [TODO] | High | Q1 2026 | In Progress | 30,000 € |
 
 ### 5.2 Prioritization of Measures
 
@@ -220,16 +224,8 @@ In case of comprehensive failure, recovery occurs in the following order:
 
 | Role | Name | Date | Signature |
 |------|------|------|-----------|
-| CEO | {{ meta.roles.ceo.name }} | [TODO: Date] | [TODO] |
-| CIO | {{ meta.roles.cio.name }} | [TODO: Date] | [TODO] |
+| CEO | [TODO] | [TODO: Date] | [TODO] |
+| CIO | [TODO] | [TODO: Date] | [TODO] |
 | BCM Manager | [TODO: Name] | [TODO: Date] | [TODO] |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

@@ -1,18 +1,21 @@
 # Policy: Mobile Device und Remote Work
 
-
-
-**Dokument-ID:** 0500  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.6.7, A.6.8, A.8.9 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0500
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Geräte:** Laptops, Smartphones, Tablets, Wearables (unternehmenseigen und BYOD)
 - **Zugriffsmethoden:** VPN, Remote Desktop, Cloud-Services, Mobile Apps
 - **Personen:** Alle Mitarbeiter, Auftragnehmer mit Remote-Zugriff
-- **Standorte:** {{ netbox.site.name }}, Home Office, öffentliche Orte, Reisen
+- **Standorte:** [[ netbox.site.name ]], Home Office, öffentliche Orte, Reisen
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -86,9 +89,9 @@ Remote-Arbeitsplätze müssen Sicherheitsanforderungen erfüllen:
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **MDM Administrator:** {{ meta.it.mdm_admin }}
-- **Remote Access Manager:** {{ meta.it.remote_access_manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **MDM Administrator:** {{ meta-handbook.it_mdm_admin }}
+- **Remote Access Manager:** {{ meta-handbook.it_remote_access_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Mitarbeiter
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -164,10 +167,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIST SP 800-46** - Guide to Enterprise Telework, Remote Access, and BYOD Security
 - **DSGVO (EU 2016/679)** - Datenschutz bei BYOD und Remote Work
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

@@ -1,11 +1,17 @@
 # Überwachung, Messung, Analyse und Bewertung
 
-**Dokument-ID:** 0550  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0550
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,13 +19,13 @@
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamkeit des QMS überwacht, misst, analysiert und bewertet.
+Dieses Dokument definiert, wie AdminSend GmbH die Leistung und Wirksamkeit des QMS überwacht, misst, analysiert und bewertet.
 
 ## Allgemeine Anforderungen (9.1.1)
 
 ### Überwachungs- und Messanforderungen
 
-**{{ meta.organization }} bestimmt:**
+**AdminSend GmbH bestimmt:**
 - **Was** überwacht und gemessen werden muss
 - **Methoden** für Überwachung, Messung, Analyse und Bewertung
 - **Wann** Überwachung und Messung durchgeführt werden
@@ -27,7 +33,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 
 ### Leistungsbewertung
 
-**{{ meta.organization }} bewertet:**
+**AdminSend GmbH bewertet:**
 - Leistung und Wirksamkeit des QMS
 - Konformität von Produkten und Dienstleistungen
 - Kundenzufriedenheit
@@ -46,7 +52,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 
 ### Überwachungsmethoden
 
-**{{ meta.organization }} überwacht Kundenwahrnehmungen durch:**
+**AdminSend GmbH überwacht Kundenwahrnehmungen durch:**
 - Kundenbefragungen
 - Kundenfeedback und Beschwerden
 - Kundengespräche
@@ -92,7 +98,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 
 ### Datenanalyse
 
-**{{ meta.organization }} analysiert und bewertet Daten zu:**
+**AdminSend GmbH analysiert und bewertet Daten zu:**
 - Konformität von Produkten und Dienstleistungen
 - Grad der Kundenzufriedenheit
 - Leistung und Wirksamkeit des QMS
@@ -141,7 +147,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 
 ### Prozessüberwachung
 
-**Für jeden Prozess überwacht {{ meta.organization }}:**
+**Für jeden Prozess überwacht AdminSend GmbH:**
 - Prozesseingaben und -ausgaben
 - Prozessleistung (Effizienz, Effektivität)
 - Einhaltung von Prozesskriterien
@@ -167,7 +173,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 
 ### Produktüberwachung
 
-**{{ meta.organization }} überwacht:**
+**AdminSend GmbH überwacht:**
 - Produktkonformität mit Spezifikationen
 - Produktqualität
 - Produktzuverlässigkeit
@@ -229,8 +235,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 - Meldung von Problemen
 - Teilnahme an Verbesserungen
 
----
-
 **Nächste Schritte:**
 1. Definiere alle zu überwachenden Parameter
 2. Etabliere Messmethoden und -frequenzen
@@ -238,3 +242,4 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 4. Führe regelmäßige Analysen durch
 5. Berichte Ergebnisse an relevante Parteien
 6. Identifiziere und priorisiere Verbesserungen
+

@@ -1,13 +1,17 @@
 # System and Communications Protection
 
-**Document-ID:** NIST-0700  
-**Control Family:** System and Communications Protection (SC)  
-**Control:** SC-1, SC-7, SC-8, SC-13  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0700
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -47,13 +51,5 @@ The organization protects system and communications.
 ## 3. Implementation Status
 
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

@@ -1,18 +1,31 @@
 # Policy: Access Control and Identity Management
 
+**Document-ID:** [FRAMEWORK]-0220
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0220  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.15-A.5.18 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Systems:** All IT systems, applications, databases, networks, cloud services
 - **Persons:** All employees, contractors, suppliers, and third parties with access to IT resources
 - **Access Methods:** Local access, remote access, privileged access, API access
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`).
 
@@ -81,8 +94,8 @@ All access grants must be approved and documented by the resource owner. Access 
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **IAM Manager:** {{ meta.it.iam_manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **IAM Manager:** {{ meta-handbook.it_iam_manager }}
 - **Resource Owners:** Department heads, system owners
 - **Implementation Responsible:** IT operations, HR
 - **Control/Audit Function:** ISMS, internal audit
@@ -159,10 +172,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **ISO/IEC 27002:2022** - Information security controls
 - **NIST SP 800-63** - Digital Identity Guidelines
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

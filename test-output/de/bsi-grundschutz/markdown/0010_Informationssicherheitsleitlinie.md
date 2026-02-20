@@ -1,14 +1,17 @@
 # Informationssicherheitsleitlinie (Top-Management)
 
-**Dokument-ID:** 0010  
-**Dokumenttyp:** Leitlinie/Policy  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -41,9 +44,9 @@ Die Informationssicherheit von **AdminSend GmbH** basiert auf folgenden Schutzzi
 Diese Leitlinie gilt für:
 
 - **Organisation:** AdminSend GmbH
-- **Standorte:** {{ meta.organization.locations }}
-- **Geschäftsführung:** Max Mustermann
-- **Informationssicherheitsbeauftragter (ISB):** Thomas Weber
+- **Standorte:** [TODO]
+- **Geschäftsführung:** [TODO]
+- **Informationssicherheitsbeauftragter (ISB):** [TODO]
 
 ### 2.2 Informationsverbünde im Scope
 
@@ -88,7 +91,7 @@ Das Informationssicherheits-Managementsystem (ISMS) wird kontinuierlich überwac
 
 ### 4.1 Top-Management / Geschäftsführung
 
-**Verantwortlich:** Max Mustermann (max.mustermann@adminsend.de)
+**Verantwortlich:** [TODO] ([TODO])
 
 Die Geschäftsführung trägt die Gesamtverantwortung für Informationssicherheit und:
 - Genehmigt die Informationssicherheitsleitlinie
@@ -98,7 +101,7 @@ Die Geschäftsführung trägt die Gesamtverantwortung für Informationssicherhei
 
 ### 4.2 Informationssicherheitsbeauftragter (ISB)
 
-**Verantwortlich:** Thomas Weber (thomas.weber@adminsend.de)
+**Verantwortlich:** [TODO] ([TODO])
 
 Der ISB ist verantwortlich für:
 - Koordination des ISMS
@@ -109,7 +112,7 @@ Der ISB ist verantwortlich für:
 
 ### 4.3 IT-Leitung
 
-**Verantwortlich:** Anna Schmidt (anna.schmidt@adminsend.de)
+**Verantwortlich:** [TODO] ([TODO])
 
 Die IT-Leitung ist verantwortlich für:
 - Umsetzung technischer Sicherheitsmaßnahmen
@@ -151,21 +154,18 @@ Verstöße gegen diese Leitlinie können zu folgenden Maßnahmen führen:
 
 Diese Leitlinie wird mindestens jährlich oder bei wesentlichen Änderungen überprüft und aktualisiert.
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
 
 ## 7. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| Geschäftsführung | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Geschäftsführung | [TODO] | [TODO] | Draft |
+| ISB | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
 - BSI Standard 200-2: IT-Grundschutz-Methodik
 - BSI Standard 200-3: Risikoanalyse auf der Basis von IT-Grundschutz
 - BSI IT-Grundschutz-Kompendium
-
 

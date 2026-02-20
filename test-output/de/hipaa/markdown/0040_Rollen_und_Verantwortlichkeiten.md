@@ -1,13 +1,17 @@
 # Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** HIPAA-0040  
-**Organisation:** AdminSend GmbH  
-**Verantwortlich:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -33,9 +37,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 
 ### 2.1 Chief Executive Officer (CEO)
 
-**Name:** {{ meta.roles.ceo.name }}  
-**E-Mail:** {{ meta.roles.ceo.email }}  
-**Telefon:** {{ meta.roles.ceo.phone }}  
+**Name:** [TODO]  
+**E-Mail:** [TODO]  
+**Telefon:** [TODO]  
 
 **Verantwortlichkeiten:**
 - Ultimative Verantwortung für HIPAA-Compliance
@@ -47,9 +51,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 
 ### 2.2 Chief Information Officer (CIO)
 
-**Name:** {{ meta.roles.cio.name }}  
-**E-Mail:** {{ meta.roles.cio.email }}  
-**Telefon:** {{ meta.roles.cio.phone }}  
+**Name:** [TODO]  
+**E-Mail:** [TODO]  
+**Telefon:** [TODO]  
 
 **Verantwortlichkeiten:**
 - IT-Infrastruktur zur Unterstützung der HIPAA-Compliance
@@ -62,9 +66,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 
 ### 3.1 Privacy Officer
 
-**Name:** {{ meta.roles.privacy_officer.name }}  
-**E-Mail:** {{ meta.roles.privacy_officer.email }}  
-**Telefon:** {{ meta.roles.privacy_officer.phone }}  
+**Name:** [TODO]  
+**E-Mail:** [TODO]  
+**Telefon:** [TODO]  
 **Bürostandort:** [TODO: Standort]  
 
 **HIPAA-Anforderung:** 45 CFR §164.530(a)(1)(i)
@@ -95,9 +99,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 
 ### 3.2 Security Officer
 
-**Name:** {{ meta.roles.security_officer.name }}  
-**E-Mail:** {{ meta.roles.security_officer.email }}  
-**Telefon:** {{ meta.roles.security_officer.phone }}  
+**Name:** [TODO]  
+**E-Mail:** [TODO]  
+**Telefon:** [TODO]  
 **Bürostandort:** [TODO: Standort]  
 
 **HIPAA-Anforderung:** 45 CFR §164.308(a)(2)
@@ -217,7 +221,7 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 
 **Committee-Name:** HIPAA Compliance Committee
 
-**Vorsitz:** {{ meta.roles.privacy_officer.name }} (Privacy Officer)
+**Vorsitz:** [TODO] (Privacy Officer)
 
 **Mitglieder:**
 - CEO oder Beauftragter
@@ -295,9 +299,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 **Notfallkontakte:**
 | Rolle | Name | Mobil | E-Mail |
 |------|------|-------|--------|
-| Privacy Officer | {{ meta.roles.privacy_officer.name }} | [TODO: Mobil] | {{ meta.roles.privacy_officer.email }} |
-| Security Officer | {{ meta.roles.security_officer.name }} | [TODO: Mobil] | {{ meta.roles.security_officer.email }} |
-| CEO | {{ meta.roles.ceo.name }} | [TODO: Mobil] | {{ meta.roles.ceo.email }} |
+| Privacy Officer | [TODO] | [TODO: Mobil] | [TODO] |
+| Security Officer | [TODO] | [TODO: Mobil] | [TODO] |
+| CEO | [TODO] | [TODO: Mobil] | [TODO] |
 
 ## 8. Schulung und Kompetenz
 
@@ -340,12 +344,11 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 | Risikobewertungsabschluss | 100% | Jährlicher Abschluss | Jährlich |
 | Richtlinienüberprüfungsabschluss | 100% | % überprüfte Richtlinien | Jährlich |
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | [TODO] | Handbook-Generator | Ersterstellung |
+
 
 

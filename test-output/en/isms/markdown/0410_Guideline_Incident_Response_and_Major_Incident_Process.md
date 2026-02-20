@@ -1,14 +1,17 @@
 # Guideline: Incident Response and Major Incident Process
 
-**Document ID:** 0410  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0400_Policy_Incident_Management.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.24, A.5.25, A.5.26  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0410
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -49,9 +52,9 @@ This guideline implements the `0400_Policy_Incident_Management.md` and defines:
 ### 3.1 Detection & Reporting
 
 **Reporting Channels:**
-- **IT Support:** {{ meta.support.phone }}, {{ meta.support.email }}
-- **Security Team:** {{ meta.security.email }}, {{ meta.security.phone }}
-- **Self-Service Portal:** {{ meta.itsm.portal }}
+- **IT Support:** {{ meta-handbook.support_phone }}, {{ meta-handbook.support_email }}
+- **Security Team:** {{ meta-handbook.security_email }}, {{ meta-handbook.security_phone }}
+- **Self-Service Portal:** {{ meta-handbook.itsm_portal }}
 
 **Required Information:**
 - Description of problem
@@ -237,7 +240,7 @@ This guideline implements the `0400_Policy_Incident_Management.md` and defines:
 4. **Reporting:** Forensics report
 5. **Chain of Custody:** Complete documentation
 
-**Tools:** {{ meta.security.forensics_tools }}
+**Tools:** {{ meta-handbook.security_forensics_tools }}
 
 ### 5.4 Reporting Obligations
 
@@ -262,7 +265,7 @@ This guideline implements the `0400_Policy_Incident_Management.md` and defines:
 
 **Channels:**
 - Email to stakeholders
-- Status page ({{ meta.status.url }})
+- Status page ({{ meta-handbook.status_url }})
 - Intranet notifications
 
 ### 6.2 Stakeholder Matrix
@@ -304,7 +307,6 @@ This guideline implements the `0400_Policy_Incident_Management.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.5.26** - Response to information security incidents
 - **NIST SP 800-61** - Computer Security Incident Handling Guide
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

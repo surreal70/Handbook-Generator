@@ -1,45 +1,37 @@
-# ISO 9001 Quality Management System Handbook - Metadata
+# ISO-9001 Handbook - Metadata
 
 **Document-ID:** 0000  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}  
+**Date:** [TODO]  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Classification:** Internal  
+**Last Updated:** [TODO]  
+**Template-Version:** 0.2  
 
 ---
 
 ## Handbook Information
 
-**Handbook Title:** ISO 9001:2015 Quality Management System Handbook  
-**Organization:** {{ meta.organization }}  
-**Author:** Andreas Huemmer [andreas.huemmer@adminsend.de]  
-**Scope:** {{ meta.scope }}  
-**Valid From:** {{ meta.valid_from }}  
-**Next Review:** {{ meta.next_review }}  
+**Handbook Title:** ISO 9001 Quality Management Handbook
+**Handbook Short:** iso-9001
+**Organisation:** AdminSend GmbH  
+**Author:** Handbook-Generator  
+**Scope:** [TODO]  
+**Valid From:** [TODO]  
+**Next Review:** [TODO]  
+**Approved By:** [TODO]  
 
 ---
 
 ## Document Purpose
 
-This handbook documents the organization's Quality Management System (QMS) in accordance with ISO 9001:2015. It describes the structure, processes, responsibilities, and procedures for ensuring the quality of products and services.
-
-## Scope
-
-The QMS applies to:
-- {{ meta.qms_scope }}
-
-## Normative References
-
-- ISO 9001:2015 - Quality management systems - Requirements
-- ISO 9000:2015 - Quality management systems - Fundamentals and vocabulary
-- ISO 9004:2018 - Quality management - Quality of an organization - Guidance to achieve sustained success
+This document contains the metadata for the ISO-9001 handbook.
 
 ## Change History
 
 | Version | Date | Author | Change |
 |---------|------|--------|--------|
-| {{ meta.version }} | {{ meta.date }} | Andreas Huemmer [andreas.huemmer@adminsend.de] | Initial version |
-
-
+| 0.1 | [TODO] | Handbook-Generator | Initial version |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 

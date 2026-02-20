@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.19
+## Current Version: 0.0.20
 
 ### Single Source of Truth
 
@@ -33,6 +33,21 @@ To update the version number:
 
 ### Version History
 
+- **0.0.20** (2026-02-20): 🎯 Limited Production Use - Handbook Generator Fixes & Full Generation
+  - ✅ Fixed handbook generator AttributeError (config.metadata → config.unified_metadata)
+  - ✅ Fixed MetaAdapter to support both UnifiedMetadata and MetadataConfig
+  - ✅ Removed "placeholder must be alone in line" restriction
+  - ✅ Fixed handbook-specific metadata loading from meta-handbook.yaml files
+  - ✅ Added unified_metadata parameter to PlaceholderProcessor
+  - ✅ Removed version information from 19 handbook README files
+  - ✅ Generated all 44 handbooks successfully (22 types × 2 languages)
+  - ✅ Created 1,722 markdown files (33 MB total)
+  - ✅ 100% placeholder replacement success (352 replacements per handbook average)
+  - ✅ Batch generation script (generate_all_handbooks.sh)
+  - ✅ 9 seconds total generation time for all handbooks
+  - ✅ Inline placeholder support enabled
+  - ✅ Separate file output per template
+  - **Status**: 🎯 Limited Production Use - Core functionality stable, PDF requires system libraries
 - **0.0.19** (2026-02-20): Placeholder Migration & Analysis System
   - ✅ Complete placeholder migration to standardized format (100% coverage)
   - ✅ Placeholder matrix analysis tool with filtering capabilities

@@ -1,11 +1,17 @@
 # Anhang: Prozesslandkarte
 
-**Dokument-ID:** 0750  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0750
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieser Anhang stellt die Prozesslandkarte von {{ meta.organization }} dar und beschreibt die Hauptprozesse des QMS.
+Dieser Anhang stellt die Prozesslandkarte von AdminSend GmbH dar und beschreibt die Hauptprozesse des QMS.
 
 ## Prozesslandkarte
 
@@ -240,6 +246,5 @@ Dieser Anhang stellt die Prozesslandkarte von {{ meta.organization }} dar und be
 - [TODO: Liste relevanter Verfahrensanweisungen]
 - [TODO: Liste relevanter Arbeitsanweisungen]
 
----
-
 **Hinweis:** Diese Prozesslandkarte ist ein lebendes Dokument und wird bei Bedarf aktualisiert.
+

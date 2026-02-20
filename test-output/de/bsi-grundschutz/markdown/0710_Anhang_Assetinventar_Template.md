@@ -1,14 +1,17 @@
 # Anhang: Assetinventar (Template)
 
-**Dokument-ID:** 0710  
-**Dokumenttyp:** Anhang/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0710
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,14 +21,14 @@
 
 Das Assetinventar von **AdminSend GmbH** dokumentiert alle IT-Assets im Geltungsbereich des ISMS.
 
-**Verantwortlich:** Anna Schmidt
+**Verantwortlich:** [TODO]
 
 ## 2. Hinweis zur Pflege
 
 **Empfehlung:** Dieses Inventar sollte in einer CMDB (Configuration Management Database) oder einem Asset-Management-Tool gepflegt werden. Dieses Dokument dient als Template/Export-Format.
 
 **CMDB-System:** [TODO: z.B. ServiceNow, Device42, NetBox]  
-**Ablageort:** {{ netbox.url }} oder [TODO]
+**Ablageort:** [[ netbox.url ]] oder [TODO]
 
 ## 3. Asset-Kategorien
 
@@ -56,7 +59,7 @@ Das Assetinventar von **AdminSend GmbH** dokumentiert alle IT-Assets im Geltungs
 
 | Asset-ID | Name | Typ | Kategorie | Owner | Standort/Region | Schutzbedarf (C/I/A) | Lebenszyklusstatus | Hersteller | Modell | Seriennummer | Anschaffungsdatum | EOL-Datum | Bemerkungen |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| {{ netbox.device.id }} | {{ netbox.device.name }} | Server | Hardware | Anna Schmidt | {{ netbox.site.name }} | [TODO] | Produktiv | {{ netbox.device.manufacturer }} | {{ netbox.device.model }} | {{ netbox.device.serial }} | [TODO] | [TODO] | [TODO] |
+| [[ netbox.device.id ]] | [[ netbox.device.name ]] | Server | Hardware | [TODO] | [[ netbox.site.name ]] | [TODO] | Produktiv | [[ netbox.device.manufacturer ]] | [[ netbox.device.model ]] | [[ netbox.device.serial ]] | [TODO] | [TODO] | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Schutzbedarf-Kategorien:**
@@ -74,14 +77,14 @@ Das Assetinventar von **AdminSend GmbH** dokumentiert alle IT-Assets im Geltungs
 
 ## 5. NetBox-Integration
 
-**NetBox-Instanz:** {{ netbox.url }}
+**NetBox-Instanz:** [[ netbox.url ]]
 
 **Verfügbare Daten aus NetBox:**
-- Geräte: {{ netbox.device.name }}, {{ netbox.device.type }}, {{ netbox.device.role }}
-- Standorte: {{ netbox.site.name }}, {{ netbox.site.region }}
-- IP-Adressen: {{ netbox.ipaddress.address }}
-- VLANs: {{ netbox.vlan.name }}, {{ netbox.vlan.id }}
-- Racks: {{ netbox.rack.name }}, {{ netbox.rack.location }}
+- Geräte: [[ netbox.device.name ]], [[ netbox.device.type ]], [[ netbox.device.role ]]
+- Standorte: [[ netbox.site.name ]], [[ netbox.site.region ]]
+- IP-Adressen: [[ netbox.ipaddress.address ]]
+- VLANs: [[ netbox.vlan.name ]], [[ netbox.vlan.id ]]
+- Racks: [[ netbox.rack.name ]], [[ netbox.rack.location ]]
 
 **Synchronisation:** [TODO: Automatisch/Manuell, Frequenz]
 
@@ -139,7 +142,7 @@ Das Assetinventar von **AdminSend GmbH** dokumentiert alle IT-Assets im Geltungs
 ```
 Environment: Production
 Criticality: High
-Owner: Anna Schmidt
+Owner: [TODO]
 Compliance: ISO27001, BSI
 Backup: Yes
 DR: Yes
@@ -152,16 +155,14 @@ DR: Yes
 - **Quartalsweise:** EOL-Report (Assets mit nahendem End-of-Life)
 - **Jährlich:** Vollständiger Asset-Review
 
-**Verantwortlich:** Anna Schmidt
+**Verantwortlich:** [TODO]
 
 ## 10. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| IT-Leitung | [TODO] | [TODO] | Draft |
+| ISB | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium: OPS.1.1.1 Allgemeiner IT-Betrieb
@@ -169,5 +170,4 @@ DR: Yes
 - Dokument 0050: Strukturanalyse
 - Dokument 0060: Schutzbedarfsfeststellung
 - Dokument 0250: Asset Lifecycle
-
 

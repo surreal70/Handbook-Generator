@@ -1,11 +1,17 @@
 # Data Protection Principles
 
-**Document-ID:** 0030  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the data protection principles according to Art. 5 GDPR and their implementation in {{ meta.organization }}. These principles must be observed in every processing of personal data.
+This document describes the data protection principles according to Art. 5 GDPR and their implementation in AdminSend GmbH. These principles must be observed in every processing of personal data.
 
 ## Principles according to Art. 5(1) GDPR
 
@@ -122,11 +128,10 @@ The controller shall be responsible for, and be able to demonstrate compliance w
 | TOM Effectiveness | Annually | DPO | Audit report |
 | Training Status | Quarterly | HR | Training matrix |
 
----
-
 **Next Steps:**
 1. Review all processing for compliance with principles
 2. Implement controls for each principle
 3. Document evidence for accountability
 4. Train employees on principles
 5. Establish regular review processes
+

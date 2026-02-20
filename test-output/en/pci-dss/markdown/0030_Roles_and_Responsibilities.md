@@ -1,13 +1,17 @@
 # Roles and Responsibilities
 
-**Document ID:** PCI-0030  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -29,9 +33,9 @@ This document defines the roles, responsibilities, and accountabilities for PCI-
 ### 2.1 Executive Management
 
 **Chief Executive Officer (CEO):**
-- **Name:** {{ meta.roles.ceo.name }}
-- **Email:** {{ meta.roles.ceo.email }}
-- **Phone:** {{ meta.roles.ceo.phone }}
+- **Name:** [TODO]
+- **Email:** [TODO]
+- **Phone:** [TODO]
 
 **Responsibilities:**
 - Overall responsibility for PCI-DSS compliance
@@ -40,9 +44,9 @@ This document defines the roles, responsibilities, and accountabilities for PCI-
 - Escalation point for critical compliance issues
 
 **Chief Information Security Officer (CISO):**
-- **Name:** {{ meta.roles.ciso.name }}
-- **Email:** {{ meta.roles.ciso.email }}
-- **Phone:** {{ meta.roles.ciso.phone }}
+- **Name:** [TODO]
+- **Email:** [TODO]
+- **Phone:** [TODO]
 
 **Responsibilities:**
 - Leadership of PCI-DSS compliance program
@@ -78,9 +82,9 @@ This document defines the roles, responsibilities, and accountabilities for PCI-
 ### 2.3 IT and Operations
 
 **Chief Information Officer (CIO):**
-- **Name:** {{ meta.roles.cio.name }}
-- **Email:** {{ meta.roles.cio.email }}
-- **Phone:** {{ meta.roles.cio.phone }}
+- **Name:** [TODO]
+- **Email:** [TODO]
+- **Phone:** [TODO]
 
 **Responsibilities:**
 - Responsibility for IT infrastructure and systems
@@ -368,13 +372,5 @@ This document defines the roles, responsibilities, and accountabilities for PCI-
 - Test results (if applicable)
 
 **Retention Period:** [TODO: 3 years]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

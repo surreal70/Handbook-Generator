@@ -1,9 +1,17 @@
 # Glossary and Abbreviations
 
-**Document-ID:** NIST-0850  
-**Organization:** AdminSend GmbH  
-**Version:** 1.0.0  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0850
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -82,13 +90,5 @@
 **Security Control:** A safeguard or countermeasure prescribed for an information system.
 
 **System Security Plan (SSP):** A formal document that provides an overview of the security requirements for an information system.
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

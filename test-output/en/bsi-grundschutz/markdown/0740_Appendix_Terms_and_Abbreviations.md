@@ -1,14 +1,17 @@
 # Appendix: Terms and Abbreviations
 
-**Document ID:** 0740  
-**Document Type:** Appendix  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0740
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -321,13 +324,10 @@ Additional requirements for assets with high or very high protection needs
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| CISO | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| CISO | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI IT-Grundschutz-Kompendium: Glossary
 - ISO 27000: Information security management systems – Overview and vocabulary
 - All ISMS Documents (0010-0630)
-
 

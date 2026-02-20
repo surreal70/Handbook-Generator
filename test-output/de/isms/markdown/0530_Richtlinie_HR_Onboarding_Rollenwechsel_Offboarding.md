@@ -1,14 +1,17 @@
 # Richtlinie: HR Security - Onboarding, Rollenwechsel, Offboarding
 
-**Dokument-ID:** 0530  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0520_Policy_HR_Security.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.6.1, A.6.2, A.6.3, A.6.4  
-**Owner:** {{ meta.hr.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0530
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -268,7 +271,6 @@ Diese Richtlinie konkretisiert die `0520_Policy_HR_Security.md` und definiert:
 - **ISO/IEC 27001:2022 Annex A.6.3** - Information security awareness, education and training
 - **ISO/IEC 27001:2022 Annex A.6.4** - Disciplinary process
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

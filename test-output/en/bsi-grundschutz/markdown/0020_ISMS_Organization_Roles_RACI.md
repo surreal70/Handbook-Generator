@@ -1,14 +1,17 @@
 # ISMS Organization, Roles and Responsibilities
 
-**Document ID:** 0020  
-**Document Type:** Foundation Document  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 ### 1.1 ISMS Owner/Sponsor
 
-**Responsible:** Max Mustermann (max.mustermann@adminsend.de)
+**Responsible:** [TODO] ({{ meta-organisation-roles.role_CEO_email }})
 
 The ISMS Owner bears overall responsibility for the Information Security Management System and ensures that:
 - Sufficient resources are provided
@@ -28,7 +31,7 @@ The ISMS Owner bears overall responsibility for the Information Security Managem
 
 ### 1.2 Information Security Officer (ISO)
 
-**Responsible:** Thomas Weber (thomas.weber@adminsend.de)
+**Responsible:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 
 The ISO is the central coordination point for all information security activities:
 - Coordination and management of the ISMS
@@ -45,8 +48,8 @@ The ISMS Team supports the ISO in implementing the ISMS:
 
 | Role | Name | Area of Responsibility |
 |---|---|---|
-| ISO (Lead) | Thomas Weber | Overall ISMS coordination |
-| IT Management | Anna Schmidt | Technical security measures |
+| ISO (Lead) | [TODO] | Overall ISMS coordination |
+| IT Management | [TODO] | Technical security measures |
 | Data Protection Officer | [TODO] | Data protection interface |
 | BCM Manager | [TODO] | Business Continuity |
 | Risk Manager | [TODO] | Risk management |
@@ -59,7 +62,7 @@ The ISMS Team supports the ISO in implementing the ISMS:
 
 #### 1.4.1 IT Service Management (ITSM)
 
-**Contact:** Anna Schmidt
+**Contact:** [TODO]
 
 Interfaces:
 - Change Management: Security assessment of changes
@@ -159,7 +162,7 @@ Interfaces:
 - Backup and recovery
 - Incident response (technical)
 
-**Responsible:** Anna Schmidt (IT Management)
+**Responsible:** [TODO] (IT Management)
 
 ### 2.5 All Employees
 
@@ -238,13 +241,10 @@ Interfaces:
 
 This organizational structure is reviewed and updated at least annually or in case of significant changes.
 
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Next Review:** [TODO]
 
 **References:**
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)
 - BSI Standard 200-2: IT-Grundschutz Methodology
 - BSI IT-Grundschutz Compendium
-
 

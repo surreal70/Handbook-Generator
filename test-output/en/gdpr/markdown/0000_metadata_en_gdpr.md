@@ -1,44 +1,37 @@
-# GDPR Data Protection Handbook - Metadata
+# GDPR Handbook - Metadata
 
 **Document-ID:** 0000  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}  
+**Date:** [TODO]  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Classification:** Internal  
+**Last Updated:** [TODO]  
+**Template-Version:** 0.2  
 
 ---
 
 ## Handbook Information
 
-**Handbook Title:** GDPR Data Protection Handbook  
-**Organization:** {{ meta.organization }}  
-**Author:** Andreas Huemmer [andreas.huemmer@adminsend.de]  
-**Scope:** {{ meta.scope }}  
-**Valid From:** {{ meta.valid_from }}  
-**Next Review:** {{ meta.next_review }}  
+**Handbook Title:** General Data Protection Regulation (GDPR) Handbook
+**Handbook Short:** gdpr
+**Organisation:** AdminSend GmbH  
+**Author:** Handbook-Generator  
+**Scope:** [TODO]  
+**Valid From:** [TODO]  
+**Next Review:** [TODO]  
+**Approved By:** [TODO]  
 
 ---
 
 ## Document Purpose
 
-This handbook documents the organization's data protection measures and processes in accordance with the General Data Protection Regulation (GDPR - EU 2016/679). It describes the structure, processes, responsibilities, and procedures for ensuring the protection of personal data.
-
-## Scope
-
-The Data Protection Management System applies to:
-- {{ meta.gdpr_scope }}
-
-## Normative References
-
-- Regulation (EU) 2016/679 (General Data Protection Regulation - GDPR)
-- National data protection laws and adaptations
-- Relevant sector-specific data protection regulations
+This document contains the metadata for the GDPR handbook.
 
 ## Change History
 
 | Version | Date | Author | Change |
 |---------|------|--------|--------|
-| {{ meta.version }} | {{ meta.date }} | Andreas Huemmer [andreas.huemmer@adminsend.de] | Initial version |
-
+| 0.1 | [TODO] | Handbook-Generator | Initial version |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 

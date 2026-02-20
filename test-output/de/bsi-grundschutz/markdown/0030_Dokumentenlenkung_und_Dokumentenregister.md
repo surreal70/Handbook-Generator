@@ -1,14 +1,17 @@
 # Dokumentenlenkung und Dokumentenregister
 
-**Dokument-ID:** 0030  
-**Dokumenttyp:** Prozess/Grundlage  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -33,7 +36,7 @@ Diese Dokumentenlenkung gilt für alle ISMS-relevanten Dokumente:
 
 **Primärer Ablageort:** [TODO: z.B. SharePoint, Confluence, DMS]
 
-**Verantwortlich:** IT Operations Manager
+**Verantwortlich:** [TODO]
 
 Alle ISMS-Dokumente werden zentral abgelegt in:
 - **Pfad:** [TODO: z.B. /ISMS/Dokumentation/]
@@ -64,8 +67,8 @@ Zugriff auf ISMS-Dokumente erfolgt rollenbasiert:
 ### 2.4 Notfallzugriff
 
 Im Notfall (z.B. Ausfall des ISB) haben folgende Personen Zugriff auf alle ISMS-Dokumente:
-- **Geschäftsführung:** Max Mustermann
-- **IT-Leitung:** Anna Schmidt
+- **Geschäftsführung:** [TODO]
+- **IT-Leitung:** [TODO]
 - **Stellvertretender ISB:** [TODO]
 
 ## 3. Dokumentenlebenszyklus
@@ -162,16 +165,16 @@ Im Notfall (z.B. Ausfall des ISB) haben folgende Personen Zugriff auf alle ISMS-
 
 | Dokument | ID | Owner | Status | Version | Letzte Aktualisierung | Nächster Review |
 |---|---|---|---|---|---|---|
-| Informationssicherheitsleitlinie | 0010 | Thomas Weber | {{ meta.document.status }} | 1.0.0 | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
-| ISMS-Organisation, Rollen und RACI | 0020 | Thomas Weber | {{ meta.document.status }} | 1.0.0 | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
-| Dokumentenlenkung | 0030 | Thomas Weber | {{ meta.document.status }} | 1.0.0 | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
+| Informationssicherheitsleitlinie | 0010 | [TODO] | Draft | 0 | [TODO] | [TODO] |
+| ISMS-Organisation, Rollen und RACI | 0020 | [TODO] | Draft | 0 | [TODO] | [TODO] |
+| Dokumentenlenkung | 0030 | [TODO] | Draft | 0 | [TODO] | [TODO] |
 | [TODO: Weitere Dokumente ergänzen] | | | | | | |
 
 ## 5. Änderungsprotokoll
 
 | Version | Datum | Änderung | Autor | Genehmiger | Status |
 |---|---|---|---|---|---|
-| 0.1 | {{ meta.document.last_updated }} | Erster Entwurf | IT Operations Manager | - | Entwurf |
+| 0.1 | [TODO] | Erster Entwurf | [TODO] | - | Entwurf |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 6. Qualitätssicherung
@@ -212,12 +215,9 @@ Der Dokumentenlenkungsprozess wird regelmäßig überwacht:
 - **Review:** Jährliche Überprüfung des Prozesses
 - **Verbesserung:** Kontinuierliche Optimierung basierend auf Feedback
 
-**Nächster Review:** {{ meta.document.next_review }}
-
----
+**Nächster Review:** [TODO]
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
 - BSI Standard 200-2: IT-Grundschutz-Methodik
-
 

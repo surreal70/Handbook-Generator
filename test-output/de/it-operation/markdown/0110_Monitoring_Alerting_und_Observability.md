@@ -1,14 +1,27 @@
 # Monitoring, Alerting und Observability
 
+**Dokument-ID:** [FRAMEWORK]-0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategie für den IT-Service. Es definiert Monitoring-Tools, Alerting-Regeln, Schwellwerte und Observability-Konzepte.
 
-**Service:** {{ meta.service_name }}  
-**Verantwortlich:** Andreas Huemmer  
-**Stand:** 1.0.0
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Stand:** 0
 
 ## Monitoring-Strategie
 
@@ -59,8 +72,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 └─────────────────────────────────────────────────────────────┘
 ```
 
----
-
 ## Monitoring-Tools
 
 ### Tool-Stack
@@ -105,8 +116,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 └─────────────┘  └─────────────┘
 ```
 
----
-
 ## Infrastructure Monitoring
 
 ### Server-Monitoring
@@ -127,7 +136,7 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 
 | Server | Standort | Rolle | Monitoring-Agent | Status |
 |---|---|---|---|---|
-| {{ netbox.device.name }} | {{ netbox.device.site }} | {{ netbox.device.role }} | [TODO: Agent] | ☐ Aktiv |
+| [[ netbox.device.name ]] | [[ netbox.device.site ]] | [[ netbox.device.role ]] | [TODO: Agent] | ☐ Aktiv |
 | [TODO] | [TODO] | [TODO] | [TODO] | ☐ Aktiv |
 
 ### Netzwerk-Monitoring
@@ -147,7 +156,7 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 
 | Gerät | Typ | Standort | Management-IP | Status |
 |---|---|---|---|---|
-| {{ netbox.device.name }} | {{ netbox.device.device_type }} | {{ netbox.device.site }} | {{ netbox.device.primary_ip }} | ☐ Aktiv |
+| [[ netbox.device.name ]] | [[ netbox.device.device_type ]] | [[ netbox.device.site ]] | [[ netbox.device.primary_ip ]] | ☐ Aktiv |
 | [TODO] | [TODO] | [TODO] | [TODO] | ☐ Aktiv |
 
 ### Storage-Monitoring
@@ -173,8 +182,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 | **VM Count** | Anzahl VMs | > 80% Max | > 95% Max | 5 Min |
 | **Datastore Usage** | Datastore-Auslastung | > 80% | > 90% | 5 Min |
 | **VM Performance** | VM-Performance | Degraded | Critical | 1 Min |
-
----
 
 ## Application Monitoring
 
@@ -207,8 +214,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 - Content-Validierung
 - SSL-Zertifikat-Gültigkeit
 - DNS-Auflösung
-
----
 
 ## Observability
 
@@ -273,8 +278,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
          └───────────────────────┘
 ```
 
----
-
 ## Alerting
 
 ### Alerting-Strategie
@@ -302,7 +305,7 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 
 | Alert | Bedingung | Severity | Aktion | Verantwortlich |
 |---|---|---|---|---|
-| **Server Down** | Ping failed > 5 Min | Critical | Sofort prüfen | Julia Becker |
+| **Server Down** | Ping failed > 5 Min | Critical | Sofort prüfen | {{ meta-organisation-roles.role_Service_Desk_Lead }} |
 | **High CPU** | CPU > 95% für 5 Min | High | Performance prüfen | IT Operations |
 | **High Memory** | Memory > 95% für 5 Min | High | Memory-Leak prüfen | IT Operations |
 | **Disk Full** | Disk > 90% | High | Speicher freigeben | IT Operations |
@@ -312,7 +315,7 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 
 | Alert | Bedingung | Severity | Aktion | Verantwortlich |
 |---|---|---|---|---|
-| **Service Down** | Health Check failed | Critical | Service restart | Julia Becker |
+| **Service Down** | Health Check failed | Critical | Service restart | {{ meta-organisation-roles.role_Service_Desk_Lead }} |
 | **High Error Rate** | Errors > 5% für 5 Min | High | Logs prüfen | Development Team |
 | **Slow Response** | Response Time > 2s | High | Performance prüfen | Development Team |
 | **API Failure** | External API down | High | Vendor kontaktieren | IT Operations |
@@ -360,8 +363,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 - **Woche 2:** [TODO: Name]
 - **Woche 3:** [TODO: Name]
 - **Woche 4:** [TODO: Name]
-
----
 
 ## Dashboards
 
@@ -420,8 +421,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 5. **Historical:** Trends über Zeit zeigen
 6. **Annotations:** Wichtige Events markieren
 
----
-
 ## Monitoring-Prozesse
 
 ### Tägliche Monitoring-Routinen
@@ -461,8 +460,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 - [ ] Monitoring-Tools aktualisieren
 - [ ] Alert-Regeln optimieren
 
----
-
 ## Service Level Indicators (SLIs)
 
 ### Definierte SLIs
@@ -487,8 +484,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 - Echtzeit-Dashboards
 - Tägliche Reports
 - Monatliche SLA-Reports
-
----
 
 ## Incident Response
 
@@ -532,8 +527,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 
 **Details:** Siehe Kapitel 0120 (Incident Management)
 
----
-
 ## Monitoring-Dokumentation
 
 ### Runbooks
@@ -556,8 +549,6 @@ Bekannte Monitoring-Probleme und Workarounds:
 
 **Known Issues:** Siehe Kapitel 0260 (Bekannte Probleme und FAQ)
 
----
-
 ## Monitoring-Tools-Zugriff
 
 ### Tool-Zugänge
@@ -571,26 +562,23 @@ Bekannte Monitoring-Probleme und Workarounds:
 
 ### Berechtigungen
 
-- **Administrator:** Andreas Huemmer
+- **Administrator:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Operator:** IT Operations Team
 - **Read-Only:** Management, Auditors
-
----
 
 ## Kontakte
 
 **Monitoring-Team:**
-- **IT Operations Manager:** Andreas Huemmer - andreas.huemmer@adminsend.de
-- **Service Desk Lead:** Julia Becker - julia.becker@adminsend.de
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
 - **On-Call Engineer:** [TODO: Rotation] - [TODO: On-Call-Nummer]
 
 **Eskalation:**
-- **Level 2:** Andreas Huemmer - +49 89 12345678-250
-- **Level 3:** Anna Schmidt - +49 89 12345678-200
+- **Level 2:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}
+- **Level 3:** [TODO] - {{ meta-organisation-roles.role_CIO_phone }}
 
----
-
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
+

@@ -1,18 +1,21 @@
 # Risikoregister (Template)
 
-
-
-**Dokument-ID:** 0080  
-**Dokumenttyp:** ISMS-Register/Template  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 6.1.2  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0080
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck und Anleitung
 
@@ -51,9 +54,9 @@ Das Risikoregister dokumentiert alle identifizierten Informationssicherheitsrisi
 
 | Risiko-ID | Asset/Prozess | Bedrohung | Schwachstelle | Auswirkung (1-5) | Wahrscheinlichkeit (1-5) | Score | Risikostufe | Risiko-Eigentümer | Behandlung | Maßnahme/Control | Status | Zieltermin | Bemerkungen |
 |-----------|---------------|-----------|---------------|------------------|--------------------------|-------|-------------|-------------------|------------|------------------|--------|------------|-------------|
-| R-001 | {{ netbox.device.core_switch.name }} | Hardware-Ausfall | Keine Redundanz | 4 | 3 | 12 | Mittel | Anna Schmidt | Mindern | Redundanter Switch beschaffen | Offen | 2026-06-30 | Budget genehmigt |
-| R-002 | Kundendaten (DSGVO) | Ransomware | Unzureichende Backups | 5 | 4 | 20 | Hoch | Thomas Weber | Mindern | Immutable Backups implementieren | In Arbeit | 2026-03-31 | Siehe M-002 |
-| R-003 | E-Mail-System | Phishing | Fehlende MFA | 4 | 4 | 16 | Hoch | Anna Schmidt | Mindern | MFA für alle Benutzer | In Arbeit | 2026-02-28 | 80% abgeschlossen |
+| R-001 | [[ netbox.device.core_switch.name ]] | Hardware-Ausfall | Keine Redundanz | 4 | 3 | 12 | Mittel | [TODO] | Mindern | Redundanter Switch beschaffen | Offen | 2026-06-30 | Budget genehmigt |
+| R-002 | Kundendaten (DSGVO) | Ransomware | Unzureichende Backups | 5 | 4 | 20 | Hoch | [TODO] | Mindern | Immutable Backups implementieren | In Arbeit | 2026-03-31 | Siehe M-002 |
+| R-003 | E-Mail-System | Phishing | Fehlende MFA | 4 | 4 | 16 | Hoch | [TODO] | Mindern | MFA für alle Benutzer | In Arbeit | 2026-02-28 | 80% abgeschlossen |
 | R-004 | Entwicklungsumgebung | Secrets in Code | Keine Secret-Scanning | 3 | 3 | 9 | Mittel | Dev-Lead | Mindern | Secret-Scanning Tool | Geplant | 2026-04-30 | Tool-Evaluierung läuft |
 | R-005 | Remote-Zugriff | Unbefugter Zugriff | Schwache VPN-Konfiguration | 4 | 2 | 8 | Mittel | IT-Betrieb | Mindern | VPN-Hardening | Offen | 2026-05-31 | - |
 
@@ -65,8 +68,8 @@ Das Risikoregister dokumentiert alle identifizierten Informationssicherheitsrisi
 
 | Risiko-ID | Asset/Prozess | Bedrohung | Schwachstelle | Score | Risikostufe | Risiko-Eigentümer | Akzeptiert durch | Akzeptanzdatum | Gültig bis | Begründung | Review-Status |
 |-----------|---------------|-----------|---------------|-------|-------------|-------------------|------------------|----------------|------------|------------|---------------|
-| R-010 | Legacy-System XYZ | Ungepatchte Schwachstellen | System im Auslauf | 9 | Mittel | Anna Schmidt | Thomas Weber | 2026-01-15 | 2026-06-30 | System wird am 30.06.2026 außer Betrieb genommen | Aktiv |
-| R-011 | Testumgebung | Fehlende Verschlüsselung | Keine produktiven Daten | 6 | Niedrig | Dev-Lead | Thomas Weber | 2026-01-20 | 2027-01-20 | Testumgebung enthält nur synthetische Daten | Aktiv |
+| R-010 | Legacy-System XYZ | Ungepatchte Schwachstellen | System im Auslauf | 9 | Mittel | [TODO] | [TODO] | 2026-01-15 | 2026-06-30 | System wird am 30.06.2026 außer Betrieb genommen | Aktiv |
+| R-011 | Testumgebung | Fehlende Verschlüsselung | Keine produktiven Daten | 6 | Niedrig | Dev-Lead | [TODO] | 2026-01-20 | 2027-01-20 | Testumgebung enthält nur synthetische Daten | Aktiv |
 
 [TODO: Akzeptierte Risiken dokumentieren]
 
@@ -289,18 +292,15 @@ Das Risikoregister dokumentiert alle identifizierten Informationssicherheitsrisi
 - **ISO/IEC 27005:2022** - Information security risk management
 - **NIST SP 800-30** - Guide for Conducting Risk Assessments
 
----
-
 ## Änderungshistorie
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | {{ meta.document.date }} | Thomas Weber | Initiale Version | {{ meta.management.ceo }} |
-
----
+| 1.0 | [TODO] | [TODO] | Initiale Version | {{ meta-handbook.management_ceo }} |
 
 **Genehmigt durch:**  
-Thomas Weber, CISO  
-Datum: {{ meta.document.approval_date }}
+[TODO], CISO  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (Quartalsweise)
+**Nächster Review:** [TODO] (Quartalsweise)
+

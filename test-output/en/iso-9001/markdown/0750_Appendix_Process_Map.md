@@ -1,11 +1,17 @@
 # Appendix: Process Map
 
-**Document-ID:** 0750  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0750
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This appendix presents the process map of {{ meta.organization }} and describes the main processes of the QMS.
+This appendix presents the process map of AdminSend GmbH and describes the main processes of the QMS.
 
 ## Process Map
 
@@ -240,6 +246,5 @@ This appendix presents the process map of {{ meta.organization }} and describes 
 - [TODO: List relevant procedures]
 - [TODO: List relevant work instructions]
 
----
-
 **Note:** This process map is a living document and will be updated as needed.
+

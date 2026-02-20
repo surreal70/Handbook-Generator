@@ -1,13 +1,17 @@
 # Network Security and Boundary Protection
 
-**Document ID:** NIST-0710  
-**Control Family:** System and Communications Protection (SC)  
-**Controls:** SC-5, SC-7, SC-20, SC-21, SC-22  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0710
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -152,13 +156,5 @@ This document covers network security and boundary protection controls:
 **Assessment Method:** Examine, Interview, Test  
 **Assessment Status:** [TODO: Satisfied / Other than Satisfied / Not Applicable]  
 **Findings:** [TODO: Description]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

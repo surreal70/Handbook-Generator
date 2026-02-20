@@ -1,11 +1,17 @@
 # Organisatorische Rollen, Verantwortlichkeiten und Befugnisse
 
-**Dokument-ID:** 0120  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0120
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -186,8 +192,6 @@ Rollen, Verantwortlichkeiten und Befugnisse werden überprüft:
 - **Bei Änderungen:** Organisatorische Änderungen, Prozessänderungen, Rollenänderungen
 - **Nach Audits:** Basierend auf Auditfeststellungen
 - **Bei Bedarf:** Wenn Probleme identifiziert werden
-
----
 
 **Nächste Schritte:**
 1. Definiere alle QMS-relevanten Rollen in der Organisation

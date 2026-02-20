@@ -1,24 +1,30 @@
 # Roles and Responsibilities
 
-**Document-ID:** NIST-0030  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
 ## 1. Purpose
 
-This document defines roles and responsibilities for the Risk Management Framework (RMF) and security of system {{ meta.nist.system_name }}.
+This document defines roles and responsibilities for the Risk Management Framework (RMF) and security of system {{ meta-handbook.system_name }}.
 
 ## 2. RMF Roles
 
 ### 2.1 Authorizing Official (AO)
 
-**Name:** {{ meta.roles.ao.name }}  
-**Email:** {{ meta.roles.ao.email }}  
+**Name:** [TODO]  
+**Email:** [TODO]  
 
 **Responsibilities:**
 - Authorization decision for the system
@@ -28,8 +34,8 @@ This document defines roles and responsibilities for the Risk Management Framewo
 
 ### 2.2 Information System Security Officer (ISSO)
 
-**Name:** {{ meta.roles.isso.name }}  
-**Email:** {{ meta.roles.isso.email }}  
+**Name:** [TODO]  
+**Email:** [TODO]  
 
 **Responsibilities:**
 - Daily security operations
@@ -39,8 +45,8 @@ This document defines roles and responsibilities for the Risk Management Framewo
 
 ### 2.3 Information System Security Manager (ISSM)
 
-**Name:** {{ meta.roles.issm.name }}  
-**Email:** {{ meta.roles.issm.email }}  
+**Name:** [TODO]  
+**Email:** [TODO]  
 
 **Responsibilities:**
 - Security program management
@@ -82,13 +88,5 @@ This document defines roles and responsibilities for the Risk Management Framewo
 | Continuous Monitoring | A | R | C | C | I |
 
 **Legend:** R = Responsible, A = Accountable, C = Consulted, I = Informed
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

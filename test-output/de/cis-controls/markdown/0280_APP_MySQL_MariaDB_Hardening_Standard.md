@@ -1,14 +1,17 @@
 # APP Hardening Standard: MySQL / MariaDB
 
-**Dokument-ID:** 0280  
-**Dokumenttyp:** Standard/Baseline  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0280
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -80,10 +83,10 @@
 - Parameterliste/Beispielwerte: [TODO]
 - Checkliste: siehe `0410_Anhang_Checklisten_und_Evidence.md`
 
-
 ## 12. MySQL/MariaDB-spezifische Anforderungen (Beispiele)
 - `skip_symbolic_links`: [TODO]
 - Netzwerkbindung/Bind-Address: [TODO]
 - Audit/General Log (risikobasiert): [TODO]
 - Nutzer/Grants minimal: [TODO]
 - Backup: [TODO]
+

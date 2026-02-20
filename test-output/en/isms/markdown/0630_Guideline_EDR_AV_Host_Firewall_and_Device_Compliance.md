@@ -1,14 +1,17 @@
 # Guideline: EDR, Antivirus, Host Firewall and Device Compliance
 
-**Document ID:** 0630  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0620_Policy_Endpoint_Security.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.8.7  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0630
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -26,7 +29,7 @@ This guideline implements `0620_Policy_Endpoint_Security.md` and defines:
 
 ### 2.1 EDR System
 
-**Platform:** {{ meta.security.edr_solution }} (e.g., CrowdStrike, SentinelOne, Microsoft Defender for Endpoint)
+**Platform:** {{ meta-handbook.security_edr_solution }} (e.g., CrowdStrike, SentinelOne, Microsoft Defender for Endpoint)
 
 **Functions:**
 - Real-time Threat Detection
@@ -82,7 +85,7 @@ This guideline implements `0620_Policy_Endpoint_Security.md` and defines:
 
 ### 3.1 AV System
 
-**Platform:** {{ meta.security.av_solution }} (often integrated in EDR)
+**Platform:** {{ meta-handbook.security_av_solution }} (often integrated in EDR)
 
 **Scan Types:**
 - Real-time Scanning (On-Access)
@@ -314,7 +317,6 @@ This guideline implements `0620_Policy_Endpoint_Security.md` and defines:
 - **NIST SP 800-83** - Guide to Malware Incident Prevention and Handling
 - **CIS Controls** - Malware Defenses
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

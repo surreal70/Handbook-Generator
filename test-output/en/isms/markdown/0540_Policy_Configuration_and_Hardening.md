@@ -1,18 +1,31 @@
 # Policy: Configuration and Hardening
 
+**Document-ID:** [FRAMEWORK]-0540
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0540  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.9, A.8.10 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -25,7 +38,7 @@ This policy applies to:
 - **Organizational Units:** All departments and locations of AdminSend GmbH
 - **Systems:** All servers, workstations, network devices, applications, cloud resources
 - **Environments:** Production, test, development
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -80,9 +93,9 @@ All configuration deviations from baselines are documented and justified. Docume
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Configuration Manager:** {{ meta.it.config_manager }}
-- **Security Architect:** {{ meta.security.architect }}
+- **Policy Owner:** [TODO] (CISO)
+- **Configuration Manager:** {{ meta-handbook.it_config_manager }}
+- **Security Architect:** {{ meta-handbook.security_architect }}
 - **Implementation Responsible:** IT Operations, System Owner
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -157,10 +170,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **NIST SP 800-123** - Guide to General Server Security
 - **BSI IT-Grundschutz** - Security requirements
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

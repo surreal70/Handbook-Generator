@@ -1,14 +1,17 @@
 # Guideline: ICT Disaster Recovery - Interfaces to BCM
 
-**Document ID:** 0450  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0440_Policy_Business_Continuity_ICT_Readiness.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.29, A.5.30  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0450
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -63,20 +66,20 @@ This guideline implements the `0440_Policy_Business_Continuity_ICT_Readiness.md`
 
 ### 3.1 Primary Data Center
 
-**Location:** {{ netbox.site.primary }}  
+**Location:** [[ netbox.site.primary ]]  
 **Systems:** All production systems  
 **Redundancy:** N+1 for critical components
 
 ### 3.2 DR Site
 
-**Location:** {{ netbox.site.dr }}  
+**Location:** [[ netbox.site.dr ]]  
 **Distance:** > 50 km from primary site  
 **Systems:** Replicated Tier 1 systems, backup infrastructure
 
 ### 3.3 Cloud DR
 
-**Cloud Provider:** {{ meta.cloud.dr_provider }}  
-**Regions:** {{ meta.cloud.primary_region }}, {{ meta.cloud.dr_region }}  
+**Cloud Provider:** {{ meta-handbook.cloud_dr_provider }}  
+**Regions:** {{ meta-handbook.cloud_primary_region }}, {{ meta-handbook.cloud_dr_region }}  
 **Services:** IaaS for DR workloads
 
 ## 4. Interfaces to BCM
@@ -213,7 +216,6 @@ This guideline implements the `0440_Policy_Business_Continuity_ICT_Readiness.md`
 - **ISO/IEC 27001:2022 Annex A.5.30** - ICT readiness for business continuity
 - **ISO 22301** - Business Continuity Management
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

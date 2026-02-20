@@ -1,11 +1,17 @@
 # Datenschutzbeauftragter
 
-**Dokument-ID:** 0340  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0340
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument regelt die Rolle, Aufgaben und Stellung des Datenschutzbeauftragten bei {{ meta.organization }} gemäß Art. 37-39 DSGVO.
+Dieses Dokument regelt die Rolle, Aufgaben und Stellung des Datenschutzbeauftragten bei AdminSend GmbH gemäß Art. 37-39 DSGVO.
 
 ## Benennungspflicht (Art. 37)
 
@@ -225,7 +231,7 @@ Der Datenschutzbeauftragte ist Anlaufstelle für die Aufsichtsbehörde in mit de
 
 ### Weitere Aufgaben
 
-**Zusätzliche Aufgaben bei {{ meta.organization }}:**
+**Zusätzliche Aufgaben bei AdminSend GmbH:**
 - [TODO: z.B. Bearbeitung von Betroffenenanfragen]
 - [TODO: z.B. Pflege des Verzeichnisses der Verarbeitungstätigkeiten]
 - [TODO: z.B. Vertragsmanagement für Auftragsverarbeiter]
@@ -276,11 +282,10 @@ Der Datenschutzbeauftragte kann andere Aufgaben wahrnehmen, sofern diese nicht z
 - **Datenschutz-Folgenabschätzung (Art. 35):** Beratungsrolle
 - **Datenschutzverletzungen (Art. 33):** Meldeverantwortung
 
----
-
 **Nächste Schritte:**
 1. Prüfen Sie die Benennungspflicht für Ihre Organisation
 2. Benennen Sie einen qualifizierten Datenschutzbeauftragten
 3. Veröffentlichen Sie die Kontaktdaten intern und extern
 4. Stellen Sie ausreichende Ressourcen bereit
 5. Definieren Sie klare Aufgaben und Verantwortlichkeiten
+

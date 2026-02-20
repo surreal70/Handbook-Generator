@@ -1,11 +1,17 @@
 # Rationale for Security Requirements
 
-**Document-ID:** 0620  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0620
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -384,8 +390,6 @@ This chapter provides the rationale demonstrating that the defined security requ
 - **Section 0430:** SFR Dependencies
 - **Section 0440:** Coverage Matrix
 
----
-
 **Next Steps:**
 1. Document the rationale for each security objective
 2. Justify all SFR operations
@@ -395,3 +399,4 @@ This chapter provides the rationale demonstrating that the defined security requ
 6. Conduct completeness, adequacy, and consistency analyses
 7. Identify and address gaps and inconsistencies
 8. Have the rationale reviewed by evaluators
+

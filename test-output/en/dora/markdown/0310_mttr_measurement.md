@@ -1,0 +1,102 @@
+
+Document-ID: dora-0310
+
+Status: Draft
+Classification: Internal
+
+# MTTR Measurement
+
+**Document-ID:** [FRAMEWORK]-0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
+## Purpose
+
+Practical implementation of MTTR measurement.
+
+## Scope
+
+- Incident tracking
+- Time capture
+- Calculation logic
+- Reporting
+
+## Organization Information
+
+- **Organization**: [TODO]
+- **Measurement Owner**: [TODO]
+- **Incident Management System**: [TODO]
+
+## Incident Tracking
+
+### Incident Lifecycle
+
+1. **Detection**: Incident detected
+2. **Acknowledgment**: Incident acknowledged
+3. **Diagnosis**: Root cause identified
+4. **Recovery**: Service restored
+5. **Verification**: Restoration confirmed
+6. **Closure**: Incident closed
+
+### Timestamp Capture
+
+```json
+{
+  "incident_id": "INC-12345",
+  "detected_at": "2024-02-13T14:00:00Z",
+  "acknowledged_at": "2024-02-13T14:05:00Z",
+  "diagnosed_at": "2024-02-13T14:30:00Z",
+  "recovered_at": "2024-02-13T15:00:00Z",
+  "verified_at": "2024-02-13T15:15:00Z",
+  "closed_at": "2024-02-13T15:30:00Z"
+}
+```
+
+## Calculation Logic
+
+### MTTR Calculation
+
+```
+MTTR = (recovered_at - detected_at)
+```
+
+### Average MTTR
+
+```
+Avg MTTR = Σ(MTTRs) / Number of Incidents
+```
+
+### Severity-specific MTTR
+
+```
+MTTR_Sev1 = Σ(MTTR Sev1 Incidents) / Number of Sev1 Incidents
+```
+
+## Reporting
+
+### Dashboard Metrics
+
+- Current MTTR
+- MTTR trend (30/90 days)
+- MTTR by severity
+- MTTR by team/service
+
+### Visualizations
+
+- Time series charts
+- Histograms
+- Heatmaps
+
+
+

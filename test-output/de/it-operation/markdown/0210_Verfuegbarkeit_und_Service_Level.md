@@ -1,15 +1,28 @@
 # Verfügbarkeit und Service Level
 
+**Dokument-ID:** [FRAMEWORK]-0210
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreements (SLAs) und Service Level Objectives (SLOs) für den IT-Service. Es beschreibt die Messmethoden, Reporting-Prozesse und Maßnahmen zur kontinuierlichen Verbesserung der Serviceverfügbarkeit.
 
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
-
----
 
 ## Verfügbarkeitsanforderungen
 
@@ -28,13 +41,13 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 - **Verfügbarkeit:** 24/7/365
 - **Support-Zeiten:** 24/7 mit On-Call-Bereitschaft
 - **Wartungsfenster:** Sonntag 02:00-06:00 Uhr (nach Ankündigung)
-- **Notfall-Wartung:** Nach Genehmigung durch Anna Schmidt
+- **Notfall-Wartung:** Nach Genehmigung durch [TODO]
 
 #### Business-Services
 - **Verfügbarkeit:** Mo-Fr 06:00-22:00 Uhr
 - **Support-Zeiten:** Mo-Fr 08:00-18:00 Uhr
 - **Wartungsfenster:** Samstag 20:00-24:00 Uhr
-- **Notfall-Wartung:** Nach Genehmigung durch Andreas Huemmer
+- **Notfall-Wartung:** Nach Genehmigung durch {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Entwicklungs-/Test-Services
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00 Uhr
@@ -50,8 +63,6 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 | Patch-Deployment | Monatlich | 1-2 Stunden | 5 Tage | Ops Manager |
 | Major-Upgrade | Quartalsweise | 4-8 Stunden | 14 Tage | CIO |
 | Notfall-Wartung | Ad-hoc | Variable | 4 Stunden | CIO |
-
----
 
 ## Service Level Agreements (SLA)
 
@@ -93,9 +104,9 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 ### SLA-Vertragspartner
 
 #### Interne SLAs
-- **Service Provider:** IT Operations (Andreas Huemmer)
+- **Service Provider:** IT Operations ({{ meta-organisation-roles.role_IT_Operations_Manager }})
 - **Service Consumer:** Fachabteilungen
-- **Verantwortlich:** Anna Schmidt
+- **Verantwortlich:** [TODO]
 - **Review-Zyklus:** Quartalsweise
 
 #### Externe SLAs
@@ -119,8 +130,6 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 - Vom Kunden verursachte Ausfälle
 - Drittanbieter-Ausfälle außerhalb der Kontrolle
 
----
-
 ## Service Level Objectives (SLO)
 
 ### Interne SLOs
@@ -129,11 +138,11 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 
 | Komponente | SLO | Messmethode | Verantwortlich |
 |---|---:|---|---|
-| Compute-Cluster | 99.9% | Hypervisor-Monitoring | Andreas Huemmer |
-| Storage-System | 99.95% | Storage-Monitoring | Andreas Huemmer |
-| Netzwerk-Core | 99.99% | Network-Monitoring | Andreas Huemmer |
-| Firewall | 99.95% | Security-Monitoring | Thomas Weber |
-| Load Balancer | 99.9% | LB-Monitoring | Andreas Huemmer |
+| Compute-Cluster | 99.9% | Hypervisor-Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Storage-System | 99.95% | Storage-Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Netzwerk-Core | 99.99% | Network-Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Firewall | 99.95% | Security-Monitoring | [TODO] |
+| Load Balancer | 99.9% | LB-Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 #### Anwendungs-SLOs
 
@@ -189,8 +198,6 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 - Root-Cause-Analyse aller Ausfälle
 - Verbesserungsplan vor Wiederaufnahme
 
----
-
 ## Verfügbarkeitsmessung
 
 ### Messmethoden
@@ -244,8 +251,6 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 | [TODO: RUM-Tool] | Real User Monitoring | Kontinuierlich | [TODO: URL] |
 | [TODO: Log-Tool] | Log-Aggregation | Echtzeit | [TODO: URL] |
 
----
-
 ## Service-Level-Reporting
 
 ### Report-Typen
@@ -260,7 +265,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Versand:** Automatisch um 08:00 Uhr
 
 #### Wöchentlicher SLA-Report
-- **Empfänger:** Andreas Huemmer
+- **Empfänger:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Inhalt:**
   - Wochenverfügbarkeit
   - SLA-Compliance-Status
@@ -269,7 +274,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Versand:** Jeden Montag
 
 #### Monatlicher SLA-Report
-- **Empfänger:** Anna Schmidt, Stakeholder
+- **Empfänger:** [TODO], Stakeholder
 - **Inhalt:**
   - Monatsverfügbarkeit
   - SLA-Erfüllung vs. Ziele
@@ -279,7 +284,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Versand:** Erster Arbeitstag des Folgemonats
 
 #### Quartalsweiser Management-Report
-- **Empfänger:** Max Mustermann, Anna Schmidt, Maria Müller
+- **Empfänger:** [TODO], [TODO], [TODO]
 - **Inhalt:**
   - Quartalsverfügbarkeit
   - SLA-Trends
@@ -307,8 +312,6 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 | P2 - Hoch | [TODO] | [TODO]h | [TODO]% | [TODO] |
 | P3 - Mittel | [TODO] | [TODO]h | [TODO]% | [TODO] |
 | P4 - Niedrig | [TODO] | [TODO]h | [TODO]% | [TODO] |
-
----
 
 ## Verfügbarkeitsverbesserungen
 
@@ -371,14 +374,12 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Verantwortlich:** [TODO]
 - **Status:** [TODO]
 
----
-
 ## SLA-Review und Anpassung
 
 ### Review-Prozess
 
 #### Quartalsweiser SLA-Review
-- **Teilnehmer:** Anna Schmidt, Andreas Huemmer, Stakeholder
+- **Teilnehmer:** [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}, Stakeholder
 - **Agenda:**
   - SLA-Erfüllung der letzten 3 Monate
   - Trend-Analyse
@@ -387,7 +388,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Output:** Review-Protokoll mit Handlungsempfehlungen
 
 #### Jährlicher SLA-Review
-- **Teilnehmer:** Max Mustermann, Anna Schmidt, Maria Müller, Stakeholder
+- **Teilnehmer:** [TODO], [TODO], [TODO], Stakeholder
 - **Agenda:**
   - Jahresverfügbarkeit
   - SLA-Angemessenheit
@@ -409,8 +410,6 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - Geschäftspriorität gesunken
 - Realistische Zielsetzung
 
----
-
 ## Prozesse und Verantwortlichkeiten
 
 ### RACI-Matrix
@@ -430,11 +429,9 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 ### Eskalationspfad
 
 1. **Level 1:** Operations Team - Incident-Response und Monitoring
-2. **Level 2:** Andreas Huemmer - SLA-Verletzungen
-3. **Level 3:** Anna Schmidt - Kritische SLA-Verletzungen
-4. **Level 4:** Max Mustermann - Vertragliche Konsequenzen
-
----
+2. **Level 2:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - SLA-Verletzungen
+3. **Level 3:** [TODO] - Kritische SLA-Verletzungen
+4. **Level 4:** [TODO] - Vertragliche Konsequenzen
 
 ## Compliance und Standards
 
@@ -448,8 +445,6 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - Verfügbarkeits-Reports und Metriken
 - Incident-Dokumentation
 - Verbesserungsmaßnahmen-Nachweise
-
----
 
 ## Anhang
 
@@ -472,8 +467,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - COBIT 2019 Framework
 - Site Reliability Engineering (Google)
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** andreas.huemmer@adminsend.de
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+

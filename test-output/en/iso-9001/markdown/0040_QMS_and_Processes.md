@@ -1,11 +1,17 @@
 # Quality Management System and its Processes
 
-**Document-ID:** 0040  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -254,8 +260,6 @@ Process changes are controlled through:
 - **Appendix C:** Interface matrix
 - **Appendix D:** KPI dashboard
 
----
-
 **Next Steps:**
 1. Identify all QMS processes
 2. Create process descriptions for each process
@@ -263,3 +267,4 @@ Process changes are controlled through:
 4. Establish KPIs and monitoring methods
 5. Provide resources and information
 6. Implement continual improvement
+

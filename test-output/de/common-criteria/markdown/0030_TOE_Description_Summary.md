@@ -1,11 +1,17 @@
 # TOE Description Summary
 
-**Dokument-ID:** 0030  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -126,9 +132,8 @@ Der TOE implementiert folgende Sicherheitsfunktionen:
 - [TODO: Item 1]
 - [TODO: Item 2]
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Stelle Konsistenz mit der detaillierten TOE-Beschreibung sicher
 3. Überprüfe, dass alle Komponenten aufgelistet sind
+

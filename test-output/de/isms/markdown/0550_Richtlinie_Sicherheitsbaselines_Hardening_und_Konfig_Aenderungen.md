@@ -1,14 +1,17 @@
 # Richtlinie: Sicherheitsbaselines, Hardening und Konfigurationsänderungen
 
-**Dokument-ID:** 0550  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0540_Policy_Konfiguration_und_Hardening.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.9  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0550
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -124,7 +127,7 @@ Diese Richtlinie konkretisiert die `0540_Policy_Konfiguration_und_Hardening.md` 
 
 ### 4.1 Configuration Management Database (CMDB)
 
-**System:** {{ meta.itsm.cmdb }}
+**System:** {{ meta-handbook.itsm_cmdb }}
 
 **Dokumentierte Konfigurationen:**
 - System-Typ und -Version
@@ -187,7 +190,7 @@ Diese Richtlinie konkretisiert die `0540_Policy_Konfiguration_und_Hardening.md` 
 - Versionierung
 - Rollback-Fähigkeit
 
-**Retention:** {{ meta.retention.config_years }} Jahre
+**Retention:** {{ meta-handbook.retention_config_years }} Jahre
 
 ## 6. Ausnahmen und Abweichungen
 
@@ -267,7 +270,7 @@ Diese Richtlinie konkretisiert die `0540_Policy_Konfiguration_und_Hardening.md` 
 - Test-Prozeduren
 - Rollback-Prozeduren
 
-**Speicherort:** {{ meta.documentation.baseline_repo }}
+**Speicherort:** {{ meta-handbook.documentation_baseline_repo }}
 
 ## 9. Compliance und Audit
 
@@ -299,7 +302,6 @@ Diese Richtlinie konkretisiert die `0540_Policy_Konfiguration_und_Hardening.md` 
 - **CIS Benchmarks** - https://www.cisecurity.org/cis-benchmarks/
 - **NIST SP 800-70** - Security Configuration Checklists
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

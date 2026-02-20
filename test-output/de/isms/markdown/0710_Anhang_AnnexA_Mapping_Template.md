@@ -1,9 +1,17 @@
 # Anhang A: Annex A Control Mapping
 
-**Dokumenttyp:** Anhang  
-**Version:** 1.0.0  
-**Datum:** {{ meta.document.date }}  
-**Klassifizierung:** internal
+**Dokument-ID:** [FRAMEWORK]-0710
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -16,10 +24,8 @@ Das Mapping berücksichtigt die Änderungen aus Amendment 1:2024 und stellt sich
 ## Geltungsbereich
 
 **Organisation:** AdminSend GmbH  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Verantwortlich:** Thomas Weber (thomas.weber@adminsend.de)
-
----
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Verantwortlich:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 
 ## ISO/IEC 27001:2022 Annex A Struktur
 
@@ -31,8 +37,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - **Technological Controls (8.1-8.34):** 34 Kontrollen
 
 **Gesamt:** 93 Kontrollen
-
----
 
 ## Annex A Control Mapping
 
@@ -48,10 +52,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0200-0680 (Alle Topic-Specific Policies)
 - Prozess: 0050_ISMS_Dokumentenlenkung.md
 
-**Verantwortlich:** Thomas Weber  
+**Verantwortlich:** [TODO]  
 **Nachweis:** Genehmigte und veröffentlichte Policies, Schulungsnachweise
-
----
 
 #### 5.2 Information Security Roles and Responsibilities
 
@@ -62,10 +64,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Dokument: 0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.md
 - RACI-Matrizen in allen relevanten Policies
 
-**Verantwortlich:** Thomas Weber  
+**Verantwortlich:** [TODO]  
 **Nachweis:** RACI-Matrizen, Stellenbeschreibungen, Organigramm
-
----
 
 #### 5.3 Segregation of Duties
 
@@ -76,10 +76,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
 - Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md
 
-**Verantwortlich:** Thomas Weber  
+**Verantwortlich:** [TODO]  
 **Nachweis:** Berechtigungskonzept, Zugriffsreviews
-
----
 
 #### 5.4 Management Responsibilities
 
@@ -90,10 +88,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0010_ISMS_Informationssicherheitsleitlinie.md
 - Dokument: 0120_ISMS_Schulung_Awareness_und_Kompetenz.md
 
-**Verantwortlich:** Management, Thomas Weber  
+**Verantwortlich:** Management, [TODO]  
 **Nachweis:** Management-Commitment, Schulungsnachweise
-
----
 
 #### 5.5 Contact with Authorities
 
@@ -104,10 +100,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Dokument: 0030_ISMS_Kontext_und_Interessierte_Parteien.md
 - Policy: 0400_Policy_Incident_Management.md
 
-**Verantwortlich:** Thomas Weber  
+**Verantwortlich:** [TODO]  
 **Nachweis:** Kontaktlisten, Kommunikationsprotokolle
-
----
 
 #### 5.6 Contact with Special Interest Groups
 
@@ -117,10 +111,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Dokument: 0030_ISMS_Kontext_und_Interessierte_Parteien.md
 
-**Verantwortlich:** Thomas Weber  
+**Verantwortlich:** [TODO]  
 **Nachweis:** Mitgliedschaften, Teilnahmebestätigungen
-
----
 
 #### 5.7 Threat Intelligence
 
@@ -134,8 +126,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Security Operations Team  
 **Nachweis:** Threat Intelligence Reports, Vulnerability Scans
 
----
-
 #### 5.8 Information Security in Project Management
 
 **Control Statement:** Information security shall be integrated into project management.
@@ -145,10 +135,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0680_Policy_Security_in_Projects.md
 - Richtlinie: 0690_Richtlinie_Sicherheitsanforderungen_im_Projektlebenszyklus.md
 
-**Verantwortlich:** Project Management Office, Thomas Weber  
+**Verantwortlich:** Project Management Office, [TODO]  
 **Nachweis:** Projektdokumentation, Security Reviews
-
----
 
 #### 5.9 Inventory of Information and Other Associated Assets
 
@@ -163,8 +151,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Asset Management Team  
 **Nachweis:** Asset Inventory, CMDB
 
----
-
 #### 5.10 Acceptable Use of Information and Other Associated Assets
 
 **Control Statement:** Rules for the acceptable use of information and of assets associated with information and information processing facilities shall be identified, documented and implemented.
@@ -174,10 +160,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0200_Policy_Akzeptable_Nutzung_IT.md
 - Richtlinie: 0210_Richtlinie_Akzeptable_Nutzung_IT.md
 
-**Verantwortlich:** Thomas Weber  
+**Verantwortlich:** [TODO]  
 **Nachweis:** Acceptable Use Policy, Mitarbeiterbestätigungen
-
----
 
 #### 5.11 Return of Assets
 
@@ -191,8 +175,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** HR, IT Operations  
 **Nachweis:** Offboarding-Checklisten, Asset-Rückgabeprotokolle
 
----
-
 #### 5.12 Classification of Information
 
 **Control Statement:** Information shall be classified according to the information security needs of the organization based on confidentiality, integrity, availability and relevant interested party requirements.
@@ -202,10 +184,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0280_Policy_Datenklassifizierung_und_Informationshandling.md
 - Richtlinie: 0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md
 
-**Verantwortlich:** Data Owners, Thomas Weber  
+**Verantwortlich:** Data Owners, [TODO]  
 **Nachweis:** Klassifizierungsschema, gelabelte Dokumente
-
----
 
 #### 5.13 Labelling of Information
 
@@ -218,8 +198,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Data Owners  
 **Nachweis:** Labelling-Richtlinien, gelabelte Assets
 
----
-
 #### 5.14 Information Transfer
 
 **Control Statement:** Information transfer rules, procedures, or agreements shall be in place for all types of transfer facilities within the organization and between the organization and other parties.
@@ -229,10 +207,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0660_Policy_Informationsuebertragung_und_Kommunikation.md
 - Richtlinie: 0670_Richtlinie_Email_Sharing_und_Zusammenarbeitstools.md
 
-**Verantwortlich:** Thomas Weber  
+**Verantwortlich:** [TODO]  
 **Nachweis:** Transfer-Richtlinien, Verschlüsselungsnachweise
-
----
 
 #### 5.15 Access Control
 
@@ -243,10 +219,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
 - Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md
 
-**Verantwortlich:** IAM Team, Thomas Weber  
+**Verantwortlich:** IAM Team, [TODO]  
 **Nachweis:** Berechtigungskonzept, Access Reviews
-
----
 
 #### 5.16 Identity Management
 
@@ -260,8 +234,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IAM Team  
 **Nachweis:** Identity Lifecycle Prozesse, Joiner/Mover/Leaver Dokumentation
 
----
-
 #### 5.17 Authentication Information
 
 **Control Statement:** Allocation and management of authentication information shall be controlled by a management process, including advising personnel on appropriate handling of authentication information.
@@ -274,8 +246,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IAM Team  
 **Nachweis:** Passwort-Richtlinien, MFA-Implementierung
 
----
-
 #### 5.18 Access Rights
 
 **Control Statement:** Access rights to information and other associated assets shall be provisioned, reviewed, modified and removed in accordance with the organization's topic-specific policy on and rules for access control.
@@ -287,8 +257,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IAM Team, Resource Owners  
 **Nachweis:** Access Request Workflows, Rezertifizierungsprotokolle
 
----
-
 #### 5.19 Information Security in Supplier Relationships
 
 **Control Statement:** Processes and procedures shall be defined and implemented to manage the information security risks associated with the use of supplier's products or services.
@@ -298,10 +266,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Procurement, Thomas Weber  
+**Verantwortlich:** Procurement, [TODO]  
 **Nachweis:** Supplier Security Assessments, Verträge
-
----
 
 #### 5.20 Addressing Information Security within Supplier Agreements
 
@@ -311,10 +277,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Procurement, Legal, Thomas Weber  
+**Verantwortlich:** Procurement, Legal, [TODO]  
 **Nachweis:** Vertragsklauseln, SLAs
-
----
 
 #### 5.21 Managing Information Security in the ICT Supply Chain
 
@@ -324,10 +288,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Thomas Weber, IT Operations  
+**Verantwortlich:** [TODO], IT Operations  
 **Nachweis:** Supply Chain Risk Assessments
-
----
 
 #### 5.22 Monitoring, Review and Change Management of Supplier Services
 
@@ -337,10 +299,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Supplier Management, Thomas Weber  
+**Verantwortlich:** Supplier Management, [TODO]  
 **Nachweis:** Supplier Reviews, Performance Reports
-
----
 
 #### 5.23 Information Security for Use of Cloud Services
 
@@ -351,10 +311,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Cloud Governance Team, Thomas Weber  
+**Verantwortlich:** Cloud Governance Team, [TODO]  
 **Nachweis:** Cloud Security Assessments, Cloud Contracts
-
----
 
 #### 5.24 Information Security Incident Management Planning and Preparation
 
@@ -365,10 +323,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0400_Policy_Incident_Management.md
 - Richtlinie: 0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.md
 
-**Verantwortlich:** Incident Response Team, Thomas Weber  
+**Verantwortlich:** Incident Response Team, [TODO]  
 **Nachweis:** Incident Response Plan, Runbooks
-
----
 
 #### 5.25 Assessment and Decision on Information Security Events
 
@@ -381,8 +337,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Incident Response Team  
 **Nachweis:** Event Classification Criteria, Incident Tickets
 
----
-
 #### 5.26 Response to Information Security Incidents
 
 **Control Statement:** Information security incidents shall be responded to in accordance with the documented procedures.
@@ -394,8 +348,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Incident Response Team  
 **Nachweis:** Incident Response Dokumentation, Post-Mortems
 
----
-
 #### 5.27 Learning from Information Security Incidents
 
 **Control Statement:** Knowledge gained from information security incidents shall be used to strengthen and improve the information security controls.
@@ -405,10 +357,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Richtlinie: 0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.md
 - Dokument: 0160_ISMS_Kontinuierliche_Verbesserung.md
 
-**Verantwortlich:** Incident Response Team, Thomas Weber  
+**Verantwortlich:** Incident Response Team, [TODO]  
 **Nachweis:** Lessons Learned Dokumentation, Verbesserungsmaßnahmen
-
----
 
 #### 5.28 Collection of Evidence
 
@@ -421,8 +371,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Incident Response Team, Forensics Team  
 **Nachweis:** Forensics Procedures, Chain of Custody Dokumentation
 
----
-
 #### 5.29 Information Security During Disruption
 
 **Control Statement:** The organization shall plan how to maintain information security at an appropriate level during disruption.
@@ -432,10 +380,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0440_Policy_Business_Continuity_ICT_Readiness.md
 - Richtlinie: 0450_Richtlinie_ICT_DR_Schnittstellen_zu_BCM.md
 
-**Verantwortlich:** BCM Team, Thomas Weber  
+**Verantwortlich:** BCM Team, [TODO]  
 **Nachweis:** Business Continuity Plans, DR Tests
-
----
 
 #### 5.30 ICT Readiness for Business Continuity
 
@@ -449,8 +395,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, BCM Team  
 **Nachweis:** DR Plans, BC Tests, RTO/RPO Dokumentation
 
----
-
 #### 5.31 Legal, Statutory, Regulatory and Contractual Requirements
 
 **Control Statement:** Legal, statutory, regulatory and contractual requirements relevant to information security and the organization's approach to meet these requirements shall be identified, documented and kept up to date.
@@ -460,10 +404,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Dokument: 0030_ISMS_Kontext_und_Interessierte_Parteien.md
 - Policy: 0560_Policy_Datenschutz_Schnittstellen.md
 
-**Verantwortlich:** Legal, Compliance, Thomas Weber  
+**Verantwortlich:** Legal, Compliance, [TODO]  
 **Nachweis:** Compliance Register, Legal Reviews
-
----
 
 #### 5.32 Intellectual Property Rights
 
@@ -474,10 +416,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0200_Policy_Akzeptable_Nutzung_IT.md
 - Richtlinie: 0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md
 
-**Verantwortlich:** Legal, Thomas Weber  
+**Verantwortlich:** Legal, [TODO]  
 **Nachweis:** IP Protection Procedures, Lizenzmanagement
-
----
 
 #### 5.33 Protection of Records
 
@@ -488,10 +428,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0580_Policy_Aufbewahrung_und_Loeschung.md
 - Richtlinie: 0590_Richtlinie_Records_Retention_und_Sichere_Loeschung.md
 
-**Verantwortlich:** Records Management, Thomas Weber  
+**Verantwortlich:** Records Management, [TODO]  
 **Nachweis:** Records Retention Policy, Archivierungssysteme
-
----
 
 #### 5.34 Privacy and Protection of PII
 
@@ -502,10 +440,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0560_Policy_Datenschutz_Schnittstellen.md
 - Richtlinie: 0570_Richtlinie_Datenschutz_Anforderungen_und_Datenverarbeitung.md
 
-**Verantwortlich:** Data Protection Officer, Thomas Weber  
+**Verantwortlich:** Data Protection Officer, [TODO]  
 **Nachweis:** DSGVO Compliance, Privacy Impact Assessments
-
----
 
 #### 5.35 Independent Review of Information Security
 
@@ -515,10 +451,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Dokument: 0130_ISMS_Internes_Auditprogramm.md
 
-**Verantwortlich:** Internal Audit, Thomas Weber  
+**Verantwortlich:** Internal Audit, [TODO]  
 **Nachweis:** Audit Reports, Audit Plans
-
----
 
 #### 5.36 Compliance with Policies, Rules and Standards for Information Security
 
@@ -529,10 +463,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Dokument: 0130_ISMS_Internes_Auditprogramm.md
 - Dokument: 0140_ISMS_Management_Review_Template.md
 
-**Verantwortlich:** Compliance Team, Thomas Weber  
+**Verantwortlich:** Compliance Team, [TODO]  
 **Nachweis:** Compliance Reviews, Audit Findings
-
----
 
 #### 5.37 Documented Operating Procedures
 
@@ -546,8 +478,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, Process Owners  
 **Nachweis:** Betriebsdokumentation, SOPs, Runbooks
 
----
-
 ### 6. People Controls
 
 #### 6.1 Screening
@@ -559,10 +489,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0520_Policy_HR_Security.md
 - Richtlinie: 0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md
 
-**Verantwortlich:** HR, Thomas Weber  
+**Verantwortlich:** HR, [TODO]  
 **Nachweis:** Background Check Procedures, Screening Records
-
----
 
 #### 6.2 Terms and Conditions of Employment
 
@@ -576,8 +504,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** HR, Legal  
 **Nachweis:** Arbeitsverträge, NDA Templates
 
----
-
 #### 6.3 Information Security Awareness, Education and Training
 
 **Control Statement:** Personnel of the organization and relevant interested parties shall receive appropriate information security awareness, education and training and regular updates of the organization's information security policy, topic-specific policies and procedures, as relevant for their job function.
@@ -586,10 +512,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Dokument: 0120_ISMS_Schulung_Awareness_und_Kompetenz.md
 
-**Verantwortlich:** Thomas Weber, HR  
+**Verantwortlich:** [TODO], HR  
 **Nachweis:** Schulungspläne, Teilnahmebestätigungen, Awareness Kampagnen
-
----
 
 #### 6.4 Disciplinary Process
 
@@ -603,8 +527,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** HR, Management  
 **Nachweis:** Disziplinarverfahren, Dokumentierte Verstöße
 
----
-
 #### 6.5 Responsibilities After Termination or Change of Employment
 
 **Control Statement:** Information security responsibilities and duties that remain valid after termination or change of employment shall be defined, enforced and communicated to relevant personnel and other interested parties.
@@ -617,8 +539,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** HR, IT Operations  
 **Nachweis:** Offboarding Checklisten, Exit Interviews
 
----
-
 #### 6.6 Confidentiality or Non-Disclosure Agreements
 
 **Control Statement:** Confidentiality or non-disclosure agreements reflecting the organization's needs for the protection of information shall be identified, documented, regularly reviewed and signed by personnel and other relevant interested parties.
@@ -630,8 +550,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Legal, HR  
 **Nachweis:** Unterzeichnete NDAs, Vertraulichkeitsvereinbarungen
 
----
-
 #### 6.7 Remote Working
 
 **Control Statement:** Security measures shall be implemented when personnel are working remotely to protect information accessed, processed or stored outside the organization's premises.
@@ -641,10 +559,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0500_Policy_Mobile_Device_und_Remote_Work.md
 - Richtlinie: 0510_Richtlinie_MDM_BringYourOwnDevice_und_Remote_Access.md
 
-**Verantwortlich:** IT Operations, Thomas Weber  
+**Verantwortlich:** IT Operations, [TODO]  
 **Nachweis:** Remote Work Policy, VPN Logs, Endpoint Security
-
----
 
 #### 6.8 Information Security Event Reporting
 
@@ -658,8 +574,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** All Personnel, Incident Response Team  
 **Nachweis:** Incident Reporting Channels, Event Reports
 
----
-
 ### 7. Physical Controls
 
 #### 7.1 Physical Security Perimeters
@@ -671,10 +585,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0480_Policy_Physische_Sicherheit.md
 - Richtlinie: 0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md
 
-**Verantwortlich:** Facility Management, Thomas Weber  
+**Verantwortlich:** Facility Management, [TODO]  
 **Nachweis:** Sicherheitszonen, Zutrittskontrollsysteme
-
----
 
 #### 7.2 Physical Entry
 
@@ -686,8 +598,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Facility Management  
 **Nachweis:** Zutrittskontrollsystem, Access Logs
-
----
 
 #### 7.3 Securing Offices, Rooms and Facilities
 
@@ -701,8 +611,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Facility Management  
 **Nachweis:** Sicherheitskonzept Gebäude, Raumschutzmaßnahmen
 
----
-
 #### 7.4 Physical Security Monitoring
 
 **Control Statement:** Premises shall be continuously monitored for unauthorized physical access.
@@ -713,8 +621,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Security Operations, Facility Management  
 **Nachweis:** Videoüberwachung, Alarmsysteme, Security Logs
-
----
 
 #### 7.5 Protecting Against Physical and Environmental Threats
 
@@ -728,8 +634,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Facility Management, BCM Team  
 **Nachweis:** Umweltschutzmaßnahmen, Brandschutz, Klimatisierung
 
----
-
 #### 7.6 Working in Secure Areas
 
 **Control Statement:** Security measures for working in secure areas shall be designed and implemented.
@@ -738,10 +642,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Richtlinie: 0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md
 
-**Verantwortlich:** Facility Management, Thomas Weber  
+**Verantwortlich:** Facility Management, [TODO]  
 **Nachweis:** Clean Desk Policy, Secure Area Procedures
-
----
 
 #### 7.7 Clear Desk and Clear Screen
 
@@ -755,8 +657,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** All Personnel, Management  
 **Nachweis:** Clear Desk Policy, Awareness Training
 
----
-
 #### 7.8 Equipment Siting and Protection
 
 **Control Statement:** Equipment shall be sited securely and protected.
@@ -768,8 +668,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, Facility Management  
 **Nachweis:** Serverraum-Sicherheit, Equipment Protection Measures
 
----
-
 #### 7.9 Security of Assets Off-Premises
 
 **Control Statement:** Off-site assets shall be protected.
@@ -779,10 +677,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0500_Policy_Mobile_Device_und_Remote_Work.md
 - Richtlinie: 0510_Richtlinie_MDM_BringYourOwnDevice_und_Remote_Access.md
 
-**Verantwortlich:** IT Operations, Thomas Weber  
+**Verantwortlich:** IT Operations, [TODO]  
 **Nachweis:** Mobile Device Management, Encryption Policies
-
----
 
 #### 7.10 Storage Media
 
@@ -796,8 +692,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations  
 **Nachweis:** Media Handling Procedures, Disposal Records
 
----
-
 #### 7.11 Supporting Utilities
 
 **Control Statement:** Information processing facilities shall be protected from power failures and other disruptions caused by failures in supporting utilities.
@@ -809,8 +703,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations, Facility Management  
 **Nachweis:** USV-Systeme, Redundante Stromversorgung
-
----
 
 #### 7.12 Cabling Security
 
@@ -824,8 +716,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, Facility Management  
 **Nachweis:** Kabelschutzmaßnahmen, Netzwerkdokumentation
 
----
-
 #### 7.13 Equipment Maintenance
 
 **Control Statement:** Equipment shall be maintained correctly to ensure availability, integrity and confidentiality of information.
@@ -837,8 +727,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations  
 **Nachweis:** Wartungspläne, Maintenance Records
-
----
 
 #### 7.14 Secure Disposal or Re-use of Equipment
 
@@ -852,8 +740,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations  
 **Nachweis:** Secure Disposal Procedures, Wiping Certificates
 
----
-
 ### 8. Technological Controls
 
 #### 8.1 User Endpoint Devices
@@ -865,10 +751,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0620_Policy_Endpoint_Security.md
 - Richtlinie: 0630_Richtlinie_EDR_AV_Host_Firewall_und_Device_Compliance.md
 
-**Verantwortlich:** IT Operations, Thomas Weber  
+**Verantwortlich:** IT Operations, [TODO]  
 **Nachweis:** Endpoint Protection, Device Compliance Policies
-
----
 
 #### 8.2 Privileged Access Rights
 
@@ -879,10 +763,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
 - Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md
 
-**Verantwortlich:** IAM Team, Thomas Weber  
+**Verantwortlich:** IAM Team, [TODO]  
 **Nachweis:** Privileged Access Management, PAM Logs
-
----
 
 #### 8.3 Information Access Restriction
 
@@ -896,8 +778,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IAM Team, Data Owners  
 **Nachweis:** Access Control Lists, Authorization Policies
 
----
-
 #### 8.4 Access to Source Code
 
 **Control Statement:** Read and write access to source code, development tools and software libraries shall be appropriately managed.
@@ -907,10 +787,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0380_Policy_Secure_Development.md
 - Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md
 
-**Verantwortlich:** Development Team, Thomas Weber  
+**Verantwortlich:** Development Team, [TODO]  
 **Nachweis:** Source Code Access Controls, Git Permissions
-
----
 
 #### 8.5 Secure Authentication
 
@@ -924,8 +802,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IAM Team  
 **Nachweis:** MFA Implementation, Authentication Logs
 
----
-
 #### 8.6 Capacity Management
 
 **Control Statement:** The use of resources shall be monitored and adjusted in line with current and expected capacity requirements.
@@ -938,8 +814,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations  
 **Nachweis:** Capacity Monitoring, Performance Reports
 
----
-
 #### 8.7 Protection Against Malware
 
 **Control Statement:** Protection against malware shall be implemented and supported by appropriate user awareness.
@@ -949,10 +823,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0620_Policy_Endpoint_Security.md
 - Richtlinie: 0630_Richtlinie_EDR_AV_Host_Firewall_und_Device_Compliance.md
 
-**Verantwortlich:** IT Operations, Thomas Weber  
+**Verantwortlich:** IT Operations, [TODO]  
 **Nachweis:** Antivirus/EDR Deployment, Malware Detection Logs
-
----
 
 #### 8.8 Management of Technical Vulnerabilities
 
@@ -966,8 +838,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Security Operations, IT Operations  
 **Nachweis:** Vulnerability Scans, Patch Management Reports
 
----
-
 #### 8.9 Configuration Management
 
 **Control Statement:** Configurations, including security configurations, of hardware, software, services and networks shall be established, documented, implemented, monitored and reviewed.
@@ -977,10 +847,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0540_Policy_Konfiguration_und_Hardening.md
 - Richtlinie: 0550_Richtlinie_Sicherheitsbaselines_Hardening_und_Konfig_Aenderungen.md
 
-**Verantwortlich:** IT Operations, Thomas Weber  
+**Verantwortlich:** IT Operations, [TODO]  
 **Nachweis:** Configuration Management Database, Baseline Configurations
-
----
 
 #### 8.10 Information Deletion
 
@@ -994,8 +862,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Data Owners, IT Operations  
 **Nachweis:** Data Retention Policy, Deletion Logs
 
----
-
 #### 8.11 Data Masking
 
 **Control Statement:** Data masking shall be used in accordance with the organization's topic-specific policy on access control and other related topic-specific policies, and business requirements, taking applicable legislation into consideration.
@@ -1008,8 +874,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Development Team, Data Protection Officer  
 **Nachweis:** Data Masking Procedures, Test Data Management
 
----
-
 #### 8.12 Data Leakage Prevention
 
 **Control Statement:** Data leakage prevention measures shall be applied to systems, networks and any other devices that process, store or transmit sensitive information.
@@ -1019,10 +883,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0280_Policy_Datenklassifizierung_und_Informationshandling.md
 - Richtlinie: 0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md
 
-**Verantwortlich:** Security Operations, Thomas Weber  
+**Verantwortlich:** Security Operations, [TODO]  
 **Nachweis:** DLP Implementation, DLP Alerts
-
----
 
 #### 8.13 Information Backup
 
@@ -1036,8 +898,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations  
 **Nachweis:** Backup Policies, Restore Tests, Backup Logs
 
----
-
 #### 8.14 Redundancy of Information Processing Facilities
 
 **Control Statement:** Information processing facilities shall be implemented with redundancy sufficient to meet availability requirements.
@@ -1049,8 +909,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations, IT Architecture  
 **Nachweis:** High Availability Designs, Redundancy Documentation
-
----
 
 #### 8.15 Logging
 
@@ -1064,8 +922,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, Security Operations  
 **Nachweis:** Logging Standards, SIEM Implementation, Log Retention
 
----
-
 #### 8.16 Monitoring Activities
 
 **Control Statement:** Networks, systems and applications shall be monitored for anomalous behaviour and appropriate actions taken to evaluate potential information security incidents.
@@ -1077,8 +933,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Security Operations  
 **Nachweis:** SIEM Use Cases, Monitoring Dashboards, Alerts
-
----
 
 #### 8.17 Clock Synchronization
 
@@ -1092,8 +946,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations  
 **Nachweis:** NTP Configuration, Time Synchronization Logs
 
----
-
 #### 8.18 Use of Privileged Utility Programs
 
 **Control Statement:** The use of utility programs that can be capable of overriding system and application controls shall be restricted and tightly controlled.
@@ -1103,10 +955,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
 - Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md
 
-**Verantwortlich:** IT Operations, Thomas Weber  
+**Verantwortlich:** IT Operations, [TODO]  
 **Nachweis:** Privileged Access Controls, Utility Program Restrictions
-
----
 
 #### 8.19 Installation of Software on Operational Systems
 
@@ -1120,8 +970,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, Change Management  
 **Nachweis:** Software Installation Procedures, Change Records
 
----
-
 #### 8.20 Networks Security
 
 **Control Statement:** Networks and network devices shall be secured, managed and controlled to protect information in systems and applications.
@@ -1131,10 +979,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0600_Policy_Netzwerksicherheit.md
 - Richtlinie: 0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md
 
-**Verantwortlich:** Network Team, Thomas Weber  
+**Verantwortlich:** Network Team, [TODO]  
 **Nachweis:** Network Security Architecture, Firewall Rules
-
----
 
 #### 8.21 Security of Network Services
 
@@ -1148,8 +994,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Network Team  
 **Nachweis:** Network Service SLAs, Security Monitoring
 
----
-
 #### 8.22 Segregation of Networks
 
 **Control Statement:** Groups of information services, users and information systems shall be segregated in the organization's networks.
@@ -1158,10 +1002,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Richtlinie: 0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md
 
-**Verantwortlich:** Network Team, Thomas Weber  
+**Verantwortlich:** Network Team, [TODO]  
 **Nachweis:** Network Segmentation Design, VLAN Configuration
-
----
 
 #### 8.23 Web Filtering
 
@@ -1175,8 +1017,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Security Operations, IT Operations  
 **Nachweis:** Web Filtering Solution, Blocked Content Logs
 
----
-
 #### 8.24 Use of Cryptography
 
 **Control Statement:** Rules for the effective use of cryptography, including cryptographic key management, shall be defined and implemented.
@@ -1186,10 +1026,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0260_Policy_Kryptografie_und_Schluesselmanagement.md
 - Richtlinie: 0270_Richtlinie_Key_Management_und_Verschluesselung.md
 
-**Verantwortlich:** Thomas Weber, IT Operations  
+**Verantwortlich:** [TODO], IT Operations  
 **Nachweis:** Cryptography Policy, Key Management Procedures
-
----
 
 #### 8.25 Secure Development Life Cycle
 
@@ -1200,10 +1038,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0380_Policy_Secure_Development.md
 - Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md
 
-**Verantwortlich:** Development Team, Thomas Weber  
+**Verantwortlich:** Development Team, [TODO]  
 **Nachweis:** Secure SDLC Procedures, Code Review Records
-
----
 
 #### 8.26 Application Security Requirements
 
@@ -1217,8 +1053,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Development Team, Security Architecture  
 **Nachweis:** Security Requirements Specifications, Threat Models
 
----
-
 #### 8.27 Secure System Architecture and Engineering Principles
 
 **Control Statement:** Principles for engineering secure systems shall be established, documented, maintained and applied to any information system development activities.
@@ -1231,8 +1065,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Security Architecture, Development Team  
 **Nachweis:** Secure Architecture Principles, Design Reviews
 
----
-
 #### 8.28 Secure Coding
 
 **Control Statement:** Secure coding principles shall be applied to software development.
@@ -1243,8 +1075,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Development Team  
 **Nachweis:** Secure Coding Guidelines, SAST/DAST Results
-
----
 
 #### 8.29 Security Testing in Development and Acceptance
 
@@ -1257,8 +1087,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Development Team, Security Team  
 **Nachweis:** Security Test Plans, Penetration Test Reports
 
----
-
 #### 8.30 Outsourced Development
 
 **Control Statement:** The organization shall direct, monitor and review the activities related to outsourced system development.
@@ -1268,10 +1096,8 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Development Team, Thomas Weber  
+**Verantwortlich:** Development Team, [TODO]  
 **Nachweis:** Supplier Contracts, Development Oversight Records
-
----
 
 #### 8.31 Separation of Development, Test and Production Environments
 
@@ -1285,8 +1111,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Development Team, IT Operations  
 **Nachweis:** Environment Separation, Access Controls per Environment
 
----
-
 #### 8.32 Change Management
 
 **Control Statement:** Changes to information processing facilities and information systems shall be subject to change management procedures.
@@ -1298,8 +1122,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Change Management, IT Operations  
 **Nachweis:** Change Management Process, Change Records
-
----
 
 #### 8.33 Test Information
 
@@ -1313,8 +1135,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Development Team, Data Protection Officer  
 **Nachweis:** Test Data Management, Data Masking Procedures
 
----
-
 #### 8.34 Protection of Information Systems During Audit Testing
 
 **Control Statement:** Audit tests and other assurance activities involving assessment of operational systems shall be planned and agreed between the tester and appropriate management.
@@ -1326,8 +1146,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Internal Audit, IT Operations  
 **Nachweis:** Audit Plans, Test Approvals, Audit Protocols
 
----
-
 ## Amendment 1:2024 Änderungen
 
 **Hinweis:** ISO/IEC 27001:2022 Amendment 1:2024 führt keine neuen Kontrollen ein, sondern präzisiert bestehende Kontrollen und aktualisiert Referenzen. Die wichtigsten Änderungen betreffen:
@@ -1338,8 +1156,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - **8.12 Data Leakage Prevention:** Neue Kontrolle für DLP (bereits in 2022 enthalten)
 
 Alle Änderungen sind in diesem Mapping bereits berücksichtigt.
-
----
 
 ## Zusammenfassung
 
@@ -1355,8 +1171,6 @@ Alle Änderungen sind in diesem Mapping bereits berücksichtigt.
 
 **Implementierungsgrad:** 100%
 
----
-
 ## Verwendung dieses Mappings
 
 Dieses Mapping dient als:
@@ -1368,8 +1182,6 @@ Dieses Mapping dient als:
 
 **Aktualisierung:** Dieses Dokument sollte bei jeder Änderung an Policies, Richtlinien oder Kontrollen aktualisiert werden.
 
----
-
 ## Referenzen
 
 - ISO/IEC 27001:2022 Information Security Management Systems - Requirements
@@ -1377,10 +1189,9 @@ Dieses Mapping dient als:
 - ISO/IEC 27002:2022 Information Security Controls
 - Statement of Applicability (SoA): 0100_ISMS_Statement_of_Applicability_SoA_Template.md
 
----
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** {{ meta-handbook.management_name }}  
+**Nächste Überprüfung:** [TODO]
 
-**Dokumentverantwortlicher:** Thomas Weber  
-**Genehmigt durch:** {{ meta.management.name }}  
-**Nächste Überprüfung:** {{ meta.document.next_review }}
 
 

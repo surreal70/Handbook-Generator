@@ -1,13 +1,17 @@
 # Compliance Program
 
-**Document ID:** PCI-0050  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -29,7 +33,7 @@ This document describes the PCI-DSS compliance program of AdminSend GmbH.
 ### 2.1 Governance Structure
 
 **PCI-DSS Steering Committee:**
-- **Chair:** {{ meta.roles.ciso.name }}
+- **Chair:** [TODO]
 - **Members:** CEO, CIO, PCI Program Manager, Legal, Operations Manager
 - **Frequency:** Quarterly
 - **Purpose:** Strategic decisions, budget, risk assessment
@@ -43,7 +47,7 @@ This document describes the PCI-DSS compliance program of AdminSend GmbH.
 ### 2.2 Management Commitment
 
 **Information Security Policy:**
-- Approved by: {{ meta.roles.ceo.name }}
+- Approved by: [TODO]
 - Date: [TODO: Date]
 - Annual review: [TODO: Month]
 
@@ -263,13 +267,5 @@ AdminSend GmbH commits to compliance with all PCI-DSS requirements to protect ca
 |---------|----------|-------------|-------------|--------|
 | [TODO: Tokenization] | High | IT Security | [TODO] | In Progress |
 | [TODO: SIEM Upgrade] | Medium | IT Security | [TODO] | Planned |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

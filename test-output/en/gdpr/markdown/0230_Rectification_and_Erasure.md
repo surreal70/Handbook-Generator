@@ -1,11 +1,17 @@
 # Rectification and Erasure
 
-**Document-ID:** 0230  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0230
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of the right to rectification and erasure in {{ meta.organization }}. Data subjects have the right to rectification of inaccurate data and erasure of data no longer necessary.
+This document describes the implementation of the right to rectification and erasure in AdminSend GmbH. Data subjects have the right to rectification of inaccurate data and erasure of data no longer necessary.
 
 ## Right to Rectification (Art. 16)
 
@@ -189,8 +195,6 @@ This document describes the implementation of the right to rectification and era
 | Delayed Erasure | Erasure after 3 months | Deadline control |
 | Missing Notification | Recipients not informed | Notification process |
 | Unjustified Refusal | Refusal without review | Careful review |
-
----
 
 **Next Steps:**
 1. Establish processes for rectification and erasure requests

@@ -1,11 +1,17 @@
 # Maßnahmen zum Umgang mit Risiken und Chancen
 
-**Dokument-ID:** 0200  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0200
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -19,7 +25,7 @@ Dieses Dokument definiert den Prozess zur Bestimmung und Behandlung von Risiken 
 
 ### Risikomanagement-Ansatz
 
-{{ meta.organization }} verwendet einen systematischen Ansatz zur Identifikation, Bewertung und Behandlung von Risiken und Chancen im Zusammenhang mit dem QMS.
+AdminSend GmbH verwendet einen systematischen Ansatz zur Identifikation, Bewertung und Behandlung von Risiken und Chancen im Zusammenhang mit dem QMS.
 
 **Risikomanagement-Methodik:** [TODO: z.B. ISO 31000, FMEA, Risikomatrix]
 
@@ -151,8 +157,6 @@ Risiken werden überwacht durch:
 - **Vierteljährlich:** Überprüfung des Risikoregisters
 - **Jährlich:** Umfassende Risikobewertung
 - **Bei Bedarf:** Bei wesentlichen Änderungen
-
----
 
 **Nächste Schritte:**
 1. Führe initiale Risiko- und Chancenbewertung durch

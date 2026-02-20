@@ -1,14 +1,17 @@
 # Protection Needs Assessment (Template)
 
-**Document ID:** 0060  
-**Document Type:** Methodology Artifact  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standard 200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -22,7 +25,7 @@ The protection needs assessment systematically determines the protection require
 - Risk analysis (Document 0090)
 - Compliance evidence
 
-**Responsible:** Thomas Weber (ISB)
+**Responsible:** [TODO] (ISB)
 
 ## 2. Protection Needs Categories and Criteria
 
@@ -134,7 +137,7 @@ Ensuring the traceability of actions.
 
 | System ID | System/Component | Application | C | I | A | Justification | Overall Protection Need |
 |---|---|---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | A-001 | [TODO] | [TODO] | [TODO] | Inherited from Application A-001 | [TODO] |
+| S-001 | [[ netbox.device.server_001 ]] | A-001 | [TODO] | [TODO] | [TODO] | Inherited from Application A-001 | [TODO] |
 | S-002 | [TODO: System 2] | A-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | S-003 | [TODO: System 3] | A-003 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
@@ -155,7 +158,7 @@ Ensuring the traceability of actions.
 | Room ID | Room/Location | Systems | C | I | A | Justification | Overall Protection Need |
 |---|---|---|---|---|---|---|---|
 | R-001 | Data Center | All critical servers | Very High | Very High | Very High | Hosting critical systems | Very High |
-| R-002 | {{ meta.organization.primary_location }} | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| R-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Total Number of Rooms:** [TODO]
 
@@ -198,7 +201,7 @@ Networks, Rooms
 
 | Object | Expected Protection Need | Actual Protection Need | Justification | Approved By |
 |---|---|---|---|---|
-| [TODO: Object] | [TODO] | [TODO] | [TODO: Justification for deviation] | Thomas Weber |
+| [TODO: Object] | [TODO] | [TODO] | [TODO: Justification for deviation] | [TODO] |
 
 **Important:** Exceptions must be documented and approved.
 
@@ -218,10 +221,10 @@ When a system hosts multiple applications with different protection needs, the *
 The protection needs assessment is validated by:
 
 1. **Review by Process Owners:** Confirmation of business criticality
-2. **Review by IT Management:** Anna Schmidt - Technical feasibility
+2. **Review by IT Management:** [TODO] - Technical feasibility
 3. **Review by Legal/Compliance:** Legal requirements
 4. **Review by Data Protection:** GDPR compliance
-5. **Approval by ISB:** Thomas Weber
+5. **Approval by ISB:** [TODO]
 
 ### 5.2 Consistency Check
 
@@ -269,21 +272,18 @@ The protection needs assessment is updated when:
 - Security incidents occur
 - At least annually as part of the ISMS review
 
-**Responsible:** Thomas Weber (ISB)  
-**Next Review:** {{ meta.document.next_review }}
+**Responsible:** [TODO] (ISB)  
+**Next Review:** [TODO]
 
 ## 9. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Executive Management | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT Management | [TODO] | [TODO] | Draft |
+| Executive Management | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 6: Protection Needs Assessment)
 - BSI IT-Grundschutz Compendium
-
 

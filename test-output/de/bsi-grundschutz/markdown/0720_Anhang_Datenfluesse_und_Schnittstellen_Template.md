@@ -1,14 +1,17 @@
 # Anhang: Datenflüsse und Schnittstellen (Template)
 
-**Dokument-ID:** 0720  
-**Dokumenttyp:** Anhang/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0720
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -22,37 +25,37 @@ Die Dokumentation der Datenflüsse und Schnittstellen von **AdminSend GmbH** unt
 - Kryptokonzept (Dokument 0340/0350)
 - Datenschutz-Compliance (Dokument 0420/0430)
 
-**Verantwortlich:** Thomas Weber (ISB), Anna Schmidt (IT-Leitung)
+**Verantwortlich:** [TODO] (ISB), [TODO] (IT-Leitung)
 
 ## 2. Datenfluss-Register
 
 | Datenfluss-ID | Quelle | Ziel | Datenarten | Schutzbedarf (C/I/A) | Transportweg | Verschlüsselung | Speicherung | Provider/Drittland | Owner | Rechtsgrundlage | Notiz |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| DF-001 | Webserver ({{ netbox.device.name }}) | Datenbank-Server | Kundendaten (personenbezogen) | Sehr hoch/Hoch/Hoch | {{ netbox.vlan.name }} (intern) | TLS 1.3 | Verschlüsselt (AES-256) | Intern | Anna Schmidt | DSGVO Art. 6(1)(b) | [TODO] |
-| DF-002 | Backup-Server | Cloud-Storage (AWS S3) | Backup-Daten | Hoch/Hoch/Hoch | Internet (VPN) | TLS 1.3 + AES-256 | Verschlüsselt (AES-256) | AWS (EU-West-1) | Anna Schmidt | DSGVO Art. 28 | [TODO] |
-| DF-003 | Mitarbeiter (Remote) | VPN-Gateway | Geschäftsdaten | Hoch/Hoch/Normal | Internet | IPsec/IKEv2 | N/A | Intern | Anna Schmidt | - | [TODO] |
-| DF-004 | ERP-System | Payment-Gateway | Zahlungsdaten | Sehr hoch/Sehr hoch/Hoch | Internet (HTTPS) | TLS 1.3 | Nicht gespeichert | Payment Provider (EU) | Anna Schmidt | PCI-DSS | [TODO] |
-| DF-005 | SIEM | Log-Archiv | Log-Daten | Normal/Hoch/Normal | {{ netbox.vlan.name }} (Management) | TLS 1.2 | Verschlüsselt | Intern | Thomas Weber | - | [TODO] |
+| DF-001 | Webserver ([[ netbox.device.name ]]) | Datenbank-Server | Kundendaten (personenbezogen) | Sehr hoch/Hoch/Hoch | [[ netbox.vlan.name ]] (intern) | TLS 1.3 | Verschlüsselt (AES-256) | Intern | [TODO] | DSGVO Art. 6(1)(b) | [TODO] |
+| DF-002 | Backup-Server | Cloud-Storage (AWS S3) | Backup-Daten | Hoch/Hoch/Hoch | Internet (VPN) | TLS 1.3 + AES-256 | Verschlüsselt (AES-256) | AWS (EU-West-1) | [TODO] | DSGVO Art. 28 | [TODO] |
+| DF-003 | Mitarbeiter (Remote) | VPN-Gateway | Geschäftsdaten | Hoch/Hoch/Normal | Internet | IPsec/IKEv2 | N/A | Intern | [TODO] | - | [TODO] |
+| DF-004 | ERP-System | Payment-Gateway | Zahlungsdaten | Sehr hoch/Sehr hoch/Hoch | Internet (HTTPS) | TLS 1.3 | Nicht gespeichert | Payment Provider (EU) | [TODO] | PCI-DSS | [TODO] |
+| DF-005 | SIEM | Log-Archiv | Log-Daten | Normal/Hoch/Normal | [[ netbox.vlan.name ]] (Management) | TLS 1.2 | Verschlüsselt | Intern | [TODO] | - | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 3. Schnittstellen-Register
 
 | Schnittstellen-ID | System A | System B | Protokoll | Port | Authentisierung | Verschlüsselung | Datenrichtung | Frequenz | Owner | Notiz |
 |---|---|---|---|---|---|---|---|---|---|---|
-| IF-001 | Webserver | Datenbank | PostgreSQL | 5432 | Zertifikat | TLS 1.3 | Bidirektional | Permanent | Anna Schmidt | [TODO] |
-| IF-002 | ERP | CRM | REST API | 443 | OAuth 2.0 | TLS 1.3 | Bidirektional | Echtzeit | Anna Schmidt | [TODO] |
-| IF-003 | Monitoring | SIEM | Syslog | 514 | Zertifikat | TLS 1.2 | Unidirektional | Permanent | Thomas Weber | [TODO] |
-| IF-004 | AD | LDAP-Clients | LDAPS | 636 | Kerberos | TLS 1.2 | Bidirektional | On-Demand | Anna Schmidt | [TODO] |
-| IF-005 | Backup-Server | Cloud-Storage | S3 API | 443 | API-Key | TLS 1.3 | Unidirektional | Täglich | Anna Schmidt | [TODO] |
+| IF-001 | Webserver | Datenbank | PostgreSQL | 5432 | Zertifikat | TLS 1.3 | Bidirektional | Permanent | [TODO] | [TODO] |
+| IF-002 | ERP | CRM | REST API | 443 | OAuth 2.0 | TLS 1.3 | Bidirektional | Echtzeit | [TODO] | [TODO] |
+| IF-003 | Monitoring | SIEM | Syslog | 514 | Zertifikat | TLS 1.2 | Unidirektional | Permanent | [TODO] | [TODO] |
+| IF-004 | AD | LDAP-Clients | LDAPS | 636 | Kerberos | TLS 1.2 | Bidirektional | On-Demand | [TODO] | [TODO] |
+| IF-005 | Backup-Server | Cloud-Storage | S3 API | 443 | API-Key | TLS 1.3 | Unidirektional | Täglich | [TODO] | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Externe Schnittstellen und Drittanbieter
 
 | Drittanbieter | Service | Datenarten | Schutzbedarf | Standort/Drittland | Vertrag | Datenschutz-Vereinbarung | Owner | Notiz |
 |---|---|---|---|---|---|---|---|---|
-| AWS | Cloud-Hosting (EC2, S3) | Geschäftsdaten, Backup | Hoch/Hoch/Hoch | EU-West-1 | [TODO: Vertragsnummer] | Ja (Art. 28 DSGVO) | Anna Schmidt | [TODO] |
-| Microsoft | Office 365 | E-Mail, Dokumente | Hoch/Hoch/Normal | EU | [TODO] | Ja | Anna Schmidt | [TODO] |
-| Payment Provider | Zahlungsabwicklung | Zahlungsdaten | Sehr hoch/Sehr hoch/Hoch | EU | [TODO] | Ja | Anna Schmidt | PCI-DSS zertifiziert |
+| AWS | Cloud-Hosting (EC2, S3) | Geschäftsdaten, Backup | Hoch/Hoch/Hoch | EU-West-1 | [TODO: Vertragsnummer] | Ja (Art. 28 DSGVO) | [TODO] | [TODO] |
+| Microsoft | Office 365 | E-Mail, Dokumente | Hoch/Hoch/Normal | EU | [TODO] | Ja | [TODO] | [TODO] |
+| Payment Provider | Zahlungsabwicklung | Zahlungsdaten | Sehr hoch/Sehr hoch/Hoch | EU | [TODO] | Ja | [TODO] | PCI-DSS zertifiziert |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Referenz:** Dokument 0400/0410 (Lieferanten und Auslagerungsmanagement)
@@ -142,11 +145,9 @@ Die Dokumentation der Datenflüsse und Schnittstellen von **AdminSend GmbH** unt
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Datenschutzbeauftragter | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT-Leitung | [TODO] | [TODO] | Draft |
+| Datenschutzbeauftragter | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Strukturanalyse)
@@ -156,5 +157,4 @@ Die Dokumentation der Datenflüsse und Schnittstellen von **AdminSend GmbH** unt
 - Dokument 0090: Risikoanalyse
 - Dokument 0340/0350: Kryptografie und Key Management
 - Dokument 0420/0430: Datenschutz
-
 

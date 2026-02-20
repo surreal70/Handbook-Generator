@@ -1,14 +1,17 @@
 # Schutzbedarfsfeststellung (Template)
 
-**Dokument-ID:** 0060  
-**Dokumenttyp:** Methodik-Artefakt  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standard 200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0060
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -22,7 +25,7 @@ Die Schutzbedarfsfeststellung bestimmt systematisch den Schutzbedarf für Gesch�
 - Risikoanalyse (Dokument 0090)
 - Compliance-Nachweis
 
-**Verantwortlich:** Thomas Weber (ISB)
+**Verantwortlich:** [TODO] (ISB)
 
 ## 2. Schutzbedarfskategorien und Kriterien
 
@@ -134,7 +137,7 @@ Sicherstellung der Rückverfolgbarkeit von Aktionen.
 
 | System-ID | System/Komponente | Anwendung | C | I | A | Begründung | Schutzbedarf gesamt |
 |---|---|---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | A-001 | [TODO] | [TODO] | [TODO] | Vererbung von Anwendung A-001 | [TODO] |
+| S-001 | [[ netbox.device.server_001 ]] | A-001 | [TODO] | [TODO] | [TODO] | Vererbung von Anwendung A-001 | [TODO] |
 | S-002 | [TODO: System 2] | A-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | S-003 | [TODO: System 3] | A-003 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
@@ -155,7 +158,7 @@ Sicherstellung der Rückverfolgbarkeit von Aktionen.
 | Raum-ID | Raum/Standort | Systeme | C | I | A | Begründung | Schutzbedarf gesamt |
 |---|---|---|---|---|---|---|---|
 | R-001 | Rechenzentrum | Alle kritischen Server | Sehr hoch | Sehr hoch | Sehr hoch | Hosting kritischer Systeme | Sehr hoch |
-| R-002 | {{ meta.organization.primary_location }} | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| R-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Anzahl Räume gesamt:** [TODO]
 
@@ -198,7 +201,7 @@ Netzwerke, Räume
 
 | Objekt | Erwarteter Schutzbedarf | Tatsächlicher Schutzbedarf | Begründung | Genehmigt von |
 |---|---|---|---|---|
-| [TODO: Objekt] | [TODO] | [TODO] | [TODO: Begründung für Abweichung] | Thomas Weber |
+| [TODO: Objekt] | [TODO] | [TODO] | [TODO: Begründung für Abweichung] | [TODO] |
 
 **Wichtig:** Ausnahmen müssen dokumentiert und genehmigt werden.
 
@@ -218,10 +221,10 @@ Wenn ein System mehrere Anwendungen mit unterschiedlichem Schutzbedarf hostet, g
 Die Schutzbedarfsfeststellung wird validiert durch:
 
 1. **Review durch Prozess-Owner:** Bestätigung der Geschäftskritikalität
-2. **Review durch IT-Leitung:** Anna Schmidt - Technische Machbarkeit
+2. **Review durch IT-Leitung:** [TODO] - Technische Machbarkeit
 3. **Review durch Legal/Compliance:** Gesetzliche Anforderungen
 4. **Review durch Datenschutz:** DSGVO-Konformität
-5. **Freigabe durch ISB:** Thomas Weber
+5. **Freigabe durch ISB:** [TODO]
 
 ### 5.2 Konsistenzprüfung
 
@@ -269,21 +272,18 @@ Die Schutzbedarfsfeststellung wird aktualisiert bei:
 - Sicherheitsvorfällen
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
-**Verantwortlich:** Thomas Weber (ISB)  
-**Nächster Review:** {{ meta.document.next_review }}
+**Verantwortlich:** [TODO] (ISB)  
+**Nächster Review:** [TODO]
 
 ## 9. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Geschäftsführung | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT-Leitung | [TODO] | [TODO] | Draft |
+| Geschäftsführung | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 6: Schutzbedarfsfeststellung)
 - BSI IT-Grundschutz-Kompendium
-
 

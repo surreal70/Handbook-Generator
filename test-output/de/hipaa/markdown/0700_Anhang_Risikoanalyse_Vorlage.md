@@ -1,13 +1,17 @@
 # Anhang: Risikoanalyse-Vorlage
 
-**Dokument-ID:** HIPAA-0700  
-**Organisation:** AdminSend GmbH  
-**Verantwortlich:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0700
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -36,14 +40,11 @@ Dieser Anhang bietet eine Vorlage zur Durchführung einer HIPAA Security Rule-Ri
 |-----------|------------|------------|----------|----------------|--------|
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
-
+| 0.1 | [TODO] | Handbook-Generator | Ersterstellung |
 
 **Beispiel-ePHI-Inventar:**
 | Datenelement | Format | Speicherort | Zugriffskontrollen | Verschlüsselung |
@@ -196,4 +197,6 @@ Dieser Anhang bietet eine Vorlage zur Durchführung einer HIPAA Security Rule-Ri
 - **Wahrscheinlichkeit:** Chance, dass Ereignis eintritt
 - **Auswirkung:** Schaden, wenn Ereignis eintritt
 - **Risikostufe:** Kombination aus Wahrscheinlichkeit und Auswirkung
+
+
 

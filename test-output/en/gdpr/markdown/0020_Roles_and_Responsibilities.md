@@ -1,11 +1,17 @@
 # Roles and Responsibilities
 
-**Document-ID:** 0020  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document defines the roles and responsibilities in data protection management of {{ meta.organization }} according to GDPR. It establishes who is responsible for which data protection tasks and how collaboration is organized.
+This document defines the roles and responsibilities in data protection management of AdminSend GmbH according to GDPR. It establishes who is responsible for which data protection tasks and how collaboration is organized.
 
 ## Key Roles under GDPR
 
@@ -159,11 +165,10 @@ This document defines the roles and responsibilities in data protection manageme
 **Contact:** [TODO: Email, Phone, Website]  
 **Organization Contact:** [TODO: Data Protection Officer]
 
----
-
 **Next Steps:**
 1. Designate all relevant roles and responsibilities
 2. Create complete RACI matrix
 3. Check designation obligation for Data Protection Officer
 4. Document all processor relationships
 5. Implement training program
+

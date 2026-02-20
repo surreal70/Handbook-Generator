@@ -1,14 +1,17 @@
 # Document Control and Document Register
 
-**Document ID:** 0030  
-**Document Type:** Process/Foundation  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -33,7 +36,7 @@ This document control applies to all ISMS-relevant documents:
 
 **Primary Storage Location:** [TODO: e.g. SharePoint, Confluence, DMS]
 
-**Responsible:** IT Operations Manager
+**Responsible:** [TODO]
 
 All ISMS documents are stored centrally in:
 - **Path:** [TODO: e.g. /ISMS/Documentation/]
@@ -64,8 +67,8 @@ Access to ISMS documents is role-based:
 ### 2.4 Emergency Access
 
 In emergencies (e.g. ISO unavailable), the following persons have access to all ISMS documents:
-- **Executive Management:** Max Mustermann
-- **IT Management:** Anna Schmidt
+- **Executive Management:** [TODO]
+- **IT Management:** [TODO]
 - **Deputy ISO:** [TODO]
 
 ## 3. Document Lifecycle
@@ -162,16 +165,16 @@ In emergencies (e.g. ISO unavailable), the following persons have access to all 
 
 | Document | ID | Owner | Status | Version | Last Updated | Next Review |
 |---|---|---|---|---|---|---|
-| Information Security Policy | 0010 | Thomas Weber | {{ meta.document.status }} | 1.0.0 | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
-| ISMS Organization, Roles and RACI | 0020 | Thomas Weber | {{ meta.document.status }} | 1.0.0 | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
-| Document Control | 0030 | Thomas Weber | {{ meta.document.status }} | 1.0.0 | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
+| Information Security Policy | 0010 | [TODO] | Draft | 0 | [TODO] | [TODO] |
+| ISMS Organization, Roles and RACI | 0020 | [TODO] | Draft | 0 | [TODO] | [TODO] |
+| Document Control | 0030 | [TODO] | Draft | 0 | [TODO] | [TODO] |
 | [TODO: Add additional documents] | | | | | | |
 
 ## 5. Change Log
 
 | Version | Date | Change | Author | Approver | Status |
 |---|---|---|---|---|---|
-| 0.1 | {{ meta.document.last_updated }} | First draft | IT Operations Manager | - | Draft |
+| 0.1 | [TODO] | First draft | [TODO] | - | Draft |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 6. Quality Assurance
@@ -212,9 +215,7 @@ The document control process is regularly monitored:
 - **Review:** Annual review of the process
 - **Improvement:** Continuous optimization based on feedback
 
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Next Review:** [TODO]
 
 **References:**
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)

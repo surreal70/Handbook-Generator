@@ -1,11 +1,17 @@
 # Data Breach Response Plan (Template)
 
-**Document-ID:** 0600  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0600
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,11 +19,11 @@
 
 ## Purpose
 
-This response plan defines the steps for managing data breaches at {{ meta.organization }}. It ensures that data breaches are quickly detected, assessed, and handled according to GDPR Art. 33-34.
+This response plan defines the steps for managing data breaches at AdminSend GmbH. It ensures that data breaches are quickly detected, assessed, and handled according to GDPR Art. 33-34.
 
 ## Scope
 
-This plan applies to all data breaches affecting personal data processed by {{ meta.organization }}.
+This plan applies to all data breaches affecting personal data processed by AdminSend GmbH.
 
 ## Breach Response Team
 
@@ -384,11 +390,10 @@ Data breach confirmed?
 - **Template 0630:** Breach Register Template
 - **Template 0640:** Post-Breach Review Template
 
----
-
 **Next Steps:**
 1. Adapt this plan to your organization
 2. Define all roles and contacts
 3. Conduct breach response exercises (at least annually)
 4. Keep the plan current
 5. Ensure all team members know the plan
+

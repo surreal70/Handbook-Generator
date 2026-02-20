@@ -1,5 +1,20 @@
 # 2. Betriebsprozesse
 
+**Dokument-ID:** [FRAMEWORK]-0011
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## 2.1 Monitoring
 
 - 24/7 Überwachung aller kritischen Systeme
@@ -17,3 +32,4 @@
 - Alle Änderungen müssen dokumentiert werden
 - Kritische Änderungen erfordern Change Advisory Board Genehmigung
 - Rollback-Plan ist für alle Änderungen verpflichtend
+

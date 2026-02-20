@@ -1,14 +1,17 @@
 # APP Hardening Standard: SSH Service
 
-**Dokument-ID:** 0320  
-**Dokumenttyp:** Standard  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0320
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -35,3 +38,4 @@ Sichere Konfiguration des SSH-Dienstes für Administrationszugriffe.
 
 ## 5. Ausnahmen
 - Verweis: `0040_Ausnahmen_Risk_Acceptance.md`
+

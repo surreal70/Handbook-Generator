@@ -1,18 +1,21 @@
 # Policy: Zugriffssteuerung und Identitätsmanagement
 
-
-
-**Dokument-ID:** 0220  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.15-A.5.18 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0220
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu IT-Ressourcen
 - **Zugriffsmethoden:** Lokaler Zugriff, Remote-Zugriff, privilegierter Zugriff, API-Zugriff
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -81,8 +84,8 @@ Alle Zugriffsvergaben müssen durch den Ressourcen-Owner genehmigt und dokumenti
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **IAM-Verantwortlicher:** {{ meta.it.iam_manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **IAM-Verantwortlicher:** {{ meta-handbook.it_iam_manager }}
 - **Ressourcen-Owner:** Fachbereichsleiter, Systemverantwortliche
 - **Umsetzungsverantwortliche:** IT-Betrieb, HR
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
@@ -159,10 +162,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ISO/IEC 27002:2022** - Information security controls
 - **NIST SP 800-63** - Digital Identity Guidelines
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

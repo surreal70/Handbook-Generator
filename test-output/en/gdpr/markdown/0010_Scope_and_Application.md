@@ -1,11 +1,17 @@
 # Scope and Application
 
-**Document-ID:** 0010  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document defines the scope and application of the General Data Protection Regulation (GDPR) for {{ meta.organization }}. It establishes which processing activities of personal data fall under GDPR and which exceptions apply.
+This document defines the scope and application of the General Data Protection Regulation (GDPR) for AdminSend GmbH. It establishes which processing activities of personal data fall under GDPR and which exceptions apply.
 
 ## Material Scope (Art. 2 GDPR)
 
@@ -154,11 +160,10 @@ The scope is reviewed:
 - **Legal Bases (Art. 6):** Lawfulness of processing
 - **Data Transfers (Art. 44-50):** Rules for third country transfers
 
----
-
 **Next Steps:**
 1. Identify all processing activities in your organization
 2. Check territorial scope (establishments, targeting principle)
 3. Document exceptions and special cases
 4. Create records of processing activities (Art. 30)
 5. Review regularly upon changes
+

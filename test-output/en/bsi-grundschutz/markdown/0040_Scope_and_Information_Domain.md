@@ -1,14 +1,17 @@
 # Scope and Information Domain (Boundaries)
 
-**Document ID:** 0040  
-**Document Type:** Foundation Document  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -28,7 +31,7 @@ This document defines the scope of the Information Security Management System (I
 
 | Location | Address | Type | Employees | In Scope |
 |---|---|---|---|---|
-| {{ meta.organization.primary_location }} | [TODO] | Main location | [TODO] | ✓ |
+| [TODO] | [TODO] | Main location | [TODO] | ✓ |
 | [TODO: Additional locations] | [TODO] | [TODO] | [TODO] | ✓/✗ |
 
 **Organizational Units in Scope:**
@@ -49,8 +52,8 @@ This document defines the scope of the Information Security Management System (I
 
 | Service | Description | Users | Service Owner | In Scope |
 |---|---|---|---|---|
-| [TODO: Service 1] | [TODO] | [TODO] | Anna Schmidt | ✓ |
-| [TODO: Service 2] | [TODO] | [TODO] | Anna Schmidt | ✓ |
+| [TODO: Service 1] | [TODO] | [TODO] | [TODO] | ✓ |
+| [TODO: Service 2] | [TODO] | [TODO] | [TODO] | ✓ |
 
 ### 2.3 IT Infrastructure
 
@@ -60,9 +63,9 @@ This document defines the scope of the Information Security Management System (I
 
 | Category | Systems | Quantity | In Scope |
 |---|---|---|---|
-| Servers | {{ netbox.device.servers }} | [TODO] | ✓ |
-| Network | {{ netbox.device.network }} | [TODO] | ✓ |
-| Storage | {{ netbox.device.storage }} | [TODO] | ✓ |
+| Servers | [[ netbox.device.servers ]] | [TODO] | ✓ |
+| Network | [[ netbox.device.network ]] | [TODO] | ✓ |
+| Storage | [[ netbox.device.storage ]] | [TODO] | ✓ |
 | Clients | Workstations, Laptops | [TODO] | ✓ |
 | Mobile Devices | Smartphones, Tablets | [TODO] | ✓ |
 
@@ -102,7 +105,7 @@ This document defines the scope of the Information Security Management System (I
 **The following elements are in scope of the ISMS:**
 
 1. **Infrastructure:**
-   - All servers and network components at location {{ meta.organization.primary_location }}
+   - All servers and network components at location [TODO]
    - [TODO: Additional infrastructure]
 
 2. **Applications:**
@@ -205,7 +208,7 @@ Scope changes require:
 4. **Implementation:** Update of all affected documents
 5. **Communication:** Information to all stakeholders
 
-**Responsible:** Thomas Weber (ISO)
+**Responsible:** [TODO] (ISO)
 
 ### 6.2 Scope Review
 
@@ -214,7 +217,7 @@ The scope is regularly reviewed:
 - **Triggers:** New business processes, IT systems, locations, regulatory requirements
 - **Responsible:** ISO
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]
 
 ## 7. Documentation and Evidence
 
@@ -230,14 +233,11 @@ The following documents and evidence are maintained for the scope:
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| Executive Management | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISO | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Executive Management | [TODO] | [TODO] | Draft |
+| ISO | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 4: Scope Definition)
 - BSI IT-Grundschutz Compendium
-
 

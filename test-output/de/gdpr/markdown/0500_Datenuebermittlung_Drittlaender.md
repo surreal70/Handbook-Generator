@@ -1,11 +1,17 @@
 # Datenübermittlung in Drittländer
 
-**Dokument-ID:** 0500  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0500
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument regelt die Übermittlung personenbezogener Daten in Drittländer (außerhalb EU/EWR) bei {{ meta.organization }} gemäß Art. 44-50 DSGVO. Es stellt sicher, dass auch bei internationalen Datentransfers ein angemessenes Schutzniveau gewährleistet ist.
+Dieses Dokument regelt die Übermittlung personenbezogener Daten in Drittländer (außerhalb EU/EWR) bei AdminSend GmbH gemäß Art. 44-50 DSGVO. Es stellt sicher, dass auch bei internationalen Datentransfers ein angemessenes Schutzniveau gewährleistet ist.
 
 ## Grundsatz (Art. 44)
 
@@ -310,11 +316,10 @@ Betroffene Personen müssen über Drittlandübermittlungen informiert werden:
 - **Auftragsverarbeitung (Art. 28):** SCCs bei Auftragsverarbeitern in Drittländern
 - **Informationspflichten (Art. 13-14):** Transparenz gegenüber Betroffenen
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Drittlandübermittlungen
 2. Prüfen Sie Angemessenheitsbeschlüsse
 3. Implementieren Sie geeignete Garantien (SCCs, BCRs)
 4. Führen Sie Transfer Impact Assessments durch
 5. Informieren Sie betroffene Personen transparent
+

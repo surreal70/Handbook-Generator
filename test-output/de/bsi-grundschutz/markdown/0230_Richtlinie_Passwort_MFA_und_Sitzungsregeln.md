@@ -1,14 +1,17 @@
 # Richtlinie: Passwort MFA und Sitzungsregeln
 
-**Dokument-ID:** 0230  
-**Dokumenttyp:** Richtlinie/Standard (konkret)  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0230
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 Diese Richtlinie konkretisiert die **Policy 0220: Policy: Authentisierung und MFA** und definiert spezifische Anforderungen für Passwort- und MFA-Anforderungen.
 
-**Verantwortlich:** Anna Schmidt (IT-Leitung)
+**Verantwortlich:** [TODO] (IT-Leitung)
 
 [TODO: Spezifische Zielsetzung ergänzen]
 
@@ -70,7 +73,7 @@ Diese Richtlinie konkretisiert die **Policy 0220: Policy: Authentisierung und MF
 - [TODO: Tool 1]
 - [TODO: Tool 2]
 
-**Verantwortlich:** Anna Schmidt
+**Verantwortlich:** [TODO]
 
 ## 6. Nachweise (Evidence)
 
@@ -84,7 +87,7 @@ Diese Richtlinie konkretisiert die **Policy 0220: Policy: Authentisierung und MF
 
 Ausnahmen von dieser Richtlinie sind nur über den **Ausnahmenprozess (Dokument 0520)** möglich.
 
-**Ausnahmeantrag an:** Thomas Weber (ISB)
+**Ausnahmeantrag an:** [TODO] (ISB)
 
 ## 8. Schulung und Awareness
 
@@ -92,26 +95,23 @@ Ausnahmen von dieser Richtlinie sind nur über den **Ausnahmenprozess (Dokument 
 
 **Zielgruppe:** [TODO]  
 **Frequenz:** [TODO]  
-**Verantwortlich:** Thomas Weber
+**Verantwortlich:** [TODO]
 
 ## 9. Review und Aktualisierung
 
 Diese Richtlinie wird regelmäßig überprüft:
 - **Frequenz:** Jährlich oder bei wesentlichen Änderungen
-- **Verantwortlich:** Anna Schmidt
-- **Nächster Review:** {{ meta.document.next_review }}
+- **Verantwortlich:** [TODO]
+- **Nächster Review:** [TODO]
 
 ## 10. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| IT-Leitung | [TODO] | [TODO] | Draft |
+| ISB | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium
 - Dokument 0220: Policy: Authentisierung und MFA
-
 

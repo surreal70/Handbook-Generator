@@ -1,14 +1,17 @@
 # Non-Conformities and Corrective Actions
 
-**Document ID:** 0630  
-**Document Type:** Process/Template  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0630
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 This process ensures that deviations from ISMS requirements are systematically captured, addressed, and their effectiveness verified.
 
-**Responsible:** Thomas Weber (CISO)
+**Responsible:** [TODO] (CISO)
 
 ## 2. Sources for Non-Conformities
 
@@ -133,7 +136,7 @@ This process ensures that deviations from ISMS requirements are systematically c
 - Top finding categories
 - Effectiveness of corrective actions
 
-**Responsible:** Thomas Weber  
+**Responsible:** [TODO]  
 **Recipients:** Executive Management, ISMS Team
 
 ## 7. Lessons Learned
@@ -148,13 +151,10 @@ After closing critical or recurring findings:
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| CISO | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| CISO | [TODO] | [TODO] | Draft |
+| IT Management | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-1: ISMS (Non-conformities and Corrective Actions)
 - Document 0610: Internal Audit Program
-
 

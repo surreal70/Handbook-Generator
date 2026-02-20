@@ -41,5 +41,3 @@ Language: en
 - [0710 - Appendix DPIA Quick Reference](0710_Appendix_DPIA_Quick_Reference.md)
 - [0720 - Appendix Data Processing Agreement DPA Template](0720_Appendix_Data_Processing_Agreement_DPA_Template.md)
 - [0730 - Appendix Terms and Abbreviations](0730_Appendix_Terms_and_Abbreviations.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

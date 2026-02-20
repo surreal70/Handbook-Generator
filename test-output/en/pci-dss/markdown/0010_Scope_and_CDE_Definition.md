@@ -1,13 +1,17 @@
 # Scope and CDE Definition
 
-**Document ID:** PCI-0010  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -35,16 +39,16 @@ This document defines the scope of PCI-DSS compliance for AdminSend GmbH and des
 ### 2.1 Organization Information
 
 **Organization:** AdminSend GmbH  
-**Address:** Musterstraße 123, 80331 München  
-**Country:** Deutschland  
-**Website:** https://www.adminsend.de  
+**Address:** Musterstraße 123, [TODO] [TODO]  
+**Country:** [TODO]  
+**Website:** [TODO]  
 
 ### 2.2 PCI-DSS Classification
 
 **Merchant Level:** [TODO: Level 1/2/3/4]  
 **Service Provider Level:** [TODO: Level 1/2 or N/A]  
-**Merchant ID:** {{ meta.pci.merchant_id }}  
-**Service Provider ID:** {{ meta.pci.service_provider_id }}  
+**Merchant ID:** {{ meta-handbook.merchant_id }}  
+**Service Provider ID:** {{ meta-handbook.service_provider_id }}  
 
 **Transaction Volume (annual):**
 - Visa: [TODO: Number of transactions]
@@ -262,7 +266,7 @@ The following systems are NOT part of the CDE:
 ### 11.1 Responsible Persons
 
 **PCI-DSS Program Manager:** [TODO: Name] ([TODO: Email])  
-**CISO:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})  
+**CISO:** [TODO] ([TODO])  
 **IT Manager:** [TODO: Name] ([TODO: Email])  
 **QSA (Qualified Security Assessor):** [TODO: Company/Name]  
 **ASV (Approved Scanning Vendor):** [TODO: Company]  
@@ -277,13 +281,5 @@ The following systems are NOT part of the CDE:
 | Annual assessment | C | A | I | R |
 
 **Legend:** R = Responsible, A = Accountable, C = Consulted, I = Informed
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

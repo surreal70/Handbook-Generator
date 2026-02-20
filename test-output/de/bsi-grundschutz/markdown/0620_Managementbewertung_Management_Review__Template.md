@@ -1,14 +1,17 @@
 # Managementbewertung (Management Review) – Template
 
-**Dokument-ID:** 0620  
-**Dokumenttyp:** Nachweis/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0620
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -21,9 +24,9 @@
 **Dauer:** [TODO]
 
 **Teilnehmer:**
-- Geschäftsführung: Max Mustermann
-- ISB: Thomas Weber
-- IT-Leitung: Anna Schmidt
+- Geschäftsführung: [TODO]
+- ISB: [TODO]
+- IT-Leitung: [TODO]
 - [TODO: Weitere Teilnehmer]
 
 **Informationsverbund(e):** [TODO: Siehe Dokument 0040]
@@ -94,7 +97,7 @@
 **Begründung:** [TODO]  
 **Neue Sicherheitsziele:** [TODO]
 
-**Verantwortlich:** Max Mustermann
+**Verantwortlich:** [TODO]
 
 ### 3.2 Ressourcen und Investitionen
 
@@ -102,7 +105,7 @@
 **Personalressourcen:** [TODO: Zusätzliche Stellen?]  
 **Externe Unterstützung:** [TODO]
 
-**Verantwortlich:** Max Mustermann
+**Verantwortlich:** [TODO]
 
 ### 3.3 Risikoakzeptanzen
 
@@ -110,7 +113,7 @@
 **Begründung:** [TODO]  
 **Gültigkeitsdauer:** [TODO]
 
-**Verantwortlich:** Max Mustermann
+**Verantwortlich:** [TODO]
 
 ### 3.4 Verbesserungsmaßnahmen
 
@@ -135,13 +138,10 @@
 
 | Rolle | Name | Datum | Unterschrift |
 |---|---|---|---|
-| Geschäftsführung | Max Mustermann | [TODO] | [TODO] |
-| ISB | Thomas Weber | [TODO] | [TODO] |
-
----
+| Geschäftsführung | [TODO] | [TODO] | [TODO] |
+| ISB | [TODO] | [TODO] | [TODO] |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS (Management Review)
 - Alle ISMS-Dokumente (0010-0630)
-
 

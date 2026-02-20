@@ -1,15 +1,30 @@
 # Rollen und Verantwortlichkeiten
 
+**Dokument-ID:** [FRAMEWORK]-0060
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Organisationsstruktur
 
 ### Unternehmensinformationen
 
 - **Organisation:** AdminSend GmbH
-- **Adresse:** Musterstraße 123, 80331 München
-- **Land:** Deutschland
-- **Website:** https://www.adminsend.de
+- **Adresse:** Musterstraße 123, {{ meta-organisation.postal_code }} {{ meta-organisation.city }}
+- **Land:** {{ meta-organisation.country }}
+- **Website:** {{ meta-organisation.website }}
 - **Telefon:** +49 89 12345678
-- **E-Mail:** info@adminsend.de
+- **E-Mail:** {{ meta-organisation.email }}
 
 ### Organisationsübersicht
 
@@ -19,11 +34,9 @@
 
 ### Chief Executive Officer (CEO)
 
-- **Name:** Max Mustermann
-- **Titel:** Chief Executive Officer
-- **E-Mail:** max.mustermann@adminsend.de
-- **Telefon:** +49 89 12345678-100
-- **Abteilung:** Management
+- **Name:** [TODO]
+- **E-Mail:** {{ meta-organisation-roles.role_CEO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CEO_phone }}
 
 **Verantwortlichkeiten:**
 - Gesamtverantwortung für das Unternehmen
@@ -33,11 +46,9 @@
 
 ### Chief Information Officer (CIO)
 
-- **Name:** Anna Schmidt
-- **Titel:** Chief Information Officer
-- **E-Mail:** anna.schmidt@adminsend.de
-- **Telefon:** +49 89 12345678-200
-- **Abteilung:** IT
+- **Name:** [TODO]
+- **E-Mail:** {{ meta-organisation-roles.role_CIO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CIO_phone }}
 
 **Verantwortlichkeiten:**
 - Gesamtverantwortung für IT-Strategie und -Betrieb
@@ -48,11 +59,9 @@
 
 ### Chief Information Security Officer (CISO)
 
-- **Name:** Thomas Weber
-- **Titel:** Chief Information Security Officer
-- **E-Mail:** thomas.weber@adminsend.de
-- **Telefon:** +49 89 12345678-300
-- **Abteilung:** IT Security
+- **Name:** [TODO]
+- **E-Mail:** {{ meta-organisation-roles.role_CISO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CISO_phone }}
 
 **Verantwortlichkeiten:**
 - IT-Sicherheitsstrategie und -Richtlinien
@@ -64,11 +73,9 @@
 
 ### Chief Financial Officer (CFO)
 
-- **Name:** Maria Müller
-- **Titel:** Chief Financial Officer
-- **E-Mail:** maria.mueller@adminsend.de
-- **Telefon:** +49 89 12345678-400
-- **Abteilung:** Finance
+- **Name:** [TODO]
+- **E-Mail:** {{ meta-organisation-roles.role_CFO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CFO_phone }}
 
 **Verantwortlichkeiten:**
 - Finanzielle Genehmigung von IT-Projekten
@@ -78,11 +85,9 @@
 
 ### Chief Operating Officer (COO)
 
-- **Name:** Peter Fischer
-- **Titel:** Chief Operating Officer
-- **E-Mail:** peter.fischer@adminsend.de
-- **Telefon:** +49 89 12345678-500
-- **Abteilung:** Operations
+- **Name:** {{ meta-organisation-roles.role_COO }}
+- **E-Mail:** {{ meta-organisation-roles.role_COO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_COO_phone }}
 
 **Verantwortlichkeiten:**
 - Operative Geschäftsprozesse
@@ -94,11 +99,9 @@
 
 ### IT Operations Manager
 
-- **Name:** Andreas Huemmer
-- **Titel:** IT Operations Manager
-- **E-Mail:** andreas.huemmer@adminsend.de
-- **Telefon:** +49 89 12345678-250
-- **Abteilung:** IT Operations
+- **Name:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
+- **E-Mail:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Telefon:** {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}
 
 **Verantwortlichkeiten:**
 - Täglicher IT-Betrieb und Service Delivery
@@ -113,11 +116,9 @@
 
 ### Service Desk Lead
 
-- **Name:** Julia Becker
-- **Titel:** Service Desk Lead
-- **E-Mail:** julia.becker@adminsend.de
-- **Telefon:** +49 89 12345678-111
-- **Abteilung:** Service Desk
+- **Name:** {{ meta-organisation-roles.role_Service_Desk_Lead }}
+- **E-Mail:** {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Telefon:** {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
 
 **Verantwortlichkeiten:**
 - First-Level-Support und Incident Management
@@ -298,18 +299,18 @@ Die RACI-Matrix definiert Verantwortlichkeiten für IT-Betriebsaktivitäten:
 
 | Rolle | Name | E-Mail | Telefon | Mobil | Verfügbarkeit |
 |---|---|---|---|---|---|
-| **CEO** | Max Mustermann | max.mustermann@adminsend.de | +49 89 12345678-100 | [TODO] | Mo-Fr 09:00-17:00 |
-| **CIO** | Anna Schmidt | anna.schmidt@adminsend.de | +49 89 12345678-200 | [TODO] | Mo-Fr 08:00-18:00 |
-| **CISO** | Thomas Weber | thomas.weber@adminsend.de | +49 89 12345678-300 | [TODO] | Mo-Fr 08:00-18:00 |
-| **CFO** | Maria Müller | maria.mueller@adminsend.de | +49 89 12345678-400 | [TODO] | Mo-Fr 09:00-17:00 |
-| **COO** | Peter Fischer | peter.fischer@adminsend.de | +49 89 12345678-500 | [TODO] | Mo-Fr 08:00-18:00 |
+| **CEO** | [TODO] | {{ meta-organisation-roles.role_CEO_email }} | {{ meta-organisation-roles.role_CEO_phone }} | [TODO] | Mo-Fr 09:00-17:00 |
+| **CIO** | [TODO] | {{ meta-organisation-roles.role_CIO_email }} | {{ meta-organisation-roles.role_CIO_phone }} | [TODO] | Mo-Fr 08:00-18:00 |
+| **CISO** | [TODO] | {{ meta-organisation-roles.role_CISO_email }} | {{ meta-organisation-roles.role_CISO_phone }} | [TODO] | Mo-Fr 08:00-18:00 |
+| **CFO** | [TODO] | {{ meta-organisation-roles.role_CFO_email }} | {{ meta-organisation-roles.role_CFO_phone }} | [TODO] | Mo-Fr 09:00-17:00 |
+| **COO** | {{ meta-organisation-roles.role_COO }} | {{ meta-organisation-roles.role_COO_email }} | {{ meta-organisation-roles.role_COO_phone }} | [TODO] | Mo-Fr 08:00-18:00 |
 
 ### IT-Operations - Kontakte
 
 | Rolle | Name | E-Mail | Telefon | Mobil | Verfügbarkeit |
 |---|---|---|---|---|---|
-| **IT Ops Manager** | Andreas Huemmer | andreas.huemmer@adminsend.de | +49 89 12345678-250 | [TODO] | Mo-Fr 07:00-19:00 |
-| **Service Desk Lead** | Julia Becker | julia.becker@adminsend.de | +49 89 12345678-111 | [TODO] | Mo-Fr 08:00-17:00 |
+| **IT Ops Manager** | {{ meta-organisation-roles.role_IT_Operations_Manager }} | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} | {{ meta-organisation-roles.role_IT_Operations_Manager_phone }} | [TODO] | Mo-Fr 07:00-19:00 |
+| **Service Desk Lead** | {{ meta-organisation-roles.role_Service_Desk_Lead }} | {{ meta-organisation-roles.role_Service_Desk_Lead_email }} | {{ meta-organisation-roles.role_Service_Desk_Lead_phone }} | [TODO] | Mo-Fr 08:00-17:00 |
 | **System Admin** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | **Network Admin** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | **DBA** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
@@ -342,10 +343,10 @@ Die RACI-Matrix definiert Verantwortlichkeiten für IT-Betriebsaktivitäten:
 
 | Woche | Primär | Sekundär | Eskalation |
 |---|---|---|---|
-| **KW [TODO]** | [TODO: Name] | [TODO: Name] | Andreas Huemmer |
-| **KW [TODO]** | [TODO: Name] | [TODO: Name] | Andreas Huemmer |
-| **KW [TODO]** | [TODO: Name] | [TODO: Name] | Andreas Huemmer |
-| **KW [TODO]** | [TODO: Name] | [TODO: Name] | Andreas Huemmer |
+| **KW [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **KW [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **KW [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **KW [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 **Rotationsplan:** [TODO: Link zum aktuellen Rufbereitschaftsplan]
 
@@ -362,8 +363,8 @@ Die RACI-Matrix definiert Verantwortlichkeiten für IT-Betriebsaktivitäten:
 - **Erreichbarkeit:** [TODO: Reaktionszeit]
 
 **Eskalation:**
-- **IT Operations Manager:** Andreas Huemmer (+49 89 12345678-250)
-- **CIO:** Anna Schmidt (+49 89 12345678-200)
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_phone }})
+- **CIO:** [TODO] ({{ meta-organisation-roles.role_CIO_phone }})
 
 ### Rufbereitschafts-Prozess
 
@@ -471,18 +472,18 @@ Externe Dienstleister + Hersteller
 
 | Rolle | Primär | Vertretung 1 | Vertretung 2 |
 |---|---|---|---|
-| **CEO** | Max Mustermann | [TODO: Name] | [TODO: Name] |
-| **CIO** | Anna Schmidt | Andreas Huemmer | [TODO: Name] |
-| **CISO** | Thomas Weber | [TODO: Name] | Anna Schmidt |
-| **CFO** | Maria Müller | [TODO: Name] | [TODO: Name] |
-| **COO** | Peter Fischer | [TODO: Name] | [TODO: Name] |
+| **CEO** | [TODO] | [TODO: Name] | [TODO: Name] |
+| **CIO** | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | [TODO: Name] |
+| **CISO** | [TODO] | [TODO: Name] | [TODO] |
+| **CFO** | [TODO] | [TODO: Name] | [TODO: Name] |
+| **COO** | {{ meta-organisation-roles.role_COO }} | [TODO: Name] | [TODO: Name] |
 
 ### IT-Operations - Vertretungen
 
 | Rolle | Primär | Vertretung 1 | Vertretung 2 |
 |---|---|---|---|
-| **IT Ops Manager** | Andreas Huemmer | [TODO: Name] | Anna Schmidt |
-| **Service Desk Lead** | Julia Becker | [TODO: Name] | Andreas Huemmer |
+| **IT Ops Manager** | {{ meta-organisation-roles.role_IT_Operations_Manager }} | [TODO: Name] | [TODO] |
+| **Service Desk Lead** | {{ meta-organisation-roles.role_Service_Desk_Lead }} | [TODO: Name] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | **System Admin** | [TODO: Name] | [TODO: Name] | [TODO: Name] |
 | **Network Admin** | [TODO: Name] | [TODO: Name] | [TODO: Name] |
 | **DBA** | [TODO: Name] | [TODO: Name] | [TODO: Name] |
@@ -532,12 +533,11 @@ Externe Dienstleister + Hersteller
 
 | Version | Datum | Autor | Änderungen | Genehmigt durch |
 |---|---|---|---|---|
-| 1.0.0 | [TODO] | IT Operations Manager | Initiale Version | CIO |
+| 1.0.0 | [TODO] | [TODO] | Initiale Version | [TODO] |
 
----
-
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Klassifizierung:** internal  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
+**Klassifizierung:** Internal  
 **Organisation:** AdminSend GmbH
+

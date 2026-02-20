@@ -1,18 +1,21 @@
 # Informationssicherheitsziele und Metriken
 
-
-
-**Dokument-ID:** 0110  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 6.2  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Informationssicherheitsziele
 
@@ -22,11 +25,11 @@ Die **AdminSend GmbH** definiert folgende strategische Informationssicherheitszi
 
 | Ziel-ID | Ziel | Beschreibung | KPI/Metrik | Zielwert | Messmethode | Owner | Frequenz | Status |
 |---------|------|--------------|------------|----------|-------------|-------|----------|--------|
-| **Z-001** | Compliance sicherstellen | Einhaltung aller gesetzlichen und vertraglichen Anforderungen | Anzahl Compliance-Verstöße | 0 | Audit-Berichte, Incident Reports | Thomas Weber | Quartalsweise | Aktiv |
-| **Z-002** | Risiken minimieren | Reduzierung hoher und sehr hoher Risiken | Anzahl Risiken mit Score ≥ 13 | < 5 | Risikoregister | Thomas Weber | Quartalsweise | Aktiv |
-| **Z-003** | Verfügbarkeit gewährleisten | Sicherstellung der Verfügbarkeit kritischer Systeme | Uptime kritischer Systeme | ≥ 99,5% | Monitoring-System | Anna Schmidt | Monatlich | Aktiv |
-| **Z-004** | Incidents reduzieren | Reduzierung der Anzahl Sicherheitsvorfälle | Anzahl Security Incidents | < 10 pro Quartal | Incident Management System | Thomas Weber | Quartalsweise | Aktiv |
-| **Z-005** | Awareness erhöhen | Steigerung des Sicherheitsbewusstseins | Schulungsteilnahme-Quote | 100% | LMS, Schulungsnachweise | Thomas Weber | Jährlich | Aktiv |
+| **Z-001** | Compliance sicherstellen | Einhaltung aller gesetzlichen und vertraglichen Anforderungen | Anzahl Compliance-Verstöße | 0 | Audit-Berichte, Incident Reports | [TODO] | Quartalsweise | Aktiv |
+| **Z-002** | Risiken minimieren | Reduzierung hoher und sehr hoher Risiken | Anzahl Risiken mit Score ≥ 13 | < 5 | Risikoregister | [TODO] | Quartalsweise | Aktiv |
+| **Z-003** | Verfügbarkeit gewährleisten | Sicherstellung der Verfügbarkeit kritischer Systeme | Uptime kritischer Systeme | ≥ 99,5% | Monitoring-System | [TODO] | Monatlich | Aktiv |
+| **Z-004** | Incidents reduzieren | Reduzierung der Anzahl Sicherheitsvorfälle | Anzahl Security Incidents | < 10 pro Quartal | Incident Management System | [TODO] | Quartalsweise | Aktiv |
+| **Z-005** | Awareness erhöhen | Steigerung des Sicherheitsbewusstseins | Schulungsteilnahme-Quote | 100% | LMS, Schulungsnachweise | [TODO] | Jährlich | Aktiv |
 | **Z-006** | Patch-Compliance | Zeitnahe Installation kritischer Patches | Durchschnittliche Zeit zur Patch-Installation (kritisch) | < 7 Tage | Vulnerability Management System | IT-Betrieb | Monatlich | Aktiv |
 
 [TODO: Weitere organisationsspezifische Ziele hinzufügen]
@@ -38,7 +41,7 @@ Die **AdminSend GmbH** definiert folgende strategische Informationssicherheitszi
 | **Z-010** | MFA-Rollout abschließen | MFA-Aktivierungsrate | 100% | IT-Betrieb | Monatlich |
 | **Z-011** | Vulnerability Management | Durchschnittliche Zeit zur Behebung hoher Schwachstellen | < 30 Tage | IT-Betrieb | Monatlich |
 | **Z-012** | Backup-Tests | Erfolgsrate Restore-Tests | 100% | IT-Betrieb | Quartalsweise |
-| **Z-013** | Phishing-Resilienz | Phishing-Klickrate bei Simulationen | < 5% | Thomas Weber | Quartalsweise |
+| **Z-013** | Phishing-Resilienz | Phishing-Klickrate bei Simulationen | < 5% | [TODO] | Quartalsweise |
 
 ## 2. Key Performance Indicators (KPIs)
 
@@ -174,11 +177,10 @@ Jedes Ziel ist mit Maßnahmen im Risikobehandlungsplan verknüpft:
 - **ISO/IEC 27001:2022** - Clause 6.2: Information security objectives
 - **ISO/IEC 27001:2022** - Clause 9.1: Monitoring, measurement, analysis and evaluation
 
----
-
 **Genehmigt durch:**  
-Thomas Weber, CISO  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+[TODO], CISO  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
+

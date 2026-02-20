@@ -1,11 +1,17 @@
 # Zweckbindung
 
-**Dokument-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Zweckbindung in der {{ meta.organization }}. Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben und verarbeitet werden.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Zweckbindung in der AdminSend GmbH. Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben und verarbeitet werden.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. b DSGVO
 
@@ -197,8 +203,6 @@ Personenbezogene Daten müssen für festgelegte, eindeutige und legitime Zwecke 
 | Zweckentfremdung | Kundendaten für Werbung ohne Einwilligung | Vereinbarkeitsprüfung durchführen |
 | Fehlende Dokumentation | Zweck nicht im Verzeichnis | Verzeichnis Art. 30 pflegen |
 | Nachträgliche Zweckänderung | Zweck nach Erhebung geändert | Zweck vor Erhebung festlegen |
-
----
 
 **Nächste Schritte:**
 1. Definieren Sie klare Zwecke für alle Verarbeitungstätigkeiten

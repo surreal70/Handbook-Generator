@@ -1,13 +1,17 @@
 # Compliance-Programm
 
-**Dokument-ID:** PCI-0050  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** PCI-0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -29,7 +33,7 @@ Dieses Dokument beschreibt das PCI-DSS-Compliance-Programm der AdminSend GmbH.
 ### 2.1 Governance-Struktur
 
 **PCI-DSS Steering Committee:**
-- **Vorsitz:** {{ meta.roles.ciso.name }}
+- **Vorsitz:** [TODO]
 - **Mitglieder:** CEO, CIO, PCI Program Manager, Legal, Operations Manager
 - **Frequenz:** Quartalsweise
 - **Zweck:** Strategische Entscheidungen, Budget, Risikobewertung
@@ -43,7 +47,7 @@ Dieses Dokument beschreibt das PCI-DSS-Compliance-Programm der AdminSend GmbH.
 ### 2.2 Management-Commitment
 
 **Informationssicherheitsrichtlinie:**
-- Genehmigt durch: {{ meta.roles.ceo.name }}
+- Genehmigt durch: [TODO]
 - Datum: [TODO: Datum]
 - Jährliche Überprüfung: [TODO: Monat]
 
@@ -86,7 +90,6 @@ AdminSend GmbH verpflichtet sich zur Einhaltung aller PCI-DSS-Anforderungen zum 
 | Log-Überprüfung | IT Security | Täglich |
 | Incident Monitoring | SOC | 24/7 |
 | Backup-Überprüfung | System Admin | Täglich |
-
 
 ## 4. Compliance-Metriken und KPIs
 
@@ -264,13 +267,5 @@ AdminSend GmbH verpflichtet sich zur Einhaltung aller PCI-DSS-Anforderungen zum 
 |----------|-----------|----------------|-----------|--------|
 | [TODO: Tokenisierung] | Hoch | IT Security | [TODO] | In Arbeit |
 | [TODO: SIEM-Upgrade] | Mittel | IT Security | [TODO] | Geplant |
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

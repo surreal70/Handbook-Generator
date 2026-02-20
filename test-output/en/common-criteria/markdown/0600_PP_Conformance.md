@@ -1,11 +1,17 @@
 # Protection Profile Conformance
 
-**Document-ID:** 0600  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0600
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -206,8 +212,6 @@ This chapter documents the conformance of the Security Target (ST) with relevant
 2. [TODO: PP Reference 2]
 3. [TODO: Other relevant documents]
 
----
-
 **Next Steps:**
 1. Identify all relevant Protection Profiles
 2. Document the conformance claim
@@ -215,3 +219,4 @@ This chapter documents the conformance of the Security Target (ST) with relevant
 4. Document all deviations and additional requirements
 5. Create mapping tables between PP and ST
 6. Have PP conformance reviewed by evaluators
+

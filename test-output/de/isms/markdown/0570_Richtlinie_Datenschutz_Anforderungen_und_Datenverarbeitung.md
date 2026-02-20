@@ -1,14 +1,17 @@
 # Richtlinie: Datenschutz-Anforderungen und Datenverarbeitung
 
-**Dokument-ID:** 0570  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0560_Policy_Datenschutz_Schnittstellen.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.34  
-**Owner:** {{ meta.dpo.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0570
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -98,7 +101,7 @@ Diese Richtlinie konkretisiert die `0560_Policy_Datenschutz_Schnittstellen.md` u
 - Fachbereiche liefern Informationen
 - Jährliche Aktualisierung (mindestens)
 
-**Tool:** {{ meta.dpo.vvt_tool }}
+**Tool:** {{ meta-handbook.dpo_vvt_tool }}
 
 ## 4. Datenschutz-Folgenabschätzung (DSFA)
 
@@ -132,7 +135,7 @@ Diese Richtlinie konkretisiert die `0560_Policy_Datenschutz_Schnittstellen.md` u
 ### 5.1 Auskunftsrecht (Art. 15 DSGVO)
 
 **Prozess:**
-1. Antrag per E-Mail an {{ meta.dpo.email }}
+1. Antrag per E-Mail an {{ meta-handbook.dpo_email }}
 2. Identitätsprüfung
 3. Zusammenstellung der Informationen
 4. Antwort innerhalb 1 Monat
@@ -302,7 +305,6 @@ Diese Richtlinie konkretisiert die `0560_Policy_Datenschutz_Schnittstellen.md` u
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 - **BDSG** - Bundesdatenschutzgesetz
 
----
+**Genehmigt durch:** {{ meta-handbook.dpo_name }}, Datenschutzbeauftragter  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** {{ meta.dpo.name }}, Datenschutzbeauftragter  
-**Nächster Review:** {{ meta.document.next_review }}

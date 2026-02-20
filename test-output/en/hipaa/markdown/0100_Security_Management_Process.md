@@ -1,13 +1,17 @@
 # Security Management Process
 
-**Document ID:** HIPAA-0100  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -67,7 +71,7 @@ This document describes the Security Management Process for AdminSend GmbH, incl
 
 **Frequency:** Annual (minimum) or when significant changes occur
 
-**Responsible:** {{ meta.roles.security_officer.name }} (Security Officer)
+**Responsible:** [TODO] (Security Officer)
 
 ### 2.2 Risk Analysis Methodology
 
@@ -305,13 +309,5 @@ After implementing controls, reassess risk levels to determine residual risk.
 **Retention Period:** [TODO: 6 years from creation or last effective date]
 
 **Storage Location:** [TODO: Document management system location]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

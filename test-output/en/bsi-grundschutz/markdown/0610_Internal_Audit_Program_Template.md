@@ -1,14 +1,17 @@
 # Internal Audit Program (Template)
 
-**Document ID:** 0610  
-**Document Type:** Program/Template  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0610
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -32,10 +35,10 @@ The internal audit program of **AdminSend GmbH** ensures the effectiveness of th
 
 | Period | Audit Topic | Criteria | Auditor | Auditee | Status | Result | Actions |
 |---|---|---|---|---|---|---|---|
-| Q1 {{ meta.document.year }} | Basic Security Check Sample | Policies, Guidelines, Evidence | [TODO] | Anna Schmidt | Planned | - | - |
-| Q2 {{ meta.document.year }} | Risk Management Process | Document 0090, Risk Register | [TODO] | Thomas Weber | Planned | - | - |
-| Q3 {{ meta.document.year }} | Incident Management | Document 0320/0330, Incident Logs | [TODO] | Anna Schmidt | Planned | - | - |
-| Q4 {{ meta.document.year }} | Document Control | Document 0030, Document Register | [TODO] | Thomas Weber | Planned | - | - |
+| Q1 [TODO] | Basic Security Check Sample | Policies, Guidelines, Evidence | [TODO] | [TODO] | Planned | - | - |
+| Q2 [TODO] | Risk Management Process | Document 0090, Risk Register | [TODO] | [TODO] | Planned | - | - |
+| Q3 [TODO] | Incident Management | Document 0320/0330, Incident Logs | [TODO] | [TODO] | Planned | - | - |
+| Q4 [TODO] | Document Control | Document 0030, Document Register | [TODO] | [TODO] | Planned | - | - |
 
 ## 4. Audit Checkpoints
 
@@ -78,13 +81,10 @@ The internal audit program of **AdminSend GmbH** ensures the effectiveness of th
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| Internal Audit | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| CISO | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Internal Audit | [TODO] | [TODO] | Draft |
+| CISO | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: DER.3.1 Audits and Reviews
-
 

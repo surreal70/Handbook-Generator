@@ -1,11 +1,17 @@
 # Nachweise und Dokumentation
 
-**Dokument-ID:** 0650  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0650
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -419,8 +425,6 @@ Dieses Kapitel dokumentiert alle Nachweise und Dokumentationen, die für die Com
 **E-Mail:** [TODO: E-Mail]  
 **Telefon:** [TODO: Telefon]
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle erforderlichen Nachweise basierend auf dem gewählten EAL
 2. Erstellen Sie einen Zeitplan für die Nachweiserstellung
@@ -430,3 +434,4 @@ Dieses Kapitel dokumentiert alle Nachweise und Dokumentationen, die für die Com
 6. Stellen Sie Nachweise dem Evaluierungslabor bereit
 7. Archivieren Sie alle Nachweise gemäß den Anforderungen
 8. Aktualisieren Sie die Nachweisdokumentation bei Änderungen
+

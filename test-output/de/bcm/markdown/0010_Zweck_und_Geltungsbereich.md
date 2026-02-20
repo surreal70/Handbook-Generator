@@ -1,13 +1,17 @@
 # Zweck und Geltungsbereich
 
-**Dokument-ID:** BCM-0010  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -65,7 +69,7 @@ Das BCMS umfasst folgende Standorte:
 [TODO: Listen Sie alle Standorte auf, die im Geltungsbereich liegen]
 
 **Beispiel:**
-- Hauptsitz: Musterstraße 123, 80331 München
+- Hauptsitz: Musterstraße 123, [TODO] [TODO]
 - Produktionsstandort: [Adresse]
 - Rechenzentrum: [Adresse]
 - Ausweichstandort: [Adresse]
@@ -104,8 +108,8 @@ Folgende Bereiche sind explizit vom Geltungsbereich ausgeschlossen:
 [TODO: Dokumentieren Sie Ausnahmen mit Begründung und genehmigender Instanz]
 
 **Beispiel:**
-- **Tochtergesellschaft XY:** Betreibt eigenes BCMS (Genehmigt durch: {{ meta.roles.ceo.name }})
-- **Entwicklungsumgebungen:** Nicht geschäftskritisch (Genehmigt durch: {{ meta.roles.cio.name }})
+- **Tochtergesellschaft XY:** Betreibt eigenes BCMS (Genehmigt durch: [TODO])
+- **Entwicklungsumgebungen:** Nicht geschäftskritisch (Genehmigt durch: [TODO])
 
 ## 3. Annahmen und Einschränkungen
 
@@ -139,7 +143,7 @@ Folgende Abhängigkeiten liegen außerhalb der direkten Kontrolle der Organisati
 
 ### 4.1 Informationssicherheits-Managementsystem (ISMS)
 
-**Verantwortlich:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+**Verantwortlich:** [TODO] ([TODO])
 
 Schnittstellen:
 - Incident Management und Security Incident Response
@@ -151,7 +155,7 @@ Schnittstellen:
 
 ### 4.2 IT-Service-Management (ITSM)
 
-**Verantwortlich:** {{ meta.roles.it_operations_manager.name }} ({{ meta.roles.it_operations_manager.email }})
+**Verantwortlich:** [TODO] ([TODO])
 
 Schnittstellen:
 - Incident Management (Major Incidents → BCM-Aktivierung)
@@ -196,13 +200,5 @@ Schnittstellen:
 - Reputationsschutz
 
 [TODO: Beschreiben Sie die konkreten Schnittstellen zur Krisenkommunikation]
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

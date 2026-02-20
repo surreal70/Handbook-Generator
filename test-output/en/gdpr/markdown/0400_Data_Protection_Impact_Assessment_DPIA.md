@@ -1,11 +1,17 @@
 # Data Protection Impact Assessment (DPIA)
 
-**Document-ID:** 0400  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0400
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the Data Protection Impact Assessment (DPIA) process at {{ meta.organization }} according to Art. 35 GDPR. A DPIA is required when processing is likely to result in a high risk to the rights and freedoms of natural persons.
+This document describes the Data Protection Impact Assessment (DPIA) process at AdminSend GmbH according to Art. 35 GDPR. A DPIA is required when processing is likely to result in a high risk to the rights and freedoms of natural persons.
 
 ## Requirement for DPIA (Art. 35(1))
 
@@ -292,11 +298,10 @@ The DPIA is reviewed when:
 - **Records of Processing Activities (Art. 30):** Documentation
 - **Data Protection Officer (Art. 39):** Advisory role
 
----
-
 **Next Steps:**
 1. Identify all processing requiring DPIA
 2. Conduct systematic DPIAs
 3. Document risks and measures
 4. Consult Data Protection Officer
 5. Review DPIAs regularly
+

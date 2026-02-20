@@ -1,14 +1,17 @@
 # Structure Analysis (Template)
 
-**Document ID:** 0050  
-**Document Type:** Methodology Artifact  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standard 200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -22,7 +25,7 @@ The structure analysis systematically captures the structure of the information 
 - Basic security check (Document 0080)
 - Risk analysis (Document 0090)
 
-**Responsible:** Thomas Weber (ISO)
+**Responsible:** [TODO] (ISO)
 
 ## 2. Approach and Methodology
 
@@ -32,11 +35,11 @@ The following data sources are used for the structure analysis:
 
 | Data Source | Type | Responsible | Currency |
 |---|---|---|---|
-| CMDB/Asset Inventory | System | Anna Schmidt | [TODO] |
-| Network Documentation | Document | Anna Schmidt | [TODO] |
-| Architecture Diagrams | Document | Anna Schmidt | [TODO] |
+| CMDB/Asset Inventory | System | [TODO] | [TODO] |
+| Network Documentation | Document | [TODO] | [TODO] |
+| Architecture Diagrams | Document | [TODO] | [TODO] |
 | Service Provider Contracts | Document | [TODO] | [TODO] |
-| Stakeholder Interviews | Primary Source | Thomas Weber | [TODO] |
+| Stakeholder Interviews | Primary Source | [TODO] | [TODO] |
 
 ### 2.2 Granularity
 
@@ -57,8 +60,8 @@ The structure analysis is performed at the following granularity levels:
 - **Completion:** [TODO]
 
 **Participants:**
-- ISO: Thomas Weber
-- IT Management: Anna Schmidt
+- ISO: [TODO]
+- IT Management: [TODO]
 - Information Domain Managers: [TODO]
 - Departments: [TODO]
 
@@ -99,10 +102,10 @@ The structure analysis is performed at the following granularity levels:
 
 | ID | System/Component | Type | Owner | Location/Region | Operation | IP Address | Notes |
 |---|---|---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | Server | Anna Schmidt | {{ meta.organization.primary_location }} | Internal | {{ netbox.ip.server_001 }} | [TODO] |
-| S-002 | [TODO: System 2] | Database | Anna Schmidt | [TODO] | Internal/External | [TODO] | [TODO] |
-| S-003 | [TODO: System 3] | Storage | Anna Schmidt | [TODO] | Internal/External | [TODO] | [TODO] |
-| S-004 | [TODO: System 4] | Firewall | Anna Schmidt | [TODO] | Internal | [TODO] | [TODO] |
+| S-001 | [[ netbox.device.server_001 ]] | Server | [TODO] | [TODO] | Internal | [[ netbox.ip.server_001 ]] | [TODO] |
+| S-002 | [TODO: System 2] | Database | [TODO] | [TODO] | Internal/External | [TODO] | [TODO] |
+| S-003 | [TODO: System 3] | Storage | [TODO] | [TODO] | Internal/External | [TODO] | [TODO] |
+| S-004 | [TODO: System 4] | Firewall | [TODO] | [TODO] | Internal | [TODO] | [TODO] |
 
 **Total Number of IT Systems:** [TODO]
 
@@ -120,10 +123,10 @@ The structure analysis is performed at the following granularity levels:
 
 | ID | Network/Zone | Purpose | Segmentation | Internet Access | VLAN ID | Operator | Security Zone |
 |---|---|---|---|---|---|---|---|
-| N-001 | Management Network | Administration | Yes | No | {{ netbox.vlan.management }} | Anna Schmidt | High Security |
-| N-002 | Production Network | Business Applications | Yes | Yes (filtered) | [TODO] | Anna Schmidt | Secure |
-| N-003 | DMZ | External Services | Yes | Yes | [TODO] | Anna Schmidt | Medium |
-| N-004 | Guest WLAN | Guests | Yes | Yes (isolated) | [TODO] | Anna Schmidt | Low |
+| N-001 | Management Network | Administration | Yes | No | [[ netbox.vlan.management ]] | [TODO] | High Security |
+| N-002 | Production Network | Business Applications | Yes | Yes (filtered) | [TODO] | [TODO] | Secure |
+| N-003 | DMZ | External Services | Yes | Yes | [TODO] | [TODO] | Medium |
+| N-004 | Guest WLAN | Guests | Yes | Yes (isolated) | [TODO] | [TODO] | Low |
 
 **Total Number of Network Segments:** [TODO]
 
@@ -139,7 +142,7 @@ The structure analysis is performed at the following granularity levels:
 
 | ID | Location/Room | Type | Protection Measures | Access | Operator | Criticality |
 |---|---|---|---|---|---|---|
-| R-001 | {{ meta.organization.primary_location }} | Main Location | [TODO] | Access Control | AdminSend GmbH | High |
+| R-001 | [TODO] | Main Location | [TODO] | Access Control | AdminSend GmbH | High |
 | R-002 | Data Center | Server Room | Climate Control, Fire Protection, Access Control | Authorized | AdminSend GmbH | High |
 | R-003 | [TODO: Room 3] | [TODO] | [TODO] | [TODO] | [TODO] | Medium/Low |
 
@@ -163,9 +166,9 @@ The structure analysis is performed at the following granularity levels:
 
 | Role | Name | Area of Responsibility | Contact | Deputy |
 |---|---|---|---|---|
-| Executive Management | Max Mustermann | Overall Responsibility | max.mustermann@adminsend.de | [TODO] |
-| ISO | Thomas Weber | ISMS Coordination | thomas.weber@adminsend.de | [TODO] |
-| IT Management | Anna Schmidt | IT Operations | anna.schmidt@adminsend.de | [TODO] |
+| Executive Management | [TODO] | Overall Responsibility | {{ meta-organisation-roles.role_CEO_email }} | [TODO] |
+| ISO | [TODO] | ISMS Coordination | {{ meta-organisation-roles.role_CISO_email }} | [TODO] |
+| IT Management | [TODO] | IT Operations | {{ meta-organisation-roles.role_CIO_email }} | [TODO] |
 | [TODO: Additional Roles] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Dependencies and Interfaces
@@ -211,10 +214,10 @@ The structure analysis is performed at the following granularity levels:
 ### 6.1 Validation Process
 
 The structure analysis is validated by:
-1. **Review by IT Management:** Anna Schmidt
+1. **Review by IT Management:** [TODO]
 2. **Review by Information Domain Managers:** [TODO]
 3. **Comparison with CMDB/Inventory:** [TODO: Date]
-4. **Approval by ISO:** Thomas Weber
+4. **Approval by ISO:** [TODO]
 
 ### 6.2 Completeness Check
 
@@ -236,20 +239,17 @@ The structure analysis is updated when:
 - Organizational changes
 - At least annually as part of ISMS review
 
-**Responsible:** Thomas Weber (ISO)  
-**Next Review:** {{ meta.document.next_review }}
+**Responsible:** [TODO] (ISO)  
+**Next Review:** [TODO]
 
 ## 8. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISO | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISO | [TODO] | [TODO] | Draft |
+| IT Management | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 5: Structure Analysis)
 - BSI IT-Grundschutz Compendium
-
 

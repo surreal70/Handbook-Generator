@@ -1,13 +1,17 @@
 # Risikoanalyse und Szenarien
 
-**Dokument-ID:** BCM-0090  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0090
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -148,7 +152,7 @@ Die Risikoanalyse ergänzt die Business Impact Analysis (BIA) und bildet die Gru
 
 | Risiko-Score | Risikostufe | Behandlung | Eskalation |
 |--------------|-------------|------------|------------|
-| 15-25 | Kritisch (Rot) | Sofortige Maßnahmen erforderlich | {{ meta.roles.ceo.name }} |
+| 15-25 | Kritisch (Rot) | Sofortige Maßnahmen erforderlich | [TODO] |
 | 10-14 | Hoch (Orange) | Maßnahmen innerhalb 3 Monate | BCM-Manager |
 | 5-9 | Mittel (Gelb) | Maßnahmen innerhalb 12 Monate | Fachbereich |
 | 1-4 | Niedrig (Grün) | Überwachung, keine Maßnahmen | Fachbereich |
@@ -185,11 +189,11 @@ Auswirkung
 
 | Risiko/Szenario | Betroffene Services | Wahrsch. | Auswirkung | Score | Risikostufe | Kontrollen (bestehend) | Maßnahmen (geplant) | Owner |
 |-----------------|-------------------|----------|------------|-------|-------------|----------------------|-------------------|-------|
-| Ransomware-Angriff | Alle IT-Services | 4 | 5 | 20 | Rot | Firewall, AV, Backup | EDR, Segmentierung, Offline-Backup | {{ meta.roles.ciso.name }} |
+| Ransomware-Angriff | Alle IT-Services | 4 | 5 | 20 | Rot | Firewall, AV, Backup | EDR, Segmentierung, Offline-Backup | [TODO] |
 | Stromausfall | Produktion, IT | 3 | 4 | 12 | Orange | USV (15min) | Notstromgenerator | Facility-Manager |
 | Personalausfall (Pandemie) | Alle Prozesse | 2 | 4 | 8 | Gelb | Home-Office möglich | Pandemieplan | HR |
 | Lieferantenausfall | Produktion | 3 | 3 | 9 | Gelb | Lagerbestand (2 Wochen) | Zweitlieferant | Einkauf |
-| Rechenzentrumsausfall | Alle IT-Services | 2 | 5 | 10 | Orange | Backup vorhanden | DR-Standort | {{ meta.roles.cio.name }} |
+| Rechenzentrumsausfall | Alle IT-Services | 2 | 5 | 10 | Orange | Backup vorhanden | DR-Standort | [TODO] |
 
 ### 4.2 Top-Risiken (Score ≥ 15)
 
@@ -197,7 +201,7 @@ Auswirkung
 
 1. **Ransomware-Angriff** (Score: 20)
    - Maßnahmen: EDR-Implementierung, Netzwerksegmentierung, Offline-Backups
-   - Verantwortlich: {{ meta.roles.ciso.name }}
+   - Verantwortlich: [TODO]
    - Fällig: Q1 2026
 
 2. [TODO: Weiteres Top-Risiko]
@@ -232,7 +236,7 @@ Auswirkung
 
 | Maßnahme | Risiko | Strategie | Beschreibung | Owner | Priorität | Kosten | Fällig | Status |
 |----------|--------|-----------|--------------|-------|-----------|--------|--------|--------|
-| EDR-Implementierung | Ransomware | Reduktion | Endpoint Detection & Response auf allen Clients | {{ meta.roles.ciso.name }} | Hoch | 50.000 € | Q1 2026 | In Arbeit |
+| EDR-Implementierung | Ransomware | Reduktion | Endpoint Detection & Response auf allen Clients | [TODO] | Hoch | 50.000 € | Q1 2026 | In Arbeit |
 | Notstromgenerator | Stromausfall | Reduktion | Diesel-Generator für 48h Betrieb | Facility | Mittel | 80.000 € | Q2 2026 | Geplant |
 | Cyber-Versicherung | Ransomware | Transfer | Versicherung für Cyber-Vorfälle | CFO | Hoch | 20.000 €/Jahr | Q1 2026 | Offen |
 
@@ -261,16 +265,8 @@ Auswirkung
 - Risiko tritt ein (Incident)
 
 **Eskalationswege:**
-- Score ≥ 15: Sofortige Meldung an {{ meta.roles.ceo.name }}
+- Score ≥ 15: Sofortige Meldung an [TODO]
 - Score 10-14: Meldung an BCM-Manager
 - Score < 10: Dokumentation im Risikoregister
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

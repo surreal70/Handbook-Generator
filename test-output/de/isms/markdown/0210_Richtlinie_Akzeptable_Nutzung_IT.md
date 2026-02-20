@@ -1,19 +1,21 @@
 # Richtlinie: Akzeptable Nutzung IT
 
-
-
-**Dokument-ID:** 0210  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0200_Policy_Akzeptable_Nutzung_IT.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.10  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0210
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck und Geltungsbereich
 
@@ -22,7 +24,7 @@ Diese Richtlinie konkretisiert die `0200_Policy_Akzeptable_Nutzung_IT.md` und de
 **Geltungsbereich:**
 - Alle Mitarbeiter, Auftragnehmer und Dritte mit Zugang zu IT-Ressourcen
 - Alle IT-Systeme, Netzwerke, Anwendungen und Geräte
-- Standorte: {{ netbox.site.name }} und alle Betriebsstandorte
+- Standorte: [[ netbox.site.name ]] und alle Betriebsstandorte
 
 ## 2. Detaillierte Nutzungsregeln
 
@@ -43,7 +45,7 @@ Diese Richtlinie konkretisiert die `0200_Policy_Akzeptable_Nutzung_IT.md` und de
 **Technische Kontrollen:**
 - E-Mail-Filtering und Anti-Spam-Systeme
 - DLP (Data Loss Prevention) für ausgehende E-Mails
-- E-Mail-Archivierung für Compliance (Aufbewahrung: {{ meta.retention.email_years }} Jahre)
+- E-Mail-Archivierung für Compliance (Aufbewahrung: {{ meta-handbook.retention_email_years }} Jahre)
 - Verschlüsselung für vertrauliche E-Mails (S/MIME oder PGP)
 
 ### 2.2 Internet-Nutzung
@@ -93,7 +95,7 @@ Diese Richtlinie konkretisiert die `0200_Policy_Akzeptable_Nutzung_IT.md` und de
 
 **Erlaubte Aktivitäten:**
 - Speicherung geschäftlicher Daten auf genehmigten Netzlaufwerken und Cloud-Speichern
-- Nutzung von {{ meta.cloud.storage_service }} für Dateiablage
+- Nutzung von {{ meta-handbook.cloud_storage_service }} für Dateiablage
 - Verschlüsselung vertraulicher Daten gemäß Klassifizierung
 
 **Verbotene Aktivitäten:**
@@ -270,15 +272,15 @@ Die Organisation überwacht folgende Aktivitäten zur Sicherstellung von Sicherh
 ### 6.1 Technologie-Stack
 
 **Sicherheitstools:**
-- **Web-Filter:** {{ meta.security.web_filter }} (z.B. Cisco Umbrella, Zscaler)
-- **E-Mail-Security:** {{ meta.security.email_gateway }} (z.B. Proofpoint, Mimecast)
-- **DLP:** {{ meta.security.dlp_solution }} (z.B. Microsoft Purview, Symantec DLP)
-- **Endpoint Protection:** {{ meta.security.edr_solution }} (z.B. CrowdStrike, SentinelOne)
-- **CASB:** {{ meta.security.casb_solution }} (z.B. Microsoft Defender for Cloud Apps)
+- **Web-Filter:** {{ meta-handbook.security_web_filter }} (z.B. Cisco Umbrella, Zscaler)
+- **E-Mail-Security:** {{ meta-handbook.security_email_gateway }} (z.B. Proofpoint, Mimecast)
+- **DLP:** {{ meta-handbook.security_dlp_solution }} (z.B. Microsoft Purview, Symantec DLP)
+- **Endpoint Protection:** {{ meta-handbook.security_edr_solution }} (z.B. CrowdStrike, SentinelOne)
+- **CASB:** {{ meta-handbook.security_casb_solution }} (z.B. Microsoft Defender for Cloud Apps)
 
 **Monitoring und Logging:**
-- **SIEM:** {{ meta.security.siem_solution }} (z.B. Splunk, Microsoft Sentinel)
-- **Log-Retention:** {{ meta.retention.log_years }} Jahre für Security-Logs
+- **SIEM:** {{ meta-handbook.security_siem_solution }} (z.B. Splunk, Microsoft Sentinel)
+- **Log-Retention:** {{ meta-handbook.retention_log_years }} Jahre für Security-Logs
 - **Alerting:** Automatische Alerts bei kritischen Verstößen
 
 ### 6.2 Konfigurationsbeispiele
@@ -354,10 +356,9 @@ Die Organisation überwacht folgende Aktivitäten zur Sicherstellung von Sicherh
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 - **Betriebsverfassungsgesetz (BetrVG)** - Mitbestimmung bei Monitoring
 
----
-
 **Genehmigt durch:**  
-Thomas Weber, CISO  
-Datum: {{ meta.document.approval_date }}
+[TODO], CISO  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
+

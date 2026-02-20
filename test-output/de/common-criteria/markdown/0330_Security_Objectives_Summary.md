@@ -1,11 +1,17 @@
 # Zusammenfassung der Sicherheitsziele (Security Objectives Summary)
 
-**Dokument-ID:** 0330  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0330
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -15,7 +21,7 @@
 
 ## 1. Einleitung
 
-Dieses Dokument bietet eine kompakte Zusammenfassung aller Sicherheitsziele für das TOE **{{ meta.toe_name }}** und dessen Betriebsumgebung. Die Sicherheitsziele beschreiben die beabsichtigten Sicherheitseigenschaften, die zur Bewältigung der identifizierten Bedrohungen, zur Einhaltung der organisatorischen Sicherheitsrichtlinien und zur Erfüllung der Annahmen erforderlich sind.
+Dieses Dokument bietet eine kompakte Zusammenfassung aller Sicherheitsziele für das TOE **{{ meta-handbook.toe_name }}** und dessen Betriebsumgebung. Die Sicherheitsziele beschreiben die beabsichtigten Sicherheitseigenschaften, die zur Bewältigung der identifizierten Bedrohungen, zur Einhaltung der organisatorischen Sicherheitsrichtlinien und zur Erfüllung der Annahmen erforderlich sind.
 
 ### 1.1 Zweck
 
@@ -363,12 +369,4 @@ Nach der Zusammenfassung der Sicherheitsziele:
 - Template 0310: Rationale für Sicherheitsziele
 - Template 0320: Security Objectives Coverage Matrix
 - Template 0400-0450: Sicherheitsanforderungen
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.owner }} | Initiale Version |
 

@@ -1,11 +1,17 @@
 # Integrity and Confidentiality
 
-**Document-ID:** 0150  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0150
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of the principle of integrity and confidentiality in {{ meta.organization }}. Personal data must be processed securely and protected from unauthorized access.
+This document describes the implementation of the principle of integrity and confidentiality in AdminSend GmbH. Personal data must be processed securely and protected from unauthorized access.
 
 ## Principle according to Art. 5(1)(f) GDPR
 
@@ -265,8 +271,6 @@ Personal data must be processed in a manner that ensures appropriate security of
 | Missing encryption | Unencrypted transmission | Implement TLS/SSL |
 | Excessive permissions | Everyone has admin rights | Implement permission concept |
 | No backups | Data loss without recovery | Implement backup strategy |
-
----
 
 **Next Steps:**
 1. Implement comprehensive TOM according to Art. 32

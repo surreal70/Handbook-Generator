@@ -1,18 +1,31 @@
 # Document Control / Documented Information
 
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0050  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 7.5  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose and Scope
 
@@ -31,7 +44,7 @@ This document defines the requirements for controlling documented information wi
 - **URL:** [TODO: https://docs.organization.com/isms/]
 
 **Backup and Archiving:**
-- **Backup System:** {{ netbox.backup.system }}
+- **Backup System:** [[ netbox.backup.system ]]
 - **Backup Frequency:** Daily
 - **Archiving Duration:** 10 years after decommissioning
 
@@ -60,7 +73,7 @@ This document defines the requirements for controlling documented information wi
 **Emergency Access:**
 - Critical documents (emergency plans, contact lists) are additionally stored offline
 - Storage Location: [TODO: Physical safe, encrypted USB stick]
-- Responsible: Thomas Weber
+- Responsible: [TODO]
 
 **Break-Glass Access:**
 - See `0200_Emergency_Access_BreakGlass.md` (BCM Handbook)
@@ -234,9 +247,9 @@ Each document contains a change log at the end:
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | 2026-01-15 | Thomas Weber | Initial version | Management |
+| 1.0 | 2026-01-15 | [TODO] | Initial version | Management |
 | 1.1 | 2026-03-20 | ISMS Manager | Contact information updated | CISO |
-| 2.0 | 2026-12-01 | Thomas Weber | New requirements from NIS2 | Management |
+| 2.0 | 2026-12-01 | [TODO] | New requirements from NIS2 | Management |
 ```
 
 ## 5. Document Register
@@ -247,11 +260,11 @@ The document register is the central overview of all ISMS documents.
 
 | Document ID | Document Title | Owner | Status | Version | Last Change | Next Review |
 |-------------|----------------|-------|--------|---------|-------------|-------------|
-| 0010 | ISMS Policy | Thomas Weber | Approved | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0020 | ISMS Scope | Thomas Weber | Approved | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0030 | Context and Stakeholders | Thomas Weber | Approved | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0040 | ISMS Governance | Thomas Weber | Approved | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0050 | Document Control | Thomas Weber | Approved | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
+| 0010 | ISMS Policy | [TODO] | Approved | 1.0 | [TODO] | [TODO] |
+| 0020 | ISMS Scope | [TODO] | Approved | 1.0 | [TODO] | [TODO] |
+| 0030 | Context and Stakeholders | [TODO] | Approved | 1.0 | [TODO] | [TODO] |
+| 0040 | ISMS Governance | [TODO] | Approved | 1.0 | [TODO] | [TODO] |
+| 0050 | Document Control | [TODO] | Approved | 1.0 | [TODO] | [TODO] |
 | ... | ... | ... | ... | ... | ... | ... |
 
 [TODO: Create and maintain complete document register]
@@ -324,10 +337,8 @@ See `0580_Policy_Retention_and_Deletion.md` for details.
 - **ISO/IEC 27001:2022** - Clause 7.5: Documented information
 - **ISO/IEC 27002:2022** - Control 5.1: Policies for information security
 
----
-
 **Approved by:**  
-Thomas Weber, CISO  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]

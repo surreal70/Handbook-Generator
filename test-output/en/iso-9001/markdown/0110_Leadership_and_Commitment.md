@@ -1,11 +1,17 @@
 # Leadership and Commitment
 
-**Document-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -282,8 +288,6 @@ Top management demonstrates leadership and commitment with respect to customer f
 - Changes to leadership practices based on feedback
 - Enhanced communication or support mechanisms
 - [TODO: Document specific improvement actions]
-
----
 
 **Next Steps:**
 1. Define top management composition

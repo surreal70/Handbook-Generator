@@ -1,11 +1,17 @@
 # Data Protection Officer
 
-**Document-ID:** 0340  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0340
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document regulates the role, tasks, and position of the Data Protection Officer at {{ meta.organization }} according to Art. 37-39 GDPR.
+This document regulates the role, tasks, and position of the Data Protection Officer at AdminSend GmbH according to Art. 37-39 GDPR.
 
 ## Designation Obligation (Art. 37)
 
@@ -225,7 +231,7 @@ The Data Protection Officer is the contact point for the supervisory authority o
 
 ### Further Tasks
 
-**Additional tasks at {{ meta.organization }}:**
+**Additional tasks at AdminSend GmbH:**
 - [TODO: e.g., Handling data subject requests]
 - [TODO: e.g., Maintaining records of processing activities]
 - [TODO: e.g., Contract management for processors]
@@ -276,11 +282,10 @@ The Data Protection Officer may fulfill other tasks, provided these do not resul
 - **Data Protection Impact Assessment (Art. 35):** Advisory role
 - **Data Breaches (Art. 33):** Notification responsibility
 
----
-
 **Next Steps:**
 1. Check designation obligation for your organization
 2. Designate a qualified Data Protection Officer
 3. Publish contact details internally and externally
 4. Provide sufficient resources
 5. Define clear tasks and responsibilities
+

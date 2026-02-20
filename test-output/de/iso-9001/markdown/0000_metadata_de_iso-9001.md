@@ -1,45 +1,37 @@
-# ISO 9001 Qualitätsmanagementsystem Handbuch - Metadaten
+# ISO-9001 Handbuch - Metadaten
 
 **Dokument-ID:** 0000  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Datum:** [TODO]  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** [TODO]  
+**Template-Version:** 0.2  
 
 ---
 
 ## Handbuch-Informationen
 
-**Handbuch-Titel:** ISO 9001:2015 Qualitätsmanagementsystem Handbuch  
-**Organisation:** {{ meta.organization }}  
-**Autor:** Andreas Huemmer [andreas.huemmer@adminsend.de]  
-**Geltungsbereich:** {{ meta.scope }}  
-**Gültig ab:** {{ meta.valid_from }}  
-**Nächste Überprüfung:** {{ meta.next_review }}  
+**Handbuch-Titel:** ISO 9001 Qualitätsmanagement Handbuch
+**Handbuch-Short:** iso-9001
+**Organisation:** AdminSend GmbH  
+**Autor:** Handbook-Generator  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
+**Genehmigt durch:** [TODO]  
 
 ---
 
 ## Dokumentenzweck
 
-Dieses Handbuch dokumentiert das Qualitätsmanagementsystem (QMS) der Organisation gemäß ISO 9001:2015. Es beschreibt die Struktur, Prozesse, Verantwortlichkeiten und Verfahren zur Sicherstellung der Qualität von Produkten und Dienstleistungen.
-
-## Geltungsbereich
-
-Das QMS gilt für:
-- {{ meta.qms_scope }}
-
-## Normative Verweise
-
-- ISO 9001:2015 - Qualitätsmanagementsysteme - Anforderungen
-- ISO 9000:2015 - Qualitätsmanagementsysteme - Grundlagen und Begriffe
-- ISO 9004:2018 - Qualitätsmanagement - Qualität einer Organisation - Anleitung zum Erreichen nachhaltigen Erfolgs
+Dieses Dokument enthält die Metadaten für das ISO-9001 Handbuch.
 
 ## Änderungshistorie
 
 | Version | Datum | Autor | Änderung |
 |---------|-------|-------|----------|
-| {{ meta.version }} | {{ meta.date }} | Andreas Huemmer [andreas.huemmer@adminsend.de] | Initiale Version |
-
-
+| 0.1 | [TODO] | Handbook-Generator | Initiale Version |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 

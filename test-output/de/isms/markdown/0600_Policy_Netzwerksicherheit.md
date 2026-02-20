@@ -1,18 +1,21 @@
 # Policy: Netzwerksicherheit
 
-
-
-**Dokument-ID:** 0600  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.20-A.8.23 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0600
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Netzwerke:** Alle internen und externen Netzwerke, LAN, WLAN, WAN, VPN
 - **Systeme:** Firewalls, Router, Switches, Load Balancer, IDS/IPS
 - **Verbindungen:** Alle Netzwerkverbindungen (intern, extern, Partner, Cloud)
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -78,10 +81,10 @@ Netzwerkaktivitäten werden überwacht und protokolliert. Logs werden zentral ge
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Network Security Manager:** {{ meta.network.security_manager }}
-- **Network Administrator:** {{ meta.network.admin }}
-- **SOC Manager:** {{ meta.soc.manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **Network Security Manager:** {{ meta-handbook.network_security_manager }}
+- **Network Administrator:** {{ meta-handbook.network_admin }}
+- **SOC Manager:** {{ meta-handbook.soc_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Network Team
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, SOC
 
@@ -163,10 +166,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIST SP 800-97** - Establishing Wireless Robust Security Networks
 - **BSI IT-Grundschutz** - NET.1.1, NET.1.2, NET.3.2
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

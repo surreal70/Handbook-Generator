@@ -1,14 +1,17 @@
 # Guideline: Segmentation, Firewalling and Network Access Control
 
-**Document ID:** 0610  
-**Document Type:** Guideline (detailed)  
-**Associated Policy:** 0600_Policy_Network_Security.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.8.20, A.8.21, A.8.22  
-**Owner:** {{ meta.network.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0610
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -86,7 +89,7 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 - Between zones
 - Micro-segmentation
 
-**Firewall Platform:** {{ meta.network.firewall }}
+**Firewall Platform:** {{ meta-handbook.network_firewall }}
 
 ### 3.2 Firewall Rules
 
@@ -140,7 +143,7 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 
 ### 4.1 NAC System
 
-**Platform:** {{ meta.network.nac_solution }} (e.g., Cisco ISE, Aruba ClearPass)
+**Platform:** {{ meta-handbook.network_nac_solution }} (e.g., Cisco ISE, Aruba ClearPass)
 
 **Functions:**
 - 802.1X authentication
@@ -197,7 +200,7 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 - Between critical zones
 - IPS mode
 
-**IDS/IPS System:** {{ meta.security.ids_ips }}
+**IDS/IPS System:** {{ meta-handbook.security_ids_ips }}
 
 ### 5.2 Signatures and Policies
 
@@ -279,7 +282,7 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 - Analysis of traffic patterns
 - Anomaly detection
 
-**Tools:** {{ meta.network.flow_tool }}
+**Tools:** {{ meta-handbook.network_flow_tool }}
 
 ### 8.2 Packet Capture
 
@@ -318,7 +321,6 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.8.22** - Segregation of networks
 - **NIST SP 800-41** - Guidelines on Firewalls and Firewall Policy
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

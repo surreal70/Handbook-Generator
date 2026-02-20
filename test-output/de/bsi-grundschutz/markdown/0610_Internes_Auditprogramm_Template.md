@@ -1,14 +1,17 @@
 # Internes Auditprogramm (Template)
 
-**Dokument-ID:** 0610  
-**Dokumenttyp:** Programm/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0610
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -32,10 +35,10 @@ Das interne Auditprogramm von **AdminSend GmbH** stellt die Wirksamkeit des ISMS
 
 | Zeitraum | Audit-Thema | Kriterien | Auditor | Auditee | Status | Ergebnis | Maßnahmen |
 |---|---|---|---|---|---|---|---|
-| Q1 {{ meta.document.year }} | Basis-Sicherheitscheck Stichprobe | Policies, Richtlinien, Evidence | [TODO] | Anna Schmidt | Geplant | - | - |
-| Q2 {{ meta.document.year }} | Risikomanagement-Prozess | Dokument 0090, Risikoregister | [TODO] | Thomas Weber | Geplant | - | - |
-| Q3 {{ meta.document.year }} | Incident Management | Dokument 0320/0330, Incident-Logs | [TODO] | Anna Schmidt | Geplant | - | - |
-| Q4 {{ meta.document.year }} | Dokumentenlenkung | Dokument 0030, Dokumentenregister | [TODO] | Thomas Weber | Geplant | - | - |
+| Q1 [TODO] | Basis-Sicherheitscheck Stichprobe | Policies, Richtlinien, Evidence | [TODO] | [TODO] | Geplant | - | - |
+| Q2 [TODO] | Risikomanagement-Prozess | Dokument 0090, Risikoregister | [TODO] | [TODO] | Geplant | - | - |
+| Q3 [TODO] | Incident Management | Dokument 0320/0330, Incident-Logs | [TODO] | [TODO] | Geplant | - | - |
+| Q4 [TODO] | Dokumentenlenkung | Dokument 0030, Dokumentenregister | [TODO] | [TODO] | Geplant | - | - |
 
 ## 4. Audit-Checkpunkte
 
@@ -78,13 +81,10 @@ Das interne Auditprogramm von **AdminSend GmbH** stellt die Wirksamkeit des ISMS
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| Internal Audit | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Internal Audit | [TODO] | [TODO] | Draft |
+| ISB | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: DER.3.1 Audits und Revisionen
-
 

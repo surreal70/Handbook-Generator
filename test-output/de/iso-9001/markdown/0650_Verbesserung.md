@@ -1,11 +1,17 @@
 # Verbesserung
 
-**Dokument-ID:** 0650  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0650
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,13 +19,13 @@
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesserung implementiert, um Kundenzufriedenheit zu erhöhen und die Leistung des QMS zu verbessern.
+Dieses Dokument definiert, wie AdminSend GmbH kontinuierliche Verbesserung implementiert, um Kundenzufriedenheit zu erhöhen und die Leistung des QMS zu verbessern.
 
 ## Allgemeine Anforderungen (10.1)
 
 ### Verbesserungsverpflichtung
 
-**{{ meta.organization }} verbessert kontinuierlich:**
+**AdminSend GmbH verbessert kontinuierlich:**
 - Eignung, Angemessenheit und Wirksamkeit des QMS
 - Produkte und Dienstleistungen
 - Prozesse
@@ -64,7 +70,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesser
 
 ### Verbesserungswerkzeuge
 
-**{{ meta.organization }} verwendet:**
+**AdminSend GmbH verwendet:**
 - PDCA-Zyklus (Plan-Do-Check-Act)
 - Six Sigma / DMAIC
 - Lean Management
@@ -175,7 +181,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesser
 
 ### Kulturentwicklung
 
-**{{ meta.organization }} fördert Verbesserungskultur durch:**
+**AdminSend GmbH fördert Verbesserungskultur durch:**
 - Vorbildfunktion der Führung
 - Offene Kommunikation
 - Fehlertoleranz und Lernkultur
@@ -271,8 +277,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesser
 - Teilnahme an Verbesserungsprojekten
 - Umsetzung von Verbesserungen
 
----
-
 **Nächste Schritte:**
 1. Etabliere Verbesserungskultur
 2. Implementiere Vorschlagswesen
@@ -280,3 +284,4 @@ Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesser
 4. Starte Verbesserungsprojekte
 5. Schule Mitarbeiter in Verbesserungsmethoden
 6. Messe und kommuniziere Erfolge
+

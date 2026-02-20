@@ -1,5 +1,20 @@
 # 2. Operational Processes
 
+**Document-ID:** [FRAMEWORK]-0011
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## 2.1 Monitoring
 
 - 24/7 monitoring of all critical systems
@@ -17,3 +32,4 @@
 - All changes must be documented
 - Critical changes require Change Advisory Board approval
 - Rollback plan is mandatory for all changes
+

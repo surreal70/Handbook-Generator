@@ -1,11 +1,17 @@
 # Anhang: Verzeichnis der Verarbeitungstätigkeiten (Template)
 
-**Dokument-ID:** 0700  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0700
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,19 +19,17 @@
 
 ## Verzeichnis der Verarbeitungstätigkeiten
 
-**Organisation:** {{ meta.organization }}  
+**Organisation:** AdminSend GmbH  
 **Verantwortlicher:** [TODO: Name, Funktion]  
 **Datenschutzbeauftragter:** [TODO: Name, Kontakt]  
-**Stand:** {{ meta.date }}
-
----
+**Stand:** {{ meta-handbook.date }}
 
 ## Verarbeitungstätigkeit [Nr. 1]
 
 ### 1. Name und Kontaktdaten des Verantwortlichen
 
 **Verantwortlicher:**  
-{{ meta.organization }}  
+AdminSend GmbH  
 [TODO: Adresse]  
 [TODO: Telefon]  
 [TODO: E-Mail]
@@ -183,13 +187,9 @@ Falls Ja:
 Falls Ja:  
 [TODO: Beschreibung]
 
----
-
 ## Verarbeitungstätigkeit [Nr. 2]
 
 [TODO: Wiederhole Struktur für weitere Verarbeitungstätigkeiten]
-
----
 
 ## Übersicht aller Verarbeitungstätigkeiten
 
@@ -199,8 +199,6 @@ Falls Ja:
 | 2 | [TODO] | [TODO] | [TODO] | [TODO] | Ja/Nein |
 | 3 | [TODO] | [TODO] | [TODO] | [TODO] | Ja/Nein |
 
----
-
 ## Änderungshistorie
 
 | Version | Datum | Änderung | Geändert von |
@@ -208,9 +206,8 @@ Falls Ja:
 | 1.0 | [TODO] | Erstversion | [TODO] |
 | 1.1 | [TODO] | [TODO: Beschreibung] | [TODO] |
 
----
-
 **Hinweise:**
 - Dieses Verzeichnis muss bei Änderungen aktualisiert werden
 - Das Verzeichnis muss der Aufsichtsbehörde auf Anfrage vorgelegt werden
 - Regelmäßige Überprüfung (mindestens jährlich) erforderlich
+

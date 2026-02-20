@@ -1,11 +1,17 @@
 # Datenminimierung
 
-**Dokument-ID:** 0120  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0120
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Datenminimierung in der {{ meta.organization }}. Es dürfen nur die personenbezogenen Daten erhoben werden, die für den jeweiligen Zweck tatsächlich erforderlich sind.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Datenminimierung in der AdminSend GmbH. Es dürfen nur die personenbezogenen Daten erhoben werden, die für den jeweiligen Zweck tatsächlich erforderlich sind.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. c DSGVO
 
@@ -198,8 +204,6 @@ Personenbezogene Daten müssen dem Zweck angemessen und erheblich sowie auf das 
 | Fehlende Differenzierung | Alle Felder als Pflicht | Pflicht vs. freiwillig |
 | Vorratsdatenspeicherung | Daten ohne konkreten Zweck | Zweckbindung beachten |
 | Keine Anonymisierung | Klardaten wo nicht nötig | Anonymisierung prüfen |
-
----
 
 **Nächste Schritte:**
 1. Führen Sie Erforderlichkeitsprüfung für alle Datenerhebungen durch

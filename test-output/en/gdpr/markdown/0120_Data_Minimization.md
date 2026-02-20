@@ -1,11 +1,17 @@
 # Data Minimization
 
-**Document-ID:** 0120  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0120
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of the principle of data minimization in {{ meta.organization }}. Only personal data that is actually necessary for the respective purpose may be collected.
+This document describes the implementation of the principle of data minimization in AdminSend GmbH. Only personal data that is actually necessary for the respective purpose may be collected.
 
 ## Principle according to Art. 5(1)(c) GDPR
 
@@ -198,8 +204,6 @@ Personal data must be adequate, relevant and limited to what is necessary in rel
 | Missing differentiation | All fields as mandatory | Mandatory vs. voluntary |
 | Data retention | Data without specific purpose | Observe purpose limitation |
 | No anonymization | Clear data where not needed | Assess anonymization |
-
----
 
 **Next Steps:**
 1. Conduct necessity assessment for all data collections

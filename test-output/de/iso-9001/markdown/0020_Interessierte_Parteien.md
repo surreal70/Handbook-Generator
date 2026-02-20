@@ -1,11 +1,17 @@
 # Verstehen der Erfordernisse und Erwartungen interessierter Parteien
 
-**Dokument-ID:** 0020  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +24,7 @@ Dieses Dokument identifiziert die für das Qualitätsmanagementsystem relevanten
 ## Geltungsbereich
 
 Diese Analyse gilt für:
-- **Organisation:** {{ meta.organization }}
+- **Organisation:** AdminSend GmbH
 - **QMS-Anwendungsbereich:** [TODO: QMS-Geltungsbereich]
 
 ## Identifikation interessierter Parteien
@@ -207,11 +213,10 @@ Diese Analyse bildet die Grundlage für:
 - **Anhang B:** Anforderungsmatrix
 - **Anhang C:** Kommunikationsplan
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle relevanten interessierten Parteien
 2. Analysieren Sie deren Anforderungen und Erwartungen
 3. Priorisieren Sie die interessierten Parteien
 4. Definieren Sie Überwachungs- und Kommunikationsmethoden
 5. Überprüfen und aktualisieren Sie die Analyse regelmäßig
+

@@ -1,9 +1,17 @@
 # Appendix D: Terms and Abbreviations
 
-**Document Type:** Appendix  
-**Version:** 1.0.0  
-**Date:** {{ meta.document.date }}  
-**Classification:** internal
+**Document-ID:** [FRAMEWORK]-0740
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -14,10 +22,8 @@ This document defines all terms and abbreviations used in the ISMS. It serves as
 ## Scope
 
 **Organization:** AdminSend GmbH  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Responsible:** Thomas Weber
-
----
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Responsible:** [TODO]
 
 ## Abbreviations
 
@@ -259,8 +265,6 @@ This document defines all terms and abbreviations used in the ISMS. It serves as
 |--------------|---------|-------------|
 | **ZTA** | Zero Trust Architecture | Zero trust architecture |
 
----
-
 ## Term Definitions
 
 ### A
@@ -295,8 +299,6 @@ Granting of access rights after successful authentication.
 **Availability**  
 Property that information and systems are accessible when needed.
 
----
-
 ### B
 
 **Backup**  
@@ -310,8 +312,6 @@ Ability to maintain business processes during disruptions.
 
 **Business Impact Analysis (BIA)**  
 Assessment of the impact of disruptions on business processes.
-
----
 
 ### C
 
@@ -342,8 +342,6 @@ Science of encrypting and decrypting information.
 **Cyber Security**  
 Protection of computer systems and networks from attacks.
 
----
-
 ### D
 
 **Data Breach**  
@@ -361,8 +359,6 @@ Protection of personal data.
 **Disaster Recovery**  
 Recovery of IT systems after a failure.
 
----
-
 ### E
 
 **Encryption**  
@@ -374,8 +370,6 @@ Device at the end of a network connection (PC, laptop, smartphone).
 **Event**  
 Identifiable change of state in a system.
 
----
-
 ### F
 
 **Firewall**  
@@ -383,8 +377,6 @@ Security system to control network traffic.
 
 **Forensics**  
 Investigation of security incidents.
-
----
 
 ### G
 
@@ -394,8 +386,6 @@ Comparison between current and desired state.
 **Governance**  
 Framework for leadership and control.
 
----
-
 ### H
 
 **Hardening**  
@@ -403,8 +393,6 @@ Securing systems by removing unnecessary functions.
 
 **Hash**  
 Unique checksum for integrity assurance.
-
----
 
 ### I
 
@@ -423,14 +411,10 @@ Property that information is complete and unchanged.
 **Intrusion Detection**  
 Detection of attacks on systems.
 
----
-
 ### K
 
 **Key Management**  
 Management of cryptographic keys.
-
----
 
 ### L
 
@@ -439,8 +423,6 @@ Principle of granting only necessary access rights.
 
 **Logging**  
 Recording of events and activities.
-
----
 
 ### M
 
@@ -456,8 +438,6 @@ Continuous observation of systems and processes.
 **Multi-Factor Authentication (MFA)**  
 Authentication with multiple factors.
 
----
-
 ### N
 
 **Network Segmentation**  
@@ -465,8 +445,6 @@ Division of a network into separate areas.
 
 **Non-Conformity**  
 Deviation from requirements.
-
----
 
 ### P
 
@@ -487,8 +465,6 @@ Right to protection of personal data.
 
 **Privileged Access**  
 Access with extended rights.
-
----
 
 ### R
 
@@ -512,8 +488,6 @@ Process for identifying and assessing risks.
 
 **Risk Treatment**  
 Measures to reduce risk.
-
----
 
 ### S
 
@@ -541,8 +515,6 @@ Document explaining the applicability of controls.
 **Supply Chain**  
 Network of suppliers and service providers.
 
----
-
 ### T
 
 **Threat**  
@@ -554,8 +526,6 @@ Information about current threats.
 **Two-Factor Authentication (2FA)**  
 Authentication with two factors.
 
----
-
 ### V
 
 **Vulnerability**  
@@ -564,14 +534,10 @@ Weakness that can be exploited by a threat.
 **Vulnerability Assessment**  
 Identification and assessment of vulnerabilities.
 
----
-
 ### W
 
 **Whitelist**  
 List of allowed elements (applications, IP addresses, etc.).
-
----
 
 ### Z
 
@@ -580,8 +546,6 @@ Vulnerability for which no patch is yet available.
 
 **Zero Trust**  
 Security model without implicit trust.
-
----
 
 ## ISO/IEC 27001:2022 Specific Terms
 
@@ -624,8 +588,6 @@ Selection and implementation of measures (Clause 6.1.3).
 **Statement of Applicability (SoA)**  
 Document with Annex A controls and their applicability (Clause 6.1.3).
 
----
-
 ## References
 
 - ISO/IEC 27000:2018 Information Security Management Systems - Overview and Vocabulary
@@ -633,10 +595,9 @@ Document with Annex A controls and their applicability (Clause 6.1.3).
 - ISO/IEC 27002:2022 Information Security Controls
 - NIST Glossary: https://csrc.nist.gov/glossary
 
----
-
-**Document Owner:** Thomas Weber  
-**Approved By:** {{ meta.management.name }}  
+**Document Owner:** [TODO]  
+**Approved By:** {{ meta-handbook.management_name }}  
 **Next Review:** Annually
+
 
 

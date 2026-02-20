@@ -1,11 +1,17 @@
 # Security Objectives Coverage Matrix
 
-**Dokument-ID:** 0320  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0320
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -15,7 +21,7 @@
 
 ## 1. Einleitung
 
-Dieses Dokument präsentiert die Coverage Matrix (Abdeckungsmatrix) für die Sicherheitsziele des TOE **{{ meta.toe_name }}**. Die Matrix visualisiert die Beziehungen zwischen:
+Dieses Dokument präsentiert die Coverage Matrix (Abdeckungsmatrix) für die Sicherheitsziele des TOE **{{ meta-handbook.toe_name }}**. Die Matrix visualisiert die Beziehungen zwischen:
 
 - Sicherheitszielen und Bedrohungen
 - Sicherheitszielen und organisatorischen Sicherheitsrichtlinien (OSPs)
@@ -237,7 +243,7 @@ Wenn Änderungen an der Sicherheitsproblem-Definition oder den Sicherheitszielen
 
 | Datum | Änderung | Auswirkung | Bearbeiter |
 |-------|----------|------------|------------|
-| {{ meta.date }} | Initiale Version | - | {{ meta.owner }} |
+| [Date] | Initiale Version | - | [TODO] |
 | **[TODO]** | | | |
 
 ## 9. Zusammenfassung
@@ -274,12 +280,4 @@ Nach der Coverage Matrix:
 - Template 0300: Sicherheitsziele
 - Template 0310: Rationale für Sicherheitsziele
 - Template 0400-0450: Sicherheitsanforderungen
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.owner }} | Initiale Version |
 

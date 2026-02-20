@@ -1,11 +1,17 @@
 # Managementbewertung
 
-**Dokument-ID:** 0570  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0570
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,13 +19,13 @@
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} regelmäßige Managementbewertungen durchführt, um die fortdauernde Eignung, Angemessenheit und Wirksamkeit des QMS sicherzustellen.
+Dieses Dokument definiert, wie AdminSend GmbH regelmäßige Managementbewertungen durchführt, um die fortdauernde Eignung, Angemessenheit und Wirksamkeit des QMS sicherzustellen.
 
 ## Allgemeine Anforderungen (9.3)
 
 ### Bewertungsfrequenz
 
-**{{ meta.organization }} führt Managementbewertungen durch:**
+**AdminSend GmbH führt Managementbewertungen durch:**
 - **Regelmäßig:** [TODO: z.B. Mindestens jährlich, quartalsweise]
 - **Bei Bedarf:** Bei wesentlichen Änderungen oder Ereignissen
 
@@ -212,7 +218,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} regelmäßige Managementb
 
 ### Überwachung
 
-**{{ meta.organization }} überwacht:**
+**AdminSend GmbH überwacht:**
 - Fortschritt der Maßnahmenumsetzung
 - Einhaltung von Terminen
 - Wirksamkeit umgesetzter Maßnahmen
@@ -284,8 +290,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} regelmäßige Managementb
 - Umsetzung von Maßnahmen
 - Berichterstattung über Fortschritt
 
----
-
 **Nächste Schritte:**
 1. Plane nächste Managementbewertung
 2. Sammle und bereite Eingabedaten auf
@@ -294,3 +298,4 @@ Dieses Dokument definiert, wie {{ meta.organization }} regelmäßige Managementb
 5. Dokumentiere Ergebnisse
 6. Kommuniziere Entscheidungen
 7. Verfolge Maßnahmenumsetzung
+

@@ -1,18 +1,31 @@
 # Policy: Mobile Device and Remote Work
 
+**Document-ID:** [FRAMEWORK]-0500
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0500  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.6.7, A.6.8, A.8.9 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Devices:** Laptops, smartphones, tablets, wearables (corporate-owned and BYOD)
 - **Access Methods:** VPN, Remote Desktop, cloud services, mobile apps
 - **Persons:** All employees, contractors with remote access
-- **Locations:** {{ netbox.site.name }}, home office, public places, travel
+- **Locations:** [[ netbox.site.name ]], home office, public places, travel
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -86,9 +99,9 @@ Remote workspaces must meet security requirements:
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **MDM Administrator:** {{ meta.it.mdm_admin }}
-- **Remote Access Manager:** {{ meta.it.remote_access_manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **MDM Administrator:** {{ meta-handbook.it_mdm_admin }}
+- **Remote Access Manager:** {{ meta-handbook.it_remote_access_manager }}
 - **Implementation Responsible:** IT Operations, Employees
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -164,10 +177,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **NIST SP 800-46** - Guide to Enterprise Telework, Remote Access, and BYOD Security
 - **GDPR (EU 2016/679)** - Data protection for BYOD and remote work
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

@@ -1,11 +1,17 @@
 # Accuracy
 
-**Document-ID:** 0130  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0130
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of the principle of accuracy in {{ meta.organization }}. Personal data must be accurate and up to date.
+This document describes the implementation of the principle of accuracy in AdminSend GmbH. Personal data must be accurate and up to date.
 
 ## Principle according to Art. 5(1)(d) GDPR
 
@@ -209,8 +215,6 @@ Personal data must be accurate and, where necessary, kept up to date; every reas
 | Erroneous input | No validation | Input validation |
 | Delayed rectification | Long processing time | Process optimization |
 | Missing notification | Recipients not informed | Notification process |
-
----
 
 **Next Steps:**
 1. Implement input validation and plausibility checks

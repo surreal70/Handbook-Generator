@@ -1,13 +1,17 @@
 # Business Impact Analysis (BIA) – Methodik
 
-**Dokument-ID:** BCM-0070  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0070
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -117,7 +121,7 @@ Die BIA liefert folgende Ergebnisse:
 |-------|-----------|------------|----------------|
 | 1 | Kick-off Workshop | Alle Bereichsleiter | BCM-Manager |
 | 2-3 | Einzelinterviews Fachbereiche | Prozessverantwortliche | BCM-Manager |
-| 4 | IT-Workshop | IT-Team | BCM-Manager + {{ meta.roles.cio.name }} |
+| 4 | IT-Workshop | IT-Team | BCM-Manager + [TODO] |
 | 5 | Konsolidierung und Analyse | BCM-Team | BCM-Manager |
 | 6 | Ergebnispräsentation | Management | BCM-Manager |
 
@@ -148,7 +152,7 @@ Die BIA liefert folgende Ergebnisse:
 3. Priorisierung wird festgelegt
 
 **Formale Freigabe:**
-- Genehmigung durch {{ meta.roles.ceo.name }} (CEO)
+- Genehmigung durch [TODO] (CEO)
 - Bestätigung durch Fachbereichsleiter
 - Dokumentation der Freigabe
 
@@ -312,8 +316,8 @@ Der MTPD ist der Zeitpunkt, ab dem die Auswirkungen eines Ausfalls inakzeptabel 
 - Validierung der RTO/RPO-Werte
 
 **Management-Ebene:**
-- {{ meta.roles.ceo.name }} (CEO) genehmigt Gesamt-BIA
-- {{ meta.roles.cio.name }} (CIO) genehmigt IT-bezogene RTO/RPO
+- [TODO] (CEO) genehmigt Gesamt-BIA
+- [TODO] (CIO) genehmigt IT-bezogene RTO/RPO
 - Fachbereichsleiter genehmigen ihre Bereiche
 
 ### 6.2 Freigabeprozess
@@ -324,13 +328,5 @@ Der MTPD ist der Zeitpunkt, ab dem die Auswirkungen eines Ausfalls inakzeptabel 
 4. **Management-Präsentation:** Vorstellung der Ergebnisse
 5. **Formale Freigabe:** Unterschriften der Verantwortlichen
 6. **Veröffentlichung:** BIA-Ergebnisse werden kommuniziert
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

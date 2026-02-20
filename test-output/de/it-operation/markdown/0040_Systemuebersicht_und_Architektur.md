@@ -1,5 +1,20 @@
 # Systemübersicht und Architektur
 
+**Dokument-ID:** [FRAMEWORK]-0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Überblick
 
 ### Systemlandschaft
@@ -161,7 +176,7 @@ Dieses Kapitel beschreibt die Systemlandschaft und Architektur auf hoher Ebene.
 **Genehmigungen:**
 - **DEV → TEST:** Automatisch
 - **TEST → STAGE:** QA-Team
-- **STAGE → PROD:** CIO + Change Advisory Board
+- **STAGE → PROD:** [TODO] + Change Advisory Board
 
 ## Schnittstellen
 
@@ -277,19 +292,18 @@ Dieses Kapitel beschreibt die Systemlandschaft und Architektur auf hoher Ebene.
 |---|---|---|---|
 | **System-Architekt** | Architektur-Design | [TODO: Name] | [TODO: E-Mail] |
 | **Technical Lead** | Technische Umsetzung | [TODO: Name] | [TODO: E-Mail] |
-| **Operations Manager** | Betrieb und Wartung | Andreas Huemmer | andreas.huemmer@adminsend.de |
-| **Security Officer** | Sicherheitsarchitektur | Thomas Weber | thomas.weber@adminsend.de |
+| **Operations Manager** | Betrieb und Wartung | {{ meta-organisation-roles.role_IT_Operations_Manager }} | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} |
+| **Security Officer** | Sicherheitsarchitektur | [TODO] | {{ meta-organisation-roles.role_CISO_email }} |
 
 ## Kontakte
 
 **Bei Fragen zur Systemarchitektur:**
 - **System-Architekt:** [TODO: Name und Kontakt]
-- **IT Operations Manager:** Andreas Huemmer (andreas.huemmer@adminsend.de)
-- **CISO:** Thomas Weber (thomas.weber@adminsend.de)
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- **CISO:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 
----
-
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
+

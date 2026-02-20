@@ -1,11 +1,17 @@
 # Besondere Kategorien personenbezogener Daten
 
-**Dokument-ID:** 0050  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt den Umgang mit besonderen Kategorien personenbezogener Daten in der {{ meta.organization }} gemäß Art. 9 DSGVO. Diese sensiblen Daten unterliegen erhöhten Schutzanforderungen.
+Dieses Dokument beschreibt den Umgang mit besonderen Kategorien personenbezogener Daten in der AdminSend GmbH gemäß Art. 9 DSGVO. Diese sensiblen Daten unterliegen erhöhten Schutzanforderungen.
 
 ## Besondere Kategorien (Art. 9 Abs. 1)
 
@@ -234,11 +240,10 @@ Für jede Verarbeitung besonderer Kategorien muss dokumentiert werden:
 - **DSFA (Art. 35):** In der Regel erforderlich
 - **Verzeichnis (Art. 30):** Dokumentation aller Verarbeitungen
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Verarbeitungen besonderer Kategorien
 2. Prüfen Sie die Rechtsgrundlage gemäß Art. 9 Abs. 2
 3. Implementieren Sie erhöhte Schutzmaßnahmen
 4. Führen Sie DSFA durch
 5. Schulen Sie betroffene Mitarbeiter
+

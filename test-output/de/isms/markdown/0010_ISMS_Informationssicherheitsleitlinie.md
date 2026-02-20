@@ -1,18 +1,21 @@
 # ISMS-Leitlinie / Informationssicherheits-Policy
 
-
-
-**Dokument-ID:** 0010  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 5.2 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -27,7 +30,7 @@ Diese Policy gilt für:
 - **Organisationseinheiten:** Alle Abteilungen und Standorte der AdminSend GmbH
 - **Systeme und Informationen:** Alle IT-Systeme, Anwendungen, Daten und Informationsverarbeitungsprozesse
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu Informationswerten
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen von dieser Policy sind nur über den definierten Ausnahmenprozess (siehe `0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -80,15 +83,15 @@ Lieferanten und Dritte, die Zugang zu Informationswerten haben, werden nach Sich
 
 ### Schlüsselrollen
 
-- **CISO (Chief Information Security Officer):** Thomas Weber (thomas.weber@adminsend.de)
+- **CISO (Chief Information Security Officer):** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
   - Verantwortlich für die Entwicklung, Umsetzung und Überwachung des ISMS
-  - Berichtet an: Anna Schmidt
+  - Berichtet an: [TODO]
 
-- **CIO (Chief Information Officer):** Anna Schmidt (anna.schmidt@adminsend.de)
+- **CIO (Chief Information Officer):** [TODO] ({{ meta-organisation-roles.role_CIO_email }})
   - Verantwortlich für IT-Strategie und IT-Betrieb
   - Unterstützt ISMS-Umsetzung
 
-- **Geschäftsführung:** {{ meta.management.ceo }}
+- **Geschäftsführung:** {{ meta-handbook.management_ceo }}
   - Genehmigt ISMS-Leitlinie und stellt Ressourcen bereit
   - Trägt Gesamtverantwortung für Informationssicherheit
 
@@ -165,10 +168,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig u
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 - **BSI IT-Grundschutz** - Bundesamt für Sicherheit in der Informationstechnik
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

@@ -1,11 +1,17 @@
 # Document Conventions
 
-**Dokument-ID:** 0050  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -171,10 +177,9 @@ Folgende Dokumente werden normativ in diesem ST referenziert:
 - Alle Tabellen und Abbildungen müssen sequenziell nummeriert sein
 - Alle Anforderungen müssen eindeutig identifiziert sein
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Verifiziere Konsistenz der Terminologieverwendung
 3. Stelle sicher, dass alle Abkürzungen definiert sind
 4. Prüfe, dass alle Referenzen vollständig sind
+

@@ -1,18 +1,21 @@
 # Policy: Security in Projects
 
-
-
-**Dokument-ID:** 0680  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.8, A.8.25, A.8.32 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0680
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Projekte:** Alle IT-Projekte, Infrastrukturprojekte, Softwareentwicklungsprojekte
 - **Projektphasen:** Initiierung, Planung, Umsetzung, Abschluss
 - **Projektarten:** Interne Projekte, externe Projekte, Partnerprojekte
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -89,10 +92,10 @@ Sicherheitsrelevante Projektdokumentation wird erstellt:
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Security Architect:** {{ meta.security.architect }}
+- **Policy Owner:** [TODO] (CISO)
+- **Security Architect:** {{ meta-handbook.security_architect }}
 - **Project Manager:** Projektverantwortliche
-- **IT Operations Manager:** {{ meta.it.operations_manager }}
+- **IT Operations Manager:** {{ meta-handbook.it_operations_manager }}
 - **Business Owner:** Fachbereichsverantwortliche
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -173,10 +176,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **BSIMM** - Building Security In Maturity Model
 - **ISO/IEC 27034** - Application Security
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

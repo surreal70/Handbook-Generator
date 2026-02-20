@@ -1,11 +1,17 @@
 # Determining the Scope of the QMS
 
-**Document-ID:** 0030  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -20,7 +26,7 @@ This document defines the scope of the quality management system according to IS
 ### Organizational Scope
 
 **Organization:**
-- **Name:** {{ meta.organization }}
+- **Name:** AdminSend GmbH
 - **Legal Form:** [TODO: e.g., LLC, Corporation]
 - **Headquarters:** [TODO: Address]
 
@@ -194,8 +200,6 @@ The scope forms the basis for:
 - **Appendix B:** Location overview
 - **Appendix C:** Product/service catalog
 
----
-
 **Next Steps:**
 1. Clearly define the organizational scope
 2. List all included products and services
@@ -203,3 +207,4 @@ The scope forms the basis for:
 4. Justify any exclusions of ISO 9001 requirements
 5. Communicate the scope to all relevant parties
 6. Review the scope regularly
+

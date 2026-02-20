@@ -1,11 +1,17 @@
 # TOE Architecture
 
-**Document-ID:** 0130  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0130
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -401,11 +407,10 @@ The TOE is organized into the following layers:
 - [TODO: Standard 2]
 - [TODO: Standard 3]
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders with TOE-specific information
 2. Create all required architecture diagrams
 3. Document all architecture decisions completely
 4. Verify consistency with other TOE description documents
 5. Ensure the security architecture is fully documented
+

@@ -1,14 +1,17 @@
 # APP Hardening Standard: Apache HTTP Server
 
-**Document ID:** 0230  
-**Document Type:** Standard/Baseline  
-**Reference Framework:** CIS Controls v8 (Hardening Program; no benchmark texts)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Draft)  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Updated:** 2026-01-31  
-**Next Review:** [TODO]
+**Document-ID:** [FRAMEWORK]-0230
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -80,10 +83,10 @@
 - Parameter list/example values: [TODO]
 - Checklist: see `0410_Appendix_Checklists_and_Evidence.md`
 
-
 ## 12. Apache-Specific Requirements (Examples)
 - Minimize banner/versions: [TODO]
 - TLS configuration centralized: [TODO]
 - Disable unnecessary modules: [TODO]
 - Directory listing off: [TODO]
 - Separate vHosts/least privilege: [TODO]
+

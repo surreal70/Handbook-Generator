@@ -1,11 +1,17 @@
 # Protection Profile Konformität
 
-**Dokument-ID:** 0600  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0600
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -206,8 +212,6 @@ Dieses Kapitel dokumentiert die Konformität des Security Target (ST) mit releva
 2. [TODO: PP-Referenz 2]
 3. [TODO: Weitere relevante Dokumente]
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle relevanten Protection Profiles
 2. Dokumentieren Sie den Konformitätsanspruch
@@ -215,3 +219,4 @@ Dieses Kapitel dokumentiert die Konformität des Security Target (ST) mit releva
 4. Dokumentieren Sie alle Abweichungen und Zusatzanforderungen
 5. Erstellen Sie Mapping-Tabellen zwischen PP und ST
 6. Lassen Sie die PP-Konformität durch Evaluatoren prüfen
+

@@ -1,11 +1,17 @@
 # Kommunikation
 
-**Dokument-ID:** 0320  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0320
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -210,8 +216,6 @@ Dieses Dokument definiert interne und externe Kommunikationen, die für das Qual
 | QMS-Leistung | [TODO] | Qualitätsmanager | Alle Mitarbeiter | [TODO] |
 | Qualitätsziele | [TODO] | Oberste Leitung | Alle Mitarbeiter | [TODO] |
 | Prozessleistung | [TODO] | Prozessverantw. | Relevante Mitarbeiter | [TODO] |
-
----
 
 **Nächste Schritte:**
 1. Vervollständige Kommunikationsplanung für alle relevanten Kommunikationen

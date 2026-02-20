@@ -1,11 +1,17 @@
 # DSFA Template - Vorlage
 
-**Dokument-ID:** 0410  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0410
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -19,8 +25,6 @@
 **Erstellt am:** [TODO: Datum]  
 **Erstellt von:** [TODO: Name, Rolle]  
 **Status:** Entwurf / In Prüfung / Genehmigt
-
----
 
 ## 1. Beschreibung der Verarbeitung
 
@@ -90,8 +94,6 @@
 [Datenquelle] → [Verarbeitungssystem] → [Speicherung] → [Empfänger]
 ```
 
----
-
 ## 2. Notwendigkeit und Verhältnismäßigkeit
 
 ### 2.1 Rechtsgrundlage
@@ -139,8 +141,6 @@
 **Abwägung:**
 [TODO: Überwiegen die Interessen des Verantwortlichen oder der Betroffenen?]
 
----
-
 ## 3. Risikobewertung
 
 ### 3.1 Risikoidentifikation
@@ -175,13 +175,9 @@
 
 **Risikostufe:** [TODO: Berechne aus Wahrscheinlichkeit × Schwere]
 
----
-
 #### Risiko 2: [TODO: Name des Risikos]
 
 [TODO: Wiederhole Struktur für weitere Risiken]
-
----
 
 ### 3.2 Risikobewertungsmatrix
 
@@ -191,8 +187,6 @@
 | Risiko 2 | [TODO] | [TODO] | [TODO] |
 
 **Gesamtrisiko:** [TODO: Niedrig / Mittel / Hoch / Sehr hoch]
-
----
 
 ## 4. Maßnahmen zur Risikominimierung
 
@@ -212,13 +206,9 @@
 
 **Frist:** [TODO: Datum]
 
----
-
 #### Maßnahme 2: [TODO: Name der Maßnahme]
 
 [TODO: Wiederhole Struktur für weitere Maßnahmen]
-
----
 
 ### 4.2 Organisatorische Maßnahmen
 
@@ -235,8 +225,6 @@
 **Verantwortlich:** [TODO: Rolle/Name]
 
 **Frist:** [TODO: Datum]
-
----
 
 ### 4.3 Datenschutz durch Technikgestaltung (Privacy by Design)
 
@@ -261,8 +249,6 @@
 **Beschreibung:**
 [TODO: Wie wurden Privacy by Default Prinzipien umgesetzt?]
 
----
-
 ## 5. Restrisikobewertung
 
 ### 5.1 Risiken nach Maßnahmen
@@ -281,8 +267,6 @@
 **Begründung:**
 [TODO: Warum ist das Restrisiko akzeptabel oder nicht akzeptabel?]
 
----
-
 ## 6. Konsultation des Datenschutzbeauftragten
 
 **Datenschutzbeauftragter:** [TODO: Name]
@@ -296,8 +280,6 @@
 [TODO: Wie wurden die Empfehlungen umgesetzt?]
 
 **Unterschrift Datenschutzbeauftragter:** ___________________
-
----
 
 ## 7. Einholung der Ansichten Betroffener
 
@@ -314,8 +296,6 @@
 
 **Berücksichtigung:**
 [TODO: Wie wurden die Ansichten berücksichtigt?]
-
----
 
 ## 8. Vorherige Konsultation der Aufsichtsbehörde
 
@@ -334,8 +314,6 @@
 **Umsetzung der Empfehlungen:**
 [TODO: Wie wurden die Empfehlungen umgesetzt?]
 
----
-
 ## 9. Genehmigung
 
 **Verantwortlicher:** [TODO: Name, Rolle]
@@ -348,8 +326,6 @@
 [TODO: Liste der Auflagen]
 
 **Unterschrift:** ___________________
-
----
 
 ## 10. Überprüfung und Aktualisierung
 
@@ -369,8 +345,6 @@
 | 1.0 | [TODO] | Erstversion | [TODO] |
 | 1.1 | [TODO] | [TODO: Beschreibung] | [TODO] |
 
----
-
 ## Anhänge
 
 - [ ] Datenfluss-Diagramme
@@ -379,6 +353,5 @@
 - [ ] Einwilligungserklärungen
 - [ ] Weitere relevante Dokumente
 
----
-
 **Hinweis:** Diese DSFA ist ein lebendes Dokument und muss bei Änderungen der Verarbeitung oder neuen Erkenntnissen über Risiken aktualisiert werden.
+

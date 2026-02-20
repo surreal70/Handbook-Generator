@@ -1,12 +1,27 @@
 # Patch und Update Management
 
+**Dokument-ID:** [FRAMEWORK]-0180
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
 Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für AdminSend GmbH. Es definiert Patch-Kategorien, Zeitpläne, Test- und Rollout-Prozesse sowie Vulnerability-Scanning und Priorisierung zur Sicherstellung der System-Sicherheit und -Stabilität.
 
 **Geltungsbereich:** Alle IT-Systeme, Betriebssysteme, Applikationen und Firmware von AdminSend GmbH
 
-**Verantwortlich:** Andreas Huemmer (andreas.huemmer@adminsend.de)
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Patch-Management-Grundlagen
 
@@ -128,11 +143,11 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für AdminS
 ### 1. Vulnerability Identification
 
 **Identifikations-Quellen:**
-- **Vulnerability-Scanner:** {{ meta.vulnerability_scanner }}
+- **Vulnerability-Scanner:** {{ meta-handbook.vulnerability_scanner }}
 - **Vendor-Advisories:** Microsoft, Red Hat, VMware, etc.
 - **Security-Mailinglists:** CERT, US-CERT, vendor-specific
-- **Threat-Intelligence:** {{ meta.threat_intelligence_source }}
-- **SIEM-Alerts:** {{ meta.siem_system }}
+- **Threat-Intelligence:** {{ meta-handbook.threat_intelligence_source }}
+- **SIEM-Alerts:** {{ meta-handbook.siem_system }}
 
 **Aktivitäten:**
 - Vulnerability-Scans durchführen (wöchentlich)
@@ -187,7 +202,7 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für AdminS
 - Patch in Patch-Repository speichern
 - Patch-Metadaten dokumentieren
 
-**Patch-Repository:** {{ meta.patch_repository }}
+**Patch-Repository:** {{ meta-handbook.patch_repository }}
 
 **Dokumentation:**
 - Patch-ID
@@ -205,10 +220,10 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für AdminS
 
 | Umgebung | Zweck | Systeme |
 |---|---|---|
-| **Dev** | Entwickler-Tests | {{ netbox.environment.dev }} |
-| **Test** | Funktionale Tests | {{ netbox.environment.test }} |
-| **Staging** | Pre-Production-Tests | {{ netbox.environment.staging }} |
-| **Production** | Produktiv-Systeme | {{ netbox.environment.production }} |
+| **Dev** | Entwickler-Tests | [[ netbox.environment.dev ]] |
+| **Test** | Funktionale Tests | [[ netbox.environment.test ]] |
+| **Staging** | Pre-Production-Tests | [[ netbox.environment.staging ]] |
+| **Production** | Produktiv-Systeme | [[ netbox.environment.production ]] |
 
 **Test-Prozess:**
 
@@ -411,8 +426,8 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für AdminS
 ### Windows-Patch-Management
 
 **Tool:** Windows Server Update Services (WSUS)  
-**Server:** {{ netbox.wsus.server }}  
-**Management:** {{ netbox.wsus.management_url }}
+**Server:** [[ netbox.wsus.server ]]  
+**Management:** [[ netbox.wsus.management_url ]]
 
 **Konfiguration:**
 - Automatische Synchronisation mit Microsoft Update
@@ -430,7 +445,7 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für AdminS
 ### Linux-Patch-Management
 
 **Tool:** Ansible / Satellite  
-**Server:** {{ netbox.ansible.server }}
+**Server:** [[ netbox.ansible.server ]]
 
 **Playbooks:**
 - `patch-assessment.yml` - Verfügbare Updates prüfen
@@ -440,7 +455,7 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für AdminS
 
 **Beispiel-Playbook:**
 ```yaml
----
+
 - name: Patch Linux Servers
   hosts: linux_servers
   become: yes
@@ -470,7 +485,7 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für AdminS
 ### VMware-Patch-Management
 
 **Tool:** VMware Update Manager (VUM)  
-**Integration:** vCenter {{ netbox.vcenter.server }}
+**Integration:** vCenter [[ netbox.vcenter.server ]]
 
 **Baseline-Gruppen:**
 - **Critical-Patches:** Kritische Security-Patches
@@ -486,7 +501,7 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für AdminS
 
 ### Vulnerability-Scanner
 
-**Tool:** {{ meta.vulnerability_scanner }}  
+**Tool:** {{ meta-handbook.vulnerability_scanner }}  
 **Scan-Frequenz:** Wöchentlich
 
 **Scan-Profile:**
@@ -594,7 +609,7 @@ yum downgrade <package>
 - Patch-Trends (monatlich)
 - Top-10-Vulnerabilities
 
-**Tool:** {{ meta.patch_dashboard }}
+**Tool:** {{ meta-handbook.patch_dashboard }}
 
 **Zugriff:** IT-Management, Security-Team
 
@@ -642,7 +657,7 @@ yum downgrade <package>
 5. Ausnahme dokumentieren
 6. Regelmäßig reviewen (quartalsweise)
 
-**Ausnahme-Register:** {{ meta.exception_register }}
+**Ausnahme-Register:** {{ meta-handbook.exception_register }}
 
 ### End-of-Life-Systeme
 
@@ -653,7 +668,7 @@ yum downgrade <package>
 - Kompensations-Kontrollen
 - Risiko-Akzeptanz dokumentieren
 
-**EOL-Register:** {{ meta.eol_register }}
+**EOL-Register:** {{ meta-handbook.eol_register }}
 
 ### Legacy-Applikationen
 
@@ -680,7 +695,7 @@ yum downgrade <package>
 - Deployment-Planung
 - Reporting
 
-**Team-Lead:** Andreas Huemmer
+**Team-Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### System-Administratoren
 
@@ -698,7 +713,7 @@ yum downgrade <package>
 - Security-Patch-Priorisierung
 - Compliance-Überwachung
 
-**Lead:** Thomas Weber
+**Lead:** [TODO]
 
 ### Applikations-Owner
 
@@ -770,10 +785,9 @@ yum downgrade <package>
 - CVE Database: https://cve.mitre.org
 - NVD Database: https://nvd.nist.gov
 
----
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.date }}

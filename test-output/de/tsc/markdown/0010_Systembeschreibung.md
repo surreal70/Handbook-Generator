@@ -1,13 +1,17 @@
 # Systembeschreibung
 
-**Dokument-ID:** TSC-0010  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** TSC-0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -35,9 +39,9 @@ Dieses Dokument beschreibt das Service-System von AdminSend GmbH, das Gegenstand
 ### 2.1 Service Organization
 
 **Organisation:** AdminSend GmbH  
-**Adresse:** Musterstraße 123, 80331 München  
-**Land:** Deutschland  
-**Website:** https://www.adminsend.de  
+**Adresse:** Musterstraße 123, [TODO] [TODO]  
+**Land:** [TODO]  
+**Website:** [TODO]  
 
 **Geschäftsbereich:** [TODO: z.B. Cloud-Hosting, SaaS, Managed Services]  
 **Gründungsjahr:** [TODO: Jahr]  
@@ -45,7 +49,7 @@ Dieses Dokument beschreibt das Service-System von AdminSend GmbH, das Gegenstand
 
 ### 2.2 Service Description
 
-**Service Name:** {{ meta.tsc.system_name }}  
+**Service Name:** {{ meta-handbook.system_name }}  
 **Service Type:** [TODO: z.B. Cloud-basierte Anwendung, Hosting-Service]  
 **Service Purpose:** [TODO: Zweck des Service]  
 
@@ -57,7 +61,7 @@ Dieses Dokument beschreibt das Service-System von AdminSend GmbH, das Gegenstand
 ### 2.3 Report Period
 
 **Report Type:** [TODO: Type I / Type II]  
-**Report Period:** {{ meta.tsc.report_period }}  
+**Report Period:** {{ meta-handbook.report_period }}  
 **Report Date:** [TODO: Datum für Type I oder Enddatum für Type II]  
 
 ## 3. System Boundaries
@@ -164,7 +168,7 @@ Dieses Dokument beschreibt das Service-System von AdminSend GmbH, das Gegenstand
 **Management:**
 - **CEO:** [TODO: Name]
 - **CTO:** [TODO: Name]
-- **CISO:** {{ meta.roles.ciso.name }}
+- **CISO:** [TODO]
 - **COO:** [TODO: Name]
 
 **Teams:**
@@ -360,13 +364,5 @@ Dieses Dokument beschreibt das Service-System von AdminSend GmbH, das Gegenstand
 
 **Upcoming Changes:**
 - [TODO: Beschreibung geplanter Änderungen]
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

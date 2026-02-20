@@ -1,14 +1,17 @@
 # Geltungsbereich und Informationsverbund (Abgrenzung)
 
-**Dokument-ID:** 0040  
-**Dokumenttyp:** Grundlagendokument  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -28,7 +31,7 @@ Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Manage
 
 | Standort | Adresse | Typ | Mitarbeitende | Im Scope |
 |---|---|---|---|---|
-| {{ meta.organization.primary_location }} | [TODO] | Hauptstandort | [TODO] | ✓ |
+| [TODO] | [TODO] | Hauptstandort | [TODO] | ✓ |
 | [TODO: Weitere Standorte] | [TODO] | [TODO] | [TODO] | ✓/✗ |
 
 **Organisationseinheiten im Scope:**
@@ -49,8 +52,8 @@ Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Manage
 
 | Service | Beschreibung | Nutzer | Service Owner | Im Scope |
 |---|---|---|---|---|
-| [TODO: Service 1] | [TODO] | [TODO] | Anna Schmidt | ✓ |
-| [TODO: Service 2] | [TODO] | [TODO] | Anna Schmidt | ✓ |
+| [TODO: Service 1] | [TODO] | [TODO] | [TODO] | ✓ |
+| [TODO: Service 2] | [TODO] | [TODO] | [TODO] | ✓ |
 
 ### 2.3 IT-Infrastruktur
 
@@ -60,9 +63,9 @@ Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Manage
 
 | Kategorie | Systeme | Anzahl | Im Scope |
 |---|---|---|---|
-| Server | {{ netbox.device.servers }} | [TODO] | ✓ |
-| Netzwerk | {{ netbox.device.network }} | [TODO] | ✓ |
-| Storage | {{ netbox.device.storage }} | [TODO] | ✓ |
+| Server | [[ netbox.device.servers ]] | [TODO] | ✓ |
+| Netzwerk | [[ netbox.device.network ]] | [TODO] | ✓ |
+| Storage | [[ netbox.device.storage ]] | [TODO] | ✓ |
 | Clients | Workstations, Laptops | [TODO] | ✓ |
 | Mobile Devices | Smartphones, Tablets | [TODO] | ✓ |
 
@@ -102,7 +105,7 @@ Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Manage
 **Folgende Elemente sind im Scope des ISMS:**
 
 1. **Infrastruktur:**
-   - Alle Server und Netzwerkkomponenten an Standort {{ meta.organization.primary_location }}
+   - Alle Server und Netzwerkkomponenten an Standort [TODO]
    - [TODO: Weitere Infrastruktur]
 
 2. **Anwendungen:**
@@ -205,7 +208,7 @@ Beispiele für Begründungen:
 4. **Umsetzung:** Aktualisierung aller betroffenen Dokumente
 5. **Kommunikation:** Information aller Stakeholder
 
-**Verantwortlich:** Thomas Weber (ISB)
+**Verantwortlich:** [TODO] (ISB)
 
 ### 6.2 Scope-Review
 
@@ -214,7 +217,7 @@ Der Scope wird regelmäßig überprüft:
 - **Trigger:** Neue Geschäftsprozesse, IT-Systeme, Standorte, regulatorische Anforderungen
 - **Verantwortlich:** ISB
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
 
 ## 7. Dokumentation und Nachweise
 
@@ -230,14 +233,11 @@ Folgende Dokumente und Nachweise werden für den Scope geführt:
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| Geschäftsführung | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Geschäftsführung | [TODO] | [TODO] | Draft |
+| ISB | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 4: Festlegung des Geltungsbereichs)
 - BSI IT-Grundschutz-Kompendium
-
 

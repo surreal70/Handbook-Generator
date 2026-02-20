@@ -1,18 +1,21 @@
 # Policy: Incident Management
 
-
-
-**Dokument-ID:** 0400  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.24-A.5.28 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0400
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Incident-Typen:** Security Incidents, Data Breaches, Malware, Phishing, DDoS, Insider Threats
 - **Systeme:** Alle IT-Systeme, Anwendungen, Netzwerke, Cloud-Services
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -85,10 +88,10 @@ Aus jedem Incident werden Lessons Learned abgeleitet. Erkenntnisse fließen in d
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Incident Manager:** {{ meta.security.incident_manager }}
-- **SOC Manager:** {{ meta.security.soc_manager }}
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Policy Owner:** [TODO] (CISO)
+- **Incident Manager:** {{ meta-handbook.security_incident_manager }}
+- **SOC Manager:** {{ meta-handbook.security_soc_manager }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Umsetzungsverantwortliche:** SOC, IT-Betrieb, Incident Response Team
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -166,10 +169,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **DSGVO (EU 2016/679)** - Art. 33, 34 - Data Breach Notification
 - **NIS2-Richtlinie** - Network and Information Security Directive
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

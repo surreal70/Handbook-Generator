@@ -1,11 +1,17 @@
 # Festlegen des Anwendungsbereichs des QMS
 
-**Dokument-ID:** 0030  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -20,7 +26,7 @@ Dieses Dokument definiert den Anwendungsbereich des Qualitätsmanagementsystems 
 ### Organisatorischer Geltungsbereich
 
 **Organisation:**
-- **Name:** {{ meta.organization }}
+- **Name:** AdminSend GmbH
 - **Rechtsform:** [TODO: z.B. GmbH, AG]
 - **Hauptsitz:** [TODO: Adresse]
 
@@ -194,8 +200,6 @@ Der Anwendungsbereich bildet die Grundlage für:
 - **Anhang B:** Standortübersicht
 - **Anhang C:** Produkt-/Dienstleistungskatalog
 
----
-
 **Nächste Schritte:**
 1. Definieren Sie den organisatorischen Geltungsbereich klar
 2. Listen Sie alle eingeschlossenen Produkte und Dienstleistungen auf
@@ -203,3 +207,4 @@ Der Anwendungsbereich bildet die Grundlage für:
 4. Begründen Sie eventuelle Ausschlüsse von ISO 9001 Anforderungen
 5. Kommunizieren Sie den Anwendungsbereich an alle relevanten Parteien
 6. Überprüfen Sie den Anwendungsbereich regelmäßig
+

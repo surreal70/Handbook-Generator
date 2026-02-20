@@ -123,10 +123,6 @@ Für weitere Informationen zur Verwendung dieser Vorlagen:
 - Konsultieren Sie FRAMEWORK_MAPPING.md für die Zuordnung zu COSO-Komponenten
 - Überprüfen Sie die AICPA SOC 1 Reporting Guide
 - Arbeiten Sie mit Ihrem Service Auditor zusammen
-
-## Versionierung
-
-Diese Vorlagen sollten versioniert und bei Änderungen aktualisiert werden:
 - Dokumentieren Sie Änderungen im Berichtszeitraum
 - Bewerten Sie Auswirkungen auf Kontrollen
 - Kommunizieren Sie wesentliche Änderungen an Stakeholder
@@ -134,5 +130,3 @@ Diese Vorlagen sollten versioniert und bei Änderungen aktualisiert werden:
 ---
 
 **Hinweis**: Diese Vorlagen dienen als Ausgangspunkt. Passen Sie sie an Ihre spezifische Serviceorganisation, Services und Kontrollumgebung an.
-||-----|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

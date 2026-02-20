@@ -1,5 +1,20 @@
 # Infrastructure and Platform
 
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Overview
 
 ### Infrastructure Landscape
@@ -7,7 +22,7 @@
 This chapter describes the physical and virtual infrastructure on which IT services are operated.
 
 **Organization:** AdminSend GmbH  
-**Location:** München, Deutschland
+**Location:** {{ meta-organisation.city }}, {{ meta-organisation.country }}
 
 **Brief Description:**
 [TODO: Describe the infrastructure landscape in 2-3 sentences. What are the main components? Where is the infrastructure operated?]
@@ -34,9 +49,9 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 #### Primary Site
 
-- **Site Name:** {{ netbox.site.name }}
-- **Address:** {{ netbox.site.physical_address }}
-- **Data Center:** {{ netbox.site.facility }}
+- **Site Name:** [[ netbox.site.name ]]
+- **Address:** [[ netbox.site.physical_address ]]
+- **Data Center:** [[ netbox.site.facility ]]
 - **Operator:** [TODO: DC Operator]
 - **Certifications:** [TODO: e.g., ISO 27001, Tier III]
 
@@ -65,17 +80,17 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | Rack ID | Location | Height (U) | Utilization | Power Supply | Network |
 |---|---|---:|---:|---|---|
-| [TODO: RACK-01] | {{ netbox.site.name }} | [TODO: 42] | [TODO: 80%] | [TODO: 2x 32A] | [TODO: 2x 10G] |
-| [TODO: RACK-02] | {{ netbox.site.name }} | [TODO: 42] | [TODO: 60%] | [TODO: 2x 32A] | [TODO: 2x 10G] |
-| [TODO: RACK-03] | {{ netbox.site.name }} | [TODO: 42] | [TODO: 40%] | [TODO: 2x 16A] | [TODO: 2x 1G] |
+| [TODO: RACK-01] | [[ netbox.site.name ]] | [TODO: 42] | [TODO: 80%] | [TODO: 2x 32A] | [TODO: 2x 10G] |
+| [TODO: RACK-02] | [[ netbox.site.name ]] | [TODO: 42] | [TODO: 60%] | [TODO: 2x 32A] | [TODO: 2x 10G] |
+| [TODO: RACK-03] | [[ netbox.site.name ]] | [TODO: 42] | [TODO: 40%] | [TODO: 2x 16A] | [TODO: 2x 1G] |
 
 ### Server Hardware
 
 | Hostname | Type | CPU | RAM | Storage | Location | Rack | Role |
 |---|---|---|---|---|---|---|---|
-| {{ netbox.device.server01.name }} | [TODO: Dell R740] | [TODO: 2x Xeon] | [TODO: 256GB] | [TODO: 2TB SSD] | {{ netbox.site.name }} | [TODO: RACK-01] | [TODO: Hypervisor] |
-| {{ netbox.device.server02.name }} | [TODO: HP DL380] | [TODO: 2x Xeon] | [TODO: 128GB] | [TODO: 1TB SSD] | {{ netbox.site.name }} | [TODO: RACK-01] | [TODO: Hypervisor] |
-| {{ netbox.device.server03.name }} | [TODO: Dell R640] | [TODO: 2x Xeon] | [TODO: 64GB] | [TODO: 500GB SSD] | {{ netbox.site.name }} | [TODO: RACK-02] | [TODO: Application] |
+| [[ netbox.device.server01.name ]] | [TODO: Dell R740] | [TODO: 2x Xeon] | [TODO: 256GB] | [TODO: 2TB SSD] | [[ netbox.site.name ]] | [TODO: RACK-01] | [TODO: Hypervisor] |
+| [[ netbox.device.server02.name ]] | [TODO: HP DL380] | [TODO: 2x Xeon] | [TODO: 128GB] | [TODO: 1TB SSD] | [[ netbox.site.name ]] | [TODO: RACK-01] | [TODO: Hypervisor] |
+| [[ netbox.device.server03.name ]] | [TODO: Dell R640] | [TODO: 2x Xeon] | [TODO: 64GB] | [TODO: 500GB SSD] | [[ netbox.site.name ]] | [TODO: RACK-02] | [TODO: Application] |
 
 **Hardware Lifecycle:**
 - **Procurement:** [TODO: Process]
@@ -95,29 +110,29 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | Device | Type | Model | Location | Role | Uplinks |
 |---|---|---|---|---|---|
-| {{ netbox.device.core_switch01.name }} | Core Switch | [TODO: Cisco Nexus] | {{ netbox.site.name }} | [TODO: Core] | [TODO: 4x 100G] |
-| {{ netbox.device.core_switch02.name }} | Core Switch | [TODO: Cisco Nexus] | {{ netbox.site.name }} | [TODO: Core] | [TODO: 4x 100G] |
+| [[ netbox.device.core_switch01.name ]] | Core Switch | [TODO: Cisco Nexus] | [[ netbox.site.name ]] | [TODO: Core] | [TODO: 4x 100G] |
+| [[ netbox.device.core_switch02.name ]] | Core Switch | [TODO: Cisco Nexus] | [[ netbox.site.name ]] | [TODO: Core] | [TODO: 4x 100G] |
 
 ### Distribution Layer
 
 | Device | Type | Model | Location | Role | Uplinks |
 |---|---|---|---|---|---|
-| [TODO: DIST-SW-01] | Distribution Switch | [TODO: Model] | {{ netbox.site.name }} | [TODO: Distribution] | [TODO: 2x 40G] |
-| [TODO: DIST-SW-02] | Distribution Switch | [TODO: Model] | {{ netbox.site.name }} | [TODO: Distribution] | [TODO: 2x 40G] |
+| [TODO: DIST-SW-01] | Distribution Switch | [TODO: Model] | [[ netbox.site.name ]] | [TODO: Distribution] | [TODO: 2x 40G] |
+| [TODO: DIST-SW-02] | Distribution Switch | [TODO: Model] | [[ netbox.site.name ]] | [TODO: Distribution] | [TODO: 2x 40G] |
 
 ### Access Layer
 
 | Device | Type | Model | Location | Ports | Uplinks |
 |---|---|---|---|---|---|
-| [TODO: ACC-SW-01] | Access Switch | [TODO: Model] | {{ netbox.site.name }} | [TODO: 48x 1G] | [TODO: 2x 10G] |
-| [TODO: ACC-SW-02] | Access Switch | [TODO: Model] | {{ netbox.site.name }} | [TODO: 48x 1G] | [TODO: 2x 10G] |
+| [TODO: ACC-SW-01] | Access Switch | [TODO: Model] | [[ netbox.site.name ]] | [TODO: 48x 1G] | [TODO: 2x 10G] |
+| [TODO: ACC-SW-02] | Access Switch | [TODO: Model] | [[ netbox.site.name ]] | [TODO: 48x 1G] | [TODO: 2x 10G] |
 
 ### VLAN Segmentation
 
 | VLAN ID | Name | Purpose | Subnet | Gateway |
 |---:|---|---|---|---|
-| {{ netbox.vlan.management.vid }} | Management | [TODO: Management Network] | {{ netbox.vlan.management.prefix }} | [TODO: Gateway] |
-| {{ netbox.vlan.production.vid }} | Production | [TODO: Production Network] | {{ netbox.vlan.production.prefix }} | [TODO: Gateway] |
+| [[ netbox.vlan.management.vid ]] | Management | [TODO: Management Network] | [[ netbox.vlan.management.prefix ]] | [TODO: Gateway] |
+| [[ netbox.vlan.production.vid ]] | Production | [TODO: Production Network] | [[ netbox.vlan.production.prefix ]] | [TODO: Gateway] |
 | [TODO: 30] | DMZ | [TODO: DMZ Network] | [TODO: 10.0.30.0/24] | [TODO: 10.0.30.1] |
 | [TODO: 40] | Storage | [TODO: Storage Network] | [TODO: 10.0.40.0/24] | [TODO: 10.0.40.1] |
 | [TODO: 50] | Backup | [TODO: Backup Network] | [TODO: 10.0.50.0/24] | [TODO: 10.0.50.1] |
@@ -135,33 +150,33 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 **IPAM (IP Address Management):**
 - **Tool:** [TODO: e.g., NetBox, phpIPAM]
-- **Responsible:** Andreas Huemmer
+- **Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Firewall and Security
 
 | Device | Type | Model | Location | Role | Throughput |
 |---|---|---|---|---|---|
-| [TODO: FW-01] | Firewall | [TODO: Palo Alto] | {{ netbox.site.name }} | [TODO: Perimeter] | [TODO: 10 Gbps] |
-| [TODO: FW-02] | Firewall | [TODO: Palo Alto] | {{ netbox.site.name }} | [TODO: Perimeter] | [TODO: 10 Gbps] |
+| [TODO: FW-01] | Firewall | [TODO: Palo Alto] | [[ netbox.site.name ]] | [TODO: Perimeter] | [TODO: 10 Gbps] |
+| [TODO: FW-02] | Firewall | [TODO: Palo Alto] | [[ netbox.site.name ]] | [TODO: Perimeter] | [TODO: 10 Gbps] |
 
 **Firewall Rules:**
 - **Number of Rules:** [TODO: e.g., 500]
 - **Review Cycle:** [TODO: e.g., Quarterly]
-- **Responsible:** Thomas Weber
+- **Responsible:** [TODO]
 
 ### Load Balancer
 
 | Device | Type | Model | Location | Algorithm | Capacity |
 |---|---|---|---|---|---|
-| [TODO: LB-01] | Load Balancer | [TODO: F5/HAProxy] | {{ netbox.site.name }} | [TODO: Round-Robin] | [TODO: 10k RPS] |
-| [TODO: LB-02] | Load Balancer | [TODO: F5/HAProxy] | {{ netbox.site.name }} | [TODO: Round-Robin] | [TODO: 10k RPS] |
+| [TODO: LB-01] | Load Balancer | [TODO: F5/HAProxy] | [[ netbox.site.name ]] | [TODO: Round-Robin] | [TODO: 10k RPS] |
+| [TODO: LB-02] | Load Balancer | [TODO: F5/HAProxy] | [[ netbox.site.name ]] | [TODO: Round-Robin] | [TODO: 10k RPS] |
 
 ### WAN Connections
 
 | Provider | Type | Bandwidth | Location | SLA | Cost/Month |
 |---|---|---|---|---|---|
-| [TODO: Provider 1] | [TODO: MPLS] | [TODO: 1 Gbps] | {{ netbox.site.name }} | [TODO: 99.9%] | [TODO: EUR] |
-| [TODO: Provider 2] | [TODO: Internet] | [TODO: 500 Mbps] | {{ netbox.site.name }} | [TODO: 99.5%] | [TODO: EUR] |
+| [TODO: Provider 1] | [TODO: MPLS] | [TODO: 1 Gbps] | [[ netbox.site.name ]] | [TODO: 99.9%] | [TODO: EUR] |
+| [TODO: Provider 2] | [TODO: Internet] | [TODO: 500 Mbps] | [[ netbox.site.name ]] | [TODO: 99.5%] | [TODO: EUR] |
 
 ## Virtualization
 
@@ -175,8 +190,8 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | Cluster Name | Hypervisor | Hosts | vCPUs | RAM (GB) | Storage (TB) | VMs |
 |---|---|---:|---:|---:|---:|---:|
-| {{ netbox.cluster.prod.name }} | [TODO: VMware] | [TODO: 4] | [TODO: 128] | [TODO: 1024] | [TODO: 50] | [TODO: 80] |
-| {{ netbox.cluster.test.name }} | [TODO: VMware] | [TODO: 2] | [TODO: 64] | [TODO: 512] | [TODO: 20] | [TODO: 40] |
+| [[ netbox.cluster.prod.name ]] | [TODO: VMware] | [TODO: 4] | [TODO: 128] | [TODO: 1024] | [TODO: 50] | [TODO: 80] |
+| [[ netbox.cluster.test.name ]] | [TODO: VMware] | [TODO: 2] | [TODO: 64] | [TODO: 512] | [TODO: 20] | [TODO: 40] |
 
 **Cluster Features:**
 - **HA (High Availability):** [TODO: Yes/No, Configuration]
@@ -188,9 +203,9 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | VM Name | Cluster | vCPU | RAM (GB) | Storage (GB) | OS | Role | Status |
 |---|---|---:|---:|---:|---|---|---|
-| {{ netbox.vm.app01.name }} | {{ netbox.cluster.prod.name }} | [TODO: 4] | [TODO: 16] | [TODO: 200] | [TODO: Ubuntu 22.04] | [TODO: App Server] | [TODO: Running] |
-| {{ netbox.vm.db01.name }} | {{ netbox.cluster.prod.name }} | [TODO: 8] | [TODO: 32] | [TODO: 500] | [TODO: RHEL 9] | [TODO: DB Server] | [TODO: Running] |
-| {{ netbox.vm.web01.name }} | {{ netbox.cluster.prod.name }} | [TODO: 2] | [TODO: 8] | [TODO: 100] | [TODO: Ubuntu 22.04] | [TODO: Web Server] | [TODO: Running] |
+| [[ netbox.vm.app01.name ]] | [[ netbox.cluster.prod.name ]] | [TODO: 4] | [TODO: 16] | [TODO: 200] | [TODO: Ubuntu 22.04] | [TODO: App Server] | [TODO: Running] |
+| [[ netbox.vm.db01.name ]] | [[ netbox.cluster.prod.name ]] | [TODO: 8] | [TODO: 32] | [TODO: 500] | [TODO: RHEL 9] | [TODO: DB Server] | [TODO: Running] |
+| [[ netbox.vm.web01.name ]] | [[ netbox.cluster.prod.name ]] | [TODO: 2] | [TODO: 8] | [TODO: 100] | [TODO: Ubuntu 22.04] | [TODO: Web Server] | [TODO: Running] |
 
 **VM Lifecycle:**
 - **Provisioning:** [TODO: Automated/Manual, Tool]
@@ -202,9 +217,9 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | Pool Name | Cluster | CPU Shares | RAM Reservation | Purpose |
 |---|---|---|---|---|
-| [TODO: Production] | {{ netbox.cluster.prod.name }} | [TODO: High] | [TODO: 50%] | [TODO: Production VMs] |
-| [TODO: Development] | {{ netbox.cluster.test.name }} | [TODO: Normal] | [TODO: 25%] | [TODO: Development VMs] |
-| [TODO: Test] | {{ netbox.cluster.test.name }} | [TODO: Low] | [TODO: 10%] | [TODO: Test VMs] |
+| [TODO: Production] | [[ netbox.cluster.prod.name ]] | [TODO: High] | [TODO: 50%] | [TODO: Production VMs] |
+| [TODO: Development] | [[ netbox.cluster.test.name ]] | [TODO: Normal] | [TODO: 25%] | [TODO: Development VMs] |
+| [TODO: Test] | [[ netbox.cluster.test.name ]] | [TODO: Low] | [TODO: 10%] | [TODO: Test VMs] |
 
 ## Container Orchestration
 
@@ -309,8 +324,8 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | System | Type | Capacity (TB) | Usage (%) | Protocol | Location | Purpose |
 |---|---|---:|---:|---|---|---|
-| [TODO: SAN-01] | SAN | [TODO: 100] | [TODO: 70%] | [TODO: FC/iSCSI] | {{ netbox.site.name }} | [TODO: VM Storage] |
-| [TODO: NAS-01] | NAS | [TODO: 50] | [TODO: 60%] | [TODO: NFS/CIFS] | {{ netbox.site.name }} | [TODO: File Shares] |
+| [TODO: SAN-01] | SAN | [TODO: 100] | [TODO: 70%] | [TODO: FC/iSCSI] | [[ netbox.site.name ]] | [TODO: VM Storage] |
+| [TODO: NAS-01] | NAS | [TODO: 50] | [TODO: 60%] | [TODO: NFS/CIFS] | [[ netbox.site.name ]] | [TODO: File Shares] |
 | [TODO: OBJ-01] | Object Storage | [TODO: 200] | [TODO: 40%] | [TODO: S3] | [TODO: Cloud] | [TODO: Backups] |
 
 ### Storage Tiers
@@ -336,8 +351,8 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | System | Type | Capacity (TB) | Retention | Location | Purpose |
 |---|---|---:|---|---|---|
-| [TODO: BACKUP-01] | [TODO: Disk] | [TODO: 100] | [TODO: 30 Days] | {{ netbox.site.name }} | [TODO: Disk Backup] |
-| [TODO: TAPE-01] | [TODO: Tape Library] | [TODO: 500] | [TODO: 7 Years] | {{ netbox.site.name }} | [TODO: Long-term Archive] |
+| [TODO: BACKUP-01] | [TODO: Disk] | [TODO: 100] | [TODO: 30 Days] | [[ netbox.site.name ]] | [TODO: Disk Backup] |
+| [TODO: TAPE-01] | [TODO: Tape Library] | [TODO: 500] | [TODO: 7 Years] | [[ netbox.site.name ]] | [TODO: Long-term Archive] |
 | [TODO: CLOUD-BACKUP] | [TODO: Cloud] | [TODO: Unlimited] | [TODO: 90 Days] | [TODO: Cloud] | [TODO: Off-Site Backup] |
 
 ## Power Supply
@@ -352,8 +367,8 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | UPS System | Capacity (kVA) | Runtime (min) | Location | Status |
 |---|---:|---:|---|---|
-| [TODO: UPS-01] | [TODO: 100] | [TODO: 15] | {{ netbox.site.name }} | [TODO: Online] |
-| [TODO: UPS-02] | [TODO: 100] | [TODO: 15] | {{ netbox.site.name }} | [TODO: Online] |
+| [TODO: UPS-01] | [TODO: 100] | [TODO: 15] | [[ netbox.site.name ]] | [TODO: Online] |
+| [TODO: UPS-02] | [TODO: 100] | [TODO: 15] | [[ netbox.site.name ]] | [TODO: Online] |
 
 **UPS Maintenance:**
 - **Maintenance Interval:** [TODO: e.g., Quarterly]
@@ -444,7 +459,7 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | Phase | Duration | Activities | Responsible |
 |---|---|---|---|
-| **Procurement** | [TODO: 4-8 Weeks] | [TODO: Requirements, Ordering, Delivery] | Andreas Huemmer |
+| **Procurement** | [TODO: 4-8 Weeks] | [TODO: Requirements, Ordering, Delivery] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | **Commissioning** | [TODO: 1-2 Weeks] | [TODO: Installation, Configuration, Testing] | [TODO: Team] |
 | **Operation** | [TODO: 5 Years] | [TODO: Monitoring, Maintenance, Support] | [TODO: Team] |
 | **Refresh** | [TODO: 1-2 Weeks] | [TODO: Migration, Replacement] | [TODO: Team] |
@@ -491,7 +506,7 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | Role | Responsibility | Person | Contact |
 |---|---|---|---|
-| **Infrastructure Manager** | Overall Infrastructure Responsibility | Andreas Huemmer | andreas.huemmer@adminsend.de |
+| **Infrastructure Manager** | Overall Infrastructure Responsibility | {{ meta-organisation-roles.role_IT_Operations_Manager }} | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} |
 | **Network Administrator** | Network Infrastructure | [TODO: Name] | [TODO: Email] |
 | **Storage Administrator** | Storage Systems | [TODO: Name] | [TODO: Email] |
 | **Virtualization Admin** | Virtualization | [TODO: Name] | [TODO: Email] |
@@ -501,17 +516,16 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 ## Contacts
 
 **For Infrastructure Questions:**
-- **IT Operations Manager:** Andreas Huemmer (andreas.huemmer@adminsend.de)
-- **CIO:** Anna Schmidt (anna.schmidt@adminsend.de)
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- **CIO:** [TODO] ({{ meta-organisation-roles.role_CIO_email }})
 
 **Emergency Contacts:**
 - **Data Center:** [TODO: Phone 24/7]
 - **Power Provider:** [TODO: Phone]
 - **Facility Management:** [TODO: Phone]
 
----
-
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
 **Organization:** AdminSend GmbH
+

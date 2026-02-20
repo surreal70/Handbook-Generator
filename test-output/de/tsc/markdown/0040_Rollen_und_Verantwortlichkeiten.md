@@ -1,13 +1,17 @@
 # Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** TSC-0040  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** TSC-0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -34,8 +38,8 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für TSC-Complianc
   - Change Approval
 
 **CISO:**
-- **Name:** {{ meta.roles.ciso.name }}
-- **Email:** {{ meta.roles.ciso.email }}
+- **Name:** [TODO]
+- **Email:** [TODO]
 - **Verantwortlichkeiten:**
   - Sicherheitsstrategie
   - Risikomanagement
@@ -84,8 +88,8 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für TSC-Complianc
 
 ### 4.2 Service Auditor
 
-**Firma:** {{ meta.roles.auditor.name }}  
-**Kontakt:** {{ meta.roles.auditor.email }}  
+**Firma:** [TODO]  
+**Kontakt:** [TODO]  
 **Verantwortlichkeiten:**
 - SOC 2-Audit durchführen
 - Kontrollwirksamkeit prüfen
@@ -129,10 +133,3 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für TSC-Complianc
 **Operations Team:**
 - [TODO: AWS Certified, Azure Certified]
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

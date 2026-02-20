@@ -34,5 +34,3 @@ Language: de
 - [0750 - Anhang Prozesslandkarte](0750_Anhang_Prozesslandkarte.md)
 - [0760 - Anhang Formulare und Vorlagen](0760_Anhang_Formulare_und_Vorlagen.md)
 - [0770 - Anhang Begriffe und Abkuerzungen](0770_Anhang_Begriffe_und_Abkuerzungen.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

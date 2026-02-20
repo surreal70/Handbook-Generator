@@ -1,18 +1,31 @@
 # Policy: Incident Management
 
+**Document-ID:** [FRAMEWORK]-0400
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0400  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.24-A.5.28 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Incident Types:** Security incidents, data breaches, malware, phishing, DDoS, insider threats
 - **Systems:** All IT systems, applications, networks, cloud services
 - **Personnel:** All employees, contractors, suppliers
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -85,10 +98,10 @@ Lessons learned are derived from every incident. Insights flow into the improvem
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Incident Manager:** {{ meta.security.incident_manager }}
-- **SOC Manager:** {{ meta.security.soc_manager }}
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Policy Owner:** [TODO] (CISO)
+- **Incident Manager:** {{ meta-handbook.security_incident_manager }}
+- **SOC Manager:** {{ meta-handbook.security_soc_manager }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Implementation Responsible:** SOC, IT Operations, Incident Response Team
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -166,10 +179,9 @@ Exceptions to this policy are only permitted in justified cases:
 - **GDPR (EU 2016/679)** - Art. 33, 34 - Data Breach Notification
 - **NIS2 Directive** - Network and Information Security Directive
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

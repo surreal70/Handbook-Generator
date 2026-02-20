@@ -1,18 +1,31 @@
 # Statement of Applicability (SoA) – Template
 
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0100  
 **Document Type:** ISMS Evidence/Template  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 6.1.3 d), Annex A  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose and Scope
 
@@ -33,7 +46,7 @@ The SoA is a **mandatory document** according to ISO/IEC 27001:2022 and serves a
 ### 1.2 Scope
 
 This SoA applies to the entire ISMS scope (see `0020_ISMS_Scope.md`):
-- All locations: {{ netbox.site.name }} and others
+- All locations: [[ netbox.site.name ]] and others
 - All IT systems and infrastructure
 - All business processes in scope
 - All information assets
@@ -112,12 +125,12 @@ Controls may be excluded when:
 
 | Control ID | Control Name | Applicable | Justification (if No) | Implementation Status | Implementation/Description | Policy/Guideline | Evidence | Owner | Remarks |
 |------------|--------------|------------|----------------------|----------------------|---------------------------|------------------|----------|-------|---------|
-| **A.5.1** | Policies for information security | Yes | - | Implemented | ISMS policy and topic-specific policies | `0010_ISMS_Information_Security_Policy.md` | Policy documents | Thomas Weber | Annual review |
-| **A.5.2** | Information security roles and responsibilities | Yes | - | Implemented | ISMS governance structure defined | `0040_ISMS_Governance_Roles_and_Responsibilities.md` | RACI matrices | Thomas Weber | - |
-| **A.5.3** | Segregation of duties | Yes | - | In Progress | Role separation in critical processes | `0220_Policy_Access_Control_and_Identity_Management.md` | IAM configuration | Anna Schmidt | 70% implemented |
-| **A.5.4** | Management responsibilities | Yes | - | Implemented | Management commitment documented | `0010_ISMS_Information_Security_Policy.md` | Management review | {{ meta.management.ceo }} | - |
-| **A.5.5** | Contact with authorities | Yes | - | Implemented | Contacts with authorities documented | `0050_Contacts_and_Escalation.md` (BCM) | Contact list | Thomas Weber | - |
-| **A.5.6** | Contact with special interest groups | Yes | - | Implemented | Membership in CERT, industry associations | [TODO: Document] | Membership evidence | Thomas Weber | - |
+| **A.5.1** | Policies for information security | Yes | - | Implemented | ISMS policy and topic-specific policies | `0010_ISMS_Information_Security_Policy.md` | Policy documents | [TODO] | Annual review |
+| **A.5.2** | Information security roles and responsibilities | Yes | - | Implemented | ISMS governance structure defined | `0040_ISMS_Governance_Roles_and_Responsibilities.md` | RACI matrices | [TODO] | - |
+| **A.5.3** | Segregation of duties | Yes | - | In Progress | Role separation in critical processes | `0220_Policy_Access_Control_and_Identity_Management.md` | IAM configuration | [TODO] | 70% implemented |
+| **A.5.4** | Management responsibilities | Yes | - | Implemented | Management commitment documented | `0010_ISMS_Information_Security_Policy.md` | Management review | {{ meta-handbook.management_ceo }} | - |
+| **A.5.5** | Contact with authorities | Yes | - | Implemented | Contacts with authorities documented | `0050_Contacts_and_Escalation.md` (BCM) | Contact list | [TODO] | - |
+| **A.5.6** | Contact with special interest groups | Yes | - | Implemented | Membership in CERT, industry associations | [TODO: Document] | Membership evidence | [TODO] | - |
 | **A.5.7** | Threat intelligence | Yes | - | In Progress | Threat intelligence feeds subscribed | `0060_ISMS_Risk_Management_Methodology.md` | TI feed configuration | Security Team | MITRE ATT&CK, CERT |
 | **A.5.8** | Information security in project management | Yes | - | Planned | Security in project lifecycle | `0680_Policy_Security_in_Projects.md` | Project checklists | PMO | Rollout Q2 2026 |
 | **A.5.9** | Inventory of information and other associated assets | Yes | - | In Progress | Asset inventory maintained | `0720_Appendix_Asset_and_System_Inventory_Template.md` | CMDB, NetBox | IT Operations | 80% captured |
@@ -133,24 +146,24 @@ Controls may be excluded when:
 |------------|--------------|------------|----------------------|----------------------|---------------------------|------------------|----------|-------|---------|
 | **A.6.1** | Screening | Yes | - | Implemented | Background checks for critical roles | `0520_Policy_HR_Security.md` | HR process | HR | - |
 | **A.6.2** | Terms and conditions of employment | Yes | - | Implemented | Security clauses in employment contracts | `0530_Guideline_HR_Onboarding_Role_Change_Offboarding.md` | Employment contracts | HR | - |
-| **A.6.3** | Information security awareness, education and training | Yes | - | In Progress | Security awareness program | `0120_ISMS_Training_Awareness_and_Competence.md` | Training records | Thomas Weber | Quarterly training |
+| **A.6.3** | Information security awareness, education and training | Yes | - | In Progress | Security awareness program | `0120_ISMS_Training_Awareness_and_Competence.md` | Training records | [TODO] | Quarterly training |
 | **A.6.4** | Disciplinary process | Yes | - | Implemented | Disciplinary procedures for violations | `0520_Policy_HR_Security.md` | HR process | HR | - |
 | **A.6.5** | Responsibilities after termination or change of employment | Yes | - | Implemented | Offboarding process | `0530_Guideline_HR_Onboarding_Role_Change_Offboarding.md` | Offboarding checklist | HR | - |
 | **A.6.6** | Confidentiality or non-disclosure agreements | Yes | - | Implemented | NDAs for employees and third parties | `0520_Policy_HR_Security.md` | Signed NDAs | HR | - |
-| **A.6.7** | Remote working | Yes | - | Implemented | Remote work policy | `0500_Policy_Mobile_Device_and_Remote_Work.md` | Remote work guidelines | Anna Schmidt | - |
-| **A.6.8** | Information security event reporting | Yes | - | Implemented | Incident reporting process | `0400_Policy_Incident_Management.md` | Incident reports | Thomas Weber | - |
+| **A.6.7** | Remote working | Yes | - | Implemented | Remote work policy | `0500_Policy_Mobile_Device_and_Remote_Work.md` | Remote work guidelines | [TODO] | - |
+| **A.6.8** | Information security event reporting | Yes | - | Implemented | Incident reporting process | `0400_Policy_Incident_Management.md` | Incident reports | [TODO] | - |
 
 ## 6. SoA Table: Physical Controls (7.x)
 
 | Control ID | Control Name | Applicable | Justification (if No) | Implementation Status | Implementation/Description | Policy/Guideline | Evidence | Owner | Remarks |
 |------------|--------------|------------|----------------------|----------------------|---------------------------|------------------|----------|-------|---------|
-| **A.7.1** | Physical security perimeters | Yes | - | Implemented | Access controls at {{ netbox.site.name }} location | `0480_Policy_Physical_Security.md` | Access logs | Facility Mgmt | - |
+| **A.7.1** | Physical security perimeters | Yes | - | Implemented | Access controls at [[ netbox.site.name ]] location | `0480_Policy_Physical_Security.md` | Access logs | Facility Mgmt | - |
 | **A.7.2** | Physical entry | Yes | - | Implemented | Access cards, visitor management | `0490_Guideline_Access_Visitors_and_Equipment_Protection.md` | Visitor lists | Facility Mgmt | - |
 | **A.7.3** | Securing offices, rooms and facilities | Yes | - | Implemented | Server room secured, alarm systems | `0480_Policy_Physical_Security.md` | Security concept | Facility Mgmt | - |
 | **A.7.4** | Physical security monitoring | Yes | - | Implemented | Video surveillance, alarm systems | `0480_Policy_Physical_Security.md` | Monitoring logs | Facility Mgmt | GDPR-compliant |
 | **A.7.5** | Protecting against physical and environmental threats | Yes | - | Implemented | Fire protection, climate control, UPS | `0480_Policy_Physical_Security.md` | Maintenance logs | Facility Mgmt | - |
 | **A.7.6** | Working in secure areas | Yes | - | Implemented | Clean desk policy, secure areas | `0480_Policy_Physical_Security.md` | Audit reports | Facility Mgmt | - |
-| **A.7.7** | Clear desk and clear screen | Yes | - | In Progress | Clear desk policy communicated | `0480_Policy_Physical_Security.md` | Awareness campaign | Thomas Weber | Rollout ongoing |
+| **A.7.7** | Clear desk and clear screen | Yes | - | In Progress | Clear desk policy communicated | `0480_Policy_Physical_Security.md` | Awareness campaign | [TODO] | Rollout ongoing |
 | **A.7.8** | Equipment siting and protection | Yes | - | Implemented | Equipment protection, theft prevention | `0490_Guideline_Access_Visitors_and_Equipment_Protection.md` | Asset register | IT Operations | - |
 | **A.7.9** | Security of assets off-premises | Yes | - | Implemented | Laptop encryption, mobile device policy | `0500_Policy_Mobile_Device_and_Remote_Work.md` | MDM configuration | IT Operations | - |
 | **A.7.10** | Storage media | Yes | - | Implemented | Secure handling of storage media | `0280_Policy_Data_Classification_and_Information_Handling.md` | Handling procedures | IT Operations | - |
@@ -182,7 +195,7 @@ Controls may be excluded when:
 
 | Control ID | Control Name | Justification for Exclusion | Alternative Measures | Approved By |
 |------------|--------------|----------------------------|---------------------|-------------|
-| [TODO] | [TODO] | [TODO: Not in scope, risk accepted, etc.] | [TODO: If available] | Thomas Weber |
+| [TODO] | [TODO] | [TODO: Not in scope, risk accepted, etc.] | [TODO: If available] | [TODO] |
 
 **Important:** Exclusions must be documented and approved. They must not impair the ability to meet security requirements.
 
@@ -258,19 +271,16 @@ For a complete overview of all 93 Annex A controls see:
 - **ISO/IEC 27001:2022/Amd 1:2024** - Amendment 1 (Annex A updates)
 - **ISO/IEC 27002:2022** - Information security controls (detailed guidance)
 
----
-
 ## Change History
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | {{ meta.document.date }} | Thomas Weber | Initial version | {{ meta.management.ceo }} |
-
----
+| 1.0 | [TODO] | [TODO] | Initial version | {{ meta-handbook.management_ceo }} |
 
 **Approved by:**  
-Thomas Weber, CISO  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (Annually)
+**Next Review:** [TODO] (Annually)
+

@@ -1,18 +1,21 @@
 # Policy: Backup und Wiederherstellung
 
-
-
-**Dokument-ID:** 0420  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.13 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0420
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Datenbanken, Anwendungen, Dateisysteme, VMs, Cloud-Ressourcen
 - **Daten:** Alle geschäftskritischen und personenbezogenen Daten
 - **Backup-Typen:** Full, Incremental, Differential, Snapshot, Cloud Backup
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -87,9 +90,9 @@ Backup-Strategien sind in die Disaster Recovery und Business Continuity Pläne i
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Backup Administrator:** {{ meta.it.backup_admin }}
-- **BCM Manager:** {{ meta.bcm.manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **Backup Administrator:** {{ meta-handbook.it_backup_admin }}
+- **BCM Manager:** {{ meta-handbook.bcm_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, System Owner
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -164,10 +167,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ISO 22301** - Business Continuity Management
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung (Backup von personenbezogenen Daten)
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

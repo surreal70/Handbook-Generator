@@ -1,18 +1,31 @@
 # Continuous Improvement (CI) in the ISMS
 
+**Document-ID:** [FRAMEWORK]-0160
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0160  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 10.2  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose and Objectives
 
@@ -182,8 +195,8 @@ The ISMS follows the PDCA cycle (Plan-Do-Check-Act):
 | Item ID | Title | Source | Description | Benefit | Effort | Owner | Priority | Status |
 |---------|-------|--------|-------------|---------|--------|-------|----------|--------|
 | CI-001 | SIEM automation | Monitoring | Automatic response playbooks | Faster incident response | 40 PD | Security Team | High | Planned |
-| CI-002 | Zero-trust architecture | Best Practice | Implement zero-trust principles | Improved segmentation | 200 PD | Anna Schmidt | Medium | Evaluation |
-| CI-003 | Security Champions Program | Awareness | Multipliers in all teams | Higher security awareness | 20 PD | Thomas Weber | High | In Progress |
+| CI-002 | Zero-trust architecture | Best Practice | Implement zero-trust principles | Improved segmentation | 200 PD | [TODO] | Medium | Evaluation |
+| CI-003 | Security Champions Program | Awareness | Multipliers in all teams | Higher security awareness | 20 PD | [TODO] | High | In Progress |
 | CI-004 | Immutable infrastructure | DevOps | Infrastructure as Code with immutability | Better compliance, less drift | 80 PD | DevOps | Medium | Planned |
 
 [TODO: Add additional improvement suggestions]
@@ -450,11 +463,10 @@ Priority = (Risk Reduction × 0.4) + (Compliance × 0.2) +
 - **ISO 9001:2015** - Clause 10.3: Continual improvement
 - **NIST Cybersecurity Framework** - Continuous improvement practices
 
----
-
 **Approved by:**  
-Thomas Weber, CISO  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]
+

@@ -1,18 +1,31 @@
 # Policy: Backup and Recovery
 
+**Document-ID:** [FRAMEWORK]-0420
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0420  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.13 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Systems:** All IT systems, databases, applications, file systems, VMs, cloud resources
 - **Data:** All business-critical and personal data
 - **Backup Types:** Full, incremental, differential, snapshot, cloud backup
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -87,9 +100,9 @@ Backup strategies are integrated into disaster recovery and business continuity 
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Backup Administrator:** {{ meta.it.backup_admin }}
-- **BCM Manager:** {{ meta.bcm.manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **Backup Administrator:** {{ meta-handbook.it_backup_admin }}
+- **BCM Manager:** {{ meta-handbook.bcm_manager }}
 - **Implementation Responsible:** IT Operations, System Owners
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -164,10 +177,9 @@ Exceptions to this policy are only permitted in justified cases:
 - **ISO 22301** - Business Continuity Management
 - **GDPR (EU 2016/679)** - General Data Protection Regulation (backup of personal data)
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

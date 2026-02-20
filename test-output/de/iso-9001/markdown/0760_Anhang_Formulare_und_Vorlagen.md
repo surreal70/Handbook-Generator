@@ -1,11 +1,17 @@
 # Anhang: Formulare und Vorlagen
 
-**Dokument-ID:** 0760  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0760
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieser Anhang enthält eine Übersicht aller Formulare und Vorlagen, die im QMS von {{ meta.organization }} verwendet werden.
+Dieser Anhang enthält eine Übersicht aller Formulare und Vorlagen, die im QMS von AdminSend GmbH verwendet werden.
 
 ## Formularverzeichnis
 
@@ -316,6 +322,5 @@ Dieser Anhang enthält eine Übersicht aller Formulare und Vorlagen, die im QMS 
 6. Alte Version zurückziehen
 7. Benutzer informieren
 
----
-
 **Hinweis:** Alle Formulare sind im Dokumentenmanagementsystem verfügbar.
+

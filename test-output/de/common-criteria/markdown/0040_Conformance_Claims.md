@@ -1,11 +1,17 @@
 # Conformance Claims
 
-**Dokument-ID:** 0040  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -130,8 +136,8 @@
 ## 6. Conformance Maintenance
 
 ### 6.1 Version Control
-**ST Version:** {{ meta.version }}  
-**Last Conformance Review:** {{ meta.date }}  
+**ST Version:** 0  
+**Last Conformance Review:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Datum]  
 
 ### 6.2 Change Management
@@ -140,10 +146,9 @@
 - Impact assessment: [TODO]
 - Re-evaluation triggers: [TODO]
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Verifiziere Konformität mit gewählten Standards
 3. Dokumentiere alle Abweichungen vollständig
 4. Stelle Konsistenz mit anderen ST-Abschnitten sicher
+

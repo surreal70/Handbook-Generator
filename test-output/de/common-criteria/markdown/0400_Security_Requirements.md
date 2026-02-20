@@ -1,11 +1,17 @@
 # Sicherheitsanforderungen (Security Requirements)
 
-**Dokument-ID:** 0400  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0400
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -246,11 +252,10 @@ Eine vollständige Übersicht aller SFRs mit Abhängigkeiten findet sich in Doku
 
 Eine vollständige Übersicht aller SARs entsprechend dem gewählten EAL findet sich in Dokument 0410.
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Spezifiziere alle Assignments und Selections in den SFRs
 3. Verifiziere die Vollständigkeit der SFR-Abhängigkeiten (siehe Dokument 0430)
 4. Stelle sicher, dass alle SFRs aus den Sicherheitszielen abgeleitet sind
 5. Dokumentiere die Rationale in Dokument 0420
+

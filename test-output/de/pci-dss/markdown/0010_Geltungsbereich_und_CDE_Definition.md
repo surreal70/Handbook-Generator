@@ -1,13 +1,17 @@
 # Geltungsbereich und CDE-Definition
 
-**Dokument-ID:** PCI-0010  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** PCI-0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -35,16 +39,16 @@ Dieses Dokument definiert den Geltungsbereich der PCI-DSS-Compliance für AdminS
 ### 2.1 Organisationsinformationen
 
 **Organisation:** AdminSend GmbH  
-**Adresse:** Musterstraße 123, 80331 München  
-**Land:** Deutschland  
-**Website:** https://www.adminsend.de  
+**Adresse:** Musterstraße 123, [TODO] [TODO]  
+**Land:** [TODO]  
+**Website:** [TODO]  
 
 ### 2.2 PCI-DSS-Klassifizierung
 
 **Merchant Level:** [TODO: Level 1/2/3/4]  
 **Service Provider Level:** [TODO: Level 1/2 oder N/A]  
-**Merchant ID:** {{ meta.pci.merchant_id }}  
-**Service Provider ID:** {{ meta.pci.service_provider_id }}  
+**Merchant ID:** {{ meta-handbook.merchant_id }}  
+**Service Provider ID:** {{ meta-handbook.service_provider_id }}  
 
 **Transaktionsvolumen (jährlich):**
 - Visa: [TODO: Anzahl Transaktionen]
@@ -262,7 +266,7 @@ Folgende Systeme sind NICHT Teil des CDE:
 ### 11.1 Verantwortliche Personen
 
 **PCI-DSS Program Manager:** [TODO: Name] ([TODO: E-Mail])  
-**CISO:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})  
+**CISO:** [TODO] ([TODO])  
 **IT-Leiter:** [TODO: Name] ([TODO: E-Mail])  
 **QSA (Qualified Security Assessor):** [TODO: Firma/Name]  
 **ASV (Approved Scanning Vendor):** [TODO: Firma]  
@@ -277,13 +281,5 @@ Folgende Systeme sind NICHT Teil des CDE:
 | Jährliches Assessment | C | A | I | R |
 
 **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

@@ -1,11 +1,17 @@
 # Security Requirements
 
-**Document-ID:** 0400  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0400
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -246,11 +252,10 @@ A complete overview of all SFRs with dependencies can be found in document 0430.
 
 A complete overview of all SARs according to the selected EAL can be found in document 0410.
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders
 2. Specify all assignments and selections in the SFRs
 3. Verify completeness of SFR dependencies (see document 0430)
 4. Ensure all SFRs are derived from security objectives
 5. Document the rationale in document 0420
+

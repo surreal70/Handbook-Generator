@@ -1,17 +1,23 @@
 # Control Traceability Matrix
 
-**Document-ID:** NIST-0800  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0800
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
 ## 1. Purpose
 
-This document provides a traceability matrix for all NIST 800-53 security controls for system {{ meta.nist.system_name }}.
+This document provides a traceability matrix for all NIST 800-53 security controls for system {{ meta-handbook.system_name }}.
 
 ## 2. Control Traceability Matrix
 
@@ -52,13 +58,5 @@ This document provides a traceability matrix for all NIST 800-53 security contro
 | Maintenance (MA) | [TODO] | [TODO] | [TODO]% |
 | Planning (PL) | [TODO] | [TODO] | [TODO]% |
 | System Protection (SC) | [TODO] | [TODO] | [TODO]% |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

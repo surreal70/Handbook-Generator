@@ -1,11 +1,17 @@
 # Security Objectives Summary
 
-**Document-ID:** 0330  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0330
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -15,7 +21,7 @@
 
 ## 1. Introduction
 
-This document provides a compact summary of all security objectives for the TOE **{{ meta.toe_name }}** and its operational environment. The security objectives describe the intended security properties required to counter identified threats, comply with organizational security policies, and fulfill assumptions.
+This document provides a compact summary of all security objectives for the TOE **{{ meta-handbook.toe_name }}** and its operational environment. The security objectives describe the intended security properties required to counter identified threats, comply with organizational security policies, and fulfill assumptions.
 
 ### 1.1 Purpose
 
@@ -363,12 +369,4 @@ After the summary of security objectives:
 - Template 0310: Security Objectives Rationale
 - Template 0320: Security Objectives Coverage Matrix
 - Template 0400-0450: Security Requirements
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.owner }} | Initial version |
 

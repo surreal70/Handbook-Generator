@@ -1,11 +1,17 @@
 # Control of Documented Information
 
-**Document-ID:** 0330  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0330
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document defines how {{ meta.organization }} controls documented information in accordance with ISO 9001:2015 Clause 7.5.
+This document defines how AdminSend GmbH controls documented information in accordance with ISO 9001:2015 Clause 7.5.
 
 ## Documented Information in QMS
 
@@ -369,8 +375,6 @@ This document defines how {{ meta.organization }} controls documented informatio
 - Version control requirements
 - Record keeping requirements
 - Document management system use
-
----
 
 **Next Steps:**
 1. Establish document control procedures

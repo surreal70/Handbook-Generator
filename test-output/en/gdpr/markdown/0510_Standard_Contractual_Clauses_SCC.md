@@ -1,11 +1,17 @@
 # Standard Contractual Clauses (SCC)
 
-**Document-ID:** 0510  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0510
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the use of Standard Contractual Clauses (SCC) at {{ meta.organization }} for the transfer of personal data to third countries according to Art. 46(2)(c) GDPR.
+This document describes the use of Standard Contractual Clauses (SCC) at AdminSend GmbH for the transfer of personal data to third countries according to Art. 46(2)(c) GDPR.
 
 ## New Standard Contractual Clauses (2021)
 
@@ -40,7 +46,7 @@ This document describes the use of Standard Contractual Clauses (SCC) at {{ meta
 - Data exchange between group companies (both as controllers)
 - Transfer to foreign authorities (where permissible)
 
-**Use at {{ meta.organization }}:**
+**Use at AdminSend GmbH:**
 
 | Transfer | Recipient | Country | Conclusion Date | Documentation |
 |----------|-----------|---------|-----------------|---------------|
@@ -56,7 +62,7 @@ This document describes the use of Standard Contractual Clauses (SCC) at {{ meta
 - Call centers in third countries
 - Payroll by foreign service provider
 
-**Use at {{ meta.organization }}:**
+**Use at AdminSend GmbH:**
 
 | Processor | Service | Country | Conclusion Date | Documentation |
 |-----------|---------|---------|-----------------|---------------|
@@ -70,7 +76,7 @@ This document describes the use of Standard Contractual Clauses (SCC) at {{ meta
 - Cloud provider uses sub-hosting provider
 - IT service provider outsources parts to sub-provider
 
-**Use at {{ meta.organization }}:**
+**Use at AdminSend GmbH:**
 
 | Main Processor | Sub-Processor | Country | Conclusion Date | Documentation |
 |----------------|---------------|---------|-----------------|---------------|
@@ -84,7 +90,7 @@ This document describes the use of Standard Contractual Clauses (SCC) at {{ meta
 - Processor transfers data to group parent in third country
 - Return transfer of data after contract end
 
-**Use at {{ meta.organization }}:**
+**Use at AdminSend GmbH:**
 
 | Processor | Recipient | Country | Conclusion Date | Documentation |
 |-----------|-----------|---------|-----------------|---------------|
@@ -97,7 +103,7 @@ This document describes the use of Standard Contractual Clauses (SCC) at {{ meta
 #### Part A: List of Parties
 
 **Data Exporter (EU):**
-- Name: [TODO: {{ meta.organization }}]
+- Name: [TODO: AdminSend GmbH]
 - Address: [TODO: Address]
 - Contact: [TODO: Name, Email, Phone]
 - Role: Controller / Processor
@@ -356,11 +362,10 @@ According to Schrems-II judgment, a TIA must be conducted in addition to SCCs.
 - **TOM Documentation (Art. 32):** Detailed security measures
 - **Transfer Impact Assessment:** Risk assessment
 
----
-
 **Next Steps:**
 1. Identify all third country transfers requiring SCCs
 2. Select appropriate SCC module
 3. Complete all annexes fully
 4. Conduct a Transfer Impact Assessment
 5. Conclude SCCs with all data importers
+

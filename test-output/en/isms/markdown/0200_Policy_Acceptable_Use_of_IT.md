@@ -1,18 +1,31 @@
 # Policy: Acceptable Use of IT
 
+**Document-ID:** [FRAMEWORK]-0200
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0200  
 **Document Type:** Policy (Abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.10 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -28,7 +41,7 @@ This policy applies to:
 - **Systems:** All IT systems, networks, applications, email, internet, cloud services
 - **Persons:** All employees, contractors, temporary workers, interns, and third parties with access to IT resources
 - **Devices:** Company-owned and private devices (BYOD) accessing company resources
-- **Locations:** {{ netbox.site.name }} and all operational sites
+- **Locations:** [[ netbox.site.name ]] and all operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -76,7 +89,7 @@ Users are personally responsible for all activities performed under their creden
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
+- **Policy Owner:** [TODO] (CISO)
 - **Implementation Responsible:** IT Operations, HR
 - **Control/Audit Authority:** ISMS, Internal Audit, Legal/Compliance
 
@@ -149,10 +162,9 @@ Exceptions to this policy are only permitted in justified cases:
 - **GDPR (EU 2016/679)** - General Data Protection Regulation
 - Employment law requirements for IT use
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

@@ -1,11 +1,17 @@
 # Threats (Bedrohungen)
 
-**Dokument-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0210
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -78,8 +84,6 @@
 - [TODO: T1078 - Valid Accounts]
 - [TODO: T1552 - Unsecured Credentials]
 
----
-
 ### T.EAVESDROPPING
 **Bedrohungs-ID:** T.EAVESDROPPING  
 **Kategorie:** Confidentiality  
@@ -110,8 +114,6 @@
 
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
-
----
 
 ### T.DATA_LEAKAGE
 **Bedrohungs-ID:** T.DATA_LEAKAGE  
@@ -159,8 +161,6 @@
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
 
----
-
 ### T.CODE_INJECTION
 **Bedrohungs-ID:** T.CODE_INJECTION  
 **Kategorie:** Integrity  
@@ -203,8 +203,6 @@
 
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
-
----
 
 ### T.RESOURCE_EXHAUSTION
 **Bedrohungs-ID:** T.RESOURCE_EXHAUSTION  
@@ -249,8 +247,6 @@
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
 
----
-
 ### T.CREDENTIAL_THEFT
 **Bedrohungs-ID:** T.CREDENTIAL_THEFT  
 **Kategorie:** Authentication  
@@ -294,8 +290,6 @@
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
 
----
-
 ### T.UNAUTHORIZED_FUNCTION_ACCESS
 **Bedrohungs-ID:** T.UNAUTHORIZED_FUNCTION_ACCESS  
 **Kategorie:** Authorization  
@@ -338,8 +332,6 @@
 
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
-
----
 
 ### T.LOG_TAMPERING
 **Bedrohungs-ID:** T.LOG_TAMPERING  
@@ -426,8 +418,6 @@
 |-----------|---------------|---------------------|
 | [TODO: T.001] | [TODO: TA.001, TA.002] | [TODO: High] |
 | [TODO: T.002] | [TODO: TA.003] | [TODO: Medium] |
-
----
 
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Bedrohungen

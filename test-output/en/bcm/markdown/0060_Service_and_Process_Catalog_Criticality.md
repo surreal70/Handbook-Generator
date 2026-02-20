@@ -1,13 +1,17 @@
 # Service and Process Catalog with Criticality
 
-**Document ID:** BCM-0060  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -143,17 +147,17 @@ L │              [Service F]  [Service G]
 
 | IT Service | Supported Business Processes | Criticality | IT Owner | Technology |
 |------------|----------------------------|--------------|----------|------------|
-| [TODO: ERP System] | Order processing, finance, production | HIGH | {{ meta.roles.it_operations_manager.name }} | [TODO: SAP/Oracle/etc.] |
-| [TODO: Email] | All business processes | HIGH | {{ meta.roles.it_operations_manager.name }} | [TODO: Exchange/M365/etc.] |
+| [TODO: ERP System] | Order processing, finance, production | HIGH | [TODO] | [TODO: SAP/Oracle/etc.] |
+| [TODO: Email] | All business processes | HIGH | [TODO] | [TODO: Exchange/M365/etc.] |
 | [TODO: CRM] | Sales, customer service | MEDIUM | [TODO] | [TODO: Salesforce/etc.] |
 
 ### 4.2 IT Infrastructure
 
 | Infrastructure Component | Dependent Services | Criticality | Location | Redundancy |
 |-------------------------|-------------------|--------------|----------|------------|
-| [TODO: Core Switch] | All IT services | HIGH | München | Yes/No |
-| [TODO: Firewall] | Internet access | HIGH | München | Yes/No |
-| [TODO: Storage] | All data | HIGH | München | Yes/No |
+| [TODO: Core Switch] | All IT services | HIGH | [TODO] | Yes/No |
+| [TODO: Firewall] | Internet access | HIGH | [TODO] | Yes/No |
+| [TODO: Storage] | All data | HIGH | [TODO] | Yes/No |
 
 ## 5. Dependency Analysis
 
@@ -204,8 +208,8 @@ L │              [Service F]  [Service G]
 
 | Stakeholder Group | Affected Services | Communication Need | Contact Person |
 |-------------------|-------------------|-------------------|----------------|
-| Executive Management | All critical services | Strategic decisions | {{ meta.roles.ceo.name }} |
-| IT Department | All IT-dependent services | Technical coordination | {{ meta.roles.cio.name }} |
+| Executive Management | All critical services | Strategic decisions | [TODO] |
+| IT Department | All IT-dependent services | Technical coordination | [TODO] |
 | Departments | Respective services | Operational implementation | [TODO: Department heads] |
 | Employees | All services | Information and instructions | [TODO: HR/Communication] |
 
@@ -233,13 +237,5 @@ L │              [Service F]  [Service G]
 2. Service owners review and update their services
 3. Criticality assessment is validated
 4. Changes are documented and communicated
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

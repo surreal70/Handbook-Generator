@@ -1,12 +1,27 @@
 # Log Management und Audit
 
+**Dokument-ID:** [FRAMEWORK]-0190
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
 Dieses Dokument beschreibt die Log-Management- und Audit-Prozesse für AdminSend GmbH. Es definiert Log-Sammlung, -Aggregation, -Retention, Audit-Trail-Anforderungen und SIEM-Integration zur Sicherstellung von Nachvollziehbarkeit, Compliance und Security-Monitoring.
 
 **Geltungsbereich:** Alle IT-Systeme, Netzwerke, Applikationen und Security-Komponenten von AdminSend GmbH
 
-**Verantwortlich:** Thomas Weber (thomas.weber@adminsend.de)
+**Verantwortlich:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 
 ## Log-Management-Grundlagen
 
@@ -225,21 +240,21 @@ Dieses Dokument beschreibt die Log-Management- und Audit-Prozesse für AdminSend
 
 ### Log-Aggregation-Platform
 
-**SIEM-System:** {{ meta.siem_system }}  
-**Version:** {{ meta.siem_version }}  
-**Management-URL:** {{ meta.siem_url }}
+**SIEM-System:** {{ meta-handbook.siem_system }}  
+**Version:** [TODO]  
+**Management-URL:** {{ meta-handbook.siem_url }}
 
 **Komponenten:**
-- **Log-Collectors:** {{ meta.log_collectors }}
-- **Indexer:** {{ meta.log_indexers }}
-- **Search-Heads:** {{ meta.log_search_heads }}
-- **Storage:** {{ meta.log_storage }}
+- **Log-Collectors:** {{ meta-handbook.log_collectors }}
+- **Indexer:** {{ meta-handbook.log_indexers }}
+- **Search-Heads:** {{ meta-handbook.log_search_heads }}
+- **Storage:** {{ meta-handbook.log_storage }}
 
 **Kapazität:**
-- **Ingestion-Rate:** {{ meta.log_ingestion_rate }} GB/Tag
-- **Storage-Kapazität:** {{ meta.log_storage_capacity }} TB
-- **Retention (Hot):** {{ meta.log_retention_hot }} Tage
-- **Retention (Cold):** {{ meta.log_retention_cold }} Tage
+- **Ingestion-Rate:** {{ meta-handbook.log_ingestion_rate }} GB/Tag
+- **Storage-Kapazität:** {{ meta-handbook.log_storage_capacity }} TB
+- **Retention (Hot):** {{ meta-handbook.log_retention_hot }} Tage
+- **Retention (Cold):** {{ meta-handbook.log_retention_cold }} Tage
 
 ### Log-Quellen-Konfiguration
 
@@ -250,16 +265,16 @@ Dieses Dokument beschreibt die Log-Management- und Audit-Prozesse für AdminSend
 # /etc/rsyslog.d/50-remote.conf
 
 # Alle Logs an zentralen Syslog-Server senden
-*.* @@syslog.{{ meta.organization.domain }}:514
+*.* @@syslog.{{ meta-handbook.domain }}:514
 
 # Nur Security-Logs senden
-authpriv.* @@syslog.{{ meta.organization.domain }}:514
+authpriv.* @@syslog.{{ meta-handbook.domain }}:514
 
 # TLS-verschlüsselt
 $DefaultNetstreamDriver gtls
 $ActionSendStreamDriverMode 1
 $ActionSendStreamDriverAuthMode x509/name
-*.* @@syslog.{{ meta.organization.domain }}:6514
+*.* @@syslog.{{ meta-handbook.domain }}:6514
 ```
 
 #### Windows-Server
@@ -275,7 +290,7 @@ wecutil cs subscription.xml
 # Subscription-XML
 <Subscription>
   <SubscriptionId>Security-Events</SubscriptionId>
-  <DestinationUrl>http://wec-server.{{ meta.organization.domain }}:5985/wsman</DestinationUrl>
+  <DestinationUrl>http://wec-server.{{ meta-handbook.domain }}:5985/wsman</DestinationUrl>
   <Query>
     <QueryList>
       <Query Id="0">
@@ -289,7 +304,7 @@ wecutil cs subscription.xml
 #### Firewall
 
 **Syslog-Konfiguration:**
-- Syslog-Server: {{ netbox.syslog.server }}
+- Syslog-Server: [[ netbox.syslog.server ]]
 - Facility: Local6
 - Severity: Informational und höher
 - Format: RFC 5424
@@ -426,7 +441,7 @@ audit_log_format = JSON
 - Integrität: SHA-256 Checksums
 - Metadaten: JSON-Index
 
-**Archiv-Speicherort:** {{ meta.log_archive_location }}
+**Archiv-Speicherort:** {{ meta-handbook.log_archive_location }}
 
 ### Log-Löschung
 
@@ -449,7 +464,7 @@ audit_log_format = JSON
 
 ### SIEM-Integration
 
-**SIEM-System:** {{ meta.siem_system }}
+**SIEM-System:** {{ meta-handbook.siem_system }}
 
 **Funktionen:**
 - **Real-time Monitoring:** Echtzeit-Überwachung
@@ -574,9 +589,9 @@ THEN alert "Unauthorized Configuration Change"
 ### Alerting
 
 **Alert-Kanäle:**
-- **E-Mail:** {{ meta.alert_email }}
+- **E-Mail:** {{ meta-handbook.alert_email }}
 - **SMS:** Für kritische Alerts
-- **Ticketing:** {{ meta.ticketing_system }}
+- **Ticketing:** {{ meta-handbook.ticketing_system }}
 - **SIEM-Console:** Real-time Alerts
 - **Slack/Teams:** Team-Benachrichtigungen
 
@@ -724,7 +739,7 @@ THEN alert "Unauthorized Configuration Change"
 
 ### SIEM-Platform
 
-**System:** {{ meta.siem_system }}  
+**System:** {{ meta-handbook.siem_system }}  
 **Komponenten:**
 - Indexer
 - Search-Heads
@@ -771,7 +786,7 @@ THEN alert "Unauthorized Configuration Change"
 - Retention-Policy-Umsetzung
 - Tool-Administration
 
-**Team-Lead:** Andreas Huemmer
+**Team-Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Security-Operations-Team
 
@@ -781,7 +796,7 @@ THEN alert "Unauthorized Configuration Change"
 - Use-Case-Entwicklung
 - Threat-Hunting
 
-**Team-Lead:** Thomas Weber
+**Team-Lead:** [TODO]
 
 ### Compliance-Officer
 
@@ -791,7 +806,7 @@ THEN alert "Unauthorized Configuration Change"
 - Retention-Policy-Review
 - Regulierungs-Überwachung
 
-**Person:** {{ meta.compliance_officer }}
+**Person:** [TODO]
 
 ## Metriken und Reporting
 
@@ -840,10 +855,9 @@ THEN alert "Unauthorized Configuration Change"
 - CIS Controls v8 - Control 8 (Audit Log Management)
 - ITIL v4 - Monitoring and Event Management
 
----
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.date }}

@@ -1,11 +1,17 @@
 # Data Transfers to Third Countries
 
-**Document-ID:** 0500  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0500
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document regulates the transfer of personal data to third countries (outside EU/EEA) at {{ meta.organization }} according to Art. 44-50 GDPR. It ensures that an adequate level of protection is guaranteed even for international data transfers.
+This document regulates the transfer of personal data to third countries (outside EU/EEA) at AdminSend GmbH according to Art. 44-50 GDPR. It ensures that an adequate level of protection is guaranteed even for international data transfers.
 
 ## Principle (Art. 44)
 
@@ -310,11 +316,10 @@ Data subjects must be informed about third country transfers:
 - **Processing by Processor (Art. 28):** SCCs with processors in third countries
 - **Information Obligations (Art. 13-14):** Transparency towards data subjects
 
----
-
 **Next Steps:**
 1. Identify all third country transfers
 2. Check adequacy decisions
 3. Implement appropriate safeguards (SCCs, BCRs)
 4. Conduct Transfer Impact Assessments
 5. Inform data subjects transparently
+

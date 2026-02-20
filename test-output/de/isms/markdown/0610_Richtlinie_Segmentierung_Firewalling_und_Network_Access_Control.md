@@ -1,14 +1,17 @@
 # Richtlinie: Segmentierung, Firewalling und Network Access Control
 
-**Dokument-ID:** 0610  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0600_Policy_Netzwerksicherheit.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.20, A.8.21, A.8.22  
-**Owner:** {{ meta.network.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0610
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -86,7 +89,7 @@ Diese Richtlinie konkretisiert die `0600_Policy_Netzwerksicherheit.md` und defin
 - Zwischen Zonen
 - Micro-Segmentation
 
-**Firewall-Plattform:** {{ meta.network.firewall }}
+**Firewall-Plattform:** {{ meta-handbook.network_firewall }}
 
 ### 3.2 Firewall-Regeln
 
@@ -140,7 +143,7 @@ Diese Richtlinie konkretisiert die `0600_Policy_Netzwerksicherheit.md` und defin
 
 ### 4.1 NAC-System
 
-**Plattform:** {{ meta.network.nac_solution }} (z.B. Cisco ISE, Aruba ClearPass)
+**Plattform:** {{ meta-handbook.network_nac_solution }} (z.B. Cisco ISE, Aruba ClearPass)
 
 **Funktionen:**
 - 802.1X Authentifizierung
@@ -197,7 +200,7 @@ Diese Richtlinie konkretisiert die `0600_Policy_Netzwerksicherheit.md` und defin
 - Zwischen kritischen Zonen
 - IPS-Modus
 
-**IDS/IPS-System:** {{ meta.security.ids_ips }}
+**IDS/IPS-System:** {{ meta-handbook.security_ids_ips }}
 
 ### 5.2 Signaturen und Policies
 
@@ -279,7 +282,7 @@ Diese Richtlinie konkretisiert die `0600_Policy_Netzwerksicherheit.md` und defin
 - Analyse von Traffic-Mustern
 - Anomalie-Erkennung
 
-**Tools:** {{ meta.network.flow_tool }}
+**Tools:** {{ meta-handbook.network_flow_tool }}
 
 ### 8.2 Packet Capture
 
@@ -318,7 +321,6 @@ Diese Richtlinie konkretisiert die `0600_Policy_Netzwerksicherheit.md` und defin
 - **ISO/IEC 27001:2022 Annex A.8.22** - Segregation of networks
 - **NIST SP 800-41** - Guidelines on Firewalls and Firewall Policy
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

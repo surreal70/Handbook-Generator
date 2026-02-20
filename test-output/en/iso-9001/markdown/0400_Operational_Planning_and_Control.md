@@ -1,11 +1,17 @@
 # Operational Planning and Control
 
-**Document-ID:** 0400  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0400
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,20 +19,20 @@
 
 ## Purpose
 
-This document defines how {{ meta.organization }} conducts operational planning and control to meet requirements for the provision of products and services and to implement actions determined in Clause 6.
+This document defines how AdminSend GmbH conducts operational planning and control to meet requirements for the provision of products and services and to implement actions determined in Clause 6.
 
 ## Operational Planning (8.1)
 
 ### Planning Requirements
 
-**{{ meta.organization }} plans, implements, and controls the processes needed to:**
+**AdminSend GmbH plans, implements, and controls the processes needed to:**
 - Meet requirements for the provision of products and services
 - Implement actions determined in Clause 6
 - Achieve intended outcomes
 
 ### Planning Criteria
 
-**When planning, {{ meta.organization }} considers:**
+**When planning, AdminSend GmbH considers:**
 - Requirements for products and services
 - Criteria for processes and product acceptance
 - Required resources
@@ -37,7 +43,7 @@ This document defines how {{ meta.organization }} conducts operational planning 
 
 ### Control Measures
 
-**{{ meta.organization }} controls planned changes and reviews consequences of unintended changes by:**
+**AdminSend GmbH controls planned changes and reviews consequences of unintended changes by:**
 - Establishing process criteria
 - Implementing process control
 - Retaining documented information
@@ -45,7 +51,7 @@ This document defines how {{ meta.organization }} conducts operational planning 
 
 ### Outsourced Processes
 
-**For outsourced processes, {{ meta.organization }} ensures:**
+**For outsourced processes, AdminSend GmbH ensures:**
 - Control or influence over outsourced processes
 - Type and extent of control are defined in QMS
 - Organization's responsibility remains
@@ -71,7 +77,7 @@ This document defines how {{ meta.organization }} conducts operational planning 
 
 ### Monitoring and Measurement
 
-**{{ meta.organization }} monitors and measures:**
+**AdminSend GmbH monitors and measures:**
 - Process performance
 - Product conformity
 - Service quality
@@ -106,11 +112,10 @@ This document defines how {{ meta.organization }} conducts operational planning 
 - Monitoring process performance
 - Reporting deviations
 
----
-
 **Next Steps:**
 1. Define all operational processes
 2. Establish process criteria
 3. Implement control measures
 4. Establish performance indicators
 5. Monitor and measure regularly
+

@@ -112,15 +112,9 @@ Use the CCM mappings to these standards to identify compliance overlaps.
 - [CSA Cloud Controls Matrix](https://cloudsecurityalliance.org/research/cloud-controls-matrix/)
 - [CSA Security Guidance](https://cloudsecurityalliance.org/research/guidance/)
 - [CSA STAR Program](https://cloudsecurityalliance.org/star/)
-
-## Versioning
-
-- **Version**: 1.0
 - **Based on**: CSA CCM v4.0
 - **Last Updated**: {{ meta-handbook.modifydate }}
 
 ## License
 
 These templates are intended for internal use within [TODO].
-||---|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

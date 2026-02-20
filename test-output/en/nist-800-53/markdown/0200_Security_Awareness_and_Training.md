@@ -1,13 +1,17 @@
 # Security Awareness and Training
 
-**Document-ID:** NIST-0200  
-**Control Family:** Awareness and Training (AT)  
-**Control:** AT-1, AT-2, AT-3, AT-4  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0200
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -62,13 +66,5 @@ The organization provides security awareness training and role-based security tr
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
 **Training Platform:** [TODO: Platform name]  
 **Completion Rate:** [TODO: Percentage]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

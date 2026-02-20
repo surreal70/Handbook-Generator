@@ -1,11 +1,17 @@
 # Resources
 
-**Document-ID:** 0300  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0300
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document defines how {{ meta.organization }} determines and provides resources needed for the quality management system in accordance with ISO 9001:2015 Clause 7.1.
+This document defines how AdminSend GmbH determines and provides resources needed for the quality management system in accordance with ISO 9001:2015 Clause 7.1.
 
 ## Resource Planning Process
 
@@ -318,8 +324,6 @@ This document defines how {{ meta.organization }} determines and provides resour
 - **Resource plans:** Future resource needs and acquisition plans
 - **Budget documents:** Resource budget and expenditure tracking
 - **Adequacy assessments:** Resource adequacy review records
-
----
 
 **Next Steps:**
 1. Conduct comprehensive resource assessment

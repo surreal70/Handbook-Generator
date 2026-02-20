@@ -1,14 +1,17 @@
 # Risk Analysis (BSI Standard 200-3) – Template
 
-**Document ID:** 0090  
-**Document Type:** Methodology Artifact  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standard 200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0090
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 The risk analysis according to BSI Standard 200-3 identifies and assesses risks for **AdminSend GmbH** that are not covered by IT-Grundschutz modules.
 
-**Responsible:** Thomas Weber (ISB)
+**Responsible:** [TODO] (ISB)
 
 **Triggers for Risk Analysis:**
 - High or very high protection need (see Document 0060)
@@ -119,9 +122,9 @@ The risk analysis according to BSI Standard 200-3 identifies and assesses risks 
 
 | Risk ID | Object | Scenario | Threat | Vulnerability | Existing Measures | Likelihood | Impact | Risk (Before) | Treatment | Additional Measure | Owner | Deadline | Risk (After) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R-001 | [TODO] | S-001 | T-002 | V-001, V-002 | Antivirus, Backup | 4 | 5 | Very High | Mitigate | Microsegmentation, MFA | Anna Schmidt | [TODO] | Medium |
-| R-002 | [TODO] | S-002 | T-003 | V-002 | Logging, IAM | 3 | 4 | High | Mitigate | PAM, DLP | Anna Schmidt | [TODO] | Low |
-| R-003 | [TODO] | S-003 | T-004 | [TODO] | Firewall | 3 | 3 | Medium | Mitigate | DDoS Protection | Anna Schmidt | [TODO] | Low |
+| R-001 | [TODO] | S-001 | T-002 | V-001, V-002 | Antivirus, Backup | 4 | 5 | Very High | Mitigate | Microsegmentation, MFA | [TODO] | [TODO] | Medium |
+| R-002 | [TODO] | S-002 | T-003 | V-002 | Logging, IAM | 3 | 4 | High | Mitigate | PAM, DLP | [TODO] | [TODO] | Low |
+| R-003 | [TODO] | S-003 | T-004 | [TODO] | Firewall | 3 | 3 | Medium | Mitigate | DDoS Protection | [TODO] | [TODO] | Low |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Risk Treatment Options:**
@@ -157,16 +160,16 @@ The risk analysis according to BSI Standard 200-3 identifies and assesses risks 
 
 | Risk ID | Risk | Risk Owner | Acceptance | Date |
 |---|---|---|---|---|
-| R-001 | [TODO] | Max Mustermann | Accepted after measure implementation | [TODO] |
-| R-002 | [TODO] | Thomas Weber | Accepted after measure implementation | [TODO] |
+| R-001 | [TODO] | [TODO] | Accepted after measure implementation | [TODO] |
+| R-002 | [TODO] | [TODO] | Accepted after measure implementation | [TODO] |
 
 ### 7.2 Management Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Executive Management | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
+| ISB | [TODO] | [TODO] | Draft |
+| IT Management | [TODO] | [TODO] | Draft |
+| Executive Management | [TODO] | [TODO] | Draft |
 
 ## 8. Update and Maintenance
 
@@ -176,13 +179,10 @@ The risk analysis is updated when:
 - Changes to the information domain occur
 - At least annually as part of the ISMS review
 
-**Responsible:** Thomas Weber (ISB)  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Responsible:** [TODO] (ISB)  
+**Next Review:** [TODO]
 
 **References:**
 - BSI Standard 200-3: Risk Analysis based on IT-Grundschutz
 - BSI IT-Grundschutz Compendium
-
 

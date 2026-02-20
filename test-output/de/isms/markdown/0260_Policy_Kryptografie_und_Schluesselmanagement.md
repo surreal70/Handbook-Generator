@@ -1,18 +1,21 @@
 # Policy: Kryptografie und Schlüsselmanagement
 
-
-
-**Dokument-ID:** 0260  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.24 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0260
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services
 - **Daten:** Alle Daten in Ruhe (Data at Rest), in Bewegung (Data in Transit) und in Verarbeitung (Data in Use)
 - **Kryptografische Verfahren:** Verschlüsselung, Hashing, digitale Signaturen, Zertifikate
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -95,9 +98,9 @@ Der Einsatz von Kryptografie erfolgt in Übereinstimmung mit nationalen und inte
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Crypto Officer:** {{ meta.it.crypto_officer }}
-- **Key Management Verantwortlicher:** {{ meta.it.key_manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **Crypto Officer:** {{ meta-handbook.it_crypto_officer }}
+- **Key Management Verantwortlicher:** {{ meta-handbook.it_key_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Entwicklung
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, Compliance
 
@@ -175,10 +178,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **FIPS 140-2/140-3** - Security Requirements for Cryptographic Modules
 - **eIDAS-Verordnung (EU 910/2014)** - Elektronische Identifizierung und Vertrauensdienste
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

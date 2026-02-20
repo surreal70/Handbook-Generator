@@ -1,14 +1,17 @@
 # Appendix: Network Plan and Zone Model (Template)
 
-**Document ID:** 0730  
-**Document Type:** Appendix  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0730
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -22,7 +25,7 @@ The documentation of network architecture and zone model of **AdminSend GmbH** s
 - Network Security (Document 0460/0470)
 - Incident Response (Document 0320/0330)
 
-**Responsible:** Anna Schmidt (IT Management)
+**Responsible:** [TODO] (IT Management)
 
 ## 2. High-Level Network Plan
 
@@ -40,14 +43,14 @@ The documentation of network architecture and zone model of **AdminSend GmbH** s
 
 | Zone ID | Zone Name | Description | Trust Level | Access Control | Responsible | Note |
 |---|---|---|---|---|---|---|
-| Z-001 | Internet | Public Internet | Untrusted | Firewall (Deny All) | Anna Schmidt | [TODO] |
-| Z-002 | DMZ | Demilitarized Zone (Web Server, Mail Gateway) | Low Trust | Firewall (Whitelist) | Anna Schmidt | [TODO] |
-| Z-003 | Internal LAN | Internal Corporate Network | Trusted | Firewall (Default Allow) | Anna Schmidt | {{ netbox.vlan.name }} |
-| Z-004 | Server VLAN | Production Servers | High Trust | Firewall (Whitelist) | Anna Schmidt | {{ netbox.vlan.name }} |
-| Z-005 | Database VLAN | Database Servers | High Trust | Firewall (Strict Whitelist) | Anna Schmidt | {{ netbox.vlan.name }} |
-| Z-006 | Management VLAN | Management Network (Monitoring, Backup, Admin) | High Trust | Firewall (Strict Whitelist) | Anna Schmidt | {{ netbox.vlan.name }} |
-| Z-007 | Guest WiFi | Guest WLAN | Untrusted | Captive Portal, Firewall | Anna Schmidt | [TODO] |
-| Z-008 | VPN | Remote Access (VPN) | Trusted (after authentication) | VPN Gateway, MFA | Anna Schmidt | [TODO] |
+| Z-001 | Internet | Public Internet | Untrusted | Firewall (Deny All) | [TODO] | [TODO] |
+| Z-002 | DMZ | Demilitarized Zone (Web Server, Mail Gateway) | Low Trust | Firewall (Whitelist) | [TODO] | [TODO] |
+| Z-003 | Internal LAN | Internal Corporate Network | Trusted | Firewall (Default Allow) | [TODO] | [[ netbox.vlan.name ]] |
+| Z-004 | Server VLAN | Production Servers | High Trust | Firewall (Whitelist) | [TODO] | [[ netbox.vlan.name ]] |
+| Z-005 | Database VLAN | Database Servers | High Trust | Firewall (Strict Whitelist) | [TODO] | [[ netbox.vlan.name ]] |
+| Z-006 | Management VLAN | Management Network (Monitoring, Backup, Admin) | High Trust | Firewall (Strict Whitelist) | [TODO] | [[ netbox.vlan.name ]] |
+| Z-007 | Guest WiFi | Guest WLAN | Untrusted | Captive Portal, Firewall | [TODO] | [TODO] |
+| Z-008 | VPN | Remote Access (VPN) | Trusted (after authentication) | VPN Gateway, MFA | [TODO] | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Trust Boundaries and Firewall Rules
@@ -67,12 +70,12 @@ The documentation of network architecture and zone model of **AdminSend GmbH** s
 
 | Rule ID | Source | Destination | Service/Port | Action | Justification | Owner |
 |---|---|---|---|---|---|---|
-| FW-001 | Internet | DMZ (Web Server) | HTTPS (443) | Allow | Public web access | Anna Schmidt |
-| FW-002 | DMZ (Web Server) | Server VLAN (App Server) | HTTPS (8443) | Allow | Backend communication | Anna Schmidt |
-| FW-003 | Server VLAN (App Server) | Database VLAN (DB Server) | PostgreSQL (5432) | Allow | Database access | Anna Schmidt |
-| FW-004 | Management VLAN | All Zones | SSH (22), RDP (3389) | Allow | Admin access | Anna Schmidt |
-| FW-005 | Guest WiFi | Internet | HTTP/HTTPS (80/443) | Allow | Internet access for guests | Anna Schmidt |
-| FW-006 | Guest WiFi | Internal LAN | All | Deny | Isolation from internal network | Anna Schmidt |
+| FW-001 | Internet | DMZ (Web Server) | HTTPS (443) | Allow | Public web access | [TODO] |
+| FW-002 | DMZ (Web Server) | Server VLAN (App Server) | HTTPS (8443) | Allow | Backend communication | [TODO] |
+| FW-003 | Server VLAN (App Server) | Database VLAN (DB Server) | PostgreSQL (5432) | Allow | Database access | [TODO] |
+| FW-004 | Management VLAN | All Zones | SSH (22), RDP (3389) | Allow | Admin access | [TODO] |
+| FW-005 | Guest WiFi | Internet | HTTP/HTTPS (80/443) | Allow | Internet access for guests | [TODO] |
+| FW-006 | Guest WiFi | Internal LAN | All | Deny | Isolation from internal network | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Reference:** Document 0460/0470 (Network Security)
@@ -81,18 +84,18 @@ The documentation of network architecture and zone model of **AdminSend GmbH** s
 
 | Device ID | Type | Model | Location | IP Address | Management IP | Role | Owner | Note |
 |---|---|---|---|---|---|---|---|---|
-| {{ netbox.device.id }} | {{ netbox.device.type }} | {{ netbox.device.model }} | {{ netbox.site.name }} | {{ netbox.ipaddress.address }} | [TODO] | {{ netbox.device.role }} | Anna Schmidt | [TODO] |
-| [TODO] | Firewall | [TODO] | [TODO] | [TODO] | [TODO] | Perimeter Firewall | Anna Schmidt | [TODO] |
-| [TODO] | Switch | [TODO] | [TODO] | [TODO] | [TODO] | Core Switch | Anna Schmidt | [TODO] |
-| [TODO] | Router | [TODO] | [TODO] | [TODO] | [TODO] | Internet Router | Anna Schmidt | [TODO] |
+| [[ netbox.device.id ]] | [[ netbox.device.type ]] | [[ netbox.device.model ]] | [[ netbox.site.name ]] | [[ netbox.ipaddress.address ]] | [TODO] | [[ netbox.device.role ]] | [TODO] | [TODO] |
+| [TODO] | Firewall | [TODO] | [TODO] | [TODO] | [TODO] | Perimeter Firewall | [TODO] | [TODO] |
+| [TODO] | Switch | [TODO] | [TODO] | [TODO] | [TODO] | Core Switch | [TODO] | [TODO] |
+| [TODO] | Router | [TODO] | [TODO] | [TODO] | [TODO] | Internet Router | [TODO] | [TODO] |
 
-**NetBox Integration:** {{ netbox.url }}
+**NetBox Integration:** [[ netbox.url ]]
 
 ## 6. VLANs
 
 | VLAN ID | VLAN Name | Network (CIDR) | Gateway | Description | Zone | Note |
 |---|---|---|---|---|---|---|
-| {{ netbox.vlan.id }} | {{ netbox.vlan.name }} | [TODO: e.g., 10.0.10.0/24] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [[ netbox.vlan.id ]] | [[ netbox.vlan.name ]] | [TODO: e.g., 10.0.10.0/24] | [TODO] | [TODO] | [TODO] | [TODO] |
 | [TODO] | Management | [TODO] | [TODO] | Management Network | Z-006 | [TODO] |
 | [TODO] | Servers | [TODO] | [TODO] | Production Servers | Z-004 | [TODO] |
 | [TODO] | Database | [TODO] | [TODO] | Database Servers | Z-005 | [TODO] |
@@ -159,7 +162,7 @@ The documentation of network architecture and zone model of **AdminSend GmbH** s
 
 | Site | Connection Type | Bandwidth | Provider | Backup Connection | Encryption | Note |
 |---|---|---|---|---|---|---|
-| {{ netbox.site.name }} | [TODO: e.g., MPLS, VPN] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [[ netbox.site.name ]] | [TODO: e.g., MPLS, VPN] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 11. Cloud Integration
@@ -203,10 +206,8 @@ The documentation of network architecture and zone model of **AdminSend GmbH** s
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| CISO | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| IT Management | [TODO] | [TODO] | Draft |
+| CISO | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI IT-Grundschutz-Kompendium: NET.1.1 Network Architecture and Design
@@ -215,5 +216,4 @@ The documentation of network architecture and zone model of **AdminSend GmbH** s
 - Document 0050: Structure Analysis
 - Document 0090: Risk Analysis
 - Document 0460/0470: Network Security
-
 

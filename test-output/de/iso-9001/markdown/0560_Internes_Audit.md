@@ -1,11 +1,17 @@
 # Internes Audit
 
-**Dokument-ID:** 0560  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0560
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }}, um sicherzustellen, dass das QMS konform, wirksam implementiert und aufrechterhalten ist.
+Dieses Dokument definiert das interne Auditprogramm von AdminSend GmbH, um sicherzustellen, dass das QMS konform, wirksam implementiert und aufrechterhalten ist.
 
 ## Auditprogramm (9.2)
 
@@ -26,7 +32,7 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 
 ### Programmplanung
 
-**{{ meta.organization }} plant Audits unter Berücksichtigung:**
+**AdminSend GmbH plant Audits unter Berücksichtigung:**
 - Bedeutung der zu auditierenden Prozesse
 - Änderungen, die die Organisation betreffen
 - Ergebnisse früherer Audits
@@ -212,7 +218,7 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 
 ### Maßnahmenverfolgung
 
-**{{ meta.organization }} stellt sicher:**
+**AdminSend GmbH stellt sicher:**
 - Maßnahmen werden rechtzeitig umgesetzt
 - Wirksamkeit wird überprüft
 - Dokumentation wird aufbewahrt
@@ -244,7 +250,7 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 
 ### Wirksamkeitsbewertung
 
-**{{ meta.organization }} bewertet Wirksamkeit des Auditprogramms durch:**
+**AdminSend GmbH bewertet Wirksamkeit des Auditprogramms durch:**
 - Erreichung der Programmziele
 - Qualität der Audits
 - Kompetenz der Auditoren
@@ -290,8 +296,6 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 - Überprüfung von Auditergebnissen
 - Genehmigung von Maßnahmen
 
----
-
 **Nächste Schritte:**
 1. Erstelle Jahresauditplan
 2. Qualifiziere Auditoren
@@ -299,3 +303,4 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 4. Führe Audits gemäß Plan durch
 5. Verfolge Korrekturmaßnahmen
 6. Bewerte Programmwirksamkeit
+

@@ -1,14 +1,17 @@
 # Richtlinie: Secure SDLC, Code Reviews und Secrets Management
 
-**Dokument-ID:** 0390  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0380_Policy_Secure_Development.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.25, A.8.26  
-**Owner:** {{ meta.development.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0390
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -110,9 +113,9 @@ Diese Richtlinie konkretisiert die `0380_Policy_Secure_Development.md` und defin
 ### 4.3 Automated Code Review
 
 **Tools:**
-- **SAST:** {{ meta.security.sast_tool }} (z.B. SonarQube, Checkmarx)
-- **Dependency Check:** {{ meta.security.dependency_tool }} (z.B. Snyk, Dependabot)
-- **Secrets Scanning:** {{ meta.security.secrets_scanner }} (z.B. GitGuardian, TruffleHog)
+- **SAST:** {{ meta-handbook.security_sast_tool }} (z.B. SonarQube, Checkmarx)
+- **Dependency Check:** {{ meta-handbook.security_dependency_tool }} (z.B. Snyk, Dependabot)
+- **Secrets Scanning:** {{ meta-handbook.security_secrets_scanner }} (z.B. GitGuardian, TruffleHog)
 
 **Integration:**
 - CI/CD-Pipeline
@@ -131,7 +134,7 @@ Diese Richtlinie konkretisiert die `0380_Policy_Secure_Development.md` und defin
 
 ### 5.2 Secrets-Management-System
 
-**System:** {{ meta.security.secrets_manager }} (z.B. HashiCorp Vault, Azure Key Vault, AWS Secrets Manager)
+**System:** {{ meta-handbook.security_secrets_manager }} (z.B. HashiCorp Vault, Azure Key Vault, AWS Secrets Manager)
 
 **Funktionen:**
 - Zentrale Secrets-Speicherung (verschlüsselt)
@@ -174,7 +177,7 @@ Diese Richtlinie konkretisiert die `0380_Policy_Secure_Development.md` und defin
 
 ### 6.2 Software Composition Analysis (SCA)
 
-**Tools:** {{ meta.security.sca_tool }} (z.B. Snyk, WhiteSource)
+**Tools:** {{ meta-handbook.security_sca_tool }} (z.B. Snyk, WhiteSource)
 
 **Prozess:**
 - Automatisches Scanning bei Build
@@ -228,13 +231,13 @@ Diese Richtlinie konkretisiert die `0380_Policy_Secure_Development.md` und defin
 ### 8.1 SAST (Static Application Security Testing)
 
 **Frequenz:** Bei jedem Commit  
-**Tool:** {{ meta.security.sast_tool }}  
+**Tool:** {{ meta-handbook.security_sast_tool }}  
 **Abdeckung:** Alle Programmiersprachen
 
 ### 8.2 DAST (Dynamic Application Security Testing)
 
 **Frequenz:** Wöchentlich (Staging), vor jedem Release  
-**Tool:** {{ meta.security.dast_tool }}  
+**Tool:** {{ meta-handbook.security_dast_tool }}  
 **Scope:** Web-Anwendungen, APIs
 
 ### 8.3 Penetration Testing
@@ -280,7 +283,6 @@ Diese Richtlinie konkretisiert die `0380_Policy_Secure_Development.md` und defin
 - **OWASP ASVS** - Application Security Verification Standard
 - **NIST SP 800-218** - Secure Software Development Framework
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

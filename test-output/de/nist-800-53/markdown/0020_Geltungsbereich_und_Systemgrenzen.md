@@ -1,19 +1,23 @@
 # Geltungsbereich und Systemgrenzen
 
-**Dokument-ID:** NIST-0020  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
 ## 1. Zweck
 
-Dieses Dokument definiert den Geltungsbereich und die Autorisierungsgrenzen des Informationssystems {{ meta.nist.system_name }}.
+Dieses Dokument definiert den Geltungsbereich und die Autorisierungsgrenzen des Informationssystems {{ meta-handbook.system_name }}.
 
 ### 1.1 Ziele
 
@@ -32,11 +36,11 @@ Dieses Dokument definiert den Geltungsbereich und die Autorisierungsgrenzen des 
 
 ### 2.1 Systeminformationen
 
-**Systemname:** {{ meta.nist.system_name }}  
-**System-ID:** {{ meta.nist.system_id }}  
+**Systemname:** {{ meta-handbook.system_name }}  
+**System-ID:** {{ meta-handbook.system_id }}  
 **FIPS 199 Kategorisierung:** [TODO: Low / Moderate / High]  
 **System Owner:** [TODO: Name]  
-**Authorizing Official (AO):** {{ meta.roles.ao.name }}  
+**Authorizing Official (AO):** [TODO]  
 
 ### 2.2 Systembeschreibung
 
@@ -135,15 +139,7 @@ Die Autorisierungsgrenze umfasst alle Komponenten, die unter einer einzigen Auto
 
 ## 8. Genehmigung
 
-**Genehmigt durch:** {{ meta.roles.ao.name }}  
+**Genehmigt durch:** [TODO]  
 **Datum:** [TODO: Datum]  
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

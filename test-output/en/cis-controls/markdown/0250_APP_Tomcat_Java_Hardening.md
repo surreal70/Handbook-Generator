@@ -1,14 +1,17 @@
 # APP Hardening Standard: Java Runtime / Tomcat (generic)
 
-**Document ID:** 0250  
-**Document Type:** Standard/Baseline  
-**Reference Framework:** CIS Controls v8 (Hardening Program; no benchmark texts)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Draft)  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Updated:** 2026-01-31  
-**Next Review:** [TODO]
+**Document-ID:** [FRAMEWORK]-0250
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -80,10 +83,10 @@
 - Parameter list/example values: [TODO]
 - Checklist: see `0410_Appendix_Checklists_and_Evidence.md`
 
-
 ## 12. Java/Tomcat-Specific Requirements (Examples)
 - Protect/disable management interfaces: [TODO]
 - Secure defaults (HTTPS only): [TODO]
 - JVM security flags (where appropriate): [TODO]
 - Patch dependencies/libs regularly: [TODO]
 - Secrets via vault/env, not in code: [TODO]
+

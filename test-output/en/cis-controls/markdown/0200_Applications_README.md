@@ -1,14 +1,17 @@
 # Applications – Overview
 
-**Document ID:** 0200  
-**Document Type:** Chapter  
-**Reference Framework:** CIS Controls v8 (Hardening Program; no benchmark texts)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Draft)  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Updated:** 2026-01-31  
-**Next Review:** [TODO]
+**Document-ID:** [FRAMEWORK]-0200
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -23,3 +26,7 @@ Recommendation: First define a **baseline per application class** (web, DB, Kube
 - Databases: 0260–0290
 - Container/Kubernetes: 0300–0310
 - Infrastructure Services: 0320–0330
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | [TODO] | Handbook-Generator | Initial Creation |

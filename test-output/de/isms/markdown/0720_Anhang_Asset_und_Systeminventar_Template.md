@@ -1,9 +1,17 @@
 # Anhang B: Asset- und Systeminventar
 
-**Dokumenttyp:** Anhang  
-**Version:** 1.0.0  
-**Datum:** {{ meta.document.date }}  
-**Klassifizierung:** internal
+**Dokument-ID:** [FRAMEWORK]-0720
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -21,10 +29,8 @@ Das Inventar wird kontinuierlich gepflegt und mindestens quartalsweise überprü
 ## Geltungsbereich
 
 **Organisation:** AdminSend GmbH  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Verantwortlich:** Asset Management Team, Thomas Weber
-
----
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Verantwortlich:** Asset Management Team, [TODO]
 
 ## Asset-Kategorien
 
@@ -36,8 +42,6 @@ Das Inventar umfasst folgende Asset-Kategorien:
 4. **Netzwerk Assets:** VLANs, Subnetze, Verbindungen
 5. **Cloud Assets:** Cloud Services, SaaS-Anwendungen
 6. **Physische Assets:** Räume, Infrastruktur, Dokumentation
-
----
 
 ## Asset-Klassifizierung
 
@@ -60,53 +64,43 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | **Tier 3** | < 72h | < 24h | Standard, Wiederherstellung innerhalb von 3 Tagen |
 | **Tier 4** | > 72h | > 24h | Unkritisch, keine zeitkritische Wiederherstellung |
 
----
-
 ## Hardware Assets
 
 ### Server
 
 | Asset-ID | Hostname | Typ | Standort | Owner | Schutzbedarf (C/I/A) | Kritikalität | Status |
 |----------|----------|-----|----------|-------|----------------------|--------------|--------|
-| SRV-001 | {{ netbox.device.primary_server.name }} | Physical Server | {{ netbox.site.name }} | IT Operations | Hoch/Hoch/Hoch | Tier 1 | Produktiv |
-| SRV-002 | {{ netbox.device.backup_server.name }} | Physical Server | {{ netbox.site.name }} | IT Operations | Hoch/Hoch/Mittel | Tier 2 | Produktiv |
+| SRV-001 | [[ netbox.device.primary_server.name ]] | Physical Server | [[ netbox.site.name ]] | IT Operations | Hoch/Hoch/Hoch | Tier 1 | Produktiv |
+| SRV-002 | [[ netbox.device.backup_server.name ]] | Physical Server | [[ netbox.site.name ]] | IT Operations | Hoch/Hoch/Mittel | Tier 2 | Produktiv |
 | [TODO] | [TODO: Hostname] | [TODO: Typ] | [TODO: Standort] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] | [TODO: Status] |
 
 **Hinweis:** Vollständige Server-Liste aus NetBox/CMDB importieren.
-
----
 
 ### Netzwerkgeräte
 
 | Asset-ID | Hostname | Typ | Standort | Owner | Schutzbedarf (C/I/A) | Kritikalität | Status |
 |----------|----------|-----|----------|-------|----------------------|--------------|--------|
-| NET-001 | {{ netbox.device.core_switch.name }} | Core Switch | {{ netbox.site.name }} | Network Team | Mittel/Hoch/Hoch | Tier 1 | Produktiv |
-| NET-002 | {{ netbox.device.firewall.name }} | Firewall | {{ netbox.site.name }} | Security Team | Hoch/Hoch/Hoch | Tier 1 | Produktiv |
+| NET-001 | [[ netbox.device.core_switch.name ]] | Core Switch | [[ netbox.site.name ]] | Network Team | Mittel/Hoch/Hoch | Tier 1 | Produktiv |
+| NET-002 | [[ netbox.device.firewall.name ]] | Firewall | [[ netbox.site.name ]] | Security Team | Hoch/Hoch/Hoch | Tier 1 | Produktiv |
 | [TODO] | [TODO: Hostname] | [TODO: Typ] | [TODO: Standort] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] | [TODO: Status] |
 
 **Hinweis:** Vollständige Netzwerkgeräte-Liste aus NetBox importieren.
-
----
 
 ### Endpoints
 
 | Asset-ID | Hostname | Typ | Benutzer | Owner | Schutzbedarf (C/I/A) | Status |
 |----------|----------|-----|----------|-------|----------------------|--------|
-| WS-001 | {{ meta.ciso.workstation }} | Laptop | Thomas Weber | IT Operations | Hoch/Mittel/Mittel | Produktiv |
+| WS-001 | [TODO: Hostname] | Laptop | [TODO] | IT Operations | Hoch/Mittel/Mittel | Produktiv |
 | [TODO] | [TODO: Hostname] | [TODO: Typ] | [TODO: Benutzer] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Status] |
 
 **Hinweis:** Endpoint-Inventar aus MDM/Endpoint Management System importieren.
-
----
 
 ### Storage-Systeme
 
 | Asset-ID | Name | Typ | Kapazität | Standort | Owner | Schutzbedarf (C/I/A) | Kritikalität |
 |----------|------|-----|-----------|----------|-------|----------------------|--------------|
-| STO-001 | {{ netbox.device.storage.name }} | SAN | [TODO: Kapazität] | {{ netbox.site.name }} | IT Operations | Hoch/Hoch/Hoch | Tier 1 |
+| STO-001 | [[ netbox.device.storage.name ]] | SAN | [TODO: Kapazität] | [[ netbox.site.name ]] | IT Operations | Hoch/Hoch/Hoch | Tier 1 |
 | [TODO] | [TODO: Name] | [TODO: Typ] | [TODO: Kapazität] | [TODO: Standort] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] |
-
----
 
 ## Software Assets
 
@@ -119,8 +113,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | OS-003 | Ubuntu Server | 22.04 LTS | Open Source | Unbegrenzt | IT Operations | Tier 2 |
 | [TODO] | [TODO: Name] | [TODO: Version] | [TODO: Lizenztyp] | [TODO: Anzahl] | [TODO: Owner] | [TODO: Tier] |
 
----
-
 ### Geschäftsanwendungen
 
 | Asset-ID | Name | Version | Vendor | Lizenztyp | Owner | Schutzbedarf (C/I/A) | Kritikalität |
@@ -128,8 +120,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | APP-001 | [TODO: ERP System] | [TODO: Version] | [TODO: Vendor] | [TODO: Lizenztyp] | Business Owner | Hoch/Hoch/Hoch | Tier 1 |
 | APP-002 | [TODO: CRM System] | [TODO: Version] | [TODO: Vendor] | [TODO: Lizenztyp] | Sales | Hoch/Mittel/Mittel | Tier 2 |
 | [TODO] | [TODO: Name] | [TODO: Version] | [TODO: Vendor] | [TODO: Lizenztyp] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] |
-
----
 
 ### Sicherheitssoftware
 
@@ -139,8 +129,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | SEC-002 | [TODO: SIEM] | [TODO: Version] | Security Information & Event Management | Alle Systeme | Security Team | Tier 1 |
 | SEC-003 | [TODO: Firewall] | [TODO: Version] | Next-Gen Firewall | Perimeter | Security Team | Tier 1 |
 | [TODO] | [TODO: Name] | [TODO: Version] | [TODO: Typ] | [TODO: Abdeckung] | [TODO: Owner] | [TODO: Tier] |
-
----
 
 ## Daten Assets
 
@@ -152,8 +140,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | DB-002 | [TODO: Test-DB] | [TODO: Typ] | [TODO: Version] | [TODO: Server] | DBA Team | Niedrig/Mittel/Niedrig | Tier 3 | Wöchentlich |
 | [TODO] | [TODO: Name] | [TODO: Typ] | [TODO: Version] | [TODO: Server] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] | [TODO: Backup] |
 
----
-
 ### Dateisysteme und Shares
 
 | Asset-ID | Name | Typ | Pfad | Server | Owner | Schutzbedarf (C/I/A) | Backup |
@@ -162,8 +148,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | FS-002 | [TODO: Projekt-Share] | SMB Share | [TODO: Pfad] | [TODO: Server] | Project Management | Hoch/Mittel/Mittel | Täglich |
 | [TODO] | [TODO: Name] | [TODO: Typ] | [TODO: Pfad] | [TODO: Server] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Backup] |
 
----
-
 ### Code Repositories
 
 | Asset-ID | Name | Typ | URL | Owner | Schutzbedarf (C/I/A) | Backup |
@@ -171,21 +155,17 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | REPO-001 | [TODO: Main Repository] | Git | [TODO: URL] | Development Team | Hoch/Hoch/Mittel | Täglich |
 | [TODO] | [TODO: Name] | [TODO: Typ] | [TODO: URL] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Backup] |
 
----
-
 ## Netzwerk Assets
 
 ### VLANs
 
 | VLAN-ID | Name | Subnet | Zweck | Sicherheitszone | Owner |
 |---------|------|--------|-------|-----------------|-------|
-| {{ netbox.vlan.management.vid }} | {{ netbox.vlan.management.name }} | {{ netbox.vlan.management.subnet }} | Management | Restricted | Network Team |
-| {{ netbox.vlan.production.vid }} | {{ netbox.vlan.production.name }} | {{ netbox.vlan.production.subnet }} | Production | Internal | Network Team |
+| [[ netbox.vlan.management.vid ]] | [[ netbox.vlan.management.name ]] | [[ netbox.vlan.management.subnet ]] | Management | Restricted | Network Team |
+| [[ netbox.vlan.production.vid ]] | [[ netbox.vlan.production.name ]] | [[ netbox.vlan.production.subnet ]] | Production | Internal | Network Team |
 | [TODO] | [TODO: Name] | [TODO: Subnet] | [TODO: Zweck] | [TODO: Zone] | [TODO: Owner] |
 
 **Hinweis:** Vollständige VLAN-Liste aus NetBox importieren.
-
----
 
 ### Externe Verbindungen
 
@@ -194,8 +174,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | WAN-001 | Internet | [TODO: Provider] | [TODO: Bandbreite] | Internet Access | Network Team | Tier 1 |
 | WAN-002 | MPLS | [TODO: Provider] | [TODO: Bandbreite] | Site-to-Site | Network Team | Tier 1 |
 | [TODO] | [TODO: Typ] | [TODO: Provider] | [TODO: Bandbreite] | [TODO: Zweck] | [TODO: Owner] | [TODO: Tier] |
-
----
 
 ## Cloud Assets
 
@@ -207,8 +185,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | CLOUD-002 | [TODO: Database Service] | [TODO: Provider] | PaaS | [TODO: Region] | DBA Team | Hoch/Hoch/Hoch | Tier 1 |
 | [TODO] | [TODO: Service] | [TODO: Provider] | [TODO: Typ] | [TODO: Region] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] |
 
----
-
 ### SaaS-Anwendungen
 
 | Asset-ID | Service Name | Provider | Zweck | Benutzeranzahl | Owner | Schutzbedarf (C/I/A) |
@@ -217,19 +193,15 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | SAAS-002 | [TODO: CRM SaaS] | [TODO: Provider] | Customer Management | [TODO: Anzahl] | Sales | Hoch/Mittel/Mittel |
 | [TODO] | [TODO: Service] | [TODO: Provider] | [TODO: Zweck] | [TODO: Anzahl] | [TODO: Owner] | [TODO: C/I/A] |
 
----
-
 ## Physische Assets
 
 ### Standorte und Räume
 
 | Standort-ID | Name | Adresse | Typ | Sicherheitsstufe | Owner |
 |-------------|------|---------|-----|------------------|-------|
-| SITE-001 | {{ netbox.site.name }} | {{ netbox.site.address }} | Hauptstandort | Hoch | Facility Management |
+| SITE-001 | [[ netbox.site.name ]] | [[ netbox.site.address ]] | Hauptstandort | Hoch | Facility Management |
 | SITE-002 | [TODO: Zweigstelle] | [TODO: Adresse] | Zweigstelle | Mittel | Facility Management |
 | [TODO] | [TODO: Name] | [TODO: Adresse] | [TODO: Typ] | [TODO: Sicherheit] | [TODO: Owner] |
-
----
 
 ### Serverräume und Rechenzentren
 
@@ -237,8 +209,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 |---------|------|----------|-----|-------|----------------|-------------|-------------------|
 | ROOM-001 | Serverraum 1 | SITE-001 | Serverraum | [TODO: m²] | Redundant | FM-200 | Biometrisch |
 | [TODO] | [TODO: Name] | [TODO: Standort] | [TODO: Typ] | [TODO: Größe] | [TODO: Klima] | [TODO: Brand] | [TODO: Zutritt] |
-
----
 
 ### Kritische Infrastruktur
 
@@ -248,8 +218,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | INFRA-002 | Klimaanlage 1 | Klimatisierung | SITE-001 | [TODO: kW] | N+1 | Facility Management | Tier 1 |
 | INFRA-003 | Notstromgenerator | Generator | SITE-001 | [TODO: kW] | N | Facility Management | Tier 1 |
 | [TODO] | [TODO: Name] | [TODO: Typ] | [TODO: Standort] | [TODO: Kapazität] | [TODO: Redundanz] | [TODO: Owner] | [TODO: Tier] |
-
----
 
 ## Asset Lifecycle Management
 
@@ -265,18 +233,14 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | **Außerbetriebnahme** | Dekommissionierung, Datenlöschung | IT Operations | Decommissioning Process |
 | **Entsorgung** | Sichere Entsorgung oder Wiederverwendung | IT Operations | Disposal Process |
 
----
-
 ### Asset Owner und Verantwortlichkeiten
 
 | Rolle | Verantwortlichkeiten | Kontakt |
 |-------|----------------------|---------|
 | **Asset Owner** | Geschäftliche Verantwortung, Genehmigungen, Budget | [TODO: Name/Abteilung] |
 | **Technical Owner** | Technische Verantwortung, Betrieb, Wartung | IT Operations |
-| **Security Owner** | Sicherheitsanforderungen, Risikobewertung | Thomas Weber |
+| **Security Owner** | Sicherheitsanforderungen, Risikobewertung | [TODO] |
 | **Data Owner** | Datenklassifizierung, Zugriffskontrolle | [TODO: Name/Abteilung] |
-
----
 
 ## Asset-Tagging und Kennzeichnung
 
@@ -295,8 +259,6 @@ Alle Assets werden mit folgenden Tags versehen:
 
 **Hinweis:** Tagging wird in CMDB/Asset Management System gepflegt.
 
----
-
 ## Inventarisierungsprozess
 
 ### Regelmäßige Überprüfung
@@ -308,8 +270,6 @@ Alle Assets werden mit folgenden Tags versehen:
 | **Automatische Discovery** | Täglich | IT Operations | Discovery Logs |
 | **Änderungsverfolgung** | Kontinuierlich | Change Management | Change Records |
 
----
-
 ### Discovery-Tools
 
 | Tool | Zweck | Abdeckung | Owner |
@@ -319,8 +279,6 @@ Alle Assets werden mit folgenden Tags versehen:
 | MDM | Mobile Device Management | Endpoints, Mobile Devices | IT Operations |
 | Cloud Asset Inventory | Cloud Resources | Cloud Services | Cloud Team |
 | [TODO: Tool] | [TODO: Zweck] | [TODO: Abdeckung] | [TODO: Owner] |
-
----
 
 ## Compliance und Audit
 
@@ -333,16 +291,12 @@ Dieses Inventar erfüllt folgende Compliance-Anforderungen:
 - **ISO/IEC 27001:2022 Annex A 8.9:** Configuration Management
 - **[TODO: Weitere Compliance-Anforderungen]**
 
----
-
 ### Audit Trail
 
 | Datum | Änderung | Durchgeführt von | Genehmigt von | Grund |
 |-------|----------|------------------|---------------|-------|
-| {{ meta.document.date }} | Initiale Erstellung | {{ meta.document.author }} | Thomas Weber | ISMS-Implementierung |
+| [TODO] | Initiale Erstellung | Handbook-Generator | [TODO] | ISMS-Implementierung |
 | [TODO: Datum] | [TODO: Änderung] | [TODO: Name] | [TODO: Name] | [TODO: Grund] |
-
----
 
 ## Referenzen
 
@@ -351,10 +305,9 @@ Dieses Inventar erfüllt folgende Compliance-Anforderungen:
 - Dokument: 0100_ISMS_Statement_of_Applicability_SoA_Template.md
 - Anhang: 0730_Anhang_Datenfluss_und_Schnittstellen_Template.md
 
----
-
 **Dokumentverantwortlicher:** Asset Management Team  
-**Genehmigt durch:** Thomas Weber  
+**Genehmigt durch:** [TODO]  
 **Nächste Überprüfung:** Quartalsweise
+
 
 

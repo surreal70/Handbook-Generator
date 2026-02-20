@@ -4,6 +4,7 @@ Language: de
 
 ## Templates
 
+- [0000 - metadata de bsi-grundschutz](0000_metadata_de_bsi-grundschutz.md)
 - [0010 - Informationssicherheitsleitlinie](0010_Informationssicherheitsleitlinie.md)
 - [0020 - ISMS Organisation Rollen RACI](0020_ISMS_Organisation_Rollen_RACI.md)
 - [0030 - Dokumentenlenkung und Dokumentenregister](0030_Dokumentenlenkung_und_Dokumentenregister.md)
@@ -58,4 +59,3 @@ Language: de
 - [0720 - Anhang Datenfluesse und Schnittstellen Template](0720_Anhang_Datenfluesse_und_Schnittstellen_Template.md)
 - [0730 - Anhang Diagramme Netzplan und Zonen](0730_Anhang_Diagramme_Netzplan_und_Zonen.md)
 - [0740 - Anhang Begriffe und Abkuerzungen](0740_Anhang_Begriffe_und_Abkuerzungen.md)
-- [READ - E](README.md)

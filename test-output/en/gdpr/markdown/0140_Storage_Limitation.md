@@ -1,11 +1,17 @@
 # Storage Limitation
 
-**Document-ID:** 0140  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0140
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of the principle of storage limitation in {{ meta.organization }}. Personal data may only be stored for as long as necessary for the processing purpose.
+This document describes the implementation of the principle of storage limitation in AdminSend GmbH. Personal data may only be stored for as long as necessary for the processing purpose.
 
 ## Principle according to Art. 5(1)(e) GDPR
 
@@ -240,8 +246,6 @@ After expiration of storage period, data must be:
 | Missing deletion processes | No automated deletion | Implement deletion routines |
 | Ignoring erasure requests | Delayed processing | Establish process |
 | Incomplete deletion | Only deleted in one system | Check all systems |
-
----
 
 **Next Steps:**
 1. Define deletion periods for all processing activities

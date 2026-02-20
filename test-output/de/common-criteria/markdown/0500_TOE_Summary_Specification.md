@@ -1,11 +1,17 @@
 # TOE Summary Specification
 
-**Dokument-ID:** 0500  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0500
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -235,11 +241,10 @@ Für detaillierte Informationen siehe:
 - **0530_Coverage_Matrix.md**: Vollständige Coverage Matrix
 - **0540_Strength_of_Function.md**: Detaillierte SOF-Analyse
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
 | 0.1 | [TODO] | [TODO] | Initiale Version |
 | 1.0 | [TODO] | [TODO] | [TODO] |
+

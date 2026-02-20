@@ -1,5 +1,20 @@
 # System Overview and Architecture
 
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Overview
 
 ### System Landscape
@@ -161,7 +176,7 @@ This chapter describes the system landscape and architecture at a high level.
 **Approvals:**
 - **DEV → TEST:** Automatic
 - **TEST → STAGE:** QA Team
-- **STAGE → PROD:** CIO + Change Advisory Board
+- **STAGE → PROD:** [TODO] + Change Advisory Board
 
 ## Interfaces
 
@@ -277,19 +292,18 @@ This chapter describes the system landscape and architecture at a high level.
 |---|---|---|---|
 | **System Architect** | Architecture Design | [TODO: Name] | [TODO: Email] |
 | **Technical Lead** | Technical Implementation | [TODO: Name] | [TODO: Email] |
-| **Operations Manager** | Operation and Maintenance | Andreas Huemmer | andreas.huemmer@adminsend.de |
-| **Security Officer** | Security Architecture | Thomas Weber | thomas.weber@adminsend.de |
+| **Operations Manager** | Operation and Maintenance | {{ meta-organisation-roles.role_IT_Operations_Manager }} | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} |
+| **Security Officer** | Security Architecture | [TODO] | {{ meta-organisation-roles.role_CISO_email }} |
 
 ## Contacts
 
 **For System Architecture Questions:**
 - **System Architect:** [TODO: Name and Contact]
-- **IT Operations Manager:** Andreas Huemmer (andreas.huemmer@adminsend.de)
-- **CISO:** Thomas Weber (thomas.weber@adminsend.de)
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- **CISO:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 
----
-
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
 **Organization:** AdminSend GmbH
+

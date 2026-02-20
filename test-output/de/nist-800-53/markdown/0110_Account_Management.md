@@ -1,13 +1,17 @@
 # Account Management
 
-**Dokument-ID:** NIST-0110  
-**Control Family:** Access Control (AC)  
-**Control:** AC-2  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -65,20 +69,12 @@ The organization manages information system accounts including identification, a
 
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
 **Implementation Date:** [TODO: Datum]  
-**Responsible:** {{ meta.roles.isso.name }}  
+**Responsible:** [TODO]  
 
 ## 5. Assessment
 
 **Assessment Method:** Examine, Interview, Test  
 **Assessment Status:** [TODO: Satisfied / Other than Satisfied]  
 **Findings:** [TODO: Beschreibung]  
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

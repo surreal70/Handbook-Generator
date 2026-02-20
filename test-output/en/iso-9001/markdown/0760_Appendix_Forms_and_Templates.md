@@ -1,11 +1,17 @@
 # Appendix: Forms and Templates
 
-**Document-ID:** 0760  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0760
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This appendix contains an overview of all forms and templates used in the QMS of {{ meta.organization }}.
+This appendix contains an overview of all forms and templates used in the QMS of AdminSend GmbH.
 
 ## Form Directory
 
@@ -316,6 +322,5 @@ This appendix contains an overview of all forms and templates used in the QMS of
 6. Withdraw old version
 7. Inform users
 
----
-
 **Note:** All forms are available in the document management system.
+

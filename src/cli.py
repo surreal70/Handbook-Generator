@@ -439,6 +439,16 @@ def main() -> int:
     # Use doc_name as template_type for backward compatibility with output generation
     template_type = doc_name
     
+    # Load handbook-specific metadata if this is a handbook (not service/process)
+    if doc_type == 'template' and config.unified_metadata:
+        try:
+            handbook_metadata = template_manager.load_handbook_metadata(language, doc_name)
+            config.unified_metadata.handbook = handbook_metadata
+            logger.log_verbose(f"✓ Loaded handbook-specific metadata for {doc_name}")
+        except Exception as e:
+            logger.log_warning(f"Could not load handbook metadata: {str(e)}")
+            logger.log_warning("Continuing with default handbook metadata values")
+    
     # Load NetBox metadata if NetBox is configured
     metadata_netbox_path = Path("metadata-netbox.yaml")
     if config.netbox_url and config.netbox_api_token:
@@ -477,9 +487,9 @@ def main() -> int:
     data_sources = {}
     
     # Add meta adapter if metadata is available
-    if config.metadata:
+    if config.unified_metadata:
         try:
-            meta_adapter = MetaAdapter(config.metadata, language=language)
+            meta_adapter = MetaAdapter(config.unified_metadata, language=language)
             if meta_adapter.connect():
                 # Set document type for metadata support
                 if doc_type == 'service':
@@ -513,7 +523,7 @@ def main() -> int:
             logger.log_warning(f"NetBox adapter initialization failed: {str(e)}")
     
     # Initialize placeholder processor
-    processor = PlaceholderProcessor(data_sources)
+    processor = PlaceholderProcessor(data_sources, unified_metadata=config.unified_metadata)
     
     # Initialize output generator
     output_dir = Path('test-output')  # Use consolidated test-output directory

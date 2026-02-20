@@ -1,11 +1,17 @@
 # TOE Logical Scope
 
-**Dokument-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -331,11 +337,10 @@ Die logischen Grenzen wurden wie folgt definiert:
 - Aufrechterhaltung: [TODO: Wie wird der sichere Zustand aufrechterhalten]
 - Wiederherstellung: [TODO: Wiederherstellung nach Fehler]
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Informationen
 2. Erstelle detaillierte funktionale Architekturdiagramme
 3. Dokumentiere alle Sicherheitsmechanismen vollständig
 4. Überprüfe die Konsistenz mit dem physischen Umfang (Template 0100)
 5. Stelle sicher, dass alle Sicherheitsfunktionen dokumentiert sind
+

@@ -1,18 +1,21 @@
 # ISMS-Governance: Rollen und Verantwortlichkeiten
 
-
-
-**Dokument-ID:** 0040  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 5.3  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. ISMS-Governance-Struktur
 
@@ -23,14 +26,14 @@ Die ISMS-Governance der **AdminSend GmbH** ist in die Gesamtorganisation integri
 ```
 ┌─────────────────────────────────────────────────────────┐
 │              Geschäftsführung / Top Management          │
-│                 ({{ meta.management.ceo }})              │
+│                 ({{ meta-handbook.management_ceo }})              │
 └────────────────────┬────────────────────────────────────┘
                      │
          ┌───────────┴───────────┐
          │                       │
 ┌────────▼────────┐    ┌────────▼────────┐
 │  CIO             │    │  CISO            │
-│  Anna Schmidt  │    │  Thomas Weber  │
+│  [TODO]  │    │  [TODO]  │
 └─────────────────┘    └─────────────────┘
          │                       │
          │              ┌────────┴────────┐
@@ -55,7 +58,7 @@ Die ISMS-Governance der **AdminSend GmbH** ist in die Gesamtorganisation integri
 ### 1.2 Schlüsselgremien
 
 **Informationssicherheitsgremium (Security Steering Committee):**
-- **Vorsitz:** Thomas Weber (CISO)
+- **Vorsitz:** [TODO] (CISO)
 - **Mitglieder:** CIO, Vertreter Fachabteilungen, IT-Betrieb, Datenschutzbeauftragter
 - **Frequenz:** Quartalsweise oder anlassbezogen
 - **Aufgaben:**
@@ -70,27 +73,27 @@ Die ISMS-Governance der **AdminSend GmbH** ist in die Gesamtorganisation integri
 **IT Service Management (ITSM):**
 - Integration von Security in ITIL-Prozesse
 - Incident Management, Change Management, Problem Management
-- Kontakt: {{ meta.it.service_manager }}
+- Kontakt: {{ meta-handbook.it_service_manager }}
 
 **Datenschutz (DSMS):**
 - Schnittstelle zu DSGVO-Compliance
 - Gemeinsame Risikoanalyse und Datenschutz-Folgenabschätzung
-- Kontakt: {{ meta.privacy.dpo }}
+- Kontakt: {{ meta-handbook.privacy_dpo }}
 
 **Risk Management:**
 - Integration in Enterprise Risk Management (ERM)
 - Gemeinsames Risikoregister
-- Kontakt: {{ meta.risk.manager }}
+- Kontakt: {{ meta-handbook.risk_manager }}
 
 **Business Continuity Management (BCM):**
 - Schnittstelle zu BCM-Handbuch
 - Gemeinsame BIA und Notfallplanung
-- Kontakt: {{ meta.bcm.manager }}
+- Kontakt: {{ meta-handbook.bcm_manager }}
 
 **Internal Audit:**
 - Unabhängige Prüfung des ISMS
 - Audit-Planung und -Durchführung
-- Kontakt: {{ meta.audit.manager }}
+- Kontakt: {{ meta-handbook.audit_manager }}
 
 
 
@@ -98,7 +101,7 @@ Die ISMS-Governance der **AdminSend GmbH** ist in die Gesamtorganisation integri
 
 ### 2.1 Geschäftsführung / Top Management
 
-**Rolle:** {{ meta.management.ceo }}
+**Rolle:** {{ meta-handbook.management_ceo }}
 
 **Verantwortlichkeiten:**
 - Gesamtverantwortung für Informationssicherheit
@@ -114,7 +117,7 @@ Die ISMS-Governance der **AdminSend GmbH** ist in die Gesamtorganisation integri
 
 ### 2.2 CISO (Chief Information Security Officer)
 
-**Rolle:** Thomas Weber (thomas.weber@adminsend.de)
+**Rolle:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 
 **Verantwortlichkeiten:**
 - Entwicklung, Implementierung und Überwachung des ISMS
@@ -131,11 +134,11 @@ Die ISMS-Governance der **AdminSend GmbH** ist in die Gesamtorganisation integri
 - Eskalation bei kritischen Sicherheitsvorfällen
 - Zugriff auf alle sicherheitsrelevanten Informationen
 
-**Berichtslinie:** Berichtet an Anna Schmidt (CIO) und Geschäftsführung
+**Berichtslinie:** Berichtet an [TODO] (CIO) und Geschäftsführung
 
 ### 2.3 CIO (Chief Information Officer)
 
-**Rolle:** Anna Schmidt (anna.schmidt@adminsend.de)
+**Rolle:** [TODO] ({{ meta-organisation-roles.role_CIO_email }})
 
 **Verantwortlichkeiten:**
 - IT-Strategie und IT-Betrieb
@@ -225,7 +228,7 @@ Die ISMS-Governance der **AdminSend GmbH** ist in die Gesamtorganisation integri
 
 ### 2.9 Internal Audit / Compliance
 
-**Rolle:** {{ meta.audit.manager }}
+**Rolle:** {{ meta-handbook.audit_manager }}
 
 **Verantwortlichkeiten:**
 - Unabhängige Prüfung des ISMS
@@ -322,10 +325,9 @@ Siehe `0070_ISMS_Risikoakzeptanzkriterien.md` für Details.
 - **ISO/IEC 27001:2022** - Clause 5.3: Organizational roles, responsibilities and authorities
 - **ISO/IEC 27002:2022** - Control 5.2: Information security roles and responsibilities
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
+

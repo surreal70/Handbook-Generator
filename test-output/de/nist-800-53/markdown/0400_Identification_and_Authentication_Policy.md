@@ -1,13 +1,17 @@
 # Identification and Authentication Policy
 
-**Dokument-ID:** NIST-0400  
-**Control Family:** Identification and Authentication (IA)  
-**Control:** IA-1, IA-2, IA-5  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0400
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -61,13 +65,5 @@ The organization uniquely identifies and authenticates users.
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
 **MFA Coverage:** [TODO: Percentage]  
 **Password Compliance:** [TODO: Percentage]  
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

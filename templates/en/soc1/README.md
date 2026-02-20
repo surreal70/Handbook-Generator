@@ -123,10 +123,6 @@ For more information on using these templates:
 - Consult FRAMEWORK_MAPPING.md for mapping to COSO components
 - Review the AICPA SOC 1 Reporting Guide
 - Work with your service auditor
-
-## Versioning
-
-These templates should be versioned and updated when changes occur:
 - Document changes during the reporting period
 - Assess impact on controls
 - Communicate significant changes to stakeholders
@@ -134,5 +130,3 @@ These templates should be versioned and updated when changes occur:
 ---
 
 **Note**: These templates serve as a starting point. Customize them for your specific service organization, services, and control environment.
-||---|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

@@ -1,11 +1,17 @@
 # Auftragsverarbeitung
 
-**Dokument-ID:** 0310  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument regelt die Auftragsverarbeitung bei {{ meta.organization }} gemäß Art. 28 DSGVO. Es definiert die Anforderungen an Auftragsverarbeiter, die Vertragsgestaltung und die Kontrollmechanismen.
+Dieses Dokument regelt die Auftragsverarbeitung bei AdminSend GmbH gemäß Art. 28 DSGVO. Es definiert die Anforderungen an Auftragsverarbeiter, die Vertragsgestaltung und die Kontrollmechanismen.
 
 ## Auftragsverarbeiter-Verzeichnis
 
@@ -226,11 +232,10 @@ Der Auftragsverarbeiter muss den Verantwortlichen unverzüglich über Datenschut
 - **Datenschutzverletzungen (Art. 33):** Meldepflichten
 - **Verzeichnis der Verarbeitungstätigkeiten (Art. 30):** Dokumentation
 
----
-
 **Nächste Schritte:**
 1. Erstellen Sie ein vollständiges Verzeichnis aller Auftragsverarbeiter
 2. Prüfen Sie alle bestehenden Verträge auf DSGVO-Konformität
 3. Implementieren Sie einen Kontrollplan für regelmäßige Audits
 4. Definieren Sie Weisungsprozesse und -berechtigungen
 5. Etablieren Sie ein Weisungsregister
+

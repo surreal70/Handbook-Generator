@@ -1,14 +1,17 @@
 # Security Concept and Action Plan
 
-**Document ID:** 0100  
-**Document Type:** Plan/Control Document  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -50,8 +53,8 @@
 
 | Measure ID | Source | Description | Priority | Owner | Effort (PD) | Budget | Target Date | Dependencies | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| M-001 | Basic Check (GAP-001) | [TODO: Critical measure 1] | P1 - Critical | Thomas Weber | [TODO] | [TODO] | [TODO] | - | Open |
-| M-002 | Basic Check (QW-001) | [TODO: Quick win 1] | P2 - High | Anna Schmidt | [TODO] | [TODO] | [TODO] | - | Open |
+| M-001 | Basic Check (GAP-001) | [TODO: Critical measure 1] | P1 - Critical | [TODO] | [TODO] | [TODO] | [TODO] | - | Open |
+| M-002 | Basic Check (QW-001) | [TODO: Quick win 1] | P2 - High | [TODO] | [TODO] | [TODO] | [TODO] | - | Open |
 | M-003 | Basic Check | [TODO: Measure 3] | P3 - Medium | [TODO] | [TODO] | [TODO] | [TODO] | M-001 | Open |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
@@ -61,17 +64,17 @@
 
 | Measure ID | Source | Description | Priority | Owner | Effort (PD) | Budget | Target Date | Dependencies | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| M-101 | Risk Analysis (R-001) | [TODO: Risk mitigation 1] | P1 - Critical | Anna Schmidt | [TODO] | [TODO] | [TODO] | - | Open |
-| M-102 | Risk Analysis (R-002) | [TODO: Risk mitigation 2] | P2 - High | Anna Schmidt | [TODO] | [TODO] | [TODO] | - | Open |
+| M-101 | Risk Analysis (R-001) | [TODO: Risk mitigation 1] | P1 - Critical | [TODO] | [TODO] | [TODO] | [TODO] | - | Open |
+| M-102 | Risk Analysis (R-002) | [TODO: Risk mitigation 2] | P2 - High | [TODO] | [TODO] | [TODO] | [TODO] | - | Open |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ### 2.3 Strategic Measures
 
 | Measure ID | Description | Priority | Owner | Effort (PD) | Budget | Target Date | Status |
 |---|---|---|---|---|---|---|---|
-| M-201 | SIEM Implementation | P1 - Critical | Anna Schmidt | [TODO] | [TODO] | [TODO] | Open |
-| M-202 | Zero Trust Architecture | P2 - High | Anna Schmidt | [TODO] | [TODO] | [TODO] | Open |
-| M-203 | Security Awareness Program | P2 - High | Thomas Weber | [TODO] | [TODO] | [TODO] | Open |
+| M-201 | SIEM Implementation | P1 - Critical | [TODO] | [TODO] | [TODO] | [TODO] | Open |
+| M-202 | Zero Trust Architecture | P2 - High | [TODO] | [TODO] | [TODO] | [TODO] | Open |
+| M-203 | Security Awareness Program | P2 - High | [TODO] | [TODO] | [TODO] | [TODO] | Open |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 3. Measure Prioritization
@@ -123,7 +126,7 @@
 
 ## 4. Roadmap
 
-### 4.1 Quarter 1 (Q1 {{ meta.document.year }})
+### 4.1 Quarter 1 (Q1 [TODO])
 
 **Focus:** Close critical security gaps
 
@@ -132,7 +135,7 @@
 | M-001 | [TODO] | [TODO] | Planned |
 | M-101 | [TODO] | [TODO] | Planned |
 
-### 4.2 Quarter 2 (Q2 {{ meta.document.year }})
+### 4.2 Quarter 2 (Q2 [TODO])
 
 **Focus:** Quick wins and basic security
 
@@ -141,7 +144,7 @@
 | M-002 | [TODO] | [TODO] | Planned |
 | M-201 | [TODO] | [TODO] | Planned |
 
-### 4.3 Quarter 3 (Q3 {{ meta.document.year }})
+### 4.3 Quarter 3 (Q3 [TODO])
 
 **Focus:** Strategic measures
 
@@ -150,7 +153,7 @@
 | M-202 | [TODO] | [TODO] | Planned |
 | M-203 | [TODO] | [TODO] | Planned |
 
-### 4.4 Quarter 4 (Q4 {{ meta.document.year }})
+### 4.4 Quarter 4 (Q4 [TODO])
 
 **Focus:** Consolidation and optimization
 
@@ -202,8 +205,8 @@
 
 | Risk | Likelihood | Impact | Mitigation | Owner |
 |---|---|---|---|---|
-| Resource shortage | High | Delay | External support | Thomas Weber |
-| Budget cut | Medium | Prioritization | Focus on P1 measures | Max Mustermann |
+| Resource shortage | High | Delay | External support | [TODO] |
+| Budget cut | Medium | Prioritization | Focus on P1 measures | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 7. Success Measurement
@@ -241,15 +244,12 @@
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Executive Management | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT Management | [TODO] | [TODO] | Draft |
+| Executive Management | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology
 - Document 0080: Basic Security Check
 - Document 0090: Risk Analysis
-
 

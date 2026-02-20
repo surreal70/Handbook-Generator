@@ -1,44 +1,37 @@
-# DSGVO Datenschutz-Handbuch - Metadaten
+# GDPR Handbuch - Metadaten
 
 **Dokument-ID:** 0000  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Datum:** [TODO]  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** [TODO]  
+**Template-Version:** 0.2  
 
 ---
 
 ## Handbuch-Informationen
 
-**Handbuch-Titel:** DSGVO Datenschutz-Handbuch  
-**Organisation:** {{ meta.organization }}  
-**Autor:** Andreas Huemmer [andreas.huemmer@adminsend.de]  
-**Geltungsbereich:** {{ meta.scope }}  
-**Gültig ab:** {{ meta.valid_from }}  
-**Nächste Überprüfung:** {{ meta.next_review }}  
+**Handbuch-Titel:** Datenschutz-Grundverordnung (DSGVO) Handbuch
+**Handbuch-Short:** gdpr
+**Organisation:** AdminSend GmbH  
+**Autor:** Handbook-Generator  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
+**Genehmigt durch:** [TODO]  
 
 ---
 
 ## Dokumentenzweck
 
-Dieses Handbuch dokumentiert die Datenschutzmaßnahmen und -prozesse der Organisation gemäß der Datenschutz-Grundverordnung (DSGVO/GDPR - EU 2016/679). Es beschreibt die Struktur, Prozesse, Verantwortlichkeiten und Verfahren zur Sicherstellung des Schutzes personenbezogener Daten.
-
-## Geltungsbereich
-
-Das Datenschutz-Managementsystem gilt für:
-- {{ meta.gdpr_scope }}
-
-## Normative Verweise
-
-- Verordnung (EU) 2016/679 (Datenschutz-Grundverordnung - DSGVO)
-- Bundesdatenschutzgesetz (BDSG) - nationale Anpassungen
-- Relevante sektorspezifische Datenschutzvorschriften
+Dieses Dokument enthält die Metadaten für das GDPR Handbuch.
 
 ## Änderungshistorie
 
 | Version | Datum | Autor | Änderung |
 |---------|-------|-------|----------|
-| {{ meta.version }} | {{ meta.date }} | Andreas Huemmer [andreas.huemmer@adminsend.de] | Initiale Version |
-
+| 0.1 | [TODO] | Handbook-Generator | Initiale Version |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 

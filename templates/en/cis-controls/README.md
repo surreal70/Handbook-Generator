@@ -80,7 +80,3 @@ The templates are based on the CIS Controls v8 framework with 18 Controls:
 - **CIS Control 5**: Account Management
 
 For the German version, see: `templates/de/cis-controls/`
-
-## Version
-
-Version 1.0 - Initial template set

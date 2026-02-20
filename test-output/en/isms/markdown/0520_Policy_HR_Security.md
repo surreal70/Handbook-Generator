@@ -1,18 +1,31 @@
 # Policy: HR Security
 
+**Document-ID:** [FRAMEWORK]-0520
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0520  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.6.1-A.6.4 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -25,7 +38,7 @@ This policy applies to:
 - **Organizational Units:** All departments and locations of AdminSend GmbH
 - **Persons:** All employees, contractors, temporary workers, interns
 - **Lifecycle:** Pre-employment, onboarding, employment, offboarding
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -96,9 +109,9 @@ Upon termination of employment, all access is immediately revoked:
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **HR Manager:** {{ meta.hr.manager }}
-- **Security Awareness Manager:** {{ meta.security.awareness_manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **HR Manager:** {{ meta-handbook.hr_manager }}
+- **Security Awareness Manager:** {{ meta-handbook.security_awareness_manager }}
 - **Implementation Responsible:** HR, Hiring Manager, IT Operations
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -174,10 +187,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - Employment law requirements (Germany)
 - **GDPR (EU 2016/679)** - Data protection for background checks
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

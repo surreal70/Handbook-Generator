@@ -1,11 +1,17 @@
 # DPIA Template
 
-**Document-ID:** 0410  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0410
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -19,8 +25,6 @@
 **Created on:** [TODO: Date]  
 **Created by:** [TODO: Name, Role]  
 **Status:** Draft / Under Review / Approved
-
----
 
 ## 1. Description of Processing
 
@@ -90,8 +94,6 @@
 [Data Source] → [Processing System] → [Storage] → [Recipient]
 ```
 
----
-
 ## 2. Necessity and Proportionality
 
 ### 2.1 Legal Basis
@@ -139,8 +141,6 @@
 **Balancing:**
 [TODO: Do controller's interests or data subjects' interests prevail?]
 
----
-
 ## 3. Risk Assessment
 
 ### 3.1 Risk Identification
@@ -175,13 +175,9 @@
 
 **Risk Level:** [TODO: Calculate from Likelihood × Severity]
 
----
-
 #### Risk 2: [TODO: Name of Risk]
 
 [TODO: Repeat structure for additional risks]
-
----
 
 ### 3.2 Risk Assessment Matrix
 
@@ -191,8 +187,6 @@
 | Risk 2 | [TODO] | [TODO] | [TODO] |
 
 **Overall Risk:** [TODO: Low / Medium / High / Very High]
-
----
 
 ## 4. Measures for Risk Mitigation
 
@@ -212,13 +206,9 @@
 
 **Deadline:** [TODO: Date]
 
----
-
 #### Measure 2: [TODO: Name of Measure]
 
 [TODO: Repeat structure for additional measures]
-
----
 
 ### 4.2 Organizational Measures
 
@@ -235,8 +225,6 @@
 **Responsible:** [TODO: Role/Name]
 
 **Deadline:** [TODO: Date]
-
----
 
 ### 4.3 Data Protection by Design
 
@@ -261,8 +249,6 @@
 **Description:**
 [TODO: How were Privacy by Default principles implemented?]
 
----
-
 ## 5. Residual Risk Assessment
 
 ### 5.1 Risks After Measures
@@ -281,8 +267,6 @@
 **Justification:**
 [TODO: Why is residual risk acceptable or not acceptable?]
 
----
-
 ## 6. Consultation of Data Protection Officer
 
 **Data Protection Officer:** [TODO: Name]
@@ -296,8 +280,6 @@
 [TODO: How were recommendations implemented?]
 
 **Signature Data Protection Officer:** ___________________
-
----
 
 ## 7. Seeking Views of Data Subjects
 
@@ -314,8 +296,6 @@
 
 **Consideration:**
 [TODO: How were views considered?]
-
----
 
 ## 8. Prior Consultation with Supervisory Authority
 
@@ -334,8 +314,6 @@
 **Implementation of Recommendations:**
 [TODO: How were recommendations implemented?]
 
----
-
 ## 9. Approval
 
 **Controller:** [TODO: Name, Role]
@@ -348,8 +326,6 @@
 [TODO: List of conditions]
 
 **Signature:** ___________________
-
----
 
 ## 10. Review and Update
 
@@ -369,8 +345,6 @@
 | 1.0 | [TODO] | Initial version | [TODO] |
 | 1.1 | [TODO] | [TODO: Description] | [TODO] |
 
----
-
 ## Appendices
 
 - [ ] Data flow diagrams
@@ -379,6 +353,5 @@
 - [ ] Consent forms
 - [ ] Other relevant documents
 
----
-
 **Note:** This DPIA is a living document and must be updated upon changes in processing or new insights about risks.
+

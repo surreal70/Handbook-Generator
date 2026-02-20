@@ -1,11 +1,17 @@
 # Integrität und Vertraulichkeit
 
-**Dokument-ID:** 0150  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0150
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Integrität und Vertraulichkeit in der {{ meta.organization }}. Personenbezogene Daten müssen sicher verarbeitet und vor unbefugtem Zugriff geschützt werden.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Integrität und Vertraulichkeit in der AdminSend GmbH. Personenbezogene Daten müssen sicher verarbeitet und vor unbefugtem Zugriff geschützt werden.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. f DSGVO
 
@@ -265,8 +271,6 @@ Personenbezogene Daten müssen in einer Weise verarbeitet werden, die eine angem
 | Fehlende Verschlüsselung | Unverschlüsselte Übertragung | TLS/SSL implementieren |
 | Übermäßige Berechtigungen | Alle haben Admin-Rechte | Berechtigungskonzept umsetzen |
 | Keine Backups | Datenverlust ohne Recovery | Backup-Strategie implementieren |
-
----
 
 **Nächste Schritte:**
 1. Implementieren Sie umfassende TOM gemäß Art. 32

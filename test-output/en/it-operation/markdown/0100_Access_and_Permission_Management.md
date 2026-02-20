@@ -1,15 +1,28 @@
 # Access and Permission Management
 
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Overview
 
 This document describes access and permission management for the IT service. It defines access control models, permission concepts, and role-based access control (RBAC).
 
-**Service:** {{ meta.service_name }}  
-**Responsible:** Andreas Huemmer  
-**Security Officer:** Thomas Weber  
-**Version:** 1.0.0
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Security Officer:** [TODO]  
+**Version:** 0
 
 ## Access Management Strategy
 
@@ -28,8 +41,6 @@ This document describes access and permission management for the IT service. It 
 3. **Regular Review:** Regular review of permissions
 4. **Audit Trail:** Complete logging of all access
 5. **Multi-Factor Authentication:** MFA for privileged access
-
----
 
 ## Access Control Model
 
@@ -51,12 +62,12 @@ This document describes access and permission management for the IT service. It 
 **Identity Provider:**
 - **System:** [TODO: e.g., Active Directory, Azure AD, Okta]
 - **URL:** [TODO: SSO URL]
-- **Responsible:** Andreas Huemmer
+- **Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **MFA System:**
 - **System:** [TODO: e.g., Duo, Microsoft Authenticator]
 - **Required for:** Administrators, privileged accounts
-- **Responsible:** Thomas Weber
+- **Responsible:** [TODO]
 
 ### Authorization
 
@@ -73,8 +84,6 @@ This document describes access and permission management for the IT service. It 
 - More complex implementation
 
 **Current Model:** [TODO: Select RBAC/ABAC/Hybrid]
-
----
 
 ## Role-Based Access Control (RBAC)
 
@@ -114,7 +123,7 @@ This document describes access and permission management for the IT service. It 
 - Backup/restore
 
 **Assigned to:**
-- Andreas Huemmer
+- {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - [TODO: Additional administrators]
 
 **MFA:** Required
@@ -141,7 +150,7 @@ This document describes access and permission management for the IT service. It 
 - Log access (read-only)
 
 **Assigned to:**
-- Julia Becker
+- {{ meta-organisation-roles.role_Service_Desk_Lead }}
 - [TODO: Additional operators]
 
 **MFA:** Optional
@@ -174,8 +183,6 @@ This document describes access and permission management for the IT service. It 
 
 **MFA:** Optional
 
----
-
 ## Permission Matrix
 
 ### System Permissions
@@ -199,8 +206,6 @@ This document describes access and permission management for the IT service. It 
 | **Internal** | Full access | Read/Write | Read | Read | Read |
 | **Confidential** | Full access | As needed | - | - | As needed |
 | **Restricted** | As needed | - | - | - | - |
-
----
 
 ## Access Request Process
 
@@ -257,7 +262,7 @@ This document describes access and permission management for the IT service. It 
 **Decision:** Approve / Reject / Request clarification
 
 #### 3. Security Review
-**Who:** Thomas Weber or security team  
+**Who:** [TODO] or security team  
 **Review:**
 - Compliance requirements
 - Risk assessment
@@ -266,7 +271,7 @@ This document describes access and permission management for the IT service. It 
 **Decision:** Approve / Reject / Modify
 
 #### 4. Provisioning
-**Who:** Andreas Huemmer or IT operations  
+**Who:** {{ meta-organisation-roles.role_IT_Operations_Manager }} or IT operations  
 **Activities:**
 - Create/modify account
 - Assign permissions
@@ -282,8 +287,6 @@ This document describes access and permission management for the IT service. It 
 - Provide access credentials
 - Complete documentation
 - Close ticket
-
----
 
 ## Privileged Access Management (PAM)
 
@@ -314,10 +317,8 @@ Privileged accounts have extended permissions and access to critical systems.
 ### PAM System
 
 **System:** [TODO: e.g., CyberArk, BeyondTrust, Thycotic]  
-**Responsible:** Thomas Weber  
+**Responsible:** [TODO]  
 **Access:** [TODO: PAM system URL]
-
----
 
 ## Service Accounts
 
@@ -342,8 +343,6 @@ Privileged accounts have extended permissions and access to critical systems.
 | `svc_integration` | System integration | Integration platform | API access | Integration team |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 ## Access Review Process
 
 ### Regular Reviews
@@ -361,7 +360,7 @@ Privileged accounts have extended permissions and access to critical systems.
 #### Annual Reviews
 **Frequency:** Annually  
 **Scope:** Complete access review  
-**Responsible:** Thomas Weber  
+**Responsible:** [TODO]  
 **Process:**
 1. Comprehensive audit of all accounts
 2. Review privileged accounts
@@ -382,8 +381,6 @@ Privileged accounts have extended permissions and access to critical systems.
 - Deactivation after deadline
 - Documentation
 
----
-
 ## Onboarding and Offboarding
 
 ### Onboarding Process
@@ -402,7 +399,7 @@ Privileged accounts have extended permissions and access to critical systems.
 7. [ ] Documentation in CMDB
 8. [ ] Send welcome email
 
-**Responsible:** Julia Becker
+**Responsible:** {{ meta-organisation-roles.role_Service_Desk_Lead }}
 
 ### Offboarding Process
 
@@ -420,7 +417,7 @@ Privileged accounts have extended permissions and access to critical systems.
 7. [ ] Update documentation
 8. [ ] Inform manager
 
-**Responsible:** Julia Becker
+**Responsible:** {{ meta-organisation-roles.role_Service_Desk_Lead }}
 
 #### Role Change
 **Trigger:** HR notification or manager request  
@@ -432,8 +429,6 @@ Privileged accounts have extended permissions and access to critical systems.
 3. [ ] Conduct access review
 4. [ ] Update documentation
 5. [ ] Inform user
-
----
 
 ## Compliance and Auditing
 
@@ -458,7 +453,7 @@ Privileged accounts have extended permissions and access to critical systems.
 
 **Log Retention:** [TODO: e.g., 1 year]  
 **Log System:** [TODO: e.g., Splunk, ELK]  
-**Responsible:** Thomas Weber
+**Responsible:** [TODO]
 
 ### Audit Reports
 
@@ -475,8 +470,6 @@ Privileged accounts have extended permissions and access to critical systems.
 - Risk assessment
 - Improvement suggestions
 
----
-
 ## Emergency Access
 
 ### Break-Glass Accounts
@@ -486,7 +479,7 @@ Privileged accounts have extended permissions and access to critical systems.
 **Usage:**
 - Only for critical outages
 - When normal access paths unavailable
-- After approval by Anna Schmidt
+- After approval by [TODO]
 
 **Requirements:**
 - Physically secured passwords
@@ -500,25 +493,22 @@ Privileged accounts have extended permissions and access to critical systems.
 
 **Password Management:**
 - Sealed envelopes in safe
-- Access only by Anna Schmidt or Thomas Weber
-
----
+- Access only by [TODO] or [TODO]
 
 ## Contacts
 
 **Access Management Team:**
-- **IT Operations Manager:** Andreas Huemmer - andreas.huemmer@adminsend.de
-- **CISO:** Thomas Weber - thomas.weber@adminsend.de
-- **Service Desk Lead:** Julia Becker - julia.becker@adminsend.de
-- **CIO:** Anna Schmidt - anna.schmidt@adminsend.de
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **CISO:** [TODO] - {{ meta-organisation-roles.role_CISO_email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **CIO:** [TODO] - {{ meta-organisation-roles.role_CIO_email }}
 
 **Emergency Contacts:**
-- **Break-Glass Approval:** Anna Schmidt - +49 89 12345678-200
-- **Security Incident:** Thomas Weber - +49 89 12345678-300
+- **Break-Glass Approval:** [TODO] - {{ meta-organisation-roles.role_CIO_phone }}
+- **Security Incident:** [TODO] - {{ meta-organisation-roles.role_CISO_phone }}
 
----
-
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
 **Organization:** AdminSend GmbH
+

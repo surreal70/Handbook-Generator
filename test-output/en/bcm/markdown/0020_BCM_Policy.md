@@ -1,13 +1,17 @@
 # BCM Policy
 
-**Document ID:** BCM-0020  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -19,7 +23,7 @@ The management of AdminSend GmbH commits to the implementation and continuous im
 
 ### 1.1 Management Commitment
 
-The management, represented by **{{ meta.roles.ceo.name }}** (CEO), hereby declares:
+The management, represented by **[TODO]** (CEO), hereby declares:
 
 - **Highest priority:** Business continuity has strategic importance for protecting our organization, employees, customers, and stakeholders
 - **Resource provision:** Adequate financial, personnel, and technical resources are provided for the BCMS
@@ -128,15 +132,15 @@ The BCMS covers all critical business processes, IT systems, and locations of Ad
 ### 4.2 Roles and Responsibilities
 
 **Executive Management (CEO)**
-- **Responsible:** {{ meta.roles.ceo.name }} ({{ meta.roles.ceo.email }})
+- **Responsible:** [TODO] ([TODO])
 - **Tasks:** Overall responsibility for BCMS, approval of BCM policy, release of resources, crisis activation
 
 **Chief Information Officer (CIO)**
-- **Responsible:** {{ meta.roles.cio.name }} ({{ meta.roles.cio.email }})
+- **Responsible:** [TODO] ([TODO])
 - **Tasks:** Responsibility for IT continuity, IT disaster recovery, technical BCM measures
 
 **Chief Information Security Officer (CISO)**
-- **Responsible:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+- **Responsible:** [TODO] ([TODO])
 - **Tasks:** ISMS-BCMS interface, security incident response, cyber resilience
 
 **BCM Manager**
@@ -148,7 +152,7 @@ The BCMS covers all critical business processes, IT systems, and locations of Ad
 - **Tasks:** Identification of critical processes, participation in BIA, creation of functional BCM plans, participation in exercises
 
 **IT Operations**
-- **Responsible:** {{ meta.roles.it_operations_manager.name }} ({{ meta.roles.it_operations_manager.email }})
+- **Responsible:** [TODO] ([TODO])
 - **Tasks:** Implementation of technical BCM measures, IT disaster recovery, backup and restore
 
 ## 5. Approvals and Authorizations
@@ -157,10 +161,10 @@ This BCM policy has been reviewed and approved by:
 
 | Role | Name | Function | Date | Signature/Approval |
 |------|------|----------|------|-------------------|
-| **Executive Management** | {{ meta.roles.ceo.name }} | CEO | [TODO: Date] | [TODO: Signature] |
+| **Executive Management** | [TODO] | CEO | [TODO: Date] | [TODO: Signature] |
 | **BCM Owner** | [TODO: BCM Manager] | BCM Manager | [TODO: Date] | [TODO: Signature] |
-| **IT Management** | {{ meta.roles.cio.name }} | CIO | [TODO: Date] | [TODO: Signature] |
-| **Information Security** | {{ meta.roles.ciso.name }} | CISO | [TODO: Date] | [TODO: Signature] |
+| **IT Management** | [TODO] | CIO | [TODO: Date] | [TODO: Signature] |
+| **Information Security** | [TODO] | CISO | [TODO: Date] | [TODO: Signature] |
 | **Compliance** | [TODO: Compliance Officer] | Compliance Officer | [TODO: Date] | [TODO: Signature] |
 
 ## 6. Review and Update
@@ -172,13 +176,5 @@ This BCM policy is:
 - Reviewed for adaptation needs after **severe incidents** or exercises
 
 **Next planned review:** [TODO: Date]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

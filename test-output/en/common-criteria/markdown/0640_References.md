@@ -1,11 +1,17 @@
 # References and Citations
 
-**Document-ID:** 0640  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0640
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -385,8 +391,6 @@ Version [TODO: Version], [TODO: Date]
 **Email:** [TODO: Email]  
 **Website:** [TODO: Website]
 
----
-
 **Next Steps:**
 1. Identify all references used in the ST
 2. Collect complete bibliographic information
@@ -396,3 +400,4 @@ Version [TODO: Version], [TODO: Date]
 6. Verify currency of all references
 7. Ensure all references are available
 8. Update the reference list when changes are made to the ST
+

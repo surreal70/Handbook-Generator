@@ -1,14 +1,17 @@
 # APP Hardening Baseline: Webserver / Reverse Proxy (generisch)
 
-**Dokument-ID:** 0210  
-**Dokumenttyp:** Standard/Baseline  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0210
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -80,7 +83,6 @@
 - Parameterliste/Beispielwerte: [TODO]
 - Checkliste: siehe `0410_Anhang_Checklisten_und_Evidence.md`
 
-
 ## 12. Webserver-spezifische Bereiche (Beispiele)
 - TLS-Konfiguration (Protokolle/Cipher): [TODO]
 - Security Headers (HSTS, CSP, etc.): [TODO]
@@ -88,3 +90,4 @@
 - Logging (Access/Error + Correlation IDs): [TODO]
 - Admin Interfaces nicht öffentlich: [TODO]
 - WAF/Reverse Proxy Einbindung: [TODO]
+

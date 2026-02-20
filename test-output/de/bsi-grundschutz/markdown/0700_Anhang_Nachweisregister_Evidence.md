@@ -1,14 +1,17 @@
 # Anhang: Nachweisregister (Evidence)
 
-**Dokument-ID:** 0700  
-**Dokumenttyp:** Anhang/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0700
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,27 +21,27 @@
 
 Das Nachweisregister von **AdminSend GmbH** bietet eine zentrale Übersicht über alle Nachweise (Evidence), die die Umsetzung von Sicherheitsmaßnahmen, Policies und Richtlinien belegen.
 
-**Verantwortlich:** Thomas Weber (ISB)
+**Verantwortlich:** [TODO] (ISB)
 
 ## 2. Nachweisregister
 
 | Evidence-ID | Thema/Maßnahme | Beschreibung | Dokumenttyp | Ort/Link | Owner | Aufbewahrungsfrist | Letzte Prüfung | Nächste Prüfung | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| E-001 | Patch-Compliance | Monatlicher Patch-Status-Report | Report | [TODO: SharePoint/CMDB] | Anna Schmidt | 3 Jahre | [TODO] | [TODO] | Aktuell |
-| E-002 | Backup-Tests | Quartalsweise Restore-Tests | Testprotokoll | [TODO] | Anna Schmidt | 3 Jahre | [TODO] | [TODO] | Aktuell |
-| E-003 | Schulungsnachweise | Teilnehmerlisten Security Awareness | Teilnehmerliste | [TODO: LMS] | Thomas Weber | 5 Jahre | [TODO] | [TODO] | Aktuell |
+| E-001 | Patch-Compliance | Monatlicher Patch-Status-Report | Report | [TODO: SharePoint/CMDB] | [TODO] | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-002 | Backup-Tests | Quartalsweise Restore-Tests | Testprotokoll | [TODO] | [TODO] | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-003 | Schulungsnachweise | Teilnehmerlisten Security Awareness | Teilnehmerliste | [TODO: LMS] | [TODO] | 5 Jahre | [TODO] | [TODO] | Aktuell |
 | E-004 | Audit-Berichte | Interne Audit-Berichte | Audit-Bericht | [TODO] | Internal Audit | 10 Jahre | [TODO] | [TODO] | Aktuell |
-| E-005 | Risikoakzeptanzen | Dokumentierte Risikoakzeptanzen | Freigabe-Dokument | [TODO] | Max Mustermann | 5 Jahre | [TODO] | [TODO] | Aktuell |
-| E-006 | Vulnerability Scans | Monatliche Vulnerability Scan Reports | Scan-Report | [TODO: Vulnerability Management Tool] | Thomas Weber | 2 Jahre | [TODO] | [TODO] | Aktuell |
-| E-007 | Penetrationstests | Jährliche Pentest-Berichte | Pentest-Bericht | [TODO] | Thomas Weber | 5 Jahre | [TODO] | [TODO] | Aktuell |
-| E-008 | Incident-Dokumentation | Incident-Reports und Postmortems | Incident-Report | [TODO: ITSM] | Anna Schmidt | 3 Jahre | [TODO] | [TODO] | Aktuell |
-| E-009 | Change-Approvals | Change-Freigaben mit Security-Review | Change-Record | [TODO: ITSM] | Anna Schmidt | 2 Jahre | [TODO] | [TODO] | Aktuell |
-| E-010 | Zugriffsprotokolle | Privileged Access Logs | Log-Archiv | [TODO: SIEM] | Thomas Weber | 1 Jahr | [TODO] | [TODO] | Aktuell |
-| E-011 | Lieferanten-Assessments | Third-Party Risk Assessments | Assessment-Report | [TODO] | Thomas Weber | 3 Jahre | [TODO] | [TODO] | Aktuell |
-| E-012 | Managementbewertung | Jährliche Management Review Protokolle | Protokoll | [TODO] | Max Mustermann | 10 Jahre | [TODO] | [TODO] | Aktuell |
-| E-013 | Basis-Sicherheitscheck | BSI Basis-Check Ergebnisse | Gap-Analyse | [TODO] | Thomas Weber | 3 Jahre | [TODO] | [TODO] | Aktuell |
-| E-014 | Schutzbedarfsfeststellung | Dokumentierte Schutzbedarfe | Bewertung | [TODO] | Thomas Weber | 5 Jahre | [TODO] | [TODO] | Aktuell |
-| E-015 | Notfallübungen | BCM/DR Test-Protokolle | Testprotokoll | [TODO] | Thomas Weber | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-005 | Risikoakzeptanzen | Dokumentierte Risikoakzeptanzen | Freigabe-Dokument | [TODO] | [TODO] | 5 Jahre | [TODO] | [TODO] | Aktuell |
+| E-006 | Vulnerability Scans | Monatliche Vulnerability Scan Reports | Scan-Report | [TODO: Vulnerability Management Tool] | [TODO] | 2 Jahre | [TODO] | [TODO] | Aktuell |
+| E-007 | Penetrationstests | Jährliche Pentest-Berichte | Pentest-Bericht | [TODO] | [TODO] | 5 Jahre | [TODO] | [TODO] | Aktuell |
+| E-008 | Incident-Dokumentation | Incident-Reports und Postmortems | Incident-Report | [TODO: ITSM] | [TODO] | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-009 | Change-Approvals | Change-Freigaben mit Security-Review | Change-Record | [TODO: ITSM] | [TODO] | 2 Jahre | [TODO] | [TODO] | Aktuell |
+| E-010 | Zugriffsprotokolle | Privileged Access Logs | Log-Archiv | [TODO: SIEM] | [TODO] | 1 Jahr | [TODO] | [TODO] | Aktuell |
+| E-011 | Lieferanten-Assessments | Third-Party Risk Assessments | Assessment-Report | [TODO] | [TODO] | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-012 | Managementbewertung | Jährliche Management Review Protokolle | Protokoll | [TODO] | [TODO] | 10 Jahre | [TODO] | [TODO] | Aktuell |
+| E-013 | Basis-Sicherheitscheck | BSI Basis-Check Ergebnisse | Gap-Analyse | [TODO] | [TODO] | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-014 | Schutzbedarfsfeststellung | Dokumentierte Schutzbedarfe | Bewertung | [TODO] | [TODO] | 5 Jahre | [TODO] | [TODO] | Aktuell |
+| E-015 | Notfallübungen | BCM/DR Test-Protokolle | Testprotokoll | [TODO] | [TODO] | 3 Jahre | [TODO] | [TODO] | Aktuell |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 3. Kategorien von Nachweisen
@@ -102,20 +105,17 @@ Das Nachweisregister von **AdminSend GmbH** bietet eine zentrale Übersicht übe
 - **Jährlich:** Aufbewahrungsfristen-Review
 - **Bei Audits:** Verfügbarkeit und Aktualität prüfen
 
-**Verantwortlich:** Thomas Weber
+**Verantwortlich:** [TODO]
 
 ## 7. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT-Leitung | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS (Dokumentation)
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Nachweisführung)
 - Alle ISMS-Dokumente (0010-0630)
-
 

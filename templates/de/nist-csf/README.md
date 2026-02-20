@@ -136,5 +136,3 @@ Siehe `FRAMEWORK_MAPPING.md` für eine detaillierte Zuordnung der Vorlagen zu NI
 ## Lizenz
 
 Diese Vorlagen basieren auf dem NIST Cybersecurity Framework 2.0, das gemeinfrei ist.
-||-----|
-| 1.0 | 2024 | Initiale Version basierend auf NIST CSF 2.0 |

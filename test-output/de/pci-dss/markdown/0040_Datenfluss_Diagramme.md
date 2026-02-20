@@ -1,13 +1,17 @@
 # Datenfluss-Diagramme
 
-**Dokument-ID:** PCI-0040  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** PCI-0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -69,7 +73,6 @@ Dieses Dokument visualisiert alle Datenflüsse von Karteninhaberdaten (CHD) inne
 - P2PE (Point-to-Point Encryption)
 - Keine Speicherung von Full Track Data
 - Nur letzte 4 Ziffern auf Quittung
-
 
 ### 3.2 E-Commerce-Datenfluss
 
@@ -198,13 +201,5 @@ Dieses Dokument visualisiert alle Datenflüsse von Karteninhaberdaten (CHD) inne
 | Datum | Änderung | Begründung | Genehmigt durch |
 |-------|----------|------------|-----------------|
 | [TODO: 2026-01-15] | Tokenisierung implementiert | Scope-Reduktion | [TODO: CISO] |
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

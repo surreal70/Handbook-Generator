@@ -1,12 +1,27 @@
 # Backup und Restore
 
+**Dokument-ID:** [FRAMEWORK]-0150
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
 Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend GmbH. Es definiert Backup-Methoden, Zeitpläne, Aufbewahrungsfristen, RPO/RTO-Ziele und Restore-Prozeduren zur Sicherstellung der Datenintegrität und -verfügbarkeit.
 
 **Geltungsbereich:** Alle IT-Systeme, Datenbanken, Applikationen und Daten von AdminSend GmbH
 
-**Verantwortlich:** Andreas Huemmer (andreas.huemmer@adminsend.de)
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Backup-Grundlagen
 
@@ -124,9 +139,9 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 - **1 Offsite:** Geografisch getrennte Kopie
 
 **Beispiel:**
-1. Produktiv-Daten auf {{ netbox.storage.primary }}
-2. Backup auf {{ netbox.storage.backup_disk }}
-3. Offsite-Backup in {{ meta.backup_cloud_provider }}
+1. Produktiv-Daten auf [[ netbox.storage.primary ]]
+2. Backup auf [[ netbox.storage.backup_disk ]]
+3. Offsite-Backup in {{ meta-handbook.backup_cloud_provider }}
 
 #### Backup-Tiers
 
@@ -143,7 +158,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 
 #### Datenbanken (Kritisch)
 
-**System:** {{ netbox.database.server }}
+**System:** [[ netbox.database.server ]]
 
 **Backup-Strategie:**
 - **Full Backup:** Sonntag 02:00
@@ -162,7 +177,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 
 #### Applikations-Server (Wichtig)
 
-**System:** {{ netbox.application.server }}
+**System:** [[ netbox.application.server ]]
 
 **Backup-Strategie:**
 - **Full Backup:** Sonntag 03:00
@@ -179,7 +194,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 
 #### File-Server (Standard)
 
-**System:** {{ netbox.fileserver.server }}
+**System:** [[ netbox.fileserver.server ]]
 
 **Backup-Strategie:**
 - **Full Backup:** Sonntag 01:00
@@ -244,7 +259,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 ### 1. Backup Scheduling
 
 **Automatisierung:**
-- Backup-Jobs in {{ meta.backup_system }} konfiguriert
+- Backup-Jobs in {{ meta-handbook.backup_system }} konfiguriert
 - Zeitgesteuerte Ausführung
 - Abhängigkeiten zwischen Jobs
 - Retry-Mechanismen bei Fehlern
@@ -271,7 +286,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 - Daten auf Backup-Target übertragen
 - Metadaten speichern
 
-**Monitoring:** Echtzeit-Überwachung in {{ meta.monitoring_system }}
+**Monitoring:** Echtzeit-Überwachung in {{ meta-handbook.monitoring_system }}
 
 ### 4. Backup Verification
 
@@ -292,14 +307,14 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 - Fehlgeschlagene Backups
 - Trend-Analysen
 
-**Empfänger:** andreas.huemmer@adminsend.de
+**Empfänger:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 
 ### 6. Offsite Replication
 
 **Replikations-Methoden:**
-- **Cloud-Sync:** Automatische Replikation zu {{ meta.backup_cloud_provider }}
+- **Cloud-Sync:** Automatische Replikation zu {{ meta-handbook.backup_cloud_provider }}
 - **Tape-Rotation:** Wöchentliche Tape-Auslagerung
-- **Remote-Site:** Replikation zu {{ netbox.site.dr_location }}
+- **Remote-Site:** Replikation zu [[ netbox.site.dr_location ]]
 
 **Verschlüsselung:** TLS in Transit, AES-256 at Rest
 
@@ -356,7 +371,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 - Dringlichkeit (RTO)
 - Genehmigung
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 ### 2. Restore Planning
 
@@ -460,9 +475,9 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 ### Backup-Software
 
 **Primäres Backup-System:**
-- **System:** {{ meta.backup_system }}
-- **Version:** {{ meta.backup_system_version }}
-- **Lizenz:** {{ meta.backup_system_license }}
+- **System:** {{ meta-handbook.backup_system }}
+- **Version:** [TODO]
+- **Lizenz:** {{ meta-handbook.backup_system_license }}
 
 **Funktionen:**
 - Applikations-konsistente Backups
@@ -475,13 +490,13 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 ### Snapshot-Technologie
 
 **Storage-Snapshots:**
-- **System:** {{ netbox.storage.system }}
+- **System:** [[ netbox.storage.system ]]
 - **Snapshot-Frequenz:** Alle 4 Stunden
 - **Aufbewahrung:** 48 Stunden
 - **Verwendung:** Schnelle Rollbacks, Pre-Change-Snapshots
 
 **VM-Snapshots:**
-- **System:** {{ netbox.hypervisor.system }}
+- **System:** [[ netbox.hypervisor.system ]]
 - **Snapshot-Typ:** Crash-consistent
 - **Verwendung:** Pre-Deployment-Snapshots
 - **Warnung:** Keine Langzeit-Backup-Lösung
@@ -489,8 +504,8 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 ### Cloud-Backup
 
 **Cloud-Provider:**
-- **Provider:** {{ meta.backup_cloud_provider }}
-- **Region:** {{ meta.backup_cloud_region }}
+- **Provider:** {{ meta-handbook.backup_cloud_provider }}
+- **Region:** {{ meta-handbook.backup_cloud_region }}
 - **Storage-Tier:** Standard / Glacier
 
 **Vorteile:**
@@ -518,7 +533,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 - Key-Rotation alle 90 Tage
 
 **Key-Management:**
-- Schlüssel in {{ meta.key_management_system }}
+- Schlüssel in {{ meta-handbook.key_management_system }}
 - Zugriff nur für autorisierte Administratoren
 - Backup der Schlüssel (Escrow)
 
@@ -542,7 +557,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 
 **Audit-Logging:**
 - Alle Backup/Restore-Aktivitäten geloggt
-- Logs in SIEM-System {{ meta.siem_system }}
+- Logs in SIEM-System {{ meta-handbook.siem_system }}
 - Monatliche Audit-Reviews
 
 ## Backup-Testing
@@ -656,7 +671,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 - Compliance-Sicherstellung
 - Eskalations-Management
 
-**Person:** Andreas Huemmer
+**Person:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ## Compliance und Regulierung
 
@@ -694,12 +709,11 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für AdminSend Gmb
 - ISO/IEC 27001:2013 - Backup Controls
 - DSGVO - Artikel 32 (Datensicherheit)
 - 3-2-1-Backup-Regel
-- Backup-System-Dokumentation: {{ meta.backup_system_docs }}
+- Backup-System-Dokumentation: {{ meta-handbook.backup_system_docs }}
 
----
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.date }}

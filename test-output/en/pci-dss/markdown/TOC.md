@@ -19,5 +19,3 @@ Language: en
 - [0600 - Information Security Policy](0600_Information_Security_Policy.md)
 - [0700 - Appendix Evidence Register](0700_Appendix_Evidence_Register.md)
 - [0710 - Appendix Glossary](0710_Appendix_Glossary.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

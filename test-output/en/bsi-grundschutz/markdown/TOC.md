@@ -4,6 +4,7 @@ Language: en
 
 ## Templates
 
+- [0000 - metadata en bsi-grundschutz](0000_metadata_en_bsi-grundschutz.md)
 - [0010 - Information Security Policy](0010_Information_Security_Policy.md)
 - [0020 - ISMS Organization Roles RACI](0020_ISMS_Organization_Roles_RACI.md)
 - [0030 - Document Control and Document Register](0030_Document_Control_and_Document_Register.md)
@@ -58,4 +59,3 @@ Language: en
 - [0720 - Appendix Data Flows and Interfaces Template](0720_Appendix_Data_Flows_and_Interfaces_Template.md)
 - [0730 - Appendix Diagrams Network Plan and Zones](0730_Appendix_Diagrams_Network_Plan_and_Zones.md)
 - [0740 - Appendix Terms and Abbreviations](0740_Appendix_Terms_and_Abbreviations.md)
-- [READ - E](README.md)

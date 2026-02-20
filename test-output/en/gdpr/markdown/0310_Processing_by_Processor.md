@@ -1,11 +1,17 @@
 # Processing by Processor
 
-**Document-ID:** 0310  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document regulates processing by processor at {{ meta.organization }} according to Art. 28 GDPR. It defines requirements for processors, contract design, and control mechanisms.
+This document regulates processing by processor at AdminSend GmbH according to Art. 28 GDPR. It defines requirements for processors, contract design, and control mechanisms.
 
 ## Processor Register
 
@@ -226,11 +232,10 @@ The processor must inform the controller without undue delay about data breaches
 - **Data Breaches (Art. 33):** Notification obligations
 - **Records of Processing Activities (Art. 30):** Documentation
 
----
-
 **Next Steps:**
 1. Create a complete register of all processors
 2. Review all existing contracts for GDPR compliance
 3. Implement a control plan for regular audits
 4. Define instruction processes and authorizations
 5. Establish an instruction register
+

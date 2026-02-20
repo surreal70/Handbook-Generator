@@ -1,18 +1,21 @@
 # Dokumentenlenkung / Dokumentierte Information
 
-
-
-**Dokument-ID:** 0050  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 7.5  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck und Geltungsbereich
 
@@ -31,7 +34,7 @@ Dieses Dokument definiert die Anforderungen an die Lenkung dokumentierter Inform
 - **URL:** [TODO: https://docs.organization.com/isms/]
 
 **Backup und Archivierung:**
-- **Backup-System:** {{ netbox.backup.system }}
+- **Backup-System:** [[ netbox.backup.system ]]
 - **Backup-Frequenz:** Täglich
 - **Archivierungsdauer:** 10 Jahre nach Außerbetriebnahme
 
@@ -60,7 +63,7 @@ Dieses Dokument definiert die Anforderungen an die Lenkung dokumentierter Inform
 **Notfallzugriff:**
 - Kritische Dokumente (Notfallpläne, Kontaktlisten) werden zusätzlich offline gespeichert
 - Ablageort: [TODO: Physischer Safe, verschlüsselter USB-Stick]
-- Verantwortlich: Thomas Weber
+- Verantwortlich: [TODO]
 
 **Break-Glass-Zugriff:**
 - Siehe `0200_Notfallzugang_BreakGlass.md` (BCM-Handbuch)
@@ -234,9 +237,9 @@ Jedes Dokument enthält einen Change-Log am Ende:
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | 2026-01-15 | Thomas Weber | Initiale Version | Geschäftsführung |
+| 1.0 | 2026-01-15 | [TODO] | Initiale Version | Geschäftsführung |
 | 1.1 | 2026-03-20 | ISMS Manager | Kontaktdaten aktualisiert | CISO |
-| 2.0 | 2026-12-01 | Thomas Weber | Neue Anforderungen aus NIS2 | Geschäftsführung |
+| 2.0 | 2026-12-01 | [TODO] | Neue Anforderungen aus NIS2 | Geschäftsführung |
 ```
 
 ## 5. Dokumentenregister
@@ -247,11 +250,11 @@ Das Dokumentenregister ist die zentrale Übersicht aller ISMS-Dokumente.
 
 | Dokument-ID | Dokumenttitel | Owner | Status | Version | Letzte Änderung | Nächster Review |
 |-------------|---------------|-------|--------|---------|-----------------|-----------------|
-| 0010 | ISMS-Leitlinie | Thomas Weber | Freigegeben | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0020 | ISMS-Geltungsbereich | Thomas Weber | Freigegeben | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0030 | Kontext und Stakeholder | Thomas Weber | Freigegeben | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0040 | ISMS-Governance | Thomas Weber | Freigegeben | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0050 | Dokumentenlenkung | Thomas Weber | Freigegeben | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
+| 0010 | ISMS-Leitlinie | [TODO] | Freigegeben | 1.0 | [TODO] | [TODO] |
+| 0020 | ISMS-Geltungsbereich | [TODO] | Freigegeben | 1.0 | [TODO] | [TODO] |
+| 0030 | Kontext und Stakeholder | [TODO] | Freigegeben | 1.0 | [TODO] | [TODO] |
+| 0040 | ISMS-Governance | [TODO] | Freigegeben | 1.0 | [TODO] | [TODO] |
+| 0050 | Dokumentenlenkung | [TODO] | Freigegeben | 1.0 | [TODO] | [TODO] |
 | ... | ... | ... | ... | ... | ... | ... |
 
 [TODO: Vollständiges Dokumentenregister erstellen und pflegen]
@@ -324,10 +327,9 @@ Siehe `0580_Policy_Aufbewahrung_und_Loeschung.md` für Details.
 - **ISO/IEC 27001:2022** - Clause 7.5: Documented information
 - **ISO/IEC 27002:2022** - Control 5.1: Policies for information security
 
----
-
 **Genehmigt durch:**  
-Thomas Weber, CISO  
-Datum: {{ meta.document.approval_date }}
+[TODO], CISO  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
+

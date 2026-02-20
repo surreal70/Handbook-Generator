@@ -1,11 +1,17 @@
 # Controller: Obligations and Accountability
 
-**Document-ID:** 0300  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0300
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the controller's obligations according to Art. 24 GDPR and the implementation of accountability at {{ meta.organization }}. It documents how we ensure that processing of personal data complies with GDPR.
+This document describes the controller's obligations according to Art. 24 GDPR and the implementation of accountability at AdminSend GmbH. It documents how we ensure that processing of personal data complies with GDPR.
 
 ## Accountability (Art. 24(1))
 
@@ -168,11 +174,10 @@ Measures consider:
 - **Data Protection Impact Assessment (Art. 35):** Risk assessment
 - **Processing by Processor (Art. 28):** Responsibilities with processors
 
----
-
 **Next Steps:**
 1. Document all implemented technical and organizational measures
 2. Create a review plan for regular TOM audits
 3. Implement Privacy by Design and Privacy by Default in all projects
 4. Ensure all evidence documents are current and available
 5. Define clear responsibilities for accountability
+

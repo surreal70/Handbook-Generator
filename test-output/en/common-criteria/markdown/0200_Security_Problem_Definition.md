@@ -1,11 +1,17 @@
 # Security Problem Definition
 
-**Document-ID:** 0200  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0200
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -130,8 +136,6 @@ This document defines the security problem that the TOE shall solve. It describe
 
 **Risk Assessment:** [TODO: High/Medium/Low]
 
----
-
 #### T.002: [TODO: Threat Name]
 [TODO: Repeat structure for each threat]
 
@@ -172,8 +176,6 @@ This document defines the security problem that the TOE shall solve. It describe
 **Compliance Requirements:**
 [TODO: External standards or regulations this policy fulfills]
 
----
-
 #### P.002: [TODO: Policy Name]
 [TODO: Repeat structure for each OSP]
 
@@ -212,8 +214,6 @@ This document defines the security problem that the TOE shall solve. It describe
 
 **Verification:**
 [TODO: How can it be verified that this assumption is met?]
-
----
 
 #### A.002: [TODO: Assumption Name]
 [TODO: Repeat structure for each assumption]
@@ -282,8 +282,6 @@ This document defines the security problem that the TOE shall solve. It describe
 |-------|--------|-----|------------|-------|
 | [TODO: A.001] | [TODO: T.001] | [TODO: P.001] | [TODO: A.001] | [TODO: TA.001] |
 | [TODO: A.002] | [TODO: T.002] | [TODO: P.002] | [TODO: A.002] | [TODO: TA.002] |
-
----
 
 **Next Steps:**
 1. Complete all [TODO] placeholders with TOE-specific information

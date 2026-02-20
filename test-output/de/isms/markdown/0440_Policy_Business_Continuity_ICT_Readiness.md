@@ -1,18 +1,21 @@
 # Policy: Business Continuity ICT Readiness
 
-
-
-**Dokument-ID:** 0440  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.29, A.5.30 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0440
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle geschäftskritischen IT-Systeme, Anwendungen, Infrastruktur, Cloud-Services
 - **Szenarien:** Naturkatastrophen, Cyberangriffe, Systemausfälle, Pandemien, Lieferantenausfälle
 - **Schnittstellen:** Integration mit BCM (Business Continuity Management)
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -81,10 +84,10 @@ Klare Eskalationspfade definieren, wann ein IT-Incident zu einer Business Contin
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **BCM Manager:** {{ meta.bcm.manager }}
-- **DR Coordinator:** {{ meta.it.dr_coordinator }}
-- **CIO:** Anna Schmidt
+- **Policy Owner:** [TODO] (CISO)
+- **BCM Manager:** {{ meta-handbook.bcm_manager }}
+- **DR Coordinator:** {{ meta-handbook.it_dr_coordinator }}
+- **CIO:** [TODO]
 - **Umsetzungsverantwortliche:** IT-Betrieb, System Owner
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -160,10 +163,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ISO/IEC 27031** - ICT readiness for business continuity
 - **BSI Standard 100-4** - Business Continuity Management
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

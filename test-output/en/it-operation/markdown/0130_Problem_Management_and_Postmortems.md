@@ -1,12 +1,27 @@
 # Problem Management and Postmortems
 
+**Document-ID:** [FRAMEWORK]-0130
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Purpose and Scope
 
 This document describes the problem management process for AdminSend GmbH according to ITIL v4 best practices. It defines the systematic analysis of recurring incidents, root cause analysis methods, postmortem processes, and the management of the Known Error Database.
 
 **Scope:** All IT services and systems of AdminSend GmbH
 
-**Responsible:** Andreas Huemmer (andreas.huemmer@adminsend.de)
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Problem Definition
 
@@ -101,7 +116,7 @@ A **problem** is the unknown cause of one or more incidents. The goal of problem
 - Affected configuration items (CIs)
 - Initial hypotheses about cause
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 **Responsible:** Problem Manager
 
@@ -509,8 +524,8 @@ A **postmortem** is a structured analysis of a major incident or critical proble
 4. Improve connection pool monitoring
 
 **Affected CIs:**
-- {{ netbox.database.server }}
-- {{ netbox.application.server }}
+- [[ netbox.database.server ]]
+- [[ netbox.application.server ]]
 
 **Linked Incidents:** INC-2024-123, INC-2024-145, INC-2024-167
 
@@ -625,7 +640,7 @@ A **postmortem** is a structured analysis of a major incident or critical proble
 - Postmortem moderation
 - Reporting
 
-**Person:** Andreas Huemmer
+**Person:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Technical Specialists
 
@@ -648,19 +663,19 @@ A **postmortem** is a structured analysis of a major incident or critical proble
 ## Tools and Systems
 
 ### Problem Management Tool
-- **System:** {{ meta.ticketing_system }}
-- **URL:** {{ meta.ticketing_system_url }}
+- **System:** {{ meta-handbook.ticketing_system }}
+- **URL:** {{ meta-handbook.ticketing_system_url }}
 - **Access:** IT Operations Team
 
 ### Known Error Database
-- **System:** {{ meta.ticketing_system }} (KEDB module)
-- **URL:** {{ meta.kedb_url }}
+- **System:** {{ meta-handbook.ticketing_system }} (KEDB module)
+- **URL:** {{ meta-handbook.kedb_url }}
 - **Access:** All IT staff (Read)
 
 ### RCA Tools
-- **Collaboration:** {{ meta.collaboration_tool }}
-- **Diagramming:** {{ meta.diagramming_tool }}
-- **Log Analysis:** {{ meta.log_analysis_tool }}
+- **Collaboration:** {{ meta-handbook.collaboration_tool }}
+- **Diagramming:** {{ meta-handbook.diagramming_tool }}
+- **Log Analysis:** {{ meta-handbook.log_analysis_tool }}
 
 ## References
 
@@ -670,10 +685,9 @@ A **postmortem** is a structured analysis of a major incident or critical proble
 - Internal Incident Management Processes
 - Change Management Processes
 
----
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
+**Classification:** Internal  
+**Last Updated:** {{ meta-handbook.date }}
 
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Classification:** internal  
-**Last Updated:** {{ meta.date }}

@@ -1,11 +1,17 @@
 # Informationspflicht bei Erhebung
 
-**Dokument-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0210
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung der Informationspflichten in der {{ meta.organization }}. Betroffene Personen müssen bei Erhebung ihrer Daten umfassend informiert werden.
+Dieses Dokument beschreibt die Umsetzung der Informationspflichten in der AdminSend GmbH. Betroffene Personen müssen bei Erhebung ihrer Daten umfassend informiert werden.
 
 ## Informationspflicht bei direkter Erhebung (Art. 13)
 
@@ -175,8 +181,6 @@ Dieses Dokument beschreibt die Umsetzung der Informationspflichten in der {{ met
 | Verspätete Information | Information nach Verarbeitung | Prozess etablieren |
 | Unverständliche Sprache | Juristische Fachsprache | Klare Sprache verwenden |
 | Versteckte Information | Datenschutzerklärung nicht auffindbar | Prominente Platzierung |
-
----
 
 **Nächste Schritte:**
 1. Erstellen Sie vollständige Datenschutzerklärungen für alle Kontexte

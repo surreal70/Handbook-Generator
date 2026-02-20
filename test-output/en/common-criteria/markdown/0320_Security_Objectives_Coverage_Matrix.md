@@ -1,11 +1,17 @@
 # Security Objectives Coverage Matrix
 
-**Document-ID:** 0320  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0320
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -15,7 +21,7 @@
 
 ## 1. Introduction
 
-This document presents the Coverage Matrix for the security objectives of the TOE **{{ meta.toe_name }}**. The matrix visualizes the relationships between:
+This document presents the Coverage Matrix for the security objectives of the TOE **{{ meta-handbook.toe_name }}**. The matrix visualizes the relationships between:
 
 - Security objectives and threats
 - Security objectives and organizational security policies (OSPs)
@@ -237,7 +243,7 @@ When changes are made to the security problem definition or security objectives,
 
 | Date | Change | Impact | Editor |
 |------|--------|--------|--------|
-| {{ meta.date }} | Initial version | - | {{ meta.owner }} |
+| [Date] | Initial version | - | [TODO] |
 | **[TODO]** | | | |
 
 ## 9. Summary
@@ -274,12 +280,4 @@ After the Coverage Matrix:
 - Template 0300: Security Objectives
 - Template 0310: Security Objectives Rationale
 - Template 0400-0450: Security Requirements
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.owner }} | Initial version |
 

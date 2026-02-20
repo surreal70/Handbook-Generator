@@ -1,11 +1,17 @@
 # Managementbewertung
 
-**Dokument-ID:** 0130  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0130
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument definiert den Managementbewertungsprozess für {{ meta.organization }} gemäß ISO 9001:2015 Abschnitt 9.3. Die Managementbewertung stellt sicher, dass das QMS geeignet, angemessen, wirksam und mit der strategischen Ausrichtung der Organisation abgestimmt bleibt.
+Dieses Dokument definiert den Managementbewertungsprozess für AdminSend GmbH gemäß ISO 9001:2015 Abschnitt 9.3. Die Managementbewertung stellt sicher, dass das QMS geeignet, angemessen, wirksam und mit der strategischen Ausrichtung der Organisation abgestimmt bleibt.
 
 ## Planung der Managementbewertung
 
@@ -386,8 +392,6 @@ Managementbewertung integriert mit:
 | [TODO: Jahr] | [TODO: Anzahl] | [TODO: Zusammenfassung] |
 | [TODO: Jahr] | [TODO: Anzahl] | [TODO: Zusammenfassung] |
 
----
-
 **Nächste Schritte:**
 1. Managementbewertungsplan für das laufende Jahr definieren
 2. Alle Eingabedatenquellen und verantwortliche Personen identifizieren
@@ -395,3 +399,4 @@ Managementbewertung integriert mit:
 4. Erste Managementbewertung durchführen
 5. Maßnahmenverfolgungssystem implementieren
 6. Managementbewertungsprozess überprüfen und verbessern
+

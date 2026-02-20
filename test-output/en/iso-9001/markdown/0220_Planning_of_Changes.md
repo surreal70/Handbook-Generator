@@ -1,11 +1,17 @@
 # Planning of Changes
 
-**Document-ID:** 0220  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0220
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -237,8 +243,6 @@ This document defines the process for planning changes to the quality management
 | Change ID | Description | Initiator | Request Date | Status | Completion | Effective |
 |-----------|-------------|-----------|--------------|--------|------------|-----------|
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
-
----
 
 **Next Steps:**
 1. Establish change management process

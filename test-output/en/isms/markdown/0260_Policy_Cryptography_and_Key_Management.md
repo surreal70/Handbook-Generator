@@ -1,18 +1,31 @@
 # Policy: Cryptography and Key Management
 
+**Document-ID:** [FRAMEWORK]-0260
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0260  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.24 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Systems:** All IT systems, applications, databases, networks, cloud services
 - **Data:** All data at rest, in transit, and in use
 - **Cryptographic Procedures:** Encryption, hashing, digital signatures, certificates
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`).
 
@@ -95,9 +108,9 @@ The use of cryptography complies with national and international export control 
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Crypto Officer:** {{ meta.it.crypto_officer }}
-- **Key Management Responsible:** {{ meta.it.key_manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **Crypto Officer:** {{ meta-handbook.it_crypto_officer }}
+- **Key Management Responsible:** {{ meta-handbook.it_key_manager }}
 - **Implementation Responsible:** IT operations, development
 - **Control/Audit Function:** ISMS, internal audit, compliance
 
@@ -175,10 +188,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **FIPS 140-2/140-3** - Security Requirements for Cryptographic Modules
 - **eIDAS Regulation (EU 910/2014)** - Electronic Identification and Trust Services
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

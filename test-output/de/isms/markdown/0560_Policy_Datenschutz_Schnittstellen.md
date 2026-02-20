@@ -1,18 +1,21 @@
 # Policy: Datenschutz Schnittstellen
 
-
-
-**Dokument-ID:** 0560  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.31-A.5.34 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0560
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Daten:** Alle personenbezogenen Daten gemäß DSGVO
 - **Prozesse:** Alle Verarbeitungstätigkeiten personenbezogener Daten
 - **Schnittstellen:** ISMS ↔ Datenschutz-Management-System
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -79,9 +82,9 @@ Internationale Datentransfers erfolgen nur mit angemessenen Garantien (Angemesse
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO) und {{ meta.dpo.name }} (DPO)
-- **Data Protection Officer:** {{ meta.dpo.name }}
-- **Privacy Officer:** {{ meta.privacy.officer }}
+- **Policy Owner:** [TODO] (CISO) und {{ meta-handbook.dpo_name }} (DPO)
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
+- **Privacy Officer:** {{ meta-handbook.privacy_officer }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Business Owner
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, Datenschutzaufsicht
 
@@ -158,10 +161,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ISO/IEC 27701** - Privacy Information Management System
 - **BDSG** - Bundesdatenschutzgesetz
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

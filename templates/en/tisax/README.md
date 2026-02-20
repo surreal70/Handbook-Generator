@@ -112,5 +112,3 @@ See FRAMEWORK_MAPPING.md for a detailed mapping of templates to specific TISAX a
 - Consult information security and data protection experts as needed
 - Keep documentation current and review regularly
 - Prepare thoroughly for TISAX assessments
-||---|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

@@ -1,13 +1,17 @@
 # Facility Access Controls
 
-**Document ID:** HIPAA-0300  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0300
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -78,7 +82,7 @@ This document describes the Facility Access Controls for AdminSend GmbH to limit
 **Emergency Contacts:**
 | Role | Name | Phone (24/7) | Backup |
 |------|------|--------------|--------|
-| Security Officer | {{ meta.roles.security_officer.name }} | [TODO: Phone] | [TODO: Backup name/phone] |
+| Security Officer | [TODO] | [TODO: Phone] | [TODO: Backup name/phone] |
 | Facility Manager | [TODO: Name] | [TODO: Phone] | [TODO: Backup] |
 | IT Manager | [TODO: Name] | [TODO: Phone] | [TODO: Backup] |
 
@@ -322,13 +326,5 @@ This document describes the Facility Access Controls for AdminSend GmbH to limit
 **Retention Period:** [TODO: 6 years from creation or last effective date]
 
 **Storage Location:** [TODO: Document management system location]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

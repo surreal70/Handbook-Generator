@@ -1,11 +1,17 @@
 # Threat Agents and Assets
 
-**Dokument-ID:** 0240  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0240
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -86,8 +92,6 @@ Dieses Dokument definiert:
 - **Archivierung:** [TODO: Wie werden Daten archiviert?]
 - **Löschung:** [TODO: Wie werden Daten gelöscht?]
 
----
-
 #### A.AUTHENTICATION_DATA
 **Asset-ID:** A.AUTHENTICATION_DATA  
 **Kategorie:** Credential  
@@ -127,8 +131,6 @@ Dieses Dokument definiert:
 - **Geschäftswert:** [TODO: High - Grundlegende Sicherheitsfunktion]
 - **Kritikalität:** [TODO: High - System nicht nutzbar ohne Authentifizierung]
 
----
-
 #### A.DATA_PROCESSING_SERVICE
 **Asset-ID:** A.DATA_PROCESSING_SERVICE  
 **Kategorie:** Service  
@@ -162,8 +164,6 @@ Dieses Dokument definiert:
 
 **Kritikalität:**
 [TODO: High - Kompromittierung der Plattform gefährdet alle Assets]
-
----
 
 #### A.CRYPTOGRAPHIC_KEYS
 **Asset-ID:** A.CRYPTOGRAPHIC_KEYS  
@@ -277,8 +277,6 @@ Dieses Dokument definiert:
 1. [TODO: Szenario 1]
 2. [TODO: Szenario 2]
 
----
-
 #### TA.MALICIOUS_INSIDER
 **Agenten-ID:** TA.MALICIOUS_INSIDER  
 **Typ:** Insider  
@@ -311,8 +309,6 @@ Dieses Dokument definiert:
 
 **Angriffspotenzial:**
 [TODO: Medium-High - Insider-Zugang kompensiert niedrigere technische Fähigkeiten]
-
----
 
 #### TA.PRIVILEGED_ADMIN
 **Agenten-ID:** TA.PRIVILEGED_ADMIN  
@@ -347,8 +343,6 @@ Dieses Dokument definiert:
 
 **Angriffspotenzial:**
 [TODO: Very High - Privilegierter Zugang ermöglicht nahezu alle Angriffe]
-
----
 
 #### TA.NATION_STATE
 **Agenten-ID:** TA.NATION_STATE  
@@ -454,8 +448,6 @@ Dieses Dokument definiert:
 - High Risk Combinations: [TODO: Anzahl]
 - Medium Risk Combinations: [TODO: Anzahl]
 - Low Risk Combinations: [TODO: Anzahl]
-
----
 
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Assets und Agenten

@@ -1,18 +1,21 @@
 # Policy: Ausnahmen und Risk Waivers
 
-
-
-**Dokument-ID:** 0640  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.1, A.6.1.2 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0640
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Policies:** Alle Sicherheitsrichtlinien und -standards
 - **Systeme:** Alle IT-Systeme und Anwendungen
 - **Prozesse:** Alle sicherheitsrelevanten Prozesse
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Diese Policy selbst unterliegt keinem Ausnahmenprozess.
 
@@ -93,10 +96,10 @@ Ausnahmen werden regelmäßig überprüft (mindestens quartalsweise). Nicht mehr
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **CIO:** Anna Schmidt
-- **Risk Manager:** {{ meta.risk.manager }}
-- **ISMS Team:** {{ meta.isms.team }}
+- **Policy Owner:** [TODO] (CISO)
+- **CIO:** [TODO]
+- **Risk Manager:** {{ meta-handbook.risk_manager }}
+- **ISMS Team:** {{ meta-handbook.isms_team }}
 - **Antragsteller:** Business Owner, IT-Betrieb
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -166,10 +169,9 @@ Diese Policy selbst unterliegt keinem Ausnahmenprozess. Änderungen an dieser Po
 - **NIST SP 800-37** - Risk Management Framework
 - **COBIT 2019** - APO12 (Managed Risk)
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

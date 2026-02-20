@@ -1,11 +1,17 @@
 # TOE Overview
 
-**Document-ID:** 0020  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -194,10 +200,9 @@ The environment must provide:
 - [TODO: Design Specification]
 - [TODO: Security Architecture]
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders with TOE-specific information
 2. Create architectural and data flow diagrams
 3. Verify consistency with detailed TOE description
 4. Ensure all interfaces are documented
+

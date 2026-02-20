@@ -1,13 +1,17 @@
 # Geltungsbereich und Anwendbarkeit
 
-**Dokument-ID:** HIPAA-0010  
-**Organisation:** AdminSend GmbH  
-**Verantwortlich:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -37,11 +41,11 @@ Dieses Dokument definiert den Geltungsbereich der HIPAA-Compliance für AdminSen
 ### 2.1 Organisationsdetails
 
 **Organisationsname:** AdminSend GmbH  
-**Adresse:** Musterstraße 123, 80331 München  
-**Bundesstaat:** {{ meta.organization.state }}  
-**Land:** Deutschland  
-**Website:** https://www.adminsend.de  
-**Steuer-ID (EIN):** {{ meta.organization.tax_id }}  
+**Adresse:** Musterstraße 123, [TODO] [TODO]  
+**Bundesstaat:** [TODO]  
+**Land:** [TODO]  
+**Website:** [TODO]  
+**Steuer-ID (EIN):** [TODO]  
 
 ### 2.2 Organisationstyp
 
@@ -278,14 +282,14 @@ Falls ja:
 ### 9.1 Schlüsselrollen
 
 **Privacy Officer:**
-- **Name:** {{ meta.roles.privacy_officer.name }}
-- **E-Mail:** {{ meta.roles.privacy_officer.email }}
-- **Telefon:** {{ meta.roles.privacy_officer.phone }}
+- **Name:** [TODO]
+- **E-Mail:** [TODO]
+- **Telefon:** [TODO]
 
 **Security Officer:**
-- **Name:** {{ meta.roles.security_officer.name }}
-- **E-Mail:** {{ meta.roles.security_officer.email }}
-- **Telefon:** {{ meta.roles.security_officer.phone }}
+- **Name:** [TODO]
+- **E-Mail:** [TODO]
+- **Telefon:** [TODO]
 
 **HIPAA Compliance Officer:**
 - **Name:** [TODO: Name]
@@ -341,12 +345,11 @@ Falls ja:
 | [TODO: Datum] | Initiale Geltungsbereichsdefinition | N/A | [TODO: Name] |
 | [TODO: Datum] | Neues EHR-System hinzugefügt | Erweiterter ePHI-Geltungsbereich | [TODO: Name] |
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | [TODO] | Handbook-Generator | Ersterstellung |
+
 
 

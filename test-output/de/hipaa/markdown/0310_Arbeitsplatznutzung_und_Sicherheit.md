@@ -1,13 +1,17 @@
 # Arbeitsplatznutzung und -sicherheit
 
-**Dokument-ID:** HIPAA-0310  
-**Organisation:** AdminSend GmbH  
-**Verantwortlich:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -171,7 +175,6 @@ Dieses Dokument beschreibt die Richtlinien zur Arbeitsplatznutzung und Arbeitspl
 - Arbeitsplatzstilllegung
 - Standortänderungen
 - Vierteljährliche Inventarüberprüfung
-
 
 ## 5. Arbeitsplatz-Lebenszyklus
 
@@ -360,7 +363,7 @@ Falls BYOD erlaubt:
 
 **Kontaktinformationen:**
 - IT-Helpdesk: [TODO: Telefon/E-Mail]
-- Security Officer: {{ meta.roles.security_officer.email }}
+- Security Officer: [TODO]
 - Nach Geschäftsschluss: [TODO: Notfallkontakt]
 
 ## 10. Schulung und Sensibilisierung
@@ -442,12 +445,11 @@ Falls BYOD erlaubt:
 
 **Speicherort:** [TODO: Asset-Management-System, Dokumenten-Repository]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | [TODO] | Handbook-Generator | Ersterstellung |
+
 
 

@@ -1,11 +1,17 @@
 # Datenübertragbarkeit
 
-**Dokument-ID:** 0250  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0250
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Rechts auf Datenübertragbarkeit in der {{ meta.organization }}. Betroffene Personen haben das Recht, ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.
+Dieses Dokument beschreibt die Umsetzung des Rechts auf Datenübertragbarkeit in der AdminSend GmbH. Betroffene Personen haben das Recht, ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.
 
 ## Recht auf Datenübertragbarkeit (Art. 20)
 
@@ -229,8 +235,6 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Datenübertragbarkeit in
 | Unvollständige Daten | Nur Stammdaten | Alle übertragbaren Daten |
 | Fehlende Schnittstelle | Keine direkte Übertragung | API bereitstellen |
 | Verzögerte Bereitstellung | Bereitstellung nach 3 Monaten | Fristenkontrolle |
-
----
 
 **Nächste Schritte:**
 1. Etablieren Sie Prozess für Datenübertragbarkeitsanfragen

@@ -112,15 +112,9 @@ Nutzen Sie die CCM-Zuordnungen zu diesen Standards, um Compliance-Überschneidun
 - [CSA Cloud Controls Matrix](https://cloudsecurityalliance.org/research/cloud-controls-matrix/)
 - [CSA Security Guidance](https://cloudsecurityalliance.org/research/guidance/)
 - [CSA STAR Program](https://cloudsecurityalliance.org/star/)
-
-## Versionierung
-
-- **Version**: 1.0
 - **Basierend auf**: CSA CCM v4.0
 - **Letzte Aktualisierung**: {{ meta-handbook.modifydate }}
 
 ## Lizenz
 
 Diese Vorlagen sind für den internen Gebrauch in [TODO] bestimmt.
-||-----|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

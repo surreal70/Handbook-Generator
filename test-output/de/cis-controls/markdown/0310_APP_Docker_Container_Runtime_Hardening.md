@@ -1,14 +1,17 @@
 # APP Hardening Standard: Docker/Container Runtime
 
-**Dokument-ID:** 0310  
-**Dokumenttyp:** Standard  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -39,3 +42,4 @@ Absicherung der Container-Runtime und Host-Integration (Daemon, Permissions, Nam
 ## 5. Betrieb
 - Updates: [TODO]
 - Monitoring: [TODO]
+

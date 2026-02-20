@@ -1,9 +1,17 @@
 # Anhang D: Begriffe und Abkürzungen
 
-**Dokumenttyp:** Anhang  
-**Version:** 1.0.0  
-**Datum:** {{ meta.document.date }}  
-**Klassifizierung:** internal
+**Dokument-ID:** [FRAMEWORK]-0740
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -14,10 +22,8 @@ Dieses Dokument definiert alle im ISMS verwendeten Begriffe und Abkürzungen. Es
 ## Geltungsbereich
 
 **Organisation:** AdminSend GmbH  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Verantwortlich:** Thomas Weber
-
----
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Verantwortlich:** [TODO]
 
 ## Abkürzungen
 
@@ -260,8 +266,6 @@ Dieses Dokument definiert alle im ISMS verwendeten Begriffe und Abkürzungen. Es
 |-----------|-----------|-------------|
 | **ZTA** | Zero Trust Architecture | Zero-Trust-Architektur |
 
----
-
 ## Begriffsdefinitionen
 
 ### A
@@ -296,8 +300,6 @@ Autorisierung; Gewährung von Zugriffsrechten nach erfolgreicher Authentifizieru
 **Availability**  
 Verfügbarkeit; Eigenschaft, dass Informationen und Systeme bei Bedarf zugänglich sind.
 
----
-
 ### B
 
 **Backup**  
@@ -311,8 +313,6 @@ Geschäftskontinuität; Fähigkeit, Geschäftsprozesse bei Störungen aufrechtzu
 
 **Business Impact Analysis (BIA)**  
 Geschäftsauswirkungsanalyse; Bewertung der Auswirkungen von Störungen auf Geschäftsprozesse.
-
----
 
 ### C
 
@@ -343,8 +343,6 @@ Kryptografie; Wissenschaft der Verschlüsselung und Entschlüsselung von Informa
 **Cyber Security**  
 Cybersicherheit; Schutz von Computersystemen und Netzwerken vor Angriffen.
 
----
-
 ### D
 
 **Data Breach**  
@@ -362,8 +360,6 @@ Datenschutz; Schutz personenbezogener Daten.
 **Disaster Recovery**  
 Notfallwiederherstellung; Wiederherstellung von IT-Systemen nach einem Ausfall.
 
----
-
 ### E
 
 **Encryption**  
@@ -375,8 +371,6 @@ Endgerät; Gerät am Ende einer Netzwerkverbindung (PC, Laptop, Smartphone).
 **Event**  
 Ereignis; identifizierbare Zustandsänderung in einem System.
 
----
-
 ### F
 
 **Firewall**  
@@ -384,8 +378,6 @@ Firewall; Sicherheitssystem zur Kontrolle des Netzwerkverkehrs.
 
 **Forensics**  
 Forensik; Untersuchung von Sicherheitsvorfällen.
-
----
 
 ### G
 
@@ -395,8 +387,6 @@ Lückenanalyse; Vergleich zwischen Ist- und Soll-Zustand.
 **Governance**  
 Governance; Rahmenwerk für Führung und Kontrolle.
 
----
-
 ### H
 
 **Hardening**  
@@ -404,8 +394,6 @@ Härtung; Absicherung von Systemen durch Entfernung unnötiger Funktionen.
 
 **Hash**  
 Hash; eindeutige Prüfsumme zur Integritätssicherung.
-
----
 
 ### I
 
@@ -424,14 +412,10 @@ Integrität; Eigenschaft, dass Informationen vollständig und unverändert sind.
 **Intrusion Detection**  
 Einbruchserkennung; Erkennung von Angriffen auf Systeme.
 
----
-
 ### K
 
 **Key Management**  
 Schlüsselverwaltung; Verwaltung kryptografischer Schlüssel.
-
----
 
 ### L
 
@@ -440,8 +424,6 @@ Minimale Rechtevergabe; Prinzip, nur notwendige Zugriffsrechte zu gewähren.
 
 **Logging**  
 Protokollierung; Aufzeichnung von Ereignissen und Aktivitäten.
-
----
 
 ### M
 
@@ -457,8 +439,6 @@ Managementbewertung; regelmäßige Überprüfung des ISMS durch das Management.
 **Multi-Factor Authentication (MFA)**  
 Mehr-Faktor-Authentifizierung; Authentifizierung mit mehreren Faktoren.
 
----
-
 ### N
 
 **Network Segmentation**  
@@ -466,8 +446,6 @@ Netzwerksegmentierung; Aufteilung eines Netzwerks in separate Bereiche.
 
 **Non-Conformity**  
 Nichtkonformität; Abweichung von Anforderungen.
-
----
 
 ### P
 
@@ -488,8 +466,6 @@ Privatsphäre; Recht auf Schutz personenbezogener Daten.
 
 **Privileged Access**  
 Privilegierter Zugriff; Zugriff mit erweiterten Rechten.
-
----
 
 ### R
 
@@ -513,8 +489,6 @@ Risikobewertung; Prozess zur Identifikation und Bewertung von Risiken.
 
 **Risk Treatment**  
 Risikobehandlung; Maßnahmen zur Risikominderung.
-
----
 
 ### S
 
@@ -542,8 +516,6 @@ Anwendbarkeitserklärung; Dokument, das die Anwendbarkeit von Kontrollen erklär
 **Supply Chain**  
 Lieferkette; Netzwerk von Lieferanten und Dienstleistern.
 
----
-
 ### T
 
 **Threat**  
@@ -555,8 +527,6 @@ Bedrohungsinformationen; Informationen über aktuelle Bedrohungen.
 **Two-Factor Authentication (2FA)**  
 Zwei-Faktor-Authentifizierung; Authentifizierung mit zwei Faktoren.
 
----
-
 ### V
 
 **Vulnerability**  
@@ -565,14 +535,10 @@ Schwachstelle; Schwäche, die von einer Bedrohung ausgenutzt werden kann.
 **Vulnerability Assessment**  
 Schwachstellenbewertung; Identifikation und Bewertung von Schwachstellen.
 
----
-
 ### W
 
 **Whitelist**  
 Whitelist; Liste erlaubter Elemente (Anwendungen, IP-Adressen, etc.).
-
----
 
 ### Z
 
@@ -581,8 +547,6 @@ Zero-Day; Schwachstelle, für die noch kein Patch verfügbar ist.
 
 **Zero Trust**  
 Zero Trust; Sicherheitsmodell ohne implizites Vertrauen.
-
----
 
 ## ISO/IEC 27001:2022 Spezifische Begriffe
 
@@ -625,8 +589,6 @@ Risikobehandlung; Auswahl und Implementierung von Maßnahmen (Klausel 6.1.3).
 **Statement of Applicability (SoA)**  
 Anwendbarkeitserklärung; Dokument mit Annex A Kontrollen und deren Anwendbarkeit (Klausel 6.1.3).
 
----
-
 ## Referenzen
 
 - ISO/IEC 27000:2018 Information Security Management Systems - Overview and Vocabulary
@@ -634,10 +596,9 @@ Anwendbarkeitserklärung; Dokument mit Annex A Kontrollen und deren Anwendbarkei
 - ISO/IEC 27002:2022 Information Security Controls
 - NIST Glossary: https://csrc.nist.gov/glossary
 
----
-
-**Dokumentverantwortlicher:** Thomas Weber  
-**Genehmigt durch:** {{ meta.management.name }}  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** {{ meta-handbook.management_name }}  
 **Nächste Überprüfung:** Jährlich
+
 
 

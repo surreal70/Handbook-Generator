@@ -1,18 +1,31 @@
 # Policy: Exceptions and Risk Waivers
 
+**Document-ID:** [FRAMEWORK]-0640
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0640  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.1, A.6.1.2 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Policies:** All security policies and standards
 - **Systems:** All IT systems and applications
 - **Processes:** All security-relevant processes
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** This policy itself is not subject to an exception process.
 
@@ -93,10 +106,10 @@ Exceptions are reviewed regularly (at least quarterly). Exceptions no longer nee
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **CIO:** Anna Schmidt
-- **Risk Manager:** {{ meta.risk.manager }}
-- **ISMS Team:** {{ meta.isms.team }}
+- **Policy Owner:** [TODO] (CISO)
+- **CIO:** [TODO]
+- **Risk Manager:** {{ meta-handbook.risk_manager }}
+- **ISMS Team:** {{ meta-handbook.isms_team }}
 - **Requester:** Business Owner, IT Operations
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -166,10 +179,9 @@ This policy itself is not subject to an exception process. Changes to this polic
 - **NIST SP 800-37** - Risk Management Framework
 - **COBIT 2019** - APO12 (Managed Risk)
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Executive Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Executive Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

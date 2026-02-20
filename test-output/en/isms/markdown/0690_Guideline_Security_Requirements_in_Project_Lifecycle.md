@@ -1,14 +1,17 @@
 # Guideline: Security Requirements in Project Lifecycle
 
-**Document ID:** 0690  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0680_Policy_Security_in_Projects.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.8  
-**Owner:** {{ meta.pmo.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0690
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -293,7 +296,7 @@ This guideline implements `0680_Policy_Security_in_Projects.md` and defines:
 4. Define mitigation measures
 5. Documentation
 
-**Tool:** {{ meta.security.threat_modeling_tool }} (e.g., Microsoft Threat Modeling Tool)
+**Tool:** {{ meta-handbook.security_threat_modeling_tool }} (e.g., Microsoft Threat Modeling Tool)
 
 ## 7. Security Testing
 
@@ -363,7 +366,6 @@ This guideline implements `0680_Policy_Security_in_Projects.md` and defines:
 - **NIST SP 800-64** - Security Considerations in the System Development Life Cycle
 - **OWASP SAMM** - Software Assurance Maturity Model
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

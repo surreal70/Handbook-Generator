@@ -1,11 +1,17 @@
 # Assurance Measures
 
-**Document-ID:** 0510  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0510
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -502,11 +508,3 @@ All required evidence will be provided to the evaluator:
 **System Access:**
 - [TODO: Describe how the evaluator gains access to development systems, test environments, etc.]
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | [TODO] | Initial version |
-| 1.0 | [TODO] | [TODO] | [TODO] |

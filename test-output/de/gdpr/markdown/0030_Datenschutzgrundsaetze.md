@@ -1,11 +1,17 @@
 # Datenschutzgrundsätze
 
-**Dokument-ID:** 0030  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Datenschutzgrundsätze gemäß Art. 5 DSGVO und deren Umsetzung in der {{ meta.organization }}. Diese Grundsätze sind bei jeder Verarbeitung personenbezogener Daten zu beachten.
+Dieses Dokument beschreibt die Datenschutzgrundsätze gemäß Art. 5 DSGVO und deren Umsetzung in der AdminSend GmbH. Diese Grundsätze sind bei jeder Verarbeitung personenbezogener Daten zu beachten.
 
 ## Grundsätze gemäß Art. 5 Abs. 1 DSGVO
 
@@ -167,11 +173,10 @@ Der Verantwortliche ist für die Einhaltung der Grundsätze verantwortlich und m
 - **DSFA (Art. 35):** Risikobewertung
 - **Betroffenenrechte (Art. 12-23):** Transparenz und Kontrolle
 
----
-
 **Nächste Schritte:**
 1. Überprüfen Sie alle Verarbeitungen auf Einhaltung der Grundsätze
 2. Implementieren Sie Kontrollen für jeden Grundsatz
 3. Dokumentieren Sie Nachweise für Rechenschaftspflicht
 4. Schulen Sie Mitarbeiter zu den Grundsätzen
 5. Etablieren Sie regelmäßige Überprüfungsprozesse
+

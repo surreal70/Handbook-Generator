@@ -1,11 +1,17 @@
 # Verzeichnis der Verarbeitungstätigkeiten
 
-**Dokument-ID:** 0320  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0320
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument ist das Verzeichnis der Verarbeitungstätigkeiten gemäß Art. 30 DSGVO für {{ meta.organization }}. Es dokumentiert alle Verarbeitungen personenbezogener Daten systematisch und dient als Nachweis der Compliance.
+Dieses Dokument ist das Verzeichnis der Verarbeitungstätigkeiten gemäß Art. 30 DSGVO für AdminSend GmbH. Es dokumentiert alle Verarbeitungen personenbezogener Daten systematisch und dient als Nachweis der Compliance.
 
 ## Pflicht zur Führung eines Verzeichnisses
 
@@ -85,17 +91,13 @@ Die Pflicht gilt nicht für Unternehmen mit weniger als 250 Mitarbeitern, es sei
 - **Pseudonymisierung:** [TODO: Beschreibung]
 - **Weitere Maßnahmen:** [TODO: Verweis auf TOM-Dokumentation]
 
----
-
 ### Verarbeitungstätigkeit 2: [TODO: Name der Verarbeitung]
 
 [TODO: Wiederhole Struktur für jede Verarbeitungstätigkeit]
 
----
-
 ## Verzeichnis für Auftragsverarbeiter (Art. 30 Abs. 2)
 
-Falls {{ meta.organization }} als Auftragsverarbeiter tätig ist:
+Falls AdminSend GmbH als Auftragsverarbeiter tätig ist:
 
 ### Auftragsverarbeitung 1: [TODO: Name]
 
@@ -119,8 +121,6 @@ Falls {{ meta.organization }} als Auftragsverarbeiter tätig ist:
 #### d) Technische und organisatorische Maßnahmen (Art. 32)
 
 - [TODO: Verweis auf TOM-Dokumentation]
-
----
 
 ## Übersicht aller Verarbeitungstätigkeiten
 
@@ -170,11 +170,10 @@ Das Verzeichnis wird auf Anfrage der Aufsichtsbehörde zur Verfügung gestellt.
 - **TOM-Dokumentation (Art. 32):** Detaillierte Sicherheitsmaßnahmen
 - **Löschkonzept:** Detaillierte Löschfristen und -prozesse
 
----
-
 **Nächste Schritte:**
 1. Erfassen Sie systematisch alle Verarbeitungstätigkeiten
 2. Dokumentieren Sie alle Pflichtangaben gemäß Art. 30
 3. Implementieren Sie einen Aktualisierungsprozess
 4. Schulen Sie Mitarbeiter zur Meldung neuer Verarbeitungen
 5. Überprüfen Sie das Verzeichnis regelmäßig auf Vollständigkeit
+

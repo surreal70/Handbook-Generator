@@ -1,18 +1,31 @@
 # Risk Treatment Plan (RTP) – Template
 
+**Document-ID:** [FRAMEWORK]-0090
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0090  
 **Document Type:** ISMS Plan/Template  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 6.1.3  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose and Scope
 
@@ -38,7 +51,7 @@ This plan encompasses all measures for treating risks within the ISMS scope (see
 
 | Measure ID | Risk ID | Measure | Control Reference (Annex A) | Owner | Priority | Effort (PD) | Budget | Target Date | Status | Progress | Remarks |
 |------------|---------|---------|----------------------------|-------|----------|-------------|--------|-------------|--------|----------|---------|
-| M-001 | R-001 | Procure redundant core switch | A.8.6 (Capacity management) | Anna Schmidt | High | 20 | €50,000 | 2026-06-30 | Planned | 0% | Budget approved, tender in progress |
+| M-001 | R-001 | Procure redundant core switch | A.8.6 (Capacity management) | [TODO] | High | 20 | €50,000 | 2026-06-30 | Planned | 0% | Budget approved, tender in progress |
 | M-002 | R-002 | Implement immutable backups | A.8.13 (Information backup) | IT Operations | Very High | 40 | €30,000 | 2026-03-31 | In Progress | 60% | Pilot phase completed |
 | M-003 | R-003 | Roll out MFA for all users | A.5.17 (Authentication information) | IAM Team | Very High | 30 | €15,000 | 2026-02-28 | In Progress | 80% | 200 of 250 users migrated |
 | M-004 | R-004 | Implement secret scanning tool | A.8.24 (Use of cryptography) | Dev Lead | Medium | 15 | €10,000 | 2026-04-30 | Planned | 10% | Tool evaluation: GitGuardian vs. Gitleaks |
@@ -340,18 +353,15 @@ Effectiveness must be demonstrated for each implemented measure:
 - **ISO/IEC 27002:2022** - Information security controls
 - **ISO/IEC 27005:2022** - Information security risk management
 
----
-
 ## Change History
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | {{ meta.document.date }} | Thomas Weber | Initial version | {{ meta.management.ceo }} |
-
----
+| 1.0 | [TODO] | [TODO] | Initial version | {{ meta-handbook.management_ceo }} |
 
 **Approved by:**  
-Thomas Weber, CISO  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (Monthly)
+**Next Review:** [TODO] (Monthly)
+

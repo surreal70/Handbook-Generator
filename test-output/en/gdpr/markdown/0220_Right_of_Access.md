@@ -1,11 +1,17 @@
 # Right of Access
 
-**Document-ID:** 0220  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0220
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of the right of access in {{ meta.organization }}. Data subjects have the right to obtain information about the processing of their personal data.
+This document describes the implementation of the right of access in AdminSend GmbH. Data subjects have the right to obtain information about the processing of their personal data.
 
 ## Right of Access according to Art. 15 GDPR
 
@@ -184,8 +190,6 @@ This document describes the implementation of the right of access in {{ meta.org
 | Deadline Exceeded | Response after 2 months | Deadline control |
 | Incomprehensible Access | Technical raw data | Structured preparation |
 | Missing Identification | No verification | Identification process |
-
----
 
 **Next Steps:**
 1. Establish process for access requests

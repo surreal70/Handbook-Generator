@@ -1,14 +1,17 @@
 # Guideline: Data Protection Requirements and Data Processing
 
-**Document ID:** 0570  
-**Document Type:** Guideline (detailed)  
-**Associated Policy:** 0560_Policy_Data_Protection_Interfaces.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.34  
-**Owner:** {{ meta.dpo.name }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0570
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -98,7 +101,7 @@ This guideline specifies the `0560_Policy_Data_Protection_Interfaces.md` and def
 - Departments provide information
 - Annual update (minimum)
 
-**Tool:** {{ meta.dpo.vvt_tool }}
+**Tool:** {{ meta-handbook.dpo_vvt_tool }}
 
 ## 4. Data Protection Impact Assessment (DPIA)
 
@@ -132,7 +135,7 @@ This guideline specifies the `0560_Policy_Data_Protection_Interfaces.md` and def
 ### 5.1 Right of Access (Art. 15 GDPR)
 
 **Process:**
-1. Request via email to {{ meta.dpo.email }}
+1. Request via email to {{ meta-handbook.dpo_email }}
 2. Identity verification
 3. Compilation of information
 4. Response within 1 month
@@ -302,7 +305,6 @@ This guideline specifies the `0560_Policy_Data_Protection_Interfaces.md` and def
 - **GDPR (EU 2016/679)** - General Data Protection Regulation
 - **BDSG** - German Federal Data Protection Act
 
----
+**Approved by:** {{ meta-handbook.dpo_name }}, Data Protection Officer  
+**Next Review:** [TODO]
 
-**Approved by:** {{ meta.dpo.name }}, Data Protection Officer  
-**Next Review:** {{ meta.document.next_review }}

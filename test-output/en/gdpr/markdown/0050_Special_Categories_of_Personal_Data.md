@@ -1,11 +1,17 @@
 # Special Categories of Personal Data
 
-**Document-ID:** 0050  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the handling of special categories of personal data in {{ meta.organization }} according to Art. 9 GDPR. These sensitive data are subject to enhanced protection requirements.
+This document describes the handling of special categories of personal data in AdminSend GmbH according to Art. 9 GDPR. These sensitive data are subject to enhanced protection requirements.
 
 ## Special Categories (Art. 9(1))
 
@@ -227,11 +233,10 @@ For each processing of special categories, document:
 
 **Target Group:** All employees with access to special categories
 
----
-
 **Next Steps:**
 1. Identify all processing of special categories
 2. Check legal basis according to Art. 9(2)
 3. Implement enhanced protection measures
 4. Conduct DPIA
 5. Train affected employees
+

@@ -1,11 +1,17 @@
 # Lenkung dokumentierter Information
 
-**Dokument-ID:** 0330  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0330
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} dokumentierte Information lenkt, gemäß ISO 9001:2015 Kapitel 7.5.
+Dieses Dokument definiert, wie AdminSend GmbH dokumentierte Information lenkt, gemäß ISO 9001:2015 Kapitel 7.5.
 
 ## Dokumentierte Information im QMS
 
@@ -52,13 +58,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} dokumentierte Information
 
 **Jedes Dokument enthält:**
 - **Dokumententitel:** Klarer, beschreibender Titel
-- **Dokument-ID:** Eindeutige Kennung
-- **Versionsnummer:** Aktuelle Version
-- **Datum:** Ausgabedatum oder Revisionsdatum
-- **Autor/Verantwortlicher:** Verantwortliche Person
-- **Genehmigung:** Name und Unterschrift/Datum des Genehmigers
-- **Status:** Entwurf, In Überprüfung, Genehmigt, Veraltet
-- **Klassifizierung:** Intern, Vertraulich, Öffentlich
+- 
 
 ### Dokumentennummerierungssystem
 
@@ -260,8 +260,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} dokumentierte Information
 - Sicherstellung der Dokumentengenauigkeit
 - Initiierung von Dokumentenüberprüfungen
 - Genehmigung von Änderungen (innerhalb Befugnis)
-
----
 
 **Nächste Schritte:**
 1. Etabliere Dokumentenlenkungsverfahren

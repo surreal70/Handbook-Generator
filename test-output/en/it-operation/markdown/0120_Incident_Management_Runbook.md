@@ -1,12 +1,27 @@
 # Incident Management Runbook
 
+**Document-ID:** [FRAMEWORK]-0120
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Purpose and Scope
 
 This document describes the incident management process for AdminSend GmbH according to ITIL v4 best practices. It defines categories, priorities, escalation processes, and standard runbooks for handling service disruptions.
 
 **Scope:** All IT services and systems of AdminSend GmbH
 
-**Responsible:** Andreas Huemmer (andreas.huemmer@adminsend.de)
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Incident Definition
 
@@ -134,7 +149,7 @@ The priority of an incident is determined by **impact** and **urgency**.
 ### 1. Incident Detection
 
 **Detection Sources:**
-- Monitoring alerts ({{ netbox.monitoring_system }})
+- Monitoring alerts ([[ netbox.monitoring_system ]])
 - Service desk tickets
 - User reports
 - Automatic event correlation
@@ -151,7 +166,7 @@ The priority of an incident is determined by **impact** and **urgency**.
 - Affected users/locations
 - Reporter (name, contact)
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 **Responsible:** Service desk
 
@@ -213,10 +228,10 @@ The priority of an incident is determined by **impact** and **urgency**.
 
 | Level | Role | Contact | Escalate For |
 |---|---|---|---|
-| **Level 1** | Service desk | julia.becker@adminsend.de | Standard incidents |
-| **Level 2** | IT operations team | andreas.huemmer@adminsend.de | Complex technical problems |
+| **Level 1** | Service desk | {{ meta-organisation-roles.role_Service_Desk_Lead_email }} | Standard incidents |
+| **Level 2** | IT operations team | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} | Complex technical problems |
 | **Level 3** | Specialists / vendor | [Vendor contacts] | Specialist knowledge required |
-| **Management** | CIO | anna.schmidt@adminsend.de | P1 incidents > 2h |
+| **Management** | CIO | {{ meta-organisation-roles.role_CIO_email }} | P1 incidents > 2h |
 
 ### Functional Escalation
 
@@ -225,7 +240,7 @@ The priority of an incident is determined by **impact** and **urgency**.
 | **Network** | Network team | [Email] | Network infrastructure |
 | **Server** | Server team | [Email] | Servers and virtualization |
 | **Database** | DBA team | [Email] | Database systems |
-| **Security** | Security team | thomas.weber@adminsend.de | Security incidents |
+| **Security** | Security team | {{ meta-organisation-roles.role_CISO_email }} | Security incidents |
 | **Applications** | Application team | [Email] | Business applications |
 
 ### Escalation Triggers
@@ -252,7 +267,7 @@ The priority of an incident is determined by **impact** and **urgency**.
 **Priority:** P1 or P2 (depending on service criticality)
 
 **Diagnosis Steps:**
-1. Perform ping test: `ping {{ netbox.server.ip }}`
+1. Perform ping test: `ping [[ netbox.server.ip ]]`
 2. Check monitoring dashboard
 3. Check physical state (if on-site)
 4. Check network connectivity
@@ -354,7 +369,7 @@ The priority of an incident is determined by **impact** and **urgency**.
 5. Perform forensic analysis
 6. Rebuild systems (if required)
 
-**Escalation:** Immediately to CISO (thomas.weber@adminsend.de)
+**Escalation:** Immediately to CISO ({{ meta-organisation-roles.role_CISO_email }})
 
 ### Runbook 6: Network Outage
 
@@ -390,7 +405,7 @@ The priority of an incident is determined by **impact** and **urgency**.
 **During Processing:**
 - Regular status updates (P1: every 30 min, P2: every 2h)
 - Escalation notifications
-- Team communication via {{ meta.collaboration_tool }}
+- Team communication via {{ meta-handbook.collaboration_tool }}
 
 **At Incident Resolution:**
 - User notification of resolution
@@ -405,8 +420,8 @@ The priority of an incident is determined by **impact** and **urgency**.
 - External partners for dependencies
 
 **Communication Channels:**
-- Email: info@adminsend.de
-- Status page: {{ meta.status_page_url }}
+- Email: {{ meta-organisation.email }}
+- Status page: {{ meta-handbook.status_page_url }}
 - Phone: +49 89 12345678
 
 **Communication Template:**
@@ -447,10 +462,10 @@ A **major incident** is an incident with:
 
 | Role | Person | Responsibility |
 |---|---|---|
-| **Incident Manager** | Andreas Huemmer | Coordination and communication |
+| **Incident Manager** | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Coordination and communication |
 | **Technical Lead** | [Name] | Technical solution finding |
 | **Communication Lead** | [Name] | Stakeholder communication |
-| **Management Rep** | Anna Schmidt | Decisions and escalation |
+| **Management Rep** | [TODO] | Decisions and escalation |
 
 ### Major Incident Process
 
@@ -493,19 +508,19 @@ A **major incident** is an incident with:
 ## Tools and Systems
 
 ### Incident Management Tool
-- **System:** {{ meta.ticketing_system }}
-- **URL:** {{ meta.ticketing_system_url }}
+- **System:** {{ meta-handbook.ticketing_system }}
+- **URL:** {{ meta-handbook.ticketing_system_url }}
 - **Access:** All IT staff
 
 ### Monitoring System
-- **System:** {{ netbox.monitoring_system }}
-- **URL:** {{ meta.monitoring_url }}
+- **System:** [[ netbox.monitoring_system ]]
+- **URL:** {{ meta-handbook.monitoring_url }}
 - **Access:** IT operations team
 
 ### Communication Tools
-- **Chat:** {{ meta.collaboration_tool }}
-- **Conference:** {{ meta.conference_system }}
-- **Status Page:** {{ meta.status_page_url }}
+- **Chat:** {{ meta-handbook.collaboration_tool }}
+- **Conference:** {{ meta-handbook.conference_system }}
+- **Status Page:** {{ meta-handbook.status_page_url }}
 
 ## Appendix
 
@@ -533,10 +548,10 @@ A **major incident** is an incident with:
 
 | Team | Primary | Secondary | On-Call |
 |---|---|---|---|
-| **Service Desk** | julia.becker@adminsend.de | [Backup] | 24/7 |
-| **IT Operations** | andreas.huemmer@adminsend.de | [Backup] | 24/7 |
+| **Service Desk** | {{ meta-organisation-roles.role_Service_Desk_Lead_email }} | [Backup] | 24/7 |
+| **IT Operations** | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} | [Backup] | 24/7 |
 | **Network Team** | [Email] | [Backup] | On-call |
-| **Security Team** | thomas.weber@adminsend.de | [Backup] | 24/7 |
+| **Security Team** | {{ meta-organisation-roles.role_CISO_email }} | [Backup] | 24/7 |
 
 ### References
 
@@ -545,10 +560,9 @@ A **major incident** is an incident with:
 - Internal Service Level Agreements
 - Escalation Matrix
 
----
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
+**Classification:** Internal  
+**Last Update:** {{ meta-handbook.date }}
 
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Classification:** internal  
-**Last Update:** {{ meta.date }}

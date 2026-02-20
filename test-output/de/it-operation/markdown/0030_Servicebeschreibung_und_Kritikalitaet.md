@@ -1,12 +1,27 @@
 # Servicebeschreibung und Kritikalität
 
+**Dokument-ID:** [FRAMEWORK]-0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Servicebeschreibung
 
 ### Basis-Informationen
 
 - **Service-Name:** [TODO: Eindeutiger Service-Name]
 - **Service-ID:** [TODO: Eindeutige Service-Identifikation]
-- **Service-Owner:** IT Operations Manager
+- **Service-Owner:** [TODO]
 - **Technischer Ansprechpartner:** [TODO: Name und Kontakt]
 - **Organisation:** AdminSend GmbH
 
@@ -126,7 +141,7 @@ Die Kritikalität wird nach den Dimensionen Verfügbarkeit, Integrität, Vertrau
 3. **Empfänger:** [TODO: Alle Nutzer, Key-Stakeholder]
 4. **Inhalt:** Zeitfenster, Grund, Auswirkungen, Ansprechpartner
 
-**Verantwortlich:** Andreas Huemmer (andreas.huemmer@adminsend.de)
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Service Level Agreements (SLA)
 
@@ -168,9 +183,9 @@ Die Kritikalität wird nach den Dimensionen Verfügbarkeit, Integrität, Vertrau
 **Reporting-Frequenz:** [TODO: Monatlich/Quartalsweise]
 
 **Empfänger:**
-- Service Owner: IT Operations Manager
-- IT Operations Manager: Andreas Huemmer
-- CIO: Anna Schmidt
+- Service Owner: [TODO]
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
+- CIO: [TODO]
 - [TODO: Weitere Stakeholder]
 
 **Inhalt:**
@@ -218,26 +233,25 @@ Die Kritikalität wird nach den Dimensionen Verfügbarkeit, Integrität, Vertrau
 
 | Rolle | Verantwortung | Person | Kontakt |
 |---|---|---|---|
-| **Service Owner** | Gesamtverantwortung | IT Operations Manager | [TODO: E-Mail] |
+| **Service Owner** | Gesamtverantwortung | [TODO] | [TODO: E-Mail] |
 | **Technical Lead** | Technische Umsetzung | [TODO: Name] | [TODO: E-Mail] |
-| **Operations Manager** | Täglicher Betrieb | Andreas Huemmer | andreas.huemmer@adminsend.de |
-| **Service Desk Lead** | First-Level-Support | Julia Becker | julia.becker@adminsend.de |
+| **Operations Manager** | Täglicher Betrieb | {{ meta-organisation-roles.role_IT_Operations_Manager }} | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} |
+| **Service Desk Lead** | First-Level-Support | {{ meta-organisation-roles.role_Service_Desk_Lead }} | {{ meta-organisation-roles.role_Service_Desk_Lead_email }} |
 
 ## Kontakte und Eskalation
 
 **Bei Fragen zum Service:**
-- **Service Owner:** IT Operations Manager
-- **IT Operations Manager:** Andreas Huemmer (andreas.huemmer@adminsend.de)
-- **Service Desk:** Julia Becker (julia.becker@adminsend.de)
+- **Service Owner:** [TODO]
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- **Service Desk:** {{ meta-organisation-roles.role_Service_Desk_Lead }} ({{ meta-organisation-roles.role_Service_Desk_Lead_email }})
 
 **Eskalationspfad:**
-1. **Level 1:** Service Desk - julia.becker@adminsend.de
-2. **Level 2:** IT Operations - andreas.huemmer@adminsend.de
-3. **Level 3:** CIO - anna.schmidt@adminsend.de
+1. **Level 1:** Service Desk - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+2. **Level 2:** IT Operations - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+3. **Level 3:** CIO - {{ meta-organisation-roles.role_CIO_email }}
 
----
-
-**Service Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Service Owner:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
+

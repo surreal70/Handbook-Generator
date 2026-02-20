@@ -57,5 +57,3 @@ Language: de
 - [0820 - Massnahmenplan und Meilensteine](0820_Massnahmenplan_und_Meilensteine.md)
 - [0830 - Datenschutzkontrollen](0830_Datenschutzkontrollen.md)
 - [0850 - Glossar und Abkuerzungen](0850_Glossar_und_Abkuerzungen.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

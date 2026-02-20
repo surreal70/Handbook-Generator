@@ -35,12 +35,12 @@ class MetaAdapter(DataSourceAdapter):
         'IT Manager': 'IT Manager',  # Already English
     }
     
-    def __init__(self, metadata_config: MetadataConfig, language: str = 'de'):
+    def __init__(self, metadata_config, language: str = 'de'):
         """
         Initialize Meta adapter with metadata configuration.
         
         Args:
-            metadata_config: MetadataConfig object with organization metadata
+            metadata_config: UnifiedMetadata or MetadataConfig object with organization metadata
             language: Language for role title translation ('de' or 'en')
         """
         self.metadata = metadata_config
@@ -66,8 +66,16 @@ class MetaAdapter(DataSourceAdapter):
         if self.metadata is None:
             return False
         
-        # Validate that required fields are present
-        if not self.metadata.organization or not self.metadata.organization.name:
+        # Support both UnifiedMetadata (new) and MetadataConfig (old)
+        # Check for UnifiedMetadata first (has 'organisation' attribute)
+        if hasattr(self.metadata, 'organisation'):
+            if not self.metadata.organisation or not self.metadata.organisation.name:
+                return False
+        # Fall back to MetadataConfig (has 'organization' attribute)
+        elif hasattr(self.metadata, 'organization'):
+            if not self.metadata.organization or not self.metadata.organization.name:
+                return False
+        else:
             return False
         
         self._connected = True

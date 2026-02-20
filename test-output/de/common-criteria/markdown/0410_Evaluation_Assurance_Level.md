@@ -1,11 +1,17 @@
 # Evaluation Assurance Level (EAL)
 
-**Dokument-ID:** 0410  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0410
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -205,11 +211,10 @@ Das gewählte EAL und Zertifizierungsschema ermöglicht die Anerkennung in folge
 - [TODO: Nationale Zertifizierungsrichtlinien]
 - [TODO: Weitere relevante Dokumente]
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Validiere die EAL-Auswahl mit Stakeholdern
 3. Bestätige die Verfügbarkeit von Ressourcen für die Evaluierung
 4. Kontaktiere potenzielle Evaluierungslabore
 5. Erstelle detaillierten Projektplan für die Evaluierung
+

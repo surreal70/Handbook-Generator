@@ -1,13 +1,17 @@
 # Appendix: Risk Analysis Template
 
-**Document ID:** HIPAA-0700  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0700
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -35,13 +39,5 @@ This appendix provides a template for conducting HIPAA Security Rule risk analys
 | Risk ID | Treatment | Controls | Timeline | Owner | Status |
 |---------|-----------|----------|----------|-------|--------|
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

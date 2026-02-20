@@ -1,18 +1,21 @@
 # Policy: Asset Management
 
-
-
-**Dokument-ID:** 0300  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.9-A.5.11 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0300
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Asset-Typen:** Hardware, Software, Daten, Informationen, Dienste, Personen, immaterielle Werte
 - **Systeme:** Alle IT-Systeme, Netzwerkkomponenten, Endgeräte, Server, Cloud-Ressourcen
 - **Lebenszyklus:** Beschaffung, Inbetriebnahme, Betrieb, Wartung, Außerbetriebnahme, Entsorgung
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -94,9 +97,9 @@ Assets werden am Ende ihres Lebenszyklus sicher entsorgt:
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
+- **Policy Owner:** [TODO] (CISO)
 - **Asset Owner:** Fachbereichsleiter, Systemverantwortliche
-- **Asset Manager:** {{ meta.it.asset_manager }}
+- **Asset Manager:** {{ meta-handbook.it_asset_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Procurement, Facility Management
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -172,10 +175,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ITIL 4** - IT Asset Management
 - **ISO/IEC 19770** - IT Asset Management
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

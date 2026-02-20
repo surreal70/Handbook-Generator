@@ -1,14 +1,17 @@
 # Nichtkonformitäten und Korrekturmaßnahmen
 
-**Dokument-ID:** 0630  
-**Dokumenttyp:** Prozess/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0630
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 Dieser Prozess stellt sicher, dass Abweichungen von ISMS-Anforderungen systematisch erfasst, behandelt und deren Wirksamkeit geprüft wird.
 
-**Verantwortlich:** Thomas Weber (ISB)
+**Verantwortlich:** [TODO] (ISB)
 
 ## 2. Quellen für Nichtkonformitäten
 
@@ -133,7 +136,7 @@ Dieser Prozess stellt sicher, dass Abweichungen von ISMS-Anforderungen systemati
 - Top-Findings-Kategorien
 - Wirksamkeit von Korrekturmaßnahmen
 
-**Verantwortlich:** Thomas Weber  
+**Verantwortlich:** [TODO]  
 **Empfänger:** Geschäftsführung, ISMS-Team
 
 ## 7. Lessons Learned
@@ -148,13 +151,10 @@ Nach Abschluss kritischer oder wiederkehrender Findings:
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT-Leitung | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS (Non-conformities and Corrective Actions)
 - Dokument 0610: Internes Auditprogramm
-
 

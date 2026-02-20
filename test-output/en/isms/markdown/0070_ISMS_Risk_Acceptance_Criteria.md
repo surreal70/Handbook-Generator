@@ -1,18 +1,31 @@
 # Risk Criteria and Risk Acceptance
 
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0070  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 6.1.2  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Risk Appetite and Tolerance
 
@@ -135,10 +148,9 @@
 - **ISO/IEC 27001:2022** - Clause 6.1.2: Information security risk assessment
 - **ISO/IEC 27005:2022** - Information security risk management
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]
+

@@ -1,14 +1,17 @@
 # Strukturanalyse (Template)
 
-**Dokument-ID:** 0050  
-**Dokumenttyp:** Methodik-Artefakt  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standard 200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -22,7 +25,7 @@ Die Strukturanalyse erfasst systematisch die Struktur des Informationsverbunds v
 - Basis-Sicherheitscheck (Dokument 0080)
 - Risikoanalyse (Dokument 0090)
 
-**Verantwortlich:** Thomas Weber (ISB)
+**Verantwortlich:** [TODO] (ISB)
 
 ## 2. Vorgehen und Methodik
 
@@ -32,11 +35,11 @@ Folgende Datenquellen werden für die Strukturanalyse genutzt:
 
 | Datenquelle | Typ | Verantwortlich | Aktualität |
 |---|---|---|---|
-| CMDB/Asset-Inventar | System | Anna Schmidt | [TODO] |
-| Netzwerkdokumentation | Dokument | Anna Schmidt | [TODO] |
-| Architekturdiagramme | Dokument | Anna Schmidt | [TODO] |
+| CMDB/Asset-Inventar | System | [TODO] | [TODO] |
+| Netzwerkdokumentation | Dokument | [TODO] | [TODO] |
+| Architekturdiagramme | Dokument | [TODO] | [TODO] |
 | Verträge mit Dienstleistern | Dokument | [TODO] | [TODO] |
-| Interviews mit Stakeholdern | Primärquelle | Thomas Weber | [TODO] |
+| Interviews mit Stakeholdern | Primärquelle | [TODO] | [TODO] |
 
 ### 2.2 Granularität
 
@@ -57,8 +60,8 @@ Die Strukturanalyse erfolgt auf folgenden Granularitätsebenen:
 - **Abschluss:** [TODO]
 
 **Beteiligte:**
-- ISB: Thomas Weber
-- IT-Leitung: Anna Schmidt
+- ISB: [TODO]
+- IT-Leitung: [TODO]
 - Informationsverbund-Verantwortliche: [TODO]
 - Fachabteilungen: [TODO]
 
@@ -99,10 +102,10 @@ Die Strukturanalyse erfolgt auf folgenden Granularitätsebenen:
 
 | ID | System/Komponente | Typ | Owner | Standort/Region | Betrieb | IP-Adresse | Bemerkungen |
 |---|---|---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | Server | Anna Schmidt | {{ meta.organization.primary_location }} | Intern | {{ netbox.ip.server_001 }} | [TODO] |
-| S-002 | [TODO: System 2] | Datenbank | Anna Schmidt | [TODO] | Intern/Extern | [TODO] | [TODO] |
-| S-003 | [TODO: System 3] | Storage | Anna Schmidt | [TODO] | Intern/Extern | [TODO] | [TODO] |
-| S-004 | [TODO: System 4] | Firewall | Anna Schmidt | [TODO] | Intern | [TODO] | [TODO] |
+| S-001 | [[ netbox.device.server_001 ]] | Server | [TODO] | [TODO] | Intern | [[ netbox.ip.server_001 ]] | [TODO] |
+| S-002 | [TODO: System 2] | Datenbank | [TODO] | [TODO] | Intern/Extern | [TODO] | [TODO] |
+| S-003 | [TODO: System 3] | Storage | [TODO] | [TODO] | Intern/Extern | [TODO] | [TODO] |
+| S-004 | [TODO: System 4] | Firewall | [TODO] | [TODO] | Intern | [TODO] | [TODO] |
 
 **Anzahl IT-Systeme gesamt:** [TODO]
 
@@ -120,10 +123,10 @@ Die Strukturanalyse erfolgt auf folgenden Granularitätsebenen:
 
 | ID | Netz/Zone | Zweck | Segmentierung | Internetzugang | VLAN-ID | Betreiber | Sicherheitszone |
 |---|---|---|---|---|---|---|---|
-| N-001 | Management-Netz | Administration | Ja | Nein | {{ netbox.vlan.management }} | Anna Schmidt | Hochsicher |
-| N-002 | Produktiv-Netz | Geschäftsanwendungen | Ja | Ja (gefiltert) | [TODO] | Anna Schmidt | Sicher |
-| N-003 | DMZ | Externe Services | Ja | Ja | [TODO] | Anna Schmidt | Mittel |
-| N-004 | Gast-WLAN | Gäste | Ja | Ja (isoliert) | [TODO] | Anna Schmidt | Niedrig |
+| N-001 | Management-Netz | Administration | Ja | Nein | [[ netbox.vlan.management ]] | [TODO] | Hochsicher |
+| N-002 | Produktiv-Netz | Geschäftsanwendungen | Ja | Ja (gefiltert) | [TODO] | [TODO] | Sicher |
+| N-003 | DMZ | Externe Services | Ja | Ja | [TODO] | [TODO] | Mittel |
+| N-004 | Gast-WLAN | Gäste | Ja | Ja (isoliert) | [TODO] | [TODO] | Niedrig |
 
 **Anzahl Netzwerksegmente gesamt:** [TODO]
 
@@ -139,7 +142,7 @@ Die Strukturanalyse erfolgt auf folgenden Granularitätsebenen:
 
 | ID | Standort/Raum | Typ | Schutzmaßnahmen | Zutritt | Betreiber | Kritikalität |
 |---|---|---|---|---|---|---|
-| R-001 | {{ meta.organization.primary_location }} | Hauptstandort | [TODO] | Zugangskontrolle | AdminSend GmbH | Hoch |
+| R-001 | [TODO] | Hauptstandort | [TODO] | Zugangskontrolle | AdminSend GmbH | Hoch |
 | R-002 | Rechenzentrum | Serverraum | Klimatisierung, Brandschutz, Zutrittskontrolle | Autorisiert | AdminSend GmbH | Hoch |
 | R-003 | [TODO: Raum 3] | [TODO] | [TODO] | [TODO] | [TODO] | Mittel/Niedrig |
 
@@ -163,9 +166,9 @@ Die Strukturanalyse erfolgt auf folgenden Granularitätsebenen:
 
 | Rolle | Name | Verantwortungsbereich | Kontakt | Stellvertreter |
 |---|---|---|---|---|
-| Geschäftsführung | Max Mustermann | Gesamtverantwortung | max.mustermann@adminsend.de | [TODO] |
-| ISB | Thomas Weber | ISMS-Koordination | thomas.weber@adminsend.de | [TODO] |
-| IT-Leitung | Anna Schmidt | IT-Betrieb | anna.schmidt@adminsend.de | [TODO] |
+| Geschäftsführung | [TODO] | Gesamtverantwortung | {{ meta-organisation-roles.role_CEO_email }} | [TODO] |
+| ISB | [TODO] | ISMS-Koordination | {{ meta-organisation-roles.role_CISO_email }} | [TODO] |
+| IT-Leitung | [TODO] | IT-Betrieb | {{ meta-organisation-roles.role_CIO_email }} | [TODO] |
 | [TODO: Weitere Rollen] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Abhängigkeiten und Schnittstellen
@@ -211,10 +214,10 @@ Die Strukturanalyse erfolgt auf folgenden Granularitätsebenen:
 ### 6.1 Validierungsprozess
 
 Die Strukturanalyse wird validiert durch:
-1. **Review durch IT-Leitung:** Anna Schmidt
+1. **Review durch IT-Leitung:** [TODO]
 2. **Review durch Informationsverbund-Verantwortliche:** [TODO]
 3. **Abgleich mit CMDB/Inventar:** [TODO: Datum]
-4. **Freigabe durch ISB:** Thomas Weber
+4. **Freigabe durch ISB:** [TODO]
 
 ### 6.2 Vollständigkeitsprüfung
 
@@ -236,20 +239,17 @@ Die Strukturanalyse wird aktualisiert bei:
 - Organisatorischen Änderungen
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
-**Verantwortlich:** Thomas Weber (ISB)  
-**Nächster Review:** {{ meta.document.next_review }}
+**Verantwortlich:** [TODO] (ISB)  
+**Nächster Review:** [TODO]
 
 ## 8. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT-Leitung | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 5: Strukturanalyse)
 - BSI IT-Grundschutz-Kompendium
-
 

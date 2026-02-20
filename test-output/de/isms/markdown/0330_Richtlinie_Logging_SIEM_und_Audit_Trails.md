@@ -1,14 +1,17 @@
 # Richtlinie: Logging, SIEM und Audit Trails
 
-**Dokument-ID:** 0330  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0320_Policy_Logging_und_Monitoring.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.15, A.8.16  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0330
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -95,7 +98,7 @@ Diese Richtlinie konkretisiert die `0320_Policy_Logging_und_Monitoring.md` und d
 
 ### 3.1 SIEM-System
 
-**Plattform:** {{ meta.security.siem_solution }} (z.B. Splunk, Microsoft Sentinel, Elastic SIEM)
+**Plattform:** {{ meta-handbook.security_siem_solution }} (z.B. Splunk, Microsoft Sentinel, Elastic SIEM)
 
 **Architektur:**
 - Log-Sammlung über Agents oder Syslog
@@ -188,7 +191,7 @@ Diese Richtlinie konkretisiert die `0320_Policy_Logging_und_Monitoring.md` und d
 - Detaillierte Protokollierung aller Aktionen
 
 **PAM-Integration:**
-- Privileged Access Management System: {{ meta.security.pam_solution }}
+- Privileged Access Management System: {{ meta-handbook.security_pam_solution }}
 - Just-in-Time (JIT) Access
 - Automatische Passwort-Rotation
 - Session-Monitoring und -Recording
@@ -212,11 +215,11 @@ Diese Richtlinie konkretisiert die `0320_Policy_Logging_und_Monitoring.md` und d
 
 | Log-Typ | Retention (Online) | Retention (Archiv) | Begründung |
 |---------|--------------------|--------------------|------------|
-| Security-Logs | 90 Tage | {{ meta.retention.log_years }} Jahre | Forensik, Compliance |
-| Authentifizierungs-Logs | 90 Tage | {{ meta.retention.log_years }} Jahre | Audit, Compliance |
+| Security-Logs | 90 Tage | {{ meta-handbook.retention_log_years }} Jahre | Forensik, Compliance |
+| Authentifizierungs-Logs | 90 Tage | {{ meta-handbook.retention_log_years }} Jahre | Audit, Compliance |
 | System-Logs | 30 Tage | 1 Jahr | Troubleshooting |
 | Application-Logs | 30 Tage | 1 Jahr | Debugging |
-| Audit-Trails (Compliance) | 180 Tage | {{ meta.retention.audit_years }} Jahre | Regulatorisch |
+| Audit-Trails (Compliance) | 180 Tage | {{ meta-handbook.retention_audit_years }} Jahre | Regulatorisch |
 
 ### 5.2 Archivierung
 
@@ -331,7 +334,6 @@ Diese Richtlinie konkretisiert die `0320_Policy_Logging_und_Monitoring.md` und d
 - **ISO/IEC 27001:2022 Annex A.8.16** - Monitoring activities
 - **NIST SP 800-92** - Guide to Computer Security Log Management
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

@@ -1,17 +1,23 @@
 # Continuous Monitoring Strategy
 
-**Dokument-ID:** NIST-0050  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt die Strategie für die kontinuierliche Überwachung (Continuous Monitoring) des Systems {{ meta.nist.system_name }}.
+Dieses Dokument beschreibt die Strategie für die kontinuierliche Überwachung (Continuous Monitoring) des Systems {{ meta-handbook.system_name }}.
 
 ## 2. Continuous Monitoring-Übersicht
 
@@ -126,13 +132,5 @@ Dieses Dokument beschreibt die Strategie für die kontinuierliche Überwachung (
 - Signifikante Systemänderungen
 - Neue Bedrohungen
 - Compliance-Anforderungen
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

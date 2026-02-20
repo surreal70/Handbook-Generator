@@ -1,11 +1,17 @@
 # Management Review
 
-**Document-ID:** 0570  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0570
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,13 +19,13 @@
 
 ## Purpose
 
-This document defines how {{ meta.organization }} conducts regular management reviews to ensure continuing suitability, adequacy and effectiveness of the QMS.
+This document defines how AdminSend GmbH conducts regular management reviews to ensure continuing suitability, adequacy and effectiveness of the QMS.
 
 ## General Requirements (9.3)
 
 ### Review Frequency
 
-**{{ meta.organization }} conducts management reviews:**
+**AdminSend GmbH conducts management reviews:**
 - **Regularly:** [TODO: e.g., At least annually, quarterly]
 - **As needed:** For significant changes or events
 
@@ -212,7 +218,7 @@ This document defines how {{ meta.organization }} conducts regular management re
 
 ### Monitoring
 
-**{{ meta.organization }} monitors:**
+**AdminSend GmbH monitors:**
 - Progress of action implementation
 - Compliance with deadlines
 - Effectiveness of implemented actions
@@ -284,8 +290,6 @@ This document defines how {{ meta.organization }} conducts regular management re
 - Implementing actions
 - Reporting progress
 
----
-
 **Next Steps:**
 1. Plan next management review
 2. Collect and prepare input data
@@ -294,3 +298,4 @@ This document defines how {{ meta.organization }} conducts regular management re
 5. Document results
 6. Communicate decisions
 7. Follow up action implementation
+

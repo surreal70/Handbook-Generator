@@ -1,11 +1,17 @@
 # Produktion und Dienstleistungserbringung
 
-**Dokument-ID:** 0440  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0440
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,13 +19,13 @@
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} Produktion und Dienstleistungserbringung unter gesteuerten Bedingungen durchführt.
+Dieses Dokument definiert, wie AdminSend GmbH Produktion und Dienstleistungserbringung unter gesteuerten Bedingungen durchführt.
 
 ## Gesteuerte Bedingungen (8.5.1)
 
 ### Steuerungsanforderungen
 
-**{{ meta.organization }} implementiert Produktion und Dienstleistungserbringung unter gesteuerten Bedingungen durch:**
+**AdminSend GmbH implementiert Produktion und Dienstleistungserbringung unter gesteuerten Bedingungen durch:**
 - Verfügbarkeit dokumentierter Information über Produktmerkmale
 - Verfügbarkeit von Arbeitsanweisungen
 - Verwendung geeigneter Ausrüstung
@@ -50,7 +56,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produktion und Dienstleis
 
 ### Identifikation
 
-**{{ meta.organization }} identifiziert Ergebnisse durch:**
+**AdminSend GmbH identifiziert Ergebnisse durch:**
 - Eindeutige Kennzeichnung
 - Chargennummern
 - Seriennummern
@@ -89,7 +95,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produktion und Dienstleis
 
 ### Handhabung von Kundeneigentum
 
-**{{ meta.organization }} stellt sicher:**
+**AdminSend GmbH stellt sicher:**
 - Identifikation bei Erhalt
 - Verifizierung und Schutz
 - Sichere Lagerung
@@ -112,7 +118,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produktion und Dienstleis
 
 ### Erhaltungsanforderungen
 
-**{{ meta.organization }} erhält Ergebnisse während Produktion und Dienstleistungserbringung:**
+**AdminSend GmbH erhält Ergebnisse während Produktion und Dienstleistungserbringung:**
 - Identifikation
 - Handhabung
 - Kontaminationssteuerung
@@ -159,7 +165,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produktion und Dienstleis
 
 ### Nachlieferaktivitäten
 
-**{{ meta.organization }} erfüllt Anforderungen für Tätigkeiten nach der Lieferung:**
+**AdminSend GmbH erfüllt Anforderungen für Tätigkeiten nach der Lieferung:**
 - Gesetzliche und behördliche Anforderungen
 - Potenzielle unerwünschte Folgen von Produkten/Dienstleistungen
 - Art, Verwendung und beabsichtigte Lebensdauer
@@ -206,7 +212,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produktion und Dienstleis
 
 ### Änderungsmanagement
 
-**{{ meta.organization }} überprüft und steuert Änderungen für Produktion oder Dienstleistungserbringung:**
+**AdminSend GmbH überprüft und steuert Änderungen für Produktion oder Dienstleistungserbringung:**
 - Änderungen werden dokumentiert
 - Auswirkungen werden bewertet
 - Änderungen werden genehmigt
@@ -229,7 +235,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produktion und Dienstleis
 
 ### Freigabeprozess
 
-**{{ meta.organization }} implementiert geplante Vorkehrungen zur Verifizierung, dass Anforderungen erfüllt sind:**
+**AdminSend GmbH implementiert geplante Vorkehrungen zur Verifizierung, dass Anforderungen erfüllt sind:**
 - Freigabe erfolgt erst nach zufriedenstellender Erfüllung
 - Dokumentierte Information über Freigabe wird aufbewahrt
 - Rückverfolgbarkeit zu Personen, die Freigabe erteilen
@@ -260,7 +266,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produktion und Dienstleis
 
 ### Identifikation und Steuerung
 
-**{{ meta.organization }} stellt sicher, dass nichtkonformere Ergebnisse:**
+**AdminSend GmbH stellt sicher, dass nichtkonformere Ergebnisse:**
 - Identifiziert und gesteuert werden
 - Nicht unbeabsichtigt verwendet oder geliefert werden
 - Gekennzeichnet werden
@@ -307,11 +313,10 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produktion und Dienstleis
 - Handhabung von Kundeneigentum
 - Versand und Lieferung
 
----
-
 **Nächste Schritte:**
 1. Etabliere gesteuerte Bedingungen
 2. Implementiere Identifikations- und Rückverfolgbarkeitssystem
 3. Definiere Handhabungs- und Lagerungsanforderungen
 4. Etabliere Freigabeprozess
 5. Implementiere Nichtkonformitätsmanagement
+

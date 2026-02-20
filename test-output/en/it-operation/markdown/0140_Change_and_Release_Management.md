@@ -1,12 +1,27 @@
 # Change and Release Management
 
+**Document-ID:** [FRAMEWORK]-0140
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Purpose and Scope
 
 This document describes the change and release management processes for AdminSend GmbH according to ITIL v4 best practices. It defines change categories, approval processes, release strategies, and rollback procedures for controlled implementation of changes to IT services and systems.
 
 **Scope:** All IT services, systems, and infrastructure components of AdminSend GmbH
 
-**Responsible:** Andreas Huemmer (andreas.huemmer@adminsend.de)
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Change Management
 
@@ -153,7 +168,7 @@ A **change** is the addition, modification, or removal of anything that could ha
 - **Requester:** Requestor
 - **Implementer:** Executor
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 **Responsible:** Change Requester
 
@@ -181,9 +196,9 @@ A **change** is the addition, modification, or removal of anything that could ha
 **Change Advisory Board (CAB):**
 
 **Members:**
-- **Chair:** Andreas Huemmer (Change Manager)
-- **CIO:** Anna Schmidt
-- **CISO:** Thomas Weber
+- **Chair:** {{ meta-organisation-roles.role_IT_Operations_Manager }} (Change Manager)
+- **CIO:** [TODO]
+- **CISO:** [TODO]
 - **Service Owner:** [Service-dependent]
 - **Technical Leads:** [Change-dependent]
 - **Business Representatives:** [For business impact]
@@ -578,10 +593,10 @@ A **release** is a collection of hardware, software, documentation, processes, o
 - Deployment monitoring
 
 **Pipeline Tools:**
-- **CI/CD System:** {{ meta.cicd_system }}
-- **Version Control:** {{ meta.version_control }}
-- **Artifact Repository:** {{ meta.artifact_repository }}
-- **Container Registry:** {{ meta.container_registry }}
+- **CI/CD System:** {{ meta-handbook.cicd_system }}
+- **Version Control:** [TODO]
+- **Artifact Repository:** {{ meta-handbook.artifact_repository }}
+- **Container Registry:** {{ meta-handbook.container_registry }}
 
 ## Metrics and Reporting
 
@@ -630,7 +645,7 @@ A **release** is a collection of hardware, software, documentation, processes, o
 - Change calendar management
 - Reporting
 
-**Person:** Andreas Huemmer
+**Person:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Release Manager
 
@@ -655,18 +670,18 @@ A **release** is a collection of hardware, software, documentation, processes, o
 ## Tools and Systems
 
 ### Change Management Tool
-- **System:** {{ meta.ticketing_system }}
-- **URL:** {{ meta.ticketing_system_url }}
+- **System:** {{ meta-handbook.ticketing_system }}
+- **URL:** {{ meta-handbook.ticketing_system_url }}
 - **Access:** All IT staff
 
 ### CI/CD Pipeline
-- **System:** {{ meta.cicd_system }}
-- **URL:** {{ meta.cicd_url }}
+- **System:** {{ meta-handbook.cicd_system }}
+- **URL:** {{ meta-handbook.cicd_url }}
 - **Access:** DevOps Team
 
 ### Version Control
-- **System:** {{ meta.version_control }}
-- **URL:** {{ meta.version_control_url }}
+- **System:** [TODO]
+- **URL:** [TODO]
 - **Access:** Development Team
 
 ## References
@@ -677,10 +692,9 @@ A **release** is a collection of hardware, software, documentation, processes, o
 - DevOps Handbook - Deployment Strategies
 - Site Reliability Engineering (SRE) - Release Engineering
 
----
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
+**Classification:** Internal  
+**Last Updated:** {{ meta-handbook.date }}
 
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Classification:** internal  
-**Last Updated:** {{ meta.date }}

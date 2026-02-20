@@ -1,19 +1,32 @@
 # Guideline: MFA, Password Rules and Session Management
 
+**Document-ID:** [FRAMEWORK]-0250
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0250  
 **Document Type:** Guideline (detailed)  
 **Related Policy:** 0240_Policy_Authentication_and_Passwords.md  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.17, A.5.18  
-**Owner:** {{ meta.it_operations.manager }}  
+**Owner:** {{ meta-handbook.it_operations_manager }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose and Scope
 
@@ -130,7 +143,7 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 ### 3.3 Password Reset
 
 **Self-Service Password Reset (SSPR):**
-- Users can reset password themselves via {{ meta.iam.sspr_url }}
+- Users can reset password themselves via {{ meta-handbook.iam_sspr_url }}
 - Verification via:
   - MFA method (authenticator app, SMS)
   - Alternative email address
@@ -152,7 +165,7 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 
 **Recommendation:**
 - Use of password manager for all users
-- Enterprise solution: {{ meta.security.password_manager }} (e.g., 1Password, Bitwarden)
+- Enterprise solution: {{ meta-handbook.security_password_manager }} (e.g., 1Password, Bitwarden)
 - Central management of shared credentials
 
 **Features:**
@@ -224,7 +237,7 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 ### 5.1 Single Sign-On (SSO)
 
 **Implementation:**
-- **Identity Provider:** {{ meta.iam.idp }} (e.g., Azure AD, Okta)
+- **Identity Provider:** {{ meta-handbook.iam_idp }} (e.g., Azure AD, Okta)
 - **Protocols:** SAML 2.0, OAuth 2.0, OpenID Connect
 - **Applications:** All cloud SaaS applications via SSO
 
@@ -249,7 +262,7 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 - Code signing and email encryption
 
 **PKI Infrastructure:**
-- Internal Certificate Authority (CA): {{ meta.pki.ca }}
+- Internal Certificate Authority (CA): {{ meta-handbook.pki_ca }}
 - Certificate lifecycle management
 - Automatic renewal before expiration
 - Revocation checks (CRL, OCSP)
@@ -346,8 +359,8 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 - Privileged access
 
 **Retention:**
-- Authentication logs: {{ meta.retention.log_years }} years
-- Audit trails: {{ meta.retention.audit_years }} years
+- Authentication logs: {{ meta-handbook.retention_log_years }} years
+- Audit trails: {{ meta-handbook.retention_audit_years }} years
 
 ## 9. References
 
@@ -362,10 +375,9 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 - **NIST SP 800-63B** - Digital Identity Guidelines (Authentication)
 - **OWASP Authentication Cheat Sheet**
 
----
-
 **Approved by:**  
-Thomas Weber, CISO  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]
+

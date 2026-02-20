@@ -40,5 +40,3 @@ Language: en
 - [0630 - Glossary](0630_Glossary.md)
 - [0640 - References](0640_References.md)
 - [0650 - Evidence and Documentation](0650_Evidence_and_Documentation.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

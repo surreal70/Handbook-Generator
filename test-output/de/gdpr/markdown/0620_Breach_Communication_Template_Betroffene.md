@@ -1,11 +1,17 @@
 # Breach Communication Template (Betroffene Personen)
 
-**Dokument-ID:** 0620  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0620
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,9 +19,7 @@
 
 ## E-Mail-Vorlage
 
-**Betreff:** Wichtige Information zu Ihren Daten bei {{ meta.organization }}
-
----
+**Betreff:** Wichtige Information zu Ihren Daten bei AdminSend GmbH
 
 Sehr geehrte/r [Anrede] [Name],
 
@@ -125,9 +129,7 @@ Mit freundlichen Grüßen
 
 [TODO: Name]  
 [TODO: Funktion]  
-{{ meta.organization }}
-
----
+AdminSend GmbH
 
 **Anhang:** [Optional: Detaillierte technische Informationen, FAQ]
 

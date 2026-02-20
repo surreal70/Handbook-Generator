@@ -1,14 +1,17 @@
 # Umsetzungssteuerung, Reporting und KPIs
 
-**Dokument-ID:** 0110  
-**Dokumenttyp:** Steuerungsdokument  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -78,68 +81,68 @@
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Maßnahmenplan-Erfüllung** | % abgeschlossene Maßnahmen vs. geplant | 100% | Maßnahmenplan (Dokument 0100) | Monatlich | Thomas Weber |
-| **P1-Maßnahmen-Erfüllung** | % abgeschlossene P1-Maßnahmen | 100% in [TODO] Monaten | Maßnahmenplan | Wöchentlich | Thomas Weber |
-| **Maßnahmen-Verzögerung** | Durchschnittliche Verzögerung in Tagen | < 14 Tage | Maßnahmenplan | Monatlich | Thomas Weber |
-| **Budget-Einhaltung** | % genutztes Budget vs. geplant | 100% ± 10% | Finanzcontrolling | Monatlich | Max Mustermann |
+| **Maßnahmenplan-Erfüllung** | % abgeschlossene Maßnahmen vs. geplant | 100% | Maßnahmenplan (Dokument 0100) | Monatlich | [TODO] |
+| **P1-Maßnahmen-Erfüllung** | % abgeschlossene P1-Maßnahmen | 100% in [TODO] Monaten | Maßnahmenplan | Wöchentlich | [TODO] |
+| **Maßnahmen-Verzögerung** | Durchschnittliche Verzögerung in Tagen | < 14 Tage | Maßnahmenplan | Monatlich | [TODO] |
+| **Budget-Einhaltung** | % genutztes Budget vs. geplant | 100% ± 10% | Finanzcontrolling | Monatlich | [TODO] |
 
 ### 2.2 IT-Grundschutz-Compliance
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Erfüllungsgrad IT-Grundschutz** | % erfüllte Anforderungen | > 80% | Basis-Sicherheitscheck (Dokument 0080) | Quartalsweise | Thomas Weber |
-| **Kritische Lücken** | Anzahl nicht erfüllter P1-Anforderungen | 0 | Basis-Sicherheitscheck | Monatlich | Thomas Weber |
-| **Baustein-Abdeckung** | % modellierte Bausteine mit Soll-Ist-Vergleich | 100% | Modellierung (Dokument 0070) | Quartalsweise | Thomas Weber |
+| **Erfüllungsgrad IT-Grundschutz** | % erfüllte Anforderungen | > 80% | Basis-Sicherheitscheck (Dokument 0080) | Quartalsweise | [TODO] |
+| **Kritische Lücken** | Anzahl nicht erfüllter P1-Anforderungen | 0 | Basis-Sicherheitscheck | Monatlich | [TODO] |
+| **Baustein-Abdeckung** | % modellierte Bausteine mit Soll-Ist-Vergleich | 100% | Modellierung (Dokument 0070) | Quartalsweise | [TODO] |
 
 ### 2.3 Risikomanagement
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Risiko-Exposition** | Anzahl "Sehr hoch"-Risiken | 0 | Risikoregister (Dokument 0090) | Monatlich | Thomas Weber |
-| **Risikoreduktion** | % reduzierte Risiken vs. identifiziert | > 80% | Risikoregister | Quartalsweise | Thomas Weber |
-| **Risikoakzeptanz-Quote** | % akzeptierte Risiken (ohne Maßnahmen) | < 10% | Risikoregister | Quartalsweise | Thomas Weber |
+| **Risiko-Exposition** | Anzahl "Sehr hoch"-Risiken | 0 | Risikoregister (Dokument 0090) | Monatlich | [TODO] |
+| **Risikoreduktion** | % reduzierte Risiken vs. identifiziert | > 80% | Risikoregister | Quartalsweise | [TODO] |
+| **Risikoakzeptanz-Quote** | % akzeptierte Risiken (ohne Maßnahmen) | < 10% | Risikoregister | Quartalsweise | [TODO] |
 
 ### 2.4 Patch- und Vulnerability Management
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Patch-Compliance** | % Systeme mit aktuellen Patches | > 95% | Patch-Management-Tool | Monatlich | Anna Schmidt |
-| **Kritische Patches (SLA)** | % kritische Patches innerhalb SLA (7 Tage) | 100% | Patch-Management-Tool | Wöchentlich | Anna Schmidt |
-| **Vulnerability-Remediation** | Durchschnittliche Zeit bis Behebung (Tage) | < 30 Tage (Hoch), < 90 Tage (Mittel) | Vulnerability Scanner | Monatlich | Anna Schmidt |
-| **Offene Schwachstellen** | Anzahl offener Schwachstellen (Kritisch/Hoch) | < 10 | Vulnerability Scanner | Wöchentlich | Anna Schmidt |
+| **Patch-Compliance** | % Systeme mit aktuellen Patches | > 95% | Patch-Management-Tool | Monatlich | [TODO] |
+| **Kritische Patches (SLA)** | % kritische Patches innerhalb SLA (7 Tage) | 100% | Patch-Management-Tool | Wöchentlich | [TODO] |
+| **Vulnerability-Remediation** | Durchschnittliche Zeit bis Behebung (Tage) | < 30 Tage (Hoch), < 90 Tage (Mittel) | Vulnerability Scanner | Monatlich | [TODO] |
+| **Offene Schwachstellen** | Anzahl offener Schwachstellen (Kritisch/Hoch) | < 10 | Vulnerability Scanner | Wöchentlich | [TODO] |
 
 ### 2.5 Backup und Recovery
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Backup-Erfolgsrate** | % erfolgreiche Backups | > 99% | Backup-System | Täglich | Anna Schmidt |
-| **Backup-Testquote** | % erfolgreiche Restore-Tests | 100% | Test-Protokolle | Quartalsweise | Anna Schmidt |
-| **Recovery Time Actual (RTA)** | Tatsächliche Wiederherstellungszeit | < RTO | Test-Protokolle | Quartalsweise | Anna Schmidt |
+| **Backup-Erfolgsrate** | % erfolgreiche Backups | > 99% | Backup-System | Täglich | [TODO] |
+| **Backup-Testquote** | % erfolgreiche Restore-Tests | 100% | Test-Protokolle | Quartalsweise | [TODO] |
+| **Recovery Time Actual (RTA)** | Tatsächliche Wiederherstellungszeit | < RTO | Test-Protokolle | Quartalsweise | [TODO] |
 
 ### 2.6 Incident Management
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Sicherheitsvorfälle** | Anzahl Sicherheitsvorfälle | Trend abnehmend | Incident-Management-System | Monatlich | Thomas Weber |
-| **Mean Time to Detect (MTTD)** | Durchschnittliche Erkennungszeit | < 24 Stunden | SIEM | Monatlich | Anna Schmidt |
-| **Mean Time to Respond (MTTR)** | Durchschnittliche Reaktionszeit | < 4 Stunden (Kritisch) | Incident-Management-System | Monatlich | Thomas Weber |
-| **Incident-Closure-Rate** | % geschlossene Incidents innerhalb SLA | > 95% | Incident-Management-System | Monatlich | Thomas Weber |
+| **Sicherheitsvorfälle** | Anzahl Sicherheitsvorfälle | Trend abnehmend | Incident-Management-System | Monatlich | [TODO] |
+| **Mean Time to Detect (MTTD)** | Durchschnittliche Erkennungszeit | < 24 Stunden | SIEM | Monatlich | [TODO] |
+| **Mean Time to Respond (MTTR)** | Durchschnittliche Reaktionszeit | < 4 Stunden (Kritisch) | Incident-Management-System | Monatlich | [TODO] |
+| **Incident-Closure-Rate** | % geschlossene Incidents innerhalb SLA | > 95% | Incident-Management-System | Monatlich | [TODO] |
 
 ### 2.7 Awareness und Schulung
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Schulungsquote** | % Mitarbeitende mit Awareness-Schulung | 100% | HR-System | Quartalsweise | Thomas Weber |
-| **Phishing-Test-Erfolgsrate** | % Mitarbeitende, die Phishing-Test bestehen | > 90% | Phishing-Simulation | Quartalsweise | Thomas Weber |
-| **Security-Champion-Quote** | Anzahl Security Champions pro Abteilung | Min. 1 pro Abteilung | ISMS-Team | Jährlich | Thomas Weber |
+| **Schulungsquote** | % Mitarbeitende mit Awareness-Schulung | 100% | HR-System | Quartalsweise | [TODO] |
+| **Phishing-Test-Erfolgsrate** | % Mitarbeitende, die Phishing-Test bestehen | > 90% | Phishing-Simulation | Quartalsweise | [TODO] |
+| **Security-Champion-Quote** | Anzahl Security Champions pro Abteilung | Min. 1 pro Abteilung | ISMS-Team | Jährlich | [TODO] |
 
 ### 2.8 Access Management
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Privileged Account Compliance** | % privilegierte Accounts mit MFA | 100% | IAM-System | Monatlich | Anna Schmidt |
-| **Access Review Compliance** | % durchgeführte Zugriffsrezertifizierungen | 100% | IAM-System | Quartalsweise | Anna Schmidt |
-| **Orphaned Accounts** | Anzahl verwaister Accounts | 0 | IAM-System | Monatlich | Anna Schmidt |
+| **Privileged Account Compliance** | % privilegierte Accounts mit MFA | 100% | IAM-System | Monatlich | [TODO] |
+| **Access Review Compliance** | % durchgeführte Zugriffsrezertifizierungen | 100% | IAM-System | Quartalsweise | [TODO] |
+| **Orphaned Accounts** | Anzahl verwaister Accounts | 0 | IAM-System | Monatlich | [TODO] |
 
 ## 3. KPI-Dashboard
 
@@ -232,24 +235,21 @@ Nach jedem größeren Vorfall oder Projekt:
 
 | Tool/System | Zweck | Owner | Status |
 |---|---|---|---|
-| [TODO: GRC-Tool] | Risikomanagement, Compliance | Thomas Weber | [TODO] |
-| [TODO: Ticketing-System] | Maßnahmentracking | Anna Schmidt | [TODO] |
-| [TODO: SIEM] | Security Monitoring | Anna Schmidt | [TODO] |
-| [TODO: Vulnerability Scanner] | Schwachstellen-Management | Anna Schmidt | [TODO] |
-| [TODO: Dashboard-Tool] | KPI-Visualisierung | Thomas Weber | [TODO] |
+| [TODO: GRC-Tool] | Risikomanagement, Compliance | [TODO] | [TODO] |
+| [TODO: Ticketing-System] | Maßnahmentracking | [TODO] | [TODO] |
+| [TODO: SIEM] | Security Monitoring | [TODO] | [TODO] |
+| [TODO: Vulnerability Scanner] | Schwachstellen-Management | [TODO] | [TODO] |
+| [TODO: Dashboard-Tool] | KPI-Visualisierung | [TODO] | [TODO] |
 
 ## 8. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Geschäftsführung | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT-Leitung | [TODO] | [TODO] | Draft |
+| Geschäftsführung | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
 - BSI Standard 200-2: IT-Grundschutz-Methodik
-
 

@@ -1,14 +1,17 @@
 # Schulung und Awareness – Programm
 
-**Dokument-ID:** 0600  
-**Dokumenttyp:** Programm  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0600
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 Das Schulungs- und Awareness-Programm von **AdminSend GmbH** stellt sicher, dass alle Mitarbeitenden über erforderliche Sicherheitskenntnisse verfügen.
 
-**Verantwortlich:** Thomas Weber (ISB)
+**Verantwortlich:** [TODO] (ISB)
 
 ## 2. Zielgruppen
 
@@ -34,11 +37,11 @@ Das Schulungs- und Awareness-Programm von **AdminSend GmbH** stellt sicher, dass
 
 | Training | Zielgruppe | Frequenz | Dauer | Inhalte | Nachweis | Owner |
 |---|---|---|---|---|---|---|
-| Grundlagentraining Informationssicherheit | Alle | Jährlich | 1h | Policies, Phishing, Passwörter, Incident-Meldung | LMS-Zertifikat | Thomas Weber |
+| Grundlagentraining Informationssicherheit | Alle | Jährlich | 1h | Policies, Phishing, Passwörter, Incident-Meldung | LMS-Zertifikat | [TODO] |
 | Onboarding Security | Neue Mitarbeitende | Bei Eintritt | 30min | Grundlagen, Policies | Teilnahmeliste | HR |
-| Phishing-Simulation | Alle | Quartalsweise | 10min | Phishing-Erkennung | Klickrate | Thomas Weber |
-| Admin-Schulung | IT-Admins | Jährlich | 4h | Privileged Access, Härtung, Logging | Teilnahmeliste | Anna Schmidt |
-| Secure Coding | Entwickler | Jährlich | 8h | OWASP Top 10, SAST/DAST | Teilnahmeliste | Anna Schmidt |
+| Phishing-Simulation | Alle | Quartalsweise | 10min | Phishing-Erkennung | Klickrate | [TODO] |
+| Admin-Schulung | IT-Admins | Jährlich | 4h | Privileged Access, Härtung, Logging | Teilnahmeliste | [TODO] |
+| Secure Coding | Entwickler | Jährlich | 8h | OWASP Top 10, SAST/DAST | Teilnahmeliste | [TODO] |
 | [TODO: Weitere Schulungen] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Wirksamkeitsmessung
@@ -80,13 +83,10 @@ Das Schulungs- und Awareness-Programm von **AdminSend GmbH** stellt sicher, dass
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| HR | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| HR | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: ORP.3 Sensibilisierung und Schulung
-
 

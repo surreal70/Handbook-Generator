@@ -1,14 +1,17 @@
 # Implementation Control, Reporting and KPIs
 
-**Document ID:** 0110  
-**Document Type:** Control Document  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -78,68 +81,68 @@
 
 | KPI | Definition | Target | Source | Frequency | Owner |
 |---|---|---|---|---|---|
-| **Action Plan Fulfillment** | % completed measures vs. planned | 100% | Action Plan (Document 0100) | Monthly | Thomas Weber |
-| **P1 Measure Fulfillment** | % completed P1 measures | 100% in [TODO] months | Action Plan | Weekly | Thomas Weber |
-| **Measure Delay** | Average delay in days | < 14 days | Action Plan | Monthly | Thomas Weber |
-| **Budget Compliance** | % used budget vs. planned | 100% ± 10% | Financial Controlling | Monthly | Max Mustermann |
+| **Action Plan Fulfillment** | % completed measures vs. planned | 100% | Action Plan (Document 0100) | Monthly | [TODO] |
+| **P1 Measure Fulfillment** | % completed P1 measures | 100% in [TODO] months | Action Plan | Weekly | [TODO] |
+| **Measure Delay** | Average delay in days | < 14 days | Action Plan | Monthly | [TODO] |
+| **Budget Compliance** | % used budget vs. planned | 100% ± 10% | Financial Controlling | Monthly | [TODO] |
 
 ### 2.2 IT-Grundschutz Compliance
 
 | KPI | Definition | Target | Source | Frequency | Owner |
 |---|---|---|---|---|---|
-| **IT-Grundschutz Fulfillment Rate** | % fulfilled requirements | > 80% | Basic Security Check (Document 0080) | Quarterly | Thomas Weber |
-| **Critical Gaps** | Number of unfulfilled P1 requirements | 0 | Basic Security Check | Monthly | Thomas Weber |
-| **Module Coverage** | % modeled modules with target-actual comparison | 100% | Modeling (Document 0070) | Quarterly | Thomas Weber |
+| **IT-Grundschutz Fulfillment Rate** | % fulfilled requirements | > 80% | Basic Security Check (Document 0080) | Quarterly | [TODO] |
+| **Critical Gaps** | Number of unfulfilled P1 requirements | 0 | Basic Security Check | Monthly | [TODO] |
+| **Module Coverage** | % modeled modules with target-actual comparison | 100% | Modeling (Document 0070) | Quarterly | [TODO] |
 
 ### 2.3 Risk Management
 
 | KPI | Definition | Target | Source | Frequency | Owner |
 |---|---|---|---|---|---|
-| **Risk Exposure** | Number of "Very High" risks | 0 | Risk Register (Document 0090) | Monthly | Thomas Weber |
-| **Risk Reduction** | % reduced risks vs. identified | > 80% | Risk Register | Quarterly | Thomas Weber |
-| **Risk Acceptance Rate** | % accepted risks (without measures) | < 10% | Risk Register | Quarterly | Thomas Weber |
+| **Risk Exposure** | Number of "Very High" risks | 0 | Risk Register (Document 0090) | Monthly | [TODO] |
+| **Risk Reduction** | % reduced risks vs. identified | > 80% | Risk Register | Quarterly | [TODO] |
+| **Risk Acceptance Rate** | % accepted risks (without measures) | < 10% | Risk Register | Quarterly | [TODO] |
 
 ### 2.4 Patch and Vulnerability Management
 
 | KPI | Definition | Target | Source | Frequency | Owner |
 |---|---|---|---|---|---|
-| **Patch Compliance** | % systems with current patches | > 95% | Patch Management Tool | Monthly | Anna Schmidt |
-| **Critical Patches (SLA)** | % critical patches within SLA (7 days) | 100% | Patch Management Tool | Weekly | Anna Schmidt |
-| **Vulnerability Remediation** | Average time to remediation (days) | < 30 days (High), < 90 days (Medium) | Vulnerability Scanner | Monthly | Anna Schmidt |
-| **Open Vulnerabilities** | Number of open vulnerabilities (Critical/High) | < 10 | Vulnerability Scanner | Weekly | Anna Schmidt |
+| **Patch Compliance** | % systems with current patches | > 95% | Patch Management Tool | Monthly | [TODO] |
+| **Critical Patches (SLA)** | % critical patches within SLA (7 days) | 100% | Patch Management Tool | Weekly | [TODO] |
+| **Vulnerability Remediation** | Average time to remediation (days) | < 30 days (High), < 90 days (Medium) | Vulnerability Scanner | Monthly | [TODO] |
+| **Open Vulnerabilities** | Number of open vulnerabilities (Critical/High) | < 10 | Vulnerability Scanner | Weekly | [TODO] |
 
 ### 2.5 Backup and Recovery
 
 | KPI | Definition | Target | Source | Frequency | Owner |
 |---|---|---|---|---|---|
-| **Backup Success Rate** | % successful backups | > 99% | Backup System | Daily | Anna Schmidt |
-| **Backup Test Rate** | % successful restore tests | 100% | Test Protocols | Quarterly | Anna Schmidt |
-| **Recovery Time Actual (RTA)** | Actual recovery time | < RTO | Test Protocols | Quarterly | Anna Schmidt |
+| **Backup Success Rate** | % successful backups | > 99% | Backup System | Daily | [TODO] |
+| **Backup Test Rate** | % successful restore tests | 100% | Test Protocols | Quarterly | [TODO] |
+| **Recovery Time Actual (RTA)** | Actual recovery time | < RTO | Test Protocols | Quarterly | [TODO] |
 
 ### 2.6 Incident Management
 
 | KPI | Definition | Target | Source | Frequency | Owner |
 |---|---|---|---|---|---|
-| **Security Incidents** | Number of security incidents | Decreasing trend | Incident Management System | Monthly | Thomas Weber |
-| **Mean Time to Detect (MTTD)** | Average detection time | < 24 hours | SIEM | Monthly | Anna Schmidt |
-| **Mean Time to Respond (MTTR)** | Average response time | < 4 hours (Critical) | Incident Management System | Monthly | Thomas Weber |
-| **Incident Closure Rate** | % closed incidents within SLA | > 95% | Incident Management System | Monthly | Thomas Weber |
+| **Security Incidents** | Number of security incidents | Decreasing trend | Incident Management System | Monthly | [TODO] |
+| **Mean Time to Detect (MTTD)** | Average detection time | < 24 hours | SIEM | Monthly | [TODO] |
+| **Mean Time to Respond (MTTR)** | Average response time | < 4 hours (Critical) | Incident Management System | Monthly | [TODO] |
+| **Incident Closure Rate** | % closed incidents within SLA | > 95% | Incident Management System | Monthly | [TODO] |
 
 ### 2.7 Awareness and Training
 
 | KPI | Definition | Target | Source | Frequency | Owner |
 |---|---|---|---|---|---|
-| **Training Rate** | % employees with awareness training | 100% | HR System | Quarterly | Thomas Weber |
-| **Phishing Test Success Rate** | % employees passing phishing test | > 90% | Phishing Simulation | Quarterly | Thomas Weber |
-| **Security Champion Rate** | Number of security champions per department | Min. 1 per department | ISMS Team | Annually | Thomas Weber |
+| **Training Rate** | % employees with awareness training | 100% | HR System | Quarterly | [TODO] |
+| **Phishing Test Success Rate** | % employees passing phishing test | > 90% | Phishing Simulation | Quarterly | [TODO] |
+| **Security Champion Rate** | Number of security champions per department | Min. 1 per department | ISMS Team | Annually | [TODO] |
 
 ### 2.8 Access Management
 
 | KPI | Definition | Target | Source | Frequency | Owner |
 |---|---|---|---|---|---|
-| **Privileged Account Compliance** | % privileged accounts with MFA | 100% | IAM System | Monthly | Anna Schmidt |
-| **Access Review Compliance** | % completed access recertifications | 100% | IAM System | Quarterly | Anna Schmidt |
-| **Orphaned Accounts** | Number of orphaned accounts | 0 | IAM System | Monthly | Anna Schmidt |
+| **Privileged Account Compliance** | % privileged accounts with MFA | 100% | IAM System | Monthly | [TODO] |
+| **Access Review Compliance** | % completed access recertifications | 100% | IAM System | Quarterly | [TODO] |
+| **Orphaned Accounts** | Number of orphaned accounts | 0 | IAM System | Monthly | [TODO] |
 
 ## 3. KPI Dashboard
 
@@ -232,24 +235,21 @@ After each major incident or project:
 
 | Tool/System | Purpose | Owner | Status |
 |---|---|---|---|
-| [TODO: GRC Tool] | Risk management, compliance | Thomas Weber | [TODO] |
-| [TODO: Ticketing System] | Measure tracking | Anna Schmidt | [TODO] |
-| [TODO: SIEM] | Security monitoring | Anna Schmidt | [TODO] |
-| [TODO: Vulnerability Scanner] | Vulnerability management | Anna Schmidt | [TODO] |
-| [TODO: Dashboard Tool] | KPI visualization | Thomas Weber | [TODO] |
+| [TODO: GRC Tool] | Risk management, compliance | [TODO] | [TODO] |
+| [TODO: Ticketing System] | Measure tracking | [TODO] | [TODO] |
+| [TODO: SIEM] | Security monitoring | [TODO] | [TODO] |
+| [TODO: Vulnerability Scanner] | Vulnerability management | [TODO] | [TODO] |
+| [TODO: Dashboard Tool] | KPI visualization | [TODO] | [TODO] |
 
 ## 8. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Executive Management | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT Management | [TODO] | [TODO] | Draft |
+| Executive Management | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)
 - BSI Standard 200-2: IT-Grundschutz Methodology
-
 

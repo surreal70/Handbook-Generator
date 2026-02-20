@@ -1,18 +1,31 @@
 # Policy: Data Protection Interfaces
 
+**Document-ID:** [FRAMEWORK]-0560
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0560  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.31-A.5.34 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Data:** All personal data according to GDPR
 - **Processes:** All processing activities of personal data
 - **Interfaces:** ISMS ↔ Data Protection Management System
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -79,9 +92,9 @@ International data transfers only occur with appropriate safeguards (adequacy de
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO) and {{ meta.dpo.name }} (DPO)
-- **Data Protection Officer:** {{ meta.dpo.name }}
-- **Privacy Officer:** {{ meta.privacy.officer }}
+- **Policy Owner:** [TODO] (CISO) and {{ meta-handbook.dpo_name }} (DPO)
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
+- **Privacy Officer:** {{ meta-handbook.privacy_officer }}
 - **Implementation Responsible:** IT Operations, Business Owner
 - **Control/Audit Function:** ISMS, Internal Audit, Data Protection Authority
 
@@ -158,10 +171,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **ISO/IEC 27701** - Privacy Information Management System
 - **BDSG** - German Federal Data Protection Act
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

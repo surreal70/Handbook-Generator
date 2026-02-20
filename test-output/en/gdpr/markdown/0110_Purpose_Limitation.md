@@ -1,11 +1,17 @@
 # Purpose Limitation
 
-**Document-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of the principle of purpose limitation in {{ meta.organization }}. Personal data may only be collected and processed for specified, explicit and legitimate purposes.
+This document describes the implementation of the principle of purpose limitation in AdminSend GmbH. Personal data may only be collected and processed for specified, explicit and legitimate purposes.
 
 ## Principle according to Art. 5(1)(b) GDPR
 
@@ -197,8 +203,6 @@ Personal data must be collected for specified, explicit and legitimate purposes 
 | Purpose misuse | Customer data for advertising without consent | Conduct compatibility assessment |
 | Missing documentation | Purpose not in records | Maintain Art. 30 records |
 | Retrospective purpose change | Purpose changed after collection | Define purpose before collection |
-
----
 
 **Next Steps:**
 1. Define clear purposes for all processing activities

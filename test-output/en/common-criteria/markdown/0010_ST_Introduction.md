@@ -1,11 +1,17 @@
 # ST Introduction
 
-**Document-ID:** 0010  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -15,12 +21,12 @@
 
 ### 1.1 ST Title
 **ST Title:** [TODO: Full title of the Security Target]  
-**ST Version:** {{ meta.version }}  
-**ST Date:** {{ meta.date }}  
+**ST Version:** 0  
+**ST Date:** [TODO]  
 
 ### 1.2 ST Author
-**Author:** Andreas Huemmer [andreas.huemmer@adminsend.de]  
-**Organization:** {{ meta.organization }}  
+**Author:** Handbook-Generator  
+**Organization:** AdminSend GmbH  
 **Contact:** [TODO: Contact information]  
 
 ### 1.3 TOE Identification
@@ -107,13 +113,12 @@ The ST is structured as follows:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| {{ meta.version }} | {{ meta.date }} | Andreas Huemmer [andreas.huemmer@adminsend.de] | Initial version |
+| [Version] | [Date] | [Author] | Initial version |
 | [TODO] | [TODO] | [TODO] | [TODO: Description of changes] |
-
----
 
 **Next Steps:**
 1. Complete all [TODO] placeholders
 2. Verify consistency with other ST sections
 3. Ensure all references are correct
 4. Have the document reviewed by relevant stakeholders
+

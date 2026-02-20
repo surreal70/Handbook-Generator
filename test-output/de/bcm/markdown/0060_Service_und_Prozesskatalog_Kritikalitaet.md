@@ -1,13 +1,17 @@
 # Service- und Prozesskatalog mit Kritikalität
 
-**Dokument-ID:** BCM-0060  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0060
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -143,17 +147,17 @@ L │              [Service F]  [Service G]
 
 | IT-Service | Unterstützte Geschäftsprozesse | Kritikalität | IT-Owner | Technologie |
 |------------|-------------------------------|--------------|----------|-------------|
-| [TODO: ERP-System] | Auftragsabwicklung, Finanzen, Produktion | HOCH | {{ meta.roles.it_operations_manager.name }} | [TODO: SAP/Oracle/etc.] |
-| [TODO: E-Mail] | Alle Geschäftsprozesse | HOCH | {{ meta.roles.it_operations_manager.name }} | [TODO: Exchange/M365/etc.] |
+| [TODO: ERP-System] | Auftragsabwicklung, Finanzen, Produktion | HOCH | [TODO] | [TODO: SAP/Oracle/etc.] |
+| [TODO: E-Mail] | Alle Geschäftsprozesse | HOCH | [TODO] | [TODO: Exchange/M365/etc.] |
 | [TODO: CRM] | Vertrieb, Kundenservice | MITTEL | [TODO] | [TODO: Salesforce/etc.] |
 
 ### 4.2 IT-Infrastruktur
 
 | Infrastruktur-Komponente | Abhängige Services | Kritikalität | Standort | Redundanz |
 |--------------------------|-------------------|--------------|----------|-----------|
-| [TODO: Core Switch] | Alle IT-Services | HOCH | München | Ja/Nein |
-| [TODO: Firewall] | Internet-Zugang | HOCH | München | Ja/Nein |
-| [TODO: Storage] | Alle Daten | HOCH | München | Ja/Nein |
+| [TODO: Core Switch] | Alle IT-Services | HOCH | [TODO] | Ja/Nein |
+| [TODO: Firewall] | Internet-Zugang | HOCH | [TODO] | Ja/Nein |
+| [TODO: Storage] | Alle Daten | HOCH | [TODO] | Ja/Nein |
 
 ## 5. Abhängigkeitsanalyse
 
@@ -204,8 +208,8 @@ L │              [Service F]  [Service G]
 
 | Stakeholder-Gruppe | Betroffene Services | Kommunikationsbedarf | Ansprechpartner |
 |-------------------|-------------------|---------------------|-----------------|
-| Geschäftsführung | Alle kritischen Services | Strategische Entscheidungen | {{ meta.roles.ceo.name }} |
-| IT-Abteilung | Alle IT-abhängigen Services | Technische Koordination | {{ meta.roles.cio.name }} |
+| Geschäftsführung | Alle kritischen Services | Strategische Entscheidungen | [TODO] |
+| IT-Abteilung | Alle IT-abhängigen Services | Technische Koordination | [TODO] |
 | Fachbereiche | Jeweilige Services | Operative Umsetzung | [TODO: Bereichsleiter] |
 | Mitarbeiter | Alle Services | Information und Anweisungen | [TODO: HR/Kommunikation] |
 
@@ -233,13 +237,5 @@ L │              [Service F]  [Service G]
 2. Service-Owner prüfen und aktualisieren ihre Services
 3. Kritikalitätsbewertung wird validiert
 4. Änderungen werden dokumentiert und kommuniziert
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

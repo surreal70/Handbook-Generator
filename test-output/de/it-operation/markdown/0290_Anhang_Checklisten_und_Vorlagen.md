@@ -1,15 +1,28 @@
 # Anhang: Checklisten und Vorlagen
 
+**Dokument-ID:** [FRAMEWORK]-0290
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddokumente und Formularen für den IT-Betrieb. Ziel ist es, konsistente und effiziente Durchführung von Standardprozessen zu gewährleisten.
 
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
-
----
 
 ## Checklisten
 
@@ -71,8 +84,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Dauer:** [HH:MM]
 ```
 
----
-
 #### Major-Incident-Checkliste
 
 ```markdown
@@ -131,8 +142,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Technischer Lead:** [Name]
 **Kommunikations-Lead:** [Name]
 ```
-
----
 
 ### Change-Management-Checklisten
 
@@ -203,8 +212,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Status:** Erfolgreich / Rollback / Abgebrochen
 ```
 
----
-
 ### Backup und Recovery Checklisten
 
 #### Backup-Verifikations-Checkliste
@@ -252,8 +259,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Ergebnis:** Erfolgreich / Mit Problemen / Fehlgeschlagen
 **Nächster Test:** [YYYY-MM-DD]
 ```
-
----
 
 #### Disaster-Recovery-Test-Checkliste
 
@@ -319,8 +324,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Test-Ergebnis:** Erfolgreich / Teilweise erfolgreich / Fehlgeschlagen
 **Nächster Test:** [YYYY-MM-DD]
 ```
-
----
 
 ### Security-Checklisten
 
@@ -389,8 +392,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Status:** Offen / Eingedämmt / Gelöst
 ```
 
----
-
 ## Vorlagen
 
 ### Incident-Report-Vorlage
@@ -448,11 +449,9 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 - [Monitoring-Daten]
 
 **Erstellt von:** [Name]
-**Genehmigt von:** Andreas Huemmer
+**Genehmigt von:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 **Datum:** [YYYY-MM-DD]
 ```
-
----
 
 ### Change-Request-Vorlage
 
@@ -522,11 +521,9 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 - [ ] CAB-Genehmigung: [Name] - [Datum]
 
 **Antragsteller:** [Name]
-**Change-Manager:** Andreas Huemmer
+**Change-Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 **Status:** Beantragt / Genehmigt / Abgelehnt / Implementiert
 ```
-
----
 
 ### Postmortem-Vorlage
 
@@ -598,8 +595,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Follow-Up:** [Datum für Review der Action Items]
 ```
 
----
-
 ## Formulare
 
 ### Zugriffs-Anforderungs-Formular
@@ -643,8 +638,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 
 **Status:** Beantragt / Genehmigt / Abgelehnt / Implementiert
 ```
-
----
 
 ### Hardware-Anforderungs-Formular
 
@@ -695,8 +688,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Status:** Beantragt / Genehmigt / Bestellt / Geliefert / Installiert
 ```
 
----
-
 ## Prozesse und Verantwortlichkeiten
 
 ### RACI-Matrix
@@ -711,16 +702,12 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 
 > **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
 - **ITIL v4:** Service Operation Practice
 - **ISO 20000:** Clause 8.1 - Operational Planning and Control
 - **COBIT 2019:** DSS01 - Managed Operations
-
----
 
 ## Anhang
 
@@ -738,8 +725,7 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 - ISO/IEC 20000-1:2018
 - COBIT 2019 Framework
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** andreas.huemmer@adminsend.de
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+

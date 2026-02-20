@@ -1,11 +1,17 @@
 # Glossar und Begriffsdefinitionen
 
-**Dokument-ID:** 0630  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0630
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -363,8 +369,6 @@ Das Auswählen einer oder mehrerer Optionen aus einer vorgegebenen Liste in eine
 | [TODO: 1.0] | [TODO: Datum] | Initiale Version | [TODO: Name] |
 | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Begriffe, die im ST verwendet werden
 2. Definieren Sie alle TOE-spezifischen Begriffe
@@ -373,3 +377,4 @@ Das Auswählen einer oder mehrerer Optionen aus einer vorgegebenen Liste in eine
 5. Überprüfen Sie die Konsistenz der Terminologie im gesamten ST
 6. Aktualisieren Sie das Glossar bei Änderungen am ST
 7. Lassen Sie das Glossar durch Fachexperten prüfen
+

@@ -1,11 +1,17 @@
 # Nonconformity and Corrective Action
 
-**Document-ID:** 0660  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0660
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document defines how {{ meta.organization }} deals with nonconformities and implements corrective actions to prevent recurrence.
+This document defines how AdminSend GmbH deals with nonconformities and implements corrective actions to prevent recurrence.
 
 ## Reaction to Nonconformity (10.2.1)
 
@@ -60,7 +66,7 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 
 ### Analysis Methods
 
-**{{ meta.organization }} uses:**
+**AdminSend GmbH uses:**
 - 5-Why Method
 - Ishikawa Diagram (Fishbone Diagram)
 - Failure-Cause Analysis
@@ -142,7 +148,7 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 
 ### Monitoring
 
-**{{ meta.organization }} monitors:**
+**AdminSend GmbH monitors:**
 - Progress of implementation
 - Compliance with deadlines
 - Availability of resources
@@ -201,7 +207,7 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 
 ### System Changes
 
-**If necessary, {{ meta.organization }} changes:**
+**If necessary, AdminSend GmbH changes:**
 - Processes
 - Procedures
 - Work instructions
@@ -222,7 +228,7 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 
 ### Required Records
 
-**{{ meta.organization }} retains documented information on:**
+**AdminSend GmbH retains documented information on:**
 - Nature of nonconformities
 - Actions taken
 - Results of corrective actions
@@ -321,8 +327,6 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 - Implementing actions
 - Complying with changed processes
 
----
-
 **Next Steps:**
 1. Establish NC reporting process
 2. Train employees in root cause analysis
@@ -330,3 +334,4 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 4. Define escalation process
 5. Monitor effectiveness of actions
 6. Evaluate NCs regularly
+

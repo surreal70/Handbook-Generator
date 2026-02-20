@@ -1,14 +1,17 @@
 # Information Security Policy (Top Management)
 
-**Document ID:** 0010  
-**Document Type:** Policy/Policy  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -41,9 +44,9 @@ The information security of **AdminSend GmbH** is based on the following protect
 This policy applies to:
 
 - **Organization:** AdminSend GmbH
-- **Locations:** {{ meta.organization.locations }}
-- **Executive Management:** Max Mustermann
-- **Information Security Officer (ISB):** Thomas Weber
+- **Locations:** [TODO]
+- **Executive Management:** [TODO]
+- **Information Security Officer (ISB):** [TODO]
 
 ### 2.2 Information Domains in Scope
 
@@ -88,7 +91,7 @@ The Information Security Management System (ISMS) is continuously monitored, ass
 
 ### 4.1 Top Management / Executive Management
 
-**Responsible:** Max Mustermann (max.mustermann@adminsend.de)
+**Responsible:** [TODO] ({{ meta-organisation-roles.role_CEO_email }})
 
 Executive management bears overall responsibility for information security and:
 - Approves the information security policy
@@ -98,7 +101,7 @@ Executive management bears overall responsibility for information security and:
 
 ### 4.2 Information Security Officer (ISO)
 
-**Responsible:** Thomas Weber (thomas.weber@adminsend.de)
+**Responsible:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 
 The ISO is responsible for:
 - Coordination of the ISMS
@@ -109,7 +112,7 @@ The ISO is responsible for:
 
 ### 4.3 IT Management
 
-**Responsible:** Anna Schmidt (anna.schmidt@adminsend.de)
+**Responsible:** [TODO] ({{ meta-organisation-roles.role_CIO_email }})
 
 IT management is responsible for:
 - Implementation of technical security measures
@@ -151,21 +154,18 @@ Violations of this policy may result in the following measures:
 
 This policy is reviewed and updated at least annually or in case of significant changes.
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]
 
 ## 7. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| Executive Management | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Executive Management | [TODO] | [TODO] | Draft |
+| ISB | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)
 - BSI Standard 200-2: IT-Grundschutz Methodology
 - BSI Standard 200-3: Risk Analysis Based on IT-Grundschutz
 - BSI IT-Grundschutz Compendium
-
 

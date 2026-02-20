@@ -35,4 +35,3 @@ Language: en
 - [0270 - Contacts Escalation and Vendors](0270_Contacts_Escalation_and_Vendors.md)
 - [0280 - Compliance and Audits](0280_Compliance_and_Audits.md)
 - [0290 - Appendix Checklists and Templates](0290_Appendix_Checklists_and_Templates.md)
-- [READ - E](README.md)

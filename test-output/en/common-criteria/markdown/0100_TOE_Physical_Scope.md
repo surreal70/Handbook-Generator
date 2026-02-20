@@ -1,11 +1,17 @@
 # TOE Physical Scope
 
-**Document-ID:** 0100  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0100
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -211,11 +217,10 @@ The physical boundaries were defined as follows:
 [TODO: Insert deployment diagram]
 ```
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders with TOE-specific information
 2. Create detailed component diagrams
 3. Document all versions and build information
 4. Verify consistency with logical scope (Template 0110)
 5. Ensure all delivery components are documented
+

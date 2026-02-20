@@ -1,14 +1,17 @@
 # Modellierung: Bausteinzuordnung (Template)
 
-**Dokument-ID:** 0070  
-**Dokumenttyp:** Methodik-Artefakt  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standard 200-2, IT-Grundschutz-Kompendium)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0070
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -21,7 +24,7 @@ Die Modellierung ordnet den Objekten des Informationsverbunds von **AdminSend Gm
 - Identifikation umzusetzender Anforderungen
 - Systematische Sicherheitsmaßnahmen-Planung
 
-**Verantwortlich:** Thomas Weber (ISB)
+**Verantwortlich:** [TODO] (ISB)
 
 **Wichtig:** Dieses Dokument referenziert nur Bausteine. Die vollständigen Bausteintexte befinden sich im BSI IT-Grundschutz-Kompendium und werden nicht kopiert.
 
@@ -65,20 +68,20 @@ Das BSI IT-Grundschutz-Kompendium gliedert Bausteine in folgende Schichten:
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| ORG-001 | AdminSend GmbH | Organisation | ISMS.1 Sicherheitsmanagement | Gesamtorganisation | Thomas Weber |
-| ORG-001 | AdminSend GmbH | Organisation | ORP.1 Organisation | Organisationsstruktur | Thomas Weber |
+| ORG-001 | AdminSend GmbH | Organisation | ISMS.1 Sicherheitsmanagement | Gesamtorganisation | [TODO] |
+| ORG-001 | AdminSend GmbH | Organisation | ORP.1 Organisation | Organisationsstruktur | [TODO] |
 | ORG-001 | AdminSend GmbH | Organisation | ORP.2 Personal | Personalmanagement | [TODO: HR] |
-| ORG-001 | AdminSend GmbH | Organisation | ORP.3 Sensibilisierung und Schulung | Awareness-Programm | Thomas Weber |
-| ORG-001 | AdminSend GmbH | Organisation | ORP.4 Identitäts- und Berechtigungsmanagement | IAM-Prozesse | Anna Schmidt |
+| ORG-001 | AdminSend GmbH | Organisation | ORP.3 Sensibilisierung und Schulung | Awareness-Programm | [TODO] |
+| ORG-001 | AdminSend GmbH | Organisation | ORP.4 Identitäts- und Berechtigungsmanagement | IAM-Prozesse | [TODO] |
 | ORG-001 | AdminSend GmbH | Organisation | ORP.5 Compliance Management (Anforderungsmanagement) | Compliance | [TODO] |
 
 ### 3.2 Konzeption und Vorgehensweisen (CON)
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| CON-001 | Kryptokonzept | Konzept | CON.1 Kryptokonzept | Verschlüsselungsstrategie | Thomas Weber |
-| CON-002 | Datensicherungskonzept | Konzept | CON.3 Datensicherungskonzept | Backup-Strategie | Anna Schmidt |
-| CON-003 | Löschkonzept | Konzept | CON.6 Löschen und Vernichten | Datenlöschung | Thomas Weber |
+| CON-001 | Kryptokonzept | Konzept | CON.1 Kryptokonzept | Verschlüsselungsstrategie | [TODO] |
+| CON-002 | Datensicherungskonzept | Konzept | CON.3 Datensicherungskonzept | Backup-Strategie | [TODO] |
+| CON-003 | Löschkonzept | Konzept | CON.6 Löschen und Vernichten | Datenlöschung | [TODO] |
 | CON-004 | Patch- und Änderungsmanagement | Konzept | CON.7 Informationssicherheit auf Auslandsreisen | [TODO: falls zutreffend] | [TODO] |
 | CON-005 | Softwareentwicklung | Konzept | CON.8 Software-Entwicklung | [TODO: falls zutreffend] | [TODO] |
 
@@ -86,20 +89,20 @@ Das BSI IT-Grundschutz-Kompendium gliedert Bausteine in folgende Schichten:
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| OPS-001 | IT-Betrieb | Betriebsprozess | OPS.1.1.2 Ordnungsgemäße IT-Administration | IT-Administration | Anna Schmidt |
-| OPS-002 | Patch Management | Betriebsprozess | OPS.1.1.3 Patch- und Änderungsmanagement | Patch-Prozess | Anna Schmidt |
-| OPS-003 | Schutz vor Schadprogrammen | Betriebsprozess | OPS.1.1.4 Schutz vor Schadprogrammen | Malware-Schutz | Anna Schmidt |
-| OPS-004 | Datensicherung | Betriebsprozess | OPS.1.1.5 Protokollierung | Logging | Anna Schmidt |
+| OPS-001 | IT-Betrieb | Betriebsprozess | OPS.1.1.2 Ordnungsgemäße IT-Administration | IT-Administration | [TODO] |
+| OPS-002 | Patch Management | Betriebsprozess | OPS.1.1.3 Patch- und Änderungsmanagement | Patch-Prozess | [TODO] |
+| OPS-003 | Schutz vor Schadprogrammen | Betriebsprozess | OPS.1.1.4 Schutz vor Schadprogrammen | Malware-Schutz | [TODO] |
+| OPS-004 | Datensicherung | Betriebsprozess | OPS.1.1.5 Protokollierung | Logging | [TODO] |
 | OPS-005 | Software-Tests | Betriebsprozess | OPS.1.1.6 Software-Tests und -Freigaben | [TODO: falls zutreffend] | [TODO] |
 | OPS-006 | Outsourcing | Betriebsprozess | OPS.2.1 Outsourcing für Kunden | [TODO: falls zutreffend] | [TODO] |
-| OPS-007 | Cloud-Nutzung | Betriebsprozess | OPS.2.2 Cloud-Nutzung | Cloud-Services | Anna Schmidt |
+| OPS-007 | Cloud-Nutzung | Betriebsprozess | OPS.2.2 Cloud-Nutzung | Cloud-Services | [TODO] |
 
 ### 3.4 Detektion und Reaktion (DER)
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| DER-001 | Detektion | Prozess | DER.1 Detektion von sicherheitsrelevanten Ereignissen | SIEM, Monitoring | Anna Schmidt |
-| DER-002 | Incident Management | Prozess | DER.2.1 Behandlung von Sicherheitsvorfällen | Incident Response | Thomas Weber |
+| DER-001 | Detektion | Prozess | DER.1 Detektion von sicherheitsrelevanten Ereignissen | SIEM, Monitoring | [TODO] |
+| DER-002 | Incident Management | Prozess | DER.2.1 Behandlung von Sicherheitsvorfällen | Incident Response | [TODO] |
 | DER-003 | Forensik | Prozess | DER.2.2 Vorsorge für die IT-Forensik | [TODO: falls zutreffend] | [TODO] |
 | DER-004 | Audits | Prozess | DER.3.1 Audits und Revisionen | Internal Audit | [TODO] |
 
@@ -111,12 +114,12 @@ Das BSI IT-Grundschutz-Kompendium gliedert Bausteine in folgende Schichten:
 |---|---|---|---|---|---|
 | A-001 | [TODO: Anwendung 1] | Anwendung | APP.1.1 Office-Produkte | [TODO: falls Office-Anwendung] | [TODO] |
 | A-002 | [TODO: Anwendung 2] | Anwendung | APP.3.1 Webanwendungen | [TODO: falls Webanwendung] | [TODO] |
-| A-003 | [TODO: Anwendung 3] | Anwendung | APP.3.2 Webserver | [TODO: falls Webserver] | Anna Schmidt |
-| A-004 | [TODO: Anwendung 4] | Anwendung | APP.3.3 Fileserver | [TODO: falls Fileserver] | Anna Schmidt |
-| A-005 | [TODO: Anwendung 5] | Anwendung | APP.3.6 DNS-Server | [TODO: falls DNS] | Anna Schmidt |
-| A-006 | [TODO: Anwendung 6] | Anwendung | APP.4.3 Relationale Datenbanksysteme | [TODO: falls Datenbank] | Anna Schmidt |
+| A-003 | [TODO: Anwendung 3] | Anwendung | APP.3.2 Webserver | [TODO: falls Webserver] | [TODO] |
+| A-004 | [TODO: Anwendung 4] | Anwendung | APP.3.3 Fileserver | [TODO: falls Fileserver] | [TODO] |
+| A-005 | [TODO: Anwendung 5] | Anwendung | APP.3.6 DNS-Server | [TODO: falls DNS] | [TODO] |
+| A-006 | [TODO: Anwendung 6] | Anwendung | APP.4.3 Relationale Datenbanksysteme | [TODO: falls Datenbank] | [TODO] |
 | A-007 | [TODO: Anwendung 7] | Anwendung | APP.5.1 Allgemeine Groupware | [TODO: falls Groupware] | [TODO] |
-| A-008 | [TODO: Anwendung 8] | Anwendung | APP.5.2 Microsoft Exchange und Outlook | [TODO: falls Exchange] | Anna Schmidt |
+| A-008 | [TODO: Anwendung 8] | Anwendung | APP.5.2 Microsoft Exchange und Outlook | [TODO: falls Exchange] | [TODO] |
 
 ### 3.6 IT-Systeme (SYS)
 
@@ -124,16 +127,16 @@ Das BSI IT-Grundschutz-Kompendium gliedert Bausteine in folgende Schichten:
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | Server | SYS.1.1 Allgemeiner Server | Allgemeiner Server | Anna Schmidt |
-| S-002 | [TODO: Linux-Server] | Server | SYS.1.3 Server unter Linux und Unix | Linux-Server | Anna Schmidt |
-| S-003 | [TODO: Windows-Server] | Server | SYS.1.2.3 Windows Server | Windows-Server | Anna Schmidt |
-| S-004 | [TODO: Virtualisierung] | Virtualisierung | SYS.1.5 Virtualisierung | VMware/Hyper-V | Anna Schmidt |
-| S-005 | [TODO: Container] | Container | SYS.1.6 Containerisierung | Docker/Kubernetes | Anna Schmidt |
-| S-006 | [TODO: Storage] | Storage | SYS.1.8 Speicherlösungen | SAN/NAS | Anna Schmidt |
-| S-007 | [TODO: Client] | Client | SYS.2.1 Allgemeiner Client | Workstations | Anna Schmidt |
-| S-008 | [TODO: Windows-Client] | Client | SYS.2.2.3 Clients unter Windows | Windows-Clients | Anna Schmidt |
-| S-009 | [TODO: macOS-Client] | Client | SYS.2.4 Clients unter macOS | macOS-Clients | Anna Schmidt |
-| S-010 | [TODO: Mobile Device] | Mobile | SYS.3.2.1 Allgemeine Smartphones und Tablets | Mobile Devices | Anna Schmidt |
+| S-001 | [[ netbox.device.server_001 ]] | Server | SYS.1.1 Allgemeiner Server | Allgemeiner Server | [TODO] |
+| S-002 | [TODO: Linux-Server] | Server | SYS.1.3 Server unter Linux und Unix | Linux-Server | [TODO] |
+| S-003 | [TODO: Windows-Server] | Server | SYS.1.2.3 Windows Server | Windows-Server | [TODO] |
+| S-004 | [TODO: Virtualisierung] | Virtualisierung | SYS.1.5 Virtualisierung | VMware/Hyper-V | [TODO] |
+| S-005 | [TODO: Container] | Container | SYS.1.6 Containerisierung | Docker/Kubernetes | [TODO] |
+| S-006 | [TODO: Storage] | Storage | SYS.1.8 Speicherlösungen | SAN/NAS | [TODO] |
+| S-007 | [TODO: Client] | Client | SYS.2.1 Allgemeiner Client | Workstations | [TODO] |
+| S-008 | [TODO: Windows-Client] | Client | SYS.2.2.3 Clients unter Windows | Windows-Clients | [TODO] |
+| S-009 | [TODO: macOS-Client] | Client | SYS.2.4 Clients unter macOS | macOS-Clients | [TODO] |
+| S-010 | [TODO: Mobile Device] | Mobile | SYS.3.2.1 Allgemeine Smartphones und Tablets | Mobile Devices | [TODO] |
 | S-011 | [TODO: IoT] | IoT | SYS.4.4 Allgemeines IoT-Gerät | [TODO: falls IoT] | [TODO] |
 
 ### 3.7 Netzwerke und Kommunikation (NET)
@@ -142,13 +145,13 @@ Das BSI IT-Grundschutz-Kompendium gliedert Bausteine in folgende Schichten:
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| N-001 | Netzwerkarchitektur | Netzwerk | NET.1.1 Netzarchitektur und -design | Gesamtnetzwerk | Anna Schmidt |
-| N-002 | Netzwerkmanagement | Netzwerk | NET.1.2 Netzmanagement | Netzwerk-Monitoring | Anna Schmidt |
-| N-003 | [TODO: Router/Switches] | Netzwerkkomponente | NET.3.1 Router und Switches | Netzwerkgeräte | Anna Schmidt |
-| N-004 | [TODO: Firewall] | Sicherheitskomponente | NET.3.2 Firewall | Perimeter-Schutz | Anna Schmidt |
-| N-005 | [TODO: VPN] | Sicherheitskomponente | NET.3.3 VPN | Remote-Zugriff | Anna Schmidt |
-| N-006 | [TODO: WLAN] | Netzwerk | NET.2.1 WLAN-Betrieb | Wireless-Netzwerk | Anna Schmidt |
-| N-007 | [TODO: E-Mail] | Kommunikation | NET.4.1 TLS-Verschlüsselung | [TODO: falls zutreffend] | Anna Schmidt |
+| N-001 | Netzwerkarchitektur | Netzwerk | NET.1.1 Netzarchitektur und -design | Gesamtnetzwerk | [TODO] |
+| N-002 | Netzwerkmanagement | Netzwerk | NET.1.2 Netzmanagement | Netzwerk-Monitoring | [TODO] |
+| N-003 | [TODO: Router/Switches] | Netzwerkkomponente | NET.3.1 Router und Switches | Netzwerkgeräte | [TODO] |
+| N-004 | [TODO: Firewall] | Sicherheitskomponente | NET.3.2 Firewall | Perimeter-Schutz | [TODO] |
+| N-005 | [TODO: VPN] | Sicherheitskomponente | NET.3.3 VPN | Remote-Zugriff | [TODO] |
+| N-006 | [TODO: WLAN] | Netzwerk | NET.2.1 WLAN-Betrieb | Wireless-Netzwerk | [TODO] |
+| N-007 | [TODO: E-Mail] | Kommunikation | NET.4.1 TLS-Verschlüsselung | [TODO: falls zutreffend] | [TODO] |
 
 ### 3.8 Industrielle IT (IND) - Optional
 
@@ -164,7 +167,7 @@ Das BSI IT-Grundschutz-Kompendium gliedert Bausteine in folgende Schichten:
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
 | R-001 | Rechenzentrum | Raum | INF.2 Rechenzentrum sowie Serverraum | Kritischer Serverraum | [TODO: Facility] |
-| R-002 | {{ meta.organization.primary_location }} | Gebäude | INF.1 Allgemeines Gebäude | Hauptstandort | [TODO: Facility] |
+| R-002 | [TODO] | Gebäude | INF.1 Allgemeines Gebäude | Hauptstandort | [TODO: Facility] |
 | R-003 | [TODO: Büroraum] | Raum | INF.8 Häuslicher Arbeitsplatz | [TODO: falls Home Office] | [TODO] |
 
 ## 4. Zusammenfassung und Statistik
@@ -207,10 +210,10 @@ Das BSI IT-Grundschutz-Kompendium gliedert Bausteine in folgende Schichten:
 ### 5.1 Validierungsprozess
 
 Die Bausteinzuordnung wird validiert durch:
-1. **Review durch IT-Leitung:** Anna Schmidt - Technische Korrektheit
+1. **Review durch IT-Leitung:** [TODO] - Technische Korrektheit
 2. **Review durch Informationsverbund-Verantwortliche:** Vollständigkeit
 3. **Abgleich mit IT-Grundschutz-Kompendium:** Aktualität der Bausteine
-4. **Freigabe durch ISB:** Thomas Weber
+4. **Freigabe durch ISB:** [TODO]
 
 ### 5.2 Qualitätskriterien
 
@@ -237,21 +240,18 @@ Die Bausteinzuordnung wird aktualisiert bei:
 - Neuer Edition des IT-Grundschutz-Kompendiums
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
-**Verantwortlich:** Thomas Weber (ISB)  
-**Nächster Review:** {{ meta.document.next_review }}
+**Verantwortlich:** [TODO] (ISB)  
+**Nächster Review:** [TODO]
 
 ## 8. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT-Leitung | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 7: Modellierung)
 - BSI IT-Grundschutz-Kompendium (aktuelle Edition)
 - BSI IT-Grundschutz-Kompendium: https://www.bsi.bund.de/grundschutz-kompendium
-
 

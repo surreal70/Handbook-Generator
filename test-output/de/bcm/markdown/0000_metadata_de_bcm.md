@@ -1,45 +1,37 @@
-# Business Continuity Management Handbuch
-
-**Dokument-Metadaten**
-
-- **Erstellt am:** 2026-02-10
-- **Autor:** Andreas Huemmer [andreas.huemmer@adminsend.de]
-- **Version:** 0.0.6
-- **Typ:** BCM-Handbuch
+# BCM Handbuch - Metadaten
 
 **Dokument-ID:** 0000  
-**Owner:** {{ meta.owner }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Template-Version:** 1.0  
+**Datum:** [TODO]  
+**Owner:** [TODO]  
 **Revision:** 0  
----
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** [TODO]  
+**Template-Version:** 0.2  
 
+---
 
 ## Handbuch-Informationen
 
-**Organisation:** {{ meta.organization }}  
-**Geltungsbereich:** {{ meta.scope }}  
-**Gültig ab:** {{ meta.valid_from }}  
-**Nächste Überprüfung:** {{ meta.next_review }}  
+**Handbuch-Titel:** Business Continuity Management Handbuch
+**Handbuch-Short:** bcm
+**Organisation:** AdminSend GmbH  
+**Autor:** Handbook-Generator  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
+**Genehmigt durch:** [TODO]  
 
 ---
 
 ## Dokumentenzweck
 
-[TODO: Add document purpose description]
-
-## Geltungsbereich
-
-{{ meta.scope }}
-
-## Normative Verweise
-
-[TODO: Add normative references]
+Dieses Dokument enthält die Metadaten für das BCM Handbuch.
 
 ## Änderungshistorie
 
 | Version | Datum | Autor | Änderung |
 |---------|-------|-------|----------|
-| {{ meta.version }} | {{ meta.date }} | Andreas Huemmer [andreas.huemmer@adminsend.de] | Initiale Version |
+| 0.1 | [TODO] | Handbook-Generator | Initiale Version |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 

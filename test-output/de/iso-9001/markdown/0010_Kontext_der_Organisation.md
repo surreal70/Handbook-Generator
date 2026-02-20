@@ -1,11 +1,17 @@
 # Verstehen der Organisation und ihres Kontextes
 
-**Dokument-ID:** 0010  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +24,7 @@ Dieses Dokument beschreibt die Analyse des organisatorischen Kontextes gemäß I
 ## Geltungsbereich
 
 Diese Kontextanalyse gilt für:
-- **Organisation:** {{ meta.organization }}
+- **Organisation:** AdminSend GmbH
 - **Standorte:** [TODO: Standorte auflisten]
 - **Geschäftsbereiche:** [TODO: Geschäftsbereiche auflisten]
 
@@ -140,11 +146,10 @@ Diese Kontextanalyse bildet die Grundlage für:
 - **Anhang B:** SWOT-Analyse (Strengths, Weaknesses, Opportunities, Threats)
 - **Anhang C:** Stakeholder-Mapping
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle relevanten externen und internen Themen
 2. Bewerten Sie die Auswirkung jedes Themas auf das QMS
 3. Priorisieren Sie Themen nach Relevanz
 4. Verknüpfen Sie die Kontextanalyse mit der Risiko- und Chancenbewertung
 5. Überprüfen und aktualisieren Sie die Analyse regelmäßig
+

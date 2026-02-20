@@ -1,11 +1,17 @@
 # Richtigkeit
 
-**Dokument-ID:** 0130  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0130
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Richtigkeit in der {{ meta.organization }}. Personenbezogene Daten müssen sachlich richtig und aktuell sein.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Richtigkeit in der AdminSend GmbH. Personenbezogene Daten müssen sachlich richtig und aktuell sein.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. d DSGVO
 
@@ -209,8 +215,6 @@ Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem 
 | Fehlerhafte Eingabe | Keine Validierung | Eingabevalidierung |
 | Verzögerte Berichtigung | Lange Bearbeitungszeit | Prozessoptimierung |
 | Fehlende Benachrichtigung | Empfänger nicht informiert | Benachrichtigungsprozess |
-
----
 
 **Nächste Schritte:**
 1. Implementieren Sie Eingabevalidierung und Plausibilitätsprüfung

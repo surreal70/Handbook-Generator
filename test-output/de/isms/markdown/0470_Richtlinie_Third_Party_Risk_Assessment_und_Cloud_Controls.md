@@ -1,14 +1,17 @@
 # Richtlinie: Third-Party Risk Assessment und Cloud Controls
 
-**Dokument-ID:** 0470  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.19, A.5.20, A.5.21, A.5.22, A.5.23  
-**Owner:** {{ meta.procurement.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0470
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -115,7 +118,7 @@ Diese Richtlinie konkretisiert die `0460_Policy_Lieferanten_und_Cloud_Sicherheit
 - Threat Protection
 - Compliance-Monitoring
 
-**CASB-System:** {{ meta.security.casb_solution }}
+**CASB-System:** {{ meta-handbook.security_casb_solution }}
 
 ### 3.4 Multi-Cloud und Hybrid-Cloud
 
@@ -125,8 +128,8 @@ Diese Richtlinie konkretisiert die `0460_Policy_Lieferanten_und_Cloud_Sicherheit
 - Konsistentes Monitoring
 
 **Cloud-Provider:**
-- Primary: {{ meta.cloud.primary_provider }}
-- Secondary: {{ meta.cloud.secondary_provider }}
+- Primary: {{ meta-handbook.cloud_primary_provider }}
+- Secondary: {{ meta-handbook.cloud_secondary_provider }}
 
 ## 4. Vertragsmanagement
 
@@ -214,7 +217,6 @@ Diese Richtlinie konkretisiert die `0460_Policy_Lieferanten_und_Cloud_Sicherheit
 - **ISO/IEC 27001:2022 Annex A.5.22** - Monitoring, review and change management of supplier services
 - **ISO/IEC 27001:2022 Annex A.5.23** - Information security for use of cloud services
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

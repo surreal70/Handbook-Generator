@@ -1,14 +1,17 @@
 # OS Hardening Baseline: Linux (Generic)
 
-**Dokument-ID:** 0130  
-**Dokumenttyp:** Baseline  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0130
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -80,10 +83,10 @@
 - Parameterliste/Beispielwerte: [TODO]
 - Checkliste: siehe `0410_Anhang_Checklisten_und_Evidence.md`
 
-
 ## 12. Linux-spezifische Bereiche (Beispiele)
 - Paketquellen & Signaturen: [TODO]
 - SSH Hardening: Verweis `0320_APP_SSH_Service_Hardening.md`
 - sudo/privileged access: [TODO]
 - Kernel/sysctl Baseline: [TODO]
 - SELinux/AppArmor Profile: [TODO]
+

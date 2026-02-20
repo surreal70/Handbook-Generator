@@ -1,11 +1,17 @@
 # Führung und Verpflichtung
 
-**Dokument-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -282,8 +288,6 @@ Die oberste Leitung demonstriert Führung und Verpflichtung in Bezug auf Kundenf
 - Änderungen an Führungspraktiken basierend auf Feedback
 - Verbesserte Kommunikations- oder Unterstützungsmechanismen
 - [TODO: Dokumentiere spezifische Verbesserungsmaßnahmen]
-
----
 
 **Nächste Schritte:**
 1. Definiere Zusammensetzung der obersten Leitung

@@ -1,14 +1,17 @@
 # Richtlinie: Change Management mit Sicherheitsfreigaben
 
-**Dokument-ID:** 0370  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0360_Policy_Change_und_Release_Management.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.32  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0370
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -254,7 +257,7 @@ Diese Richtlinie konkretisiert die `0360_Policy_Change_und_Release_Management.md
 - Test-Ergebnisse
 - Post-Implementation-Review
 
-**Aufbewahrung:** {{ meta.retention.change_years }} Jahre
+**Aufbewahrung:** {{ meta-handbook.retention_change_years }} Jahre
 
 ### 7.2 Post-Implementation Review (PIR)
 
@@ -294,7 +297,6 @@ Diese Richtlinie konkretisiert die `0360_Policy_Change_und_Release_Management.md
 - **ISO/IEC 27001:2022 Annex A.8.32** - Change management
 - **ITIL 4** - Change Enablement Practice
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

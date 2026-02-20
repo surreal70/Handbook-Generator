@@ -1,14 +1,17 @@
 # Richtlinie: Records Retention und Sichere Löschung
 
-**Dokument-ID:** 0590  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0580_Policy_Aufbewahrung_und_Loeschung.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.33  
-**Owner:** {{ meta.compliance.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0590
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -48,11 +51,11 @@ Diese Richtlinie konkretisiert die `0580_Policy_Aufbewahrung_und_Loeschung.md` u
 
 | Datentyp | Aufbewahrungsfrist | Begründung |
 |----------|-------------------|------------|
-| E-Mails (geschäftlich) | {{ meta.retention.email_years }} Jahre | Geschäftskorrespondenz |
-| Logs (Security) | {{ meta.retention.log_years }} Jahre | Forensik, Compliance |
+| E-Mails (geschäftlich) | {{ meta-handbook.retention_email_years }} Jahre | Geschäftskorrespondenz |
+| Logs (Security) | {{ meta-handbook.retention_log_years }} Jahre | Forensik, Compliance |
 | Logs (System) | 1 Jahr | Troubleshooting |
 | Backups | Gemäß Backup-Policy | Wiederherstellung |
-| Audit-Trails | {{ meta.retention.audit_years }} Jahre | Compliance |
+| Audit-Trails | {{ meta-handbook.retention_audit_years }} Jahre | Compliance |
 
 ### 2.4 Kundendaten
 
@@ -134,7 +137,7 @@ Diese Richtlinie konkretisiert die `0580_Policy_Aufbewahrung_und_Loeschung.md` u
 - Durchführende Person
 - Bestätigung der Löschung
 
-**Retention:** {{ meta.retention.deletion_log_years }} Jahre
+**Retention:** {{ meta-handbook.retention_deletion_log_years }} Jahre
 
 ## 5. E-Mail-Archivierung
 
@@ -143,7 +146,7 @@ Diese Richtlinie konkretisiert die `0580_Policy_Aufbewahrung_und_Loeschung.md` u
 **Geschäftliche E-Mails:**
 - Automatische Archivierung
 - Unveränderbarkeit (WORM)
-- Aufbewahrung: {{ meta.retention.email_years }} Jahre
+- Aufbewahrung: {{ meta-handbook.retention_email_years }} Jahre
 
 **Private E-Mails:**
 - Keine Archivierung
@@ -151,7 +154,7 @@ Diese Richtlinie konkretisiert die `0580_Policy_Aufbewahrung_und_Loeschung.md` u
 
 ### 5.2 Archivierungssystem
 
-**System:** {{ meta.email.archive_system }}
+**System:** {{ meta-handbook.email_archive_system }}
 
 **Funktionen:**
 - Automatische Archivierung
@@ -232,7 +235,6 @@ Diese Richtlinie konkretisiert die `0580_Policy_Aufbewahrung_und_Loeschung.md` u
 - **HGB §257** - Aufbewahrung von Unterlagen
 - **AO §147** - Ordnungsvorschriften für die Aufbewahrung von Unterlagen
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

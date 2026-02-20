@@ -1,11 +1,17 @@
 # Data Breaches and Notification Obligation
 
-**Document-ID:** 0330  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0330
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document regulates handling of data breaches at {{ meta.organization }} according to Art. 33-34 GDPR. It defines notification obligations, deadlines, and processes for managing data protection incidents.
+This document regulates handling of data breaches at AdminSend GmbH according to Art. 33-34 GDPR. It defines notification obligations, deadlines, and processes for managing data protection incidents.
 
 ## Definition of Data Breach (Art. 4(12))
 
@@ -246,11 +252,10 @@ The controller documents all data breaches, including all facts, effects, and re
 - **Data Protection Impact Assessment (Art. 35):** Risk assessment
 - **Incident Response Plan:** Detailed technical processes
 
----
-
 **Next Steps:**
 1. Implement an incident response process
 2. Define escalation paths and responsibilities
 3. Create templates for notifications and communications
 4. Conduct regular incident response exercises
 5. Establish a breach register
+

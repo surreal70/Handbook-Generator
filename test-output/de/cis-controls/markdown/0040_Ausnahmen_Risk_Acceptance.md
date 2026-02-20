@@ -1,14 +1,17 @@
 # Ausnahmenprozess und Risk Acceptance
 
-**Dokument-ID:** 0040  
-**Dokumenttyp:** Prozess/Template  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -33,3 +36,4 @@ Risikobasierte, zeitlich befristete Ausnahmen von Hardening-Anforderungen ermög
 | Ausnahme-ID | Asset/Scope | Requirement | Begründung | Kompensationsmaßnahmen | Risiko | Owner | Gültig bis | Status |
 |---|---|---|---|---|---|---|---|---|
 | EX-001 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | Offen |
+

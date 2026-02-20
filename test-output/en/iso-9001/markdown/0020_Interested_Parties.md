@@ -1,11 +1,17 @@
 # Understanding the Needs and Expectations of Interested Parties
 
-**Document-ID:** 0020  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +24,7 @@ This document identifies the interested parties relevant to the quality manageme
 ## Scope
 
 This analysis applies to:
-- **Organization:** {{ meta.organization }}
+- **Organization:** AdminSend GmbH
 - **QMS Scope:** [TODO: QMS scope]
 
 ## Identification of Interested Parties
@@ -207,11 +213,10 @@ This analysis forms the basis for:
 - **Appendix B:** Requirements Matrix
 - **Appendix C:** Communication Plan
 
----
-
 **Next Steps:**
 1. Identify all relevant interested parties
 2. Analyze their requirements and expectations
 3. Prioritize the interested parties
 4. Define monitoring and communication methods
 5. Review and update the analysis regularly
+

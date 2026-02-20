@@ -1,11 +1,17 @@
 # Monitoring, Measurement, Analysis and Evaluation
 
-**Document-ID:** 0550  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0550
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,13 +19,13 @@
 
 ## Purpose
 
-This document defines how {{ meta.organization }} monitors, measures, analyzes and evaluates the performance and effectiveness of the QMS.
+This document defines how AdminSend GmbH monitors, measures, analyzes and evaluates the performance and effectiveness of the QMS.
 
 ## General Requirements (9.1.1)
 
 ### Monitoring and Measurement Requirements
 
-**{{ meta.organization }} determines:**
+**AdminSend GmbH determines:**
 - **What** needs to be monitored and measured
 - **Methods** for monitoring, measurement, analysis and evaluation
 - **When** monitoring and measurement are performed
@@ -27,7 +33,7 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 
 ### Performance Evaluation
 
-**{{ meta.organization }} evaluates:**
+**AdminSend GmbH evaluates:**
 - Performance and effectiveness of QMS
 - Conformity of products and services
 - Customer satisfaction
@@ -46,7 +52,7 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 
 ### Monitoring Methods
 
-**{{ meta.organization }} monitors customer perceptions through:**
+**AdminSend GmbH monitors customer perceptions through:**
 - Customer surveys
 - Customer feedback and complaints
 - Customer meetings
@@ -92,7 +98,7 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 
 ### Data Analysis
 
-**{{ meta.organization }} analyzes and evaluates data on:**
+**AdminSend GmbH analyzes and evaluates data on:**
 - Conformity of products and services
 - Degree of customer satisfaction
 - Performance and effectiveness of QMS
@@ -141,7 +147,7 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 
 ### Process Monitoring
 
-**For each process, {{ meta.organization }} monitors:**
+**For each process, AdminSend GmbH monitors:**
 - Process inputs and outputs
 - Process performance (efficiency, effectiveness)
 - Compliance with process criteria
@@ -167,7 +173,7 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 
 ### Product Monitoring
 
-**{{ meta.organization }} monitors:**
+**AdminSend GmbH monitors:**
 - Product conformity with specifications
 - Product quality
 - Product reliability
@@ -229,8 +235,6 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 - Reporting problems
 - Participating in improvements
 
----
-
 **Next Steps:**
 1. Define all parameters to be monitored
 2. Establish measurement methods and frequencies
@@ -238,3 +242,4 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 4. Conduct regular analyses
 5. Report results to relevant parties
 6. Identify and prioritize improvements
+

@@ -1,14 +1,17 @@
 # Richtlinie: Ausnahmenprozess
 
-**Dokument-ID:** 0650  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0640_Policy_Ausnahmen_und_Risk_Waivers.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.1  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0650
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -60,7 +63,7 @@ Diese Richtlinie konkretisiert die `0640_Policy_Ausnahmen_und_Risk_Waivers.md` u
 
 ### 3.1 Antragstellung
 
-**Antrag über:** {{ meta.itsm.portal }} (Ticketsystem)
+**Antrag über:** {{ meta-handbook.itsm_portal }} (Ticketsystem)
 
 **Pflichtangaben:**
 - Betroffene Policy/Richtlinie
@@ -136,7 +139,7 @@ Diese Richtlinie konkretisiert die `0640_Policy_Ausnahmen_und_Risk_Waivers.md` u
 - Ablaufdatum
 - Review-Datum
 
-**Speicherort:** {{ meta.compliance.exception_register }}
+**Speicherort:** {{ meta-handbook.compliance_exception_register }}
 
 ## 4. Monitoring und Review
 
@@ -298,7 +301,6 @@ Diese Richtlinie konkretisiert die `0640_Policy_Ausnahmen_und_Risk_Waivers.md` u
 - **ISO/IEC 27001:2022 Annex A.5.1** - Policies for information security
 - **NIST SP 800-53** - Security and Privacy Controls (Tailoring)
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

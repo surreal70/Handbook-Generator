@@ -1,11 +1,17 @@
 # Quality Objectives and Planning to Achieve Them
 
-**Document-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0210
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document establishes quality objectives for {{ meta.organization }} and defines planning to achieve them, in accordance with ISO 9001:2015 Clause 6.2.
+This document establishes quality objectives for AdminSend GmbH and defines planning to achieve them, in accordance with ISO 9001:2015 Clause 6.2.
 
 ## Quality Objectives Framework
 
@@ -287,8 +293,6 @@ Quality objectives link to:
 - **Related documents:** Quality policy, strategic plan, performance reports
 - **Version control:** Maintained according to Clause 7.5
 - **Retention:** [TODO: Define retention period]
-
----
 
 **Next Steps:**
 1. Establish quality objectives at organizational and functional levels

@@ -1,14 +1,17 @@
 # Management Review – Template
 
-**Document ID:** 0620  
-**Document Type:** Evidence/Template  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0620
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -21,9 +24,9 @@
 **Duration:** [TODO]
 
 **Participants:**
-- Executive Management: Max Mustermann
-- CISO: Thomas Weber
-- IT Management: Anna Schmidt
+- Executive Management: [TODO]
+- CISO: [TODO]
+- IT Management: [TODO]
 - [TODO: Additional participants]
 
 **Information Domain(s):** [TODO: See Document 0040]
@@ -94,7 +97,7 @@
 **Justification:** [TODO]  
 **New Security Objectives:** [TODO]
 
-**Responsible:** Max Mustermann
+**Responsible:** [TODO]
 
 ### 3.2 Resources and Investments
 
@@ -102,7 +105,7 @@
 **Personnel Resources:** [TODO: Additional positions?]  
 **External Support:** [TODO]
 
-**Responsible:** Max Mustermann
+**Responsible:** [TODO]
 
 ### 3.3 Risk Acceptances
 
@@ -110,7 +113,7 @@
 **Justification:** [TODO]  
 **Validity Period:** [TODO]
 
-**Responsible:** Max Mustermann
+**Responsible:** [TODO]
 
 ### 3.4 Improvement Actions
 
@@ -135,13 +138,10 @@
 
 | Role | Name | Date | Signature |
 |---|---|---|---|
-| Executive Management | Max Mustermann | [TODO] | [TODO] |
-| CISO | Thomas Weber | [TODO] | [TODO] |
-
----
+| Executive Management | [TODO] | [TODO] | [TODO] |
+| CISO | [TODO] | [TODO] | [TODO] |
 
 **References:**
 - BSI Standard 200-1: ISMS (Management Review)
 - All ISMS Documents (0010-0630)
-
 

@@ -1,11 +1,17 @@
 # Organizational Roles, Responsibilities, and Authorities
 
-**Document-ID:** 0120  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0120
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -443,8 +449,6 @@ Updates to roles are:
 - **Related documents:** Job descriptions, organizational charts, process documentation
 - **Version control:** Maintained according to Clause 7.5
 - **Distribution:** Available to all personnel
-
----
 
 **Next Steps:**
 1. Define all QMS-relevant roles in organization

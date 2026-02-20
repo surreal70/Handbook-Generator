@@ -1,11 +1,17 @@
 # SFR Dependencies
 
-**Document-ID:** 0430  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0430
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -315,8 +321,6 @@ the dependency on FDP_ACC.1 (Subset access control).
 - ISO/IEC 15408-2:2022 - Security functional requirements (Annex B: Dependencies)
 - [TODO: Other relevant documents]
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders
 2. Create complete dependency table
@@ -324,3 +328,4 @@ the dependency on FDP_ACC.1 (Subset access control).
 4. Create dependency graph
 5. Conduct peer review
 6. Update when SFRs change
+

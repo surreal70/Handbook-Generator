@@ -1,11 +1,17 @@
 # Anhang: Begriffe und Abkürzungen
 
-**Dokument-ID:** 0770  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0770
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieser Anhang definiert wichtige Begriffe und Abkürzungen, die im Qualitätsmanagementsystem von {{ meta.organization }} verwendet werden.
+Dieser Anhang definiert wichtige Begriffe und Abkürzungen, die im Qualitätsmanagementsystem von AdminSend GmbH verwendet werden.
 
 ## Begriffsdefinitionen
 
@@ -306,6 +312,5 @@ Leitfaden zur Auditierung von Managementsystemen
 **ISO 31000**
 Risikomanagement - Leitlinien
 
----
-
 **Hinweis:** Begriffe und Definitionen aus ISO 9000:2015 sind maßgeblich. Dieser Anhang dient als Referenz für häufig verwendete Begriffe im QMS.
+

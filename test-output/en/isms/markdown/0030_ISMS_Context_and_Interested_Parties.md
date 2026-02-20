@@ -1,31 +1,44 @@
 # Context of the Organization and Interested Parties
 
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0030  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clauses 4.1, 4.2  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Context of the Organization
 
 ### 1.1 Internal Issues
 
 **Organizational Structure:**
-- Organizational Form: {{ meta.organization.legal_form }}
-- Number of Employees: {{ meta.organization.employee_count }}
+- Organizational Form: [TODO]
+- Number of Employees: [TODO]
 - Organizational Structure: [TODO: Hierarchy, departments]
-- Locations: {{ netbox.site.name }} and others
+- Locations: [[ netbox.site.name ]] and others
 
 **Business Processes:**
-- Core Business: {{ meta.organization.industry }}
+- Core Business: [TODO]
 - Critical Business Processes: [TODO: List of critical processes]
 - IT Dependency: High / Medium / Low
 
@@ -52,7 +65,7 @@
 ### 1.2 External Issues
 
 **Market and Competition:**
-- Industry: {{ meta.organization.industry }}
+- Industry: [TODO]
 - Market Position: [TODO: Market leader, challenger, niche]
 - Competitive Pressure: High / Medium / Low
 - Customer Expectations: [TODO: Security requirements]
@@ -229,11 +242,10 @@ Changes to context or stakeholder requirements are documented and assessed:
 - **ISO/IEC 27001:2022** - Clause 4.2: Understanding the needs and expectations of interested parties
 - **GDPR (EU 2016/679)** - General Data Protection Regulation
 
----
-
 **Approved by:**  
-Thomas Weber, CISO  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]
+

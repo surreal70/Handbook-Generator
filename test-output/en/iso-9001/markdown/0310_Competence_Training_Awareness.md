@@ -1,11 +1,17 @@
 # Competence, Training, and Awareness
 
-**Document-ID:** 0310  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document defines how {{ meta.organization }} ensures competence of personnel and promotes awareness of the quality management system in accordance with ISO 9001:2015 Clauses 7.2 and 7.3.
+This document defines how AdminSend GmbH ensures competence of personnel and promotes awareness of the quality management system in accordance with ISO 9001:2015 Clauses 7.2 and 7.3.
 
 ## Competence Management (7.2)
 
@@ -327,8 +333,6 @@ This document defines how {{ meta.organization }} ensures competence of personne
 - Benchmarking with best practices
 - New training methods and technologies
 - Updated training content
-
----
 
 **Next Steps:**
 1. Define competence requirements for all roles

@@ -1,11 +1,17 @@
 # Breach Notification Template (Aufsichtsbehörde)
 
-**Dokument-ID:** 0610  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0610
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -17,11 +23,9 @@
 **Datum:** [TODO: YYYY-MM-DD]  
 **Breach-ID:** [TODO: BREACH-YYYY-NNN]  
 
----
-
 ### 1. Verantwortlicher
 
-**Organisation:** {{ meta.organization }}  
+**Organisation:** AdminSend GmbH  
 **Adresse:** [TODO: Vollständige Adresse]  
 **Kontaktperson:** [TODO: Name, Funktion]  
 **Telefon:** [TODO: Telefonnummer]  
@@ -32,8 +36,6 @@
 **Name:** [TODO: Name des Datenschutzbeauftragten]  
 **Telefon:** [TODO: Telefonnummer]  
 **E-Mail:** [TODO: E-Mail-Adresse]  
-
----
 
 ## A. Art der Verletzung (Art. 33 Abs. 3 lit. a)
 
@@ -103,8 +105,6 @@ Falls Ja, welche: [TODO: z.B. Kinder, Patienten, Behinderte]
 
 **Ungefähre Anzahl:** [TODO: z.B. 5.000 Datensätze]
 
----
-
 ## B. Kontaktstelle (Art. 33 Abs. 3 lit. b)
 
 **Name und Kontaktdaten des Datenschutzbeauftragten:**
@@ -119,8 +119,6 @@ Verfügbarkeit: [TODO: z.B. Mo-Fr 9-17 Uhr, Notfall 24/7]
 Name: [TODO: Name, Funktion]  
 Telefon: [TODO: Telefonnummer]  
 E-Mail: [TODO: E-Mail-Adresse]  
-
----
 
 ## C. Wahrscheinliche Folgen (Art. 33 Abs. 3 lit. c)
 
@@ -146,8 +144,6 @@ E-Mail: [TODO: E-Mail-Adresse]
 
 **Begründung der Risikobewertung:**  
 [TODO: Erläutere, warum das Risiko so eingeschätzt wurde, unter Berücksichtigung von Art der Daten, Anzahl Betroffener, Schutzmaßnahmen, etc.]
-
----
 
 ## D. Ergriffene Maßnahmen (Art. 33 Abs. 3 lit. d)
 
@@ -189,8 +185,6 @@ E-Mail: [TODO: E-Mail-Adresse]
    - Geplanter Zeitpunkt: [TODO: YYYY-MM-DD]
    - Verantwortlich: [TODO: Name/Rolle]
 
----
-
 ## E. Benachrichtigung betroffener Personen (Art. 34)
 
 **Wurden betroffene Personen benachrichtigt?**  
@@ -210,8 +204,6 @@ E-Mail: [TODO: E-Mail-Adresse]
 **Erläuterung:**  
 [TODO: Begründe, warum keine Benachrichtigung erfolgt oder warum die gewählte Methode angemessen ist]
 
----
-
 ## F. Grenzüberschreitende Verarbeitung
 
 **Findet grenzüberschreitende Verarbeitung statt?**  
@@ -221,8 +213,6 @@ E-Mail: [TODO: E-Mail-Adresse]
 - Hauptniederlassung: [TODO: Land]
 - Weitere betroffene Mitgliedstaaten: [TODO: Länder]
 - Federführende Aufsichtsbehörde: [TODO: Name]
-
----
 
 ## G. Auftragsverarbeiter betroffen
 
@@ -234,8 +224,6 @@ E-Mail: [TODO: E-Mail-Adresse]
 | Auftragsverarbeiter | Rolle | Benachrichtigt | Zeitpunkt |
 |---------------------|-------|----------------|-----------|
 | [TODO: Name] | [TODO: z.B. Cloud-Provider] | [ ] Ja [ ] Nein | [TODO: YYYY-MM-DD] |
-
----
 
 ## H. Zusätzliche Informationen
 
@@ -264,8 +252,6 @@ Falls Ja:
 - Aktenzeichen: [TODO]
 - Datum: [TODO: YYYY-MM-DD]
 
----
-
 ## I. Anlagen
 
 [ ] Timeline der Ereignisse  
@@ -273,8 +259,6 @@ Falls Ja:
 [ ] Forensik-Analyse  
 [ ] Benachrichtigung an betroffene Personen (Muster)  
 [ ] Sonstige: [TODO]
-
----
 
 ## J. Erklärung
 
@@ -287,8 +271,6 @@ Hiermit bestätige ich, dass die vorstehenden Angaben nach bestem Wissen und Gew
 **Funktion:** [TODO: Funktion]
 
 **Unterschrift:** _______________________
-
----
 
 ## K. Hinweise zur Übermittlung
 
@@ -306,8 +288,6 @@ Begründung der Verzögerung beifügen (Art. 33 Abs. 1)
 **Nachreichung von Informationen:**  
 Falls nicht alle Informationen sofort verfügbar sind, können diese schrittweise nachgereicht werden (Art. 33 Abs. 4)
 
----
-
 **Interne Vermerke:**
 
 Erstellt von: [TODO: Name]  
@@ -315,3 +295,4 @@ Geprüft von: [TODO: Datenschutzbeauftragter]
 Freigegeben von: [TODO: Geschäftsführung]  
 Übermittelt am: [TODO: YYYY-MM-DD HH:MM]  
 Aktenzeichen Behörde: [TODO: Nach Erhalt eintragen]
+

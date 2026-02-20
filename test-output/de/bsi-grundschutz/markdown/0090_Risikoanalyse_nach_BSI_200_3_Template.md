@@ -1,14 +1,17 @@
 # Risikoanalyse (BSI Standard 200-3) – Template
 
-**Dokument-ID:** 0090  
-**Dokumenttyp:** Methodik-Artefakt  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standard 200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0090
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 Die Risikoanalyse nach BSI Standard 200-3 identifiziert und bewertet Risiken für **AdminSend GmbH**, die nicht durch IT-Grundschutz-Bausteine abgedeckt sind.
 
-**Verantwortlich:** Thomas Weber (ISB)
+**Verantwortlich:** [TODO] (ISB)
 
 **Auslöser für Risikoanalyse:**
 - Hoher oder sehr hoher Schutzbedarf (siehe Dokument 0060)
@@ -119,9 +122,9 @@ Die Risikoanalyse nach BSI Standard 200-3 identifiziert und bewertet Risiken fü
 
 | Risiko-ID | Objekt | Szenario | Bedrohung | Schwachstelle | Bestehende Maßnahmen | Eintritts­wahrscheinlichkeit | Auswirkung | Risiko (vorher) | Behandlung | Zusätzliche Maßnahme | Owner | Termin | Risiko (nachher) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R-001 | [TODO] | S-001 | T-002 | V-001, V-002 | Antivirus, Backup | 4 | 5 | Sehr hoch | Mindern | Mikrosegmentierung, MFA | Anna Schmidt | [TODO] | Mittel |
-| R-002 | [TODO] | S-002 | T-003 | V-002 | Logging, IAM | 3 | 4 | Hoch | Mindern | PAM, DLP | Anna Schmidt | [TODO] | Niedrig |
-| R-003 | [TODO] | S-003 | T-004 | [TODO] | Firewall | 3 | 3 | Mittel | Mindern | DDoS-Protection | Anna Schmidt | [TODO] | Niedrig |
+| R-001 | [TODO] | S-001 | T-002 | V-001, V-002 | Antivirus, Backup | 4 | 5 | Sehr hoch | Mindern | Mikrosegmentierung, MFA | [TODO] | [TODO] | Mittel |
+| R-002 | [TODO] | S-002 | T-003 | V-002 | Logging, IAM | 3 | 4 | Hoch | Mindern | PAM, DLP | [TODO] | [TODO] | Niedrig |
+| R-003 | [TODO] | S-003 | T-004 | [TODO] | Firewall | 3 | 3 | Mittel | Mindern | DDoS-Protection | [TODO] | [TODO] | Niedrig |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Risikobehandlungsoptionen:**
@@ -157,16 +160,16 @@ Die Risikoanalyse nach BSI Standard 200-3 identifiziert und bewertet Risiken fü
 
 | Risiko-ID | Risiko | Risikoeigner | Akzeptanz | Datum |
 |---|---|---|---|---|
-| R-001 | [TODO] | Max Mustermann | Akzeptiert nach Maßnahmenumsetzung | [TODO] |
-| R-002 | [TODO] | Thomas Weber | Akzeptiert nach Maßnahmenumsetzung | [TODO] |
+| R-001 | [TODO] | [TODO] | Akzeptiert nach Maßnahmenumsetzung | [TODO] |
+| R-002 | [TODO] | [TODO] | Akzeptiert nach Maßnahmenumsetzung | [TODO] |
 
 ### 7.2 Management-Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Geschäftsführung | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
+| ISB | [TODO] | [TODO] | Draft |
+| IT-Leitung | [TODO] | [TODO] | Draft |
+| Geschäftsführung | [TODO] | [TODO] | Draft |
 
 ## 8. Aktualisierung und Pflege
 
@@ -176,13 +179,10 @@ Die Risikoanalyse wird aktualisiert bei:
 - Änderungen am Informationsverbund
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
-**Verantwortlich:** Thomas Weber (ISB)  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
+**Verantwortlich:** [TODO] (ISB)  
+**Nächster Review:** [TODO]
 
 **Referenzen:**
 - BSI Standard 200-3: Risikoanalyse auf der Basis von IT-Grundschutz
 - BSI IT-Grundschutz-Kompendium
-
 

@@ -1,14 +1,17 @@
 # Sicherheitskonzept und Maßnahmenplan
 
-**Dokument-ID:** 0100  
-**Dokumenttyp:** Plan/Steuerungsdokument  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0100
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -50,8 +53,8 @@
 
 | Maßnahme-ID | Quelle | Beschreibung | Priorität | Owner | Aufwand (PT) | Budget | Zieltermin | Abhängigkeiten | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| M-001 | Basis-Check (GAP-001) | [TODO: Kritische Maßnahme 1] | P1 - Kritisch | Thomas Weber | [TODO] | [TODO] | [TODO] | - | Offen |
-| M-002 | Basis-Check (QW-001) | [TODO: Quick Win 1] | P2 - Hoch | Anna Schmidt | [TODO] | [TODO] | [TODO] | - | Offen |
+| M-001 | Basis-Check (GAP-001) | [TODO: Kritische Maßnahme 1] | P1 - Kritisch | [TODO] | [TODO] | [TODO] | [TODO] | - | Offen |
+| M-002 | Basis-Check (QW-001) | [TODO: Quick Win 1] | P2 - Hoch | [TODO] | [TODO] | [TODO] | [TODO] | - | Offen |
 | M-003 | Basis-Check | [TODO: Maßnahme 3] | P3 - Mittel | [TODO] | [TODO] | [TODO] | [TODO] | M-001 | Offen |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
@@ -61,17 +64,17 @@
 
 | Maßnahme-ID | Quelle | Beschreibung | Priorität | Owner | Aufwand (PT) | Budget | Zieltermin | Abhängigkeiten | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| M-101 | Risikoanalyse (R-001) | [TODO: Risikominderung 1] | P1 - Kritisch | Anna Schmidt | [TODO] | [TODO] | [TODO] | - | Offen |
-| M-102 | Risikoanalyse (R-002) | [TODO: Risikominderung 2] | P2 - Hoch | Anna Schmidt | [TODO] | [TODO] | [TODO] | - | Offen |
+| M-101 | Risikoanalyse (R-001) | [TODO: Risikominderung 1] | P1 - Kritisch | [TODO] | [TODO] | [TODO] | [TODO] | - | Offen |
+| M-102 | Risikoanalyse (R-002) | [TODO: Risikominderung 2] | P2 - Hoch | [TODO] | [TODO] | [TODO] | [TODO] | - | Offen |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ### 2.3 Strategische Maßnahmen
 
 | Maßnahme-ID | Beschreibung | Priorität | Owner | Aufwand (PT) | Budget | Zieltermin | Status |
 |---|---|---|---|---|---|---|---|
-| M-201 | SIEM-Implementierung | P1 - Kritisch | Anna Schmidt | [TODO] | [TODO] | [TODO] | Offen |
-| M-202 | Zero Trust Architecture | P2 - Hoch | Anna Schmidt | [TODO] | [TODO] | [TODO] | Offen |
-| M-203 | Security Awareness Programm | P2 - Hoch | Thomas Weber | [TODO] | [TODO] | [TODO] | Offen |
+| M-201 | SIEM-Implementierung | P1 - Kritisch | [TODO] | [TODO] | [TODO] | [TODO] | Offen |
+| M-202 | Zero Trust Architecture | P2 - Hoch | [TODO] | [TODO] | [TODO] | [TODO] | Offen |
+| M-203 | Security Awareness Programm | P2 - Hoch | [TODO] | [TODO] | [TODO] | [TODO] | Offen |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 3. Maßnahmen-Priorisierung
@@ -123,7 +126,7 @@
 
 ## 4. Roadmap
 
-### 4.1 Quartal 1 (Q1 {{ meta.document.year }})
+### 4.1 Quartal 1 (Q1 [TODO])
 
 **Fokus:** Kritische Sicherheitslücken schließen
 
@@ -132,7 +135,7 @@
 | M-001 | [TODO] | [TODO] | Geplant |
 | M-101 | [TODO] | [TODO] | Geplant |
 
-### 4.2 Quartal 2 (Q2 {{ meta.document.year }})
+### 4.2 Quartal 2 (Q2 [TODO])
 
 **Fokus:** Quick Wins und Basis-Sicherheit
 
@@ -141,7 +144,7 @@
 | M-002 | [TODO] | [TODO] | Geplant |
 | M-201 | [TODO] | [TODO] | Geplant |
 
-### 4.3 Quartal 3 (Q3 {{ meta.document.year }})
+### 4.3 Quartal 3 (Q3 [TODO])
 
 **Fokus:** Strategische Maßnahmen
 
@@ -150,7 +153,7 @@
 | M-202 | [TODO] | [TODO] | Geplant |
 | M-203 | [TODO] | [TODO] | Geplant |
 
-### 4.4 Quartal 4 (Q4 {{ meta.document.year }})
+### 4.4 Quartal 4 (Q4 [TODO])
 
 **Fokus:** Konsolidierung und Optimierung
 
@@ -202,8 +205,8 @@
 
 | Risiko | Wahrscheinlichkeit | Auswirkung | Mitigation | Owner |
 |---|---|---|---|---|
-| Ressourcenmangel | Hoch | Verzögerung | Externe Unterstützung | Thomas Weber |
-| Budget-Kürzung | Mittel | Priorisierung | Fokus auf P1-Maßnahmen | Max Mustermann |
+| Ressourcenmangel | Hoch | Verzögerung | Externe Unterstützung | [TODO] |
+| Budget-Kürzung | Mittel | Priorisierung | Fokus auf P1-Maßnahmen | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 7. Erfolgsmessung
@@ -241,15 +244,12 @@
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Geschäftsführung | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT-Leitung | [TODO] | [TODO] | Draft |
+| Geschäftsführung | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik
 - Dokument 0080: Basis-Sicherheitscheck
 - Dokument 0090: Risikoanalyse
-
 

@@ -1,15 +1,28 @@
 # Datenmanagement und Datenschutz
 
+**Dokument-ID:** [FRAMEWORK]-0220
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt die Prozesse und Richtlinien für das Datenmanagement und den Datenschutz im IT-Service. Es definiert Datenklassifizierung, Datenschutzanforderungen gemäß DSGVO, Datenaufbewahrung und -löschung sowie Data-Governance-Strukturen.
 
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
-
----
 
 ## Datenklassifizierung
 
@@ -56,11 +69,9 @@ Dieses Dokument beschreibt die Prozesse und Richtlinien für das Datenmanagement
 
 | Datenbestand | Klassifizierung | Speicherort | Verantwortlich | Aufbewahrung |
 |---|---|---|---|---|
-| [TODO] | [TODO] | {{ netbox.storage.location }} | [TODO] | [TODO] |
-| [TODO] | [TODO] | {{ netbox.storage.location }} | [TODO] | [TODO] |
-| [TODO] | [TODO] | {{ netbox.storage.location }} | [TODO] | [TODO] |
-
----
+| [TODO] | [TODO] | [[ netbox.storage.location ]] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [[ netbox.storage.location ]] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [[ netbox.storage.location ]] | [TODO] | [TODO] |
 
 ## Datenschutz-Anforderungen (DSGVO)
 
@@ -132,12 +143,12 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 | Recht | Beschreibung | Reaktionszeit | Verantwortlich |
 |---|---|---|---|
-| **Auskunftsrecht** | Information über gespeicherte Daten | 1 Monat | Thomas Weber |
-| **Berichtigungsrecht** | Korrektur unrichtiger Daten | Unverzüglich | Thomas Weber |
-| **Löschungsrecht** | Löschung personenbezogener Daten | Unverzüglich | Thomas Weber |
-| **Einschränkung** | Einschränkung der Verarbeitung | Unverzüglich | Thomas Weber |
-| **Datenübertragbarkeit** | Übertragung an anderen Verantwortlichen | 1 Monat | Thomas Weber |
-| **Widerspruchsrecht** | Widerspruch gegen Verarbeitung | Unverzüglich | Thomas Weber |
+| **Auskunftsrecht** | Information über gespeicherte Daten | 1 Monat | [TODO] |
+| **Berichtigungsrecht** | Korrektur unrichtiger Daten | Unverzüglich | [TODO] |
+| **Löschungsrecht** | Löschung personenbezogener Daten | Unverzüglich | [TODO] |
+| **Einschränkung** | Einschränkung der Verarbeitung | Unverzüglich | [TODO] |
+| **Datenübertragbarkeit** | Übertragung an anderen Verantwortlichen | 1 Monat | [TODO] |
+| **Widerspruchsrecht** | Widerspruch gegen Verarbeitung | Unverzüglich | [TODO] |
 
 ### Datenschutz-Folgenabschätzung (DSFA)
 
@@ -166,8 +177,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
   - Zusammenarbeit mit Aufsichtsbehörden
   - Anlaufstelle für Betroffene
 
----
-
 ## Datenaufbewahrung und -löschung
 
 ### Aufbewahrungsfristen
@@ -176,12 +185,12 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 | Datenart | Aufbewahrungsfrist | Rechtsgrundlage | Verantwortlich |
 |---|---|---|---|
-| Geschäftsbriefe | 6 Jahre | HGB § 257 | Maria Müller |
-| Buchungsbelege | 10 Jahre | HGB § 257, AO § 147 | Maria Müller |
-| Jahresabschlüsse | 10 Jahre | HGB § 257 | Maria Müller |
-| Lohnunterlagen | 6 Jahre | AO § 147 | Maria Müller |
-| Steuerunterlagen | 10 Jahre | AO § 147 | Maria Müller |
-| Personalakten | 3-10 Jahre | Verschiedene | Peter Fischer |
+| Geschäftsbriefe | 6 Jahre | HGB § 257 | [TODO] |
+| Buchungsbelege | 10 Jahre | HGB § 257, AO § 147 | [TODO] |
+| Jahresabschlüsse | 10 Jahre | HGB § 257 | [TODO] |
+| Lohnunterlagen | 6 Jahre | AO § 147 | [TODO] |
+| Steuerunterlagen | 10 Jahre | AO § 147 | [TODO] |
+| Personalakten | 3-10 Jahre | Verschiedene | {{ meta-organisation-roles.role_COO }} |
 
 #### Betriebliche Aufbewahrungsfristen
 
@@ -189,8 +198,8 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 |---|---|---|---|
 | Verträge | Vertragslaufzeit + 3 Jahre | Gewährleistung | [TODO] |
 | Projektdokumentation | 5 Jahre | Nachvollziehbarkeit | [TODO] |
-| Audit-Logs | 1 Jahr | Sicherheit | Thomas Weber |
-| Backup-Daten | 30-90 Tage | Wiederherstellung | Andreas Huemmer |
+| Audit-Logs | 1 Jahr | Sicherheit | [TODO] |
+| Backup-Daten | 30-90 Tage | Wiederherstellung | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | E-Mails | 1-3 Jahre | Geschäftskommunikation | [TODO] |
 
 ### Löschkonzept
@@ -212,18 +221,18 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 | Datenträger | Methode | Standard | Verantwortlich |
 |---|---|---|---|
-| Festplatten | Secure Erase / Degaussing | NIST SP 800-88 | Andreas Huemmer |
-| SSDs | Crypto Erase / Zerstörung | NIST SP 800-88 | Andreas Huemmer |
-| Backup-Medien | Überschreiben / Zerstörung | NIST SP 800-88 | Andreas Huemmer |
-| Cloud-Daten | API-basierte Löschung | Provider-Standard | Andreas Huemmer |
-| Datenbanken | SQL DELETE / TRUNCATE | Datenbankstandard | Andreas Huemmer |
-| Papier | Aktenvernichtung (P-4) | DIN 66399 | Peter Fischer |
+| Festplatten | Secure Erase / Degaussing | NIST SP 800-88 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| SSDs | Crypto Erase / Zerstörung | NIST SP 800-88 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Backup-Medien | Überschreiben / Zerstörung | NIST SP 800-88 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Cloud-Daten | API-basierte Löschung | Provider-Standard | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Datenbanken | SQL DELETE / TRUNCATE | Datenbankstandard | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Papier | Aktenvernichtung (P-4) | DIN 66399 | {{ meta-organisation-roles.role_COO }} |
 
 #### Löschnachweis
 - Dokumentation aller Löschvorgänge
 - Protokollierung von Datum, Datenart, Methode
 - Aufbewahrung der Löschnachweise für 3 Jahre
-- Verantwortlich: Thomas Weber
+- Verantwortlich: [TODO]
 
 ### Archivierung
 
@@ -241,15 +250,13 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 |---|---|---|---|---|
 | [TODO: Archivsystem] | [TODO] | [TODO] Jahre | [TODO] | [TODO] |
 
----
-
 ## Data-Governance
 
 ### Governance-Struktur
 
 #### Data Governance Board
-- **Vorsitz:** Anna Schmidt
-- **Mitglieder:** Thomas Weber, Maria Müller, Fachbereichsleiter
+- **Vorsitz:** [TODO]
+- **Mitglieder:** [TODO], [TODO], Fachbereichsleiter
 - **Frequenz:** Quartalsweise
 - **Aufgaben:**
   - Strategische Daten-Governance
@@ -314,8 +321,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 4. **Prävention:** Maßnahmen zur Vermeidung zukünftiger Probleme
 5. **Monitoring:** Kontinuierliche Überwachung
 
----
-
 ## Datensicherheit
 
 ### Verschlüsselung
@@ -324,20 +329,20 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 | Datenart | Verschlüsselung | Algorithmus | Schlüssellänge | Verantwortlich |
 |---|---|---|---|---|
-| Streng vertraulich | Pflicht | AES | 256 Bit | Thomas Weber |
-| Vertraulich | Pflicht | AES | 256 Bit | Thomas Weber |
-| Intern | Empfohlen | AES | 128/256 Bit | Andreas Huemmer |
+| Streng vertraulich | Pflicht | AES | 256 Bit | [TODO] |
+| Vertraulich | Pflicht | AES | 256 Bit | [TODO] |
+| Intern | Empfohlen | AES | 128/256 Bit | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | Öffentlich | Nicht erforderlich | - | - | - |
 
 #### Verschlüsselung in Übertragung (Data in Transit)
 
 | Verbindungstyp | Protokoll | Mindestversion | Verantwortlich |
 |---|---|---|---|
-| Web-Traffic | HTTPS/TLS | TLS 1.2 | Andreas Huemmer |
-| E-Mail | TLS/S/MIME | TLS 1.2 | Andreas Huemmer |
-| Dateiübertragung | SFTP/FTPS | TLS 1.2 | Andreas Huemmer |
-| VPN | IPsec/OpenVPN | - | Andreas Huemmer |
-| Datenbank | TLS | TLS 1.2 | Andreas Huemmer |
+| Web-Traffic | HTTPS/TLS | TLS 1.2 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| E-Mail | TLS/S/MIME | TLS 1.2 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Dateiübertragung | SFTP/FTPS | TLS 1.2 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| VPN | IPsec/OpenVPN | - | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Datenbank | TLS | TLS 1.2 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 ### Zugriffskontrolle
 
@@ -362,11 +367,11 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 | Ereignistyp | Logging | Aufbewahrung | Verantwortlich |
 |---|---|---|---|
-| Datenzugriff (vertraulich) | Pflicht | 1 Jahr | Thomas Weber |
-| Datenänderung | Pflicht | 1 Jahr | Thomas Weber |
-| Datenlöschung | Pflicht | 3 Jahre | Thomas Weber |
-| Zugriffsverweigerung | Pflicht | 1 Jahr | Thomas Weber |
-| Admin-Aktivitäten | Pflicht | 1 Jahr | Thomas Weber |
+| Datenzugriff (vertraulich) | Pflicht | 1 Jahr | [TODO] |
+| Datenänderung | Pflicht | 1 Jahr | [TODO] |
+| Datenlöschung | Pflicht | 3 Jahre | [TODO] |
+| Zugriffsverweigerung | Pflicht | 1 Jahr | [TODO] |
+| Admin-Aktivitäten | Pflicht | 1 Jahr | [TODO] |
 
 #### Log-Inhalte
 - Zeitstempel
@@ -375,8 +380,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 - Betroffene Daten/Objekte
 - Quell-IP-Adresse
 - Ergebnis (Erfolg/Fehler)
-
----
 
 ## Datenschutzvorfälle
 
@@ -412,8 +415,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 8. **Dokumentation:** Erfassung im Incident-Register
 9. **Lessons Learned:** Prozessverbesserungen
 
----
-
 ## Prozesse und Verantwortlichkeiten
 
 ### RACI-Matrix
@@ -431,8 +432,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 > **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
@@ -448,8 +447,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 - Auftragsverarbeitungsverträge
 - Löschnachweise
 - Audit-Logs
-
----
 
 ## Anhang
 
@@ -472,8 +469,7 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 - ISO/IEC 27701:2019
 - NIST SP 800-88 Rev. 1
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** thomas.weber@adminsend.de
+**Kontakt:** {{ meta-organisation-roles.role_CISO_email }}
+

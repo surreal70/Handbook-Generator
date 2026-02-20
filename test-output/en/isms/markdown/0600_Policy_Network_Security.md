@@ -1,18 +1,31 @@
 # Policy: Network Security
 
+**Document-ID:** [FRAMEWORK]-0600
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0600  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.20-A.8.23 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Networks:** All internal and external networks, LAN, WLAN, WAN, VPN
 - **Systems:** Firewalls, routers, switches, load balancers, IDS/IPS
 - **Connections:** All network connections (internal, external, partner, cloud)
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -78,10 +91,10 @@ Network activities are monitored and logged. Logs are centrally collected and an
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Network Security Manager:** {{ meta.network.security_manager }}
-- **Network Administrator:** {{ meta.network.admin }}
-- **SOC Manager:** {{ meta.soc.manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **Network Security Manager:** {{ meta-handbook.network_security_manager }}
+- **Network Administrator:** {{ meta-handbook.network_admin }}
+- **SOC Manager:** {{ meta-handbook.soc_manager }}
 - **Implementation Responsible:** IT Operations, Network Team
 - **Control/Audit Function:** ISMS, Internal Audit, SOC
 
@@ -163,10 +176,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **NIST SP 800-97** - Establishing Wireless Robust Security Networks
 - **BSI IT-Grundschutz** - NET.1.1, NET.1.2, NET.3.2
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

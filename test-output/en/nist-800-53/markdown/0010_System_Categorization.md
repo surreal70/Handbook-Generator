@@ -1,19 +1,23 @@
 # System Categorization
 
-**Document-ID:** NIST-0010  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
 ## 1. Purpose
 
-This document describes the categorization of the information system {{ meta.nist.system_name }} according to FIPS 199 and NIST SP 800-60.
+This document describes the categorization of the information system {{ meta-handbook.system_name }} according to FIPS 199 and NIST SP 800-60.
 
 ### 1.1 Objectives
 
@@ -33,11 +37,11 @@ This document describes the categorization of the information system {{ meta.nis
 
 ### 2.1 System Identification
 
-**System Name:** {{ meta.nist.system_name }}  
-**System ID:** {{ meta.nist.system_id }}  
+**System Name:** {{ meta-handbook.system_name }}  
+**System ID:** {{ meta-handbook.system_id }}  
 **System Owner:** [TODO: Name] ([TODO: Email])  
-**Authorizing Official (AO):** {{ meta.roles.ao.name }} ({{ meta.roles.ao.email }})  
-**Information System Security Officer (ISSO):** {{ meta.roles.isso.name }} ({{ meta.roles.isso.email }})  
+**Authorizing Official (AO):** [TODO] ([TODO])  
+**Information System Security Officer (ISSO):** [TODO] ([TODO])  
 
 ### 2.2 System Description
 
@@ -119,7 +123,7 @@ Categorization is performed according to three security objectives:
 **FIPS 199 Security Category:**
 
 ```
-SC {{ meta.nist.system_name }} = {(confidentiality, [TODO: impact]), (integrity, [TODO: impact]), (availability, [TODO: impact])}
+SC {{ meta-handbook.system_name }} = {(confidentiality, [TODO: impact]), (integrity, [TODO: impact]), (availability, [TODO: impact])}
 ```
 
 **Example:**
@@ -209,9 +213,9 @@ Based on overall categorization, the following baseline is selected:
 |------|------|----------------|
 | System Owner | [TODO: Name] | System responsibility |
 | Information Owner | [TODO: Name] | Information responsibility |
-| ISSO | {{ meta.roles.isso.name }} | Security assessment |
-| ISSM | {{ meta.roles.issm.name }} | Security management |
-| Authorizing Official (AO) | {{ meta.roles.ao.name }} | Approval |
+| ISSO | [TODO] | Security assessment |
+| ISSM | [TODO] | Security management |
+| Authorizing Official (AO) | [TODO] | Approval |
 
 ### 6.3 Categorization Date
 
@@ -260,7 +264,7 @@ Based on overall categorization, the following baseline is selected:
 
 **Categorization approved by:**
 
-**Name:** {{ meta.roles.ao.name }}  
+**Name:** [TODO]  
 **Title:** Authorizing Official (AO)  
 **Date:** [TODO: Date]  
 **Signature:** [TODO: Signature or electronic approval]  
@@ -297,13 +301,5 @@ Based on overall categorization, the following baseline is selected:
 | [TODO: Type 2] | [TODO: L/M/H] | [TODO: L/M/H] | [TODO: L/M/H] | [TODO: L/M/H] |
 | [TODO: Type 3] | [TODO: L/M/H] | [TODO: L/M/H] | [TODO: L/M/H] | [TODO: L/M/H] |
 | **System Overall** | **[TODO: L/M/H]** | **[TODO: L/M/H]** | **[TODO: L/M/H]** | **[TODO: L/M/H]** |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

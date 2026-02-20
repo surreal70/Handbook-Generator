@@ -1,11 +1,17 @@
 # Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz
 
-**Dokument-ID:** 0100  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0100
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Rechtmäßigkeit, Verarbeitung nach Treu und Glauben und Transparenz in der {{ meta.organization }}. Dieser Grundsatz bildet die Basis für alle Datenverarbeitungen.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Rechtmäßigkeit, Verarbeitung nach Treu und Glauben und Transparenz in der AdminSend GmbH. Dieser Grundsatz bildet die Basis für alle Datenverarbeitungen.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. a DSGVO
 
@@ -188,8 +194,6 @@ Personenbezogene Daten müssen auf rechtmäßige Weise, nach Treu und Glauben un
 | Intransparente Information | Versteckte Datenschutzerklärung | Prominente Platzierung und klare Sprache |
 | Unfaire Praktiken | Cookie-Wall ohne Alternative | Echte Wahlmöglichkeiten bieten |
 | Unverständliche Sprache | Juristische Fachsprache | Verständliche Formulierungen |
-
----
 
 **Nächste Schritte:**
 1. Implementieren Sie Rechtsgrundlagen-Prüfung für alle Verarbeitungen

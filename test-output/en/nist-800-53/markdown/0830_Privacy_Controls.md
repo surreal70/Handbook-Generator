@@ -1,13 +1,17 @@
 # Privacy Controls
 
-**Document ID:** NIST-0830  
-**Control Family:** Privacy Controls  
-**Controls:** PT-1, AP-1, AR-1, DI-1, DM-1, IP-1, SE-1, TR-1, UL-1  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0830
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -204,13 +208,5 @@ This document covers privacy controls:
 **Assessment Method:** Examine, Interview  
 **Assessment Status:** [TODO: Satisfied / Other than Satisfied / Not Applicable]  
 **Findings:** [TODO: Description]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

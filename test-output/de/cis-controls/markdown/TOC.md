@@ -32,5 +32,3 @@ Language: de
 - [0330 - APP Identity AD AzureAD Hardening](0330_APP_Identity_AD_AzureAD_Hardening.md)
 - [0400 - Anhang Control Mapping Template](0400_Anhang_Control_Mapping_Template.md)
 - [0410 - Anhang Checklisten und Evidence](0410_Anhang_Checklisten_und_Evidence.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

@@ -1,11 +1,17 @@
 # Breach Communication Template (Data Subjects)
 
-**Document-ID:** 0620  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0620
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,9 +19,7 @@
 
 ## Email Template
 
-**Subject:** Important Information About Your Data at {{ meta.organization }}
-
----
+**Subject:** Important Information About Your Data at AdminSend GmbH
 
 Dear [Salutation] [Name],
 
@@ -125,8 +129,7 @@ Sincerely,
 
 [TODO: Name]  
 [TODO: Function]  
-{{ meta.organization }}
-
----
+AdminSend GmbH
 
 **Appendix:** [Optional: Detailed technical information, FAQ]
+

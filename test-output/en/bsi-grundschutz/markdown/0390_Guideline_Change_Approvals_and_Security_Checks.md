@@ -1,14 +1,17 @@
 # Guideline: Change Approvals and Security Checks
 
-**Document ID:** 0390  
-**Document Type:** Guideline/Standard (concrete)  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0390
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 This guideline implements **Policy 0380: Policy: Change and Release Management** and defines specific requirements for the Change Process.
 
-**Responsible:** Anna Schmidt (IT Management)
+**Responsible:** [TODO] (IT Management)
 
 [TODO: Add specific objectives]
 
@@ -70,7 +73,7 @@ This guideline implements **Policy 0380: Policy: Change and Release Management**
 - [TODO: Tool 1]
 - [TODO: Tool 2]
 
-**Responsible:** Anna Schmidt
+**Responsible:** [TODO]
 
 ## 6. Evidence
 
@@ -84,7 +87,7 @@ This guideline implements **Policy 0380: Policy: Change and Release Management**
 
 Exceptions to this guideline are only possible through the **Exception Process (Document 0520)**.
 
-**Exception Request to:** Thomas Weber (CISO)
+**Exception Request to:** [TODO] (CISO)
 
 ## 8. Training and Awareness
 
@@ -92,26 +95,23 @@ Exceptions to this guideline are only possible through the **Exception Process (
 
 **Target Group:** [TODO]  
 **Frequency:** [TODO]  
-**Responsible:** Thomas Weber
+**Responsible:** [TODO]
 
 ## 9. Review and Updates
 
 This guideline is reviewed regularly:
 - **Frequency:** Annually or upon significant changes
-- **Responsible:** Anna Schmidt
-- **Next Review:** {{ meta.document.next_review }}
+- **Responsible:** [TODO]
+- **Next Review:** [TODO]
 
 ## 10. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| CISO | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| IT Management | [TODO] | [TODO] | Draft |
+| CISO | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI IT-Grundschutz-Kompendium
 - Document 0380: Policy: Change and Release Management
-
 

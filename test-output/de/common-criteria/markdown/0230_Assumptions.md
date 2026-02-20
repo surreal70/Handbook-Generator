@@ -1,11 +1,17 @@
 # Assumptions (Annahmen)
 
-**Dokument-ID:** 0230  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0230
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -72,8 +78,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 - Frequenz: [TODO: z.B. Jährlich, Quartalsweise]
 - Dokumentation: [TODO: z.B. Audit-Bericht, Checkliste]
 
----
-
 ### A.ENVIRONMENTAL_PROTECTION
 **Annahme-ID:** A.ENVIRONMENTAL_PROTECTION  
 **Kategorie:** Physical  
@@ -132,8 +136,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 - Methode: [TODO: z.B. Background Checks, Audit-Log-Review]
 - Frequenz: [TODO: z.B. Bei Einstellung, Jährlich]
 - Dokumentation: [TODO: z.B. HR-Akte, Schulungsnachweise]
-
----
 
 ### A.USER_TRAINING
 **Annahme-ID:** A.USER_TRAINING  
@@ -195,8 +197,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 - Frequenz: [TODO: z.B. Quartalsweise]
 - Dokumentation: [TODO: z.B. Netzwerkdiagramm, Firewall-Regeln]
 
----
-
 ### A.SECURE_COMMUNICATION
 **Annahme-ID:** A.SECURE_COMMUNICATION  
 **Kategorie:** Connectivity  
@@ -255,8 +255,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 - Frequenz: [TODO: z.B. Monatlich]
 - Dokumentation: [TODO: z.B. Scan-Berichte, Konfigurationsdokumentation]
 
----
-
 ### A.PLATFORM_AVAILABILITY
 **Annahme-ID:** A.PLATFORM_AVAILABILITY  
 **Kategorie:** Platform  
@@ -314,8 +312,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 - Methode: [TODO: z.B. SOC-Audit, Incident-Response-Test]
 - Frequenz: [TODO: z.B. Quartalsweise]
 - Dokumentation: [TODO: z.B. SOC-Berichte, Incident-Logs]
-
----
 
 ### A.BACKUP_RECOVERY
 **Annahme-ID:** A.BACKUP_RECOVERY  
@@ -423,8 +419,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 |---------------|--------------|--------------|
 | [TODO: A.001] | [TODO: P.001, P.003] | [TODO: Enables enforcement] |
 | [TODO: A.002] | [TODO: P.002] | [TODO: Prerequisite] |
-
----
 
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit umgebungsspezifischen Annahmen

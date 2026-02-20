@@ -1,12 +1,27 @@
 # Disaster Recovery and Business Continuity
 
+**Document-ID:** [FRAMEWORK]-0160
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Purpose and Scope
 
 This document describes the disaster recovery and business continuity strategies for AdminSend GmbH. It defines disaster scenarios, impact analyses, DR strategies, failover/failback procedures, and business continuity plans to ensure business continuity during disasters.
 
 **Scope:** All critical IT services and business processes of AdminSend GmbH
 
-**Responsible:** Anna Schmidt (anna.schmidt@adminsend.de)
+**Responsible:** [TODO] ({{ meta-organisation-roles.role_CIO_email }})
 
 ## Fundamentals
 
@@ -74,7 +89,7 @@ An organization's ability to maintain critical business processes during and aft
 
 **Probability:** Low  
 **Impact:** Very high  
-**Affected Sites:** {{ netbox.site.primary }}, {{ netbox.site.secondary }}
+**Affected Sites:** [[ netbox.site.primary ]], [[ netbox.site.secondary ]]
 
 **Mitigations:**
 - Geographically separated DR site
@@ -193,7 +208,7 @@ An organization's ability to maintain critical business processes during and aft
 - Complex configuration
 - High network requirements
 
-**Application:** Tier 0 services ({{ netbox.service.critical }})
+**Application:** Tier 0 services ([[ netbox.service.critical ]])
 
 **Cost:** ~200% of production infrastructure
 
@@ -216,7 +231,7 @@ An organization's ability to maintain critical business processes during and aft
 - Reduced initial performance
 - Regular testing required
 
-**Application:** Tier 1 services ({{ netbox.service.important }})
+**Application:** Tier 1 services ([[ netbox.service.important ]])
 
 **Cost:** ~50-70% of production infrastructure
 
@@ -239,7 +254,7 @@ An organization's ability to maintain critical business processes during and aft
 - Manual processes
 - Higher risk
 
-**Application:** Tier 2 services ({{ netbox.service.standard }})
+**Application:** Tier 2 services ([[ netbox.service.standard ]])
 
 **Cost:** ~20-30% of production infrastructure
 
@@ -269,40 +284,40 @@ An organization's ability to maintain critical business processes during and aft
 
 ### Primary Site
 
-**Site:** {{ netbox.site.primary }}  
-**Address:** {{ netbox.site.primary_address }}  
-**Data Center:** {{ netbox.site.primary_datacenter }}
+**Site:** [[ netbox.site.primary ]]  
+**Address:** [[ netbox.site.primary_address ]]  
+**Data Center:** [[ netbox.site.primary_datacenter ]]
 
 **Infrastructure:**
-- Production servers: {{ netbox.device.count_primary }}
-- Storage capacity: {{ netbox.storage.capacity_primary }}
-- Network bandwidth: {{ netbox.network.bandwidth_primary }}
+- Production servers: [[ netbox.device.count_primary ]]
+- Storage capacity: [[ netbox.storage.capacity_primary ]]
+- Network bandwidth: [[ netbox.network.bandwidth_primary ]]
 - Power supply: Redundant (N+1)
 
 ### DR Site
 
-**Site:** {{ netbox.site.dr }}  
-**Address:** {{ netbox.site.dr_address }}  
-**Data Center:** {{ netbox.site.dr_datacenter }}  
-**Distance:** {{ netbox.site.distance }} km
+**Site:** [[ netbox.site.dr ]]  
+**Address:** [[ netbox.site.dr_address ]]  
+**Data Center:** [[ netbox.site.dr_datacenter ]]  
+**Distance:** [[ netbox.site.distance ]] km
 
 **Infrastructure:**
-- DR servers: {{ netbox.device.count_dr }}
-- Storage capacity: {{ netbox.storage.capacity_dr }}
-- Network bandwidth: {{ netbox.network.bandwidth_dr }}
+- DR servers: [[ netbox.device.count_dr ]]
+- Storage capacity: [[ netbox.storage.capacity_dr ]]
+- Network bandwidth: [[ netbox.network.bandwidth_dr ]]
 - Power supply: Redundant (N+1)
 
 ### Replication Connection
 
-**Connection Type:** {{ netbox.network.replication_type }}  
-**Bandwidth:** {{ netbox.network.replication_bandwidth }}  
-**Latency:** {{ netbox.network.replication_latency }} ms  
+**Connection Type:** [[ netbox.network.replication_type ]]  
+**Bandwidth:** [[ netbox.network.replication_bandwidth ]]  
+**Latency:** [[ netbox.network.replication_latency ]] ms  
 **Redundancy:** Dual-path
 
 **Replication Technologies:**
-- Storage replication: {{ meta.storage_replication_tech }}
-- Database replication: {{ meta.database_replication_tech }}
-- VM replication: {{ meta.vm_replication_tech }}
+- Storage replication: {{ meta-handbook.storage_replication_tech }}
+- Database replication: {{ meta-handbook.database_replication_tech }}
+- VM replication: {{ meta-handbook.vm_replication_tech }}
 
 ## Failover Procedures
 
@@ -374,8 +389,8 @@ An organization's ability to maintain critical business processes during and aft
 #### 2. DR Team Activation
 
 **DR Team Members:**
-- **DR Coordinator:** Anna Schmidt
-- **Technical Lead:** Andreas Huemmer
+- **DR Coordinator:** [TODO]
+- **Technical Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Network Lead:** [Name]
 - **Storage Lead:** [Name]
 - **Application Lead:** [Name]
@@ -564,7 +579,7 @@ An organization's ability to maintain critical business processes during and aft
 #### Emergency Communication
 
 **Communication Channels:**
-- **Primary:** Email (info@adminsend.de)
+- **Primary:** Email ({{ meta-organisation.email }})
 - **Secondary:** Phone (+49 89 12345678)
 - **Emergency:** Mobile apps, SMS
 
@@ -591,9 +606,9 @@ An organization's ability to maintain critical business processes during and aft
 
 | Supplier | Service | Contact | Backup Supplier |
 |---|---|---|---|
-| {{ meta.isp_provider }} | Internet | {{ meta.isp_contact }} | {{ meta.isp_backup }} |
-| {{ meta.cloud_provider }} | Cloud services | {{ meta.cloud_contact }} | {{ meta.cloud_backup }} |
-| {{ meta.hardware_vendor }} | Hardware | {{ meta.hardware_contact }} | - |
+| {{ meta-handbook.isp_provider }} | Internet | {{ meta-handbook.isp_contact }} | {{ meta-handbook.isp_backup }} |
+| {{ meta-handbook.cloud_provider }} | Cloud services | {{ meta-handbook.cloud_contact }} | {{ meta-handbook.cloud_backup }} |
+| {{ meta-handbook.hardware_vendor }} | Hardware | {{ meta-handbook.hardware_contact }} | - |
 
 ## DR Testing
 
@@ -681,7 +696,7 @@ An organization's ability to maintain critical business processes during and aft
 - Coordinate DR tests
 - Disaster declaration
 
-**Person:** Anna Schmidt
+**Person:** [TODO]
 
 ### BC Manager
 
@@ -691,7 +706,7 @@ An organization's ability to maintain critical business processes during and aft
 - Create BC plans
 - BC training
 
-**Person:** Peter Fischer
+**Person:** {{ meta-organisation-roles.role_COO }}
 
 ### DR Team
 
@@ -705,10 +720,9 @@ An organization's ability to maintain critical business processes during and aft
 - NIST SP 800-34 - Contingency Planning Guide
 - Business Impact Analysis (BIA) Document
 
----
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
+**Classification:** Internal  
+**Last Updated:** {{ meta-handbook.date }}
 
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Classification:** internal  
-**Last Updated:** {{ meta.date }}

@@ -1,11 +1,17 @@
 # Appendix: DPIA Quick Reference
 
-**Document-ID:** 0710  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Reference  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0710
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -62,8 +68,6 @@ Additionally required for (examples):
 
 **Rule of thumb:** With 2 or more risk factors → Conduct DPIA
 
----
-
 ## DPIA Process (Quick Overview)
 
 ### Phase 1: Preparation
@@ -91,8 +95,6 @@ Additionally required for (examples):
 12. **Document DPIA:** Use Template 0410
 13. **Approval:** Controller approves
 14. **Archiving:** Retain DPIA
-
----
 
 ## Risk Assessment Matrix
 
@@ -126,8 +128,6 @@ Additionally required for (examples):
 - **High Risk:** Comprehensive measures, possibly consult authority
 - **Very High Risk:** Consultation with authority required
 
----
-
 ## Typical Measures
 
 ### Technical Measures
@@ -157,8 +157,6 @@ Additionally required for (examples):
 - **Transparency:** Clear information for data subjects
 - **User-friendliness:** Easy exercise of rights
 
----
-
 ## Checklist: DPIA Required?
 
 - [ ] Systematic and extensive evaluation of personal aspects?
@@ -176,8 +174,6 @@ Additionally required for (examples):
 
 **If 1 or more questions answered Yes:** Conduct DPIA!
 
----
-
 ## Prior Consultation with Supervisory Authority
 
 **Required when:**
@@ -192,8 +188,6 @@ Additionally required for (examples):
 4. Authority has 8 weeks (extendable to 14 weeks)
 5. Implement authority's opinion
 
----
-
 ## Avoid Common Mistakes
 
 ❌ **Conduct DPIA too late** → Before processing starts!  
@@ -202,8 +196,6 @@ Additionally required for (examples):
 ❌ **No concrete measures** → Specific and implementable!  
 ❌ **Not updating DPIA** → Review upon changes!  
 ❌ **No documentation** → Document completely!
-
----
 
 ## Useful Resources
 
@@ -219,3 +211,4 @@ Additionally required for (examples):
 **Contact:**
 - Data Protection Officer: [TODO: Contact]
 - Supervisory Authority: [TODO: Contact]
+

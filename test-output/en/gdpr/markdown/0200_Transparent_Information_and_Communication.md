@@ -1,11 +1,17 @@
 # Transparent Information and Communication
 
-**Document-ID:** 0200  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0200
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of requirements for transparent information and communication in {{ meta.organization }}. Data subjects must be able to exercise their rights easily and comprehensibly.
+This document describes the implementation of requirements for transparent information and communication in AdminSend GmbH. Data subjects must be able to exercise their rights easily and comprehensibly.
 
 ## Principle according to Art. 12 GDPR
 
@@ -231,8 +237,6 @@ The controller must:
 | Incomprehensible Language | Legal jargon | Use plain language |
 | Missing Identification | No identity verification | Establish identification process |
 | Charged Access | Fee without justification | Observe principle of no cost |
-
----
 
 **Next Steps:**
 1. Establish communication channels for data subject requests

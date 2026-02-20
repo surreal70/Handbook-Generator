@@ -1,11 +1,17 @@
 # TOE Lifecycle
 
-**Document-ID:** 0140  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0140
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -393,11 +399,10 @@ The TOE lifecycle includes the following phases:
 - Audit process: [TODO: Process]
 - Audit documentation: [TODO: Documentation]
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders with TOE-specific information
 2. Create detailed process diagrams for each lifecycle phase
 3. Document all security measures completely
 4. Verify consistency with other TOE description documents
 5. Ensure all phases and transitions are documented
+

@@ -1,84 +1,81 @@
 # Kontakte, Eskalation und Anbieter
 
+**Dokument-ID:** [FRAMEWORK]-0270
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferanten sowie Support-Kontakte für den IT-Service. Ziel ist es, schnellen Zugriff auf relevante Kontaktinformationen in allen Situationen zu gewährleisten.
 
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
-
----
 
 ## Interne Kontakte
 
 ### Management
 
 #### Chief Executive Officer (CEO)
-- **Name:** Max Mustermann
-- **Titel:** Chief Executive Officer
-- **E-Mail:** max.mustermann@adminsend.de
-- **Telefon:** +49 89 12345678-100
-- **Abteilung:** Management
+- **Name:** [TODO]
+- **E-Mail:** {{ meta-organisation-roles.role_CEO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CEO_phone }}
 - **Verfügbarkeit:** Mo-Fr 09:00-18:00
 - **Eskalation:** Nur für kritische Business-Impact-Situationen
 
 #### Chief Information Officer (CIO)
-- **Name:** Anna Schmidt
-- **Titel:** Chief Information Officer
-- **E-Mail:** anna.schmidt@adminsend.de
-- **Telefon:** +49 89 12345678-200
-- **Abteilung:** IT
+- **Name:** [TODO]
+- **E-Mail:** {{ meta-organisation-roles.role_CIO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CIO_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00
 - **Eskalation:** IT-strategische Entscheidungen, kritische Incidents
 
 #### Chief Information Security Officer (CISO)
-- **Name:** Thomas Weber
-- **Titel:** Chief Information Security Officer
-- **E-Mail:** thomas.weber@adminsend.de
-- **Telefon:** +49 89 12345678-300
-- **Abteilung:** IT Security
+- **Name:** [TODO]
+- **E-Mail:** {{ meta-organisation-roles.role_CISO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CISO_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00, 24/7 für Security-Incidents
 - **Eskalation:** Security-Incidents, Compliance-Fragen
 
 #### Chief Financial Officer (CFO)
-- **Name:** Maria Müller
-- **Titel:** Chief Financial Officer
-- **E-Mail:** maria.mueller@adminsend.de
-- **Telefon:** +49 89 12345678-400
-- **Abteilung:** Finance
+- **Name:** [TODO]
+- **E-Mail:** {{ meta-organisation-roles.role_CFO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CFO_phone }}
 - **Verfügbarkeit:** Mo-Fr 09:00-17:00
 - **Eskalation:** Budget-Fragen, finanzielle Genehmigungen
 
 #### Chief Operating Officer (COO)
-- **Name:** Peter Fischer
-- **Titel:** Chief Operating Officer
-- **E-Mail:** peter.fischer@adminsend.de
-- **Telefon:** +49 89 12345678-500
-- **Abteilung:** Operations
+- **Name:** {{ meta-organisation-roles.role_COO }}
+- **E-Mail:** {{ meta-organisation-roles.role_COO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_COO_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00
 - **Eskalation:** Betriebliche Auswirkungen, Prozessfragen
-
----
 
 ### IT-Operations
 
 #### IT Operations Manager
-- **Name:** Andreas Huemmer
-- **Titel:** IT Operations Manager
-- **E-Mail:** andreas.huemmer@adminsend.de
-- **Telefon:** +49 89 12345678-250
-- **Abteilung:** IT Operations
+- **Name:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
+- **E-Mail:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Telefon:** {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00, On-Call für P1-Incidents
 - **Verantwortung:** Gesamtverantwortung IT-Betrieb
 
 #### Service Desk Lead
-- **Name:** Julia Becker
-- **Titel:** Service Desk Lead
-- **E-Mail:** julia.becker@adminsend.de
-- **Telefon:** +49 89 12345678-111
-- **Abteilung:** Service Desk
+- **Name:** {{ meta-organisation-roles.role_Service_Desk_Lead }}
+- **E-Mail:** {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Telefon:** {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00
 - **Verantwortung:** First-Level-Support, Ticket-Management
 
@@ -87,8 +84,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - **Telefon:** [TODO: +49 89 12345678-250]
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00
 - **Verantwortung:** Täglicher Betrieb, Monitoring, Incident-Response
-
----
 
 ### Spezialisierte Teams
 
@@ -100,7 +95,7 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - **Verantwortung:** Netzwerk-Infrastruktur, Firewall, VPN
 
 #### Security Team
-- **Team Lead:** Thomas Weber
+- **Team Lead:** [TODO]
 - **E-Mail:** [TODO: security-team@example.com]
 - **Telefon:** [TODO: Telefonnummer]
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00, 24/7 für Security-Incidents
@@ -119,8 +114,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - **Telefon:** [TODO: Telefonnummer]
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00
 - **Verantwortung:** Anwendungs-Support, Deployment
-
----
 
 ## On-Call und Rufbereitschaft
 
@@ -151,15 +144,13 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - **Erreichbarkeit:** Telefon und E-Mail
 - **Eskalation:** Nach 30 Minuten ohne Antwort
 
----
-
 ## Eskalationspfade
 
 ### Incident-Eskalation
 
 #### Level 1: Service Desk
-- **Kontakt:** julia.becker@adminsend.de
-- **Telefon:** +49 89 12345678-111
+- **Kontakt:** {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Telefon:** {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00
 - **Verantwortung:** First-Level-Support, Ticket-Erstellung
 
@@ -168,8 +159,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - P2: Nach 1 Stunde ohne Lösung
 - P3: Nach 4 Stunden ohne Lösung
 - P4: Nach 8 Stunden ohne Lösung
-
----
 
 #### Level 2: Operations Team
 - **Kontakt:** [TODO: ops-team@example.com]
@@ -182,11 +171,9 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - P2: Nach 4 Stunden ohne Lösung
 - P3: Nach 8 Stunden ohne Lösung
 
----
-
 #### Level 3: IT Operations Manager
-- **Kontakt:** andreas.huemmer@adminsend.de
-- **Telefon:** +49 89 12345678-250
+- **Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Telefon:** {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00, On-Call für P1
 - **Verantwortung:** Koordination, Ressourcen-Allokation
 
@@ -195,11 +182,9 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - P2: Nach 8 Stunden ohne Lösung
 - Wenn externe Unterstützung erforderlich
 
----
-
 #### Level 4: CIO
-- **Kontakt:** anna.schmidt@adminsend.de
-- **Telefon:** +49 89 12345678-200
+- **Kontakt:** {{ meta-organisation-roles.role_CIO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CIO_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00, erreichbar für kritische Incidents
 - **Verantwortung:** Strategische Entscheidungen, Management-Kommunikation
 
@@ -208,15 +193,11 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - Medienrelevanz
 - Regulatorische Auswirkungen
 
----
-
 #### Level 5: CEO
-- **Kontakt:** max.mustermann@adminsend.de
-- **Telefon:** +49 89 12345678-100
+- **Kontakt:** {{ meta-organisation-roles.role_CEO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CEO_phone }}
 - **Verfügbarkeit:** Nach Vereinbarung
 - **Verantwortung:** Unternehmensweite Entscheidungen
-
----
 
 ### Security-Incident-Eskalation
 
@@ -231,11 +212,9 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - Datenverlust oder -diebstahl
 - Compliance-Verletzung
 
----
-
 #### Level 2: CISO
-- **Kontakt:** thomas.weber@adminsend.de
-- **Telefon:** +49 89 12345678-300
+- **Kontakt:** {{ meta-organisation-roles.role_CISO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CISO_phone }}
 - **Verfügbarkeit:** 24/7 für Security-Incidents
 - **Verantwortung:** Security-Strategie, Compliance
 
@@ -244,14 +223,10 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - Öffentliche Bekanntmachung erforderlich
 - Regulatorische Meldepflicht
 
----
-
 #### Level 3: CIO / CEO
-- **Kontakt:** anna.schmidt@adminsend.de / max.mustermann@adminsend.de
+- **Kontakt:** {{ meta-organisation-roles.role_CIO_email }} / {{ meta-organisation-roles.role_CEO_email }}
 - **Verfügbarkeit:** Nach Vereinbarung
 - **Verantwortung:** Unternehmensweite Kommunikation, rechtliche Schritte
-
----
 
 ## Externe Anbieter und Lieferanten
 
@@ -271,8 +246,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
   - Garantie und Reparatur
   - Ersatzteil-Service
 
----
-
 ### Software-Anbieter
 
 #### [TODO: Software-Vendor Name]
@@ -289,8 +262,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
   - Bug-Fixes
   - Technischer Support
   - Schulungen
-
----
 
 ### Cloud-Provider
 
@@ -313,8 +284,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - **Ticket:** [TODO: Portal-URL]
 - **Emergency:** [TODO: Emergency-Nummer]
 
----
-
 ### Netzwerk-Provider
 
 #### Internet-Provider
@@ -331,8 +300,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
   - 24/7 Support
   - Störungsbehebung
 
----
-
 ### Managed-Service-Provider
 
 #### [TODO: MSP Name]
@@ -347,8 +314,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
   - [TODO: Managed Services]
   - [TODO: Monitoring]
   - [TODO: Support]
-
----
 
 ### Backup-Service-Provider
 
@@ -365,8 +330,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
   - Disaster-Recovery
   - 24/7 Support
 
----
-
 ### Security-Service-Provider
 
 #### [TODO: Security-Provider Name]
@@ -380,8 +343,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
   - Incident-Response
   - Threat-Intelligence
   - Penetration-Testing
-
----
 
 ## Notfall-Kontakte
 
@@ -415,8 +376,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - **Verfügbarkeit:** Mo-Fr 09:00-18:00, Notfall-Hotline
 - **Verantwortung:** Externe Kommunikation, Medien
 
----
-
 ## Kommunikationskanäle
 
 ### Interne Kommunikation
@@ -445,8 +404,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - **System:** [TODO: Video-System]
 - **URL:** [TODO: Meeting-URL]
 
----
-
 ### Externe Kommunikation
 
 #### Kunden-Kommunikation
@@ -464,14 +421,12 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - **LinkedIn:** [TODO: Company-Page]
 - **Zweck:** Öffentliche Ankündigungen
 
----
-
 ## Kontakt-Aktualisierung
 
 ### Aktualisierungsprozess
 
 1. **Änderungen melden:**
-   - E-Mail an andreas.huemmer@adminsend.de
+   - E-Mail an {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
    - Neue Kontaktdaten angeben
    - Gültigkeitsdatum angeben
 
@@ -490,14 +445,12 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 
 ### Review-Zyklus
 - **Frequenz:** Quartalsweise
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Prozess:**
   - Alle Kontakte durchgehen
   - Aktualität prüfen
   - Änderungen dokumentieren
   - Teams informieren
-
----
 
 ## Prozesse und Verantwortlichkeiten
 
@@ -513,8 +466,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 
 > **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
@@ -527,8 +478,6 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - Eskalationspfad-Dokumentation
 - Anbieter-Verträge
 - Kommunikations-Protokolle
-
----
 
 ## Anhang
 
@@ -546,23 +495,20 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - ISO/IEC 20000-1:2018
 - COBIT 2019 Framework
 
----
-
 ## Schnellreferenz
 
 ### Wichtigste Kontakte
 
 | Situation | Kontakt | Telefon |
 |---|---|---|
-| IT-Support | Julia Becker | +49 89 12345678-111 |
-| Kritischer Incident | IT Operations Manager | +49 89 12345678-250 |
-| Security-Incident | Thomas Weber | +49 89 12345678-300 |
-| Management-Eskalation | Anna Schmidt | +49 89 12345678-200 |
+| IT-Support | {{ meta-organisation-roles.role_Service_Desk_Lead }} | {{ meta-organisation-roles.role_Service_Desk_Lead_phone }} |
+| Kritischer Incident | IT Operations Manager | {{ meta-organisation-roles.role_IT_Operations_Manager_phone }} |
+| Security-Incident | [TODO] | {{ meta-organisation-roles.role_CISO_phone }} |
+| Management-Eskalation | [TODO] | {{ meta-organisation-roles.role_CIO_phone }} |
 | Notfall (Feuer/Medizin) | Notruf | 112 |
 | Polizei | Notruf | 110 |
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** andreas.huemmer@adminsend.de
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+

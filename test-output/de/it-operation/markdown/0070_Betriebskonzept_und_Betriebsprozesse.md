@@ -1,14 +1,27 @@
 # Betriebskonzept und Betriebsprozesse
 
+**Dokument-ID:** [FRAMEWORK]-0070
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den IT-Service. Es definiert Betriebsmodelle, Prozessabläufe nach ITIL-Standards, Schnittstellen zu anderen Prozessen und Eskalationspfade.
 
-**Service:** {{ meta.service_name }}  
-**Verantwortlich:** Andreas Huemmer  
-**Stand:** 1.0.0
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Stand:** 0
 
 ## Betriebsmodell
 
@@ -34,16 +47,14 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 ### Support-Modell
 
 **Support-Stufen:**
-- **Level 1 (Service Desk):** Julia Becker - julia.becker@adminsend.de
-- **Level 2 (IT Operations):** Andreas Huemmer - andreas.huemmer@adminsend.de
+- **Level 1 (Service Desk):** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Level 2 (IT Operations):** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - **Level 3 (Specialist/Vendor):** [TODO: Spezialist-Kontakt]
 
 **Rufbereitschaft:**
 - **On-Call Rotation:** [TODO: Rotationsplan beschreiben]
 - **Erreichbarkeit:** [TODO: Telefon/Pager-Nummer]
 - **Reaktionszeit:** [TODO: z.B. 15 Minuten]
-
----
 
 ## ITIL-Prozesse
 
@@ -57,7 +68,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Demand Management
 - Business Relationship Management
 
-**Verantwortlich:** Anna Schmidt
+**Verantwortlich:** [TODO]
 
 ### Service Design
 
@@ -72,7 +83,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Information Security Management
 - Supplier Management
 
-**Verantwortlich:** Andreas Huemmer
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Service Transition
 
@@ -85,7 +96,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Knowledge Management
 - Configuration Management (siehe Kapitel 0090)
 
-**Verantwortlich:** Andreas Huemmer
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Service Operation
 
@@ -98,7 +109,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Request Fulfillment
 - Access Management (siehe Kapitel 0100)
 
-**Verantwortlich:** Julia Becker (Level 1), Andreas Huemmer (Level 2)
+**Verantwortlich:** {{ meta-organisation-roles.role_Service_Desk_Lead }} (Level 1), {{ meta-organisation-roles.role_IT_Operations_Manager }} (Level 2)
 
 ### Continual Service Improvement (CSI)
 
@@ -110,9 +121,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Process Improvement
 - Root Cause Analysis
 
-**Verantwortlich:** Anna Schmidt
-
----
+**Verantwortlich:** [TODO]
 
 ## Prozessschnittstellen
 
@@ -126,7 +135,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 | **Configuration Management** | CI-Updates → CMDB | Configuration Items | CMDB Manager |
 | **Capacity Management** | Kapazitätsdaten → Planung | Performance Metrics | Capacity Manager |
 | **Availability Management** | Verfügbarkeitsdaten → Reporting | Availability Reports | Availability Manager |
-| **Security Management** | Security Events → Betrieb | Security Incidents, Patches | Thomas Weber |
+| **Security Management** | Security Events → Betrieb | Security Incidents, Patches | [TODO] |
 | **Backup Management** | Backup-Status → Betrieb | Backup Reports, Restore Requests | Backup Administrator |
 
 ### Schnittstellen zu Geschäftsprozessen
@@ -134,11 +143,9 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 | Geschäftsprozess | Schnittstelle | Informationsfluss | Ansprechpartner |
 |---|---|---|---|
 | **Beschaffung** | Hardware/Software-Anforderungen | Bestellungen, Lieferungen | Procurement |
-| **Finanzen** | Budget und Kosten | Kostenberichte, Budgetanfragen | Maria Müller |
+| **Finanzen** | Budget und Kosten | Kostenberichte, Budgetanfragen | [TODO] |
 | **Compliance** | Audit-Anforderungen | Audit-Berichte, Nachweise | Compliance Officer |
 | **HR** | Mitarbeiter-Onboarding/Offboarding | Zugriffsverwaltung | HR Department |
-
----
 
 ## Eskalationspfade
 
@@ -147,18 +154,18 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 1: Service Desk                                        │
-│ Kontakt: Julia Becker                   │
-│ E-Mail: julia.becker@adminsend.de                   │
-│ Telefon: +49 89 12345678-111                  │
+│ Kontakt: {{ meta-organisation-roles.role_Service_Desk_Lead }}                   │
+│ E-Mail: {{ meta-organisation-roles.role_Service_Desk_Lead_email }}                   │
+│ Telefon: {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}                  │
 │ Eskalation nach: 30 Minuten (P1), 2 Stunden (P2)            │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 2: IT Operations                                       │
-│ Kontakt: Andreas Huemmer               │
-│ E-Mail: andreas.huemmer@adminsend.de               │
-│ Telefon: +49 89 12345678-250              │
+│ Kontakt: {{ meta-organisation-roles.role_IT_Operations_Manager }}               │
+│ E-Mail: {{ meta-organisation-roles.role_IT_Operations_Manager_email }}               │
+│ Telefon: {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}              │
 │ Eskalation nach: 1 Stunde (P1), 4 Stunden (P2)              │
 └────────────────────┬────────────────────────────────────────┘
                      │
@@ -177,24 +184,24 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Stufe 1: IT Operations Manager                               │
-│ Kontakt: Andreas Huemmer               │
-│ E-Mail: andreas.huemmer@adminsend.de               │
+│ Kontakt: {{ meta-organisation-roles.role_IT_Operations_Manager }}               │
+│ E-Mail: {{ meta-organisation-roles.role_IT_Operations_Manager_email }}               │
 │ Eskalation bei: Kritische Incidents (P1), SLA-Verletzung    │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Stufe 2: Chief Information Officer (CIO)                     │
-│ Kontakt: Anna Schmidt                                 │
-│ E-Mail: anna.schmidt@adminsend.de                                 │
+│ Kontakt: [TODO]                                 │
+│ E-Mail: {{ meta-organisation-roles.role_CIO_email }}                                 │
 │ Eskalation bei: Major Incidents, Business Impact            │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Stufe 3: Chief Executive Officer (CEO)                       │
-│ Kontakt: Max Mustermann                                 │
-│ E-Mail: max.mustermann@adminsend.de                                 │
+│ Kontakt: [TODO]                                 │
+│ E-Mail: {{ meta-organisation-roles.role_CEO_email }}                                 │
 │ Eskalation bei: Unternehmenskritische Ausfälle              │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -207,8 +214,6 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 | **P2 (Hoch)** | Nach 2h (L1→L2), 4h (L2→L3) | Nach 4 Stunden an IT Ops Manager | 4 Stunden |
 | **P3 (Mittel)** | Nach 8h (L1→L2), 1 Tag (L2→L3) | Nach 1 Tag an IT Ops Manager | 1 Tag |
 | **P4 (Niedrig)** | Nach 2 Tagen (L1→L2) | Keine automatische Eskalation | 2 Tage |
-
----
 
 ## Betriebsprozess-Übersicht
 
@@ -252,8 +257,6 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - [ ] Compliance-Check
 - [ ] Vendor-Review
 
----
-
 ## Prozess-Metriken und KPIs
 
 ### Betriebsmetriken
@@ -276,8 +279,6 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 | **Change Lead Time** | ≤ 5 Tage | Pro Change | Change Manager |
 | **Problem Resolution Time** | ≤ 30 Tage | Pro Problem | Problem Manager |
 | **SLA Compliance** | ≥ 98% | Monatlich | Service Manager |
-
----
 
 ## Kontinuierliche Verbesserung
 
@@ -306,8 +307,6 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 | CSI-001 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | CSI-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 ## Dokumentation und Wissensmanagement
 
 ### Dokumentations-Repository
@@ -326,8 +325,6 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - **Knowledge Sharing:** Team-Meetings und Workshops
 - **Lessons Learned:** Post-Incident-Reviews
 
----
-
 ## Compliance und Governance
 
 ### Relevante Standards
@@ -345,20 +342,17 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Incident-Management-Berichte
 - Compliance-Nachweise
 
----
-
 ## Kontakte
 
 **Betriebsverantwortliche:**
-- **IT Operations Manager:** Andreas Huemmer - andreas.huemmer@adminsend.de
-- **Service Desk Lead:** Julia Becker - julia.becker@adminsend.de
-- **CIO:** Anna Schmidt - anna.schmidt@adminsend.de
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **CIO:** [TODO] - {{ meta-organisation-roles.role_CIO_email }}
 
 **Weitere Kontakte:** Siehe Kapitel 0270 (Kontakte, Eskalation und Anbieter)
 
----
-
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
+

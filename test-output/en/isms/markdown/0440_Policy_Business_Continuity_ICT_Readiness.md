@@ -1,18 +1,31 @@
 # Policy: Business Continuity ICT Readiness
 
+**Document-ID:** [FRAMEWORK]-0440
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0440  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.29, A.5.30 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Systems:** All business-critical IT systems, applications, infrastructure, cloud services
 - **Scenarios:** Natural disasters, cyberattacks, system failures, pandemics, supplier failures
 - **Interfaces:** Integration with BCM (Business Continuity Management)
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -81,10 +94,10 @@ Clear escalation paths define when an IT incident escalates to a business contin
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **BCM Manager:** {{ meta.bcm.manager }}
-- **DR Coordinator:** {{ meta.it.dr_coordinator }}
-- **CIO:** Anna Schmidt
+- **Policy Owner:** [TODO] (CISO)
+- **BCM Manager:** {{ meta-handbook.bcm_manager }}
+- **DR Coordinator:** {{ meta-handbook.it_dr_coordinator }}
+- **CIO:** [TODO]
 - **Implementation Responsible:** IT Operations, System Owners
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -160,10 +173,9 @@ Exceptions to this policy are only permitted in justified cases:
 - **ISO/IEC 27031** - ICT readiness for business continuity
 - **BSI Standard 100-4** - Business Continuity Management
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

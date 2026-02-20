@@ -19,5 +19,3 @@ Language: de
 - [0600 - Informationssicherheitsrichtlinie](0600_Informationssicherheitsrichtlinie.md)
 - [0700 - Anhang Nachweisregister](0700_Anhang_Nachweisregister.md)
 - [0710 - Anhang Glossar](0710_Anhang_Glossar.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

@@ -1,12 +1,27 @@
 # Security Operations and Hardening
 
+**Document-ID:** [FRAMEWORK]-0170
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Purpose and Scope
 
 This document describes the security operations processes and hardening guidelines for AdminSend GmbH. It defines security monitoring, incident response processes, vulnerability management, and compliance requirements to ensure information security.
 
 **Scope:** All IT systems, networks, applications, and data of AdminSend GmbH
 
-**Responsible:** Thomas Weber (thomas.weber@adminsend.de)
+**Responsible:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 
 ## Security Fundamentals
 
@@ -156,8 +171,8 @@ This document describes the security operations processes and hardening guidelin
 | Internal | Internet | 80,443 | TCP | Allow | Web access |
 | Any | Any | Any | Any | Deny | Default rule |
 
-**Firewall System:** {{ netbox.firewall.system }}  
-**Management:** {{ netbox.firewall.management_url }}
+**Firewall System:** [[ netbox.firewall.system ]]  
+**Management:** [[ netbox.firewall.management_url ]]
 
 #### Network Segmentation
 
@@ -165,11 +180,11 @@ This document describes the security operations processes and hardening guidelin
 
 | Zone | VLAN | Subnet | Purpose | Security Level |
 |---|---|---|---|---|
-| **DMZ** | {{ netbox.vlan.dmz }} | {{ netbox.subnet.dmz }} | Public services | High |
-| **Production** | {{ netbox.vlan.production }} | {{ netbox.subnet.production }} | Production systems | Very high |
-| **Management** | {{ netbox.vlan.management }} | {{ netbox.subnet.management }} | Admin access | Critical |
-| **User** | {{ netbox.vlan.user }} | {{ netbox.subnet.user }} | User network | Medium |
-| **Guest** | {{ netbox.vlan.guest }} | {{ netbox.subnet.guest }} | Guest WLAN | Low |
+| **DMZ** | [[ netbox.vlan.dmz ]] | [[ netbox.subnet.dmz ]] | Public services | High |
+| **Production** | [[ netbox.vlan.production ]] | [[ netbox.subnet.production ]] | Production systems | Very high |
+| **Management** | [[ netbox.vlan.management ]] | [[ netbox.subnet.management ]] | Admin access | Critical |
+| **User** | [[ netbox.vlan.user ]] | [[ netbox.subnet.user ]] | User network | Medium |
+| **Guest** | [[ netbox.vlan.guest ]] | [[ netbox.subnet.guest ]] | Guest WLAN | Low |
 
 **Segmentation Rules:**
 - No direct communication between zones
@@ -179,7 +194,7 @@ This document describes the security operations processes and hardening guidelin
 
 #### VPN Hardening
 
-**VPN Type:** {{ meta.vpn_type }}  
+**VPN Type:** {{ meta-handbook.vpn_type }}  
 **Encryption:** AES-256  
 **Authentication:** Certificate-based + MFA
 
@@ -292,9 +307,9 @@ Referrer-Policy: no-referrer
 
 ### Security Information and Event Management (SIEM)
 
-**SIEM System:** {{ meta.siem_system }}  
-**Version:** {{ meta.siem_version }}  
-**Management:** {{ meta.siem_url }}
+**SIEM System:** {{ meta-handbook.siem_system }}  
+**Version:** [TODO]  
+**Management:** {{ meta-handbook.siem_url }}
 
 **Log Sources:**
 - Firewalls and IDS/IPS
@@ -319,9 +334,9 @@ Referrer-Policy: no-referrer
 
 ### Intrusion Detection/Prevention (IDS/IPS)
 
-**IDS/IPS System:** {{ netbox.ids.system }}  
+**IDS/IPS System:** [[ netbox.ids.system ]]  
 **Deployment:** Inline (IPS mode)  
-**Location:** {{ netbox.ids.location }}
+**Location:** [[ netbox.ids.location ]]
 
 **Detection Methods:**
 - **Signature-based:** Known attack patterns
@@ -340,7 +355,7 @@ Referrer-Policy: no-referrer
 
 ### Endpoint Detection and Response (EDR)
 
-**EDR System:** {{ meta.edr_system }}  
+**EDR System:** {{ meta-handbook.edr_system }}  
 **Coverage:** All workstations and servers
 
 **Features:**
@@ -372,9 +387,9 @@ Referrer-Policy: no-referrer
 ### Vulnerability Scanning
 
 **Scanning Tools:**
-- **Network Scanner:** {{ meta.vulnerability_scanner }}
-- **Web App Scanner:** {{ meta.web_scanner }}
-- **Container Scanner:** {{ meta.container_scanner }}
+- **Network Scanner:** {{ meta-handbook.vulnerability_scanner }}
+- **Web App Scanner:** {{ meta-handbook.web_scanner }}
+- **Container Scanner:** {{ meta-handbook.container_scanner }}
 
 **Scan Frequency:**
 - **Critical Systems:** Weekly
@@ -458,7 +473,7 @@ Referrer-Policy: no-referrer
 - Mobile apps
 - Social engineering
 
-**Penetration Test Provider:** {{ meta.pentest_provider }}
+**Penetration Test Provider:** {{ meta-handbook.pentest_provider }}
 
 ## Security Incident Response
 
@@ -486,8 +501,8 @@ Referrer-Policy: no-referrer
 - Maintain contact lists
 
 **IR Team:**
-- **IR Manager:** Thomas Weber
-- **Technical Lead:** Andreas Huemmer
+- **IR Manager:** [TODO]
+- **Technical Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Forensic Analyst:** [Name]
 - **Communication Lead:** [Name]
 - **Legal Counsel:** [Name]
@@ -508,7 +523,7 @@ Referrer-Policy: no-referrer
 - Incident classification
 - Incident prioritization
 
-**Incident Ticket:** {{ meta.ticketing_system }}
+**Incident Ticket:** {{ meta-handbook.ticketing_system }}
 
 #### 3. Containment
 
@@ -602,7 +617,7 @@ Referrer-Policy: no-referrer
 
 | Annex A Control | Title | Status | Responsible |
 |---|---|---|---|
-| **A.9** | Access Control | Implemented | Thomas Weber |
+| **A.9** | Access Control | Implemented | [TODO] |
 | **A.10** | Cryptography | Implemented | IT Security |
 | **A.12** | Operations Security | Implemented | IT Operations |
 | **A.13** | Communications Security | Implemented | Network Team |
@@ -613,7 +628,7 @@ Referrer-Policy: no-referrer
 
 **Audit Frequency:** Annually (external), Quarterly (internal)
 
-**Next Audit:** {{ meta.next_iso_audit }}
+**Next Audit:** {{ meta-handbook.next_iso_audit }}
 
 ### BSI Grundschutz
 
@@ -646,7 +661,7 @@ Referrer-Policy: no-referrer
 - Conducted for high-risk processing
 - Documented and approved
 
-**Data Protection Officer:** {{ meta.data_protection_officer }}
+**Data Protection Officer:** {{ meta-handbook.data_protection_officer }}
 
 ### Other Standards
 
@@ -703,7 +718,7 @@ Referrer-Policy: no-referrer
 - Incident response coordination
 - Security budget
 
-**Person:** Thomas Weber
+**Person:** [TODO]
 
 ### Security Operations Team
 
@@ -723,7 +738,7 @@ Referrer-Policy: no-referrer
 - Security configuration
 - Backup security
 
-**Lead:** Andreas Huemmer
+**Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ## Metrics and Reporting
 
@@ -771,10 +786,9 @@ Referrer-Policy: no-referrer
 - MITRE ATT&CK Framework
 - GDPR
 
----
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
+**Classification:** Internal  
+**Last Updated:** {{ meta-handbook.date }}
 
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Classification:** internal  
-**Last Updated:** {{ meta.date }}

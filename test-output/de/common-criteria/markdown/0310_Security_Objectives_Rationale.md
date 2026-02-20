@@ -1,11 +1,17 @@
 # Rationale für Sicherheitsziele (Security Objectives Rationale)
 
-**Dokument-ID:** 0310  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -15,7 +21,7 @@
 
 ## 1. Einleitung
 
-Dieses Dokument liefert die Rationale (Begründung) für die Sicherheitsziele des TOE **{{ meta.toe_name }}** und dessen Betriebsumgebung. Die Rationale demonstriert, dass die definierten Sicherheitsziele ausreichend und angemessen sind, um:
+Dieses Dokument liefert die Rationale (Begründung) für die Sicherheitsziele des TOE **{{ meta-handbook.toe_name }}** und dessen Betriebsumgebung. Die Rationale demonstriert, dass die definierten Sicherheitsziele ausreichend und angemessen sind, um:
 
 - Alle identifizierten Bedrohungen zu bewältigen
 - Alle organisatorischen Sicherheitsrichtlinien (OSPs) umzusetzen
@@ -354,12 +360,4 @@ Nach der Rationale für Sicherheitsziele:
 - Template 0300: Sicherheitsziele
 - Template 0320: Security Objectives Coverage Matrix
 - Template 0400-0450: Sicherheitsanforderungen
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.owner }} | Initiale Version |
 

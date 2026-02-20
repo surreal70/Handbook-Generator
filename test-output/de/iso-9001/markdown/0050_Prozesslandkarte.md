@@ -1,11 +1,17 @@
 # Prozessinteraktion und Prozesslandkarte
 
-**Dokument-ID:** 0050  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0050
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -299,8 +305,6 @@ Die Prozesslandkarte wird aktualisiert bei:
 - **Anhang C:** SIPOC-Diagramme (Supplier-Input-Process-Output-Customer)
 - **Anhang D:** Prozessflussdiagramme
 
----
-
 **Nächste Schritte:**
 1. Erstellen Sie eine visuelle Prozesslandkarte
 2. Dokumentieren Sie alle Prozessinteraktionen
@@ -308,3 +312,4 @@ Die Prozesslandkarte wird aktualisiert bei:
 4. Definieren Sie Schnittstellenverantwortlichkeiten
 5. Überwachen Sie die Wirksamkeit der Prozessinteraktionen
 6. Aktualisieren Sie die Prozesslandkarte regelmäßig
+

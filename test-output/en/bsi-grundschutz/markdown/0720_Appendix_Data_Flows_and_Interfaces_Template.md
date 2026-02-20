@@ -1,14 +1,17 @@
 # Appendix: Data Flows and Interfaces (Template)
 
-**Document ID:** 0720  
-**Document Type:** Appendix/Template  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0720
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -22,37 +25,37 @@ The documentation of data flows and interfaces of **AdminSend GmbH** supports:
 - Crypto Concept (Document 0340/0350)
 - Data Protection Compliance (Document 0420/0430)
 
-**Responsible:** Thomas Weber (CISO), Anna Schmidt (IT Management)
+**Responsible:** [TODO] (CISO), [TODO] (IT Management)
 
 ## 2. Data Flow Register
 
 | Data Flow ID | Source | Destination | Data Types | Protection Need (C/I/A) | Transport Path | Encryption | Storage | Provider/Third Country | Owner | Legal Basis | Note |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| DF-001 | Web Server ({{ netbox.device.name }}) | Database Server | Customer Data (personal) | Very High/High/High | {{ netbox.vlan.name }} (internal) | TLS 1.3 | Encrypted (AES-256) | Internal | Anna Schmidt | GDPR Art. 6(1)(b) | [TODO] |
-| DF-002 | Backup Server | Cloud Storage (AWS S3) | Backup Data | High/High/High | Internet (VPN) | TLS 1.3 + AES-256 | Encrypted (AES-256) | AWS (EU-West-1) | Anna Schmidt | GDPR Art. 28 | [TODO] |
-| DF-003 | Employee (Remote) | VPN Gateway | Business Data | High/High/Normal | Internet | IPsec/IKEv2 | N/A | Internal | Anna Schmidt | - | [TODO] |
-| DF-004 | ERP System | Payment Gateway | Payment Data | Very High/Very High/High | Internet (HTTPS) | TLS 1.3 | Not Stored | Payment Provider (EU) | Anna Schmidt | PCI-DSS | [TODO] |
-| DF-005 | SIEM | Log Archive | Log Data | Normal/High/Normal | {{ netbox.vlan.name }} (Management) | TLS 1.2 | Encrypted | Internal | Thomas Weber | - | [TODO] |
+| DF-001 | Web Server ([[ netbox.device.name ]]) | Database Server | Customer Data (personal) | Very High/High/High | [[ netbox.vlan.name ]] (internal) | TLS 1.3 | Encrypted (AES-256) | Internal | [TODO] | GDPR Art. 6(1)(b) | [TODO] |
+| DF-002 | Backup Server | Cloud Storage (AWS S3) | Backup Data | High/High/High | Internet (VPN) | TLS 1.3 + AES-256 | Encrypted (AES-256) | AWS (EU-West-1) | [TODO] | GDPR Art. 28 | [TODO] |
+| DF-003 | Employee (Remote) | VPN Gateway | Business Data | High/High/Normal | Internet | IPsec/IKEv2 | N/A | Internal | [TODO] | - | [TODO] |
+| DF-004 | ERP System | Payment Gateway | Payment Data | Very High/Very High/High | Internet (HTTPS) | TLS 1.3 | Not Stored | Payment Provider (EU) | [TODO] | PCI-DSS | [TODO] |
+| DF-005 | SIEM | Log Archive | Log Data | Normal/High/Normal | [[ netbox.vlan.name ]] (Management) | TLS 1.2 | Encrypted | Internal | [TODO] | - | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 3. Interface Register
 
 | Interface ID | System A | System B | Protocol | Port | Authentication | Encryption | Data Direction | Frequency | Owner | Note |
 |---|---|---|---|---|---|---|---|---|---|---|
-| IF-001 | Web Server | Database | PostgreSQL | 5432 | Certificate | TLS 1.3 | Bidirectional | Permanent | Anna Schmidt | [TODO] |
-| IF-002 | ERP | CRM | REST API | 443 | OAuth 2.0 | TLS 1.3 | Bidirectional | Real-time | Anna Schmidt | [TODO] |
-| IF-003 | Monitoring | SIEM | Syslog | 514 | Certificate | TLS 1.2 | Unidirectional | Permanent | Thomas Weber | [TODO] |
-| IF-004 | AD | LDAP Clients | LDAPS | 636 | Kerberos | TLS 1.2 | Bidirectional | On-Demand | Anna Schmidt | [TODO] |
-| IF-005 | Backup Server | Cloud Storage | S3 API | 443 | API Key | TLS 1.3 | Unidirectional | Daily | Anna Schmidt | [TODO] |
+| IF-001 | Web Server | Database | PostgreSQL | 5432 | Certificate | TLS 1.3 | Bidirectional | Permanent | [TODO] | [TODO] |
+| IF-002 | ERP | CRM | REST API | 443 | OAuth 2.0 | TLS 1.3 | Bidirectional | Real-time | [TODO] | [TODO] |
+| IF-003 | Monitoring | SIEM | Syslog | 514 | Certificate | TLS 1.2 | Unidirectional | Permanent | [TODO] | [TODO] |
+| IF-004 | AD | LDAP Clients | LDAPS | 636 | Kerberos | TLS 1.2 | Bidirectional | On-Demand | [TODO] | [TODO] |
+| IF-005 | Backup Server | Cloud Storage | S3 API | 443 | API Key | TLS 1.3 | Unidirectional | Daily | [TODO] | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. External Interfaces and Third Parties
 
 | Third Party | Service | Data Types | Protection Need | Location/Third Country | Contract | Data Protection Agreement | Owner | Note |
 |---|---|---|---|---|---|---|---|---|
-| AWS | Cloud Hosting (EC2, S3) | Business Data, Backup | High/High/High | EU-West-1 | [TODO: Contract Number] | Yes (Art. 28 GDPR) | Anna Schmidt | [TODO] |
-| Microsoft | Office 365 | Email, Documents | High/High/Normal | EU | [TODO] | Yes | Anna Schmidt | [TODO] |
-| Payment Provider | Payment Processing | Payment Data | Very High/Very High/High | EU | [TODO] | Yes | Anna Schmidt | PCI-DSS certified |
+| AWS | Cloud Hosting (EC2, S3) | Business Data, Backup | High/High/High | EU-West-1 | [TODO: Contract Number] | Yes (Art. 28 GDPR) | [TODO] | [TODO] |
+| Microsoft | Office 365 | Email, Documents | High/High/Normal | EU | [TODO] | Yes | [TODO] | [TODO] |
+| Payment Provider | Payment Processing | Payment Data | Very High/Very High/High | EU | [TODO] | Yes | [TODO] | PCI-DSS certified |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Reference:** Document 0400/0410 (Supplier and Outsourcing Management)
@@ -142,11 +145,9 @@ The documentation of data flows and interfaces of **AdminSend GmbH** supports:
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| CISO | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Data Protection Officer | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| CISO | [TODO] | [TODO] | Draft |
+| IT Management | [TODO] | [TODO] | Draft |
+| Data Protection Officer | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Structure Analysis)
@@ -156,5 +157,4 @@ The documentation of data flows and interfaces of **AdminSend GmbH** supports:
 - Document 0090: Risk Analysis
 - Document 0340/0350: Cryptography and Key Management
 - Document 0420/0430: Data Protection
-
 

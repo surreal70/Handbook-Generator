@@ -41,5 +41,3 @@ Language: de
 - [0710 - Anhang DSFA Quick Reference](0710_Anhang_DSFA_Quick_Reference.md)
 - [0720 - Anhang Auftragsverarbeitungsvertrag DPA Template](0720_Anhang_Auftragsverarbeitungsvertrag_DPA_Template.md)
 - [0730 - Anhang Begriffe und Abkuerzungen](0730_Anhang_Begriffe_und_Abkuerzungen.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

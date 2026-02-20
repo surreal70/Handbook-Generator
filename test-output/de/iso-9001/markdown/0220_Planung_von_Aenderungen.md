@@ -1,11 +1,17 @@
 # Planung von Änderungen
 
-**Dokument-ID:** 0220  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0220
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -160,8 +166,6 @@ Dieses Dokument definiert den Prozess für die Planung von Änderungen am Qualit
 | Änderungs-ID | Beschreibung | Initiator | Antragsdatum | Status | Abschluss | Wirksam |
 |--------------|--------------|-----------|--------------|--------|-----------|---------|
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
-
----
 
 **Nächste Schritte:**
 1. Etabliere Änderungsmanagement-Prozess

@@ -1,18 +1,21 @@
 # Policy: Konfiguration und Hardening
 
-
-
-**Dokument-ID:** 0540  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.9, A.8.10 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0540
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -25,7 +28,7 @@ Diese Policy gilt für:
 - **Organisationseinheiten:** Alle Abteilungen und Standorte der AdminSend GmbH
 - **Systeme:** Alle Server, Workstations, Netzwerkgeräte, Anwendungen, Cloud-Ressourcen
 - **Umgebungen:** Produktion, Test, Entwicklung
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -80,9 +83,9 @@ Alle Konfigurationsabweichungen von Baselines werden dokumentiert und begründet
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Configuration Manager:** {{ meta.it.config_manager }}
-- **Security Architect:** {{ meta.security.architect }}
+- **Policy Owner:** [TODO] (CISO)
+- **Configuration Manager:** {{ meta-handbook.it_config_manager }}
+- **Security Architect:** {{ meta-handbook.security_architect }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, System Owner
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -157,10 +160,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIST SP 800-123** - Guide to General Server Security
 - **BSI IT-Grundschutz** - Sicherheitsanforderungen
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

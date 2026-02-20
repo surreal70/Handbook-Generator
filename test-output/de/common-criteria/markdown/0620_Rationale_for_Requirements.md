@@ -1,11 +1,17 @@
 # Rationale für Sicherheitsanforderungen
 
-**Dokument-ID:** 0620  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0620
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -384,8 +390,6 @@ Dieses Kapitel liefert die Rationale, die nachweist, dass die definierten Sicher
 - **Abschnitt 0430:** SFR Dependencies
 - **Abschnitt 0440:** Coverage Matrix
 
----
-
 **Nächste Schritte:**
 1. Dokumentieren Sie die Rationale für jedes Sicherheitsziel
 2. Begründen Sie alle SFR-Operationen
@@ -395,3 +399,4 @@ Dieses Kapitel liefert die Rationale, die nachweist, dass die definierten Sicher
 6. Führen Sie Vollständigkeits-, Angemessenheits- und Konsistenzanalysen durch
 7. Identifizieren und beheben Sie Lücken und Inkonsistenzen
 8. Lassen Sie die Rationale durch Evaluatoren prüfen
+

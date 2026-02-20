@@ -1,19 +1,21 @@
 # Richtlinie: Key Management und Verschlüsselung
 
-
-
-**Dokument-ID:** 0270  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0260_Policy_Kryptografie_und_Schluesselmanagement.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.24  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0270
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck und Geltungsbereich
 
@@ -91,13 +93,13 @@ ECDHE-RSA-AES128-GCM-SHA256
 ### 3.2 Schlüsselspeicherung
 
 **Hardware Security Modules (HSM):**
-- Kritische Schlüssel (Root-CA, Master-Keys) in HSM: {{ meta.security.hsm }}
+- Kritische Schlüssel (Root-CA, Master-Keys) in HSM: {{ meta-handbook.security_hsm }}
 - FIPS 140-2 Level 2 oder höher
 - Physische Sicherheit und Zugriffskontrolle
 
 **Key Management Systems:**
-- **Cloud:** {{ meta.cloud.key_vault }} (z.B. Azure Key Vault, AWS KMS)
-- **On-Premises:** {{ meta.security.kms }} (z.B. HashiCorp Vault)
+- **Cloud:** {{ meta-handbook.cloud_key_vault }} (z.B. Azure Key Vault, AWS KMS)
+- **On-Premises:** {{ meta-handbook.security_kms }} (z.B. HashiCorp Vault)
 - Verschlüsselte Speicherung
 - Audit-Logging aller Zugriffe
 
@@ -147,9 +149,9 @@ ECDHE-RSA-AES128-GCM-SHA256
 ### 4.1 Public Key Infrastructure (PKI)
 
 **Komponenten:**
-- **Root CA:** {{ meta.pki.root_ca }} (Offline, HSM-geschützt)
-- **Issuing CA:** {{ meta.pki.issuing_ca }} (Online, für Zertifikatsausstellung)
-- **Certificate Management System:** {{ meta.pki.cms }}
+- **Root CA:** {{ meta-handbook.pki_root_ca }} (Offline, HSM-geschützt)
+- **Issuing CA:** {{ meta-handbook.pki_issuing_ca }} (Online, für Zertifikatsausstellung)
+- **Certificate Management System:** {{ meta-handbook.pki_cms }}
 
 **Zertifikatstypen:**
 - **Server-Zertifikate:** Web-Server, API-Endpoints
@@ -346,10 +348,9 @@ ECDHE-RSA-AES128-GCM-SHA256
 - **NIST SP 800-52** - TLS Guidelines
 - **BSI TR-02102** - Kryptographische Verfahren
 
----
-
 **Genehmigt durch:**  
-Thomas Weber, CISO  
-Datum: {{ meta.document.approval_date }}
+[TODO], CISO  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
+

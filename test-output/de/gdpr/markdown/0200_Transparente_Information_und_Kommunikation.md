@@ -1,11 +1,17 @@
 # Transparente Information und Kommunikation
 
-**Dokument-ID:** 0200  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0200
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung der Anforderungen an transparente Information und Kommunikation in der {{ meta.organization }}. Betroffene Personen müssen ihre Rechte einfach und verständlich ausüben können.
+Dieses Dokument beschreibt die Umsetzung der Anforderungen an transparente Information und Kommunikation in der AdminSend GmbH. Betroffene Personen müssen ihre Rechte einfach und verständlich ausüben können.
 
 ## Grundsatz gemäß Art. 12 DSGVO
 
@@ -231,8 +237,6 @@ Der Verantwortliche muss:
 | Unverständliche Sprache | Juristische Fachsprache | Klare Sprache verwenden |
 | Fehlende Identifikation | Keine Prüfung der Identität | Identifikationsprozess etablieren |
 | Kostenpflichtige Auskunft | Gebühr ohne Begründung | Grundsatz der Unentgeltlichkeit beachten |
-
----
 
 **Nächste Schritte:**
 1. Etablieren Sie Kommunikationskanäle für Betroffenenanfragen

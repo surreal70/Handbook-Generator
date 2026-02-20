@@ -1,24 +1,30 @@
 # Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** NIST-0030  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
 ## 1. Zweck
 
-Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Management Framework (RMF) und die Sicherheit des Systems {{ meta.nist.system_name }}.
+Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Management Framework (RMF) und die Sicherheit des Systems {{ meta-handbook.system_name }}.
 
 ## 2. RMF-Rollen
 
 ### 2.1 Authorizing Official (AO)
 
-**Name:** {{ meta.roles.ao.name }}  
-**E-Mail:** {{ meta.roles.ao.email }}  
+**Name:** [TODO]  
+**E-Mail:** [TODO]  
 
 **Verantwortlichkeiten:**
 - Autorisierungsentscheidung für das System
@@ -28,8 +34,8 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Mana
 
 ### 2.2 Information System Security Officer (ISSO)
 
-**Name:** {{ meta.roles.isso.name }}  
-**E-Mail:** {{ meta.roles.isso.email }}  
+**Name:** [TODO]  
+**E-Mail:** [TODO]  
 
 **Verantwortlichkeiten:**
 - Tägliche Sicherheitsoperationen
@@ -39,8 +45,8 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Mana
 
 ### 2.3 Information System Security Manager (ISSM)
 
-**Name:** {{ meta.roles.issm.name }}  
-**E-Mail:** {{ meta.roles.issm.email }}  
+**Name:** [TODO]  
+**E-Mail:** [TODO]  
 
 **Verantwortlichkeiten:**
 - Sicherheitsprogramm-Management
@@ -82,13 +88,5 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Mana
 | Continuous Monitoring | A | R | C | C | I |
 
 **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

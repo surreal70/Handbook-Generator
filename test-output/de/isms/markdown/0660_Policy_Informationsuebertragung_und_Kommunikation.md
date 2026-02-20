@@ -1,18 +1,21 @@
 # Policy: Informationsübertragung und Kommunikation
 
-
-
-**Dokument-ID:** 0660  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.14, A.8.24, A.8.26 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0660
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Kommunikationskanäle:** E-Mail, Messaging, File Sharing, Collaboration Tools
 - **Daten:** Alle Informationen (insbesondere vertrauliche und personenbezogene Daten)
 - **Übertragungswege:** Intern, extern, Cloud, Partner
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -85,10 +88,10 @@ Geschäftliche Social-Media-Nutzung folgt Social-Media-Richtlinien. Vertrauliche
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Communication Security Manager:** {{ meta.communication.security_manager }}
-- **IT Operations Manager:** {{ meta.it.operations_manager }}
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Policy Owner:** [TODO] (CISO)
+- **Communication Security Manager:** {{ meta-handbook.communication_security_manager }}
+- **IT Operations Manager:** {{ meta-handbook.it_operations_manager }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, End Users
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, DPO
 
@@ -168,10 +171,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **RFC 6376** - DomainKeys Identified Mail (DKIM)
 - **RFC 7489** - Domain-based Message Authentication, Reporting, and Conformance (DMARC)
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

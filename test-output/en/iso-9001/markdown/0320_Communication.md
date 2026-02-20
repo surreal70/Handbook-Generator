@@ -1,11 +1,17 @@
 # Communication
 
-**Document-ID:** 0320  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0320
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -329,8 +335,6 @@ This document defines internal and external communications relevant to the quali
 - Improve communication content
 - Increase communication frequency
 - Provide communication training
-
----
 
 **Next Steps:**
 1. Complete communication planning for all relevant communications

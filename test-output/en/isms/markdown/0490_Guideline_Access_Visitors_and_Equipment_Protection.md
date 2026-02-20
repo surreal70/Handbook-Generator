@@ -1,14 +1,17 @@
 # Guideline: Access, Visitors and Equipment Protection
 
-**Document ID:** 0490  
-**Document Type:** Guideline (detailed)  
-**Associated Policy:** 0480_Policy_Physical_Security.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.7.1, A.7.2, A.7.3, A.7.4  
-**Owner:** {{ meta.facilities.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0490
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -71,7 +74,7 @@ This guideline specifies the `0480_Policy_Physical_Security.md` and defines:
 **Logging:**
 - All access attempts (success and failure)
 - Timestamp, person, door/zone
-- Retention: {{ meta.retention.access_years }} years
+- Retention: {{ meta-handbook.retention_access_years }} years
 
 **Monitoring:**
 - Alerts for unauthorized access attempts
@@ -110,7 +113,7 @@ This guideline specifies the `0480_Policy_Physical_Security.md` and defines:
 - Name, company, ID number
 - Host, purpose of visit
 - Entry and exit time
-- Retention: {{ meta.retention.visitor_years }} years
+- Retention: {{ meta-handbook.retention_visitor_years }} years
 
 ## 5. Physical Protection of Equipment
 
@@ -217,7 +220,6 @@ This guideline specifies the `0480_Policy_Physical_Security.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.7.3** - Securing offices, rooms and facilities
 - **ISO/IEC 27001:2022 Annex A.7.4** - Physical security monitoring
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

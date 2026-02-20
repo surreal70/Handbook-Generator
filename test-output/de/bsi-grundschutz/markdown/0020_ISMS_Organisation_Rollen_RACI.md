@@ -1,14 +1,17 @@
 # ISMS-Organisation, Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** 0020  
-**Dokumenttyp:** Grundlagendokument  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 ### 1.1 ISMS-Owner/Sponsor
 
-**Verantwortlich:** Max Mustermann (max.mustermann@adminsend.de)
+**Verantwortlich:** [TODO] ({{ meta-organisation-roles.role_CEO_email }})
 
 Der ISMS-Owner trägt die Gesamtverantwortung für das Informationssicherheits-Managementsystem und stellt sicher, dass:
 - Ausreichende Ressourcen bereitgestellt werden
@@ -28,7 +31,7 @@ Der ISMS-Owner trägt die Gesamtverantwortung für das Informationssicherheits-M
 
 ### 1.2 Informationssicherheitsbeauftragter (ISB)
 
-**Verantwortlich:** Thomas Weber (thomas.weber@adminsend.de)
+**Verantwortlich:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 
 Der ISB ist die zentrale Koordinationsstelle für alle Informationssicherheitsaktivitäten:
 - Koordination und Steuerung des ISMS
@@ -45,8 +48,8 @@ Das ISMS-Team unterstützt den ISB bei der Umsetzung des ISMS:
 
 | Rolle | Name | Verantwortungsbereich |
 |---|---|---|
-| ISB (Leitung) | Thomas Weber | Gesamtkoordination ISMS |
-| IT-Leitung | Anna Schmidt | Technische Sicherheitsmaßnahmen |
+| ISB (Leitung) | [TODO] | Gesamtkoordination ISMS |
+| IT-Leitung | [TODO] | Technische Sicherheitsmaßnahmen |
 | Datenschutzbeauftragter | [TODO] | Datenschutz-Schnittstelle |
 | BCM-Verantwortlicher | [TODO] | Business Continuity |
 | Risk Manager | [TODO] | Risikomanagement |
@@ -59,7 +62,7 @@ Das ISMS-Team unterstützt den ISB bei der Umsetzung des ISMS:
 
 #### 1.4.1 IT Service Management (ITSM)
 
-**Ansprechpartner:** Anna Schmidt
+**Ansprechpartner:** [TODO]
 
 Schnittstellen:
 - Change Management: Sicherheitsbewertung von Changes
@@ -159,7 +162,7 @@ Schnittstellen:
 - Backup und Recovery
 - Incident Response (technisch)
 
-**Verantwortlich:** Anna Schmidt (IT-Leitung)
+**Verantwortlich:** [TODO] (IT-Leitung)
 
 ### 2.5 Alle Mitarbeitenden
 
@@ -238,13 +241,10 @@ Schnittstellen:
 
 Diese Organisationsstruktur wird mindestens jährlich oder bei wesentlichen Änderungen überprüft und aktualisiert.
 
-**Nächster Review:** {{ meta.document.next_review }}
-
----
+**Nächster Review:** [TODO]
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
 - BSI Standard 200-2: IT-Grundschutz-Methodik
 - BSI IT-Grundschutz-Kompendium
-
 

@@ -1,14 +1,17 @@
 # Guideline: Security Baselines, Hardening and Configuration Changes
 
-**Document ID:** 0550  
-**Document Type:** Guideline (detailed)  
-**Associated Policy:** 0540_Policy_Configuration_and_Hardening.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.8.9  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0550
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -124,7 +127,7 @@ This guideline specifies the `0540_Policy_Configuration_and_Hardening.md` and de
 
 ### 4.1 Configuration Management Database (CMDB)
 
-**System:** {{ meta.itsm.cmdb }}
+**System:** {{ meta-handbook.itsm_cmdb }}
 
 **Documented Configurations:**
 - System type and version
@@ -187,7 +190,7 @@ This guideline specifies the `0540_Policy_Configuration_and_Hardening.md` and de
 - Versioning
 - Rollback capability
 
-**Retention:** {{ meta.retention.config_years }} years
+**Retention:** {{ meta-handbook.retention_config_years }} years
 
 ## 6. Exceptions and Deviations
 
@@ -267,7 +270,7 @@ This guideline specifies the `0540_Policy_Configuration_and_Hardening.md` and de
 - Test procedures
 - Rollback procedures
 
-**Location:** {{ meta.documentation.baseline_repo }}
+**Location:** {{ meta-handbook.documentation_baseline_repo }}
 
 ## 9. Compliance and Audit
 
@@ -299,7 +302,6 @@ This guideline specifies the `0540_Policy_Configuration_and_Hardening.md` and de
 - **CIS Benchmarks** - https://www.cisecurity.org/cis-benchmarks/
 - **NIST SP 800-70** - Security Configuration Checklists
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

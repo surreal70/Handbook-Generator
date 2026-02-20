@@ -97,5 +97,3 @@ DORA definiert vier Performance-Level:
 ## Lizenz
 
 Diese Templates sind Teil des Handbook-Generator-Projekts.
-||-----|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

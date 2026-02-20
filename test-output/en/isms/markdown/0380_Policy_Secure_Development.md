@@ -1,18 +1,31 @@
 # Policy: Secure Development
 
+**Document-ID:** [FRAMEWORK]-0380
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0380  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.25-A.8.28 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Applications:** All internally developed applications, APIs, microservices, mobile apps
 - **Development Phases:** Requirements, design, implementation, testing, deployment, maintenance
 - **Development Models:** Agile, Waterfall, DevOps, DevSecOps
-- **Locations:** {{ netbox.site.name }} and all other development sites
+- **Locations:** [[ netbox.site.name ]] and all other development sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -82,9 +95,9 @@ Applications are deployed with secure configurations. Default credentials are ch
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
+- **Policy Owner:** [TODO] (CISO)
 - **Security Champion:** Developer with security expertise in each team
-- **Application Security Lead:** {{ meta.security.appsec_lead }}
+- **Application Security Lead:** {{ meta-handbook.security_appsec_lead }}
 - **Implementation Responsible:** Developers, DevOps, Security Team
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -163,10 +176,9 @@ Exceptions to this policy are only permitted in justified cases:
 - **NIST SP 800-218** - Secure Software Development Framework (SSDF)
 - **CWE Top 25** - Most Dangerous Software Weaknesses
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

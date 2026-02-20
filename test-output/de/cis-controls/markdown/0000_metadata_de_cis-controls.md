@@ -1,11 +1,37 @@
-# CIS Controls v8 Hardening Templates Handbuch
+# CIS-CONTROLS Handbuch - Metadaten
 
-**Dokument-Metadaten**
-
-- **Erstellt am:** 2026-02-10
-- **Autor:** Andreas Huemmer [andreas.huemmer@adminsend.de]
-- **Version:** 0.0.5
-- **Typ:** CIS Controls v8 Hardening Handbuch
+**Dokument-ID:** 0000  
+**Datum:** [TODO]  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** [TODO]  
+**Template-Version:** 0.2  
 
 ---
+
+## Handbuch-Informationen
+
+**Handbuch-Titel:** CIS Controls Sicherheitshandbuch
+**Handbuch-Short:** cis-controls
+**Organisation:** AdminSend GmbH  
+**Autor:** Handbook-Generator  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
+**Genehmigt durch:** [TODO]  
+
+---
+
+## Dokumentenzweck
+
+Dieses Dokument enthält die Metadaten für das CIS-CONTROLS Handbuch.
+
+## Änderungshistorie
+
+| Version | Datum | Autor | Änderung |
+|---------|-------|-------|----------|
+| 0.1 | [TODO] | Handbook-Generator | Initiale Version |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 

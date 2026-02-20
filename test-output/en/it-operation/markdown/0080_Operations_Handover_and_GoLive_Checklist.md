@@ -1,14 +1,27 @@
 # Operations Handover and Go-Live Checklist
 
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Overview
 
 This document describes the operations handover process and contains a comprehensive go-live checklist for transitioning new or changed IT services into production.
 
-**Service:** {{ meta.service_name }}  
-**Responsible:** Andreas Huemmer  
-**Version:** 1.0.0
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Version:** 0
 
 ## Operations Handover Process
 
@@ -50,13 +63,11 @@ This document describes the operations handover process and contains a comprehen
 | Role | Responsibility | Contact Person |
 |---|---|---|
 | **Service Owner** | Overall service responsibility | [TODO: Name] |
-| **IT Operations Manager** | Coordinate operations takeover | Andreas Huemmer |
+| **IT Operations Manager** | Coordinate operations takeover | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | **Technical Lead** | Technical implementation | [TODO: Name] |
-| **Service Desk Lead** | Support readiness | Julia Becker |
+| **Service Desk Lead** | Support readiness | {{ meta-organisation-roles.role_Service_Desk_Lead }} |
 | **Change Manager** | Change approval | [TODO: Name] |
-| **CIO** | Final approval | Anna Schmidt |
-
----
+| **CIO** | Final approval | [TODO] |
 
 ## Go-Live Checklist
 
@@ -203,8 +214,6 @@ This document describes the operations handover process and contains a comprehen
 - [ ] Lessons learned documented
 - [ ] Post-implementation review conducted
 
----
-
 ## Handover Documentation
 
 ### Handover Package
@@ -282,12 +291,10 @@ The handover package must contain the following documents:
 
 **Participants:**
 - Service Owner
-- IT Operations Manager: Andreas Huemmer
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - Technical Lead
-- Service Desk Lead: Julia Becker
-- CIO: Anna Schmidt
-
----
+- Service Desk Lead: {{ meta-organisation-roles.role_Service_Desk_Lead }}
+- CIO: [TODO]
 
 ## Acceptance Criteria
 
@@ -324,10 +331,8 @@ The handover package must contain the following documents:
 | **Business Requirements** | All business requirements met | ☐ | Service Owner |
 | **User Acceptance** | UAT successfully completed | ☐ | Business Users |
 | **Compliance** | Compliance requirements met | ☐ | Compliance Officer |
-| **Budget** | Within budget | ☐ | Maria Müller |
+| **Budget** | Within budget | ☐ | [TODO] |
 | **Timeline** | Schedule maintained | ☐ | Project Manager |
-
----
 
 ## Go/No-Go Decision
 
@@ -336,10 +341,10 @@ The handover package must contain the following documents:
 **Timing:** 24 hours before planned go-live  
 **Participants:**
 - Service Owner
-- IT Operations Manager: Andreas Huemmer
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - Technical Lead
 - Change Manager
-- CIO: Anna Schmidt
+- CIO: [TODO]
 
 ### Decision Criteria
 
@@ -362,8 +367,6 @@ The handover package must contain the following documents:
 - Service Owner: _________________ Date: _______
 - IT Operations Manager: _________________ Date: _______
 - CIO: _________________ Date: _______
-
----
 
 ## Rollback Plan
 
@@ -392,8 +395,6 @@ Rollback is triggered by:
 - **Within 4 hours after go-live:** Quick rollback possible
 - **4-24 hours after go-live:** Rollback with increased effort
 - **After 24 hours:** Rollback only after careful analysis
-
----
 
 ## Post-Implementation Review
 
@@ -432,21 +433,18 @@ Rollback is triggered by:
 | **User Satisfaction** | ≥ 80% | [TODO]% | ☐ |
 | **Performance** | < [TODO] ms | [TODO] ms | ☐ |
 
----
-
 ## Contacts
 
 **Go-Live Team:**
 - **Service Owner:** [TODO: Name] - [TODO: Email]
-- **IT Operations Manager:** Andreas Huemmer - andreas.huemmer@adminsend.de
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - **Technical Lead:** [TODO: Name] - [TODO: Email]
-- **Service Desk Lead:** Julia Becker - julia.becker@adminsend.de
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
 - **Change Manager:** [TODO: Name] - [TODO: Email]
-- **CIO:** Anna Schmidt - anna.schmidt@adminsend.de
+- **CIO:** [TODO] - {{ meta-organisation-roles.role_CIO_email }}
 
----
-
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
 **Organization:** AdminSend GmbH
+

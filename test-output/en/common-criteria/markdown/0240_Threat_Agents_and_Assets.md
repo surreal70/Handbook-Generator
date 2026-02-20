@@ -1,11 +1,17 @@
 # Threat Agents and Assets
 
-**Document-ID:** 0240  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0240
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -86,8 +92,6 @@ This document defines:
 - **Archiving:** [TODO: How is data archived?]
 - **Deletion:** [TODO: How is data deleted?]
 
----
-
 #### A.AUTHENTICATION_DATA
 **Asset ID:** A.AUTHENTICATION_DATA  
 **Category:** Credential  
@@ -127,8 +131,6 @@ This document defines:
 - **Business Value:** [TODO: High - Fundamental security function]
 - **Criticality:** [TODO: High - System unusable without authentication]
 
----
-
 #### A.DATA_PROCESSING_SERVICE
 **Asset ID:** A.DATA_PROCESSING_SERVICE  
 **Category:** Service  
@@ -162,8 +164,6 @@ This document defines:
 
 **Criticality:**
 [TODO: High - Platform compromise endangers all assets]
-
----
 
 #### A.CRYPTOGRAPHIC_KEYS
 **Asset ID:** A.CRYPTOGRAPHIC_KEYS  
@@ -277,8 +277,6 @@ This document defines:
 1. [TODO: Scenario 1]
 2. [TODO: Scenario 2]
 
----
-
 #### TA.MALICIOUS_INSIDER
 **Agent ID:** TA.MALICIOUS_INSIDER  
 **Type:** Insider  
@@ -311,8 +309,6 @@ This document defines:
 
 **Attack Potential:**
 [TODO: Medium-High - Insider access compensates for lower technical skills]
-
----
 
 #### TA.PRIVILEGED_ADMIN
 **Agent ID:** TA.PRIVILEGED_ADMIN  
@@ -347,8 +343,6 @@ This document defines:
 
 **Attack Potential:**
 [TODO: Very High - Privileged access enables almost all attacks]
-
----
 
 #### TA.NATION_STATE
 **Agent ID:** TA.NATION_STATE  
@@ -454,8 +448,6 @@ This document defines:
 - High risk combinations: [TODO: Number]
 - Medium risk combinations: [TODO: Number]
 - Low risk combinations: [TODO: Number]
-
----
 
 **Next Steps:**
 1. Complete all [TODO] placeholders with TOE-specific assets and agents

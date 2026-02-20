@@ -1,14 +1,17 @@
 # Basic Security Check / Gap Analysis (Template)
 
-**Document ID:** 0080  
-**Document Type:** Methodology Artifact  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standard 200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -22,7 +25,7 @@ The basic security check systematically assesses the extent to which the IT-Grun
 - Measure planning (Document 0100)
 - Compliance evidence
 
-**Responsible:** Thomas Weber (ISB)
+**Responsible:** [TODO] (ISB)
 
 ## 2. Approach and Methodology
 
@@ -32,11 +35,11 @@ The following sources are used for the basic security check:
 
 | Data Source | Type | Responsible | Usage |
 |---|---|---|---|
-| Interviews with stakeholders | Primary source | Thomas Weber | Process and organizational requirements |
-| Configuration evidence | Technical | Anna Schmidt | Technical requirements |
-| Policies and guidelines | Document | Thomas Weber | Organizational requirements |
-| Tickets and change records | System | Anna Schmidt | Implementation evidence |
-| Logs and monitoring data | System | Anna Schmidt | Operational requirements |
+| Interviews with stakeholders | Primary source | [TODO] | Process and organizational requirements |
+| Configuration evidence | Technical | [TODO] | Technical requirements |
+| Policies and guidelines | Document | [TODO] | Organizational requirements |
+| Tickets and change records | System | [TODO] | Implementation evidence |
+| Logs and monitoring data | System | [TODO] | Operational requirements |
 | Audit reports | Document | [TODO: Internal Audit] | External validation |
 
 ### 2.2 Assessment Logic
@@ -74,8 +77,8 @@ The following sources are used for the basic security check:
 - **Completion:** [TODO]
 
 **Participants:**
-- ISB: Thomas Weber
-- IT Management: Anna Schmidt
+- ISB: [TODO]
+- IT Management: [TODO]
 - Information Domain Responsible: [TODO]
 - Departments: [TODO]
 
@@ -87,76 +90,76 @@ The following sources are used for the basic security check:
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| ISMS.1 | Security policy created | AdminSend GmbH | F | Document 0010 | - | - | Thomas Weber | - |
-| ISMS.1 | ISMS organization defined | AdminSend GmbH | F | Document 0020 | - | - | Thomas Weber | - |
-| ISMS.1 | Resources provided | AdminSend GmbH | P | Budget evidence | Budget insufficient | Increase budget | Max Mustermann | [TODO] |
-| ORP.1 | Roles and responsibilities defined | AdminSend GmbH | F | Document 0020 | - | - | Thomas Weber | - |
+| ISMS.1 | Security policy created | AdminSend GmbH | F | Document 0010 | - | - | [TODO] | - |
+| ISMS.1 | ISMS organization defined | AdminSend GmbH | F | Document 0020 | - | - | [TODO] | - |
+| ISMS.1 | Resources provided | AdminSend GmbH | P | Budget evidence | Budget insufficient | Increase budget | [TODO] | [TODO] |
+| ORP.1 | Roles and responsibilities defined | AdminSend GmbH | F | Document 0020 | - | - | [TODO] | - |
 | ORP.2 | Onboarding of new employees | AdminSend GmbH | P | HR process | No security training in onboarding | Integrate security training | [TODO: HR] | [TODO] |
-| ORP.3 | Awareness program | AdminSend GmbH | N | - | No awareness program exists | Establish awareness program | Thomas Weber | [TODO] |
-| ORP.4 | IAM process | AdminSend GmbH | P | IAM guideline | Recertification missing | Implement recertification process | Anna Schmidt | [TODO] |
+| ORP.3 | Awareness program | AdminSend GmbH | N | - | No awareness program exists | Establish awareness program | [TODO] | [TODO] |
+| ORP.4 | IAM process | AdminSend GmbH | P | IAM guideline | Recertification missing | Implement recertification process | [TODO] | [TODO] |
 
 ### 3.2 Conception and Approaches (CON)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| CON.1 | Crypto concept created | Crypto concept | N | - | No crypto concept exists | Create crypto concept | Thomas Weber | [TODO] |
-| CON.3 | Data backup concept created | Backup concept | F | Backup documentation | - | - | Anna Schmidt | - |
-| CON.3 | Backup tests performed | Backup process | P | Test protocols | Tests not regular | Establish quarterly backup tests | Anna Schmidt | [TODO] |
-| CON.6 | Deletion concept created | Deletion concept | N | - | No deletion concept exists | Create deletion concept | Thomas Weber | [TODO] |
+| CON.1 | Crypto concept created | Crypto concept | N | - | No crypto concept exists | Create crypto concept | [TODO] | [TODO] |
+| CON.3 | Data backup concept created | Backup concept | F | Backup documentation | - | - | [TODO] | - |
+| CON.3 | Backup tests performed | Backup process | P | Test protocols | Tests not regular | Establish quarterly backup tests | [TODO] | [TODO] |
+| CON.6 | Deletion concept created | Deletion concept | N | - | No deletion concept exists | Create deletion concept | [TODO] | [TODO] |
 
 ### 3.3 Operations (OPS)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| OPS.1.1.2 | Administration concept | IT administration | P | Admin guideline | Privileged Access Management missing | Implement PAM solution | Anna Schmidt | [TODO] |
-| OPS.1.1.3 | Patch process established | Patch management | F | Patch documentation | - | - | Anna Schmidt | - |
-| OPS.1.1.3 | Patch SLAs defined | Patch management | P | SLA document | Critical patches > 30 days | Reduce SLA to 7 days | Anna Schmidt | [TODO] |
-| OPS.1.1.4 | Malware protection implemented | All systems | F | Antivirus solution | - | - | Anna Schmidt | - |
-| OPS.1.1.5 | Logging activated | All systems | P | Log configuration | Central log collection missing | Implement SIEM | Anna Schmidt | [TODO] |
-| OPS.2.2 | Cloud security concept | Cloud services | N | - | No cloud security concept | Create cloud security concept | Thomas Weber | [TODO] |
+| OPS.1.1.2 | Administration concept | IT administration | P | Admin guideline | Privileged Access Management missing | Implement PAM solution | [TODO] | [TODO] |
+| OPS.1.1.3 | Patch process established | Patch management | F | Patch documentation | - | - | [TODO] | - |
+| OPS.1.1.3 | Patch SLAs defined | Patch management | P | SLA document | Critical patches > 30 days | Reduce SLA to 7 days | [TODO] | [TODO] |
+| OPS.1.1.4 | Malware protection implemented | All systems | F | Antivirus solution | - | - | [TODO] | - |
+| OPS.1.1.5 | Logging activated | All systems | P | Log configuration | Central log collection missing | Implement SIEM | [TODO] | [TODO] |
+| OPS.2.2 | Cloud security concept | Cloud services | N | - | No cloud security concept | Create cloud security concept | [TODO] | [TODO] |
 
 ### 3.4 Detection and Response (DER)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| DER.1 | Detection established | Monitoring | P | Monitoring tools | SIEM missing | Implement SIEM | Anna Schmidt | [TODO] |
-| DER.2.1 | Incident response process | Incident management | P | IR guideline | No incident response exercises | Establish annual IR exercise | Thomas Weber | [TODO] |
-| DER.2.2 | Forensics preparation | Forensics | N | - | No forensics preparation | Create forensics concept | Thomas Weber | [TODO] |
+| DER.1 | Detection established | Monitoring | P | Monitoring tools | SIEM missing | Implement SIEM | [TODO] | [TODO] |
+| DER.2.1 | Incident response process | Incident management | P | IR guideline | No incident response exercises | Establish annual IR exercise | [TODO] | [TODO] |
+| DER.2.2 | Forensics preparation | Forensics | N | - | No forensics preparation | Create forensics concept | [TODO] | [TODO] |
 
 ### 3.5 Applications (APP)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
 | APP.3.1 | Secure web application development | [TODO: Web application] | P | SDLC process | SAST/DAST missing | Integrate security testing | [TODO] | [TODO] |
-| APP.3.2 | Web server hardening | [TODO: Web server] | F | Hardening checklist | - | - | Anna Schmidt | - |
-| APP.4.3 | Database hardening | [TODO: Database] | P | DB configuration | Encryption at rest missing | Activate TDE | Anna Schmidt | [TODO] |
+| APP.3.2 | Web server hardening | [TODO: Web server] | F | Hardening checklist | - | - | [TODO] | - |
+| APP.4.3 | Database hardening | [TODO: Database] | P | DB configuration | Encryption at rest missing | Activate TDE | [TODO] | [TODO] |
 
 ### 3.6 IT Systems (SYS)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| SYS.1.1 | Server hardening | {{ netbox.device.server_001 }} | F | Hardening baseline | - | - | Anna Schmidt | - |
-| SYS.1.3 | Linux hardening | [TODO: Linux server] | P | CIS Benchmark | Not all CIS controls implemented | Complete CIS implementation | Anna Schmidt | [TODO] |
-| SYS.1.5 | Virtualization security | [TODO: VMware] | P | VMware configuration | Network segmentation insufficient | Implement microsegmentation | Anna Schmidt | [TODO] |
-| SYS.2.1 | Client hardening | Workstations | P | GPO configuration | BitLocker not comprehensive | Activate BitLocker on all clients | Anna Schmidt | [TODO] |
-| SYS.3.2.1 | Mobile device management | Mobile devices | N | - | No MDM exists | Implement MDM solution | Anna Schmidt | [TODO] |
+| SYS.1.1 | Server hardening | [[ netbox.device.server_001 ]] | F | Hardening baseline | - | - | [TODO] | - |
+| SYS.1.3 | Linux hardening | [TODO: Linux server] | P | CIS Benchmark | Not all CIS controls implemented | Complete CIS implementation | [TODO] | [TODO] |
+| SYS.1.5 | Virtualization security | [TODO: VMware] | P | VMware configuration | Network segmentation insufficient | Implement microsegmentation | [TODO] | [TODO] |
+| SYS.2.1 | Client hardening | Workstations | P | GPO configuration | BitLocker not comprehensive | Activate BitLocker on all clients | [TODO] | [TODO] |
+| SYS.3.2.1 | Mobile device management | Mobile devices | N | - | No MDM exists | Implement MDM solution | [TODO] | [TODO] |
 
 ### 3.7 Networks and Communication (NET)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| NET.1.1 | Network segmentation | Network architecture | P | Network diagram | Segmentation insufficient | Implement microsegmentation | Anna Schmidt | [TODO] |
-| NET.1.2 | Network monitoring | Network management | F | Monitoring tools | - | - | Anna Schmidt | - |
-| NET.3.1 | Router/switch hardening | Network devices | P | Configuration evidence | SNMP v3 not everywhere | SNMP v3 comprehensive | Anna Schmidt | [TODO] |
-| NET.3.2 | Firewall ruleset | Firewall | F | Firewall rules | - | - | Anna Schmidt | - |
-| NET.3.3 | VPN security | VPN | P | VPN configuration | MFA for VPN missing | Implement MFA for VPN | Anna Schmidt | [TODO] |
-| NET.2.1 | WLAN security | WLAN | F | WLAN configuration | - | - | Anna Schmidt | - |
+| NET.1.1 | Network segmentation | Network architecture | P | Network diagram | Segmentation insufficient | Implement microsegmentation | [TODO] | [TODO] |
+| NET.1.2 | Network monitoring | Network management | F | Monitoring tools | - | - | [TODO] | - |
+| NET.3.1 | Router/switch hardening | Network devices | P | Configuration evidence | SNMP v3 not everywhere | SNMP v3 comprehensive | [TODO] | [TODO] |
+| NET.3.2 | Firewall ruleset | Firewall | F | Firewall rules | - | - | [TODO] | - |
+| NET.3.3 | VPN security | VPN | P | VPN configuration | MFA for VPN missing | Implement MFA for VPN | [TODO] | [TODO] |
+| NET.2.1 | WLAN security | WLAN | F | WLAN configuration | - | - | [TODO] | - |
 
 ### 3.8 Infrastructure (INF)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| INF.1 | Building security | {{ meta.organization.primary_location }} | P | Security concept | Visitor management insufficient | Visitor management system | [TODO: Facility] | [TODO] |
+| INF.1 | Building security | [TODO] | P | Security concept | Visitor management insufficient | Visitor management system | [TODO: Facility] | [TODO] |
 | INF.2 | Data center security | Data center | F | DC documentation | - | - | [TODO: Facility] | - |
 
 ## 4. Summary and Statistics
@@ -247,21 +250,18 @@ The basic security check is repeated:
 - When significant changes occur in IT infrastructure
 - At least annually as part of the ISMS review
 
-**Responsible:** Thomas Weber (ISB)  
-**Next Check:** {{ meta.document.next_review }}
+**Responsible:** [TODO] (ISB)  
+**Next Check:** [TODO]
 
 ## 8. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Executive Management | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT Management | [TODO] | [TODO] | Draft |
+| Executive Management | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 8: Basic Security Check)
 - BSI IT-Grundschutz Compendium
-
 

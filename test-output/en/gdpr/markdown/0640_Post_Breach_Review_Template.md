@@ -1,11 +1,17 @@
 # Post-Breach Review Template
 
-**Document-ID:** 0640  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0640
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -25,8 +31,6 @@
 | [TODO] | [TODO] | [TODO] |
 | [TODO] | [TODO] | [TODO] |
 
----
-
 ## 1. Incident Summary
 
 **Brief Description:**  
@@ -43,8 +47,6 @@
 - Data Categories: [TODO]
 - Risk Level: [TODO: Low/Medium/High]
 
----
-
 ## 2. Timeline Analysis
 
 | Time | Event | Responsible | Duration to Next Step |
@@ -60,8 +62,6 @@
 
 **Analysis:**  
 [TODO: Were response times appropriate? Where were delays?]
-
----
 
 ## 3. What Went Well? (Positives)
 
@@ -88,8 +88,6 @@
 **Positive Aspects:**
 - [TODO: e.g., Complete documentation]
 - [TODO: e.g., Breach register up to date]
-
----
 
 ## 4. What Went Poorly? (Areas for Improvement)
 
@@ -129,8 +127,6 @@
 **Causes:**
 - [TODO: Why did these problems occur?]
 
----
-
 ## 5. Root Cause Analysis
 
 **Primary Cause:**  
@@ -158,8 +154,6 @@
 5. Why [Answer from 4]?  
    [TODO: Root Cause]
 
----
-
 ## 6. Lessons Learned
 
 ### 6.1 Technical Insights
@@ -181,8 +175,6 @@
 
 - [TODO: e.g., Templates need improvement]
 - [TODO: e.g., Optimize communication channels]
-
----
 
 ## 7. Improvement Measures
 
@@ -206,8 +198,6 @@
 |---------|-------------|----------|----------|--------|
 | [TODO: e.g., Implement new tools] | [TODO] | [TODO: YYYY-MM-DD] | Low | [ ] Open |
 | [TODO: e.g., Adjust organizational structure] | [TODO] | [TODO: YYYY-MM-DD] | Low | [ ] Open |
-
----
 
 ## 8. Cost-Benefit Analysis
 
@@ -233,8 +223,6 @@
 
 [TODO: Describe expected benefits of measures, e.g., risk reduction, faster response times]
 
----
-
 ## 9. Response Plan Adjustments
 
 **Required Changes to Response Plan:**
@@ -244,8 +232,6 @@
 | [TODO: e.g., Contacts] | [TODO: e.g., Add new contacts] | [TODO] |
 | [TODO: e.g., Escalation] | [TODO: e.g., Adjust thresholds] | [TODO] |
 
----
-
 ## 10. Training and Awareness Needs
 
 **Identified Training Needs:**
@@ -254,8 +240,6 @@
 |--------------|-------|--------|-----------|
 | [TODO: e.g., IT Team] | [TODO: e.g., Incident Response] | [TODO: Workshop] | [TODO: Q2 2024] |
 | [TODO: e.g., All Staff] | [TODO: e.g., Data Breach Awareness] | [TODO: E-Learning] | [TODO: Q2 2024] |
-
----
 
 ## 11. Follow-up and Monitoring
 
@@ -267,8 +251,6 @@
 | Monthly review meeting | [TODO] | [TODO: Every 1st Monday] |
 | Progress report to management | [TODO] | [TODO: YYYY-MM-DD] |
 | Follow-up review (3 months) | [TODO] | [TODO: YYYY-MM-DD] |
-
----
 
 ## 12. Closure and Approval
 
@@ -283,10 +265,9 @@
 | Data Protection Officer | [TODO] | [TODO] | _____________ |
 | Management | [TODO] | [TODO] | _____________ |
 
----
-
 **Appendices:**
 - [ ] Detailed timeline
 - [ ] Technical report
 - [ ] Communication materials
 - [ ] Action plan (detailed)
+

@@ -1,14 +1,17 @@
 # Training and Awareness – Program
 
-**Document ID:** 0600  
-**Document Type:** Program  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0600
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 The training and awareness program of **AdminSend GmbH** ensures that all employees have the required security knowledge.
 
-**Responsible:** Thomas Weber (CISO)
+**Responsible:** [TODO] (CISO)
 
 ## 2. Target Groups
 
@@ -34,11 +37,11 @@ The training and awareness program of **AdminSend GmbH** ensures that all employ
 
 | Training | Target Group | Frequency | Duration | Content | Evidence | Owner |
 |---|---|---|---|---|---|---|
-| Information Security Fundamentals | All | Annually | 1h | Policies, Phishing, Passwords, Incident Reporting | LMS Certificate | Thomas Weber |
+| Information Security Fundamentals | All | Annually | 1h | Policies, Phishing, Passwords, Incident Reporting | LMS Certificate | [TODO] |
 | Onboarding Security | New Employees | Upon Entry | 30min | Fundamentals, Policies | Attendance List | HR |
-| Phishing Simulation | All | Quarterly | 10min | Phishing Recognition | Click Rate | Thomas Weber |
-| Admin Training | IT Admins | Annually | 4h | Privileged Access, Hardening, Logging | Attendance List | Anna Schmidt |
-| Secure Coding | Developers | Annually | 8h | OWASP Top 10, SAST/DAST | Attendance List | Anna Schmidt |
+| Phishing Simulation | All | Quarterly | 10min | Phishing Recognition | Click Rate | [TODO] |
+| Admin Training | IT Admins | Annually | 4h | Privileged Access, Hardening, Logging | Attendance List | [TODO] |
+| Secure Coding | Developers | Annually | 8h | OWASP Top 10, SAST/DAST | Attendance List | [TODO] |
 | [TODO: Additional Training] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Effectiveness Measurement
@@ -80,13 +83,10 @@ The training and awareness program of **AdminSend GmbH** ensures that all employ
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| CISO | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| HR | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| CISO | [TODO] | [TODO] | Draft |
+| HR | [TODO] | [TODO] | Draft |
 
 **References:**
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: ORP.3 Awareness and Training
-
 

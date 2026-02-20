@@ -149,5 +149,3 @@ See `FRAMEWORK_MAPPING.md` for a detailed mapping of templates to ISO 31000 comp
 ## License
 
 These templates are based on ISO 31000:2018. The standard itself is copyrighted.
-||---|
-| 1.0 | 2024 | Initial version based on ISO 31000:2018 |

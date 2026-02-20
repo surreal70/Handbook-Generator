@@ -1,11 +1,17 @@
 # TOE Interfaces
 
-**Document-ID:** 0120  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0120
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -376,11 +382,10 @@ The TOE provides the following interface categories:
 - [TODO: Integration Guide]: [TODO: Location]
 - [TODO: Protocol Documentation]: [TODO: Location]
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders with TOE-specific information
 2. Create detailed interface diagrams
 3. Document all security mechanisms for each interface
 4. Verify consistency with TOE architecture (Template 0130)
 5. Ensure all interfaces are fully documented
+

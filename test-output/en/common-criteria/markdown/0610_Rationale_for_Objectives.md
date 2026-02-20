@@ -1,11 +1,17 @@
 # Rationale for Security Objectives
 
-**Document-ID:** 0610  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0610
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -306,8 +312,6 @@ This chapter provides the rationale demonstrating that the defined security obje
 - **Section 0300:** Security Objectives
 - **Section 0320:** Security Objectives Coverage Matrix
 
----
-
 **Next Steps:**
 1. Document the rationale for each threat
 2. Document the rationale for each OSP
@@ -316,3 +320,4 @@ This chapter provides the rationale demonstrating that the defined security obje
 5. Conduct completeness and adequacy analyses
 6. Identify and address gaps
 7. Have the rationale reviewed by evaluators
+

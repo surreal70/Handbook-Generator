@@ -1,18 +1,31 @@
 # Risk Register (Template)
 
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0080  
 **Document Type:** ISMS Register/Template  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 6.1.2  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose and Instructions
 
@@ -51,9 +64,9 @@ The risk register documents all identified information security risks within the
 
 | Risk ID | Asset/Process | Threat | Vulnerability | Impact (1-5) | Likelihood (1-5) | Score | Risk Level | Risk Owner | Treatment | Measure/Control | Status | Target Date | Remarks |
 |---------|---------------|--------|---------------|--------------|------------------|-------|------------|------------|------------|-----------------|--------|-------------|---------|
-| R-001 | {{ netbox.device.core_switch.name }} | Hardware failure | No redundancy | 4 | 3 | 12 | Medium | Anna Schmidt | Mitigate | Procure redundant switch | Open | 2026-06-30 | Budget approved |
-| R-002 | Customer data (GDPR) | Ransomware | Insufficient backups | 5 | 4 | 20 | High | Thomas Weber | Mitigate | Implement immutable backups | In Progress | 2026-03-31 | See M-002 |
-| R-003 | Email system | Phishing | Missing MFA | 4 | 4 | 16 | High | Anna Schmidt | Mitigate | MFA for all users | In Progress | 2026-02-28 | 80% complete |
+| R-001 | [[ netbox.device.core_switch.name ]] | Hardware failure | No redundancy | 4 | 3 | 12 | Medium | [TODO] | Mitigate | Procure redundant switch | Open | 2026-06-30 | Budget approved |
+| R-002 | Customer data (GDPR) | Ransomware | Insufficient backups | 5 | 4 | 20 | High | [TODO] | Mitigate | Implement immutable backups | In Progress | 2026-03-31 | See M-002 |
+| R-003 | Email system | Phishing | Missing MFA | 4 | 4 | 16 | High | [TODO] | Mitigate | MFA for all users | In Progress | 2026-02-28 | 80% complete |
 | R-004 | Development environment | Secrets in code | No secret scanning | 3 | 3 | 9 | Medium | Dev Lead | Mitigate | Secret scanning tool | Planned | 2026-04-30 | Tool evaluation ongoing |
 | R-005 | Remote access | Unauthorized access | Weak VPN configuration | 4 | 2 | 8 | Medium | IT Operations | Mitigate | VPN hardening | Open | 2026-05-31 | - |
 
@@ -65,8 +78,8 @@ The risk register documents all identified information security risks within the
 
 | Risk ID | Asset/Process | Threat | Vulnerability | Score | Risk Level | Risk Owner | Accepted By | Acceptance Date | Valid Until | Justification | Review Status |
 |---------|---------------|--------|---------------|-------|-------------|---------------|--------------|----------------|-------------|---------------|---------------|
-| R-010 | Legacy system XYZ | Unpatched vulnerabilities | System being phased out | 9 | Medium | Anna Schmidt | Thomas Weber | 2026-01-15 | 2026-06-30 | System will be decommissioned on 30.06.2026 | Active |
-| R-011 | Test environment | Missing encryption | No production data | 6 | Low | Dev Lead | Thomas Weber | 2026-01-20 | 2027-01-20 | Test environment contains only synthetic data | Active |
+| R-010 | Legacy system XYZ | Unpatched vulnerabilities | System being phased out | 9 | Medium | [TODO] | [TODO] | 2026-01-15 | 2026-06-30 | System will be decommissioned on 30.06.2026 | Active |
+| R-011 | Test environment | Missing encryption | No production data | 6 | Low | Dev Lead | [TODO] | 2026-01-20 | 2027-01-20 | Test environment contains only synthetic data | Active |
 
 [TODO: Document accepted risks]
 
@@ -289,18 +302,15 @@ The risk register documents all identified information security risks within the
 - **ISO/IEC 27005:2022** - Information security risk management
 - **NIST SP 800-30** - Guide for Conducting Risk Assessments
 
----
-
 ## Change History
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | {{ meta.document.date }} | Thomas Weber | Initial version | {{ meta.management.ceo }} |
-
----
+| 1.0 | [TODO] | [TODO] | Initial version | {{ meta-handbook.management_ceo }} |
 
 **Approved by:**  
-Thomas Weber, CISO  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (Quarterly)
+**Next Review:** [TODO] (Quarterly)
+

@@ -1,14 +1,17 @@
 # Richtlinie: MDM, Bring Your Own Device und Remote Access
 
-**Dokument-ID:** 0510  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0500_Policy_Mobile_Device_und_Remote_Work.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.6.7, A.8.9  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0510
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Diese Richtlinie konkretisiert die `0500_Policy_Mobile_Device_und_Remote_Work.md
 
 ### 2.1 MDM-System
 
-**Plattform:** {{ meta.mdm.system }} (z.B. Microsoft Intune, Jamf, MobileIron)
+**Plattform:** {{ meta-handbook.mdm_system }} (z.B. Microsoft Intune, Jamf, MobileIron)
 
 **Verwaltete Geräte:**
 - Unternehmenseigene Smartphones und Tablets
@@ -122,7 +125,7 @@ Diese Richtlinie konkretisiert die `0500_Policy_Mobile_Device_und_Remote_Work.md
 
 ### 4.1 VPN-Zugriff
 
-**VPN-System:** {{ meta.network.vpn_solution }}
+**VPN-System:** {{ meta-handbook.network_vpn_solution }}
 
 **Anforderungen:**
 - Multi-Faktor-Authentifizierung (MFA)
@@ -199,8 +202,8 @@ Diese Richtlinie konkretisiert die `0500_Policy_Mobile_Device_und_Remote_Work.md
 ### 6.1 Genehmigte Apps
 
 **Unternehmens-Apps:**
-- E-Mail ({{ meta.email.mobile_app }})
-- Collaboration ({{ meta.collaboration.mobile_app }})
+- E-Mail ({{ meta-handbook.email_mobile_app }})
+- Collaboration ({{ meta-handbook.collaboration_mobile_app }})
 - VPN-Client
 - Authenticator-App
 
@@ -221,7 +224,7 @@ Diese Richtlinie konkretisiert die `0500_Policy_Mobile_Device_und_Remote_Work.md
 ### 7.1 Geräteverlust
 
 **Sofortmaßnahmen:**
-1. Meldung an IT-Support ({{ meta.support.phone }})
+1. Meldung an IT-Support ({{ meta-handbook.support_phone }})
 2. Remote Wipe auslösen (innerhalb 1 Stunde)
 3. Passwörter ändern
 4. Incident-Ticket erstellen
@@ -265,7 +268,6 @@ Diese Richtlinie konkretisiert die `0500_Policy_Mobile_Device_und_Remote_Work.md
 - **ISO/IEC 27001:2022 Annex A.8.9** - Configuration management
 - **NIST SP 800-124** - Guidelines for Managing the Security of Mobile Devices
 
----
+**Genehmigt durch:** [TODO], CISO  
+**Nächster Review:** [TODO]
 
-**Genehmigt durch:** Thomas Weber, CISO  
-**Nächster Review:** {{ meta.document.next_review }}

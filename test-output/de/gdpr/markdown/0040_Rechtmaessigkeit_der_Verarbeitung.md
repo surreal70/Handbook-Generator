@@ -1,11 +1,17 @@
 # Rechtmäßigkeit der Verarbeitung
 
-**Dokument-ID:** 0040  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Rechtsgrundlagen für die Verarbeitung personenbezogener Daten in der {{ meta.organization }} gemäß Art. 6 DSGVO. Jede Verarbeitung muss auf mindestens einer dieser Rechtsgrundlagen basieren.
+Dieses Dokument beschreibt die Rechtsgrundlagen für die Verarbeitung personenbezogener Daten in der AdminSend GmbH gemäß Art. 6 DSGVO. Jede Verarbeitung muss auf mindestens einer dieser Rechtsgrundlagen basieren.
 
 ## Rechtsgrundlagen gemäß Art. 6 Abs. 1 DSGVO
 
@@ -171,11 +177,10 @@ Für jede Verarbeitungstätigkeit muss die Rechtsgrundlage dokumentiert werden:
 - **Informationspflichten (Art. 13-14):** Mitteilung der Rechtsgrundlage
 - **Berechtigtes Interesse:** Interessenabwägungstest
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie die Rechtsgrundlage für jede Verarbeitungstätigkeit
 2. Dokumentieren Sie Einwilligungen und deren Verwaltung
 3. Führen Sie Interessenabwägungen für berechtigte Interessen durch
 4. Aktualisieren Sie das Verzeichnis von Verarbeitungstätigkeiten
 5. Schulen Sie Mitarbeiter zur Identifikation von Rechtsgrundlagen
+

@@ -1,14 +1,17 @@
 # Guideline: Backup, Restore and Regular Tests
 
-**Document ID:** 0430  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0420_Policy_Backup_and_Recovery.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.8.13  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0430
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -65,12 +68,12 @@ This guideline implements the `0420_Policy_Backup_and_Recovery.md` and defines:
 ### 3.1 Backup Systems
 
 **On-Premises:**
-- **Backup Server:** {{ meta.backup.server }}
-- **Backup Software:** {{ meta.backup.software }} (e.g., Veeam, Commvault)
-- **Storage:** {{ meta.backup.storage }} (disk, tape)
+- **Backup Server:** {{ meta-handbook.backup_server }}
+- **Backup Software:** {{ meta-handbook.backup_software }} (e.g., Veeam, Commvault)
+- **Storage:** {{ meta-handbook.backup_storage }} (disk, tape)
 
 **Cloud Backup:**
-- **Cloud Provider:** {{ meta.cloud.backup_provider }} (e.g., Azure Backup, AWS Backup)
+- **Cloud Provider:** {{ meta-handbook.cloud_backup_provider }} (e.g., Azure Backup, AWS Backup)
 - **Encryption:** AES-256
 - **Geo-Redundancy:** Enabled
 
@@ -102,12 +105,12 @@ This guideline implements the `0420_Policy_Backup_and_Recovery.md` and defines:
 - **Daily:** 7 days
 - **Weekly:** 4 weeks
 - **Monthly:** 12 months
-- **Yearly:** {{ meta.retention.backup_years }} years
+- **Yearly:** {{ meta-handbook.retention_backup_years }} years
 
 **Compliance Backups:**
 - Financial data: 10 years
 - Personnel data: Per GDPR
-- Emails: {{ meta.retention.email_years }} years
+- Emails: {{ meta-handbook.retention_email_years }} years
 
 ## 4. Restore Processes
 
@@ -295,7 +298,7 @@ This guideline implements the `0420_Policy_Backup_and_Recovery.md` and defines:
 - Configuration changes
 - Access to backup system
 
-**Retention:** {{ meta.retention.log_years }} years
+**Retention:** {{ meta-handbook.retention_log_years }} years
 
 ## 8. Compliance and Audit
 
@@ -326,7 +329,6 @@ This guideline implements the `0420_Policy_Backup_and_Recovery.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.8.13** - Information backup
 - **NIST SP 800-34** - Contingency Planning Guide
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

@@ -1,18 +1,31 @@
 # Policy: Change and Release Management
 
+**Document-ID:** [FRAMEWORK]-0360
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0360  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.32 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Systems:** All IT systems, applications, infrastructure, networks, cloud services
 - **Change Types:** Standard changes, normal changes, emergency changes
 - **Environments:** Production, test, development
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -78,9 +91,9 @@ Changes with security relevance require a security review by the security team b
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Change Manager:** {{ meta.it.change_manager }}
-- **CAB Chair:** {{ meta.it.cab_chair }}
+- **Policy Owner:** [TODO] (CISO)
+- **Change Manager:** {{ meta-handbook.it_change_manager }}
+- **CAB Chair:** {{ meta-handbook.it_cab_chair }}
 - **Implementation Responsible:** IT Operations, Development
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -154,10 +167,9 @@ Exceptions to this policy are only permitted in justified cases:
 - **ITIL 4** - Change Enablement
 - **ISO/IEC 20000** - IT Service Management
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

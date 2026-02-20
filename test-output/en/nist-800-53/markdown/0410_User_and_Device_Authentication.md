@@ -1,13 +1,17 @@
 # User and Device Authentication
 
-**Document ID:** NIST-0410  
-**Control Family:** Identification and Authentication (IA)  
-**Controls:** IA-2, IA-3, IA-4, IA-6, IA-8  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0410
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -139,13 +143,5 @@ This document covers user and device authentication controls:
 **Assessment Method:** Examine, Interview, Test  
 **Assessment Status:** [TODO: Satisfied / Other than Satisfied / Not Applicable]  
 **Findings:** [TODO: Description]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

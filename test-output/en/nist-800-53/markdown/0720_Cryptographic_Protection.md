@@ -1,13 +1,17 @@
 # Cryptographic Protection
 
-**Document ID:** NIST-0720  
-**Control Family:** System and Communications Protection (SC)  
-**Controls:** SC-8, SC-12, SC-13, SC-17, SC-28  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0720
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -184,13 +188,5 @@ This document covers cryptographic protection controls:
 **Assessment Method:** Examine, Interview, Test  
 **Assessment Status:** [TODO: Satisfied / Other than Satisfied / Not Applicable]  
 **Findings:** [TODO: Description]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

@@ -1,11 +1,17 @@
 # TOE Overview
 
-**Dokument-ID:** 0020  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -194,10 +200,9 @@ Die Umgebung muss bereitstellen:
 - [TODO: Design-Spezifikation]
 - [TODO: Sicherheitsarchitektur]
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Informationen
 2. Erstelle Architektur- und Datenflussdiagramme
 3. Überprüfe die Konsistenz mit der detaillierten TOE-Beschreibung
 4. Stelle sicher, dass alle Schnittstellen dokumentiert sind
+

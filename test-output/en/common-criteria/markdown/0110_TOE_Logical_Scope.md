@@ -1,11 +1,17 @@
 # TOE Logical Scope
 
-**Document-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -331,11 +337,10 @@ The logical boundaries were defined as follows:
 - Maintenance: [TODO: How secure state is maintained]
 - Recovery: [TODO: Recovery after failure]
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders with TOE-specific information
 2. Create detailed functional architecture diagrams
 3. Document all security mechanisms completely
 4. Verify consistency with physical scope (Template 0100)
 5. Ensure all security functions are documented
+

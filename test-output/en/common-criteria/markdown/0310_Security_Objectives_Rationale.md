@@ -1,11 +1,17 @@
 # Security Objectives Rationale
 
-**Document-ID:** 0310  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -15,7 +21,7 @@
 
 ## 1. Introduction
 
-This document provides the rationale (justification) for the security objectives of the TOE **{{ meta.toe_name }}** and its operational environment. The rationale demonstrates that the defined security objectives are sufficient and appropriate to:
+This document provides the rationale (justification) for the security objectives of the TOE **{{ meta-handbook.toe_name }}** and its operational environment. The rationale demonstrates that the defined security objectives are sufficient and appropriate to:
 
 - Counter all identified threats
 - Implement all organizational security policies (OSPs)
@@ -354,12 +360,4 @@ After the rationale for security objectives:
 - Template 0300: Security Objectives
 - Template 0320: Security Objectives Coverage Matrix
 - Template 0400-0450: Security Requirements
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.owner }} | Initial version |
 

@@ -1,14 +1,17 @@
 # Policy: Sichere Softwareentwicklung
 
-**Dokument-ID:** 0360  
-**Dokumenttyp:** Policy (abstrakt)  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0360
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -18,7 +21,7 @@
 
 Diese Policy definiert die Grundsätze für Sichere Softwareentwicklung bei **AdminSend GmbH**.
 
-**Verantwortlich:** Thomas Weber (ISB)
+**Verantwortlich:** [TODO] (ISB)
 
 [TODO: Spezifische Zielsetzung ergänzen]
 
@@ -27,7 +30,7 @@ Diese Policy definiert die Grundsätze für Sichere Softwareentwicklung bei **Ad
 **Diese Policy gilt für:**
 - Alle Mitarbeitenden von AdminSend GmbH
 - Alle IT-Systeme und Anwendungen
-- Alle Standorte: {{ meta.organization.locations }}
+- Alle Standorte: [TODO]
 - Externe Dienstleister mit Zugriff auf Systeme
 
 **Ausnahmen:**
@@ -47,8 +50,8 @@ Diese Policy definiert die Grundsätze für Sichere Softwareentwicklung bei **Ad
 
 | Rolle | Verantwortung | Name |
 |---|---|---|
-| **Policy Owner** | Gesamtverantwortung für Policy | Thomas Weber |
-| **Umsetzungsverantwortliche** | Technische Umsetzung | Anna Schmidt |
+| **Policy Owner** | Gesamtverantwortung für Policy | [TODO] |
+| **Umsetzungsverantwortliche** | Technische Umsetzung | [TODO] |
 | **Kontrolle/Audit** | Überwachung der Einhaltung | [TODO: Internal Audit] |
 | **Alle Mitarbeitenden** | Einhaltung der Policy | Alle |
 
@@ -66,7 +69,7 @@ Diese Policy wird konkretisiert durch:
 
 **Review-Intervall:**
 - Diese Policy wird jährlich oder bei wesentlichen Änderungen überprüft
-- **Nächster Review:** {{ meta.document.next_review }}
+- **Nächster Review:** [TODO]
 
 ## 7. Konsequenzen bei Verstößen
 
@@ -80,15 +83,12 @@ Verstöße gegen diese Policy können zu folgenden Maßnahmen führen:
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | Thomas Weber | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | Anna Schmidt | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Geschäftsführung | Max Mustermann | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | [TODO] | [TODO] | Draft |
+| IT-Leitung | [TODO] | [TODO] | Draft |
+| Geschäftsführung | [TODO] | [TODO] | Draft |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium
 - BSI Standards 200-1, 200-2, 200-3
 - Dokument 0370: Richtlinie: Secure SDLC Code Reviews SAST DAST Secrets
-
 

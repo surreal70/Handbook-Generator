@@ -1,18 +1,31 @@
 # Management Review (Template)
 
+**Document-ID:** [FRAMEWORK]-0140
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0140  
 **Document Type:** ISMS Evidence/Template  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 9.3  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Management Review Overview
 
@@ -26,18 +39,18 @@
 
 | Name | Role | Present |
 |------|------|---------|
-| {{ meta.management.ceo }} | Management (Chair) | ✓ / ✗ |
-| Thomas Weber | CISO | ✓ / ✗ |
-| Anna Schmidt | CIO | ✓ / ✗ |
+| {{ meta-handbook.management_ceo }} | Management (Chair) | ✓ / ✗ |
+| [TODO] | CISO | ✓ / ✗ |
+| [TODO] | CIO | ✓ / ✗ |
 | [TODO] | CFO | ✓ / ✗ |
 | [TODO] | Department Representatives | ✓ / ✗ |
-| {{ meta.audit.manager }} | Internal Audit (Advisory) | ✓ / ✗ |
+| {{ meta-handbook.audit_manager }} | Internal Audit (Advisory) | ✓ / ✗ |
 
 ### 1.2 Scope
 
 This management review encompasses:
 - Entire ISMS in scope (see `0020_ISMS_Scope.md`)
-- All locations: {{ netbox.site.name }} and others
+- All locations: [[ netbox.site.name ]] and others
 - Review period: [TODO]
 
 ## 2. Inputs (Clause 9.3.2)
@@ -236,13 +249,13 @@ This management review encompasses:
 **ISMS Policy:**
 - Changes required: Yes / No
 - Description: [TODO]
-- Responsible: Thomas Weber
+- Responsible: [TODO]
 - Deadline: [TODO]
 
 **Security Objectives:**
 - New objectives: [TODO]
 - Adjustment of existing objectives: [TODO]
-- Responsible: Thomas Weber
+- Responsible: [TODO]
 - Deadline: [TODO]
 
 ### 3.2 Resources and Investments
@@ -281,7 +294,7 @@ This management review encompasses:
 - [TODO: New locations, systems, processes]
 - Impact on risk analysis: [TODO]
 - Impact on SoA: [TODO]
-- Responsible: Thomas Weber
+- Responsible: [TODO]
 - Deadline: [TODO]
 
 ### 3.6 Strategic Decisions
@@ -352,22 +365,19 @@ This management review encompasses:
 - **ISO/IEC 27001:2022** - Clause 9.3: Management review
 - **ISO/IEC 27002:2022** - Information security controls
 
----
-
 ## Change History
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | {{ meta.document.date }} | Thomas Weber | Initial version | {{ meta.management.ceo }} |
-
----
+| 1.0 | [TODO] | [TODO] | Initial version | {{ meta-handbook.management_ceo }} |
 
 **Recorded by:**  
-Thomas Weber, CISO  
+[TODO], CISO  
 Date: [TODO]
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: [TODO]
 
 **Next Review:** [TODO: Date] (Annually)
+

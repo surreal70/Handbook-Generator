@@ -1,14 +1,27 @@
 # Operating Concept and Processes
 
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Overview
 
 This document describes the operating concept and operational processes for the IT service. It defines operating models, process flows according to ITIL standards, interfaces to other processes, and escalation paths.
 
-**Service:** {{ meta.service_name }}  
-**Responsible:** Andreas Huemmer  
-**Version:** 1.0.0
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Version:** 0
 
 ## Operating Model
 
@@ -34,16 +47,14 @@ This document describes the operating concept and operational processes for the 
 ### Support Model
 
 **Support Tiers:**
-- **Level 1 (Service Desk):** Julia Becker - julia.becker@adminsend.de
-- **Level 2 (IT Operations):** Andreas Huemmer - andreas.huemmer@adminsend.de
+- **Level 1 (Service Desk):** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Level 2 (IT Operations):** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - **Level 3 (Specialist/Vendor):** [TODO: Specialist contact]
 
 **On-Call:**
 - **On-Call Rotation:** [TODO: Describe rotation schedule]
 - **Availability:** [TODO: Phone/Pager number]
 - **Response Time:** [TODO: e.g., 15 minutes]
-
----
 
 ## ITIL Processes
 
@@ -57,7 +68,7 @@ This document describes the operating concept and operational processes for the 
 - Demand Management
 - Business Relationship Management
 
-**Responsible:** Anna Schmidt
+**Responsible:** [TODO]
 
 ### Service Design
 
@@ -72,7 +83,7 @@ This document describes the operating concept and operational processes for the 
 - Information Security Management
 - Supplier Management
 
-**Responsible:** Andreas Huemmer
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Service Transition
 
@@ -85,7 +96,7 @@ This document describes the operating concept and operational processes for the 
 - Knowledge Management
 - Configuration Management (see Chapter 0090)
 
-**Responsible:** Andreas Huemmer
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Service Operation
 
@@ -98,7 +109,7 @@ This document describes the operating concept and operational processes for the 
 - Request Fulfillment
 - Access Management (see Chapter 0100)
 
-**Responsible:** Julia Becker (Level 1), Andreas Huemmer (Level 2)
+**Responsible:** {{ meta-organisation-roles.role_Service_Desk_Lead }} (Level 1), {{ meta-organisation-roles.role_IT_Operations_Manager }} (Level 2)
 
 ### Continual Service Improvement (CSI)
 
@@ -110,9 +121,7 @@ This document describes the operating concept and operational processes for the 
 - Process Improvement
 - Root Cause Analysis
 
-**Responsible:** Anna Schmidt
-
----
+**Responsible:** [TODO]
 
 ## Process Interfaces
 
@@ -126,7 +135,7 @@ This document describes the operating concept and operational processes for the 
 | **Configuration Management** | CI Updates → CMDB | Configuration Items | CMDB Manager |
 | **Capacity Management** | Capacity data → Planning | Performance Metrics | Capacity Manager |
 | **Availability Management** | Availability data → Reporting | Availability Reports | Availability Manager |
-| **Security Management** | Security Events → Operations | Security Incidents, Patches | Thomas Weber |
+| **Security Management** | Security Events → Operations | Security Incidents, Patches | [TODO] |
 | **Backup Management** | Backup Status → Operations | Backup Reports, Restore Requests | Backup Administrator |
 
 ### Interfaces to Business Processes
@@ -134,11 +143,9 @@ This document describes the operating concept and operational processes for the 
 | Business Process | Interface | Information Flow | Contact Person |
 |---|---|---|---|
 | **Procurement** | Hardware/Software Requirements | Orders, Deliveries | Procurement |
-| **Finance** | Budget and Costs | Cost Reports, Budget Requests | Maria Müller |
+| **Finance** | Budget and Costs | Cost Reports, Budget Requests | [TODO] |
 | **Compliance** | Audit Requirements | Audit Reports, Evidence | Compliance Officer |
 | **HR** | Employee Onboarding/Offboarding | Access Management | HR Department |
-
----
 
 ## Escalation Paths
 
@@ -147,18 +154,18 @@ This document describes the operating concept and operational processes for the 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 1: Service Desk                                        │
-│ Contact: Julia Becker                   │
-│ Email: julia.becker@adminsend.de                    │
-│ Phone: +49 89 12345678-111                    │
+│ Contact: {{ meta-organisation-roles.role_Service_Desk_Lead }}                   │
+│ Email: {{ meta-organisation-roles.role_Service_Desk_Lead_email }}                    │
+│ Phone: {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}                    │
 │ Escalate after: 30 minutes (P1), 2 hours (P2)               │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 2: IT Operations                                       │
-│ Contact: Andreas Huemmer               │
-│ Email: andreas.huemmer@adminsend.de                │
-│ Phone: +49 89 12345678-250                │
+│ Contact: {{ meta-organisation-roles.role_IT_Operations_Manager }}               │
+│ Email: {{ meta-organisation-roles.role_IT_Operations_Manager_email }}                │
+│ Phone: {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}                │
 │ Escalate after: 1 hour (P1), 4 hours (P2)                   │
 └────────────────────┬────────────────────────────────────────┘
                      │
@@ -177,24 +184,24 @@ This document describes the operating concept and operational processes for the 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 1: IT Operations Manager                               │
-│ Contact: Andreas Huemmer               │
-│ Email: andreas.huemmer@adminsend.de                │
+│ Contact: {{ meta-organisation-roles.role_IT_Operations_Manager }}               │
+│ Email: {{ meta-organisation-roles.role_IT_Operations_Manager_email }}                │
 │ Escalate for: Critical Incidents (P1), SLA Violation        │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 2: Chief Information Officer (CIO)                     │
-│ Contact: Anna Schmidt                                 │
-│ Email: anna.schmidt@adminsend.de                                  │
+│ Contact: [TODO]                                 │
+│ Email: {{ meta-organisation-roles.role_CIO_email }}                                  │
 │ Escalate for: Major Incidents, Business Impact              │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 3: Chief Executive Officer (CEO)                       │
-│ Contact: Max Mustermann                                 │
-│ Email: max.mustermann@adminsend.de                                  │
+│ Contact: [TODO]                                 │
+│ Email: {{ meta-organisation-roles.role_CEO_email }}                                  │
 │ Escalate for: Business-critical outages                     │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -207,8 +214,6 @@ This document describes the operating concept and operational processes for the 
 | **P2 (High)** | After 2h (L1→L2), 4h (L2→L3) | After 4 hours to IT Ops Manager | 4 hours |
 | **P3 (Medium)** | After 8h (L1→L2), 1 day (L2→L3) | After 1 day to IT Ops Manager | 1 day |
 | **P4 (Low)** | After 2 days (L1→L2) | No automatic escalation | 2 days |
-
----
 
 ## Operational Process Overview
 
@@ -252,8 +257,6 @@ This document describes the operating concept and operational processes for the 
 - [ ] Compliance check
 - [ ] Vendor review
 
----
-
 ## Process Metrics and KPIs
 
 ### Operating Metrics
@@ -276,8 +279,6 @@ This document describes the operating concept and operational processes for the 
 | **Change Lead Time** | ≤ 5 days | Per Change | Change Manager |
 | **Problem Resolution Time** | ≤ 30 days | Per Problem | Problem Manager |
 | **SLA Compliance** | ≥ 98% | Monthly | Service Manager |
-
----
 
 ## Continuous Improvement
 
@@ -306,8 +307,6 @@ This document describes the operating concept and operational processes for the 
 | CSI-001 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | CSI-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 ## Documentation and Knowledge Management
 
 ### Documentation Repository
@@ -326,8 +325,6 @@ This document describes the operating concept and operational processes for the 
 - **Knowledge Sharing:** Team meetings and workshops
 - **Lessons Learned:** Post-incident reviews
 
----
-
 ## Compliance and Governance
 
 ### Relevant Standards
@@ -345,20 +342,17 @@ This document describes the operating concept and operational processes for the 
 - Incident management reports
 - Compliance evidence
 
----
-
 ## Contacts
 
 **Operations Responsible:**
-- **IT Operations Manager:** Andreas Huemmer - andreas.huemmer@adminsend.de
-- **Service Desk Lead:** Julia Becker - julia.becker@adminsend.de
-- **CIO:** Anna Schmidt - anna.schmidt@adminsend.de
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **CIO:** [TODO] - {{ meta-organisation-roles.role_CIO_email }}
 
 **Additional Contacts:** See Chapter 0270 (Contacts, Escalation and Vendors)
 
----
-
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
 **Organization:** AdminSend GmbH
+

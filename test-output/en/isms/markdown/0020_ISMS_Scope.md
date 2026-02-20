@@ -1,18 +1,31 @@
 # ISMS Scope
 
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0020  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 4.3  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Scope Definition
 
@@ -20,16 +33,16 @@ The scope of the Information Security Management System (ISMS) of **AdminSend Gm
 
 ### 1.1 Organization
 - **Organization Name:** AdminSend GmbH
-- **Legal Form:** {{ meta.organization.legal_form }}
+- **Legal Form:** [TODO]
 - **Headquarters:** Musterstraße 123
-- **Number of Employees:** {{ meta.organization.employee_count }}
-- **Industry:** {{ meta.organization.industry }}
+- **Number of Employees:** [TODO]
+- **Industry:** [TODO]
 
 ### 1.2 Locations
 The ISMS applies to the following locations:
 
-- **Main Location:** {{ netbox.site.name }}
-  - Address: {{ netbox.site.address }}
+- **Main Location:** [[ netbox.site.name ]]
+  - Address: [[ netbox.site.address ]]
   - Function: Data center, offices, development
   
 [TODO: Add additional locations]
@@ -47,7 +60,7 @@ The ISMS covers the following business processes and IT services:
 - [TODO: Additional core processes]
 
 **IT Services:**
-- Network infrastructure ({{ netbox.device.core_switch.name }})
+- Network infrastructure ([[ netbox.device.core_switch.name ]])
 - Server and virtualization platforms
 - Cloud services and SaaS applications
 - Database systems
@@ -80,8 +93,8 @@ The ISMS protects the following categories of information assets:
 The ISMS includes the following technical platforms:
 
 **Network Infrastructure:**
-- Core Switch: {{ netbox.device.core_switch.name }}
-- Management VLAN: {{ netbox.vlan.management.vid }}
+- Core Switch: [[ netbox.device.core_switch.name ]]
+- Management VLAN: [[ netbox.vlan.management.vid ]]
 - [TODO: Additional network components from NetBox]
 
 **Servers and Virtualization:**
@@ -231,11 +244,10 @@ The ISMS scope is regularly reviewed:
 - **ISO/IEC 27001:2022** - Clause 4.3: Determining the scope of the ISMS
 - **ISO/IEC 27002:2022** - Information security controls
 
----
-
 **Approved by:**  
-Thomas Weber, CISO  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]
+

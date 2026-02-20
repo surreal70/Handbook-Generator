@@ -1,11 +1,17 @@
 # Entwicklung von Produkten und Dienstleistungen
 
-**Dokument-ID:** 0420  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0420
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,13 +19,13 @@
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistungen entwickelt, um sicherzustellen, dass sie die Anforderungen erfüllen.
+Dieses Dokument definiert, wie AdminSend GmbH Produkte und Dienstleistungen entwickelt, um sicherzustellen, dass sie die Anforderungen erfüllen.
 
 ## Entwicklungsplanung (8.3.2)
 
 ### Entwicklungsprozess
 
-**{{ meta.organization }} plant und steuert die Entwicklung durch:**
+**AdminSend GmbH plant und steuert die Entwicklung durch:**
 - Festlegung von Entwicklungsstufen
 - Bestimmung erforderlicher Überprüfungen und Validierungen
 - Definition von Verantwortlichkeiten und Befugnissen
@@ -47,7 +53,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 
 ### Eingabeanforderungen
 
-**{{ meta.organization }} bestimmt Anforderungen, die für spezifische Arten von Produkten und Dienstleistungen wesentlich sind:**
+**AdminSend GmbH bestimmt Anforderungen, die für spezifische Arten von Produkten und Dienstleistungen wesentlich sind:**
 - Funktionale und Leistungsanforderungen
 - Informationen aus früheren ähnlichen Entwicklungen
 - Gesetzliche und behördliche Anforderungen
@@ -73,7 +79,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 
 ### Steuerungsmaßnahmen
 
-**{{ meta.organization }} wendet Steuerungsmaßnahmen an, um sicherzustellen:**
+**AdminSend GmbH wendet Steuerungsmaßnahmen an, um sicherzustellen:**
 - Zu erreichende Ergebnisse sind definiert
 - Überprüfungen werden durchgeführt
 - Validierungen werden durchgeführt
@@ -103,7 +109,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 
 ### Ergebnisanforderungen
 
-**{{ meta.organization }} stellt sicher, dass Entwicklungsergebnisse:**
+**AdminSend GmbH stellt sicher, dass Entwicklungsergebnisse:**
 - Eingabeanforderungen erfüllen
 - Für nachfolgende Prozesse angemessen sind
 - Überwachungs- und Messanforderungen enthalten
@@ -124,7 +130,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 
 ### Änderungsmanagement
 
-**{{ meta.organization }} identifiziert, überprüft und steuert Änderungen während oder nach der Entwicklung:**
+**AdminSend GmbH identifiziert, überprüft und steuert Änderungen während oder nach der Entwicklung:**
 - Änderungen werden dokumentiert
 - Auswirkungen werden bewertet
 - Änderungen werden überprüft und genehmigt
@@ -216,8 +222,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 - Durchführung von Audits
 - Überprüfung der Dokumentation
 
----
-
 **Nächste Schritte:**
 1. Etabliere Entwicklungsprozess
 2. Definiere Entwicklungsphasen und Gates
@@ -225,3 +229,4 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 4. Etabliere Änderungsmanagement
 5. Schule Entwicklungsteam
 6. Überwache Entwicklungsprojekte
+

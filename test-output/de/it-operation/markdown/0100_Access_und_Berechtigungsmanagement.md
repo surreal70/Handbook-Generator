@@ -1,15 +1,28 @@
 # Access und Berechtigungsmanagement
 
+**Dokument-ID:** [FRAMEWORK]-0100
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-Service. Es definiert Zugriffskontrollmodelle, Berechtigungskonzepte und rollenbasierte Zugriffskontrolle (RBAC).
 
-**Service:** {{ meta.service_name }}  
-**Verantwortlich:** Andreas Huemmer  
-**Security Officer:** Thomas Weber  
-**Stand:** 1.0.0
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Security Officer:** [TODO]  
+**Stand:** 0
 
 ## Access Management Strategie
 
@@ -28,8 +41,6 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 3. **Regular Review:** Regelmäßige Überprüfung von Berechtigungen
 4. **Audit Trail:** Vollständige Protokollierung aller Zugriffe
 5. **Multi-Factor Authentication:** MFA für privilegierte Zugriffe
-
----
 
 ## Zugriffskontrollmodell
 
@@ -51,12 +62,12 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 **Identity Provider:**
 - **System:** [TODO: z.B. Active Directory, Azure AD, Okta]
 - **URL:** [TODO: SSO-URL]
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **MFA-System:**
 - **System:** [TODO: z.B. Duo, Microsoft Authenticator]
 - **Pflicht für:** Administratoren, privilegierte Accounts
-- **Verantwortlich:** Thomas Weber
+- **Verantwortlich:** [TODO]
 
 ### Autorisierung
 
@@ -73,8 +84,6 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 - Komplexere Implementierung
 
 **Aktuelles Modell:** [TODO: RBAC/ABAC/Hybrid auswählen]
-
----
 
 ## Rollenbasierte Zugriffskontrolle (RBAC)
 
@@ -114,7 +123,7 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 - Backup/Restore
 
 **Zugewiesen an:**
-- Andreas Huemmer
+- {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - [TODO: Weitere Administratoren]
 
 **MFA:** Pflicht
@@ -141,7 +150,7 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 - Log-Zugriff (Read-only)
 
 **Zugewiesen an:**
-- Julia Becker
+- {{ meta-organisation-roles.role_Service_Desk_Lead }}
 - [TODO: Weitere Operators]
 
 **MFA:** Optional
@@ -174,8 +183,6 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 
 **MFA:** Optional
 
----
-
 ## Berechtigungsmatrix
 
 ### System-Berechtigungen
@@ -199,8 +206,6 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 | **Internal** | Vollzugriff | Lesen/Schreiben | Lesen | Lesen | Lesen |
 | **Confidential** | Vollzugriff | Nach Bedarf | - | - | Nach Bedarf |
 | **Restricted** | Nach Bedarf | - | - | - | - |
-
----
 
 ## Access Request Prozess
 
@@ -257,7 +262,7 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 **Entscheidung:** Genehmigen / Ablehnen / Rückfragen
 
 #### 3. Security Review
-**Wer:** Thomas Weber oder Security Team  
+**Wer:** [TODO] oder Security Team  
 **Prüfung:**
 - Compliance-Anforderungen
 - Risikobewertung
@@ -266,7 +271,7 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 **Entscheidung:** Genehmigen / Ablehnen / Anpassen
 
 #### 4. Provisionierung
-**Wer:** Andreas Huemmer oder IT Operations  
+**Wer:** {{ meta-organisation-roles.role_IT_Operations_Manager }} oder IT Operations  
 **Aktivitäten:**
 - Account erstellen/ändern
 - Berechtigungen zuweisen
@@ -282,8 +287,6 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 - Zugangsdaten bereitstellen
 - Dokumentation abschließen
 - Ticket schließen
-
----
 
 ## Privileged Access Management (PAM)
 
@@ -314,10 +317,8 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 ### PAM-System
 
 **System:** [TODO: z.B. CyberArk, BeyondTrust, Thycotic]  
-**Verantwortlich:** Thomas Weber  
+**Verantwortlich:** [TODO]  
 **Zugriff:** [TODO: PAM-System-URL]
-
----
 
 ## Service Accounts
 
@@ -342,8 +343,6 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 | `svc_integration` | System-Integration | Integration-Platform | API-Zugriff | Integration Team |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 ## Access Review Prozess
 
 ### Regelmäßige Reviews
@@ -361,7 +360,7 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 #### Jährliche Reviews
 **Frequenz:** Jährlich  
 **Umfang:** Vollständiger Access Review  
-**Verantwortlich:** Thomas Weber  
+**Verantwortlich:** [TODO]  
 **Prozess:**
 1. Umfassender Audit aller Accounts
 2. Privilegierte Accounts prüfen
@@ -382,8 +381,6 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 - Deaktivierung nach Frist
 - Dokumentation
 
----
-
 ## Onboarding und Offboarding
 
 ### Onboarding-Prozess
@@ -402,7 +399,7 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 7. [ ] Dokumentation in CMDB
 8. [ ] Willkommens-E-Mail senden
 
-**Verantwortlich:** Julia Becker
+**Verantwortlich:** {{ meta-organisation-roles.role_Service_Desk_Lead }}
 
 ### Offboarding-Prozess
 
@@ -420,7 +417,7 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 7. [ ] Dokumentation aktualisieren
 8. [ ] Manager informieren
 
-**Verantwortlich:** Julia Becker
+**Verantwortlich:** {{ meta-organisation-roles.role_Service_Desk_Lead }}
 
 #### Rollenwechsel
 **Trigger:** HR-Benachrichtigung oder Manager-Anfrage  
@@ -432,8 +429,6 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 3. [ ] Access Review durchführen
 4. [ ] Dokumentation aktualisieren
 5. [ ] Benutzer informieren
-
----
 
 ## Compliance und Auditing
 
@@ -458,7 +453,7 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 
 **Log-Retention:** [TODO: z.B. 1 Jahr]  
 **Log-System:** [TODO: z.B. Splunk, ELK]  
-**Verantwortlich:** Thomas Weber
+**Verantwortlich:** [TODO]
 
 ### Audit-Reports
 
@@ -475,8 +470,6 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 - Risiko-Assessment
 - Verbesserungsvorschläge
 
----
-
 ## Notfall-Zugriff
 
 ### Break-Glass-Accounts
@@ -486,7 +479,7 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 **Verwendung:**
 - Nur bei kritischen Ausfällen
 - Wenn normale Zugriffswege nicht verfügbar
-- Nach Genehmigung durch Anna Schmidt
+- Nach Genehmigung durch [TODO]
 
 **Anforderungen:**
 - Physisch gesicherte Passwörter
@@ -500,25 +493,22 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 
 **Passwort-Verwaltung:**
 - Versiegelte Umschläge im Safe
-- Zugriff nur durch Anna Schmidt oder Thomas Weber
-
----
+- Zugriff nur durch [TODO] oder [TODO]
 
 ## Kontakte
 
 **Access Management Team:**
-- **IT Operations Manager:** Andreas Huemmer - andreas.huemmer@adminsend.de
-- **CISO:** Thomas Weber - thomas.weber@adminsend.de
-- **Service Desk Lead:** Julia Becker - julia.becker@adminsend.de
-- **CIO:** Anna Schmidt - anna.schmidt@adminsend.de
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **CISO:** [TODO] - {{ meta-organisation-roles.role_CISO_email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **CIO:** [TODO] - {{ meta-organisation-roles.role_CIO_email }}
 
 **Notfall-Kontakte:**
-- **Break-Glass-Freigabe:** Anna Schmidt - +49 89 12345678-200
-- **Security-Incident:** Thomas Weber - +49 89 12345678-300
+- **Break-Glass-Freigabe:** [TODO] - {{ meta-organisation-roles.role_CIO_phone }}
+- **Security-Incident:** [TODO] - {{ meta-organisation-roles.role_CISO_phone }}
 
----
-
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
+

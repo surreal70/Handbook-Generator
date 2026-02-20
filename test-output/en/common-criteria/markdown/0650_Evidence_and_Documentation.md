@@ -1,11 +1,17 @@
 # Evidence and Documentation
 
-**Document-ID:** 0650  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0650
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -419,8 +425,6 @@ This chapter documents all evidence and documentation required for the Common Cr
 **Email:** [TODO: Email]  
 **Phone:** [TODO: Phone]
 
----
-
 **Next Steps:**
 1. Identify all required evidence based on chosen EAL
 2. Create a timeline for evidence creation
@@ -430,3 +434,4 @@ This chapter documents all evidence and documentation required for the Common Cr
 6. Deliver evidence to evaluation laboratory
 7. Archive all evidence according to requirements
 8. Update evidence documentation when changes occur
+

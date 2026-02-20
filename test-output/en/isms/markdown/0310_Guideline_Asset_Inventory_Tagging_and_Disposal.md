@@ -1,14 +1,17 @@
 # Guideline: Asset Inventory, Tagging and Disposal
 
-**Document ID:** 0310  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0300_Policy_Asset_Management.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.9, A.5.10  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0310
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -51,7 +54,7 @@ This guideline implements the `0300_Policy_Asset_Management.md` and defines:
 
 ### 3.1 CMDB (Configuration Management Database)
 
-**System:** {{ meta.itsm.cmdb }} (e.g., ServiceNow, Jira Service Management)
+**System:** {{ meta-handbook.itsm_cmdb }} (e.g., ServiceNow, Jira Service Management)
 
 **Mandatory Fields per Asset:**
 - Asset ID (unique)
@@ -73,8 +76,8 @@ This guideline implements the `0300_Policy_Asset_Management.md` and defines:
 ### 3.2 Automatic Inventory
 
 **Tools:**
-- **Endpoint Management:** {{ meta.endpoint.management }} (e.g., Microsoft Intune, Jamf)
-- **Network Discovery:** {{ meta.network.discovery }} (e.g., Nmap, Lansweeper)
+- **Endpoint Management:** {{ meta-handbook.endpoint_management }} (e.g., Microsoft Intune, Jamf)
+- **Network Discovery:** {{ meta-handbook.network_discovery }} (e.g., Nmap, Lansweeper)
 - **Cloud Asset Inventory:** Native cloud tools (Azure Resource Graph, AWS Config)
 
 **Process:**
@@ -103,7 +106,7 @@ This guideline implements the `0300_Policy_Asset_Management.md` and defines:
 
 ### 4.1 Tagging Schema
 
-**Asset ID Format:** `{{ meta.asset.id_format }}`  
+**Asset ID Format:** `{{ meta-handbook.asset_id_format }}`  
 Example: `LAP-2024-001234` (Laptop, year, sequential number)
 
 **Prefixes:**
@@ -129,7 +132,7 @@ Example: `LAP-2024-001234` (Laptop, year, sequential number)
 ### 4.3 Digital Tags
 
 **Hostname Convention:**
-- Format: `{{ meta.naming.hostname_format }}`
+- Format: `{{ meta-handbook.naming_hostname_format }}`
 - Example: `lap-jdoe-001` (type-user-number)
 
 **Metadata:**
@@ -207,7 +210,7 @@ Example: `LAP-2024-001234` (Laptop, year, sequential number)
 ### 6.2 Mobile Devices
 
 **Process:**
-1. Remote wipe via MDM ({{ meta.mdm.system }})
+1. Remote wipe via MDM ({{ meta-handbook.mdm_system }})
 2. Factory reset on-site
 3. Removal of SIM cards and SD cards
 4. Physical verification of deletion
@@ -302,7 +305,6 @@ Example: `LAP-2024-001234` (Laptop, year, sequential number)
 - **DIN 66399** - Destruction of data carriers
 - **WEEE Directive** - Electrical and electronic equipment disposal
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

@@ -1,11 +1,17 @@
 # Rationale für Sicherheitsziele
 
-**Dokument-ID:** 0610  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0610
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -306,8 +312,6 @@ Dieses Kapitel liefert die Rationale, die nachweist, dass die definierten Sicher
 - **Abschnitt 0300:** Security Objectives
 - **Abschnitt 0320:** Security Objectives Coverage Matrix
 
----
-
 **Nächste Schritte:**
 1. Dokumentieren Sie die Rationale für jede Bedrohung
 2. Dokumentieren Sie die Rationale für jede OSP
@@ -316,3 +320,4 @@ Dieses Kapitel liefert die Rationale, die nachweist, dass die definierten Sicher
 5. Führen Sie Vollständigkeits- und Angemessenheitsanalysen durch
 6. Identifizieren und beheben Sie Lücken
 7. Lassen Sie die Rationale durch Evaluatoren prüfen
+

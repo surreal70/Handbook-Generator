@@ -1,11 +1,17 @@
 # Berichtigung und Löschung
 
-**Dokument-ID:** 0230  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0230
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Rechts auf Berichtigung und Löschung in der {{ meta.organization }}. Betroffene Personen haben das Recht auf Berichtigung unrichtiger und Löschung nicht mehr erforderlicher Daten.
+Dieses Dokument beschreibt die Umsetzung des Rechts auf Berichtigung und Löschung in der AdminSend GmbH. Betroffene Personen haben das Recht auf Berichtigung unrichtiger und Löschung nicht mehr erforderlicher Daten.
 
 ## Recht auf Berichtigung (Art. 16)
 
@@ -189,8 +195,6 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Berichtigung und Löschu
 | Verzögerte Löschung | Löschung nach 3 Monaten | Fristenkontrolle |
 | Fehlende Benachrichtigung | Empfänger nicht informiert | Benachrichtigungsprozess |
 | Unbegründete Ablehnung | Ablehnung ohne Prüfung | Sorgfältige Prüfung |
-
----
 
 **Nächste Schritte:**
 1. Etablieren Sie Prozesse für Berichtigungs- und Löschanträge

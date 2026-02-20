@@ -1,14 +1,17 @@
 # CIS Controls – Überblick und Vorgehen
 
-**Dokument-ID:** 0010  
-**Dokumenttyp:** Grundlagendokument  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -35,3 +38,4 @@ Beschreibt, wie CIS Controls v8 als Rahmen genutzt werden, um Hardening-Baseline
 - OS Baselines: 0110–0150
 - Applikationsstandards: 0210+
 - Evidence/Reporting: 0410
+

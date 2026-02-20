@@ -1,11 +1,17 @@
 # Ressourcen
 
-**Dokument-ID:** 0300  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0300
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} Ressourcen bestimmt und bereitstellt, die für das Qualitätsmanagementsystem benötigt werden, gemäß ISO 9001:2015 Kapitel 7.1.
+Dieses Dokument definiert, wie AdminSend GmbH Ressourcen bestimmt und bereitstellt, die für das Qualitätsmanagementsystem benötigt werden, gemäß ISO 9001:2015 Kapitel 7.1.
 
 ## Ressourcenplanungsprozess
 
@@ -160,8 +166,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} Ressourcen bestimmt und b
 - Welche zusätzlichen Ressourcen werden benötigt?
 - Welche Ressourcenbeschränkungen bestehen?
 - Wie kann Ressourceneffizienz verbessert werden?
-
----
 
 **Nächste Schritte:**
 1. Führe umfassende Ressourcenbewertung durch

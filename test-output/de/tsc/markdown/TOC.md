@@ -22,5 +22,3 @@ Language: de
 - [0320 - P1 Privacy](0320_P1_Privacy.md)
 - [0400 - Control Matrix](0400_Control_Matrix.md)
 - [0440 - Glossar](0440_Glossar.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

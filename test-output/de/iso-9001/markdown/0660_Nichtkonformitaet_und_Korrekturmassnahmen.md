@@ -1,11 +1,17 @@
 # Nichtkonformität und Korrekturmaßnahmen
 
-**Dokument-ID:** 0660  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0660
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} mit Nichtkonformitäten umgeht und Korrekturmaßnahmen implementiert, um Wiederauftreten zu verhindern.
+Dieses Dokument definiert, wie AdminSend GmbH mit Nichtkonformitäten umgeht und Korrekturmaßnahmen implementiert, um Wiederauftreten zu verhindern.
 
 ## Reaktion auf Nichtkonformität (10.2.1)
 
@@ -60,7 +66,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} mit Nichtkonformitäten u
 
 ### Analysemethoden
 
-**{{ meta.organization }} verwendet:**
+**AdminSend GmbH verwendet:**
 - 5-Why-Methode
 - Ishikawa-Diagramm (Fischgräten-Diagramm)
 - Fehler-Ursachen-Analyse
@@ -142,7 +148,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} mit Nichtkonformitäten u
 
 ### Überwachung
 
-**{{ meta.organization }} überwacht:**
+**AdminSend GmbH überwacht:**
 - Fortschritt der Umsetzung
 - Einhaltung von Terminen
 - Verfügbarkeit von Ressourcen
@@ -201,7 +207,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} mit Nichtkonformitäten u
 
 ### Systemänderungen
 
-**Falls erforderlich, ändert {{ meta.organization }}:**
+**Falls erforderlich, ändert AdminSend GmbH:**
 - Prozesse
 - Verfahren
 - Arbeitsanweisungen
@@ -222,7 +228,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} mit Nichtkonformitäten u
 
 ### Erforderliche Aufzeichnungen
 
-**{{ meta.organization }} bewahrt dokumentierte Information auf über:**
+**AdminSend GmbH bewahrt dokumentierte Information auf über:**
 - Art der Nichtkonformitäten
 - Ergriffene Maßnahmen
 - Ergebnisse von Korrekturmaßnahmen
@@ -321,8 +327,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} mit Nichtkonformitäten u
 - Umsetzung von Maßnahmen
 - Einhaltung geänderter Prozesse
 
----
-
 **Nächste Schritte:**
 1. Etabliere NC-Meldeprozess
 2. Schule Mitarbeiter in Ursachenanalyse
@@ -330,3 +334,4 @@ Dieses Dokument definiert, wie {{ meta.organization }} mit Nichtkonformitäten u
 4. Definiere Eskalationsprozess
 5. Überwache Wirksamkeit von Maßnahmen
 6. Werte NCs regelmäßig aus
+

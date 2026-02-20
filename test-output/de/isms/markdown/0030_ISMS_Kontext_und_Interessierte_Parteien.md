@@ -1,31 +1,34 @@
 # Kontext der Organisation und interessierte Parteien
 
-
-
-**Dokument-ID:** 0030  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clauses 4.1, 4.2  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Kontext der Organisation
 
 ### 1.1 Interne Themen
 
 **Organisationsstruktur:**
-- Organisationsform: {{ meta.organization.legal_form }}
-- Anzahl Mitarbeiter: {{ meta.organization.employee_count }}
+- Organisationsform: [TODO]
+- Anzahl Mitarbeiter: [TODO]
 - Organisationsstruktur: [TODO: Hierarchie, Abteilungen]
-- Standorte: {{ netbox.site.name }} und weitere
+- Standorte: [[ netbox.site.name ]] und weitere
 
 **Geschäftsprozesse:**
-- Kerngeschäft: {{ meta.organization.industry }}
+- Kerngeschäft: [TODO]
 - Kritische Geschäftsprozesse: [TODO: Liste der kritischen Prozesse]
 - IT-Abhängigkeit: Hoch / Mittel / Niedrig
 
@@ -52,7 +55,7 @@
 ### 1.2 Externe Themen
 
 **Markt und Wettbewerb:**
-- Branche: {{ meta.organization.industry }}
+- Branche: [TODO]
 - Marktposition: [TODO: Marktführer, Challenger, Nische]
 - Wettbewerbsdruck: Hoch / Mittel / Niedrig
 - Kundenerwartungen: [TODO: Sicherheitsanforderungen]
@@ -229,11 +232,10 @@ Der Kontext und die Stakeholder-Anforderungen werden regelmäßig überprüft:
 - **ISO/IEC 27001:2022** - Clause 4.2: Understanding the needs and expectations of interested parties
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 
----
-
 **Genehmigt durch:**  
-Thomas Weber, CISO  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+[TODO], CISO  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
+

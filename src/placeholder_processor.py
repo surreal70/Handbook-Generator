@@ -226,34 +226,17 @@ class PlaceholderProcessor:
     
     def validate_placeholder_line(self, line: str, placeholder: Placeholder) -> Optional[str]:
         """
-        Validate that placeholder is the only statement in its line.
+        Validate placeholder (currently no-op, kept for backward compatibility).
         
         Args:
             line: The line containing the placeholder
             placeholder: The placeholder to validate
             
         Returns:
-            Warning message if validation fails, None otherwise
+            None (validation removed - placeholders can appear anywhere in a line)
         """
-        # Remove the placeholder from the line (don't strip yet)
-        line_without_placeholder = line.replace(placeholder.raw, '')
-        
-        # Check if there are any characters that aren't standard whitespace (space, tab) or comma
-        # We need to check before stripping because .strip() removes all whitespace including
-        # non-standard whitespace like \x85 (NEL - Next Line)
-        for c in line_without_placeholder:
-            # Allow only space, tab, and comma
-            if c not in ' \t,':
-                # Any other character (including non-standard whitespace) is content
-                context = ErrorContext(
-                    line_number=placeholder.line_number,
-                    placeholder=placeholder.raw
-                )
-                return ErrorHandler.placeholder_error(
-                    context,
-                    "not_alone_in_line"
-                )
-        
+        # Validation removed - placeholders can now appear anywhere in a line
+        # This method is kept for backward compatibility but always returns None
         return None
     
     def replace_placeholder(self, placeholder: Placeholder) -> tuple[Optional[str], Optional[str], Optional[str]]:

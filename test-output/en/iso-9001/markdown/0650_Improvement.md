@@ -1,11 +1,17 @@
 # Improvement
 
-**Document-ID:** 0650  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0650
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,13 +19,13 @@
 
 ## Purpose
 
-This document defines how {{ meta.organization }} implements continual improvement to enhance customer satisfaction and improve QMS performance.
+This document defines how AdminSend GmbH implements continual improvement to enhance customer satisfaction and improve QMS performance.
 
 ## General Requirements (10.1)
 
 ### Improvement Commitment
 
-**{{ meta.organization }} continually improves:**
+**AdminSend GmbH continually improves:**
 - Suitability, adequacy and effectiveness of QMS
 - Products and services
 - Processes
@@ -64,7 +70,7 @@ This document defines how {{ meta.organization }} implements continual improveme
 
 ### Improvement Tools
 
-**{{ meta.organization }} uses:**
+**AdminSend GmbH uses:**
 - PDCA cycle (Plan-Do-Check-Act)
 - Six Sigma / DMAIC
 - Lean Management
@@ -175,7 +181,7 @@ This document defines how {{ meta.organization }} implements continual improveme
 
 ### Culture Development
 
-**{{ meta.organization }} promotes improvement culture through:**
+**AdminSend GmbH promotes improvement culture through:**
 - Leadership role modeling
 - Open communication
 - Error tolerance and learning culture
@@ -271,8 +277,6 @@ This document defines how {{ meta.organization }} implements continual improveme
 - Participating in improvement projects
 - Implementing improvements
 
----
-
 **Next Steps:**
 1. Establish improvement culture
 2. Implement suggestion system
@@ -280,3 +284,4 @@ This document defines how {{ meta.organization }} implements continual improveme
 4. Start improvement projects
 5. Train employees in improvement methods
 6. Measure and communicate successes
+

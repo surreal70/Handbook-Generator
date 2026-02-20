@@ -1,18 +1,21 @@
 # Nichtkonformitäten und Korrekturmaßnahmen
 
-
-
-**Dokument-ID:** 0150  
-**Dokumenttyp:** ISMS-Prozess/Template  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 10.1  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0150
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck und Ziel
 
@@ -210,7 +213,7 @@ Dieses Dokument definiert den Prozess zur systematischen Behandlung von Nichtkon
 |------------|--------|-----------|--------------|------------|-------------------|-------|--------|--------|---------------------|
 | F-2026-001 | Audit | Minor | Dokumentation unvollständig | Prozess nicht definiert | Prozess dokumentieren | [TODO] | 2026-03-31 | In Arbeit | - |
 | F-2026-002 | Incident | Major | Ungepatchte Schwachstelle ausgenutzt | Patch-Prozess unzureichend | Patch-Prozess verbessern | IT-Betrieb | 2026-02-28 | In Arbeit | - |
-| F-2026-003 | Monitoring | Observation | MFA-Aktivierung < 100% | Awareness unzureichend | MFA-Kampagne | Thomas Weber | 2026-04-30 | Geplant | - |
+| F-2026-003 | Monitoring | Observation | MFA-Aktivierung < 100% | Awareness unzureichend | MFA-Kampagne | [TODO] | 2026-04-30 | Geplant | - |
 
 [TODO: Aktive Nichtkonformitäten hinzufügen]
 
@@ -385,10 +388,9 @@ Dieses Dokument definiert den Prozess zur systematischen Behandlung von Nichtkon
 - **ISO 9001:2015** - Clause 10.2: Nonconformity and corrective action
 - **ISO 19011:2018** - Guidelines for auditing management systems
 
----
-
 **Genehmigt durch:**  
-Thomas Weber, CISO  
-Datum: {{ meta.document.approval_date }}
+[TODO], CISO  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** [TODO]
+

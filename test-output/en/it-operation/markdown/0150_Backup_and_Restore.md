@@ -1,12 +1,27 @@
 # Backup and Restore
 
+**Document-ID:** [FRAMEWORK]-0150
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Purpose and Scope
 
 This document describes the backup and restore strategies for AdminSend GmbH. It defines backup methods, schedules, retention periods, RPO/RTO objectives, and restore procedures to ensure data integrity and availability.
 
 **Scope:** All IT systems, databases, applications, and data of AdminSend GmbH
 
-**Responsible:** Andreas Huemmer (andreas.huemmer@adminsend.de)
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Backup Fundamentals
 
@@ -124,9 +139,9 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 - **1 Offsite:** Geographically separated copy
 
 **Example:**
-1. Production data on {{ netbox.storage.primary }}
-2. Backup on {{ netbox.storage.backup_disk }}
-3. Offsite backup in {{ meta.backup_cloud_provider }}
+1. Production data on [[ netbox.storage.primary ]]
+2. Backup on [[ netbox.storage.backup_disk ]]
+3. Offsite backup in {{ meta-handbook.backup_cloud_provider }}
 
 #### Backup Tiers
 
@@ -143,7 +158,7 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 
 #### Databases (Critical)
 
-**System:** {{ netbox.database.server }}
+**System:** [[ netbox.database.server ]]
 
 **Backup Strategy:**
 - **Full Backup:** Sunday 02:00
@@ -162,7 +177,7 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 
 #### Application Servers (Important)
 
-**System:** {{ netbox.application.server }}
+**System:** [[ netbox.application.server ]]
 
 **Backup Strategy:**
 - **Full Backup:** Sunday 03:00
@@ -179,7 +194,7 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 
 #### File Servers (Standard)
 
-**System:** {{ netbox.fileserver.server }}
+**System:** [[ netbox.fileserver.server ]]
 
 **Backup Strategy:**
 - **Full Backup:** Sunday 01:00
@@ -244,7 +259,7 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 ### 1. Backup Scheduling
 
 **Automation:**
-- Backup jobs configured in {{ meta.backup_system }}
+- Backup jobs configured in {{ meta-handbook.backup_system }}
 - Time-controlled execution
 - Dependencies between jobs
 - Retry mechanisms on errors
@@ -271,7 +286,7 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 - Transfer data to backup target
 - Store metadata
 
-**Monitoring:** Real-time monitoring in {{ meta.monitoring_system }}
+**Monitoring:** Real-time monitoring in {{ meta-handbook.monitoring_system }}
 
 ### 4. Backup Verification
 
@@ -292,14 +307,14 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 - Failed backups
 - Trend analyses
 
-**Recipients:** andreas.huemmer@adminsend.de
+**Recipients:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 
 ### 6. Offsite Replication
 
 **Replication Methods:**
-- **Cloud Sync:** Automatic replication to {{ meta.backup_cloud_provider }}
+- **Cloud Sync:** Automatic replication to {{ meta-handbook.backup_cloud_provider }}
 - **Tape Rotation:** Weekly tape offsite storage
-- **Remote Site:** Replication to {{ netbox.site.dr_location }}
+- **Remote Site:** Replication to [[ netbox.site.dr_location ]]
 
 **Encryption:** TLS in transit, AES-256 at rest
 
@@ -356,7 +371,7 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 - Urgency (RTO)
 - Approval
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 ### 2. Restore Planning
 
@@ -460,9 +475,9 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 ### Backup Software
 
 **Primary Backup System:**
-- **System:** {{ meta.backup_system }}
-- **Version:** {{ meta.backup_system_version }}
-- **License:** {{ meta.backup_system_license }}
+- **System:** {{ meta-handbook.backup_system }}
+- **Version:** [TODO]
+- **License:** {{ meta-handbook.backup_system_license }}
 
 **Features:**
 - Application-consistent backups
@@ -475,13 +490,13 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 ### Snapshot Technology
 
 **Storage Snapshots:**
-- **System:** {{ netbox.storage.system }}
+- **System:** [[ netbox.storage.system ]]
 - **Snapshot Frequency:** Every 4 hours
 - **Retention:** 48 hours
 - **Usage:** Quick rollbacks, pre-change snapshots
 
 **VM Snapshots:**
-- **System:** {{ netbox.hypervisor.system }}
+- **System:** [[ netbox.hypervisor.system ]]
 - **Snapshot Type:** Crash-consistent
 - **Usage:** Pre-deployment snapshots
 - **Warning:** Not a long-term backup solution
@@ -489,8 +504,8 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 ### Cloud Backup
 
 **Cloud Provider:**
-- **Provider:** {{ meta.backup_cloud_provider }}
-- **Region:** {{ meta.backup_cloud_region }}
+- **Provider:** {{ meta-handbook.backup_cloud_provider }}
+- **Region:** {{ meta-handbook.backup_cloud_region }}
 - **Storage Tier:** Standard / Glacier
 
 **Advantages:**
@@ -518,7 +533,7 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 - Key rotation every 90 days
 
 **Key Management:**
-- Keys in {{ meta.key_management_system }}
+- Keys in {{ meta-handbook.key_management_system }}
 - Access only for authorized administrators
 - Backup of keys (escrow)
 
@@ -542,7 +557,7 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 
 **Audit Logging:**
 - All backup/restore activities logged
-- Logs in SIEM system {{ meta.siem_system }}
+- Logs in SIEM system {{ meta-handbook.siem_system }}
 - Monthly audit reviews
 
 ## Backup Testing
@@ -656,7 +671,7 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 - Compliance assurance
 - Escalation management
 
-**Person:** Andreas Huemmer
+**Person:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ## Compliance and Regulation
 
@@ -694,12 +709,11 @@ This document describes the backup and restore strategies for AdminSend GmbH. It
 - ISO/IEC 27001:2013 - Backup Controls
 - GDPR - Article 32 (Data Security)
 - 3-2-1 Backup Rule
-- Backup System Documentation: {{ meta.backup_system_docs }}
+- Backup System Documentation: {{ meta-handbook.backup_system_docs }}
 
----
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
+**Classification:** Internal  
+**Last Updated:** {{ meta-handbook.date }}
 
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Classification:** internal  
-**Last Updated:** {{ meta.date }}

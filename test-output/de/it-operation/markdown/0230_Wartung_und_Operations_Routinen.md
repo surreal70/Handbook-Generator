@@ -1,15 +1,28 @@
 # Wartung und Operations-Routinen
 
+**Dokument-ID:** [FRAMEWORK]-0230
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Checklisten und Housekeeping-Prozeduren für den IT-Service. Ziel ist es, die Systemstabilität, Performance und Sicherheit durch proaktive Wartung zu gewährleisten.
 
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
-
----
 
 ## Wartungsübersicht
 
@@ -17,10 +30,10 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 
 | Kategorie | Beschreibung | Frequenz | Verantwortlich |
 |---|---|---|---|
-| **Präventiv** | Vorbeugende Maßnahmen zur Fehlervermeidung | Regelmäßig | Andreas Huemmer |
-| **Korrektiv** | Behebung bekannter Probleme | Bei Bedarf | Andreas Huemmer |
-| **Adaptiv** | Anpassung an neue Anforderungen | Bei Bedarf | Andreas Huemmer |
-| **Perfektiv** | Verbesserung und Optimierung | Geplant | Andreas Huemmer |
+| **Präventiv** | Vorbeugende Maßnahmen zur Fehlervermeidung | Regelmäßig | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Korrektiv** | Behebung bekannter Probleme | Bei Bedarf | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Adaptiv** | Anpassung an neue Anforderungen | Bei Bedarf | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Perfektiv** | Verbesserung und Optimierung | Geplant | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 ### Wartungsfenster
 
@@ -35,10 +48,8 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 #### Notfall-Wartung
 - **Zeitfenster:** Jederzeit nach Genehmigung
 - **Ankündigung:** Minimum 4 Stunden (wenn möglich)
-- **Genehmigung:** Anna Schmidt
+- **Genehmigung:** [TODO]
 - **Kommunikation:** Alle Stakeholder informieren
-
----
 
 ## Tägliche Routinen
 
@@ -103,8 +114,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 **Dauer:** 15-20 Minuten  
 **Dokumentation:** Shift Handover Log
 
----
-
 ## Wöchentliche Routinen
 
 ### Montag: Wochenplanung
@@ -116,7 +125,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Ressourcen zuweisen
 - [ ] Risiken identifizieren
 
-**Teilnehmer:** Andreas Huemmer, Operations Team  
+**Teilnehmer:** {{ meta-organisation-roles.role_IT_Operations_Manager }}, Operations Team  
 **Dauer:** 30 Minuten  
 **Dokumentation:** Weekly Planning Notes
 
@@ -163,7 +172,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Security-Incidents reviewen
 - [ ] Compliance-Status prüfen
 
-**Verantwortlich:** Operations Team, Thomas Weber  
+**Verantwortlich:** Operations Team, [TODO]  
 **Dauer:** 1-2 Stunden  
 **Dokumentation:** Weekly Security Report
 
@@ -176,7 +185,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Nächste Woche vorbereiten
 - [ ] Wochenend-On-Call briefen
 
-**Teilnehmer:** Andreas Huemmer, Operations Team  
+**Teilnehmer:** {{ meta-organisation-roles.role_IT_Operations_Manager }}, Operations Team  
 **Dauer:** 30 Minuten  
 **Dokumentation:** Weekly Summary Report
 
@@ -202,8 +211,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 **Dauer:** 2 Stunden  
 **Dokumentation:** Maintenance Log
 
----
-
 ## Monatliche Routinen
 
 ### Erste Woche: Monatsplanung
@@ -215,7 +222,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Budget-Status prüfen
 - [ ] Kapazitätsplanung aktualisieren
 
-**Teilnehmer:** Anna Schmidt, Andreas Huemmer, Team Leads  
+**Teilnehmer:** [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}, Team Leads  
 **Dauer:** 1 Stunde  
 **Dokumentation:** Monthly Planning Document
 
@@ -242,7 +249,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Skalierungsbedarf bewerten
 - [ ] Budget-Implikationen prüfen
 
-**Verantwortlich:** Andreas Huemmer  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Dauer:** 2-3 Stunden  
 **Dokumentation:** Monthly Capacity Report
 
@@ -256,7 +263,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Vulnerability-Scan durchführen
 - [ ] Compliance-Status prüfen
 
-**Verantwortlich:** Thomas Weber, Operations Team  
+**Verantwortlich:** [TODO], Operations Team  
 **Dauer:** 3-4 Stunden  
 **Dokumentation:** Monthly Security Audit Report
 
@@ -270,7 +277,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Verbesserungen identifizieren
 - [ ] DR-Plan aktualisieren
 
-**Verantwortlich:** Andreas Huemmer  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Dauer:** 2-4 Stunden  
 **Dokumentation:** DR Test Report
 
@@ -284,11 +291,9 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Security-Report
 - [ ] SLA-Compliance-Report
 
-**Verantwortlich:** Andreas Huemmer  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Dauer:** 2-3 Stunden  
-**Empfänger:** Anna Schmidt, Stakeholder
-
----
+**Empfänger:** [TODO], Stakeholder
 
 ## Quartalsweise Routinen
 
@@ -301,7 +306,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Budget-Review durchführen
 - [ ] Ressourcenplanung aktualisieren
 
-**Teilnehmer:** Max Mustermann, Anna Schmidt, Andreas Huemmer  
+**Teilnehmer:** [TODO], [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Dauer:** 2 Stunden  
 **Dokumentation:** Quarterly Planning Document
 
@@ -314,7 +319,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Konsolidierungspotenziale identifizieren
 - [ ] Investitionsplanung durchführen
 
-**Verantwortlich:** Andreas Huemmer  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Dauer:** 1 Tag  
 **Dokumentation:** Quarterly Infrastructure Report
 
@@ -327,7 +332,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Verbesserungsmaßnahmen definieren
 - [ ] Implementierungsplan erstellen
 
-**Verantwortlich:** Andreas Huemmer, Team Leads  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}, Team Leads  
 **Dauer:** 1 Tag  
 **Dokumentation:** Process Improvement Plan
 
@@ -341,11 +346,9 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Kommunikationsprozesse validieren
 - [ ] Lessons Learned dokumentieren
 
-**Verantwortlich:** Anna Schmidt, Andreas Huemmer  
+**Verantwortlich:** [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Dauer:** 1 Tag  
 **Dokumentation:** Quarterly DR Test Report
-
----
 
 ## Jährliche Routinen
 
@@ -358,7 +361,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Jahresbudget finalisieren
 - [ ] Ressourcenplanung für das Jahr
 
-**Teilnehmer:** Max Mustermann, Anna Schmidt, Maria Müller, Andreas Huemmer  
+**Teilnehmer:** [TODO], [TODO], [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Dauer:** 1 Tag  
 **Dokumentation:** Annual Planning Document
 
@@ -372,7 +375,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Architektur-Review
 - [ ] Modernisierungsbedarf identifizieren
 
-**Verantwortlich:** Anna Schmidt, Andreas Huemmer  
+**Verantwortlich:** [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Dauer:** 1 Woche  
 **Dokumentation:** Annual Infrastructure Audit Report
 
@@ -386,7 +389,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Kommunikationsprozesse testen
 - [ ] Umfassende Dokumentation
 
-**Verantwortlich:** Anna Schmidt, Andreas Huemmer  
+**Verantwortlich:** [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Dauer:** 2-3 Tage  
 **Dokumentation:** Annual DR Test Report
 
@@ -400,11 +403,9 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Nächstes Jahr vorbereiten
 - [ ] Management-Präsentation erstellen
 
-**Teilnehmer:** Max Mustermann, Anna Schmidt, Maria Müller, Andreas Huemmer  
+**Teilnehmer:** [TODO], [TODO], [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Dauer:** 1 Tag  
 **Dokumentation:** Annual Review Report
-
----
 
 ## Housekeeping-Prozeduren
 
@@ -491,15 +492,13 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 **Frequenz:** Wöchentlich (Sonntag)  
 **Dauer:** 30 Minuten
 
----
-
 ## Automatisierung
 
 ### Automatisierte Routinen
 
 | Routine | Frequenz | Tool/Script | Verantwortlich |
 |---|---|---|---|
-| Backup-Jobs | Täglich | [TODO: Backup-Tool] | Andreas Huemmer |
+| Backup-Jobs | Täglich | [TODO: Backup-Tool] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | Log-Rotation | Täglich | logrotate | Automatisiert |
 | Health-Checks | Stündlich | [TODO: Monitoring-Tool] | Automatisiert |
 | Disk-Cleanup | Wöchentlich | [TODO: Script] | Automatisiert |
@@ -514,8 +513,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 | Q2 2026 | [TODO] | [TODO] Stunden/Monat | Geplant |
 | Q3 2026 | [TODO] | [TODO] Stunden/Monat | Geplant |
 | Q4 2026 | [TODO] | [TODO] Stunden/Monat | Geplant |
-
----
 
 ## Checklisten-Vorlagen
 
@@ -581,8 +578,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 **Besonderheiten:** [NOTIZEN]
 ```
 
----
-
 ## Prozesse und Verantwortlichkeiten
 
 ### RACI-Matrix
@@ -599,8 +594,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 
 > **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
@@ -613,8 +606,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - Checklisten-Dokumentation
 - Automatisierungs-Scripts
 - Compliance-Nachweise
-
----
 
 ## Anhang
 
@@ -632,8 +623,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - ISO/IEC 20000-1:2018
 - COBIT 2019 Framework
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** andreas.huemmer@adminsend.de
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+

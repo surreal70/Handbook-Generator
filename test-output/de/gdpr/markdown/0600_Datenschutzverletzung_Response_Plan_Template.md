@@ -1,11 +1,17 @@
 # Datenschutzverletzung Response Plan (Template)
 
-**Dokument-ID:** 0600  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0600
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,11 +19,11 @@
 
 ## Zweck
 
-Dieser Response Plan definiert die Schritte zur Bewältigung von Datenschutzverletzungen bei {{ meta.organization }}. Er stellt sicher, dass Datenschutzverletzungen schnell erkannt, bewertet und gemäß DSGVO Art. 33-34 behandelt werden.
+Dieser Response Plan definiert die Schritte zur Bewältigung von Datenschutzverletzungen bei AdminSend GmbH. Er stellt sicher, dass Datenschutzverletzungen schnell erkannt, bewertet und gemäß DSGVO Art. 33-34 behandelt werden.
 
 ## Geltungsbereich
 
-Dieser Plan gilt für alle Datenschutzverletzungen, die personenbezogene Daten betreffen, die von {{ meta.organization }} verarbeitet werden.
+Dieser Plan gilt für alle Datenschutzverletzungen, die personenbezogene Daten betreffen, die von AdminSend GmbH verarbeitet werden.
 
 ## Breach Response Team
 
@@ -384,11 +390,10 @@ Datenschutzverletzung bestätigt?
 - **Template 0630:** Breach Register Template
 - **Template 0640:** Post-Breach Review Template
 
----
-
 **Nächste Schritte:**
 1. Passe diesen Plan an deine Organisation an
 2. Definiere alle Rollen und Kontakte
 3. Führe Breach-Response-Übungen durch (mindestens jährlich)
 4. Halte den Plan aktuell
 5. Stelle sicher, dass alle Teammitglieder den Plan kennen
+

@@ -1,13 +1,17 @@
 # Dokumentenlenkung und Versionierung
 
-**Dokument-ID:** BCM-0030  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -64,9 +68,9 @@ Kritische BCM-Dokumente müssen auch bei Ausfall der IT-Systeme verfügbar sein:
 
 | Dokument-ID | Dokumentname | Version | Owner | Klassifizierung | Ablageort |
 |-------------|--------------|---------|-------|-----------------|-----------|
-| BCM-0010 | Zweck und Geltungsbereich | 1.0.0 | IT Operations Manager | internal | [TODO: Pfad] |
-| BCM-0020 | BCM-Leitlinie / Policy | 1.0.0 | IT Operations Manager | internal | [TODO: Pfad] |
-| BCM-0030 | Dokumentenlenkung | 1.0.0 | IT Operations Manager | internal | [TODO: Pfad] |
+| BCM-0010 | Zweck und Geltungsbereich | 0 | [TODO] | Internal | [TODO: Pfad] |
+| BCM-0020 | BCM-Leitlinie / Policy | 0 | [TODO] | Internal | [TODO: Pfad] |
+| BCM-0030 | Dokumentenlenkung | 0 | [TODO] | Internal | [TODO: Pfad] |
 | ... | ... | ... | ... | ... | ... |
 
 [TODO: Vervollständigen Sie das Dokumentenregister]
@@ -127,7 +131,7 @@ Die AdminSend GmbH verwendet folgendes Versionierungsschema für BCM-Dokumente:
 - **Aufgaben:** Inhaltliche Prüfung, Feedback, Freigabeempfehlung
 
 **Approver (Genehmiger):**
-- **Verantwortlich:** CIO oder delegierte Führungskraft
+- **Verantwortlich:** [TODO] oder delegierte Führungskraft
 - **Aufgaben:** Formale Freigabe, Verantwortungsübernahme
 
 ### 3.2 Freigabeprozess
@@ -143,7 +147,7 @@ Die AdminSend GmbH verwendet folgendes Versionierungsschema für BCM-Dokumente:
 
 | Dokumenttyp | Review-Intervall | Verantwortlich |
 |-------------|------------------|----------------|
-| BCM-Policy | Jährlich | {{ meta.roles.ceo.name }} |
+| BCM-Policy | Jährlich | [TODO] |
 | BIA-Ergebnisse | Jährlich | BCM-Manager |
 | BCM-Pläne (BCP/DRP) | Halbjährlich | Fachverantwortliche |
 | Kontaktlisten | Quartalsweise | BCM-Manager |
@@ -204,14 +208,6 @@ Die AdminSend GmbH verwendet folgendes Versionierungsschema für BCM-Dokumente:
 
 ## 5. Änderungsprotokoll (Changelog)
 
-### 5.1 Dokumenthistorie
-
-| Version | Datum | Änderung | Autor | Reviewer | Genehmigt durch |
-|---------|-------|----------|-------|----------|-----------------|
-| 0.1 | {{ meta.document.last_updated }} | Initiale Erstellung | {{ meta.defaults.author }} | [TODO] | [TODO] |
-
-[TODO: Aktualisieren Sie das Änderungsprotokoll bei jeder Dokumentenänderung]
-
 ### 5.2 Änderungsanforderungen
 
 Änderungsanforderungen an BCM-Dokumente können eingereicht werden durch:
@@ -221,13 +217,5 @@ Die AdminSend GmbH verwendet folgendes Versionierungsschema für BCM-Dokumente:
 - **Formular:** [TODO: Link zu Änderungsanforderungsformular]
 
 Jede Änderungsanforderung wird geprüft und priorisiert. Die Bearbeitung erfolgt gemäß definierter SLAs.
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

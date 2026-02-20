@@ -1,11 +1,17 @@
 # Restriction and Objection
 
-**Document-ID:** 0240  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0240
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of the right to restriction of processing and the right to object in {{ meta.organization }}.
+This document describes the implementation of the right to restriction of processing and the right to object in AdminSend GmbH.
 
 ## Right to Restriction (Art. 18)
 
@@ -204,8 +210,6 @@ This document describes the implementation of the right to restriction of proces
 | Missing Balancing | Refusal without review | Careful balancing |
 | Delayed Implementation | Advertising after objection | Immediate stop |
 | No Notification | Recipients not informed | Notification process |
-
----
 
 **Next Steps:**
 1. Establish processes for restriction and objection requests

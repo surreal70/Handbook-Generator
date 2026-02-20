@@ -1,13 +1,17 @@
 # Scope and Applicability
 
-**Document ID:** HIPAA-0010  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -37,11 +41,11 @@ This document defines the scope of HIPAA compliance for AdminSend GmbH and estab
 ### 2.1 Organization Details
 
 **Organization Name:** AdminSend GmbH  
-**Address:** Musterstraße 123, 80331 München  
-**State:** {{ meta.organization.state }}  
-**Country:** Deutschland  
-**Website:** https://www.adminsend.de  
-**Tax ID (EIN):** {{ meta.organization.tax_id }}  
+**Address:** Musterstraße 123, [TODO] [TODO]  
+**State:** [TODO]  
+**Country:** [TODO]  
+**Website:** [TODO]  
+**Tax ID (EIN):** [TODO]  
 
 ### 2.2 Organization Type
 
@@ -278,14 +282,14 @@ If yes:
 ### 9.1 Key Roles
 
 **Privacy Officer:**
-- **Name:** {{ meta.roles.privacy_officer.name }}
-- **Email:** {{ meta.roles.privacy_officer.email }}
-- **Phone:** {{ meta.roles.privacy_officer.phone }}
+- **Name:** [TODO]
+- **Email:** [TODO]
+- **Phone:** [TODO]
 
 **Security Officer:**
-- **Name:** {{ meta.roles.security_officer.name }}
-- **Email:** {{ meta.roles.security_officer.email }}
-- **Phone:** {{ meta.roles.security_officer.phone }}
+- **Name:** [TODO]
+- **Email:** [TODO]
+- **Phone:** [TODO]
 
 **HIPAA Compliance Officer:**
 - **Name:** [TODO: Name]
@@ -340,13 +344,5 @@ If yes:
 |------|-------------------|--------|-------------|
 | [TODO: Date] | Initial scope definition | N/A | [TODO: Name] |
 | [TODO: Date] | Added new EHR system | Expanded ePHI scope | [TODO: Name] |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

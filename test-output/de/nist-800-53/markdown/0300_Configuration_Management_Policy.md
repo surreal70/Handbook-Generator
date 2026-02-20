@@ -1,13 +1,17 @@
 # Configuration Management Policy
 
-**Dokument-ID:** NIST-0300  
-**Control Family:** Configuration Management (CM)  
-**Control:** CM-1, CM-2, CM-3  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0300
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -66,13 +70,5 @@ The organization establishes and maintains baseline configurations and controls 
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
 **Configuration Management Tool:** [TODO: Tool name]  
 **Baseline Compliance:** [TODO: Percentage]  
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

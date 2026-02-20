@@ -1,11 +1,17 @@
 # Datenschutzverletzungen und Meldepflicht
 
-**Dokument-ID:** 0330  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0330
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument regelt den Umgang mit Datenschutzverletzungen bei {{ meta.organization }} gemäß Art. 33-34 DSGVO. Es definiert Meldepflichten, Fristen und Prozesse zur Bewältigung von Datenschutzvorfällen.
+Dieses Dokument regelt den Umgang mit Datenschutzverletzungen bei AdminSend GmbH gemäß Art. 33-34 DSGVO. Es definiert Meldepflichten, Fristen und Prozesse zur Bewältigung von Datenschutzvorfällen.
 
 ## Definition Datenschutzverletzung (Art. 4 Nr. 12)
 
@@ -246,11 +252,10 @@ Der Verantwortliche dokumentiert alle Datenschutzverletzungen, einschließlich a
 - **Datenschutz-Folgenabschätzung (Art. 35):** Risikobewertung
 - **Incident-Response-Plan:** Detaillierte technische Prozesse
 
----
-
 **Nächste Schritte:**
 1. Implementieren Sie einen Incident-Response-Prozess
 2. Definieren Sie Eskalationswege und Verantwortlichkeiten
 3. Erstellen Sie Vorlagen für Meldungen und Benachrichtigungen
 4. Führen Sie regelmäßige Incident-Response-Übungen durch
 5. Etablieren Sie ein Breach-Register
+

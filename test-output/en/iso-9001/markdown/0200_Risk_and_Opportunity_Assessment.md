@@ -1,11 +1,17 @@
 # Actions to Address Risks and Opportunities
 
-**Document-ID:** 0200  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0200
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -19,7 +25,7 @@ This document defines the process for determining and addressing risks and oppor
 
 ### Risk Management Approach
 
-{{ meta.organization }} uses a systematic approach to identify, assess, and treat risks and opportunities related to the QMS.
+AdminSend GmbH uses a systematic approach to identify, assess, and treat risks and opportunities related to the QMS.
 
 **Risk Management Methodology:** [TODO: e.g., ISO 31000, FMEA, risk matrix]
 
@@ -302,8 +308,6 @@ Personnel receive training on:
 - **Management:** Risk assessment and treatment
 - **Process owners:** Process-specific risk management
 - **Quality team:** Detailed risk management methodology
-
----
 
 **Next Steps:**
 1. Conduct initial risk and opportunity assessment

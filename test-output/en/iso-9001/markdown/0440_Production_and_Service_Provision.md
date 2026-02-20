@@ -1,11 +1,17 @@
 # Production and Service Provision
 
-**Document-ID:** 0440  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0440
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,13 +19,13 @@
 
 ## Purpose
 
-This document defines how {{ meta.organization }} implements production and service provision under controlled conditions.
+This document defines how AdminSend GmbH implements production and service provision under controlled conditions.
 
 ## Controlled Conditions (8.5.1)
 
 ### Control Requirements
 
-**{{ meta.organization }} implements production and service provision under controlled conditions through:**
+**AdminSend GmbH implements production and service provision under controlled conditions through:**
 - Availability of documented information on product characteristics
 - Availability of work instructions
 - Use of suitable equipment
@@ -50,7 +56,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Identification
 
-**{{ meta.organization }} identifies outputs by:**
+**AdminSend GmbH identifies outputs by:**
 - Unique marking
 - Batch numbers
 - Serial numbers
@@ -89,7 +95,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Handling Customer Property
 
-**{{ meta.organization }} ensures:**
+**AdminSend GmbH ensures:**
 - Identification upon receipt
 - Verification and protection
 - Secure storage
@@ -112,7 +118,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Preservation Requirements
 
-**{{ meta.organization }} preserves outputs during production and service provision:**
+**AdminSend GmbH preserves outputs during production and service provision:**
 - Identification
 - Handling
 - Contamination control
@@ -159,7 +165,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Post-Delivery Activities
 
-**{{ meta.organization }} meets requirements for post-delivery activities:**
+**AdminSend GmbH meets requirements for post-delivery activities:**
 - Statutory and regulatory requirements
 - Potential undesired consequences of products/services
 - Nature, use and intended lifetime
@@ -206,7 +212,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Change Management
 
-**{{ meta.organization }} reviews and controls changes for production or service provision:**
+**AdminSend GmbH reviews and controls changes for production or service provision:**
 - Changes are documented
 - Impacts are assessed
 - Changes are approved
@@ -229,7 +235,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Release Process
 
-**{{ meta.organization }} implements planned arrangements to verify requirements are met:**
+**AdminSend GmbH implements planned arrangements to verify requirements are met:**
 - Release only after satisfactory completion
 - Documented information on release is retained
 - Traceability to persons authorizing release
@@ -260,7 +266,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Identification and Control
 
-**{{ meta.organization }} ensures nonconforming outputs:**
+**AdminSend GmbH ensures nonconforming outputs:**
 - Are identified and controlled
 - Are not used or delivered unintentionally
 - Are marked
@@ -307,11 +313,10 @@ This document defines how {{ meta.organization }} implements production and serv
 - Handling customer property
 - Shipping and delivery
 
----
-
 **Next Steps:**
 1. Establish controlled conditions
 2. Implement identification and traceability system
 3. Define handling and storage requirements
 4. Establish release process
 5. Implement non-conformity management
+

@@ -1,11 +1,17 @@
 # Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** 0020  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument definiert die Rollen und Verantwortlichkeiten im Datenschutz-Management der {{ meta.organization }} gemäß DSGVO. Es legt fest, wer für welche Datenschutzaufgaben verantwortlich ist und wie die Zusammenarbeit organisiert ist.
+Dieses Dokument definiert die Rollen und Verantwortlichkeiten im Datenschutz-Management der AdminSend GmbH gemäß DSGVO. Es legt fest, wer für welche Datenschutzaufgaben verantwortlich ist und wie die Zusammenarbeit organisiert ist.
 
 ## Zentrale Rollen gemäß DSGVO
 
@@ -186,11 +192,10 @@ Alle Personen, die Zugang zu personenbezogenen Daten haben, werden auf Vertrauli
 - **Verantwortlich:** [TODO: Datenschutzbeauftragter]
 - **Genehmigung:** [TODO: Geschäftsführung]
 
----
-
 **Nächste Schritte:**
 1. Benennen Sie alle relevanten Rollen und Verantwortliche
 2. Erstellen Sie eine vollständige RACI-Matrix
 3. Prüfen Sie die Benennungspflicht für einen Datenschutzbeauftragten
 4. Dokumentieren Sie alle Auftragsverarbeiter-Beziehungen
 5. Implementieren Sie ein Schulungsprogramm
+

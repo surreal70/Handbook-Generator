@@ -1,15 +1,28 @@
 # Tooling und Zugangswege
 
+**Dokument-ID:** [FRAMEWORK]-0250
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und URLs sowie Authentifizierungsmethoden für den IT-Service. Ziel ist es, einen zentralen Überblick über alle relevanten Werkzeuge und deren Zugang zu bieten.
 
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
-
----
 
 ## Tool-Kategorien
 
@@ -17,15 +30,13 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 
 | Kategorie | Anzahl Tools | Hauptverantwortlich | Kritikalität |
 |---|---:|---|---|
-| Monitoring & Observability | [TODO] | Andreas Huemmer | Hoch |
-| Infrastructure Management | [TODO] | Andreas Huemmer | Hoch |
-| Security & Compliance | [TODO] | Thomas Weber | Hoch |
-| Development & Deployment | [TODO] | Andreas Huemmer | Mittel |
-| Collaboration & Communication | [TODO] | Peter Fischer | Mittel |
-| Documentation & Knowledge | [TODO] | Andreas Huemmer | Mittel |
-| Backup & Recovery | [TODO] | Andreas Huemmer | Hoch |
-
----
+| Monitoring & Observability | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Hoch |
+| Infrastructure Management | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Hoch |
+| Security & Compliance | [TODO] | [TODO] | Hoch |
+| Development & Deployment | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Mittel |
+| Collaboration & Communication | [TODO] | {{ meta-organisation-roles.role_COO }} | Mittel |
+| Documentation & Knowledge | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Mittel |
+| Backup & Recovery | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Hoch |
 
 ## Monitoring und Observability
 
@@ -36,7 +47,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://monitoring.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** AdminSend GmbH SSO
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 - **Dokumentation:** [TODO: Dokumentations-URL]
 
@@ -51,8 +62,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **Read/Write:** Operations Team
 - **Read-Only:** Management, Stakeholder
 
----
-
 ### Application Performance Monitoring (APM)
 
 #### [TODO: APM-Tool Name]
@@ -60,7 +69,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://apm.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** AdminSend GmbH SSO
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -69,8 +78,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Performance-Metriken
 - User-Experience-Monitoring
 
----
-
 ### Log-Management
 
 #### [TODO: Log-Management-Tool Name]
@@ -78,7 +85,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://logs.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** AdminSend GmbH SSO
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -87,19 +94,17 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Log-Analyse und Visualisierung
 - Alerting auf Log-Patterns
 
----
-
 ## Infrastructure Management
 
 ### Configuration Management Database (CMDB)
 
 #### NetBox
 - **Zweck:** CMDB und IPAM
-- **URL:** {{ netbox.url }}
+- **URL:** [[ netbox.url ]]
 - **Zugriff:** VPN + Username/Password
 - **Authentifizierung:** Lokale Accounts oder LDAP
-- **Verantwortlich:** Andreas Huemmer
-- **API:** {{ netbox.api_url }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
+- **API:** [[ netbox.api_url ]]
 - **Dokumentation:** https://docs.netbox.dev/
 
 **Hauptfunktionen:**
@@ -114,8 +119,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **Read/Write:** Operations Team, Network Team
 - **Read-Only:** Management, Auditors
 
----
-
 ### Virtualisierung
 
 #### [TODO: Hypervisor-Management]
@@ -123,7 +126,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://vcenter.example.com]
 - **Zugriff:** VPN + Username/Password
 - **Authentifizierung:** Lokale Accounts oder AD
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -132,8 +135,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Snapshot-Management
 - Migration und HA
 
----
-
 ### Container-Orchestrierung
 
 #### [TODO: Container-Platform]
@@ -141,7 +142,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://k8s.example.com]
 - **Zugriff:** VPN + kubectl + Token
 - **Authentifizierung:** Service-Accounts, RBAC
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -150,8 +151,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Load-Balancing
 - Auto-Scaling
 
----
-
 ### Cloud-Management
 
 #### [TODO: Cloud-Provider Console]
@@ -159,7 +158,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://console.cloud-provider.com]
 - **Zugriff:** Internet + MFA
 - **Authentifizierung:** Cloud-Provider-Accounts + MFA
-- **Verantwortlich:** Anna Schmidt
+- **Verantwortlich:** [TODO]
 - **Support:** Cloud-Provider-Support
 
 **Hauptfunktionen:**
@@ -167,8 +166,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Storage-Management
 - Networking
 - IAM und Security
-
----
 
 ## Security und Compliance
 
@@ -179,7 +176,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://siem.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** AdminSend GmbH SSO
-- **Verantwortlich:** Thomas Weber
+- **Verantwortlich:** [TODO]
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -188,8 +185,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Incident-Response
 - Compliance-Reporting
 
----
-
 ### Vulnerability Management
 
 #### [TODO: Vulnerability-Scanner]
@@ -197,7 +192,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://vuln.example.com]
 - **Zugriff:** VPN + Username/Password
 - **Authentifizierung:** Lokale Accounts
-- **Verantwortlich:** Thomas Weber
+- **Verantwortlich:** [TODO]
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -206,8 +201,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Compliance-Checks
 - Reporting
 
----
-
 ### Identity and Access Management (IAM)
 
 #### Active Directory / LDAP
@@ -215,7 +208,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: ldap://ad.example.com]
 - **Zugriff:** Intern + VPN
 - **Authentifizierung:** Admin-Accounts
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -224,8 +217,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Authentifizierung
 - Autorisierung
 
----
-
 ### Multi-Factor Authentication (MFA)
 
 #### [TODO: MFA-Solution]
@@ -233,7 +224,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://mfa.example.com]
 - **Zugriff:** Internet
 - **Authentifizierung:** Username + MFA-Token
-- **Verantwortlich:** Thomas Weber
+- **Verantwortlich:** [TODO]
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -241,8 +232,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Token-Management
 - Push-Notifications
 - Backup-Codes
-
----
 
 ## Development und Deployment
 
@@ -253,7 +242,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://git.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** AdminSend GmbH SSO + SSH-Keys
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -262,8 +251,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - CI/CD-Integration
 - Issue-Tracking
 
----
-
 ### CI/CD Pipeline
 
 #### [TODO: CI/CD-Tool]
@@ -271,7 +258,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://ci.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** AdminSend GmbH SSO
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -280,8 +267,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Deployment-Automation
 - Pipeline-Management
 
----
-
 ### Artifact Repository
 
 #### [TODO: Artifact-Repository]
@@ -289,7 +274,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://artifacts.example.com]
 - **Zugriff:** VPN + Token
 - **Authentifizierung:** API-Tokens
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -297,8 +282,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Container-Registry
 - Dependency-Management
 - Version-Management
-
----
 
 ## Collaboration und Communication
 
@@ -309,7 +292,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://tickets.example.com]
 - **Zugriff:** Internet + SSO
 - **Authentifizierung:** AdminSend GmbH SSO
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -318,8 +301,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Change-Management
 - SLA-Tracking
 
----
-
 ### Team-Kommunikation
 
 #### [TODO: Chat-Platform]
@@ -327,7 +308,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://chat.example.com]
 - **Zugriff:** Internet + SSO
 - **Authentifizierung:** AdminSend GmbH SSO
-- **Verantwortlich:** Peter Fischer
+- **Verantwortlich:** {{ meta-organisation-roles.role_COO }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -336,8 +317,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - File-Sharing
 - Integration mit anderen Tools
 
----
-
 ### Video-Conferencing
 
 #### [TODO: Video-Tool]
@@ -345,7 +324,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://meet.example.com]
 - **Zugriff:** Internet
 - **Authentifizierung:** AdminSend GmbH SSO
-- **Verantwortlich:** Peter Fischer
+- **Verantwortlich:** {{ meta-organisation-roles.role_COO }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -353,8 +332,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Screen-Sharing
 - Recording
 - Chat
-
----
 
 ## Documentation und Knowledge Management
 
@@ -365,7 +342,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://wiki.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** AdminSend GmbH SSO
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -374,8 +351,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Suche und Navigation
 - Versionierung
 
----
-
 ### Diagramm-Tool
 
 #### [TODO: Diagramming-Tool]
@@ -383,7 +358,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://diagrams.example.com]
 - **Zugriff:** Internet + SSO
 - **Authentifizierung:** AdminSend GmbH SSO
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -391,8 +366,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Collaboration
 - Export in verschiedene Formate
 - Versionierung
-
----
 
 ## Backup und Recovery
 
@@ -403,7 +376,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://backup.example.com]
 - **Zugriff:** VPN + Username/Password
 - **Authentifizierung:** Lokale Accounts
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -411,8 +384,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - Backup-Monitoring
 - Restore-Funktionen
 - Retention-Management
-
----
 
 ## Zugangswege
 
@@ -423,8 +394,8 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://vpn.example.com]
 - **Client:** [TODO: VPN-Client-Name]
 - **Authentifizierung:** AdminSend GmbH AD + MFA
-- **Verantwortlich:** Thomas Weber
-- **Support:** julia.becker@adminsend.de
+- **Verantwortlich:** [TODO]
+- **Support:** {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
 
 **Verbindungsanleitung:**
 1. VPN-Client installieren
@@ -438,8 +409,6 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **Problem:** Langsame Verbindung
   - **Lösung:** Anderen VPN-Gateway wählen, Split-Tunneling prüfen
 
----
-
 ### SSH-Zugang
 
 #### SSH-Bastion-Host
@@ -447,7 +416,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **Hostname:** [TODO: bastion.example.com]
 - **Port:** 22
 - **Authentifizierung:** SSH-Keys + MFA
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **Verbindungsanleitung:**
 ```bash
@@ -464,23 +433,19 @@ ssh -i ~/.ssh/id_ed25519 username@bastion.example.com
 ssh username@target-server
 ```
 
----
-
 ### Remote Desktop
 
 #### RDP-Gateway
 - **Zweck:** Remote-Desktop-Zugriff auf Windows-Server
 - **URL:** [TODO: https://rdp.example.com]
 - **Authentifizierung:** AdminSend GmbH AD + MFA
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **Verbindungsanleitung:**
 1. RDP-Client öffnen
 2. Gateway-Adresse eingeben
 3. Mit AD-Credentials + MFA authentifizieren
 4. Ziel-Server auswählen
-
----
 
 ## Authentifizierungsmethoden
 
@@ -491,12 +456,10 @@ ssh username@target-server
 - **Protokoll:** SAML 2.0 / OAuth 2.0 / OpenID Connect
 - **MFA:** Erforderlich für alle externen Zugriffe
 - **Session-Timeout:** 8 Stunden
-- **Verantwortlich:** Thomas Weber
+- **Verantwortlich:** [TODO]
 
 **Unterstützte Anwendungen:**
 - [TODO: Liste der SSO-integrierten Anwendungen]
-
----
 
 ### API-Authentifizierung
 
@@ -505,15 +468,13 @@ ssh username@target-server
 - **Generierung:** Über jeweiliges Tool-Interface
 - **Rotation:** Alle 90 Tage
 - **Speicherung:** Secrets-Management-System
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **Best Practices:**
 - Tokens niemals in Code committen
 - Minimale Berechtigungen (Least Privilege)
 - Regelmäßige Rotation
 - Monitoring der Token-Nutzung
-
----
 
 ### SSH-Keys
 
@@ -522,7 +483,7 @@ ssh username@target-server
 - **Passphrase:** Erforderlich
 - **Rotation:** Jährlich
 - **Speicherung:** Lokal, verschlüsselt
-- **Verantwortlich:** Andreas Huemmer
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **Key-Generierung:**
 ```bash
@@ -532,8 +493,6 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 # RSA 4096 (alternativ)
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
-
----
 
 ## Tool-Zugriffs-Matrix
 
@@ -551,8 +510,6 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 | VPN | Ja | Ja | Ja | Ja | Ja |
 | SSH-Bastion | Ja | Ja | Ja | - | - |
 
----
-
 ## Notfall-Zugänge
 
 ### Break-Glass-Accounts
@@ -560,7 +517,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 #### Emergency-Admin-Account
 - **Zweck:** Notfall-Zugriff bei SSO-Ausfall
 - **Speicherung:** Versiegelter Umschlag im Safe
-- **Zugriff:** Nur durch Anna Schmidt oder Thomas Weber
+- **Zugriff:** Nur durch [TODO] oder [TODO]
 - **Protokollierung:** Jede Nutzung wird geloggt und reviewt
 - **Passwort-Rotation:** Quartalsweise
 
@@ -572,8 +529,6 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 5. Alle Aktionen protokollieren
 6. Passwort ändern und neuen Umschlag versiegeln
 7. Incident-Report erstellen
-
----
 
 ## Tool-Lifecycle-Management
 
@@ -596,8 +551,6 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
   - Support-Qualität
   - Integration mit anderen Tools
 
----
-
 ## Prozesse und Verantwortlichkeiten
 
 ### RACI-Matrix
@@ -613,8 +566,6 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 > **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
@@ -627,8 +578,6 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 - Zugriffsprotokolle
 - Authentifizierungs-Logs
 - Notfall-Zugriffs-Dokumentation
-
----
 
 ## Anhang
 
@@ -648,8 +597,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 - COBIT 2019 Framework
 - NIST Cybersecurity Framework
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** andreas.huemmer@adminsend.de
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+

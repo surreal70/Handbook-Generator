@@ -1,13 +1,17 @@
 # Mitarbeitersicherheit
 
-**Dokument-ID:** HIPAA-0110  
-**Organisation:** AdminSend GmbH  
-**Verantwortlich:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -155,7 +159,6 @@ Mitarbeiter mit begrenzter Schulung oder temporärem Status benötigen mögliche
 - [ ] Abschlusszahlung
 - [ ] COBRA-Benachrichtigung (falls zutreffend)
 - [ ] Überprüfung der Rückgabe von Eigentum
-
 
 ### 4.2 Zugriffskündigung
 
@@ -336,12 +339,11 @@ Mitarbeiter mit begrenzter Schulung oder temporärem Status benötigen mögliche
 
 **Speicherort:** [TODO: HR-System, Dokumentenmanagementsystem]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | [TODO] | Handbook-Generator | Ersterstellung |
+
 
 

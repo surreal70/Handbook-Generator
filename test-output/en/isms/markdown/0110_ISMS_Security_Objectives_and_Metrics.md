@@ -1,18 +1,31 @@
 # Information Security Objectives and Metrics
 
+**Document-ID:** [FRAMEWORK]-0110
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0110  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 6.2  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Information Security Objectives
 
@@ -22,11 +35,11 @@
 
 | Objective ID | Objective | Description | KPI/Metric | Target Value | Measurement Method | Owner | Frequency | Status |
 |--------------|-----------|-------------|------------|--------------|-------------------|-------|-----------|--------|
-| **O-001** | Ensure compliance | Compliance with all legal and contractual requirements | Number of compliance violations | 0 | Audit reports, incident reports | Thomas Weber | Quarterly | Active |
-| **O-002** | Minimize risks | Reduction of high and very high risks | Number of risks with score ≥ 13 | < 5 | Risk register | Thomas Weber | Quarterly | Active |
-| **O-003** | Ensure availability | Ensure availability of critical systems | Uptime of critical systems | ≥ 99.5% | Monitoring system | Anna Schmidt | Monthly | Active |
-| **O-004** | Reduce incidents | Reduction of number of security incidents | Number of security incidents | < 10 per quarter | Incident management system | Thomas Weber | Quarterly | Active |
-| **O-005** | Increase awareness | Increase security awareness | Training participation rate | 100% | LMS, training records | Thomas Weber | Annually | Active |
+| **O-001** | Ensure compliance | Compliance with all legal and contractual requirements | Number of compliance violations | 0 | Audit reports, incident reports | [TODO] | Quarterly | Active |
+| **O-002** | Minimize risks | Reduction of high and very high risks | Number of risks with score ≥ 13 | < 5 | Risk register | [TODO] | Quarterly | Active |
+| **O-003** | Ensure availability | Ensure availability of critical systems | Uptime of critical systems | ≥ 99.5% | Monitoring system | [TODO] | Monthly | Active |
+| **O-004** | Reduce incidents | Reduction of number of security incidents | Number of security incidents | < 10 per quarter | Incident management system | [TODO] | Quarterly | Active |
+| **O-005** | Increase awareness | Increase security awareness | Training participation rate | 100% | LMS, training records | [TODO] | Annually | Active |
 | **O-006** | Patch compliance | Timely installation of critical patches | Average time to install patches (critical) | < 7 days | Vulnerability management system | IT Operations | Monthly | Active |
 
 [TODO: Add additional organization-specific objectives]
@@ -38,7 +51,7 @@
 | **O-010** | Complete MFA rollout | MFA activation rate | 100% | IT Operations | Monthly |
 | **O-011** | Vulnerability management | Average time to remediate high vulnerabilities | < 30 days | IT Operations | Monthly |
 | **O-012** | Backup tests | Success rate of restore tests | 100% | IT Operations | Quarterly |
-| **O-013** | Phishing resilience | Phishing click rate in simulations | < 5% | Thomas Weber | Quarterly |
+| **O-013** | Phishing resilience | Phishing click rate in simulations | < 5% | [TODO] | Quarterly |
 
 ## 2. Key Performance Indicators (KPIs)
 
@@ -174,11 +187,10 @@ Each objective is linked to measures in the risk treatment plan:
 - **ISO/IEC 27001:2022** - Clause 6.2: Information security objectives
 - **ISO/IEC 27001:2022** - Clause 9.1: Monitoring, measurement, analysis and evaluation
 
----
-
 **Approved by:**  
-Thomas Weber, CISO  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]
+

@@ -1,15 +1,28 @@
 # Maintenance and Operations Routines
 
+**Document-ID:** [FRAMEWORK]-0230
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Overview
 
 This document describes regular maintenance tasks, operations checklists, and housekeeping procedures for the IT service. The goal is to ensure system stability, performance, and security through proactive maintenance.
 
-**Document Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
+**Document Owner:** [TODO]  
+**Approved by:** [TODO]  
+**Version:** 0  
 **Organization:** AdminSend GmbH
-
----
 
 ## Maintenance Overview
 
@@ -17,10 +30,10 @@ This document describes regular maintenance tasks, operations checklists, and ho
 
 | Category | Description | Frequency | Responsible |
 |---|---|---|---|
-| **Preventive** | Preventive measures to avoid failures | Regular | Andreas Huemmer |
-| **Corrective** | Fixing known problems | As needed | Andreas Huemmer |
-| **Adaptive** | Adaptation to new requirements | As needed | Andreas Huemmer |
-| **Perfective** | Improvement and optimization | Planned | Andreas Huemmer |
+| **Preventive** | Preventive measures to avoid failures | Regular | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Corrective** | Fixing known problems | As needed | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Adaptive** | Adaptation to new requirements | As needed | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Perfective** | Improvement and optimization | Planned | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 ### Maintenance Windows
 
@@ -35,10 +48,8 @@ This document describes regular maintenance tasks, operations checklists, and ho
 #### Emergency Maintenance
 - **Time Window:** Anytime after approval
 - **Announcement:** Minimum 4 hours (if possible)
-- **Approval:** Anna Schmidt
+- **Approval:** [TODO]
 - **Communication:** Inform all stakeholders
-
----
 
 ## Daily Routines
 
@@ -103,8 +114,6 @@ This document describes regular maintenance tasks, operations checklists, and ho
 **Duration:** 15-20 minutes  
 **Documentation:** Shift Handover Log
 
----
-
 ## Weekly Routines
 
 ### Monday: Week Planning
@@ -116,9 +125,18 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Assign resources
 - [ ] Identify risks
 
-**Participants:** Andreas Huemmer, Operations Team  
+**Participants:** {{ meta-organisation-roles.role_IT_Operations_Manager }}, Operations Team  
 **Duration:** 30 minutes  
 **Documentation:** Weekly Planning Notes
+
+#### Check System Updates
+- [ ] Identify available updates
+- [ ] Assess criticality
+- [ ] Perform test planning
+- [ ] Create deployment schedule
+
+**Responsible:** Operations Team  
+**Duration:** 1 hour
 
 ### Tuesday: Backup Validation
 
@@ -154,7 +172,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Review security incidents
 - [ ] Check compliance status
 
-**Responsible:** Operations Team, Thomas Weber  
+**Responsible:** Operations Team, [TODO]  
 **Duration:** 1-2 hours  
 **Documentation:** Weekly Security Report
 
@@ -167,9 +185,18 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Prepare next week
 - [ ] Brief weekend on-call
 
-**Participants:** Andreas Huemmer, Operations Team  
+**Participants:** {{ meta-organisation-roles.role_IT_Operations_Manager }}, Operations Team  
 **Duration:** 30 minutes  
 **Documentation:** Weekly Summary Report
+
+#### Housekeeping
+- [ ] Clean temporary files
+- [ ] Perform log rotation
+- [ ] Archive old tickets
+- [ ] Update documentation
+
+**Responsible:** Operations Team  
+**Duration:** 1 hour
 
 ### Sunday: Maintenance Window
 
@@ -184,8 +211,6 @@ This document describes regular maintenance tasks, operations checklists, and ho
 **Duration:** 2 hours  
 **Documentation:** Maintenance Log
 
----
-
 ## Monthly Routines
 
 ### First Week: Month Planning
@@ -197,7 +222,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Check budget status
 - [ ] Update capacity planning
 
-**Participants:** Anna Schmidt, Andreas Huemmer, Team Leads  
+**Participants:** [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}, Team Leads  
 **Duration:** 1 hour  
 **Documentation:** Monthly Planning Document
 
@@ -224,7 +249,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Assess scaling needs
 - [ ] Check budget implications
 
-**Responsible:** Andreas Huemmer  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 2-3 hours  
 **Documentation:** Monthly Capacity Report
 
@@ -238,7 +263,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Perform vulnerability scan
 - [ ] Check compliance status
 
-**Responsible:** Thomas Weber, Operations Team  
+**Responsible:** [TODO], Operations Team  
 **Duration:** 3-4 hours  
 **Documentation:** Monthly Security Audit Report
 
@@ -252,11 +277,23 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Identify improvements
 - [ ] Update DR plan
 
-**Responsible:** Andreas Huemmer  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 2-4 hours  
 **Documentation:** DR Test Report
 
----
+### Month-End: Reporting
+
+#### Monthly Reports
+- [ ] Availability report
+- [ ] Performance report
+- [ ] Incident report
+- [ ] Capacity report
+- [ ] Security report
+- [ ] SLA compliance report
+
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Duration:** 2-3 hours  
+**Recipients:** [TODO], Stakeholders
 
 ## Quarterly Routines
 
@@ -269,7 +306,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Conduct budget review
 - [ ] Update resource planning
 
-**Participants:** Max Mustermann, Anna Schmidt, Andreas Huemmer  
+**Participants:** [TODO], [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 2 hours  
 **Documentation:** Quarterly Planning Document
 
@@ -282,11 +319,36 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Identify consolidation potentials
 - [ ] Conduct investment planning
 
-**Responsible:** Andreas Huemmer  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 1 day  
 **Documentation:** Quarterly Infrastructure Report
 
----
+### Third Week: Process Review
+
+#### Quarterly Process Optimization
+- [ ] Review operational processes
+- [ ] Identify inefficiencies
+- [ ] Assess automation potentials
+- [ ] Define improvement measures
+- [ ] Create implementation plan
+
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}, Team Leads  
+**Duration:** 1 day  
+**Documentation:** Process Improvement Plan
+
+### Fourth Week: Disaster Recovery Full Test
+
+#### Quarterly Full DR Test
+- [ ] Execute complete DR scenario
+- [ ] Test all critical systems
+- [ ] Validate RTO/RPO
+- [ ] Test team coordination
+- [ ] Validate communication processes
+- [ ] Document lessons learned
+
+**Responsible:** [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Duration:** 1 day  
+**Documentation:** Quarterly DR Test Report
 
 ## Annual Routines
 
@@ -299,7 +361,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Finalize annual budget
 - [ ] Resource planning for the year
 
-**Participants:** Max Mustermann, Anna Schmidt, Maria Müller, Andreas Huemmer  
+**Participants:** [TODO], [TODO], [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 1 day  
 **Documentation:** Annual Planning Document
 
@@ -313,11 +375,37 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Architecture review
 - [ ] Identify modernization needs
 
-**Responsible:** Anna Schmidt, Andreas Huemmer  
+**Responsible:** [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 1 week  
 **Documentation:** Annual Infrastructure Audit Report
 
----
+### Q3: Disaster Recovery Full Test
+
+#### Annual Comprehensive DR Test
+- [ ] Complete failover test
+- [ ] Test all systems and processes
+- [ ] Validate business continuity plan
+- [ ] Involve external stakeholders
+- [ ] Test communication processes
+- [ ] Comprehensive documentation
+
+**Responsible:** [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Duration:** 2-3 days  
+**Documentation:** Annual DR Test Report
+
+### Q4: Year-End Review
+
+#### Year-End Review
+- [ ] Review year goals
+- [ ] Analyze KPIs
+- [ ] Check budget variances
+- [ ] Document lessons learned
+- [ ] Prepare next year
+- [ ] Create management presentation
+
+**Participants:** [TODO], [TODO], [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Duration:** 1 day  
+**Documentation:** Annual Review Report
 
 ## Housekeeping Procedures
 
@@ -334,6 +422,17 @@ This document describes regular maintenance tasks, operations checklists, and ho
 **Frequency:** Weekly (Sunday 02:00)  
 **Duration:** 1-2 hours
 
+#### Monthly Database Maintenance
+- [ ] Perform index rebuild
+- [ ] Database shrink (if required)
+- [ ] Archive old data
+- [ ] Validate backup strategy
+- [ ] Disaster recovery test
+
+**Responsible:** Database Administrator  
+**Frequency:** Monthly (First Sunday 02:00)  
+**Duration:** 2-4 hours
+
 ### Log Management
 
 #### Daily Log Rotation
@@ -346,7 +445,52 @@ This document describes regular maintenance tasks, operations checklists, and ho
 **Frequency:** Daily (00:00)  
 **Duration:** Automatic
 
----
+#### Weekly Log Archiving
+- [ ] Archive logs from last week
+- [ ] Check archive integrity
+- [ ] Delete old archives (per retention policy)
+- [ ] Check archive storage space
+
+**Responsible:** Operations Team  
+**Frequency:** Weekly (Sunday)  
+**Duration:** 30 minutes
+
+### Storage Housekeeping
+
+#### Weekly Storage Cleanup
+- [ ] Delete temporary files
+- [ ] Clean old downloads
+- [ ] Empty cache directories
+- [ ] Identify orphaned files
+- [ ] Check storage utilization
+
+**Responsible:** Operations Team  
+**Frequency:** Weekly (Friday)  
+**Duration:** 1 hour
+
+#### Monthly Storage Audit
+- [ ] Analyze storage utilization
+- [ ] Identify large files
+- [ ] Find and remove duplicates
+- [ ] Identify archiving candidates
+- [ ] Perform storage optimization
+
+**Responsible:** Operations Team  
+**Frequency:** Monthly  
+**Duration:** 2-3 hours
+
+### System Cleanup
+
+#### Weekly System Cleanup
+- [ ] Delete temporary files
+- [ ] Clean package cache
+- [ ] Remove old kernel versions
+- [ ] Remove orphaned packages
+- [ ] Clean system logs
+
+**Responsible:** Operations Team  
+**Frequency:** Weekly (Sunday)  
+**Duration:** 30 minutes
 
 ## Automation
 
@@ -354,14 +498,85 @@ This document describes regular maintenance tasks, operations checklists, and ho
 
 | Routine | Frequency | Tool/Script | Responsible |
 |---|---|---|---|
-| Backup Jobs | Daily | [TODO: Backup Tool] | Andreas Huemmer |
+| Backup Jobs | Daily | [TODO: Backup Tool] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | Log Rotation | Daily | logrotate | Automated |
 | Health Checks | Hourly | [TODO: Monitoring Tool] | Automated |
 | Disk Cleanup | Weekly | [TODO: Script] | Automated |
 | Security Scans | Daily | [TODO: Security Tool] | Automated |
 | Performance Reports | Weekly | [TODO: Script] | Automated |
 
----
+### Automation Roadmap
+
+| Quarter | Routine | Expected Benefit | Status |
+|---|---|---|---|
+| Q1 2026 | [TODO] | [TODO] hours/month | Planned |
+| Q2 2026 | [TODO] | [TODO] hours/month | Planned |
+| Q3 2026 | [TODO] | [TODO] hours/month | Planned |
+| Q4 2026 | [TODO] | [TODO] hours/month | Planned |
+
+## Checklist Templates
+
+### Daily Operations Checklist
+
+```markdown
+# Daily Operations Checklist - [DATE]
+
+## Morning Check (08:00)
+- [ ] Checked monitoring dashboard
+- [ ] Reviewed critical alerts
+- [ ] Validated system availability
+- [ ] Verified backup status
+- [ ] Checked overnight incidents
+
+## Midday Check (12:00)
+- [ ] Checked performance metrics
+- [ ] Reviewed security alerts
+- [ ] Validated capacity status
+
+## Evening Check (18:00)
+- [ ] Reviewed day incidents
+- [ ] Updated open tickets
+- [ ] Performed night shift handover
+
+**Performed by:** [NAME]
+**Notes:** [NOTES]
+```
+
+### Weekly Maintenance Checklist
+
+```markdown
+# Weekly Maintenance Checklist - Week [NUMBER]
+
+## Monday: Planning
+- [ ] Reviewed weekend incidents
+- [ ] Defined week goals
+- [ ] Planned maintenance work
+
+## Tuesday: Backup
+- [ ] Checked backup logs
+- [ ] Performed restore test
+
+## Wednesday: Performance
+- [ ] Analyzed performance trends
+- [ ] Identified bottlenecks
+
+## Thursday: Security
+- [ ] Analyzed security logs
+- [ ] Reviewed vulnerability scans
+
+## Friday: Closure
+- [ ] Reviewed week goals
+- [ ] Performed housekeeping
+- [ ] Briefed weekend on-call
+
+## Sunday: Maintenance
+- [ ] Installed system updates
+- [ ] Performed database maintenance
+- [ ] Performed disk cleanup
+
+**Performed by:** [NAME]
+**Notes:** [NOTES]
+```
 
 ## Processes and Responsibilities
 
@@ -379,8 +594,6 @@ This document describes regular maintenance tasks, operations checklists, and ho
 
 > **Legend:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance and Standards
 
 ### Relevant Standards
@@ -388,8 +601,29 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - **ISO 20000:** Clause 8.1 - Operational Planning and Control
 - **COBIT 2019:** DSS01 - Managed Operations
 
----
+### Audit Requirements
+- Maintenance logs
+- Checklist documentation
+- Automation scripts
+- Compliance evidence
 
-**Last Update:** {{ meta.date }}  
+## Appendix
+
+### Glossary
+
+| Term | Definition |
+|---|---|
+| Housekeeping | Regular cleanup and maintenance work |
+| Operations Routine | Recurring operational task |
+| Preventive Maintenance | Preventive maintenance to avoid failures |
+| Corrective Maintenance | Fixing known problems |
+
+### References
+- ITIL v4 Foundation Handbook
+- ISO/IEC 20000-1:2018
+- COBIT 2019 Framework
+
+**Last Update:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
-**Contact:** andreas.huemmer@adminsend.de
+**Contact:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+

@@ -18,5 +18,3 @@ Language: en
 - [0500 - Privacy Practices and Individual Rights](0500_Privacy_Practices_and_Individual_Rights.md)
 - [0600 - Breach Notification and Incident Response](0600_Breach_Notification_and_Incident_Response.md)
 - [0700 - Appendix Risk Analysis Template](0700_Appendix_Risk_Analysis_Template.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

@@ -1,13 +1,17 @@
 # Roles and Responsibilities
 
-**Document ID:** TSC-0040  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -34,8 +38,8 @@ This document defines the roles and responsibilities for TSC compliance and SOC 
   - Change approval
 
 **CISO:**
-- **Name:** {{ meta.roles.ciso.name }}
-- **Email:** {{ meta.roles.ciso.email }}
+- **Name:** [TODO]
+- **Email:** [TODO]
 - **Responsibilities:**
   - Security strategy
   - Risk management
@@ -84,8 +88,8 @@ This document defines the roles and responsibilities for TSC compliance and SOC 
 
 ### 4.2 Service Auditor
 
-**Firm:** {{ meta.roles.auditor.name }}  
-**Contact:** {{ meta.roles.auditor.email }}  
+**Firm:** [TODO]  
+**Contact:** [TODO]  
 **Responsibilities:**
 - Conduct SOC 2 audit
 - Test control effectiveness
@@ -129,10 +133,3 @@ This document defines the roles and responsibilities for TSC compliance and SOC 
 **Operations Team:**
 - [TODO: AWS Certified, Azure Certified]
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |

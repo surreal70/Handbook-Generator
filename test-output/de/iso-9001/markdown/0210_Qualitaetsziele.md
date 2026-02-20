@@ -1,11 +1,17 @@
 # Qualitätsziele und Planung zu deren Erreichung
 
-**Dokument-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0210
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument legt Qualitätsziele für {{ meta.organization }} fest und definiert die Planung zu deren Erreichung gemäß ISO 9001:2015 Kapitel 6.2.
+Dieses Dokument legt Qualitätsziele für AdminSend GmbH fest und definiert die Planung zu deren Erreichung gemäß ISO 9001:2015 Kapitel 6.2.
 
 ## Qualitätsziele-Rahmen
 
@@ -160,8 +166,6 @@ Qualitätsziele werden kommuniziert durch:
 - **Intranet:** Ziele veröffentlicht und aktualisiert
 - **Leistungs-Dashboards:** Visuelle Darstellungen
 - **Individuelle Ziele:** Kaskadiert zu persönlichen Zielen
-
----
 
 **Nächste Schritte:**
 1. Lege Qualitätsziele auf Organisations- und Funktionsebene fest

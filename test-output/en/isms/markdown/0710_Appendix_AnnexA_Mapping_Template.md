@@ -1,9 +1,17 @@
 # Appendix A: Annex A Control Mapping
 
-**Document Type:** Appendix  
-**Version:** 1.0.0  
-**Date:** {{ meta.document.date }}  
-**Classification:** internal
+**Document-ID:** [FRAMEWORK]-0710
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -16,10 +24,8 @@ The mapping considers the changes from Amendment 1:2024 and ensures that all 93 
 ## Scope
 
 **Organization:** AdminSend GmbH  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Responsible:** Thomas Weber (thomas.weber@adminsend.de)
-
----
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Responsible:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 
 ## ISO/IEC 27001:2022 Annex A Structure
 
@@ -31,8 +37,6 @@ The Annex A controls are organized into four main categories:
 - **Technological Controls (8.1-8.34):** 34 controls
 
 **Total:** 93 controls
-
----
 
 ## Annex A Control Mapping
 
@@ -48,7 +52,6 @@ The Annex A controls are organized into four main categories:
 - Policy: 0200-0680 (All Topic-Specific Policies)
 - Process: 0050_ISMS_Document_Control.md
 
-**Responsible:** Thomas Weber  
+**Responsible:** [TODO]  
 **Evidence:** Approved and published policies, training records
 
----

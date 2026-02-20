@@ -1,19 +1,32 @@
 # Guideline: Key Management and Encryption
 
+**Document-ID:** [FRAMEWORK]-0270
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0270  
 **Document Type:** Guideline (detailed)  
 **Related Policy:** 0260_Policy_Cryptography_and_Key_Management.md  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.24  
-**Owner:** {{ meta.it_operations.manager }}  
+**Owner:** {{ meta-handbook.it_operations_manager }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose and Scope
 
@@ -91,13 +104,13 @@ ECDHE-RSA-AES128-GCM-SHA256
 ### 3.2 Key Storage
 
 **Hardware Security Modules (HSM):**
-- Critical keys (Root CA, master keys) in HSM: {{ meta.security.hsm }}
+- Critical keys (Root CA, master keys) in HSM: {{ meta-handbook.security_hsm }}
 - FIPS 140-2 Level 2 or higher
 - Physical security and access control
 
 **Key Management Systems:**
-- **Cloud:** {{ meta.cloud.key_vault }} (e.g., Azure Key Vault, AWS KMS)
-- **On-Premises:** {{ meta.security.kms }} (e.g., HashiCorp Vault)
+- **Cloud:** {{ meta-handbook.cloud_key_vault }} (e.g., Azure Key Vault, AWS KMS)
+- **On-Premises:** {{ meta-handbook.security_kms }} (e.g., HashiCorp Vault)
 - Encrypted storage
 - Audit logging of all access
 
@@ -147,9 +160,9 @@ ECDHE-RSA-AES128-GCM-SHA256
 ### 4.1 Public Key Infrastructure (PKI)
 
 **Components:**
-- **Root CA:** {{ meta.pki.root_ca }} (Offline, HSM-protected)
-- **Issuing CA:** {{ meta.pki.issuing_ca }} (Online, for certificate issuance)
-- **Certificate Management System:** {{ meta.pki.cms }}
+- **Root CA:** {{ meta-handbook.pki_root_ca }} (Offline, HSM-protected)
+- **Issuing CA:** {{ meta-handbook.pki_issuing_ca }} (Online, for certificate issuance)
+- **Certificate Management System:** {{ meta-handbook.pki_cms }}
 
 **Certificate Types:**
 - **Server Certificates:** Web servers, API endpoints
@@ -346,10 +359,9 @@ ECDHE-RSA-AES128-GCM-SHA256
 - **NIST SP 800-52** - TLS Guidelines
 - **BSI TR-02102** - Cryptographic Procedures
 
----
-
 **Approved by:**  
-Thomas Weber, CISO  
-Date: {{ meta.document.approval_date }}
+[TODO], CISO  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** [TODO]
+

@@ -1,14 +1,17 @@
 # Guideline: Change Management with Security Approvals
 
-**Document ID:** 0370  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0360_Policy_Change_and_Release_Management.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.8.32  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0370
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -254,7 +257,7 @@ This guideline implements the `0360_Policy_Change_and_Release_Management.md` and
 - Test results
 - Post-implementation review
 
-**Retention:** {{ meta.retention.change_years }} years
+**Retention:** {{ meta-handbook.retention_change_years }} years
 
 ### 7.2 Post-Implementation Review (PIR)
 
@@ -294,7 +297,6 @@ This guideline implements the `0360_Policy_Change_and_Release_Management.md` and
 - **ISO/IEC 27001:2022 Annex A.8.32** - Change management
 - **ITIL 4** - Change Enablement Practice
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

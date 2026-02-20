@@ -1,25 +1,31 @@
 # Scope and System Boundaries
 
-**Document-ID:** NIST-0020  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
 ## 1. Purpose
 
-This document defines the scope and authorization boundaries of the information system {{ meta.nist.system_name }}.
+This document defines the scope and authorization boundaries of the information system {{ meta-handbook.system_name }}.
 
 ## 2. System Identification
 
-**System Name:** {{ meta.nist.system_name }}  
-**System ID:** {{ meta.nist.system_id }}  
+**System Name:** {{ meta-handbook.system_name }}  
+**System ID:** {{ meta-handbook.system_id }}  
 **FIPS 199 Categorization:** [TODO: Low / Moderate / High]  
 **System Owner:** [TODO: Name]  
-**Authorizing Official (AO):** {{ meta.roles.ao.name }}  
+**Authorizing Official (AO):** [TODO]  
 
 ## 3. Authorization Boundary
 
@@ -83,13 +89,5 @@ The authorization boundary includes all components under a single authorization 
 | Role | Count | Access Level | Rationale |
 |------|-------|--------------|-----------|
 | [TODO: Admin] | [TODO: Count] | Privileged | Administration |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

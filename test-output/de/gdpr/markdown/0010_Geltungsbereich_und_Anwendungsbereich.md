@@ -1,11 +1,17 @@
 # Geltungsbereich und Anwendungsbereich
 
-**Dokument-ID:** 0010  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Zweck
 
-Dieses Dokument definiert den Geltungsbereich und Anwendungsbereich der Datenschutz-Grundverordnung (DSGVO) für {{ meta.organization }}. Es legt fest, welche Verarbeitungstätigkeiten personenbezogener Daten unter die DSGVO fallen und welche Ausnahmen gelten.
+Dieses Dokument definiert den Geltungsbereich und Anwendungsbereich der Datenschutz-Grundverordnung (DSGVO) für AdminSend GmbH. Es legt fest, welche Verarbeitungstätigkeiten personenbezogener Daten unter die DSGVO fallen und welche Ausnahmen gelten.
 
 ## Sachlicher Anwendungsbereich (Art. 2 DSGVO)
 
@@ -154,11 +160,10 @@ Der Geltungsbereich wird überprüft:
 - **Rechtsgrundlagen (Art. 6):** Rechtmäßigkeit der Verarbeitung
 - **Datenübermittlung (Art. 44-50):** Regelungen für Drittlandübermittlung
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Verarbeitungstätigkeiten in Ihrer Organisation
 2. Prüfen Sie den räumlichen Anwendungsbereich (Niederlassungen, Marktortprinzip)
 3. Dokumentieren Sie Ausnahmen und Sonderfälle
 4. Erstellen Sie das Verzeichnis von Verarbeitungstätigkeiten (Art. 30)
 5. Überprüfen Sie regelmäßig bei Änderungen
+

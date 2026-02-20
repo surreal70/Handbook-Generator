@@ -75,4 +75,3 @@ Language: de
 - [0720 - Anhang Asset und Systeminventar Template](0720_Anhang_Asset_und_Systeminventar_Template.md)
 - [0730 - Anhang Datenfluss und Schnittstellen Template](0730_Anhang_Datenfluss_und_Schnittstellen_Template.md)
 - [0740 - Anhang Begriffe und Abkuerzungen](0740_Anhang_Begriffe_und_Abkuerzungen.md)
-- [READ - E](README.md)

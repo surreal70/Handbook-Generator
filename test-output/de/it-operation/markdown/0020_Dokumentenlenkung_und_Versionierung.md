@@ -1,5 +1,20 @@
 # Dokumentenlenkung und Versionierung
 
+**Dokument-ID:** [FRAMEWORK]-0020
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 ## Dokumentmetadaten
 
 | Feld | Wert |
@@ -7,19 +22,19 @@
 | Dokumenttitel | IT-Betriebshandbuch – AdminSend GmbH |
 | Dokument-ID | [TODO: Eindeutige Dokument-ID] |
 | System/Service | [TODO: System-/Service-Name] |
-| Eigentümer (Owner) | IT Operations Manager |
-| Verantwortlicher Redakteur | Andreas Huemmer [andreas.huemmer@adminsend.de] |
-| Freigabeinstanz | CIO |
-| Klassifizierung | internal |
+| Eigentümer (Owner) | [TODO] |
+| Verantwortlicher Redakteur | [Author] |
+| Freigabeinstanz | [TODO] |
+| Klassifizierung | Internal |
 | Ablageort | [TODO: Zentrales Repository/Ablageort] |
 | Organisation | AdminSend GmbH |
-| Standort | München, Deutschland |
+| Standort | {{ meta-organisation.city }}, {{ meta-organisation.country }} |
 
 ## Versionshistorie
 
 | Version | Datum | Autor | Änderungen | Genehmigung |
 |---|---|---|---|---|
-| 1.0.0 | [TODO: Datum] | Andreas Huemmer [andreas.huemmer@adminsend.de] | Initiale Version | CIO |
+| 0 | [TODO: Datum] | [Author] | Initiale Version | [TODO] |
 | | | | | |
 | | | | | |
 
@@ -62,14 +77,14 @@
 - Auswirkungsanalyse
 - Betroffene Abschnitte
 
-**Genehmigung:** IT Operations Manager
+**Genehmigung:** [TODO]
 
 ### 2. Fachreview
 
 **Reviewer:**
-- **Operations:** Andreas Huemmer (andreas.huemmer@adminsend.de)
+- **Operations:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 - **Architektur:** [TODO: Architektur-Verantwortlicher]
-- **Security:** Thomas Weber (thomas.weber@adminsend.de)
+- **Security:** [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 - **Compliance:** [TODO: Compliance-Verantwortlicher]
 
 **Prüfkriterien:**
@@ -80,7 +95,7 @@
 
 ### 3. Freigabe
 
-**Freigabeinstanz:** CIO
+**Freigabeinstanz:** [TODO]
 
 **Freigabekriterien:**
 - Alle Reviews abgeschlossen
@@ -91,13 +106,13 @@
 **Freigabeprozess:**
 1. Review-Kommentare einarbeiten
 2. Finale Version erstellen
-3. Freigabe durch CIO
+3. Freigabe durch [TODO]
 4. Version inkrementieren
 5. Publikation im Repository
 
 ### 4. Publikation
 
-**Verantwortlich:** IT Operations Manager
+**Verantwortlich:** [TODO]
 
 **Schritte:**
 1. Dokument im zentralen Repository ablegen
@@ -115,13 +130,13 @@
 
 ### Normale Änderungen (Minor)
 
-- **Genehmigung:** CIO
+- **Genehmigung:** [TODO]
 - **Review:** Fachbereich (Operations/Security)
 - **Beispiele:** Neue Abschnitte, Prozessänderungen
 
 ### Wesentliche Änderungen (Major)
 
-- **Genehmigung:** Anna Schmidt (anna.schmidt@adminsend.de)
+- **Genehmigung:** [TODO] ({{ meta-organisation-roles.role_CIO_email }})
 - **Review:** Alle Fachbereiche + Management
 - **CAB-Sitzung:** Erforderlich
 - **Beispiele:** Grundlegende Überarbeitungen, Architekturänderungen
@@ -130,7 +145,7 @@
 
 ### Sprache und Format
 
-- **Sprache:** de
+- **Sprache:** {{ meta-handbook.language }}
 - **Format:** Markdown (.md)
 - **Zeichensatz:** UTF-8
 - **Zeilenumbruch:** Unix (LF)
@@ -166,9 +181,9 @@ Jedes Dokument MUSS folgende Informationen enthalten:
 Verwenden Sie folgende Platzhalter für organisationsweite Informationen:
 
 - **Organisation:** `AdminSend GmbH`
-- **Rollen:** `Max Mustermann`, `Anna Schmidt`, `Thomas Weber`
-- **Dokument:** `IT Operations Manager`, `CIO`
-- **Autor:** `Andreas Huemmer [andreas.huemmer@adminsend.de]`
+- **Rollen:** `[TODO]`, `[TODO]`, `[TODO]`
+- **Dokument:** `[TODO]`, `[TODO]`
+- **Autor:** `Handbook-Generator`
 
 ## Dokumentenklassifizierung
 
@@ -179,7 +194,7 @@ Verwenden Sie folgende Platzhalter für organisationsweite Informationen:
 | **Vertraulich** | Eingeschränkter Zugriff | Autorisierte Personen | Sicherheitskonzepte, Passwörter |
 | **Streng vertraulich** | Höchste Vertraulichkeit | Management + Autorisierte | Geschäftsgeheimnisse, Compliance |
 
-**Aktuelle Klassifizierung:** internal
+**Aktuelle Klassifizierung:** Internal
 
 ## Archivierung und Aufbewahrung
 
@@ -201,22 +216,21 @@ Verwenden Sie folgende Platzhalter für organisationsweite Informationen:
 
 | Rolle | Verantwortung | Person |
 |---|---|---|
-| **Dokumentverantwortlicher** | Gesamtverantwortung, Aktualität | IT Operations Manager |
-| **Redakteur** | Inhaltliche Pflege, Änderungen | Andreas Huemmer [andreas.huemmer@adminsend.de] |
-| **Freigabeinstanz** | Genehmigung von Änderungen | CIO |
-| **CIO** | Strategische Ausrichtung | Anna Schmidt |
-| **CISO** | Security-Review | Thomas Weber |
+| **Dokumentverantwortlicher** | Gesamtverantwortung, Aktualität | [TODO] |
+| **Redakteur** | Inhaltliche Pflege, Änderungen | [Author] |
+| **Freigabeinstanz** | Genehmigung von Änderungen | [TODO] |
+| **CIO** | Strategische Ausrichtung | [TODO] |
+| **CISO** | Security-Review | [TODO] |
 
 ## Kontakte
 
 **Bei Fragen zur Dokumentenlenkung:**
-- **Dokumentverantwortlicher:** IT Operations Manager
-- **IT Operations Manager:** Andreas Huemmer (andreas.huemmer@adminsend.de)
-- **CIO:** Anna Schmidt (anna.schmidt@adminsend.de)
+- **Dokumentverantwortlicher:** [TODO]
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- **CIO:** [TODO] ({{ meta-organisation-roles.role_CIO_email }})
 
----
-
-**Dokumentverantwortlicher:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Version:** 0  
 **Organisation:** AdminSend GmbH
+

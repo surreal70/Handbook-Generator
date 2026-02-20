@@ -1,11 +1,17 @@
 # Data Portability
 
-**Document-ID:** 0250  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0250
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -13,7 +19,7 @@
 
 ## Purpose
 
-This document describes the implementation of the right to data portability in {{ meta.organization }}. Data subjects have the right to receive their data in a structured, commonly used and machine-readable format.
+This document describes the implementation of the right to data portability in AdminSend GmbH. Data subjects have the right to receive their data in a structured, commonly used and machine-readable format.
 
 ## Right to Data Portability (Art. 20)
 
@@ -229,8 +235,6 @@ This document describes the implementation of the right to data portability in {
 | Incomplete Data | Only master data | All portable data |
 | Missing Interface | No direct transfer | Provide API |
 | Delayed Provision | Provision after 3 months | Deadline control |
-
----
 
 **Next Steps:**
 1. Establish process for data portability requests

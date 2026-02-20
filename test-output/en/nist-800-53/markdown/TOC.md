@@ -57,5 +57,3 @@ Language: en
 - [0820 - Plan of Action and Milestones](0820_Plan_of_Action_and_Milestones.md)
 - [0830 - Privacy Controls](0830_Privacy_Controls.md)
 - [0850 - Glossary and Abbreviations](0850_Glossary_and_Abbreviations.md)
-- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
-- [READ - E](README.md)

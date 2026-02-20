@@ -1,18 +1,21 @@
 # Policy: Lieferanten und Cloud Sicherheit
 
-
-
-**Dokument-ID:** 0460  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.19-A.5.23 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0460
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Lieferanten-Typen:** IT-Dienstleister, Cloud-Provider, SaaS-Anbieter, Outsourcing-Partner, Subunternehmer
 - **Services:** IaaS, PaaS, SaaS, Managed Services, Outsourcing
 - **Lebenszyklus:** Auswahl, Onboarding, Betrieb, Monitoring, Offboarding
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -86,10 +89,10 @@ Datenstandorte (Data Residency) werden dokumentiert und entsprechen regulatorisc
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Third-Party Risk Manager:** {{ meta.security.tprm_manager }}
-- **Cloud Security Architect:** {{ meta.security.cloud_architect }}
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Policy Owner:** [TODO] (CISO)
+- **Third-Party Risk Manager:** {{ meta-handbook.security_tprm_manager }}
+- **Cloud Security Architect:** {{ meta-handbook.security_cloud_architect }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Umsetzungsverantwortliche:** Procurement, Legal, IT-Betrieb
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -169,10 +172,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **CSA STAR** - Cloud Security Alliance Security, Trust & Assurance Registry
 - **DSGVO (EU 2016/679)** - Art. 28 - Auftragsverarbeitung
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

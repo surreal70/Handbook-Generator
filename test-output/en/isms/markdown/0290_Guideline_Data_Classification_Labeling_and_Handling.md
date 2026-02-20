@@ -1,14 +1,17 @@
 # Guideline: Data Classification, Labeling and Handling
 
-**Document ID:** 0290  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0280_Policy_Data_Classification_and_Information_Handling.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.12, A.5.13  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0290
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -253,7 +256,6 @@ This guideline implements the `0280_Policy_Data_Classification_and_Information_H
 - **ISO/IEC 27001:2022 Annex A.5.13** - Labelling of information
 - **DIN 66399** - Destruction of data carriers
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

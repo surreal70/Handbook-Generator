@@ -1,11 +1,17 @@
 # Coverage Matrix
 
-**Document-ID:** 0530  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0530
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -331,11 +337,3 @@ The Coverage Matrix demonstrates:
 
 **Status:** [TODO: Complete / With Gaps / In Progress]
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | [TODO] | Initial version |
-| 1.0 | [TODO] | [TODO] | [TODO] |

@@ -1,18 +1,21 @@
 # Policy: Endpoint Security
 
-
-
-**Dokument-ID:** 0620  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.1-A.8.3, A.6.7 (inkl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0620
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
 
 ---
+
+---
+
+
 
 ## 1. Zweck
 
@@ -26,7 +29,7 @@ Diese Policy gilt für:
 - **Geräte:** Alle Endgeräte (Workstations, Laptops, Tablets, Smartphones)
 - **Betriebssysteme:** Windows, macOS, Linux, iOS, Android
 - **Eigentum:** Unternehmenseigene und BYOD-Geräte (mit Unternehmenszugriff)
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte, Remote Work
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte, Remote Work
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -83,10 +86,10 @@ BYOD-Geräte mit Unternehmenszugriff müssen Mindest-Sicherheitsanforderungen er
 
 ### Schlüsselrollen
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Endpoint Security Manager:** {{ meta.endpoint.security_manager }}
-- **IT Operations Manager:** {{ meta.it.operations_manager }}
-- **SOC Manager:** {{ meta.soc.manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **Endpoint Security Manager:** {{ meta-handbook.endpoint_security_manager }}
+- **IT Operations Manager:** {{ meta-handbook.it_operations_manager }}
+- **SOC Manager:** {{ meta-handbook.soc_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, End Users
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, SOC
 
@@ -167,10 +170,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIST SP 800-171** - Protecting Controlled Unclassified Information
 - **CIS Controls v8** - Control 4 (Secure Configuration of Enterprise Assets)
 
----
-
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
+Datum: [TODO]
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** [TODO] (jährlich oder anlassbezogen)
+

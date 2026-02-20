@@ -1,13 +1,17 @@
 # Purpose and Scope
 
-**Document ID:** BCM-0010  
-**Organization:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Approved by:** CIO  
-**Version:** 1.0.0  
-**Status:** Draft / In Review / Approved  
-**Classification:** internal  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -65,7 +69,7 @@ The BCMS covers the following locations:
 [TODO: List all locations within scope]
 
 **Example:**
-- Headquarters: Musterstraße 123, 80331 München
+- Headquarters: Musterstraße 123, [TODO] [TODO]
 - Production site: [Address]
 - Data center: [Address]
 - Alternate site: [Address]
@@ -104,8 +108,8 @@ The following areas are explicitly excluded from scope:
 [TODO: Document exceptions with justification and approving authority]
 
 **Example:**
-- **Subsidiary XY:** Operates its own BCMS (Approved by: {{ meta.roles.ceo.name }})
-- **Development environments:** Not business-critical (Approved by: {{ meta.roles.cio.name }})
+- **Subsidiary XY:** Operates its own BCMS (Approved by: [TODO])
+- **Development environments:** Not business-critical (Approved by: [TODO])
 
 ## 3. Assumptions and Constraints
 
@@ -139,7 +143,7 @@ The following dependencies are outside the organization's direct control:
 
 ### 4.1 Information Security Management System (ISMS)
 
-**Responsible:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+**Responsible:** [TODO] ([TODO])
 
 Interfaces:
 - Incident management and security incident response
@@ -151,7 +155,7 @@ Interfaces:
 
 ### 4.2 IT Service Management (ITSM)
 
-**Responsible:** {{ meta.roles.it_operations_manager.name }} ({{ meta.roles.it_operations_manager.email }})
+**Responsible:** [TODO] ([TODO])
 
 Interfaces:
 - Incident management (major incidents → BCM activation)
@@ -196,13 +200,5 @@ Interfaces:
 - Reputation protection
 
 [TODO: Describe the specific interfaces to crisis communication]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 

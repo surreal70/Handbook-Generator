@@ -1,13 +1,17 @@
 # Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** PCI-0030  
-**Organisation:** AdminSend GmbH  
-**Owner:** IT Operations Manager  
-**Genehmigt durch:** CIO  
-**Version:** 1.0.0  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** internal  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** PCI-0030
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Genehmigt durch:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Klassifizierung:** Internal
+**Letzte Aktualisierung:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -29,9 +33,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 ### 2.1 Executive Management
 
 **Chief Executive Officer (CEO):**
-- **Name:** {{ meta.roles.ceo.name }}
-- **E-Mail:** {{ meta.roles.ceo.email }}
-- **Telefon:** {{ meta.roles.ceo.phone }}
+- **Name:** [TODO]
+- **E-Mail:** [TODO]
+- **Telefon:** [TODO]
 
 **Verantwortlichkeiten:**
 - Gesamtverantwortung für PCI-DSS-Compliance
@@ -40,9 +44,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 - Eskalationspunkt für kritische Compliance-Themen
 
 **Chief Information Security Officer (CISO):**
-- **Name:** {{ meta.roles.ciso.name }}
-- **E-Mail:** {{ meta.roles.ciso.email }}
-- **Telefon:** {{ meta.roles.ciso.phone }}
+- **Name:** [TODO]
+- **E-Mail:** [TODO]
+- **Telefon:** [TODO]
 
 **Verantwortlichkeiten:**
 - Leitung des PCI-DSS-Compliance-Programms
@@ -78,9 +82,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 ### 2.3 IT und Operations
 
 **Chief Information Officer (CIO):**
-- **Name:** {{ meta.roles.cio.name }}
-- **E-Mail:** {{ meta.roles.cio.email }}
-- **Telefon:** {{ meta.roles.cio.phone }}
+- **Name:** [TODO]
+- **E-Mail:** [TODO]
+- **Telefon:** [TODO]
 
 **Verantwortlichkeiten:**
 - Verantwortung für IT-Infrastruktur und -Systeme
@@ -368,13 +372,5 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 - Testergebnisse (falls zutreffend)
 
 **Aufbewahrungsfrist:** [TODO: 3 Jahre]
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 

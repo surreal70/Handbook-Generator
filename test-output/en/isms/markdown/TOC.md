@@ -75,4 +75,3 @@ Language: en
 - [0720 - Appendix Asset and System Inventory Template](0720_Appendix_Asset_and_System_Inventory_Template.md)
 - [0730 - Appendix Data Flow and Interfaces Template](0730_Appendix_Data_Flow_and_Interfaces_Template.md)
 - [0740 - Appendix Terms and Abbreviations](0740_Appendix_Terms_and_Abbreviations.md)
-- [READ - E](README.md)

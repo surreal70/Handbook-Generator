@@ -1,14 +1,17 @@
 # Guideline: Records Retention and Secure Deletion
 
-**Document ID:** 0590  
-**Document Type:** Guideline (detailed)  
-**Associated Policy:** 0580_Policy_Retention_and_Deletion.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.33  
-**Owner:** {{ meta.compliance.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0590
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -48,11 +51,11 @@ This guideline specifies the `0580_Policy_Retention_and_Deletion.md` and defines
 
 | Data Type | Retention Period | Justification |
 |-----------|------------------|---------------|
-| Emails (business) | {{ meta.retention.email_years }} years | Business correspondence |
-| Logs (security) | {{ meta.retention.log_years }} years | Forensics, compliance |
+| Emails (business) | {{ meta-handbook.retention_email_years }} years | Business correspondence |
+| Logs (security) | {{ meta-handbook.retention_log_years }} years | Forensics, compliance |
 | Logs (system) | 1 year | Troubleshooting |
 | Backups | Per backup policy | Recovery |
-| Audit trails | {{ meta.retention.audit_years }} years | Compliance |
+| Audit trails | {{ meta-handbook.retention_audit_years }} years | Compliance |
 
 ### 2.4 Customer Data
 
@@ -134,7 +137,7 @@ This guideline specifies the `0580_Policy_Retention_and_Deletion.md` and defines
 - Person performing deletion
 - Confirmation of deletion
 
-**Retention:** {{ meta.retention.deletion_log_years }} years
+**Retention:** {{ meta-handbook.retention_deletion_log_years }} years
 
 ## 5. Email Archiving
 
@@ -143,7 +146,7 @@ This guideline specifies the `0580_Policy_Retention_and_Deletion.md` and defines
 **Business Emails:**
 - Automatic archiving
 - Immutability (WORM)
-- Retention: {{ meta.retention.email_years }} years
+- Retention: {{ meta-handbook.retention_email_years }} years
 
 **Private Emails:**
 - No archiving
@@ -151,7 +154,7 @@ This guideline specifies the `0580_Policy_Retention_and_Deletion.md` and defines
 
 ### 5.2 Archiving System
 
-**System:** {{ meta.email.archive_system }}
+**System:** {{ meta-handbook.email_archive_system }}
 
 **Functions:**
 - Automatic archiving
@@ -232,7 +235,6 @@ This guideline specifies the `0580_Policy_Retention_and_Deletion.md` and defines
 - **HGB §257** - Retention of documents
 - **AO §147** - Regulations for retention of documents
 
----
+**Approved by:** [TODO], CISO  
+**Next Review:** [TODO]
 
-**Approved by:** Thomas Weber, CISO  
-**Next Review:** {{ meta.document.next_review }}

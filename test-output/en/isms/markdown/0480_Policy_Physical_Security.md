@@ -1,18 +1,31 @@
 # Policy: Physical Security
 
+**Document-ID:** [FRAMEWORK]-0480
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
+
+---
+
 
 
 **Document ID:** 0480  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.7.1-A.7.4 (incl. Amendment 1:2024)  
-**Owner:** Thomas Weber  
+**Owner:** [TODO]  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** [TODO]  
+**Next Review:** [TODO]
 
 ## 1. Purpose
 
@@ -26,7 +39,7 @@ This policy applies to:
 - **Facilities:** Offices, data centers, server rooms, warehouses, production facilities
 - **Assets:** IT equipment, servers, network components, mobile devices, documents
 - **Persons:** Employees, visitors, contractors, suppliers
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -86,9 +99,9 @@ IT equipment is protected against theft (Kensington locks, alarm systems, invent
 
 ### Key Roles
 
-- **Policy Owner:** Thomas Weber (CISO)
-- **Facility Manager:** {{ meta.facility.manager }}
-- **Security Manager:** {{ meta.security.physical_security_manager }}
+- **Policy Owner:** [TODO] (CISO)
+- **Facility Manager:** {{ meta-handbook.facility_manager }}
+- **Security Manager:** {{ meta-handbook.security_physical_security_manager }}
 - **Implementation Responsible:** Facility Management, Security, IT Operations
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -163,10 +176,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **GDPR (EU 2016/679)** - Data protection for video surveillance
 - **BSI IT-Grundschutz** - Module INF.1 General Building
 
----
-
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+{{ meta-handbook.management_ceo }}, Management  
+Date: [TODO]
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** [TODO] (annually or as needed)
+

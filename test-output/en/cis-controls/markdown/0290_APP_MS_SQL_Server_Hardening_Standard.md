@@ -1,14 +1,17 @@
 # APP Hardening Standard: Microsoft SQL Server
 
-**Document ID:** 0290  
-**Document Type:** Standard/Baseline  
-**Reference Framework:** CIS Controls v8 (Hardening Program; no benchmark texts)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Draft)  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Updated:** 2026-01-31  
-**Next Review:** [TODO]
+**Document-ID:** [FRAMEWORK]-0290
+**Organisation:** AdminSend GmbH
+**Owner:** [TODO]
+**Approved by:** [TODO]
+**Revision:** [TODO]
+**Author:** Handbook-Generator
+**Status:** Draft
+**Classification:** Internal
+**Last Update:** [TODO]
+**Template Version:** [TODO]
+
+---
 
 ---
 
@@ -80,9 +83,9 @@
 - Parameter list/example values: [TODO]
 - Checklist: see `0410_Appendix_Checklists_and_Evidence.md`
 
-
 ## 12. MSSQL-Specific Requirements (Examples)
 - Auth (AD integrated login): [TODO]
 - Encryption (TDE/TLS): [TODO]
 - Auditing: [TODO]
 - Service account least privilege: [TODO]
+
