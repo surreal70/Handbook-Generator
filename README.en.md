@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.21-green.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.22-green.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-72%25-yellow.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-7635%20total-success.svg)](tests/)
@@ -27,7 +27,7 @@ A Python tool for generating professional handbooks from Markdown templates with
 
 ## 🎯 Important Notice
 
-**This is Version 0.0.21 - Limited Production Use**
+**This is Version 0.0.22 - Limited Production Use**
 
 This version is ready for:
 - ✅ Markdown handbook generation (all 44 handbooks)
@@ -38,16 +38,19 @@ This version is ready for:
 - ✅ Handbook-specific metadata
 
 Limitations:
-- ⚠️ PDF generation requires system libraries (libpango)
+- ⚠️ **PDF Generation: HIGHLY EXPERIMENTAL AND PARTIALLY BROKEN**
+  - ReportLab Engine: Functional but TOC formatting incomplete
+  - WeasyPrint Engine: Requires system libraries (libpango), often non-functional
+  - **Recommendation**: Use Markdown output and convert externally
 - ⚠️ HTML output not comprehensively tested
 
-See [Release Notes](about_versioning/VERSION_0.0.21_RELEASE_NOTES.md) for details.
+See [Release Notes](about_versioning/VERSION_0.0.22_RELEASE_NOTES.md) for details.
 
 ## Overview
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.21** - 🎯 Limited Production Use - Core functionality stable
+**Version 0.0.22** - ⚠️ Limited Production Use - Core functionality stable, PDF generation experimental
 
 ## Features
 
@@ -153,6 +156,142 @@ sudo apt-get install pandoc texlive-xetex
 sudo apt-get install libpango-1.0-0 libpangocairo-1.0-0
 ```
 
+## PDF Engine Selection
+
+⚠️ **WARNING: PDF generation is HIGHLY EXPERIMENTAL and PARTIALLY BROKEN**
+
+Direct PDF generation via `--pdf-engine` is experimental in version 0.0.22 and has known issues:
+
+**Known Issues:**
+- ❌ ReportLab: TOC formatting incomplete, page breaks partially faulty
+- ❌ WeasyPrint: Requires system libraries, often non-functional (libpango issues)
+- ❌ Both engines: Not production-ready
+
+**RECOMMENDATION for production environments:**
+```bash
+# 1. Generate Markdown
+./handbook-generator -l en -t bcm -o markdown --test
+
+# 2. Convert to PDF externally (e.g., with Pandoc)
+pandoc output/en/bcm/markdown/bcm_handbook.md -o bcm_handbook.pdf --pdf-engine=xelatex --toc
+```
+
+### ReportLab (Experimental - Not recommended)
+
+**Status:** ⚠️ Partially functional, but with limitations
+
+**Known Issues:**
+- TOC formatting incomplete
+- Page breaks not consistent
+- Not production-ready
+
+**Installation:**
+```bash
+pip install reportlab markdown
+```
+
+**Usage (at your own risk):**
+```bash
+# Explicitly use ReportLab
+./handbook-generator -l en -t bcm -o pdf --pdf-engine reportlab --test
+
+# Auto-detection (prefers ReportLab)
+./handbook-generator -l en -t bcm -o pdf --test
+```
+
+### WeasyPrint (Experimental - Often non-functional)
+
+**Status:** ❌ Frequently broken due to system library issues
+
+**Known Issues:**
+- libpango libraries often fail to load
+- Complex system dependencies
+- Often doesn't work despite installed packages
+
+**Installation:**
+```bash
+# Install Python package
+pip install weasyprint
+
+# Install system dependencies (often doesn't work)
+# Ubuntu/Debian:
+sudo apt-get install libpango-1.0-0 libpangoft2-1.0-0 libpangocairo-1.0-0
+
+# macOS:
+brew install pango
+
+# Windows:
+# GTK3 Runtime from https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases
+```
+
+**Usage (at your own risk):**
+```bash
+# Explicitly use WeasyPrint
+./handbook-generator -l en -t bcm -o pdf --pdf-engine weasyprint --test
+```
+
+### Engine Comparison
+
+| Feature | ReportLab | WeasyPrint | Pandoc (Recommended) |
+|---------|-----------|------------|-------------------|
+| Status | ⚠️ Experimental | ❌ Often broken | ✅ Production-ready |
+| Installation | ⭐⭐⭐⭐ Easy | ⭐⭐ Difficult | ⭐⭐⭐⭐ Easy |
+| Reliability | ⭐⭐⭐ Medium | ⭐ Poor | ⭐⭐⭐⭐⭐ Excellent |
+| PDF Quality | ⭐⭐⭐ Acceptable | ⭐⭐⭐⭐⭐ Excellent | ⭐⭐⭐⭐⭐ Excellent |
+| TOC Support | ⚠️ Partial | ✅ Complete | ✅ Complete |
+| Recommendation | ⚠️ Testing only | ❌ Don't use | ✅ Use in production |
+
+### Auto-Detection
+
+If you don't specify `--pdf-engine`, the system automatically detects available engines:
+
+**Preference Order:**
+1. ReportLab (preferred, but experimental)
+2. WeasyPrint (fallback, often broken)
+
+```bash
+# Use auto-detection (not recommended for production)
+./handbook-generator -l en -t bcm -o pdf --test
+
+# System automatically selects the best available engine
+```
+
+### Troubleshooting
+
+**"No PDF engines available" error:**
+```bash
+# Install ReportLab (experimental)
+pip install reportlab markdown
+
+# Or WeasyPrint (often non-functional)
+pip install weasyprint
+sudo apt-get install libpango-1.0-0 libpangoft2-1.0-0  # Linux
+```
+
+**WeasyPrint "OSError" or "cairo" errors:**
+```bash
+# This is a known issue - WeasyPrint is often non-functional
+# RECOMMENDATION: Use Pandoc instead
+
+# 1. Generate Markdown
+./handbook-generator -l en -t bcm -o markdown --test
+
+# 2. Convert to PDF with Pandoc
+pandoc output/en/bcm/markdown/bcm_handbook.md -o bcm.pdf --pdf-engine=xelatex --toc
+```
+
+**Check virtual environment:**
+```bash
+# Ensure you're in the virtual environment
+source venv/bin/activate
+
+# Check installed packages
+pip list | grep -E '(reportlab|weasyprint|markdown)'
+
+# Reinstall if needed
+pip install --upgrade reportlab markdown
+```
+
 ## Quick Start
 
 ### Generate Single Handbook
@@ -161,8 +300,11 @@ sudo apt-get install libpango-1.0-0 libpangocairo-1.0-0
 # Generate HTML handbook
 ./handbook-generator -l en -t bcm -o html --test
 
-# Generate PDF handbook (requires Pandoc + XeLaTeX)
-./handbook-generator -l en -t isms -o pdf --test --pdf-toc
+# Generate Markdown (RECOMMENDED for PDF conversion)
+./handbook-generator -l en -t isms -o markdown --test
+
+# Create PDF with Pandoc (RECOMMENDED)
+pandoc output/en/isms/markdown/isms_handbook.md -o isms.pdf --pdf-engine=xelatex --toc
 
 # Generate all formats
 ./handbook-generator -l en -t bcm -o all --test --separate-files --pdf-toc

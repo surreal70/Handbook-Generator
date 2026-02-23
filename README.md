@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.21-green.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.22-green.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-72%25-yellow.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-7635%20total-success.svg)](tests/)
@@ -27,7 +27,7 @@ Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlage
 
 ## 🎯 Wichtiger Hinweis
 
-**Dies ist Version 0.0.21 - Begrenzte Produktionsnutzung (Limited Production Use)**
+**Dies ist Version 0.0.22 - Begrenzte Produktionsnutzung (Limited Production Use)**
 
 Diese Version ist bereit für:
 - ✅ Markdown-Handbuch-Generierung (alle 44 Handbücher)
@@ -38,16 +38,19 @@ Diese Version ist bereit für:
 - ✅ Handbuch-spezifische Metadaten
 
 Einschränkungen:
-- ⚠️ PDF-Generierung erfordert System-Bibliotheken (libpango)
+- ⚠️ **PDF-Generierung: HOCHGRADIG EXPERIMENTELL UND TEILWEISE DEFEKT**
+  - ReportLab-Engine: Funktioniert, aber TOC-Formatierung unvollständig
+  - WeasyPrint-Engine: Erfordert System-Bibliotheken (libpango), oft nicht funktionsfähig
+  - **Empfehlung**: Verwenden Sie Markdown-Ausgabe und konvertieren Sie extern
 - ⚠️ HTML-Ausgabe nicht umfassend getestet
 
-Siehe [Release Notes](about_versioning/VERSION_0.0.21_RELEASE_NOTES.md) für Details.
+Siehe [Release Notes](about_versioning/VERSION_0.0.22_RELEASE_NOTES.md) für Details.
 
 ## Überblick
 
 Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
 
-**Version 0.0.21** - 🎯 Limited Production Use - Core functionality stable
+**Version 0.0.22** - 🎯 Limited Production Use - Core functionality stable, PDF generation experimental
 
 ## Features
 
@@ -289,6 +292,142 @@ sudo apt-get install pandoc texlive-xetex
 sudo apt-get install libpango-1.0-0 libpangocairo-1.0-0
 ```
 
+## PDF Engine Auswahl
+
+⚠️ **WARNUNG: PDF-Generierung ist HOCHGRADIG EXPERIMENTELL und TEILWEISE DEFEKT**
+
+Die direkte PDF-Generierung über `--pdf-engine` ist in Version 0.0.22 experimentell und weist bekannte Probleme auf:
+
+**Bekannte Probleme:**
+- ❌ ReportLab: TOC-Formatierung unvollständig, Seitenumbrüche teilweise fehlerhaft
+- ❌ WeasyPrint: Erfordert System-Bibliotheken, oft nicht funktionsfähig (libpango-Probleme)
+- ❌ Beide Engines: Nicht produktionsreif
+
+**EMPFEHLUNG für Produktionsumgebungen:**
+```bash
+# 1. Markdown generieren
+./handbook-generator -l de -t bcm -o markdown --test
+
+# 2. Extern zu PDF konvertieren (z.B. mit Pandoc)
+pandoc output/de/bcm/markdown/bcm_handbook.md -o bcm_handbook.pdf --pdf-engine=xelatex --toc
+```
+
+### ReportLab (Experimentell - Nicht empfohlen)
+
+**Status:** ⚠️ Funktioniert teilweise, aber mit Einschränkungen
+
+**Bekannte Probleme:**
+- TOC-Formatierung unvollständig
+- Seitenumbrüche nicht konsistent
+- Keine Produktionsreife
+
+**Installation:**
+```bash
+pip install reportlab markdown
+```
+
+**Verwendung (auf eigene Gefahr):**
+```bash
+# Explizit ReportLab verwenden
+./handbook-generator -l de -t bcm -o pdf --pdf-engine reportlab --test
+
+# Auto-Erkennung (bevorzugt ReportLab)
+./handbook-generator -l de -t bcm -o pdf --test
+```
+
+### WeasyPrint (Experimentell - Oft nicht funktionsfähig)
+
+**Status:** ❌ Häufig defekt aufgrund von System-Bibliotheks-Problemen
+
+**Bekannte Probleme:**
+- libpango-Bibliotheken oft nicht ladbar
+- Komplexe System-Abhängigkeiten
+- Funktioniert oft nicht trotz installierter Pakete
+
+**Installation:**
+```bash
+# Python-Paket installieren
+pip install weasyprint
+
+# System-Abhängigkeiten installieren (funktioniert oft nicht)
+# Ubuntu/Debian:
+sudo apt-get install libpango-1.0-0 libpangoft2-1.0-0 libpangocairo-1.0-0
+
+# macOS:
+brew install pango
+
+# Windows:
+# GTK3 Runtime von https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases
+```
+
+**Verwendung (auf eigene Gefahr):**
+```bash
+# Explizit WeasyPrint verwenden
+./handbook-generator -l de -t bcm -o pdf --pdf-engine weasyprint --test
+```
+
+### Engine-Vergleich
+
+| Feature | ReportLab | WeasyPrint | Pandoc (Empfohlen) |
+|---------|-----------|------------|-------------------|
+| Status | ⚠️ Experimentell | ❌ Oft defekt | ✅ Produktionsreif |
+| Installation | ⭐⭐⭐⭐ Einfach | ⭐⭐ Schwierig | ⭐⭐⭐⭐ Einfach |
+| Zuverlässigkeit | ⭐⭐⭐ Mittel | ⭐ Schlecht | ⭐⭐⭐⭐⭐ Exzellent |
+| PDF-Qualität | ⭐⭐⭐ Akzeptabel | ⭐⭐⭐⭐⭐ Exzellent | ⭐⭐⭐⭐⭐ Exzellent |
+| TOC-Support | ⚠️ Teilweise | ✅ Vollständig | ✅ Vollständig |
+| Empfehlung | ⚠️ Nur für Tests | ❌ Nicht verwenden | ✅ Produktiv nutzen |
+
+### Auto-Erkennung
+
+Wenn Sie `--pdf-engine` nicht angeben, erkennt das System automatisch verfügbare Engines:
+
+**Präferenz-Reihenfolge:**
+1. ReportLab (bevorzugt, aber experimentell)
+2. WeasyPrint (Fallback, oft defekt)
+
+```bash
+# Auto-Erkennung verwenden (nicht empfohlen für Produktion)
+./handbook-generator -l de -t bcm -o pdf --test
+
+# System wählt automatisch die beste verfügbare Engine
+```
+
+### Fehlerbehebung
+
+**"No PDF engines available" Fehler:**
+```bash
+# Installieren Sie ReportLab (experimentell)
+pip install reportlab markdown
+
+# Oder WeasyPrint (oft nicht funktionsfähig)
+pip install weasyprint
+sudo apt-get install libpango-1.0-0 libpangoft2-1.0-0  # Linux
+```
+
+**WeasyPrint "OSError" oder "cairo" Fehler:**
+```bash
+# Dies ist ein bekanntes Problem - WeasyPrint ist oft nicht funktionsfähig
+# EMPFEHLUNG: Verwenden Sie Pandoc stattdessen
+
+# 1. Markdown generieren
+./handbook-generator -l de -t bcm -o markdown --test
+
+# 2. Mit Pandoc zu PDF konvertieren
+pandoc output/de/bcm/markdown/bcm_handbook.md -o bcm.pdf --pdf-engine=xelatex --toc
+```
+
+**Virtuelle Umgebung prüfen:**
+```bash
+# Stellen Sie sicher, dass Sie in der virtuellen Umgebung sind
+source venv/bin/activate
+
+# Installierte Pakete prüfen
+pip list | grep -E '(reportlab|weasyprint|markdown)'
+
+# Neu installieren falls nötig
+pip install --upgrade reportlab markdown
+```
+
 ## Schnellstart
 
 ### Einzelnes Handbuch generieren
@@ -297,8 +436,11 @@ sudo apt-get install libpango-1.0-0 libpangocairo-1.0-0
 # HTML-Handbuch generieren
 ./handbook-generator -l de -t bcm -o html --test
 
-# PDF-Handbuch generieren (erfordert Pandoc + XeLaTeX)
-./handbook-generator -l de -t isms -o pdf --test --pdf-toc
+# Markdown generieren (EMPFOHLEN für PDF-Konvertierung)
+./handbook-generator -l de -t isms -o markdown --test
+
+# PDF mit Pandoc erstellen (EMPFOHLEN)
+pandoc output/de/isms/markdown/isms_handbook.md -o isms.pdf --pdf-engine=xelatex --toc
 
 # Alle Formate generieren
 ./handbook-generator -l de -t bcm -o all --test --separate-files --pdf-toc
@@ -417,6 +559,12 @@ Das System zeigt verfügbare Sprachen und Handbuchtypen an und fragt nach Ihrer 
 # ISMS-Handbuch auf Englisch, nur PDF
 ./handbook-generator --language en --template isms --output pdf --test
 
+# ISMS-Handbuch mit ReportLab Engine (empfohlen)
+./handbook-generator --language en --template isms --output pdf --pdf-engine reportlab --test
+
+# ISMS-Handbuch mit WeasyPrint Engine (erweiterte Features)
+./handbook-generator --language en --template isms --output pdf --pdf-engine weasyprint --test
+
 # BSI Grundschutz-Handbuch auf Deutsch
 ./handbook-generator --language de --template bsi-grundschutz --test
 
@@ -485,6 +633,10 @@ Das System zeigt verfügbare Sprachen und Handbuchtypen an und fragt nach Ihrer 
 - `--service, -s`: Service-Name für Service-Dokumentation (z.B. `generic-service-template`)
 - `--process, -p`: Prozess-Name für Prozess-Dokumentation (z.B. `generic-process-template`)
 - `--output, -o`: Ausgabeformat (`markdown`, `pdf`, `html`, `both`, `all`) [Standard: `both`]
+- `--pdf-engine`: PDF-Engine auswählen (`reportlab`, `weasyprint`, `auto`) [Standard: `auto`]
+  - `reportlab`: Pure Python, keine System-Abhängigkeiten (empfohlen)
+  - `weasyprint`: Erweiterte Features, benötigt libpango
+  - `auto`: Automatische Erkennung (bevorzugt ReportLab)
 - `--test`: Test-Modus aktivieren (erforderlich für Ausgabegenerierung)
 - `--separate-files`: Separate Markdown-Dateien pro Template generieren (statt kombinierter Datei)
 - `--pdf-toc`: PDF mit Inhaltsverzeichnis und Seitenumbrüchen generieren

@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.21
+## Current Version: 0.0.22
 
 ### Single Source of Truth
 
@@ -33,6 +33,15 @@ To update the version number:
 
 ### Version History
 
+- **0.0.22** (2026-02-23): ⚠️ Experimental PDF Generation - Limited Production Use
+  - ⚠️ **PDF generation marked as HIGHLY EXPERIMENTAL and PARTIALLY BROKEN**
+  - ⚠️ ReportLab: Functional but TOC formatting incomplete, page breaks partially faulty
+  - ❌ WeasyPrint: Requires system libraries (libpango), often non-functional
+  - ✅ **Recommendation**: Use Markdown output and convert externally with Pandoc
+  - ✅ Updated all documentation with experimental warnings
+  - ✅ Created comprehensive release notes
+  - ✅ Core functionality remains stable (Markdown, HTML, placeholders)
+  - **Status**: ⚠️ Limited Production Use - PDF generation not recommended
 - **0.0.21** (2026-02-20): 🎯 Limited Production Use - Version Update
   - ✅ Updated version to 0.0.21 across all documents
   - ✅ Prepared for next development cycle
