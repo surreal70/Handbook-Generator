@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-02: Rückgabe von Vermögenswerten
 
-**Dokument-ID:** [FRAMEWORK]-0720
+**Dokument-ID:** CSA-CCM-0720
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

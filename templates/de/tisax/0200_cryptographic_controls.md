@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kryptographische Kontrollen
 
-**Dokument-ID:** [FRAMEWORK]-0200
+**Dokument-ID:** TISAX-0200
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

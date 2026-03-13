@@ -6,7 +6,7 @@ Classification: Internal
 
 # MOS-08: Geräteverwaltung
 
-**Dokument-ID:** [FRAMEWORK]-0890
+**Dokument-ID:** CSA-CCM-0890
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

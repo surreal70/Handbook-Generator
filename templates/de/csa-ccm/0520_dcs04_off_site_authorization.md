@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-04: Externe Autorisierung
 
-**Dokument-ID:** [FRAMEWORK]-0520
+**Dokument-ID:** CSA-CCM-0520
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Unternehmensebenen-Kontrollen
 
-**Document-ID:** [FRAMEWORK]-0510
+**Document-ID:** COSO-0510
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Test- und Validierungsverfahren
 
-**Document-ID:** [FRAMEWORK]-0540
+**Document-ID:** COSO-0540
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

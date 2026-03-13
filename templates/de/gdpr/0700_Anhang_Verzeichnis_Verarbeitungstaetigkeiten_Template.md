@@ -1,6 +1,6 @@
 # Anhang: Verzeichnis der Verarbeitungstätigkeiten (Template)
 
-**Dokument-ID:** 0700
+**Dokument-ID:** GDPR-0700
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

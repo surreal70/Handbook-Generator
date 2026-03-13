@@ -1,6 +1,6 @@
 # Policy: Kryptografie und Schlüsselmanagement
 
-**Dokument-ID:** 0260
+**Dokument-ID:** ISMS-0260
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

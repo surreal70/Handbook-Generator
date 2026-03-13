@@ -206,6 +206,14 @@ Examples:
         help='Generate PDF with table of contents and page breaks between templates (improves navigation and readability)'
     )
     
+    parser.add_argument(
+        '--pdf-engine',
+        type=str,
+        choices=['reportlab', 'weasyprint', 'auto'],
+        default='auto',
+        help='PDF generation engine to use: reportlab (pure Python, portable), weasyprint (advanced features, requires system libs), or auto (auto-detect, default: auto)'
+    )
+    
     return parser.parse_args()
 
 
@@ -675,7 +683,8 @@ def main() -> int:
             pdf_result = output_generator.generate_pdf_with_toc(
                 templates_data,
                 language,
-                template_type
+                template_type,
+                engine_type=args.pdf_engine
             )
             all_warnings.extend(pdf_result.warnings)
             all_errors.extend(pdf_result.errors)
@@ -689,7 +698,8 @@ def main() -> int:
             pdf_result = output_generator.generate_pdf(
                 assembled_content,
                 language,
-                template_type
+                template_type,
+                engine_type=args.pdf_engine
             )
             all_warnings.extend(pdf_result.warnings)
             all_errors.extend(pdf_result.errors)

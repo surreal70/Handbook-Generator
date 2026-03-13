@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Management-Verantwortlichkeiten
 
-**Dokument-ID:** [FRAMEWORK]-0230
+**Dokument-ID:** ISO-38500-0230
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

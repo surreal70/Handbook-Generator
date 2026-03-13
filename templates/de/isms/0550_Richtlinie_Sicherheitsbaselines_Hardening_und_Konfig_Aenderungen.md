@@ -1,6 +1,6 @@
 # Richtlinie: Sicherheitsbaselines, Hardening und Konfigurationsänderungen
 
-**Dokument-ID:** 0550
+**Dokument-ID:** ISMS-0550
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

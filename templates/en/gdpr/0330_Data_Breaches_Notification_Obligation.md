@@ -1,6 +1,6 @@
 # Data Breaches and Notification Obligation
 
-**Document-ID:** 0330
+**Document-ID:** GDPR-0330
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

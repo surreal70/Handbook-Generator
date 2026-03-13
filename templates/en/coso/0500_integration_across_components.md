@@ -6,7 +6,7 @@ Classification: Internal
 
 # Integration über Komponenten hinweg
 
-**Document-ID:** [FRAMEWORK]-0500
+**Document-ID:** COSO-0500
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

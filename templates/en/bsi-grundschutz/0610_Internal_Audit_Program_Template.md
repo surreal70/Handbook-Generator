@@ -1,6 +1,6 @@
 # Internal Audit Program (Template)
 
-**Document-ID:** [FRAMEWORK]-0610
+**Document-ID:** BSI-GRUNDSCHUTZ-0610
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

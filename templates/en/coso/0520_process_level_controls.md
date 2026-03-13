@@ -6,7 +6,7 @@ Classification: Internal
 
 # Processebenen-Kontrollen
 
-**Document-ID:** [FRAMEWORK]-0520
+**Document-ID:** COSO-0520
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

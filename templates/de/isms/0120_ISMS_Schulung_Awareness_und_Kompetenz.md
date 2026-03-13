@@ -1,6 +1,6 @@
 # Schulung, Awareness und Kompetenz
 
-**Dokument-ID:** 0120
+**Dokument-ID:** ISMS-0120
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

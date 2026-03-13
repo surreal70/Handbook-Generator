@@ -1,6 +1,6 @@
 # Data Breach Response Plan (Template)
 
-**Document-ID:** 0600
+**Document-ID:** GDPR-0600
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

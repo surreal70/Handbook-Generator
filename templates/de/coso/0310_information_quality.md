@@ -6,7 +6,7 @@ Classification: Internal
 
 # Informationsqualität
 
-**Dokument-ID:** [FRAMEWORK]-0310
+**Dokument-ID:** COSO-0310
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

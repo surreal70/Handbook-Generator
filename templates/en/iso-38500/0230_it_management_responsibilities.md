@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT Management Responsibilities
 
-**Document-ID:** [FRAMEWORK]-0230
+**Document-ID:** ISO-38500-0230
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

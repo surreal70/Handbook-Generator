@@ -1,6 +1,6 @@
 # Security Objectives Summary
 
-**Document-ID:** 0330
+**Document-ID:** COMMON-CRITERIA-0330
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

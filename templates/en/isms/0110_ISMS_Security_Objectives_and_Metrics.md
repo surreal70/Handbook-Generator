@@ -1,6 +1,6 @@
 # Information Security Objectives and Metrics
 
-**Document-ID:** [FRAMEWORK]-0110
+**Document-ID:** ISMS-0110
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

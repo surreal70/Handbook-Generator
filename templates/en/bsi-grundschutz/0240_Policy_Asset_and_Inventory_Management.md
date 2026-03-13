@@ -1,6 +1,6 @@
 # Policy: Asset and Inventory Management
 
-**Document-ID:** [FRAMEWORK]-0240
+**Document-ID:** BSI-GRUNDSCHUTZ-0240
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

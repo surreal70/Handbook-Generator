@@ -1,6 +1,6 @@
 # Nichtkonformitäten und Korrekturmaßnahmen
 
-**Dokument-ID:** 0630
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0630
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

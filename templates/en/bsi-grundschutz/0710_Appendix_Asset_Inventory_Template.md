@@ -1,6 +1,6 @@
 # Appendix: Asset Inventory (Template)
 
-**Document-ID:** [FRAMEWORK]-0710
+**Document-ID:** BSI-GRUNDSCHUTZ-0710
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

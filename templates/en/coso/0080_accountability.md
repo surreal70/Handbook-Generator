@@ -6,7 +6,7 @@ Classification: Internal
 
 # Accountability
 
-**Document-ID:** [FRAMEWORK]-0080
+**Document-ID:** COSO-0080
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

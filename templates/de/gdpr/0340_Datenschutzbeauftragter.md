@@ -1,6 +1,6 @@
 # Datenschutzbeauftragter
 
-**Dokument-ID:** 0340
+**Dokument-ID:** GDPR-0340
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

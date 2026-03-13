@@ -1,6 +1,6 @@
 # Schutzbedarfsfeststellung (Template)
 
-**Dokument-ID:** 0060
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0060
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

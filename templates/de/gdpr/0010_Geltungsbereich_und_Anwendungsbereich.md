@@ -1,6 +1,6 @@
 # Geltungsbereich und Anwendungsbereich
 
-**Dokument-ID:** 0010
+**Dokument-ID:** GDPR-0010
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -7,7 +7,7 @@ Classification: Internal
 
 # Mitigation (RS.MI)
 
-**Document-ID:** [FRAMEWORK]-0430
+**Document-ID:** NIST-CSF-0430
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

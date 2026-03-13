@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kontrollumgebung
 
-**Dokument-ID:** [FRAMEWORK]-0060
+**Dokument-ID:** SOC1-0060
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

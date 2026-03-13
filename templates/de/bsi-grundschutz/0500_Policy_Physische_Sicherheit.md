@@ -1,6 +1,6 @@
 # Policy: Physische Sicherheit
 
-**Dokument-ID:** 0500
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0500
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

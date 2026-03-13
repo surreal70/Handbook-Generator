@@ -7,7 +7,7 @@ Classification: Internal
 
 # Risk Management Strategy (ID.RM)
 
-**Document-ID:** [FRAMEWORK]-0140
+**Document-ID:** NIST-CSF-0140
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

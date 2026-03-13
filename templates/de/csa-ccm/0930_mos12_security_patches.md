@@ -6,7 +6,7 @@ Classification: Internal
 
 # MOS-12: Sicherheitspatches
 
-**Dokument-ID:** [FRAMEWORK]-0930
+**Dokument-ID:** CSA-CCM-0930
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

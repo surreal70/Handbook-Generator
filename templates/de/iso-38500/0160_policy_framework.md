@@ -7,7 +7,7 @@ Classification: Internal
 
 # Richtlinien-Framework
 
-**Dokument-ID:** [FRAMEWORK]-0160
+**Dokument-ID:** ISO-38500-0160
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

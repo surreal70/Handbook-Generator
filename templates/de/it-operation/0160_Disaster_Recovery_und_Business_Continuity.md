@@ -1,6 +1,6 @@
 # Disaster Recovery und Business Continuity
 
-**Dokument-ID:** [FRAMEWORK]-0160
+**Dokument-ID:** IT-OPERATION-0160
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

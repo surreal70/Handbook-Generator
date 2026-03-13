@@ -1,6 +1,6 @@
 # Kompetenz, Schulung und Bewusstsein
 
-**Dokument-ID:** 0310
+**Dokument-ID:** ISO-9001-0310
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

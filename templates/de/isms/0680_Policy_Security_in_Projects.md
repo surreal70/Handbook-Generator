@@ -1,6 +1,6 @@
 # Policy: Security in Projects
 
-**Dokument-ID:** 0680
+**Dokument-ID:** ISMS-0680
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

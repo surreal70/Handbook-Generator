@@ -7,7 +7,7 @@ Classification: Internal
 
 # Principle 6: Best available information
 
-**Document-ID:** [FRAMEWORK]-0060
+**Document-ID:** ISO-31000-0060
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

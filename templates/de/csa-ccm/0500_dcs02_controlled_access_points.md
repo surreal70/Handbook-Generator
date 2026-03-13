@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-02: Kontrollierte Zugangspunkte
 
-**Dokument-ID:** [FRAMEWORK]-0500
+**Dokument-ID:** CSA-CCM-0500
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

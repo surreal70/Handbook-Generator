@@ -1,6 +1,6 @@
 # Anhang A: Annex A Control Mapping
 
-**Dokument-ID:** [FRAMEWORK]-0710
+**Dokument-ID:** ISMS-0710
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

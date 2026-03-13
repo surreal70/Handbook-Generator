@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Governance Modell
 
-**Dokument-ID:** [FRAMEWORK]-0020
+**Dokument-ID:** ISO-38500-0020
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

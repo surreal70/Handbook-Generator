@@ -1,6 +1,6 @@
 # NIST 800-53 Framework-Zuordnung
 
-**Dokument-ID:** [FRAMEWORK]-9999
+**Dokument-ID:** NIST-800-53-9999
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

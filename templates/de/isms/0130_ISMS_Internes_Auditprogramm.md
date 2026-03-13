@@ -1,6 +1,6 @@
 # Internes Auditprogramm (Template)
 
-**Dokument-ID:** 0130
+**Dokument-ID:** ISMS-0130
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

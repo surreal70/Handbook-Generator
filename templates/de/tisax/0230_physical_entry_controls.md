@@ -6,7 +6,7 @@ Classification: Internal
 
 # Physische Zutrittskontrolle
 
-**Dokument-ID:** [FRAMEWORK]-0230
+**Dokument-ID:** TISAX-0230
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

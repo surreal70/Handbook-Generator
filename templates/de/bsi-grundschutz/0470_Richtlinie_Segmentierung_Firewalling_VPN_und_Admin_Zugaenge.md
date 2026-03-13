@@ -1,6 +1,6 @@
 # Richtlinie: Segmentierung Firewalling VPN und Admin Zugaenge
 
-**Dokument-ID:** 0470
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0470
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

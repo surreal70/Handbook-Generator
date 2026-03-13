@@ -1,6 +1,6 @@
 # Policy: Authentisierung und MFA
 
-**Dokument-ID:** 0220
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0220
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

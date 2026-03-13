@@ -1,6 +1,6 @@
 # TSC Framework Mapping
 
-**Dokument-ID:** [FRAMEWORK]-9999
+**Dokument-ID:** TSC-9999
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

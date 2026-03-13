@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-07: Equipment Power Failures
 
-**Document-ID:** [FRAMEWORK]-0620
+**Document-ID:** CSA-CCM-0620
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

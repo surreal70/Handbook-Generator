@@ -1,6 +1,6 @@
 # Training and Awareness – Program
 
-**Document-ID:** [FRAMEWORK]-0600
+**Document-ID:** BSI-GRUNDSCHUTZ-0600
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

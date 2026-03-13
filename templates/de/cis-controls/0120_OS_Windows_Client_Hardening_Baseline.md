@@ -1,6 +1,6 @@
 # OS Hardening Baseline: Windows Client
 
-**Dokument-ID:** 0120
+**Dokument-ID:** CIS-CONTROLS-0120
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

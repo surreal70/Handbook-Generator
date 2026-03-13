@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-09: Richtlinie
 
-**Dokument-ID:** [FRAMEWORK]-0640
+**Dokument-ID:** CSA-CCM-0640
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

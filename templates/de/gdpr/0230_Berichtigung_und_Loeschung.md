@@ -1,6 +1,6 @@
 # Berichtigung und Löschung
 
-**Dokument-ID:** 0230
+**Dokument-ID:** GDPR-0230
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

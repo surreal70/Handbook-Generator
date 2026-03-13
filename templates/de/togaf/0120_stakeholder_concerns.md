@@ -6,7 +6,7 @@ Classification: Internal
 
 # Stakeholder-Anliegen
 
-**Dokument-ID:** [FRAMEWORK]-0120
+**Dokument-ID:** TOGAF-0120
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

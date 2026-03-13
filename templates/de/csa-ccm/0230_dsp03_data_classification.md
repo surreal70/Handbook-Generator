@@ -6,7 +6,7 @@ Classification: Internal
 
 # DSP-03: Datenklassifizierung
 
-**Dokument-ID:** [FRAMEWORK]-0230
+**Dokument-ID:** CSA-CCM-0230
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

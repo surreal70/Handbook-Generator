@@ -1,6 +1,6 @@
 # Post-Breach Review Template
 
-**Dokument-ID:** 0640
+**Dokument-ID:** GDPR-0640
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

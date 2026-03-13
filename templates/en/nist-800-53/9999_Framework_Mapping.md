@@ -1,6 +1,6 @@
 # NIST 800-53 Framework Mapping
 
-**Document-ID:** [FRAMEWORK]-9999
+**Document-ID:** NIST-800-53-9999
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Policy: Lieferanten und Auslagerungsmanagement
 
-**Dokument-ID:** 0400
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0400
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

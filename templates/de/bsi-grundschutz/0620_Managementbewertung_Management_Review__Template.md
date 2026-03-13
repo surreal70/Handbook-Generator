@@ -1,6 +1,6 @@
 # Managementbewertung (Management Review) – Template
 
-**Dokument-ID:** 0620
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0620
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

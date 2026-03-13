@@ -1,6 +1,6 @@
 # Anhang B: Asset- und Systeminventar
 
-**Dokument-ID:** [FRAMEWORK]-0720
+**Dokument-ID:** ISMS-0720
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

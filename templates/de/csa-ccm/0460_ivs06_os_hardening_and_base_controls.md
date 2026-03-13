@@ -6,7 +6,7 @@ Classification: Internal
 
 # IVS-06: OS-Härtung
 
-**Dokument-ID:** [FRAMEWORK]-0460
+**Dokument-ID:** CSA-CCM-0460
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

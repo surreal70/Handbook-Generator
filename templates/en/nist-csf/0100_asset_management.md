@@ -7,7 +7,7 @@ Classification: Internal
 
 # Asset Management (ID.AM)
 
-**Document-ID:** [FRAMEWORK]-0100
+**Document-ID:** NIST-CSF-0100
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

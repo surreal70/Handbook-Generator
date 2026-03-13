@@ -6,7 +6,7 @@ Classification: Internal
 
 # Laufende Evaluierungen
 
-**Document-ID:** [FRAMEWORK]-0410
+**Document-ID:** COSO-0410
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

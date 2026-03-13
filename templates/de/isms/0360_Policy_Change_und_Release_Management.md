@@ -1,6 +1,6 @@
 # Policy: Change und Release Management
 
-**Dokument-ID:** 0360
+**Dokument-ID:** ISMS-0360
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

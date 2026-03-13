@@ -6,7 +6,7 @@ Classification: Internal
 
 # Betrugrisikobewertung
 
-**Dokument-ID:** [FRAMEWORK]-0130
+**Dokument-ID:** COSO-0130
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

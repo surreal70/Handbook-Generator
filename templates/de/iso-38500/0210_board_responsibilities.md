@@ -7,7 +7,7 @@ Classification: Internal
 
 # Vorstandsverantwortlichkeiten für IT-Governance
 
-**Dokument-ID:** [FRAMEWORK]-0210
+**Dokument-ID:** ISO-38500-0210
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

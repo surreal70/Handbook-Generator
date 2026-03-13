@@ -6,7 +6,7 @@ Classification: Internal
 
 # IAM-04: Privilegiertes Zugriffsmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0340
+**Dokument-ID:** CSA-CCM-0340
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

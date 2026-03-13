@@ -1,6 +1,6 @@
 # IT-Operation Framework-Mapping
 
-**Dokument-ID:** [FRAMEWORK]-9999
+**Dokument-ID:** IT-OPERATION-9999
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}
@@ -9,7 +9,7 @@
 **Status:** {{ meta-handbook.status }}
 **Klassifizierung:** {{ meta-handbook.classification }}
 **Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
-**Template Version:** [TODO]
+**Template Version:** 1.0
 
 ---
 

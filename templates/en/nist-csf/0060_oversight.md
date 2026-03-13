@@ -7,7 +7,7 @@ Classification: Internal
 
 # Oversight and Monitoring (GV.OV)
 
-**Document-ID:** [FRAMEWORK]-0060
+**Document-ID:** NIST-CSF-0060
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Sicherheitsbetrieb und Hardening
 
-**Dokument-ID:** [FRAMEWORK]-0170
+**Dokument-ID:** IT-OPERATION-0170
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Policy: Physische Sicherheit
 
-**Dokument-ID:** 0480
+**Dokument-ID:** ISMS-0480
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

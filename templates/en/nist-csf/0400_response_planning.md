@@ -7,7 +7,7 @@ Classification: Internal
 
 # Response Planning (RS.RP)
 
-**Document-ID:** [FRAMEWORK]-0400
+**Document-ID:** NIST-CSF-0400
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -7,7 +7,7 @@ Classification: Internal
 
 # Principle 3: Acquisition
 
-**Document-ID:** [FRAMEWORK]-0060
+**Document-ID:** ISO-38500-0060
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

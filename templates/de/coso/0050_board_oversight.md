@@ -6,7 +6,7 @@ Classification: Internal
 
 # Board-Aufsicht und Unabhängigkeit
 
-**Dokument-ID:** [FRAMEWORK]-0050
+**Dokument-ID:** COSO-0050
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

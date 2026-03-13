@@ -6,7 +6,7 @@ Classification: Internal
 
 # Integrity and Ethical Values
 
-**Document-ID:** [FRAMEWORK]-0040
+**Document-ID:** COSO-0040
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

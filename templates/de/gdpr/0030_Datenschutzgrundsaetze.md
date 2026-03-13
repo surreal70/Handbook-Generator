@@ -1,6 +1,6 @@
 # Datenschutzgrundsätze
 
-**Dokument-ID:** 0030
+**Dokument-ID:** GDPR-0030
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

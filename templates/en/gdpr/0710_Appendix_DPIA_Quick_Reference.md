@@ -1,6 +1,6 @@
 # Appendix: DPIA Quick Reference
 
-**Document-ID:** 0710
+**Document-ID:** GDPR-0710
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

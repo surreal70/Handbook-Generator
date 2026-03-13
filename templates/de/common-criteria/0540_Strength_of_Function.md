@@ -1,6 +1,6 @@
 # Strength of Function (Stärke der Sicherheitsfunktionen)
 
-**Dokument-ID:** 0540
+**Dokument-ID:** COMMON-CRITERIA-0540
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

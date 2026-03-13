@@ -6,7 +6,7 @@ Classification: Internal
 
 # Architecture Governance Framework
 
-**Dokument-ID:** [FRAMEWORK]-0030
+**Dokument-ID:** TOGAF-0030
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

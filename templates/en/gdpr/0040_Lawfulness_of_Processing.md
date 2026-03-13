@@ -1,6 +1,6 @@
 # Lawfulness of Processing
 
-**Document-ID:** 0040
+**Document-ID:** GDPR-0040
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

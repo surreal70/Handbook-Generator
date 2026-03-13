@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT Governance Framework - Overview
 
-**Document-ID:** [FRAMEWORK]-0010
+**Document-ID:** ISO-38500-0010
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

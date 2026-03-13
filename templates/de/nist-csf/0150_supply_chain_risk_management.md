@@ -7,7 +7,7 @@ Classification: Internal
 
 # Lieferketten-Risikomanagement (ID.SC)
 
-**Dokument-ID:** [FRAMEWORK]-0150
+**Dokument-ID:** NIST-CSF-0150
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Richtlinie: MDM EDR Device Compliance und Remote Work
 
-**Dokument-ID:** 0490
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0490
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

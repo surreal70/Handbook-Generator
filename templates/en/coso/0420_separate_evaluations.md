@@ -6,7 +6,7 @@ Classification: Internal
 
 # Separate Evaluierungen
 
-**Document-ID:** [FRAMEWORK]-0420
+**Document-ID:** COSO-0420
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

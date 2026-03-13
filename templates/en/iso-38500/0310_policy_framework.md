@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT Governance Policy Framework
 
-**Document-ID:** [FRAMEWORK]-0310
+**Document-ID:** ISO-38500-0310
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Policy: Ausnahmen und Risk Waivers
 
-**Dokument-ID:** 0640
+**Dokument-ID:** ISMS-0640
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

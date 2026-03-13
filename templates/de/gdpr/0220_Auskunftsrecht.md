@@ -1,6 +1,6 @@
 # Auskunftsrecht
 
-**Dokument-ID:** 0220
+**Dokument-ID:** GDPR-0220
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

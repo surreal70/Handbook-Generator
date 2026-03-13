@@ -6,7 +6,7 @@ Classification: Internal
 
 # IAM-02: Credential-Lebenszyklus
 
-**Dokument-ID:** [FRAMEWORK]-0320
+**Dokument-ID:** CSA-CCM-0320
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Lieferantensicherheit
 
-**Dokument-ID:** [FRAMEWORK]-0400
+**Dokument-ID:** TISAX-0400
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

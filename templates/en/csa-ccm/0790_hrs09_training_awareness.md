@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-09: Training / Awareness
 
-**Document-ID:** [FRAMEWORK]-0790
+**Document-ID:** CSA-CCM-0790
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

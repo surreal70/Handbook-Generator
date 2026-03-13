@@ -1,6 +1,6 @@
 # Policy: Ausnahmenprozess und Risikoakzeptanz
 
-**Dokument-ID:** 0520
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0520
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-07: Stromausfälle
 
-**Dokument-ID:** [FRAMEWORK]-0620
+**Dokument-ID:** CSA-CCM-0620
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

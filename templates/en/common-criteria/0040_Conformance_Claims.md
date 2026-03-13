@@ -1,6 +1,6 @@
 # Conformance Claims
 
-**Document-ID:** 0040
+**Document-ID:** COMMON-CRITERIA-0040
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

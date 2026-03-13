@@ -1,6 +1,6 @@
 # TOE Logical Scope
 
-**Document-ID:** 0110
+**Document-ID:** COMMON-CRITERIA-0110
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

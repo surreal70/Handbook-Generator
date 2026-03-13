@@ -1,6 +1,6 @@
 # Richtlinie: HR Security - Onboarding, Rollenwechsel, Offboarding
 
-**Dokument-ID:** 0530
+**Dokument-ID:** ISMS-0530
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

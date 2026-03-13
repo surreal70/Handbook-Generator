@@ -1,6 +1,6 @@
 # Richtlinie: Sicherheitsbaselines und Abweichungsmanagement
 
-**Dokument-ID:** 0270
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0270
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

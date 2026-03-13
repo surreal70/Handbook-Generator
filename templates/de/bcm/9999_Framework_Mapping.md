@@ -1,6 +1,6 @@
 # BCM Framework-Mapping
 
-**Dokument-ID:** [FRAMEWORK]-9999
+**Dokument-ID:** BCM-9999
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

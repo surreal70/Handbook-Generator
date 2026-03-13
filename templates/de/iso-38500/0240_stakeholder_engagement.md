@@ -7,7 +7,7 @@ Classification: Internal
 
 # Stakeholder-Engagement in der IT-Governance
 
-**Dokument-ID:** [FRAMEWORK]-0240
+**Dokument-ID:** ISO-38500-0240
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

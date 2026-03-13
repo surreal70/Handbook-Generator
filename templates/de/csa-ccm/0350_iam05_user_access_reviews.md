@@ -6,7 +6,7 @@ Classification: Internal
 
 # IAM-05: Benutzerzugriffsprüfungen
 
-**Dokument-ID:** [FRAMEWORK]-0350
+**Dokument-ID:** CSA-CCM-0350
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

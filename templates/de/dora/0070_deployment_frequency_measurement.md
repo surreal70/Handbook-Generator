@@ -6,7 +6,7 @@ Classification: Internal
 
 # Deployment Frequency Messung
 
-**Dokument-ID:** [FRAMEWORK]-0070
+**Dokument-ID:** DORA-0070
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

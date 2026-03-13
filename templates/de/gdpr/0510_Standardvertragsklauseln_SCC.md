@@ -1,6 +1,6 @@
 # Standardvertragsklauseln (SCC)
 
-**Dokument-ID:** 0510
+**Dokument-ID:** GDPR-0510
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

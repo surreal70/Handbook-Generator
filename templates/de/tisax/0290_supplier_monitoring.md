@@ -6,7 +6,7 @@ Classification: Internal
 
 # Lieferantenüberwachung
 
-**Dokument-ID:** [FRAMEWORK]-0290
+**Dokument-ID:** TISAX-0290
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

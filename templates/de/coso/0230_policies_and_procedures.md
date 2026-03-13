@@ -6,7 +6,7 @@ Classification: Internal
 
 # Richtlinien und Verfahren
 
-**Dokument-ID:** [FRAMEWORK]-0230
+**Dokument-ID:** COSO-0230
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

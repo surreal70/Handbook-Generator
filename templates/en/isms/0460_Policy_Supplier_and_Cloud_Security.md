@@ -1,6 +1,6 @@
 # Policy: Supplier and Cloud Security
 
-**Document-ID:** [FRAMEWORK]-0460
+**Document-ID:** ISMS-0460
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

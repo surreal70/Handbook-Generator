@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-02: Controlled Access Points
 
-**Document-ID:** [FRAMEWORK]-0500
+**Document-ID:** CSA-CCM-0500
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

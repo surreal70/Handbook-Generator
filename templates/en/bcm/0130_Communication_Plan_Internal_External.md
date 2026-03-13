@@ -1,6 +1,6 @@
 # Communication Plan Internal External
 
-**Document-ID:** [FRAMEWORK]-0130
+**Document-ID:** BCM-0130
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

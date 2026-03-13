@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 2: Strategie (Strategy)
 
-**Dokument-ID:** [FRAMEWORK]-0050
+**Dokument-ID:** ISO-38500-0050
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

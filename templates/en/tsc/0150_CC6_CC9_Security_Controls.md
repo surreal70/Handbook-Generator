@@ -1,6 +1,6 @@
 # CC6-CC9: Security Controls
 
-**Document-ID:** [FRAMEWORK]-0150
+**Document-ID:** TSC-0150
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

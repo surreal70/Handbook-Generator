@@ -1,6 +1,6 @@
 # APP Hardening Standard: Nginx
 
-**Dokument-ID:** 0220
+**Dokument-ID:** CIS-CONTROLS-0220
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Strength of Function
 
-**Document-ID:** 0540
+**Document-ID:** COMMON-CRITERIA-0540
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

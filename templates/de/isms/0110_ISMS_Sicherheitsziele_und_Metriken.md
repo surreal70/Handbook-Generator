@@ -1,6 +1,6 @@
 # Informationssicherheitsziele und Metriken
 
-**Dokument-ID:** 0110
+**Dokument-ID:** ISMS-0110
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # TOE Physical Scope
 
-**Document-ID:** 0100
+**Document-ID:** COMMON-CRITERIA-0100
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

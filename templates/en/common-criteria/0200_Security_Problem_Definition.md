@@ -1,6 +1,6 @@
 # Security Problem Definition
 
-**Document-ID:** 0200
+**Document-ID:** COMMON-CRITERIA-0200
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

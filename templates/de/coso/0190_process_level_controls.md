@@ -6,7 +6,7 @@ Classification: Internal
 
 # Prozessebene-Kontrollen
 
-**Dokument-ID:** [FRAMEWORK]-0190
+**Dokument-ID:** COSO-0190
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

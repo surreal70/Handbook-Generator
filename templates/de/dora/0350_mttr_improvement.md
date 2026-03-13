@@ -6,7 +6,7 @@ Classification: Internal
 
 # MTTR Verbesserung
 
-**Dokument-ID:** [FRAMEWORK]-0350
+**Dokument-ID:** DORA-0350
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

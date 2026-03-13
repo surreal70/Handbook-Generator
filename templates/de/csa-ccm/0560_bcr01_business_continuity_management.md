@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-01: Geschäftskontinuitätsmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0560
+**Dokument-ID:** CSA-CCM-0560
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

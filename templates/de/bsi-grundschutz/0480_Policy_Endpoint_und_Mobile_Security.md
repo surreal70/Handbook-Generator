@@ -1,6 +1,6 @@
 # Policy: Endpoint und Mobile Security
 
-**Dokument-ID:** 0480
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0480
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

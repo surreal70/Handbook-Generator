@@ -6,7 +6,7 @@ Classification: Internal
 
 # Physical Entry Controls
 
-**Document-ID:** [FRAMEWORK]-0230
+**Document-ID:** TISAX-0230
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

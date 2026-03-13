@@ -335,7 +335,8 @@ class OutputGenerator:
         markdown_content: str,
         language: str,
         template_type: str,
-        filename: Optional[str] = None
+        filename: Optional[str] = None,
+        engine_type: str = 'auto'
     ) -> OutputResult:
         """
         Generate PDF output file from markdown content.
@@ -345,6 +346,7 @@ class OutputGenerator:
             language: Language code (e.g., 'de', 'en')
             template_type: Template category (e.g., 'backup', 'bcm', 'isms', 'bsi-grundschutz', 'it-operation')
             filename: Optional custom filename (default: {template_type}_handbook.pdf)
+            engine_type: PDF engine to use ('reportlab', 'weasyprint', or 'auto')
             
         Returns:
             OutputResult with path to generated file and any warnings/errors
@@ -373,103 +375,98 @@ class OutputGenerator:
                 f"Output file already exists and will be overwritten: {output_path}"
             )
         
-        # Try to import PDF generation library
+        # Import PDF engine components
         try:
-            import markdown
-            from weasyprint import HTML, CSS
-            from weasyprint.text.fonts import FontConfiguration
+            from src.pdf_engines import PDFEngineFactory, EngineType, PDFEngineNotAvailableError, PDFGenerationError, MarkdownConversionError
         except ImportError as e:
             result.errors.append(
-                f"PDF generation dependencies not available: {str(e)}. "
-                f"Install with: pip install markdown weasyprint"
+                f"PDF Engine Error: PDF engine components are not available.\n\n"
+                f"This is likely a system configuration issue.\n\n"
+                f"Troubleshooting:\n"
+                f"  1. Verify the src/pdf_engines/ directory exists\n"
+                f"  2. Check Python path includes the project root\n"
+                f"  3. Reinstall the application\n\n"
+                f"Technical details: {str(e)}"
             )
             return result
         
-        # Convert markdown to HTML
+        # Create PDF engine
         try:
-            html_content = markdown.markdown(
-                markdown_content,
-                extensions=['extra', 'codehilite', 'toc']
-            )
+            engine_enum = EngineType(engine_type)
+            engine = PDFEngineFactory.create_engine(engine_enum)
             
-            # Wrap in basic HTML structure with styling
-            full_html = f"""
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <style>
-        body {{
-            font-family: 'DejaVu Sans', Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            color: #333;
-        }}
-        h1, h2, h3, h4, h5, h6 {{
-            color: #2c3e50;
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }}
-        h1 {{
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 10px;
-        }}
-        code {{
-            background-color: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'DejaVu Sans Mono', monospace;
-        }}
-        pre {{
-            background-color: #f4f4f4;
-            padding: 16px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }}
-        table {{
-            border-collapse: collapse;
-            width: 100%;
-            margin: 16px 0;
-        }}
-        th, td {{
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }}
-        th {{
-            background-color: #f4f4f4;
-        }}
-        @page {{
-            margin: 2.5cm;
-            @bottom-right {{
-                content: counter(page);
-            }}
-        }}
-    </style>
-</head>
-<body>
-{html_content}
-</body>
-</html>
-"""
-        except Exception as e:
-            result.errors.append(f"Failed to convert markdown to HTML: {str(e)}")
+            # Log which engine was selected
+            engine_name = type(engine).__name__
+            result.warnings.append(f"Using PDF engine: {engine_name}")
+            
+        except PDFEngineNotAvailableError as e:
+            result.errors.append(str(e))
             return result
-        
-        # Generate PDF from HTML
-        try:
-            font_config = FontConfiguration()
-            HTML(string=full_html).write_pdf(
-                output_path,
-                font_config=font_config
+        except ValueError as e:
+            result.errors.append(
+                f"Invalid PDF Engine: '{engine_type}' is not a valid engine type.\n\n"
+                f"Valid options: 'reportlab', 'weasyprint', 'auto'\n\n"
+                f"Technical details: {str(e)}"
             )
-            result.pdf_path = output_path
+            return result
         except Exception as e:
             result.errors.append(
-                f"Failed to generate PDF: {str(e)}. "
-                f"Ensure weasyprint dependencies are installed correctly."
+                f"PDF Engine Creation Error: Failed to create PDF engine.\n\n"
+                f"Troubleshooting:\n"
+                f"  1. Verify PDF engine dependencies are installed\n"
+                f"  2. Try specifying a different engine: --pdf-engine reportlab\n"
+                f"  3. Check system logs for additional details\n\n"
+                f"Technical details: {str(e)}"
+            )
+            return result
+        
+        # Generate PDF using the selected engine
+        try:
+            engine.generate_pdf(
+                markdown_content=markdown_content,
+                output_path=str(output_path),
+                include_toc=False,
+                metadata=None
+            )
+            result.pdf_path = output_path
+            
+        except PDFGenerationError as e:
+            result.errors.append(str(e))
+        except MarkdownConversionError as e:
+            result.errors.append(str(e))
+        except PermissionError as e:
+            result.errors.append(
+                f"Permission Error: Cannot write to output location.\n\n"
+                f"Output path: {output_path}\n\n"
+                f"Troubleshooting:\n"
+                f"  1. Check write permissions for the output directory\n"
+                f"  2. Verify the path is not read-only\n"
+                f"  3. Try a different output location\n"
+                f"  4. Close any applications that may have the file open\n\n"
+                f"Technical details: {str(e)}"
+            )
+        except OSError as e:
+            result.errors.append(
+                f"File System Error: Cannot access output location.\n\n"
+                f"Output path: {output_path}\n\n"
+                f"Troubleshooting:\n"
+                f"  1. Check if the path exists and is accessible\n"
+                f"  2. Verify sufficient disk space\n"
+                f"  3. Check for invalid characters in the path\n"
+                f"  4. Ensure the filesystem is mounted and writable\n\n"
+                f"Technical details: {str(e)}"
+            )
+        except Exception as e:
+            result.errors.append(
+                f"Unexpected Error: PDF generation failed with an unexpected error.\n\n"
+                f"Troubleshooting:\n"
+                f"  1. Try using a different PDF engine: --pdf-engine reportlab\n"
+                f"  2. Verify your markdown content is valid\n"
+                f"  3. Check system resources (memory, disk space)\n"
+                f"  4. Review application logs for details\n\n"
+                f"Technical details:\n"
+                f"  Error type: {type(e).__name__}\n"
+                f"  Error message: {str(e)}"
             )
         
         return result
@@ -479,7 +476,8 @@ class OutputGenerator:
         templates_data: list[tuple[str, str, str]],
         language: str,
         template_type: str,
-        filename: Optional[str] = None
+        filename: Optional[str] = None,
+        engine_type: str = 'auto'
     ) -> OutputResult:
         """
         Generate PDF output file with table of contents from template data.
@@ -489,6 +487,7 @@ class OutputGenerator:
             language: Language code (e.g., 'de', 'en')
             template_type: Template category (e.g., 'backup', 'bcm', 'isms', 'bsi-grundschutz', 'it-operation')
             filename: Optional custom filename (default: {template_type}_handbook.pdf)
+            engine_type: PDF engine to use ('reportlab', 'weasyprint', or 'auto')
             
         Returns:
             OutputResult with path to generated file and any warnings/errors
@@ -517,148 +516,101 @@ class OutputGenerator:
                 f"Output file already exists and will be overwritten: {output_path}"
             )
         
-        # Try to import PDF generation library
+        # Import PDF engine components
         try:
-            import markdown
-            from weasyprint import HTML
-            from weasyprint.text.fonts import FontConfiguration
+            from src.pdf_engines import PDFEngineFactory, EngineType, PDFEngineNotAvailableError, PDFGenerationError, MarkdownConversionError
         except ImportError as e:
             result.errors.append(
-                f"PDF generation dependencies not available: {str(e)}. "
-                f"Install with: pip install markdown weasyprint"
+                f"PDF Engine Error: PDF engine components are not available.\n\n"
+                f"This is likely a system configuration issue.\n\n"
+                f"Troubleshooting:\n"
+                f"  1. Verify the src/pdf_engines/ directory exists\n"
+                f"  2. Check Python path includes the project root\n"
+                f"  3. Reinstall the application\n\n"
+                f"Technical details: {str(e)}"
             )
             return result
         
-        # Generate TOC HTML
-        toc_html = self._generate_toc_html(templates_data, template_type)
+        # Assemble markdown content with TOC
+        markdown_content = self._assemble_markdown_with_toc(templates_data, template_type)
         
-        # Convert each template's markdown content to HTML and add page breaks
-        templates_html = []
-        for template_number, template_title, content in templates_data:
-            try:
-                # Convert markdown to HTML
-                html_content = markdown.markdown(
-                    content,
-                    extensions=['extra', 'codehilite', 'toc']
-                )
-                
-                # Add anchor ID for linking from TOC
-                section_html = f'<div id="section-{template_number}">\n{html_content}\n</div>'
-                templates_html.append(section_html)
-            except Exception as e:
-                result.errors.append(
-                    f"Failed to convert template {template_number} to HTML: {str(e)}"
-                )
-                return result
-        
-        # Add page breaks between templates
-        templates_with_breaks = self._add_page_breaks(templates_html)
-        
-        # Combine TOC and templates
-        full_body_html = toc_html + "\n" + templates_with_breaks
-        
-        # Wrap in complete HTML structure with styling
-        full_html = f"""
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <style>
-        body {{
-            font-family: 'DejaVu Sans', Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            color: #333;
-        }}
-        h1, h2, h3, h4, h5, h6 {{
-            color: #2c3e50;
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }}
-        h1 {{
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 10px;
-        }}
-        code {{
-            background-color: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'DejaVu Sans Mono', monospace;
-        }}
-        pre {{
-            background-color: #f4f4f4;
-            padding: 16px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }}
-        table {{
-            border-collapse: collapse;
-            width: 100%;
-            margin: 16px 0;
-        }}
-        th, td {{
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }}
-        th {{
-            background-color: #f4f4f4;
-        }}
-        .toc {{
-            margin-bottom: 40px;
-        }}
-        .toc h1 {{
-            font-size: 2em;
-            margin-bottom: 20px;
-        }}
-        .toc ul {{
-            list-style-type: none;
-            padding-left: 0;
-        }}
-        .toc li {{
-            margin: 8px 0;
-            padding: 8px;
-            border-bottom: 1px solid #eee;
-        }}
-        .toc a {{
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-        }}
-        .toc a:hover {{
-            color: #3498db;
-        }}
-        .page-break {{
-            page-break-after: always;
-        }}
-        @page {{
-            margin: 2.5cm;
-            @bottom-right {{
-                content: counter(page);
-            }}
-        }}
-    </style>
-</head>
-<body>
-{full_body_html}
-</body>
-</html>
-"""
-        
-        # Generate PDF from HTML
+        # Create PDF engine
         try:
-            font_config = FontConfiguration()
-            HTML(string=full_html).write_pdf(
-                output_path,
-                font_config=font_config
+            engine_enum = EngineType(engine_type)
+            engine = PDFEngineFactory.create_engine(engine_enum)
+            
+            # Log which engine was selected
+            engine_name = type(engine).__name__
+            result.warnings.append(f"Using PDF engine: {engine_name}")
+            
+        except PDFEngineNotAvailableError as e:
+            result.errors.append(str(e))
+            return result
+        except ValueError as e:
+            result.errors.append(
+                f"Invalid PDF Engine: '{engine_type}' is not a valid engine type.\n\n"
+                f"Valid options: 'reportlab', 'weasyprint', 'auto'\n\n"
+                f"Technical details: {str(e)}"
             )
-            result.pdf_path = output_path
+            return result
         except Exception as e:
             result.errors.append(
-                f"Failed to generate PDF with TOC: {str(e)}. "
-                f"Ensure weasyprint dependencies are installed correctly."
+                f"PDF Engine Creation Error: Failed to create PDF engine.\n\n"
+                f"Troubleshooting:\n"
+                f"  1. Verify PDF engine dependencies are installed\n"
+                f"  2. Try specifying a different engine: --pdf-engine reportlab\n"
+                f"  3. Check system logs for additional details\n\n"
+                f"Technical details: {str(e)}"
+            )
+            return result
+        
+        # Generate PDF using the selected engine with TOC enabled
+        try:
+            engine.generate_pdf(
+                markdown_content=markdown_content,
+                output_path=str(output_path),
+                include_toc=True,
+                metadata={'title': f"{template_type.upper()} Handbook"}
+            )
+            result.pdf_path = output_path
+            
+        except PDFGenerationError as e:
+            result.errors.append(str(e))
+        except MarkdownConversionError as e:
+            result.errors.append(str(e))
+        except PermissionError as e:
+            result.errors.append(
+                f"Permission Error: Cannot write to output location.\n\n"
+                f"Output path: {output_path}\n\n"
+                f"Troubleshooting:\n"
+                f"  1. Check write permissions for the output directory\n"
+                f"  2. Verify the path is not read-only\n"
+                f"  3. Try a different output location\n"
+                f"  4. Close any applications that may have the file open\n\n"
+                f"Technical details: {str(e)}"
+            )
+        except OSError as e:
+            result.errors.append(
+                f"File System Error: Cannot access output location.\n\n"
+                f"Output path: {output_path}\n\n"
+                f"Troubleshooting:\n"
+                f"  1. Check if the path exists and is accessible\n"
+                f"  2. Verify sufficient disk space\n"
+                f"  3. Check for invalid characters in the path\n"
+                f"  4. Ensure the filesystem is mounted and writable\n\n"
+                f"Technical details: {str(e)}"
+            )
+        except Exception as e:
+            result.errors.append(
+                f"Unexpected Error: PDF generation with TOC failed.\n\n"
+                f"Troubleshooting:\n"
+                f"  1. Try using a different PDF engine: --pdf-engine reportlab\n"
+                f"  2. Verify your markdown content is valid\n"
+                f"  3. Check system resources (memory, disk space)\n"
+                f"  4. Try generating without TOC first\n\n"
+                f"Technical details:\n"
+                f"  Error type: {type(e).__name__}\n"
+                f"  Error message: {str(e)}"
             )
         
         return result
@@ -685,6 +637,46 @@ class OutputGenerator:
                 sections_with_breaks.append('<div class="page-break"></div>')
         
         return "\n".join(sections_with_breaks)
+    
+    def _assemble_markdown_with_toc(
+        self,
+        templates_data: list[tuple[str, str, str]],
+        template_type: str
+    ) -> str:
+        """
+        Assemble markdown content with table of contents from template data.
+        
+        Args:
+            templates_data: List of (template_number, template_title, content) tuples
+            template_type: Template category (e.g., 'backup', 'bcm')
+            
+        Returns:
+            Assembled markdown content with TOC
+        """
+        # Build TOC
+        toc_lines = [
+            f"# Table of Contents - {template_type.upper()} Handbook",
+            "",
+        ]
+        
+        for template_number, template_title, _ in templates_data:
+            toc_lines.append(f"- {template_number} - {template_title}")
+        
+        toc_lines.append("")
+        toc_lines.append("---")
+        toc_lines.append("")
+        
+        # Assemble content sections
+        content_sections = []
+        for template_number, template_title, content in templates_data:
+            # Add section header
+            section = f"# {template_number} - {template_title}\n\n{content}"
+            content_sections.append(section)
+        
+        # Combine TOC and content
+        full_content = "\n".join(toc_lines) + "\n\n".join(content_sections)
+        
+        return full_content
     
     def _generate_toc_html(
         self,

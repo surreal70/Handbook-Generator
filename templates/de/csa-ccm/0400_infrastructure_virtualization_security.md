@@ -6,7 +6,7 @@ Classification: Internal
 
 # Infrastruktur- und Virtualisierungssicherheit (IVS)
 
-**Dokument-ID:** [FRAMEWORK]-0400
+**Dokument-ID:** CSA-CCM-0400
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

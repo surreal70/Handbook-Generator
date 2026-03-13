@@ -6,7 +6,7 @@ Classification: Internal
 
 # SOC 1 Framework Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0010
+**Dokument-ID:** SOC1-0010
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

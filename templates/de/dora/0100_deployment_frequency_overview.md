@@ -6,7 +6,7 @@ Classification: Internal
 
 # Deployment Frequency Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0100
+**Dokument-ID:** DORA-0100
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

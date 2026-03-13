@@ -1,6 +1,6 @@
 # Dokumentenlenkung und Versionierung
 
-**Dokument-ID:** [FRAMEWORK]-0020
+**Dokument-ID:** IT-OPERATION-0020
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

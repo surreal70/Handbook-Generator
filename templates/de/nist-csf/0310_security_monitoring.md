@@ -7,7 +7,7 @@ Classification: Internal
 
 # Sicherheitsüberwachung (DE.CM)
 
-**Dokument-ID:** [FRAMEWORK]-0310
+**Dokument-ID:** NIST-CSF-0310
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

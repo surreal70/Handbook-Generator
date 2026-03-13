@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kontrollmängel und Behebung
 
-**Dokument-ID:** [FRAMEWORK]-0150
+**Dokument-ID:** SOC1-0150
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

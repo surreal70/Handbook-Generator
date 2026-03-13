@@ -1,6 +1,6 @@
 # APP Hardening Standard: Java Runtime / Tomcat (generisch)
 
-**Dokument-ID:** 0250
+**Dokument-ID:** CIS-CONTROLS-0250
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

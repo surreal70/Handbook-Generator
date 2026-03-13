@@ -1,6 +1,6 @@
 # Anhang: Auftragsverarbeitungsvertrag (DPA) Template
 
-**Dokument-ID:** 0720
+**Dokument-ID:** GDPR-0720
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

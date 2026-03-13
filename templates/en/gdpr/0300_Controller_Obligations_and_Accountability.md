@@ -1,6 +1,6 @@
 # Controller: Obligations and Accountability
 
-**Document-ID:** 0300
+**Document-ID:** GDPR-0300
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

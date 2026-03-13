@@ -1,6 +1,6 @@
 # Guideline: Asset Lifecycle Tagging and Disposal
 
-**Document-ID:** [FRAMEWORK]-0250
+**Document-ID:** BSI-GRUNDSCHUTZ-0250
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

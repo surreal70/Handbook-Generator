@@ -1,6 +1,6 @@
 # Richtlinie: Zutritt, Besucher und Schutz von Equipment
 
-**Dokument-ID:** 0490
+**Dokument-ID:** ISMS-0490
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

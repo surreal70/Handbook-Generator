@@ -1,6 +1,6 @@
 # Datenschutzverletzung Response Plan (Template)
 
-**Dokument-ID:** 0600
+**Dokument-ID:** GDPR-0600
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Information und Kommunikation - Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0400
+**Dokument-ID:** SOC1-0400
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

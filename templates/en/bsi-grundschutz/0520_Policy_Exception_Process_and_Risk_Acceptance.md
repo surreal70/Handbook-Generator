@@ -1,6 +1,6 @@
 # Policy: Exception Process and Risk Acceptance
 
-**Document-ID:** [FRAMEWORK]-0520
+**Document-ID:** BSI-GRUNDSCHUTZ-0520
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

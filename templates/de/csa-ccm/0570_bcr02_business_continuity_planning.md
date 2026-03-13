@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-02: Geschäftskontinuitätsplanung
 
-**Dokument-ID:** [FRAMEWORK]-0570
+**Dokument-ID:** CSA-CCM-0570
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

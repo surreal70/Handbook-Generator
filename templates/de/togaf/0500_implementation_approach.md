@@ -6,7 +6,7 @@ Classification: Internal
 
 # Implementierungsansatz
 
-**Dokument-ID:** [FRAMEWORK]-0500
+**Dokument-ID:** TOGAF-0500
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

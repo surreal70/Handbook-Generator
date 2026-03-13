@@ -6,7 +6,7 @@ Classification: Internal
 
 # Architecture Framework Setup
 
-**Document-ID:** [FRAMEWORK]-0010
+**Document-ID:** TOGAF-0010
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

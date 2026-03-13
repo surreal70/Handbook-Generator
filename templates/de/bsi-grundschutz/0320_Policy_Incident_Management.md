@@ -1,6 +1,6 @@
 # Policy: Incident Management
 
-**Dokument-ID:** 0320
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0320
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

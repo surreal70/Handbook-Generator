@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-11: Workspace
 
-**Document-ID:** [FRAMEWORK]-0810
+**Document-ID:** CSA-CCM-0810
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

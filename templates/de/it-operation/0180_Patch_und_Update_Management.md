@@ -1,6 +1,6 @@
 # Patch und Update Management
 
-**Dokument-ID:** [FRAMEWORK]-0180
+**Dokument-ID:** IT-OPERATION-0180
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

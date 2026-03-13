@@ -1,6 +1,6 @@
 # Risk Assessment Policy
 
-**Document-ID:** [FRAMEWORK]-0610
+**Document-ID:** NIST-800-53-0610
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

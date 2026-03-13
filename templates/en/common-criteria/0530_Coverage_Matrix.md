@@ -1,6 +1,6 @@
 # Coverage Matrix
 
-**Document-ID:** 0530
+**Document-ID:** COMMON-CRITERIA-0530
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

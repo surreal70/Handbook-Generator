@@ -1,6 +1,6 @@
 # Breach Communication Template (Betroffene Personen)
 
-**Dokument-ID:** 0620
+**Dokument-ID:** GDPR-0620
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Policy: Konfiguration und Hardening
 
-**Dokument-ID:** 0540
+**Dokument-ID:** ISMS-0540
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

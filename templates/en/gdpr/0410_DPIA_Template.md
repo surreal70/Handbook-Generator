@@ -1,6 +1,6 @@
 # DPIA Template
 
-**Document-ID:** 0410
+**Document-ID:** GDPR-0410
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

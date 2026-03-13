@@ -1,6 +1,6 @@
 # Protection Profile Konformität
 
-**Dokument-ID:** 0600
+**Dokument-ID:** COMMON-CRITERIA-0600
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

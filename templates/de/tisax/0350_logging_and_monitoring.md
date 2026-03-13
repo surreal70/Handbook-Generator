@@ -6,7 +6,7 @@ Classification: Internal
 
 # Protokollierung und Überwachung
 
-**Dokument-ID:** [FRAMEWORK]-0350
+**Dokument-ID:** TISAX-0350
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

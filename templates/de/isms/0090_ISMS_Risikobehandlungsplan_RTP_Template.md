@@ -1,6 +1,6 @@
 # Risikobehandlungsplan (RTP) – Template
 
-**Dokument-ID:** 0090
+**Dokument-ID:** ISMS-0090
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

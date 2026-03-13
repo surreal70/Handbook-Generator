@@ -6,7 +6,7 @@ Classification: Internal
 
 # Fraud Risk Assessment
 
-**Document-ID:** [FRAMEWORK]-0130
+**Document-ID:** COSO-0130
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

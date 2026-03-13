@@ -1,6 +1,6 @@
 # ISMS-Governance: Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** 0040
+**Dokument-ID:** ISMS-0040
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

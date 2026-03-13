@@ -1,6 +1,6 @@
 # Richtlinie: Asset Inventory, Tagging und Entsorgung
 
-**Dokument-ID:** 0310
+**Dokument-ID:** ISMS-0310
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Datenschutz-Folgenabschätzung (DSFA)
 
-**Dokument-ID:** 0400
+**Dokument-ID:** GDPR-0400
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

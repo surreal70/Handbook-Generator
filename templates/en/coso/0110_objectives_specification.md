@@ -6,7 +6,7 @@ Classification: Internal
 
 # Objectives Specification
 
-**Document-ID:** [FRAMEWORK]-0110
+**Document-ID:** COSO-0110
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

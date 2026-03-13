@@ -7,7 +7,7 @@ Classification: Internal
 
 # Risikoregister-Pflege
 
-**Dokument-ID:** [FRAMEWORK]-0420
+**Dokument-ID:** ISO-31000-0420
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Risk Analysis (BSI Standard 200-3) – Template
 
-**Document-ID:** [FRAMEWORK]-0090
+**Document-ID:** BSI-GRUNDSCHUTZ-0090
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

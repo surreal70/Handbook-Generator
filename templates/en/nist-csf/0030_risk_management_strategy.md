@@ -7,7 +7,7 @@ Classification: Internal
 
 # Risk Management Strategy (GV.RM)
 
-**Document-ID:** [FRAMEWORK]-0030
+**Document-ID:** NIST-CSF-0030
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

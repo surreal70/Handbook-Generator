@@ -7,7 +7,7 @@ Classification: Internal
 
 # Principle 4: Performance
 
-**Document-ID:** [FRAMEWORK]-0070
+**Document-ID:** ISO-38500-0070
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

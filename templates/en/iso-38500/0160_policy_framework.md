@@ -7,7 +7,7 @@ Classification: Internal
 
 # Policy Framework
 
-**Document-ID:** [FRAMEWORK]-0160
+**Document-ID:** ISO-38500-0160
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

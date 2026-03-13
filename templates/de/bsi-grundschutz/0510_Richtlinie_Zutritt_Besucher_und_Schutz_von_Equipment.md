@@ -1,6 +1,6 @@
 # Richtlinie: Zutritt Besucher und Schutz von Equipment
 
-**Dokument-ID:** 0510
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0510
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

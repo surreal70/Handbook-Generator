@@ -6,7 +6,7 @@ Classification: Internal
 
 # SCM-01: Supply Chain Management
 
-**Document-ID:** [FRAMEWORK]-0650
+**Document-ID:** CSA-CCM-0650
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

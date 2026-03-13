@@ -1,6 +1,6 @@
 # Restriction and Objection
 
-**Document-ID:** 0240
+**Document-ID:** GDPR-0240
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

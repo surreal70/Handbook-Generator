@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-04: Off-Site Authorization
 
-**Document-ID:** [FRAMEWORK]-0520
+**Document-ID:** CSA-CCM-0520
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

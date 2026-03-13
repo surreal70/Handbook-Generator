@@ -6,7 +6,7 @@ Classification: Internal
 
 # Business Continuity Planning
 
-**Dokument-ID:** [FRAMEWORK]-0070
+**Dokument-ID:** TISAX-0070
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

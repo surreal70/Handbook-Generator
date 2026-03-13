@@ -1,6 +1,6 @@
 # Policy: Asset Management
 
-**Document-ID:** [FRAMEWORK]-0300
+**Document-ID:** ISMS-0300
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

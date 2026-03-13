@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-03: Risikomanagement-Programm
 
-**Dokument-ID:** [FRAMEWORK]-0060
+**Dokument-ID:** CSA-CCM-0060
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

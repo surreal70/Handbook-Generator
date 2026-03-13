@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT Governance Communication
 
-**Document-ID:** [FRAMEWORK]-0330
+**Document-ID:** ISO-38500-0330
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

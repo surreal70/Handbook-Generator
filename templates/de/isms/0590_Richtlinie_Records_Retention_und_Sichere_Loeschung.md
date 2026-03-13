@@ -1,6 +1,6 @@
 # Richtlinie: Records Retention und Sichere Löschung
 
-**Dokument-ID:** 0590
+**Dokument-ID:** ISMS-0590
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

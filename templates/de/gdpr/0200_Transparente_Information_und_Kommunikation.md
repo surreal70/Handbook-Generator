@@ -1,6 +1,6 @@
 # Transparente Information und Kommunikation
 
-**Dokument-ID:** 0200
+**Dokument-ID:** GDPR-0200
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Policy: Business Continuity ICT Readiness
 
-**Document-ID:** [FRAMEWORK]-0440
+**Document-ID:** ISMS-0440
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

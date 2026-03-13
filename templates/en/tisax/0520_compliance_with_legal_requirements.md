@@ -6,7 +6,7 @@ Classification: Internal
 
 # Compliance with Legal Requirements
 
-**Document-ID:** [FRAMEWORK]-0520
+**Document-ID:** TISAX-0520
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

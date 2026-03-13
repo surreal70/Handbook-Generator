@@ -7,7 +7,7 @@ Classification: Internal
 
 # Entscheidungsprozesse
 
-**Dokument-ID:** [FRAMEWORK]-0170
+**Dokument-ID:** ISO-38500-0170
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

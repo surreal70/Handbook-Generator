@@ -1,6 +1,6 @@
 # Basis-Sicherheitscheck / Gap-Analyse (Template)
 
-**Dokument-ID:** 0080
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0080
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

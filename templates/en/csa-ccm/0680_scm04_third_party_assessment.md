@@ -6,7 +6,7 @@ Classification: Internal
 
 # SCM-04: Third Party Assessment
 
-**Document-ID:** [FRAMEWORK]-0680
+**Document-ID:** CSA-CCM-0680
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

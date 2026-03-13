@@ -6,7 +6,7 @@ Classification: Internal
 
 # Bottleneck-Identifikation
 
-**Dokument-ID:** [FRAMEWORK]-0230
+**Dokument-ID:** DORA-0230
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

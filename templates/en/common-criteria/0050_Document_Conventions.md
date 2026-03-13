@@ -1,6 +1,6 @@
 # Document Conventions
 
-**Document-ID:** 0050
+**Document-ID:** COMMON-CRITERIA-0050
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # CC3: Risk Assessment
 
-**Document-ID:** [FRAMEWORK]-0120
+**Document-ID:** TSC-0120
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

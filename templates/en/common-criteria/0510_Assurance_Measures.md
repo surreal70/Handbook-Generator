@@ -1,6 +1,6 @@
 # Assurance Measures
 
-**Document-ID:** 0510
+**Document-ID:** COMMON-CRITERIA-0510
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Governance Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** [FRAMEWORK]-0150
+**Dokument-ID:** ISO-38500-0150
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

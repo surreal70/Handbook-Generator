@@ -1,6 +1,6 @@
 # Breach Register (Record of Data Breaches)
 
-**Document-ID:** 0630
+**Document-ID:** GDPR-0630
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Richtlinie: Incident Response und Major Incident Prozess
 
-**Dokument-ID:** 0410
+**Dokument-ID:** ISMS-0410
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

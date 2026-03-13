@@ -1,6 +1,6 @@
 # Richtlinie: Logging, SIEM und Audit Trails
 
-**Dokument-ID:** 0330
+**Dokument-ID:** ISMS-0330
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

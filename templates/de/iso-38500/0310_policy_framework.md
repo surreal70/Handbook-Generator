@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Governance-Richtlinien-Framework
 
-**Dokument-ID:** [FRAMEWORK]-0310
+**Dokument-ID:** ISO-38500-0310
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

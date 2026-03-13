@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kontrollziele
 
-**Dokument-ID:** [FRAMEWORK]-0040
+**Dokument-ID:** SOC1-0040
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

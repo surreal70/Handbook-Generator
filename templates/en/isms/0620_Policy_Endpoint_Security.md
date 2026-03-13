@@ -1,6 +1,6 @@
 # Policy: Endpoint Security
 
-**Document-ID:** [FRAMEWORK]-0620
+**Document-ID:** ISMS-0620
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

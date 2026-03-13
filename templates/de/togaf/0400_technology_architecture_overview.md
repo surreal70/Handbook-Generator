@@ -6,7 +6,7 @@ Classification: Internal
 
 # Technologie-Architecture Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0400
+**Dokument-ID:** TOGAF-0400
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

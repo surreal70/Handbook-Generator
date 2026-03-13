@@ -1,6 +1,6 @@
 # Policy: Configuration and Hardening
 
-**Document-ID:** [FRAMEWORK]-0260
+**Document-ID:** BSI-GRUNDSCHUTZ-0260
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # DSP-05: Verschlüsselung im Ruhezustand
 
-**Dokument-ID:** [FRAMEWORK]-0250
+**Dokument-ID:** CSA-CCM-0250
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

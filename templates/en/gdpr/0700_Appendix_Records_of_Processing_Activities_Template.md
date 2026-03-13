@@ -1,6 +1,6 @@
 # Appendix: Records of Processing Activities (Template)
 
-**Document-ID:** 0700
+**Document-ID:** GDPR-0700
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Information und Kommunikation
 
-**Document-ID:** [FRAMEWORK]-0300
+**Document-ID:** COSO-0300
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

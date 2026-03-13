@@ -1,6 +1,6 @@
 # Richtlinie: MFA, Passwortregeln und Session Management
 
-**Dokument-ID:** 0250
+**Dokument-ID:** ISMS-0250
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

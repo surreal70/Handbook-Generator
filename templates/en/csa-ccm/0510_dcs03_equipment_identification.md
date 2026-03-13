@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-03: Equipment Identification
 
-**Document-ID:** [FRAMEWORK]-0510
+**Document-ID:** CSA-CCM-0510
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

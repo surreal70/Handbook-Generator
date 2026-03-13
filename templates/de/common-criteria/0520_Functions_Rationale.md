@@ -1,6 +1,6 @@
 # Functions Rationale (Begründung der Sicherheitsfunktionen)
 
-**Dokument-ID:** 0520
+**Dokument-ID:** COMMON-CRITERIA-0520
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

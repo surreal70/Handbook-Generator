@@ -6,7 +6,7 @@ Classification: Internal
 
 # Architecture Repository-Struktur
 
-**Dokument-ID:** [FRAMEWORK]-0040
+**Dokument-ID:** TOGAF-0040
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

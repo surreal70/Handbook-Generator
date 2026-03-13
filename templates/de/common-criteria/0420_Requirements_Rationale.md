@@ -1,6 +1,6 @@
 # Begründung der Sicherheitsanforderungen (Requirements Rationale)
 
-**Dokument-ID:** 0420
+**Dokument-ID:** COMMON-CRITERIA-0420
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

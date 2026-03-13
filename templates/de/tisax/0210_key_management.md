@@ -6,7 +6,7 @@ Classification: Internal
 
 # Schlüsselverwaltung
 
-**Dokument-ID:** [FRAMEWORK]-0210
+**Dokument-ID:** TISAX-0210
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

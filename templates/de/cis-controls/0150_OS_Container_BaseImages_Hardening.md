@@ -1,6 +1,6 @@
 # OS Hardening Baseline: Container Base Images
 
-**Dokument-ID:** 0150
+**Dokument-ID:** CIS-CONTROLS-0150
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

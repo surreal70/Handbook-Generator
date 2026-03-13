@@ -6,7 +6,7 @@ Classification: Internal
 
 # Lead Time Measurement
 
-**Document-ID:** [FRAMEWORK]-0080
+**Document-ID:** DORA-0080
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

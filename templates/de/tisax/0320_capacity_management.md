@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kapazitätsmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0320
+**Dokument-ID:** TISAX-0320
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

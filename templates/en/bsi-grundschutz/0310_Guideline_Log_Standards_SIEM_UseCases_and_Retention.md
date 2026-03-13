@@ -1,6 +1,6 @@
 # Guideline: Log Standards SIEM UseCases and Retention
 
-**Document-ID:** [FRAMEWORK]-0310
+**Document-ID:** BSI-GRUNDSCHUTZ-0310
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

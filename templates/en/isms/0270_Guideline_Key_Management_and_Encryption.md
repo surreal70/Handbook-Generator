@@ -1,6 +1,6 @@
 # Guideline: Key Management and Encryption
 
-**Document-ID:** [FRAMEWORK]-0270
+**Document-ID:** ISMS-0270
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

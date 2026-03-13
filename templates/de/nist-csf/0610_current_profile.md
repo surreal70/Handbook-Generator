@@ -7,7 +7,7 @@ Classification: Internal
 
 # Aktuelles Profil
 
-**Dokument-ID:** [FRAMEWORK]-0610
+**Dokument-ID:** NIST-CSF-0610
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

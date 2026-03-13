@@ -1,6 +1,6 @@
 # Guideline: Encryption Key Rotation and Certificates
 
-**Document-ID:** [FRAMEWORK]-0350
+**Document-ID:** BSI-GRUNDSCHUTZ-0350
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

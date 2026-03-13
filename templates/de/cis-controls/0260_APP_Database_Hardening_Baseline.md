@@ -1,6 +1,6 @@
 # APP Hardening Baseline: Datenbanken (generisch)
 
-**Dokument-ID:** 0260
+**Dokument-ID:** CIS-CONTROLS-0260
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

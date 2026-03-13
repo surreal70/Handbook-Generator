@@ -7,7 +7,7 @@ Classification: Internal
 
 # Board of Directors IT Governance Responsibilities
 
-**Document-ID:** [FRAMEWORK]-0210
+**Document-ID:** ISO-38500-0210
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

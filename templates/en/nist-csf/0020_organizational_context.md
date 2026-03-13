@@ -7,7 +7,7 @@ Classification: Internal
 
 # Organizational Context (GV.OC)
 
-**Document-ID:** [FRAMEWORK]-0020
+**Document-ID:** NIST-CSF-0020
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

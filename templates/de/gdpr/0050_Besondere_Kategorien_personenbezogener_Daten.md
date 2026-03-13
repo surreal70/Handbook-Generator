@@ -1,6 +1,6 @@
 # Besondere Kategorien personenbezogener Daten
 
-**Dokument-ID:** 0050
+**Dokument-ID:** GDPR-0050
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

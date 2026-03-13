@@ -1,6 +1,6 @@
 # Policy: Netzwerksicherheit
 
-**Dokument-ID:** 0600
+**Dokument-ID:** ISMS-0600
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

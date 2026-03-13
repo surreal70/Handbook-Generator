@@ -1,6 +1,6 @@
 # Dokumentenlenkung / Dokumentierte Information
 
-**Dokument-ID:** 0050
+**Dokument-ID:** ISMS-0050
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

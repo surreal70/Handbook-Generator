@@ -72,7 +72,7 @@ for lang in "${LANGUAGES[@]}"; do
         if python3 handbook-generator \
             --template "${handbook}" \
             --language "${lang}" \
-            --output markdown \
+            --output html \
             --separate-files \
             --test \
             > /dev/null 2>&1; then

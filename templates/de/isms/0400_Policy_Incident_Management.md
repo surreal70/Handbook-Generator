@@ -1,6 +1,6 @@
 # Policy: Incident Management
 
-**Dokument-ID:** 0400
+**Dokument-ID:** ISMS-0400
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

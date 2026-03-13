@@ -1,6 +1,6 @@
 # Appendix: CIS Control Mapping Template
 
-**Document-ID:** [FRAMEWORK]-0400
+**Document-ID:** CIS-CONTROLS-0400
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

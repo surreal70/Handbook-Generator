@@ -39,6 +39,9 @@ htmlcov/
 *.swo
 *~
 
+# Personal notes
+TODO.md
+
 # Configuration (contains sensitive data!)
 config.yaml
 config.yml

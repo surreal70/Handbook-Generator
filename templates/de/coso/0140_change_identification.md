@@ -6,7 +6,7 @@ Classification: Internal
 
 # Änderungsidentifikation und -analyse
 
-**Dokument-ID:** [FRAMEWORK]-0140
+**Dokument-ID:** COSO-0140
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

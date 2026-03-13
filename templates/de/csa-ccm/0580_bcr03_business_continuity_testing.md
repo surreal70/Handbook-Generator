@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-03: Geschäftskontinuitätstests
 
-**Dokument-ID:** [FRAMEWORK]-0580
+**Dokument-ID:** CSA-CCM-0580
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

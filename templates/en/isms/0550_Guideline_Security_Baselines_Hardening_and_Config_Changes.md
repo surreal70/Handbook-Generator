@@ -1,6 +1,6 @@
 # Guideline: Security Baselines, Hardening and Configuration Changes
 
-**Document-ID:** [FRAMEWORK]-0550
+**Document-ID:** ISMS-0550
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

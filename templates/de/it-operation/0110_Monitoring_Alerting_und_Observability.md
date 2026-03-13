@@ -1,6 +1,6 @@
 # Monitoring, Alerting und Observability
 
-**Dokument-ID:** [FRAMEWORK]-0110
+**Dokument-ID:** IT-OPERATION-0110
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # MOS-01: Mobile Sicherheit
 
-**Dokument-ID:** [FRAMEWORK]-0820
+**Dokument-ID:** CSA-CCM-0820
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

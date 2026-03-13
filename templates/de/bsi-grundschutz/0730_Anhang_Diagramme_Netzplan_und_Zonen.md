@@ -1,6 +1,6 @@
 # Anhang: Netzplan und Zonenmodell (Template)
 
-**Dokument-ID:** 0730
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0730
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

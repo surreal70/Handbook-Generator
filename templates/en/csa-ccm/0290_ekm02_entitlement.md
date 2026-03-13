@@ -6,7 +6,7 @@ Classification: Internal
 
 # EKM-02: Entitlement
 
-**Document-ID:** [FRAMEWORK]-0290
+**Document-ID:** CSA-CCM-0290
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

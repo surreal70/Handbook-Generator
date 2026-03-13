@@ -6,7 +6,7 @@ Classification: Internal
 
 # MOS-11: Fernlöschung
 
-**Dokument-ID:** [FRAMEWORK]-0920
+**Dokument-ID:** CSA-CCM-0920
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

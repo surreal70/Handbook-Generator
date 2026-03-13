@@ -7,7 +7,7 @@ Classification: Internal
 
 # Kommunikation (RS.CO)
 
-**Dokument-ID:** [FRAMEWORK]-0410
+**Dokument-ID:** NIST-CSF-0410
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -7,7 +7,7 @@ Classification: Internal
 
 # Richtlinien-Rahmenwerk (GV.PO)
 
-**Dokument-ID:** [FRAMEWORK]-0050
+**Dokument-ID:** NIST-CSF-0050
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Richtlinie: E-Mail, Sharing und Zusammenarbeitstools
 
-**Dokument-ID:** 0670
+**Dokument-ID:** ISMS-0670
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

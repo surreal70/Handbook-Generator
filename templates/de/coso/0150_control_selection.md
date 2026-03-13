@@ -6,7 +6,7 @@ Classification: Internal
 
 # Auswahl und Entwicklung von Kontrollaktivitäten
 
-**Dokument-ID:** [FRAMEWORK]-0150
+**Dokument-ID:** COSO-0150
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

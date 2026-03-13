@@ -6,7 +6,7 @@ Classification: Internal
 
 # Anwendungs-Architecture
 
-**Dokument-ID:** [FRAMEWORK]-0330
+**Dokument-ID:** TOGAF-0330
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

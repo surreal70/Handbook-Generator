@@ -1,6 +1,6 @@
 # Policy: Datenschutz und Datenhandling
 
-**Dokument-ID:** 0420
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0420
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

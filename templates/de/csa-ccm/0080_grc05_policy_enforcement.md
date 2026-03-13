@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-05: Richtliniendurchsetzung
 
-**Dokument-ID:** [FRAMEWORK]-0080
+**Dokument-ID:** CSA-CCM-0080
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

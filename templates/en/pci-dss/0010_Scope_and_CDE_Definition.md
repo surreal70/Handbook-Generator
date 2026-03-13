@@ -1,6 +1,6 @@
 # Scope and CDE Definition
 
-**Document-ID:** [FRAMEWORK]-0010
+**Document-ID:** PCI-DSS-0010
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

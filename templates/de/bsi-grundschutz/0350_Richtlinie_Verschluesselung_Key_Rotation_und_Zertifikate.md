@@ -1,6 +1,6 @@
 # Richtlinie: Verschluesselung Key Rotation und Zertifikate
 
-**Dokument-ID:** 0350
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0350
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

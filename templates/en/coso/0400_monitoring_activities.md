@@ -6,7 +6,7 @@ Classification: Internal
 
 # Überwachungsaktivitäten - Übersicht
 
-**Document-ID:** [FRAMEWORK]-0400
+**Document-ID:** COSO-0400
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

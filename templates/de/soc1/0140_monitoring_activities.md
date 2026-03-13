@@ -6,7 +6,7 @@ Classification: Internal
 
 # Überwachungsaktivitäten
 
-**Dokument-ID:** [FRAMEWORK]-0140
+**Dokument-ID:** SOC1-0140
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

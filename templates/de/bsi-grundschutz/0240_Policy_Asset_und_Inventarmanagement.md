@@ -1,6 +1,6 @@
 # Policy: Asset und Inventarmanagement
 
-**Dokument-ID:** 0240
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0240
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

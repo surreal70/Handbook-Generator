@@ -7,7 +7,7 @@ Classification: Internal
 
 # Implementierungsstufen
 
-**Dokument-ID:** [FRAMEWORK]-0600
+**Dokument-ID:** NIST-CSF-0600
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

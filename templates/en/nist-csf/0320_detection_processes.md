@@ -7,7 +7,7 @@ Classification: Internal
 
 # Detection Processes (DE.DP)
 
-**Document-ID:** [FRAMEWORK]-0320
+**Document-ID:** NIST-CSF-0320
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

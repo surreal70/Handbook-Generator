@@ -104,6 +104,35 @@ The following scripts are alternative PDF generation methods. For production use
 
 ## Template Utilities
 
+### generate_template_list.py
+**NEW** - Generates comprehensive reports of all templates per handbook.
+
+Extracts metadata (template name, ID, version, revision) from raw templates or rendered output.
+
+**Usage:**
+```bash
+# List raw templates
+python helpers/generate_template_list.py --source raw
+
+# List rendered templates (renders if needed)
+python helpers/generate_template_list.py --source rendered
+
+# List both raw and rendered
+python helpers/generate_template_list.py --source both
+
+# Save to file (creates .txt and .json)
+python helpers/generate_template_list.py --source raw --output report.txt
+```
+
+**Features:**
+- Multiple source options (raw/rendered/both)
+- Automatic rendering if needed
+- Dual output formats (text + JSON)
+- Comprehensive metadata extraction
+- Multi-language support
+
+**See:** [README_generate_template_list.md](README_generate_template_list.md) for detailed documentation.
+
 ### insert_framework_sections.py
 Utility for inserting framework-specific sections into templates.
 

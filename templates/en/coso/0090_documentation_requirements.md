@@ -6,7 +6,7 @@ Classification: Internal
 
 # Documentation Requirements
 
-**Document-ID:** [FRAMEWORK]-0090
+**Document-ID:** COSO-0090
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

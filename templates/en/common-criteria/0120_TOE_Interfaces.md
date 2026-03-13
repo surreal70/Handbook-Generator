@@ -1,6 +1,6 @@
 # TOE Interfaces
 
-**Document-ID:** 0120
+**Document-ID:** COMMON-CRITERIA-0120
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-01: Rechenzentrumssicherheit
 
-**Dokument-ID:** [FRAMEWORK]-0490
+**Dokument-ID:** CSA-CCM-0490
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

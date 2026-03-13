@@ -6,7 +6,7 @@ Classification: Internal
 
 # SCM-03: Lieferketten-Metriken
 
-**Dokument-ID:** [FRAMEWORK]-0670
+**Dokument-ID:** CSA-CCM-0670
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

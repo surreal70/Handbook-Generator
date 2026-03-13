@@ -6,7 +6,7 @@ Classification: Internal
 
 # EKM-02: Berechtigung
 
-**Dokument-ID:** [FRAMEWORK]-0290
+**Dokument-ID:** CSA-CCM-0290
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

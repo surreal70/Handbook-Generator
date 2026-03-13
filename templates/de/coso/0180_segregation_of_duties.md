@@ -6,7 +6,7 @@ Classification: Internal
 
 # Funktionstrennung
 
-**Dokument-ID:** [FRAMEWORK]-0180
+**Dokument-ID:** COSO-0180
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

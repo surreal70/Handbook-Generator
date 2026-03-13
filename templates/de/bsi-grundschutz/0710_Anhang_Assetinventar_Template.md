@@ -1,6 +1,6 @@
 # Anhang: Assetinventar (Template)
 
-**Dokument-ID:** 0710
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0710
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

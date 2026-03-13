@@ -1,6 +1,6 @@
 # Management Review – Template
 
-**Document-ID:** [FRAMEWORK]-0620
+**Document-ID:** BSI-GRUNDSCHUTZ-0620
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

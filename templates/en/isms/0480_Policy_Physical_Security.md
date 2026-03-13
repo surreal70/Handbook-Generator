@@ -1,6 +1,6 @@
 # Policy: Physical Security
 
-**Document-ID:** [FRAMEWORK]-0480
+**Document-ID:** ISMS-0480
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

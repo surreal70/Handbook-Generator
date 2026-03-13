@@ -6,7 +6,7 @@ Classification: Internal
 
 # Schutz geistigen Eigentums
 
-**Dokument-ID:** [FRAMEWORK]-0530
+**Dokument-ID:** TISAX-0530
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

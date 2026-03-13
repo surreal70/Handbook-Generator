@@ -1,6 +1,6 @@
 # Requirements Rationale
 
-**Document-ID:** 0420
+**Document-ID:** COMMON-CRITERIA-0420
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

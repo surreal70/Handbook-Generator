@@ -1,6 +1,6 @@
 # Policy: Change und Release Management
 
-**Dokument-ID:** 0380
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0380
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

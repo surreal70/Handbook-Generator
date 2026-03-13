@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 1: Verantwortung (Responsibility)
 
-**Dokument-ID:** [FRAMEWORK]-0040
+**Dokument-ID:** ISO-38500-0040
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

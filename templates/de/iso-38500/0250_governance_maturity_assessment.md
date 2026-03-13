@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Governance Reifegradbewertung
 
-**Dokument-ID:** [FRAMEWORK]-0250
+**Dokument-ID:** ISO-38500-0250
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

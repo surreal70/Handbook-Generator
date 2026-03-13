@@ -1,6 +1,6 @@
 # APP Hardening Baseline: Identity (AD/Azure AD/Entra ID)
 
-**Dokument-ID:** 0330
+**Dokument-ID:** CIS-CONTROLS-0330
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

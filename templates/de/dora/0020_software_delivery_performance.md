@@ -6,7 +6,7 @@ Classification: Internal
 
 # Software Delivery Performance
 
-**Dokument-ID:** [FRAMEWORK]-0020
+**Dokument-ID:** DORA-0020
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

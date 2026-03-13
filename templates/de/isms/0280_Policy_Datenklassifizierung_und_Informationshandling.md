@@ -1,6 +1,6 @@
 # Policy: Datenklassifizierung und Informationshandling
 
-**Dokument-ID:** 0280
+**Dokument-ID:** ISMS-0280
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

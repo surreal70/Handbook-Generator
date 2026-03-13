@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-10: Benutzerverantwortung
 
-**Dokument-ID:** [FRAMEWORK]-0800
+**Dokument-ID:** CSA-CCM-0800
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

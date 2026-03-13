@@ -1,6 +1,6 @@
 # Strategy and Continuity Options
 
-**Document-ID:** [FRAMEWORK]-0100
+**Document-ID:** BCM-0100
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

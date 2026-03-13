@@ -1,6 +1,6 @@
 # Policy: Kryptografie und Key Management
 
-**Dokument-ID:** 0340
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0340
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

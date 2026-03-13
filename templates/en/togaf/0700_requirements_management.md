@@ -6,7 +6,7 @@ Classification: Internal
 
 # Requirements Management
 
-**Document-ID:** [FRAMEWORK]-0700
+**Document-ID:** TOGAF-0700
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

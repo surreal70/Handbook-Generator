@@ -1,6 +1,6 @@
 # Modellierung: Bausteinzuordnung (Template)
 
-**Dokument-ID:** 0070
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0070
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

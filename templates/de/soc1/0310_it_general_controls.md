@@ -6,7 +6,7 @@ Classification: Internal
 
 # IT General Controls (ITGC)
 
-**Dokument-ID:** [FRAMEWORK]-0310
+**Dokument-ID:** SOC1-0310
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

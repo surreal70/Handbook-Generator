@@ -6,7 +6,7 @@ Classification: Internal
 
 # IVS-06: OS Hardening and Base Controls
 
-**Document-ID:** [FRAMEWORK]-0460
+**Document-ID:** CSA-CCM-0460
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

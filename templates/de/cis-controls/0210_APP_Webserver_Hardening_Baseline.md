@@ -1,6 +1,6 @@
 # APP Hardening Baseline: Webserver / Reverse Proxy (generisch)
 
-**Dokument-ID:** 0210
+**Dokument-ID:** CIS-CONTROLS-0210
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # CI/CD Praktiken
 
-**Dokument-ID:** [FRAMEWORK]-0260
+**Dokument-ID:** DORA-0260
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

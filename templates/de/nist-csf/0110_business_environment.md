@@ -7,7 +7,7 @@ Classification: Internal
 
 # Geschäftsumfeld (ID.BE)
 
-**Dokument-ID:** [FRAMEWORK]-0110
+**Dokument-ID:** NIST-CSF-0110
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

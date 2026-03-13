@@ -1,6 +1,6 @@
 # Framework Mapping
 
-**Document-ID:** [FRAMEWORK]-9999
+**Document-ID:** IT-OPERATION-9999
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}
@@ -9,7 +9,7 @@
 **Status:** {{ meta-handbook.status }}
 **Classification:** {{ meta-handbook.classification }}
 **Last Update:** {{ meta-handbook.modifydate }}
-**Template Version:** [TODO]
+**Template Version:** 1.0
 
 ---
 

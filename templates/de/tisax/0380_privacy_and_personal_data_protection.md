@@ -6,7 +6,7 @@ Classification: Internal
 
 # Datenschutz und Schutz personenbezogener Daten
 
-**Dokument-ID:** [FRAMEWORK]-0380
+**Dokument-ID:** TISAX-0380
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

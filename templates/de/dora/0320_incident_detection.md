@@ -6,7 +6,7 @@ Classification: Internal
 
 # Incident Detection
 
-**Dokument-ID:** [FRAMEWORK]-0320
+**Dokument-ID:** DORA-0320
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

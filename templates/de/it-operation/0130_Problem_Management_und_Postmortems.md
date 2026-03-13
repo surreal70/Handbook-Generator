@@ -1,6 +1,6 @@
 # Problem Management und Postmortems
 
-**Dokument-ID:** [FRAMEWORK]-0130
+**Dokument-ID:** IT-OPERATION-0130
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

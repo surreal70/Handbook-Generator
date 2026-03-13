@@ -6,7 +6,7 @@ Classification: Internal
 
 # Lead Time Reduktionsstrategien
 
-**Dokument-ID:** [FRAMEWORK]-0240
+**Dokument-ID:** DORA-0240
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

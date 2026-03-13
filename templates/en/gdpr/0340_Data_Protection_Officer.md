@@ -1,6 +1,6 @@
 # Data Protection Officer
 
-**Document-ID:** 0340
+**Document-ID:** GDPR-0340
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

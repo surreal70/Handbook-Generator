@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Governance Prinzipien - Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0030
+**Dokument-ID:** ISO-38500-0030
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Richtlinie: EDR, Antivirus, Host-Firewall und Device Compliance
 
-**Dokument-ID:** 0630
+**Dokument-ID:** ISMS-0630
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

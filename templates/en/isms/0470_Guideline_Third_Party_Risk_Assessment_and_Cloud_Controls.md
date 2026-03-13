@@ -1,6 +1,6 @@
 # Guideline: Third-Party Risk Assessment and Cloud Controls
 
-**Document-ID:** [FRAMEWORK]-0470
+**Document-ID:** ISMS-0470
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

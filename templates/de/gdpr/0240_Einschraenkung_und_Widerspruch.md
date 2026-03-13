@@ -1,6 +1,6 @@
 # Einschränkung und Widerspruch
 
-**Dokument-ID:** 0240
+**Dokument-ID:** GDPR-0240
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

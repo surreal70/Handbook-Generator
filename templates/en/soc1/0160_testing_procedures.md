@@ -6,7 +6,7 @@ Classification: Internal
 
 # Testing Procedures
 
-**Document-ID:** [FRAMEWORK]-0160
+**Document-ID:** SOC1-0160
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # DSP-05: Data Encryption at Rest
 
-**Dokument-ID:** [FRAMEWORK]-0210
+**Dokument-ID:** CSA-CCM-0210
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

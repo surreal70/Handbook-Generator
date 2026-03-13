@@ -6,7 +6,7 @@ Classification: Internal
 
 # Risikomanagement
 
-**Dokument-ID:** [FRAMEWORK]-0040
+**Dokument-ID:** TISAX-0040
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

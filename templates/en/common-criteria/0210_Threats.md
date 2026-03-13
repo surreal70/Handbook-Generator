@@ -1,6 +1,6 @@
 # Threats
 
-**Document-ID:** 0210
+**Document-ID:** COMMON-CRITERIA-0210
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # IVS-03: Netzwerksicherheitsmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0430
+**Dokument-ID:** CSA-CCM-0430
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

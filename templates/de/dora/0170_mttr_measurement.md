@@ -6,7 +6,7 @@ Classification: Internal
 
 # MTTR Messung
 
-**Dokument-ID:** [FRAMEWORK]-0170
+**Dokument-ID:** DORA-0170
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

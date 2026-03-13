@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-01: Baseline-Anforderungen
 
-**Dokument-ID:** [FRAMEWORK]-0040
+**Dokument-ID:** CSA-CCM-0040
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

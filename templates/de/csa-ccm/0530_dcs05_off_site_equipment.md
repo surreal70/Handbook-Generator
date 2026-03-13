@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-05: Externe Geräte
 
-**Dokument-ID:** [FRAMEWORK]-0530
+**Dokument-ID:** CSA-CCM-0530
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

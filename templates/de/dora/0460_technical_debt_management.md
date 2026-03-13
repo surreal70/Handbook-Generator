@@ -6,7 +6,7 @@ Classification: Internal
 
 # Technical Debt Management
 
-**Dokument-ID:** [FRAMEWORK]-0460
+**Dokument-ID:** DORA-0460
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

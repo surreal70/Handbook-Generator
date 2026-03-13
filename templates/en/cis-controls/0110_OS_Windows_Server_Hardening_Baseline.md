@@ -1,6 +1,6 @@
 # OS Hardening Baseline: Windows Server
 
-**Document-ID:** [FRAMEWORK]-0110
+**Document-ID:** CIS-CONTROLS-0110
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

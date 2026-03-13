@@ -7,7 +7,7 @@ Classification: Internal
 
 # Wiederherstellungsplanung (RC.RP)
 
-**Dokument-ID:** [FRAMEWORK]-0500
+**Dokument-ID:** NIST-CSF-0500
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

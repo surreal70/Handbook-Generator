@@ -6,7 +6,7 @@ Classification: Internal
 
 # Systembeschreibung
 
-**Dokument-ID:** [FRAMEWORK]-0030
+**Dokument-ID:** SOC1-0030
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

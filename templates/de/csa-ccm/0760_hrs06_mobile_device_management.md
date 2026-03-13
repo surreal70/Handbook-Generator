@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-06: Mobile Geräteverwaltung
 
-**Dokument-ID:** [FRAMEWORK]-0760
+**Dokument-ID:** CSA-CCM-0760
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

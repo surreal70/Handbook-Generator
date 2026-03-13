@@ -1,6 +1,6 @@
 # APP Hardening Standard: Microsoft IIS
 
-**Dokument-ID:** 0240
+**Dokument-ID:** CIS-CONTROLS-0240
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

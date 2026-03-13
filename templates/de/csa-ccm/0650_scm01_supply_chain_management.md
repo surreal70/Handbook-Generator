@@ -6,7 +6,7 @@ Classification: Internal
 
 # SCM-01: Lieferkettenmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0650
+**Dokument-ID:** CSA-CCM-0650
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

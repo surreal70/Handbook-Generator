@@ -6,7 +6,7 @@ Classification: Internal
 
 # MOS-11: Remote Wipe
 
-**Document-ID:** [FRAMEWORK]-0920
+**Document-ID:** CSA-CCM-0920
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

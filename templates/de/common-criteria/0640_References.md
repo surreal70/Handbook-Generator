@@ -1,6 +1,6 @@
 # Referenzen und Quellenangaben
 
-**Dokument-ID:** 0640
+**Dokument-ID:** COMMON-CRITERIA-0640
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

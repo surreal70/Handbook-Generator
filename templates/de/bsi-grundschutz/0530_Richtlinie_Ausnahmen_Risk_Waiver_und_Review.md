@@ -1,6 +1,6 @@
 # Richtlinie: Ausnahmen Risk Waiver und Review
 
-**Dokument-ID:** 0530
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0530
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

@@ -1,6 +1,6 @@
 # Datenschutzverletzungen und Meldepflicht
 
-**Dokument-ID:** 0330
+**Dokument-ID:** GDPR-0330
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

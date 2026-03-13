@@ -1,6 +1,6 @@
 # Organizational Security Policies (OSPs)
 
-**Document-ID:** 0220
+**Document-ID:** COMMON-CRITERIA-0220
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

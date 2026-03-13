@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-05: Beendigung des Arbeitsverhältnisses
 
-**Dokument-ID:** [FRAMEWORK]-0750
+**Dokument-ID:** CSA-CCM-0750
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

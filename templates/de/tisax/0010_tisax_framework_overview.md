@@ -6,7 +6,7 @@ Classification: Internal
 
 # TISAX Framework Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0010
+**Dokument-ID:** TISAX-0010
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

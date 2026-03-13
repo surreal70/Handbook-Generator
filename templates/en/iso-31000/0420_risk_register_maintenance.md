@@ -7,7 +7,7 @@ Classification: Internal
 
 # Risk Register Maintenance
 
-**Document-ID:** [FRAMEWORK]-0420
+**Document-ID:** ISO-31000-0420
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

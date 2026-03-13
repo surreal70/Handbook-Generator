@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 4: Leistung (Performance)
 
-**Dokument-ID:** [FRAMEWORK]-0070
+**Dokument-ID:** ISO-38500-0070
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

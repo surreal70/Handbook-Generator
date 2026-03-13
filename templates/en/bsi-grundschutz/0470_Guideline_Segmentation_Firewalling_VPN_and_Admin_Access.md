@@ -1,6 +1,6 @@
 # Guideline: Segmentation Firewalling VPN and Admin Access
 
-**Document-ID:** [FRAMEWORK]-0470
+**Document-ID:** BSI-GRUNDSCHUTZ-0470
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Architecture-Werkzeuge und -Techniken
 
-**Dokument-ID:** [FRAMEWORK]-0060
+**Dokument-ID:** TOGAF-0060
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

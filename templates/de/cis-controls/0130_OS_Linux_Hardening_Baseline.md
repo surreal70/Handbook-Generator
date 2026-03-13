@@ -1,6 +1,6 @@
 # OS Hardening Baseline: Linux (Generic)
 
-**Dokument-ID:** 0130
+**Dokument-ID:** CIS-CONTROLS-0130
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

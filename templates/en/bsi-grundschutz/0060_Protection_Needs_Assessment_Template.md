@@ -1,6 +1,6 @@
 # Protection Needs Assessment (Template)
 
-**Document-ID:** [FRAMEWORK]-0060
+**Document-ID:** BSI-GRUNDSCHUTZ-0060
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

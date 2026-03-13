@@ -1,6 +1,6 @@
 # Assumptions (Annahmen)
 
-**Dokument-ID:** 0230
+**Dokument-ID:** COMMON-CRITERIA-0230
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

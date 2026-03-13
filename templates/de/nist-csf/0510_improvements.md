@@ -7,7 +7,7 @@ Classification: Internal
 
 # Verbesserungen (RC.IM)
 
-**Dokument-ID:** [FRAMEWORK]-0510
+**Dokument-ID:** NIST-CSF-0510
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

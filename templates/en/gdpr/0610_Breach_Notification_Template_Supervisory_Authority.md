@@ -1,6 +1,6 @@
 # Breach Notification Template (Supervisory Authority)
 
-**Document-ID:** 0610
+**Document-ID:** GDPR-0610
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}

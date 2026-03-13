@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 5: Konformität (Conformance)
 
-**Dokument-ID:** [FRAMEWORK]-0080
+**Dokument-ID:** ISO-38500-0080
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

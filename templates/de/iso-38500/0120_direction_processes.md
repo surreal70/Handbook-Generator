@@ -7,7 +7,7 @@ Classification: Internal
 
 # Steuerungsprozesse (Direction)
 
-**Dokument-ID:** [FRAMEWORK]-0120
+**Dokument-ID:** ISO-38500-0120
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}

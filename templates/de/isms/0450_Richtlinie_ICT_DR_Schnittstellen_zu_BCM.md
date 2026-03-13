@@ -1,6 +1,6 @@
 # Richtlinie: ICT Disaster Recovery - Schnittstellen zu BCM
 
-**Dokument-ID:** 0450
+**Dokument-ID:** ISMS-0450
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}
