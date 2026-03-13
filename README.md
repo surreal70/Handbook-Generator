@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.22-green.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.23-green.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-72%25-yellow.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-7635%20total-success.svg)](tests/)
@@ -27,7 +27,7 @@ Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlage
 
 ## 🎯 Wichtiger Hinweis
 
-**Dies ist Version 0.0.22 - Begrenzte Produktionsnutzung (Limited Production Use)**
+**Dies ist Version 0.0.23 - Begrenzte Produktionsnutzung (Limited Production Use)**
 
 Diese Version ist bereit für:
 - ✅ Markdown-Handbuch-Generierung (alle 44 Handbücher)
@@ -44,13 +44,13 @@ Einschränkungen:
   - **Empfehlung**: Verwenden Sie Markdown-Ausgabe und konvertieren Sie extern
 - ⚠️ HTML-Ausgabe nicht umfassend getestet
 
-Siehe [Release Notes](about_versioning/VERSION_0.0.22_RELEASE_NOTES.md) für Details.
+Siehe [Release Notes](about_versioning/VERSION_0.0.23_RELEASE_NOTES.md) für Details.
 
 ## Überblick
 
 Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
 
-**Version 0.0.22** - 🎯 Limited Production Use - Core functionality stable, PDF generation experimental
+**Version 0.0.23** - 🎯 Limited Production Use - Core functionality stable, PDF generation experimental
 
 ## Features
 
@@ -296,7 +296,7 @@ sudo apt-get install libpango-1.0-0 libpangocairo-1.0-0
 
 ⚠️ **WARNUNG: PDF-Generierung ist HOCHGRADIG EXPERIMENTELL und TEILWEISE DEFEKT**
 
-Die direkte PDF-Generierung über `--pdf-engine` ist in Version 0.0.22 experimentell und weist bekannte Probleme auf:
+Die direkte PDF-Generierung über `--pdf-engine` ist in Version 0.0.23 experimentell und weist bekannte Probleme auf:
 
 **Bekannte Probleme:**
 - ❌ ReportLab: TOC-Formatierung unvollständig, Seitenumbrüche teilweise fehlerhaft

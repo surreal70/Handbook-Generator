@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.22
+## Current Version: 0.0.23
 
 ### Single Source of Truth
 
@@ -33,6 +33,13 @@ To update the version number:
 
 ### Version History
 
+- **0.0.23** (2026-03-13): 🐛 Bug Fix - Document Header Formatting
+  - ✅ Fixed malformed document headers in HTML and PDF output
+  - ✅ Metadata fields now display with proper line breaks (using `<br />` tags)
+  - ✅ Applied fix to HTML output generator and both PDF engines (ReportLab, WeasyPrint)
+  - ✅ Added regex preprocessing to convert markdown metadata to hard breaks
+  - ✅ All tests passing (34 HTML tests, 18 PDF engine tests)
+  - **Status**: 🎯 Limited Production Use - Core functionality stable
 - **0.0.22** (2026-02-23): ⚠️ Experimental PDF Generation - Limited Production Use
   - ⚠️ **PDF generation marked as HIGHLY EXPERIMENTAL and PARTIALLY BROKEN**
   - ⚠️ ReportLab: Functional but TOC formatting incomplete, page breaks partially faulty

@@ -21,6 +21,7 @@ Example:
 from typing import Optional, List
 from html.parser import HTMLParser
 import io
+import re
 
 from . import PDFEngine, PDFGenerationError, MarkdownConversionError
 
@@ -90,13 +91,22 @@ class ReportLabEngine(PDFEngine):
             raise PDFGenerationError(error_msg)
         
         try:
+            # Pre-process markdown: Add two spaces before newlines in document header metadata
+            # This ensures proper line breaks in HTML output for metadata fields
+            # Pattern: **Field:** value followed by newline and another **Field:**
+            processed_markdown = re.sub(
+                r'(\*\*[^*]+:\*\*[^\n]+)\n(?=\*\*[^*]+:\*\*)',
+                r'\1  \n',
+                markdown_content
+            )
+            
             # Convert markdown to HTML using the markdown library
             # Extensions used:
             # - 'extra': Adds tables, footnotes, and other features
             # - 'codehilite': Syntax highlighting for code blocks
             # - 'toc': Table of contents generation
             html_content = markdown.markdown(
-                markdown_content,
+                processed_markdown,
                 extensions=['extra', 'codehilite', 'toc']
             )
         except Exception as e:

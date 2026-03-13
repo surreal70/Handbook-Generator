@@ -127,12 +127,23 @@ class HTMLOutputGenerator:
         """
         Convert markdown content to HTML.
         
+        Handles document headers specially to preserve line breaks for metadata fields.
+        
         Args:
             markdown_content: Markdown content to convert
             
         Returns:
             HTML content
         """
+        # Pre-process: Add two spaces before newlines in document header metadata
+        # This ensures proper line breaks in HTML output
+        # Pattern: **Field:** value followed by newline and another **Field:**
+        markdown_content = re.sub(
+            r'(\*\*[^*]+:\*\*[^\n]+)\n(?=\*\*[^*]+:\*\*)',
+            r'\1  \n',
+            markdown_content
+        )
+        
         try:
             import markdown
             html_content = markdown.markdown(

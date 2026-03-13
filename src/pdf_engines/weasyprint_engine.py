@@ -22,6 +22,7 @@ Example:
 
 import sys
 import tempfile
+import re
 from typing import Optional
 import markdown
 
@@ -98,6 +99,15 @@ class WeasyPrintEngine(PDFEngine):
             ) from e
         
         try:
+            # Pre-process markdown: Add two spaces before newlines in document header metadata
+            # This ensures proper line breaks in HTML output for metadata fields
+            # Pattern: **Field:** value followed by newline and another **Field:**
+            processed_markdown = re.sub(
+                r'(\*\*[^*]+:\*\*[^\n]+)\n(?=\*\*[^*]+:\*\*)',
+                r'\1  \n',
+                markdown_content
+            )
+            
             # Convert markdown to HTML with extensions
             # Extensions are conditionally added based on features needed
             extensions = ['extra', 'codehilite']
@@ -105,7 +115,7 @@ class WeasyPrintEngine(PDFEngine):
                 extensions.append('toc')  # Add TOC extension only when needed
             
             html_content = markdown.markdown(
-                markdown_content,
+                processed_markdown,
                 extensions=extensions
             )
             
